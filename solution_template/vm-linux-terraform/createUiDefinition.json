@@ -170,9 +170,9 @@
               "label": "Service Principal",
               "elements": [
                 {
-                  "name": "spid",
+                  "name": "principalId",
                   "type": "Microsoft.Common.TextBox",
-                  "label": "Application ID",
+                  "label": "Service Principal ID",
                   "defaultValue": "",
                   "toolTip": "",
                   "constraints": {
@@ -238,7 +238,7 @@
         "vmSize": "[steps('firstStep').vmSize]",
         "location": "[location()]",
         "spType": "[steps('secondStep').sptype]",
-        "spId": "[steps('secondStep').spSection.spid]",
+        "principalId": "[steps('secondStep').spSection.principalId]",
         "spSecret": "[steps('secondStep').spSection.spsecret]",
         "enableCloudAgents": "[steps('secondStep').enableCloudAgents]",
         "vnetName": "[steps('firstStep').vnet.name]",
