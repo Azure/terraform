@@ -2,96 +2,124 @@
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "userName": {
-      "type": "string",
+    "artifactsLocation": {
       "metadata": {
-        "description": "Username for the Virtual Machine."
-      }
-    },
-    "authenticationType": {
-      "type": "string",
-      "defaultValue": "password",
-      "allowedValues": [
-        "password",
-        "sshPublicKey"
-      ],
-      "metadata": {
-        "description": "Authentication type"
-      }
-    },
-    "adminPassword": {
-      "type": "securestring",
-      "defaultValue": "",
-      "metadata": {
-        "description": "Password for the Virtual Machine."
-      }
-    },
-    "sshPublicKey": {
-      "type": "securestring",
-      "defaultValue": "",
-      "metadata": {
-        "description": "ssh key for the Virtual Machine."
-      }
-    },
-    "vmSize": {
-      "type": "string",
-      "metadata": {
-        "description": "The size of the VM to create"
-      },
-      "defaultValue": "Standard_D1_V2"
-    },
-    "desktopInstall": {
-      "type": "bool",
-      "defaultValue": false,
-      "metadata": {
-        "description": "Installs Ubuntu Mate desktop GUI"
-      }
-    },
-    "_artifactsLocation": {
-      "type": "string",
-      "metadata": {
+        "artifactsBaseUrl": "",
         "description": "The base URI where artifacts required by this template are located. When the template is deployed using the accompanying scripts, a private location in the subscription will be used and this value will be automatically generated."
       },
-      "defaultValue": "https://raw.githubusercontent.com/Azure/terraform/master/solution_template/vm-linux-terraform"
+      "defaultValue": "https://raw.githubusercontent.com/Azure/terraform/vm-linux-terraform",
+      "type": "string"
     },
-    "_artifactsLocationSasToken": {
-      "type": "securestring",
+    "artifactsLocationSasToken": {
       "metadata": {
-        "description": "The sasToken required to access _artifactsLocation.  When the template is deployed using the accompanying scripts, a sasToken will be automatically generated."
+        "description": "The sasToken required to access artifactsLocation.  When the template is deployed using the accompanying scripts, a sasToken will be automatically generated."
       },
-      "defaultValue": ""
+      "defaultValue": "",
+      "type": "securestring"
+    },
+    "adminPassword": {
+      "metadata": {
+        "description": "Password for the Virtual Machine. Will be used only if authenticationType is 'password'"
+      },
+      "defaultValue": "",
+      "type": "securestring"
+    },
+    "adminSSHPublicKey": {
+      "metadata": {
+        "description": "Public SSH key for the Virtual Machine. Will be used only if authenticationType is 'sshPublicKey'"
+      },
+      "defaultValue": "",
+      "type": "string"
+    },
+    "adminUserName": {
+      "metadata": {
+        "description": "User name for the Virtual Machine"
+      },
+      "type": "string"
+    },
+    "authenticationType": {
+      "metadata": {
+        "description": "Authentication type (can be 'password' or 'sshPublicKey')"
+      },
+      "type": "string"
+    },
+    "location": {
+      "metadata": {
+        "description": "Azure location where to deploy the resources"
+      },
+      "type": "string",
+      "defaultValue": "[resourceGroup().location]"
+    },
+    "storageAccountType": {
+      "defaultValue": "Standard_LRS",
+      "metadata": {
+        "description": "Storage Account Type"
+      },
+      "type": "string"
+    },
+    "principalId":{
+      "defaultValue": "",
+      "metadata": {
+        "description": "The Service Principal Id"
+      },
+      "type": "string"
+    },
+    "spSecret":{
+      "defaultValue": "",
+      "metadata": {
+        "description": "The Service Principal secret"
+      },
+      "type": "string"
+    },
+    "spType":{
+      "defaultValue": "msi",
+      "metadata": {
+        "description": "The type of service principal injected into Terraform (can be 'msi' or 'manual')."
+      },
+      "type": "string"
+    },
+    "vmName": {
+      "metadata": {
+        "description": "Virtual Machine Name (also used as a prefix for other resources)"
+      },
+      "type": "string",
+      "defaultValue": "terraform"
+    },
+    "vmSize": {
+      "metadata": {
+        "description": "Virtual Machine Size"
+      },
+      "type": "string",
+      "defaultValue": "Standard_DS1_v2"
     }
   },
   "variables": {
     "dnsLabelPrefix": "[concat('msi',uniquestring(resourceGroup().id))]",
     "infraStorageAccountName": "[take(concat('storeinfra', uniquestring(resourceGroup().id), variables('dnsLabelPrefix')),24)]",
     "stateStorageAccountName": "[take(concat('storestate', uniquestring(resourceGroup().id), variables('dnsLabelPrefix')),24)]",
-    "nicName": "[concat('nic',uniquestring(resourceGroup().id))]",
-    "networkSecurityGroupName": "[concat('nsg',uniquestring(resourceGroup().id))]",
     "addressPrefix": "10.0.0.0/16",
-    "subnetName": "Subnet",
+    "subnetName": "TerraformSubnet",
     "subnetPrefix": "10.0.0.0/24",
-    "publicIPAddressName": "[concat('pip',uniquestring(resourceGroup().id))]",
-    "vmName": "[concat('vm',uniquestring(resourceGroup().id))]",
+    "nicName": "[concat('nic',uniquestring(resourceGroup().id))]",
     "virtualNetworkName": "[concat('vnet',uniquestring(resourceGroup().id))]",
     "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]",
+    "publicIPAddressName": "[concat('pip',uniquestring(resourceGroup().id))]",
+    "networkSecurityGroupName": "[concat('nsg',uniquestring(resourceGroup().id))]",
     "linuxConfiguration": {
       "disablePasswordAuthentication": true,
       "ssh": {
         "publicKeys": [
           {
-            "path": "[concat('/home/', parameters('userName'), '/.ssh/authorized_keys')]",
-            "keyData": "[parameters('sshPublicKey')]"
+            "path": "[concat('/home/', parameters('adminUserName'), '/.ssh/authorized_keys')]",
+            "keyData": "[parameters('adminSSHPublicKey')]"
           }
         ]
       }
     },
     "contributor" : "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Authorization/roleDefinitions/', '8e3af657-a8ff-443c-a75c-2fe8c4bcb635')]",
-    "installParm1": "[concat(' -u ', parameters('userName'))]",
+    "installParm1": "[concat(' -u ', parameters('adminUserName'))]",
     "installParm2": "[concat(' -s ', subscription().subscriptionId)]",
-    "installParm3": "[concat(' -a ', variables('stateStorageAccountName'))]",
-    "installParm4": "[if(equals(parameters('desktopInstall'), bool('true')), concat(' -d ', parameters('desktopInstall')), '')]"
-
+    "installParm3": "[concat(' -a ', variables('stateStorageAccountName'))]"
   },
   "resources": [
     {
@@ -202,7 +230,7 @@
             "properties": {
               "privateIPAllocationMethod": "Dynamic",
               "publicIPAddress": {
-                "id": "[resourceId('Microsoft.Network/publicIPAddresses',variables('publicIPAddressName'))]"
+                "id": "[resourceId('Microsoft.Network/publicIPAddresses', variables('publicIPAddressName'))]"
               },
               "subnet": {
                 "id": "[variables('subnetRef')]"
@@ -218,7 +246,7 @@
     {
       "apiVersion": "2017-12-01",
       "type": "Microsoft.Compute/virtualMachines",
-      "name": "[variables('vmName')]",
+      "name": "[parameters('vmName')]",
       "location": "[resourceGroup().location]",
       "identity": {
         "type": "SystemAssigned"
@@ -228,8 +256,8 @@
           "vmSize": "[parameters('vmSize')]"
         },
         "osProfile": {
-          "computerName": "[variables('vmName')]",
-          "adminUsername": "[parameters('userName')]",
+          "computerName": "[parameters('vmName')]",
+          "adminUsername": "[parameters('adminUserName')]",
           "adminPassword": "[parameters('adminPassword')]",
           "linuxConfiguration": "[if(equals(parameters('authenticationType'), 'password'), json('null'), variables('linuxConfiguration'))]"
         },
@@ -258,11 +286,11 @@
     },
     {
       "type": "Microsoft.Compute/virtualMachines/extensions",
-      "name": "[concat(variables('vmName'),'/MSILinuxExtension')]",
+      "name": "[concat(parameters('vmName'),'/MSILinuxExtension')]",
       "apiVersion": "2017-12-01",
       "location": "[resourceGroup().location]",
       "dependsOn": [
-        "[concat('Microsoft.Compute/virtualMachines/', variables('vmName'))]"
+        "[concat('Microsoft.Compute/virtualMachines/', parameters('vmName'))]"
       ],
       "properties": {
         "publisher": "Microsoft.ManagedIdentity",
@@ -280,16 +308,16 @@
       "name": "[guid(resourceGroup().id)]",
       "type": "Microsoft.Authorization/roleAssignments",
       "dependsOn": [
-        "[resourceId('Microsoft.Compute/virtualMachines/extensions/', variables('vmName'),'MSILinuxExtension')]"
+        "[resourceId('Microsoft.Compute/virtualMachines/extensions/', parameters('vmName'),'MSILinuxExtension')]"
       ],
         "properties": {
         "roleDefinitionId": "[variables('contributor')]",
-        "principalId": "[reference(concat(resourceId('Microsoft.Compute/virtualMachines/', variables('vmName')),'/providers/Microsoft.ManagedIdentity/Identities/default'),'2015-08-31-PREVIEW').principalId]",
+        "principalId": "[reference(concat(resourceId('Microsoft.Compute/virtualMachines/', parameters('vmName')),'/providers/Microsoft.ManagedIdentity/Identities/default'),'2015-08-31-PREVIEW').principalId]",
         "scope": "[concat('/subscriptions/', subscription().subscriptionId, '/resourceGroups/', resourceGroup().name)]"
       }
     },
     {
-      "name": "[concat(variables('vmName'),'/customscriptextension')]",
+      "name": "[concat(parameters('vmName'),'/customscriptextension')]",
       "type": "Microsoft.Compute/virtualMachines/extensions",
       "apiVersion": "2017-03-30",
       "location": "[resourceGroup().location]",
@@ -303,14 +331,14 @@
         "autoUpgradeMinorVersion": true,
         "settings": {
           "fileUris": [
-            "[concat(parameters('_artifactsLocation'), '/scripts/infra.sh', parameters('_artifactsLocationSasToken'))]",
-            "[concat(parameters('_artifactsLocation'), '/scripts/install.sh', parameters('_artifactsLocationSasToken'))]",
-            "[concat(parameters('_artifactsLocation'), '/scripts/desktop.sh', parameters('_artifactsLocationSasToken'))]",
-            "[concat(parameters('_artifactsLocation'), '/scripts/azureProviderAndCreds.tf', parameters('_artifactsLocationSasToken'))]"
+            "[concat(parameters('artifactsLocation'), '/scripts/infra.sh', parameters('artifactsLocationSasToken'))]",
+            "[concat(parameters('artifactsLocation'), '/scripts/install.sh', parameters('artifactsLocationSasToken'))]",
+            "[concat(parameters('artifactsLocation'), '/scripts/desktop.sh', parameters('artifactsLocationSasToken'))]",
+            "[concat(parameters('artifactsLocation'), '/scripts/azureProviderAndCreds.tf', parameters('artifactsLocationSasToken'))]"
           ]
         },
         "protectedSettings": {
-          "commandToExecute": "[concat('bash infra.sh && bash install.sh ', variables('installParm1'), variables('installParm2'), variables('installParm3'), variables('installParm4'), ' -k ', listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('stateStorageAccountName')), providers('Microsoft.Storage', 'storageAccounts').apiVersions[0]).keys[0].value, ' -l ', reference(concat(resourceId('Microsoft.Compute/virtualMachines/', variables('vmName')),'/providers/Microsoft.ManagedIdentity/Identities/default'),'2015-08-31-PREVIEW').principalId)]"
+          "commandToExecute": "[concat('bash infra.sh && bash install.sh ', variables('installParm1'), variables('installParm2'), variables('installParm3'), ' -k ', listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('stateStorageAccountName')), providers('Microsoft.Storage', 'storageAccounts').apiVersions[0]).keys[0].value, ' -l ', reference(concat(resourceId('Microsoft.Compute/virtualMachines/', parameters('vmName')),'/providers/Microsoft.ManagedIdentity/Identities/default'),'2015-08-31-PREVIEW').principalId)]"
         }
       }
     }
