@@ -2,7 +2,11 @@
 
 apt-get update
 
-wget -O terraform.zip https://releases.hashicorp.com/terraform/0.11.1/terraform_0.11.1_linux_amd64.zip?_ga=2.228206621.1801000149.1512425211-1345627201.1504718143
+retry=0
+while true;do
+wget -O terraform.zip https://releases.hashicorp.com/terraform/0.11.1/terraform_0.11.1_linux_amd64.zip?_ga=2.228206621.1801000149.1512425211-1345627201.1504718143 && break || ((retry++))
+((retry >= 10)) && break
+done
 
 apt-get install unzip
 

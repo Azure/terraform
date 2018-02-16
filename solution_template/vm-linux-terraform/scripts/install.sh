@@ -12,8 +12,7 @@
 #  3 - k: Storage account key (password)
 #  4 - l: MSI client id (principal id)
 #  5 - u: User account name
-#  6 - d: Ubuntu Desktop GUI for developement 
-#  7 - h: help
+#  6 - h: help
 # Note : 
 # This script has only been tested on Ubuntu 12.04 LTS & 14.04 LTS and must be root
 
@@ -31,7 +30,6 @@ help()
     echo "- k: Storage account key (password)"
     echo "- l: MSI client id (principal id)"
     echo "- u: User account name"
-    echo "- d: Ubuntu Desktop GUI"
     echo "- h: help"
 }
 
@@ -114,8 +112,11 @@ chmod 666 $ACCESSKEYFILE
 chown $USERNAME:$USERNAME $ACCESSKEYFILE
 
 touch $TFENVFILE
-echo "export ARM_SUBSCRIPTION_ID =\"$SUBSCRIPTION_ID\""     >> $TFENVFILE
-echo "export ARM_CLIENT_ID       =\"$MSI_PRINCIPAL_ID\""    >> $TFENVFILE
+echo "export ARM_SUBSCRIPTION_ID=\"$SUBSCRIPTION_ID\""     >> $TFENVFILE
+echo "export ARM_CLIENT_ID=\"$MSI_PRINCIPAL_ID\""          >> $TFENVFILE
+echo "az login"                                            >> $TFENVFILE
+echo "spID=$(az resource list -n hostname --query [*].identity.principalId --out tsv)" >> $TFENVFILE
+echo "az role assignment create  --assignee \"$spID\" --role 'b24988ac-6180-42a0-ab88-20f7382dd24c'  --scope /subscriptions/\"$SUBSCRIPTION_ID\"  >> $TFENVFILE
 chmod 755 $TFENVFILE
 chown $USERNAME:$USERNAME $TFENVFILE
 
@@ -124,9 +125,3 @@ logger -t devvm "Creating the container for remote state"
 az login --msi
 az storage container create -n terraform-state --account-name $STORAGE_ACCOUNT_NAME --account-key $STORAGE_ACCOUNT_KEY
 logger -t devvm "Container for remote state created: $?"
-
-if [[ -v DESKTOPINSTALL ]]; then
-    echo "Installing Mate Desktop"
-    bash ./desktop.sh
-    echo "Desktop installed"
-fi

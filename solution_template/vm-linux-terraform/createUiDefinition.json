@@ -56,119 +56,15 @@
         "visible": true
       }
     ],
-    "steps": [
-      {
-        "name": "firstStep",
-        "label": "Virtual Machine Settings",
-        "bladeTitle": "Virtual Machine Settings",
-        "subLabel": {
-          "preValidation": "",
-          "postValidation": "Done"
-        },
-        "elements": [
-          {
-            "name": "vmSize",
-            "type": "Microsoft.Compute.SizeSelector",
-            "label": "Size",
-            "toolTip": "",
-            "recommendedSizes": [
-              "Standard_DS2_v2",
-              "Standard_DS1_v2",
-              "Standard_DS11_v2"
-            ],
-            "osPlatform": "Linux",
-            "count": 1,
-            "visible": true
-          },
-          {
-            "name": "vmDiskType",
-            "type": "Microsoft.Common.OptionsGroup",
-            "label": "VM disk type",
-            "defaultValue": "SSD",
-            "toolTip": "Premium disks (SSD) are backed by solid state drives and offer consistent, low-latency performance. They provide the best balance between price and performance, and are ideal for I/O-intensive applications and production workloads. Standard disks (HDD) are backed by magnetic drives and are preferable for applications where data is accessed infrequently.",
-            "constraints": {
-              "allowedValues": [
-                {
-                  "label": "SSD",
-                  "value": "Premium_LRS"
-                },
-                {
-                  "label": "HDD",
-                  "value": "Standard_LRS"
-                }
-              ]
-            },
-            "visible": true
-          },
-          {
-            "name": "sptype",
-            "type": "Microsoft.Common.DropDown",
-            "label": "Service Principal Integration",
-            "defaultValue": "Auto(MSI)",
-            "toolTip": "The service pricipal will be added into Terraform as a credential for authenticating with Azure. 'Auto' means that the principal will be created by MSI (Managed Service Identity). 'Manual' means the principal should be created by user and be filled in below.",
-            "constraints": {
-              "allowedValues": [
-                {
-                  "label": "Auto(MSI)",
-                  "value": "msi"
-                },
-                {
-                  "label": "Manual",
-                  "value": "manual"
-                }
-              ]
-            },
-            "visible": true
-          },
-          {
-            "name": "spSection",
-            "type": "Microsoft.Common.Section",
-            "label": "Service Principal",
-            "elements": [
-              {
-                "name": "principalId",
-                "type": "Microsoft.Common.TextBox",
-                "label": "Application ID",
-                "defaultValue": "",
-                "toolTip": "",
-                "constraints": {
-                  "required": true,
-                  "regex": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
-                  "validationMessage": "Must be a valid UUID."
-                },
-                "visible": true
-              },
-              {
-                "name": "spsecret",
-                "type": "Microsoft.Common.PasswordBox",
-                "label": {
-                  "password":"Secret",
-                  "confirmPassword": ""
-                },
-                "toolTip": "",
-                "options": {
-                  "hideConfirmation": true
-                },
-                "visible": true
-              }
-            ],
-            "visible": "[equals(steps('firstStep').sptype,'manual')]"
-          }
-        ]
-      }
-    ],
     "outputs": {
       "adminPassword": "[basics('authType').password]",
       "adminSSHPublicKey": "[basics('authType').sshPublicKey]",
       "adminUserName": "[basics('userName')]",
       "authenticationType": "[basics('authType').authenticationType]",
-      "storageAccountType": "[steps('firstStep').vmDiskType]",
       "vmName": "[basics('vmName')]",
-      "vmSize": "[steps('firstStep').vmSize]",
+      "vmSize": "Standard_D1_V2",
       "location": "[location()]",
-      "spType": "[steps('firstStep').sptype]",
-      "principalId": "[steps('firstStep').spSection.principalId]",
-      "spSecret": "[steps('firstStep').spSection.spsecret]"
+      "spType": "msi"
     }
   }
 }
