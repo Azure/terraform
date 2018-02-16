@@ -21,3 +21,6 @@ apt-key adv --keyserver packages.microsoft.com --recv-keys 52E16F86FEE04B979B07E
 apt-get install apt-transport-https
 
 apt-get update && sudo apt-get install azure-cli
+
+sudo apt-get update 
+

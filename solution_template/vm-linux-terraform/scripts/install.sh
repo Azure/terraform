@@ -68,9 +68,6 @@ while getopts :s:a:k:l:u:d: optname; do
     u) #user account name
       USERNAME=${OPTARG}
       ;;
-    d) #Desktop installation
-      DESKTOPINSTALL=${OPTARG}
-      ;;
     h) #Show help
       help
       exit 2
