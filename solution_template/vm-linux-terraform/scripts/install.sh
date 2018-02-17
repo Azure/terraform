@@ -112,8 +112,7 @@ touch $TFENVFILE
 echo "export ARM_SUBSCRIPTION_ID=\"$SUBSCRIPTION_ID\""     >> $TFENVFILE
 echo "export ARM_CLIENT_ID=\"$MSI_PRINCIPAL_ID\""          >> $TFENVFILE
 echo "az login"                                            >> $TFENVFILE
-echo "spID=\$(az resource list -n hostname --query [*].identity.principalId --out tsv)" >> $TFENVFILE
-echo "az role assignment create  --assignee \"$spID\" --role 'b24988ac-6180-42a0-ab88-20f7382dd24c'  --scope /subscriptions/\"$SUBSCRIPTION_ID\""  >> $TFENVFILE
+echo "az role assignment create  --assignee \"$MSI_PRINCIPAL_ID\" --role 'b24988ac-6180-42a0-ab88-20f7382dd24c'  --scope /subscriptions/\"$SUBSCRIPTION_ID\""  >> $TFENVFILE
 chmod 755 $TFENVFILE
 chown $USERNAME:$USERNAME $TFENVFILE
 
