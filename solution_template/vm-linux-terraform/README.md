@@ -24,5 +24,5 @@ Steps to Enable MSI
 Once the template has finished deployment, log into the VM via `SSH` and run the following command to enable `MSI` with `Terraform`.
 
 ```bash
-source ~/tfEnv.sh
+. ~/tfEnv.sh
 ```

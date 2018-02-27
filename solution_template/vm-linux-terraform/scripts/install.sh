@@ -113,6 +113,7 @@ chown -R $USERNAME:$USERNAME /home/$USERNAME/tfTemplate
 echo "export ARM_SUBSCRIPTION_ID=\"$SUBSCRIPTION_ID\""      >> $PROFILEFILE
 echo "export ARM_CLIENT_ID=\"$MSI_PRINCIPAL_ID\""           >> $PROFILEFILE
 echo "export ARM_USE_MSI=true"                              >> $PROFILEFILE
+echo "export ARM_MSI_ENDPOINT=\"https://localhost:50342\""  >> $PROFILEFILE
 
 # Add contributor permissions to the MSI for entire subscription
 echo "az login"                                            >> $TFENVFILE
