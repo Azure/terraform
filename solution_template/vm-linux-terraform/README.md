@@ -1,7 +1,7 @@
 Azure Marketplace Terraform Solution Template
 ===
 
-This template provisions a `Linux` Virtual Machine(VM) to `Azure` pre-configured with the `Terraform` v0.11.1 core runtime and the `Azure CLI` v2.0.
+This template provisions a `Linux` Virtual Machine(VM) to `Azure` pre-configured with the latest `Terraform` core runtime and the `Azure CLI` v2.0.
 
 Template Deployment Steps:
 ---
@@ -11,7 +11,7 @@ Template Deployment Steps:
 * Creates a `Terraform` template folder (tfTemplate)
 * Pre-configures `Terraform` remote state with the `Azure` backend
 
-Once all required resources have been provisioned to `Azure` the template will then execute a shell script on the VM using the custom script extension. The shell script will install `Terraform` v0.11.1 core runtime and the `Azure CLI` v2.0. It then creates a `Terraform` template folder that is pre-configured to use `Terraform Remote State` with the `Azure` backend. The `Azure CLI` will also create the storage container required by remote state.
+Once all required resources have been provisioned to `Azure` the template will then execute a shell script on the VM using the custom script extension. The shell script will install latest `Terraform` core runtime and the `Azure CLI` v2.0. It then creates a `Terraform` template folder that is pre-configured to use `Terraform Remote State` with the `Azure` backend. The `Azure CLI` will also create the storage container required by remote state.
 
 Post Deployment Configuration Steps
 ===
