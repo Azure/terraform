@@ -109,15 +109,10 @@ chmod 666 $REMOTESTATEFILE
 
 chown -R $USERNAME:$USERNAME /home/$USERNAME/tfTemplate
 
-touch $TFENVFILE
-echo "export ARM_SUBSCRIPTION_ID=\"$SUBSCRIPTION_ID\""     >> $TFENVFILE
-echo "export ARM_CLIENT_ID=\"$MSI_PRINCIPAL_ID\""          >> $TFENVFILE
-echo "export USE_MSI=true"                                 >> $TFENVFILE
-
 # Set these variables in the profile
-echo "echo export ARM_SUBSCRIPTION_ID=\"$SUBSCRIPTION_ID\" >>$PROFILEFILE" >> $TFENVFILE
-echo "echo export ARM_CLIENT_ID=\"$MSI_PRINCIPAL_ID\" >>$PROFILEFILE"      >> $TFENVFILE
-echo "echo export USE_MSI=true >>$PROFILEFILE"                             >> $TFENVFILE
+echo "export ARM_SUBSCRIPTION_ID=\"$SUBSCRIPTION_ID\""      >> $PROFILEFILE
+echo "export ARM_CLIENT_ID=\"$MSI_PRINCIPAL_ID\""           >> $PROFILEFILE
+echo "export ARM_USE_MSI=true"                              >> $PROFILEFILE
 
 # Add contributor permissions to the MSI for entire subscription
 echo "az login"                                            >> $TFENVFILE
