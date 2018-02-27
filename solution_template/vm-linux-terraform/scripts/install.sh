@@ -12,7 +12,8 @@
 #  3 - k: Storage account key (password)
 #  4 - l: MSI client id (principal id)
 #  5 - u: User account name
-#  6 - h: help
+#  6 - d: Ubuntu Desktop GUI for developement 
+#  7 - h: help
 # Note : 
 # This script has only been tested on Ubuntu 12.04 LTS & 14.04 LTS and must be root
 
@@ -30,6 +31,7 @@ help()
     echo "- k: Storage account key (password)"
     echo "- l: MSI client id (principal id)"
     echo "- u: User account name"
+    echo "- d: Ubuntu Desktop GUI"
     echo "- h: help"
 }
 
@@ -68,6 +70,9 @@ while getopts :s:a:k:l:u:d: optname; do
     u) #user account name
       USERNAME=${OPTARG}
       ;;
+    d) #Desktop installation
+      DESKTOPINSTALL=${OPTARG}
+      ;;
     h) #Show help
       help
       exit 2
@@ -82,7 +87,6 @@ done
 
 TEMPLATEFOLDER="/home/$USERNAME/tfTemplate"
 REMOTESTATEFILE="$TEMPLATEFOLDER/remoteState.tf"
-ACCESSKEYFILE="/home/$USERNAME/access_key"
 TFENVFILE="/home/$USERNAME/tfEnv.sh"
 CREDSFILE="$TEMPLATEFOLDER/azureProviderAndCreds.tf"
 
@@ -97,16 +101,12 @@ echo " backend \"azurerm\" {"                               >> $REMOTESTATEFILE
 echo "  storage_account_name = \"$STORAGE_ACCOUNT_NAME\""   >> $REMOTESTATEFILE
 echo "  container_name       = \"terraform-state\""         >> $REMOTESTATEFILE
 echo "  key                  = \"prod.terraform.tfstate\""  >> $REMOTESTATEFILE
+echo "  access_key           = \"$STORAGE_ACCOUNT_KEY\""    >> $REMOTESTATEFILE
 echo "  }"                                                  >> $REMOTESTATEFILE
 echo "}"                                                    >> $REMOTESTATEFILE
 chmod 666 $REMOTESTATEFILE
 
 chown -R $USERNAME:$USERNAME /home/$USERNAME/tfTemplate
-
-touch $ACCESSKEYFILE
-echo "access_key = \"$STORAGE_ACCOUNT_KEY\""                >> $ACCESSKEYFILE
-chmod 666 $ACCESSKEYFILE
-chown $USERNAME:$USERNAME $ACCESSKEYFILE
 
 touch $TFENVFILE
 echo "export ARM_SUBSCRIPTION_ID=\"$SUBSCRIPTION_ID\""     >> $TFENVFILE
@@ -121,3 +121,9 @@ logger -t devvm "Creating the container for remote state"
 az login --msi
 az storage container create -n terraform-state --account-name $STORAGE_ACCOUNT_NAME --account-key $STORAGE_ACCOUNT_KEY
 logger -t devvm "Container for remote state created: $?"
+
+if [[ -v DESKTOPINSTALL ]]; then
+    echo "Installing Mate Desktop"
+    bash ./desktop.sh
+    echo "Desktop installed"
+fi

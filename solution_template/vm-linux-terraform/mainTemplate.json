@@ -91,7 +91,8 @@
     "contributor" : "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Authorization/roleDefinitions/', '8e3af657-a8ff-443c-a75c-2fe8c4bcb635')]",
     "installParm1": "[concat(' -u ', parameters('adminUserName'))]",
     "installParm2": "[concat(' -s ', subscription().subscriptionId)]",
-    "installParm3": "[concat(' -a ', variables('stateStorageAccountName'))]"
+    "installParm3": "[concat(' -a ', variables('stateStorageAccountName'))]",
+    "resourceGuid": "[guid(resourceGroup().id)]"
   },
   "resources": [
     {
@@ -277,7 +278,7 @@
     },
     {
       "apiVersion": "2017-09-01",
-      "name": "[guid(resourceGroup().id)]",
+      "name": "[variables('resourceGuid')]",
       "type": "Microsoft.Authorization/roleAssignments",
       "dependsOn": [
         "[resourceId('Microsoft.Compute/virtualMachines/extensions/', parameters('vmName'),'MSILinuxExtension')]"
@@ -294,7 +295,7 @@
       "apiVersion": "2017-03-30",
       "location": "[parameters('location')]",
       "dependsOn": [
-        "[resourceId('Microsoft.Authorization/roleAssignments', guid(resourceGroup().id))]"
+        "[resourceId('Microsoft.Authorization/roleAssignments', variables('resourceGuid'))]"
       ],
       "properties": {
         "publisher": "Microsoft.Azure.Extensions",

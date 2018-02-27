@@ -56,6 +56,8 @@
         "visible": true
       }
     ],
+    "steps": [
+    ],
     "outputs": {
       "adminPassword": "[basics('authType').password]",
       "adminSSHPublicKey": "[basics('authType').sshPublicKey]",
@@ -63,8 +65,7 @@
       "authenticationType": "[basics('authType').authenticationType]",
       "vmName": "[basics('vmName')]",
       "vmSize": "Standard_D1_V2",
-      "location": "[location()]",
-      "spType": "msi"
+      "location": "[location()]"
     }
   }
 }
