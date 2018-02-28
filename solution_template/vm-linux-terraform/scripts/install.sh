@@ -117,7 +117,7 @@ echo "export ARM_MSI_ENDPOINT=\"https://localhost:50342\""  >> $PROFILEFILE
 
 # Add contributor permissions to the MSI for entire subscription
 touch $TFENVFILE
-echo "az login"                                            >> $TFENVFILE
+echo "az login"                                             >> $TFENVFILE
 echo "az role assignment create  --assignee \"$MSI_PRINCIPAL_ID\" --role 'b24988ac-6180-42a0-ab88-20f7382dd24c'  --scope /subscriptions/\"$SUBSCRIPTION_ID\""  >> $TFENVFILE
 chmod 755 $TFENVFILE
 chown $USERNAME:$USERNAME $TFENVFILE
