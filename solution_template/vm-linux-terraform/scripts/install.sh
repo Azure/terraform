@@ -58,6 +58,9 @@ while getopts :s:a:k:l:u:d: optname; do
     s) #azure subscription id
       SUBSCRIPTION_ID=${OPTARG}
       ;;
+    t) #azure tenant id 
+      TENANT_ID=${OPTARG}
+      ;;
     a) #storage account name
       STORAGE_ACCOUNT_NAME=${OPTARG}
       ;;
@@ -114,6 +117,7 @@ echo "export ARM_SUBSCRIPTION_ID=\"$SUBSCRIPTION_ID\""      >> $PROFILEFILE
 echo "export ARM_CLIENT_ID=\"$MSI_PRINCIPAL_ID\""           >> $PROFILEFILE
 echo "export ARM_USE_MSI=true"                              >> $PROFILEFILE
 echo "export ARM_MSI_ENDPOINT=\"https://localhost:50342\""  >> $PROFILEFILE
+echo "export ARM_TENANT_ID=\"$TENANT_ID\""                  >> $PROFILEFILE
 
 # Add contributor permissions to the MSI for entire subscription
 touch $TFENVFILE

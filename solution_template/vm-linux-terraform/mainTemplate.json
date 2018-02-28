@@ -92,6 +92,7 @@
     "installParm1": "[concat(' -u ', parameters('adminUserName'))]",
     "installParm2": "[concat(' -s ', subscription().subscriptionId)]",
     "installParm3": "[concat(' -a ', variables('stateStorageAccountName'))]",
+    "installParm4": "[concat(' -t ', subscription().tenantId)]",
     "resourceGuid": "[guid(resourceGroup().id)]"
   },
   "resources": [
@@ -310,7 +311,7 @@
           ]
         },
         "protectedSettings": {
-          "commandToExecute": "[concat('bash infra.sh && bash install.sh ', variables('installParm1'), variables('installParm2'), variables('installParm3'), ' -k ', listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('stateStorageAccountName')), '2017-10-01').keys[0].value, ' -l ', reference(concat(resourceId('Microsoft.Compute/virtualMachines/', parameters('vmName')),'/providers/Microsoft.ManagedIdentity/Identities/default'),'2015-08-31-PREVIEW').principalId)]"
+          "commandToExecute": "[concat('bash infra.sh && bash install.sh ', variables('installParm1'), variables('installParm2'), variables('installParm3'), variables('installParm4'), ' -k ', listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('stateStorageAccountName')), '2017-10-01').keys[0].value, ' -l ', reference(concat(resourceId('Microsoft.Compute/virtualMachines/', parameters('vmName')),'/providers/Microsoft.ManagedIdentity/Identities/default'),'2015-08-31-PREVIEW').principalId)]"
         }
       }
     }
