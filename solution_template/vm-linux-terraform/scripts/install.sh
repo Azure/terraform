@@ -3,17 +3,18 @@
 # Script Name: install.sh
 # Author: Greg Oliver - Microsoft github:(sebastus)
 # Version: 0.1
-# Last Modified By: Greg Oliver
+# Last Modified By: Jeffrey Cline
 # Description:
 #  This script configures authentication for Terraform and remote state for Terraform.
 # Parameters :
 #  1 - s: Azure subscription ID
-#  2 - a: Storage account name
-#  3 - k: Storage account key (password)
-#  4 - l: MSI client id (principal id)
-#  5 - u: User account name
-#  6 - d: Ubuntu Desktop GUI for developement 
-#  7 - h: help
+#  2 - t: Azure tenant ID
+#  3 - a: Storage account name
+#  4 - k: Storage account key (password)
+#  5 - l: MSI client id (principal id)
+#  6 - u: User account name
+#  7 - d: Ubuntu Desktop GUI for developement 
+#  8 - h: help
 # Note : 
 # This script has only been tested on Ubuntu 12.04 LTS & 14.04 LTS and must be root
 
@@ -27,6 +28,7 @@ help()
     echo "Usage: "
     echo "Parameters:"
     echo "- s: Azure subscription ID"
+    echo "- t: Azure tenant ID"
     echo "- a: Storage account name"
     echo "- k: Storage account key (password)"
     echo "- l: MSI client id (principal id)"
@@ -50,7 +52,7 @@ then
 fi
 
 # Arguments
-while getopts :s:a:k:l:u:d: optname; do
+while getopts :s:t:a:k:l:u:d: optname; do
   if [[ $optname != 'e' && $optname != 'k' ]]; then
     log "Option $optname set with value ${OPTARG}"
   fi
