@@ -11,7 +11,7 @@ Template Deployment Steps:
 * Creates a `Terraform` template folder (tfTemplate)
 * Pre-configures `Terraform` remote state with the `Azure` backend
 
-Once all required resources have been provisioned to `Azure` the template will then execute a shell script on the VM via the custom script extension. The shell script will install the latest `Terraform` version, `Azure CLI` v2.0, `Unzip`, `JQ` and create the remote storage container via the installed `Azure CLI` v2.0. Finally, it will then create a `Terraform` template folder that is pre-configured for use with `Terraform Remote State` and the `Azure` backend.
+Once all required resources have been provisioned to `Azure` the template will then execute a shell script on the VM via the custom script extension. The shell script will install the latest `Terraform` version, `Azure CLI` v2.0, `Unzip`, `JQ` and create the remote storage container via the installed `Azure CLI`. Finally, it will then create a `Terraform` template folder that is pre-configured for use with `Terraform Remote State` and the `Azure` backend.
 
 Post Deployment Configuration Steps
 ===
