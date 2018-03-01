@@ -21,7 +21,7 @@ Copy ~/tfTemplate/remoteState.tf from home directory to the root of the `Terrafo
 
 Steps to Enable MSI
 ---
-Once the template has finished deployment, log into the VM via `SSH` and run the following command to enable `MSI` with `Terraform`.
+Once the template has finished deployment, log into the VM via `SSH` and run the following command to enable `MSI` with `Terraform`. You only need to perform this step once, the first time you connect to the VM, once the script has been ran the changes are persisted to `Azure`.
 
 ```bash
 . ~/tfEnv.sh
