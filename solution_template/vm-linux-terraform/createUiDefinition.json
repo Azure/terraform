@@ -57,6 +57,51 @@
       }
     ],
     "steps": [
+      {
+        "name": "firstStep",
+        "label": "Additional Settings",
+        "bladeTitle": "Additional Settings",
+        "subLabel": {
+          "preValidation": "",
+          "postValidation": "Done"
+        },
+        "elements": [
+          {
+            "name": "vmSize",
+            "type": "Microsoft.Compute.SizeSelector",
+            "label": "Size",
+            "toolTip": "",
+            "recommendedSizes": [
+              "Standard_DS2_v2",
+              "Standard_DS1_v2",
+              "Standard_DS11_v2"
+            ],
+            "osPlatform": "Linux",
+            "count": 1,
+            "visible": true
+          },
+          {
+            "name": "vmDiskType",
+            "type": "Microsoft.Common.OptionsGroup",
+            "label": "VM disk type",
+            "defaultValue": "SSD",
+            "toolTip": "Premium disks (SSD) are backed by solid state drives and offer consistent, low-latency performance. They provide the best balance between price and performance, and are ideal for I/O-intensive applications and production workloads. Standard disks (HDD) are backed by magnetic drives and are preferable for applications where data is accessed infrequently.",
+            "constraints": {
+              "allowedValues": [
+                {
+                  "label": "SSD",
+                  "value": "Premium_LRS"
+                },
+                {
+                  "label": "HDD",
+                  "value": "Standard_LRS"
+                }
+              ]
+            },
+            "visible": true
+          }
+        ]
+      }
     ],
     "outputs": {
       "adminPassword": "[basics('authType').password]",
@@ -64,7 +109,8 @@
       "adminUserName": "[basics('userName')]",
       "authenticationType": "[basics('authType').authenticationType]",
       "vmName": "[basics('vmName')]",
-      "vmSize": "Standard_D1_V2",
+      "vmSize": "[steps('firstStep').vmSize]",
+      "storageAccountType": "[steps('firstStep').vmDiskType]",
       "location": "[location()]"
     }
   }

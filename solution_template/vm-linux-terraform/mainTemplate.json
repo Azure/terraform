@@ -63,6 +63,13 @@
       },
       "type": "string",
       "defaultValue": "Standard_DS1_v2"
+    },
+    "storageAccountType": {
+      "defaultValue": "Standard_LRS",
+      "metadata": {
+        "description": "Storage Account Type"
+      },
+      "type": "string"
     }
   },
   "variables": {
@@ -241,6 +248,12 @@
             "offer": "UbuntuServer",
             "sku": "16.04-LTS",
             "version": "latest"
+          },
+          "osDisk": {
+            "createOption": "FromImage",
+            "managedDisk": {
+              "storageAccountType": "[parameters('storageAccountType')]"
+            }
           }
         },
         "networkProfile": {
