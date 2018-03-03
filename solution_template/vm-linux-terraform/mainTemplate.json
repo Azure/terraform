@@ -100,7 +100,7 @@
     "installParm2": "[concat(' -s ', subscription().subscriptionId)]",
     "installParm3": "[concat(' -a ', variables('stateStorageAccountName'))]",
     "installParm4": "[concat(' -t ', subscription().tenantId)]",
-    "resourceGuid": "[guid(resourceGroup().id)]"
+    "resourceGuid": "[guid(resourceGroup().id, deployment().name)]"
   },
   "resources": [
     {
