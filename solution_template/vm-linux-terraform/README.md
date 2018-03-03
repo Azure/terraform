@@ -6,8 +6,8 @@ This template provisions a `Linux` Virtual Machine(VM) to `Azure` pre-configured
 Template Deployment Steps:
 ---
 * Creates a VM with system assigned identity based on the `Ubuntu 16.04 LTS` image
-* Installs the `MSI` extension on the VM to allow OAuth tokens to be issued for `Azure` resources
-* Assign `RBAC` permissions to the Managed Identity, granting owner rights for the resource group
+* Installs the [MSI](https://docs.microsoft.com/en-us/azure/active-directory/msi-overview) extension on the VM to allow OAuth tokens to be issued for `Azure` resources
+* Assign [RBAC](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-control-what-is) permissions to the Managed Identity, granting owner rights for the resource group
 * Creates a `Terraform` template folder (tfTemplate)
 * Pre-configures `Terraform` remote state with the `Azure` backend
 
@@ -17,7 +17,7 @@ Post Deployment Configuration Steps
 ===
 Steps to Enable Remote State
 ---
-Copy ~/tfTemplate/remoteState.tf from home directory to the root of the `Terraform` scripts to enable remote state management.
+Copy `~/tfTemplate/remoteState.tf` from home directory to the root of the `Terraform` scripts to enable remote state management.
 
 Steps to Enable MSI
 ---
