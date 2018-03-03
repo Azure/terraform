@@ -8,12 +8,42 @@ sudo apt-get install unzip
 
 sudo apt-get update
 
-TF_VERSION=$(curl -s https://checkpoint-api.hashicorp.com/v1/check/terraform | jq -r -M ".current_version")
-wget -O terraform.zip https://releases.hashicorp.com/terraform/${TF_VERSION}/terraform_${TF_VERSION}_linux_amd64.zip
-wget -O terraform.sha256 https://releases.hashicorp.com/terraform/${TF_VERSION}/terraform_${TF_VERSION}_SHA256SUMS
-wget -O terraform.sha256.sig https://releases.hashicorp.com/terraform/${TF_VERSION}/terraform_${TF_VERSION}_SHA256SUMS.sig
-curl -s https://keybase.io/hashicorp/pgp_keys.asc | gpg --import
-gpg --verify terraform.sha256.sig terraform.sha256
+retry=0
+while true;do
+TF_VERSION=$(curl -s https://checkpoint-api.hashicorp.com/v1/check/terraform | jq -r -M ".current_version") && break || ((retry++))
+((retry >= 10)) && break
+done
+
+retry=0
+while true;do
+wget -O terraform.zip https://releases.hashicorp.com/terraform/${TF_VERSION}/terraform_${TF_VERSION}_linux_amd64.zip && break || ((retry++))
+((retry >= 10)) && break
+done
+
+retry=0
+while true;do
+wget -O terraform.sha256 https://releases.hashicorp.com/terraform/${TF_VERSION}/terraform_${TF_VERSION}_SHA256SUMS && break || ((retry++))
+((retry >= 10)) && break
+done
+
+retry=0
+while true;do
+wget -O terraform.sha256.sig https://releases.hashicorp.com/terraform/${TF_VERSION}/terraform_${TF_VERSION}_SHA256SUMS.sig && break || ((retry++))
+((retry >= 10)) && break
+done
+
+retry=0
+while true;do
+curl -s https://keybase.io/hashicorp/pgp_keys.asc | gpg --import && break || ((retry++))
+((retry >= 10)) && break
+done
+
+retry=0
+while true;do
+gpg --verify terraform.sha256.sig terraform.sha256 && break || ((retry++))
+((retry >= 10)) && break
+done
+
 echo $(grep -Po "[[:xdigit:]]{64}(?=\s+terraform_${TF_VERSION}_linux_amd64.zip)" terraform.sha256) terraform.zip | sha256sum -c
 unzip terraform.zip
 mv terraform /usr/local/bin
