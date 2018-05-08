@@ -130,6 +130,6 @@ chown $USERNAME:$USERNAME $TFENVFILE
 
 # create the container for remote state
 logger -t devvm "Creating the container for remote state"
-az login --msi
+az login --identity
 az storage container create -n terraform-state --account-name $STORAGE_ACCOUNT_NAME --account-key $STORAGE_ACCOUNT_KEY
 logger -t devvm "Container for remote state created: $?"
