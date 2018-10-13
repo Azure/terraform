@@ -1,14 +1,5 @@
-
-# Contributing
-
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.microsoft.com.
-
-When you submit a pull request, a CLA-bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+تعاون
+یہ منصوبہ شراکت اور تجاویز کا خیر مقدم ہے. سب سے زیادہ شراکت داروں کو آپ کو شراکت دار لائسنس کے معاہدے (CLA) سے اتفاق کرنے کی ضرورت ہوتی ہے جس کا اعلان کیا گیا ہے کہ آپ کو حق حاصل ہے، اور اصل میں، ہمیں آپ کے تعاون کا استعمال فراہم کرنے کا حق. تفصیلات کے لئے، [github] https://cla.microsoft.com ملاحظہ کریں.
+جب آپ ایک پل کی درخواست جمع کرتے ہیں تو، ایک CLA-بوٹ خود بخود اس بات کا تعین کرے گا کہ آپ کو ایک CLA فراہم کرنے کی ضرورت ہے اور مناسب طریقے سے (مثال کے طور پر، لیبل، تبصرہ) کو سجانے کی ضرورت ہے. بس بوٹ کے ذریعہ فراہم شدہ ہدایات پر عمل کریں. آپ اپنے CLA کا استعمال کرکے صرف ایک بار ایسا کرنے کی ضرورت ہوگی.
+ [github] اس منصوبے نے مائیکروسافٹ اوپن ماخذ کوڈ سازی کو اپنایا ہے. مزید معلومات کے لۓ کوڈ کنکشن سوالات یا رابطے تعاون
+opencode@microsoft.com کسی اضافی سوالات یا تبصرے کے ساتھ دیکھیں.
