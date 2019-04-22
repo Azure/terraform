@@ -6,7 +6,6 @@ This template provisions a `Linux` Virtual Machine(VM) to `Azure` pre-configured
 Template Deployment Steps:
 ---
 * Creates a VM with system assigned identity based on the `Ubuntu 16.04 LTS` image
-* Installs the [MSI](https://docs.microsoft.com/en-us/azure/active-directory/msi-overview) extension on the VM to allow OAuth tokens to be issued for `Azure` resources
 * Assign [RBAC](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-control-what-is) permissions to the Managed Identity, granting owner rights for the resource group
 * Creates a `Terraform` template folder (tfTemplate)
 * Pre-configures `Terraform` remote state with the `Azure` backend
@@ -21,7 +20,7 @@ Copy `~/tfTemplate/remoteState.tf` from home directory to the root of the `Terra
 
 Steps to Enable MSI
 ---
-Once the template has finished deployment, log into the VM via `SSH` and run the following command to enable `MSI` with `Terraform`. You only need to perform this step once, the first time you connect to the VM, once the script has been ran the changes are persisted to `Azure`.
+Once the template has finished deployment, log into the VM via `SSH` and run the following command to enable [MI](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) with `Terraform`. You only need to perform this step once, the first time you connect to the VM, once the script has been ran the changes are persisted to `Azure`.
 
 ```bash
 . ~/tfEnv.sh
