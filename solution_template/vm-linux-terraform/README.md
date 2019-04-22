@@ -18,7 +18,7 @@ Steps to Enable Remote State
 ---
 Copy `~/tfTemplate/remoteState.tf` from home directory to the root of the `Terraform` scripts to enable remote state management.
 
-Steps to Enable MSI
+Steps to Enable Managed Identities(MI)
 ---
 Once the template has finished deployment, log into the VM via `SSH` and run the following command to enable [MI](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) with `Terraform`. You only need to perform this step once, the first time you connect to the VM, once the script has been ran the changes are persisted to `Azure`.
 
