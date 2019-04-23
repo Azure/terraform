@@ -45,6 +45,8 @@ First, go to the [AzureRM Terraform provider](https://github.com/terraform-provi
 
 Once done, you need to clone your fork into the `$GOPATH/src/github.com/terraform-providers/terraform-provider-azurerm` folder.
 
+## Build the sources
+
 You can check that everything is OK by building the AzureRM provider:
 
 ```bash
@@ -56,11 +58,16 @@ Once completed, the binary of the AzureRM provider should be available in the `$
 
 *Note: on Windows, you need to use Git Bash*
 
+More information [here](https://github.com/terraform-providers/terraform-provider-azurerm#developing-the-provider).
+
 ## Work with your local build
 
 Once you have built a new version of the AzureRM Terraform provider, you can use it locally.
+To use your local version, the first thing to do is a `terraform init`, as usual, to inialize your terraform working directory.
 
-**TODO**
+The init operation will download the AzureRM Provider for you. You can just remove it, and replace it with your local copy.
+
+Do a `terraform init` again and you're done ! :-) 
 
 ## Debug the AzureRM provider using Visual Studio Code and Delve
 
