@@ -72,8 +72,66 @@ Do a `terraform init` again and you're done ! :-)
 ## Debug the AzureRM provider using Visual Studio Code and Delve
 
 It is possible to use Visual Studio Code and Delve (the Golang debugger) to debug the AzureRM provider.
+The easiest way to debug Terraform AzureRM Provider is to execute the acceptances unit test with the Delve debugger attached. Acceptance tests are tests that are written for every resources and data sources and that will really execute the code to an Azure subscription, to validate everything is working well.
 
-**TODO**
+First, to be able to connect to Azure, you need to create a service principal using the following command:
+
+```bash
+az ad sp create-for-rbac --role=Contributor --scope=/subscriptions/<YOUR_SUBSCRIPTION_ID>
+```
+
+Then, you need to create a `.launch.json` file inside the `.vscode` folder at the root of the Terraform AzureRM provider directory (create the `.vscode` folder if it does not exist).
+
+Copy the following content into the file:
+
+```json
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch test function",
+            "type": "go",
+            "request": "launch",
+            "mode": "test",
+            "program": "${workspaceRoot}/azurerm/resource_arm_container_registry_test.go",
+            "args": [
+                "-test.v",
+                "-test.run",
+                "TestAccAzureRMContainerRegistry_geoReplication"
+            ],
+            "envFile": "${workspaceRoot}/.vscode/private.env",
+            "showLog": true
+        },
+    ]
+}
+```
+
+The configuration above allows to start debugging a Terraform resource, by launching one or more acceptance test:
+
+- The `program` property indicates the file you want to debug
+- The last entry of the `args` property, here `TestAccAzureRMContainerRegistry_geoReplication` represents th test to launch. You can use regex to run multiple tests (ex: `TestAccAzureRMContainerRegistry_*`)
+- The `envFile` property defines the path to get the environment variables file (mainly Azure credentials) that needs to be used to run the acceptance test.
+
+Create the `private.env` file into the `.vscode` folder and fill it with the following environment variables:
+
+```
+ARM_CLIENT_ID=<YOUR_SERVICE_PRINCIPAL_CLIENT_ID>
+ARM_CLIENT_SECRET=<YOUR_SERVICE_PRINCIPAL_CLIENT_SECRET>
+ARM_SUBSCRIPTION_ID=<YOUR_AZURE_SUBSCRIPTION_ID>
+ARM_TENANT_ID=<YOUR_AZURE_TENANT_ID>
+ARM_TEST_LOCATION=<AZURE_LOCATION_1>
+ARM_TEST_LOCATION_ALT=<AZURE_LOCATION_2>
+TF_ACC=1
+```
+
+Once done, you can just press F5 and the debug will start! You can place breakpoints in your code to do step by step debugging:
+
+![Install Go Tools - Wait](assets/code-debug-breakpoint.png)
+
+*Note: the first time your start the debug, it can take a while, you need to be patient :-)*
 
 ## Other
 
