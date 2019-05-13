@@ -10,14 +10,14 @@ You need to install Terraform on your dev environment. You can downlaod it from 
 
 ### Go tools
 
-Terraform is developed using Go. You need to install Go **1.11.x** to be able to build and debug the provider locally.
+Terraform is developed using Go Programming Language. You need to install Go Programming Language **1.11.x** to be able to build and debug the provider locally.
 You can download it from [this page](https://golang.org/dl/) and find the installation instructions for your system [here](https://golang.org/doc/install#install)
 
 Then you can test your environment following the instructions on [this page](https://golang.org/doc/install#testing).
 
-### Check you GOPATH
+### Check your environment variables
 
-As of many Go project, AzureRM Terraform provider rely on your GOPATH environment variable. You may want to make sure it is well configured for your system, reading [this page](https://github.com/golang/go/wiki/SettingGOPATH).
+As with many Go project, AzureRM Terraform provider rely on your GOPATH environment variable. You may want to make sure it is well configured for your system, reading [this page](https://github.com/golang/go/wiki/SettingGOPATH).
 
 ### Visual Studio Code
 
@@ -127,6 +127,8 @@ ARM_TEST_LOCATION_ALT=<AZURE_LOCATION_2>
 TF_ACC=1
 ```
 
+*Note: it is possible to customize the logging level of Terraform. It might be super useful in some situations. It can be done by setting the `TF_LOG` environment variable. Refer to [the official debugging documentation](https://www.terraform.io/docs/internals/debugging.html) for more details.*
+
 Once done, you can just press F5 and the debug will start! You can place breakpoints in your code to do step by step debugging:
 
 ![Install Go Tools - Wait](assets/code-debug-breakpoint.png)
@@ -138,3 +140,8 @@ Once done, you can just press F5 and the debug will start! You can place breakpo
 ### Slack
 
 You can request an invite to access the Terraform on Azure Slack [here](https://join.slack.com/t/terraform-azure/shared_invite/enQtNDMzNjQ5NzcxMDc3LTJkZTJhNTg3NTE5ZTdjZjFhMThmMTVmOTg5YWJkMDU1YTMzN2YyOWJmZGM3MGI4OTQ0ODQxNTEyNjdjMDAxMjM).
+
+### Configuring Terraform on Windows 10 Linux Sub-System
+
+It is also possible to configure Terraform to be run from the Windows 10 Linux Sub-System (WSL). Check [this blog post](https://techcommunity.microsoft.com/t5/Azure-Developer-Community-Blog/Configuring-Terraform-on-Windows-10-Linux-Sub-System/ba-p/393845) for more information.
+
