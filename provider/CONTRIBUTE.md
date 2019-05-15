@@ -138,6 +138,8 @@ Once done, you can just press F5 and the debug will start! You can place breakpo
 
 ## How to contribute to the Azure RM provider
 
+*Note: we also invite you to read the official documentation about developing a provider [here](https://www.terraform.io/docs/plugins/basics.html#developing-a-plugin)*
+
 First you need to pick [an issue on the provider](https://github.com/terraform-providers/terraform-provider-azurerm/issues) by commenting the issue and saying that you're going to work on that, to make sure that HashiCorp people who maintain the repository and will review your contribution are aware that you are going to work on that.
 
 *Note: if there is no issue for the problem you are trying to solve, you can create one.*
@@ -245,7 +247,7 @@ Tests are definied in the `azurerm` directory, aside with data sources and resou
 
 You can find examples of tests for Azure Batch Account data source [here](https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/azurerm/data_source_batch_account_test.go) and Azure Batch Account resource [here](https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/azurerm/resource_arm_batch_account_test.go).
 
-Please refer to the above section to learn on to run the acceptance test on your laptop.
+Please refer to the above section to learn on to run the acceptance tests on your laptop.
 
 ## Other
 
