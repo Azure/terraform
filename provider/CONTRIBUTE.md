@@ -66,9 +66,9 @@ More information [here](https://github.com/terraform-providers/terraform-provide
 Once you have built a new version of the AzureRM Terraform provider, you can use it locally.
 To use your local version, the first thing to do is a `terraform init`, as usual, to inialize your terraform working directory.
 
-The init operation will download the AzureRM Provider for you. You can just remove it, and replace it with your local copy.
+If your `terraform` binary is in the `$GOPATH/bin` folder on your machine, then the terraform init operation will use the locally built provider. 
 
-Do a `terraform init` again and you're done ! :-) 
+If not, the init operation will download the AzureRM Provider for you. You can just remove it, and replace it with your local copy. Do a `terraform init` again and you're done ! :-) 
 
 ## Debug the AzureRM provider using Visual Studio Code and Delve
 
