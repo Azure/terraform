@@ -1,6 +1,7 @@
 # Contribute to Terraform AzureRM provider
 
 This document describe how you can get ready to contribute to the [AzureRM Terraform provider](https://github.com/terraform-providers/terraform-provider-azurerm).
+We also recommand that your read the [README](https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/README.md) on the AzureRM Terraform Provider repository.
 
 ## Setup your system
 
@@ -134,6 +135,117 @@ Once done, you can just press F5 and the debug will start! You can place breakpo
 ![Install Go Tools - Wait](assets/code-debug-breakpoint.png)
 
 *Note: the first time your start the debug, it can take a while, you need to be patient :-)*
+
+## How to contribute to the Azure RM provider
+
+First you need to pick [an issue on the provider](https://github.com/terraform-providers/terraform-provider-azurerm/issues) by commenting the issue and saying that you're going to work on that, to make sure that HashiCorp people who maintain the repository and will review your contribution are aware that you are going to work on that.
+
+*Note: if there is no issue for the problem you are trying to solve, you can create one.*
+
+If you are a new contributor, there is a [good first issue](https://github.com/terraform-providers/terraform-provider-azurerm/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) label that may help you to filter the issue and start with a simple one.
+
+For each piece of code that you write into the provider, you need to make sure that you have:
+
+- the implementation in both `data source` and `resource` definition
+- acceptance test created or updated
+- documentation created or updated
+- example created or updated
+
+Data sources, resources and tests are defined in the [azurerm](https://github.com/terraform-providers/terraform-provider-azurerm/tree/master/azurerm) folder of the repository.
+
+Documentation for data sources is in the [website/docs/d](https://github.com/terraform-providers/terraform-provider-azurerm/tree/master/website/docs/d) folder and documentation for resources is in the [website/docs/r](https://github.com/terraform-providers/terraform-provider-azurerm/tree/master/website/docs/r) folder.
+
+Finally, examples are located in the [examples](https://github.com/terraform-providers/terraform-provider-azurerm/tree/master/examples) folder.
+
+AzureRM Terraform provider uses the [Azure SDK for Go](https://github.com/Azure/azure-sdk-for-go) to interact with Azure. It's important that you respect that rule. If you are trying to do something that is not available in the Azure SDK for Go, then you should open an issue on that repository first.
+
+We recommand that you start with fixing issues/patching an existing data source or resource to understand how it works in details before trying to implement a brand new one.
+
+Don't forget that you are working on your own fork of the repository and that you need to open a pull request to the main repository to bring your update to the HashiCorp team, for review.
+
+### Working with Azure SDK for Go
+
+All the imports for the Azure Go SDK services have to be done in the [config.go](https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/azurerm/config.go) file. It exposes a top level struct, `ArmClient` that exposes all the client that you may use in a data source or resource to interact with Azure.
+
+For example, if you need to work on implementing Azure Batch Account support to the provider:
+
+1. Add import for `"github.com/Azure/azure-sdk-for-go/services/batch/mgmt/2018-12-01/batch"` in the imports list
+2. Add a field for the `batchAccountClient`:
+
+```go
+batchAccountClient     batch.AccountClient
+```
+
+3. Add a function that registers the Azure Batch client:
+
+```go
+func (c *ArmClient) registerBatchClients(endpoint, subscriptionId string, auth autorest.Authorizer) {
+	batchAccount := batch.NewAccountClientWithBaseURI(endpoint, subscriptionId)
+	c.configureClient(&batchAccount.Client, auth)
+	c.batchAccountClient = batchAccount
+}
+```
+
+4. Call the function that registers the Batch client:
+
+```go
+client.registerBatchClients(endpoint, c.SubscriptionID, auth)
+```
+
+By doing the four steps above, you will make sure that when developping the data source or the resource, you can access the Azure SDK for Go clients that you need.
+
+### Developping a Data Source
+
+The file for a data source is named following the convention: data_source_*NAME_OF_THE_DATA_SOURCE*.go.
+
+A data source is composed of two relevant functions:
+
+- The function that creates a `schema.Resource` object that returns the schema (definition) of the data source,i.e. the property that compose the data source, and some rules about those properties (for example, if it is mandatory or not, computed etc.). This function is named by convention dataSourceArm*NAME_OF_THE_DATA_SOURCE*, for example `dataSourceArmBatchAccount` for a Batch Account. 
+- The function that retrieves the data from Azure using the Azure SDK for Go client and set all the values related to the data source. This function is named by convention dataSourceArm*NAME_OF_THE_DATA_SOURCE*Read, for example `dataSourceArmBatchAccountRead` for a Batch Account.
+ 
+This function takes a `schema.ResourceData` in parameter. You can get the name of the object to retrieve and any property that is defined by the user on that object:
+
+```go
+resourceGroup := d.Get("resource_group_name").(string)
+name := d.Get("name").(string)
+```
+
+You can get a reference on any Azure SDK for Go client registered in the `client.go` using:
+
+```go
+client := meta.(*ArmClient).batchAccountClient
+```
+
+Finally, you can set values retrieve from Azure on the same object, using the `Set` function:
+
+```go
+d.Set("account_endpoint", resp.AccountEndpoint)
+```
+
+You can check the whole definition of the Azure Batch Account data source [here](https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/azurerm/data_source_batch_account.go).
+
+### Developing a resource
+
+Developing a resource is really similar to developing a data source. Instead of having only a function to read the data from Azure, it also offers the possibility to write functions to create, update and delete the resource. Apart from that, concepts are the same:
+
+- The file is named using the convention: resource_arm_*NAME_OF_RESOURCE*.go
+- One function to define the structure of the resource, named by convention resourceArm*NAME_OF_RESOURCE*, for example `resourceArmBatchAccount`.
+- One function to create the resource, named by convention resourceArm*NAME_OF_RESOURCE*Create, for example `resourceArmBatchAccountCreate`.
+- One function to read the resource, named by convention resourceArm*NAME_OF_RESOURCE*Read, for example `resourceArmBatchAccountRead`.
+- One function to update the resource, named by convention resourceArm*NAME_OF_RESOURCE*Update, for example `resourceArmBatchAccountUpdate`.
+- One function to delete the resource, named by convention resourceArm*NAME_OF_RESOURCE*Delete, for example `resourceArmBatchAccountDelete`.
+
+The [Azure Batch Account resource](https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/azurerm/resource_arm_batch_account.go) is a good and simple example to understand the flow.
+
+### Acceptance tests
+
+Acceptance tests are test that will run live on your Azure subscription to validate that your data source or resource is working well. Each data source should have its acceptance tests and each resource should have its acceptance test.
+
+Tests are definied in the `azurerm` directory, aside with data sources and resources. The file name is the same than the one for the data source or resource, with the `_test` suffix.
+
+You can find examples of tests for Azure Batch Account data source [here](https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/azurerm/data_source_batch_account_test.go) and Azure Batch Account resource [here](https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/azurerm/resource_arm_batch_account_test.go).
+
+Please refer to the above section to learn on to run the acceptance test on your laptop.
 
 ## Other
 
