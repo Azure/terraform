@@ -1,7 +1,7 @@
 # Contribute to Terraform AzureRM provider
 
 This document describe how you can get ready to contribute to the [AzureRM Terraform provider](https://github.com/terraform-providers/terraform-provider-azurerm).
-We also recommand that your read the [README](https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/README.md) on the AzureRM Terraform Provider repository.
+We also recommend that you read the [README](https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/README.md) on the AzureRM Terraform Provider repository.
 
 ## Setup your system
 
@@ -140,7 +140,8 @@ Once done, you can just press F5 and the debug will start! You can place breakpo
 
 *Note: we also invite you to read the official documentation about developing a provider [here](https://www.terraform.io/docs/plugins/basics.html#developing-a-plugin)*
 
-First you need to pick [an issue on the provider](https://github.com/terraform-providers/terraform-provider-azurerm/issues) by commenting the issue and saying that you're going to work on that, to make sure that HashiCorp people who maintain the repository and will review your contribution are aware that you are going to work on that.
+First you need to pick [an issue on the provider](https://github.com/terraform-providers/terraform-provider-azurerm/issues) by commenting the issue and saying that you're going to work on that, to make sure that the repo maintainers are aware that you are going to work on this issue.
+We also strongly advise that you describe the work you are planning to do, like explaining your implementation, submitting the TF schema for new resources, to make sure the discussion start early as possible with the reviewers.
 
 *Note: if there is no issue for the problem you are trying to solve, you can create one.*
 
