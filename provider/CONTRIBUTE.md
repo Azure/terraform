@@ -152,7 +152,7 @@ For each piece of code that you write into the provider, you need to make sure t
 - the implementation in both `data source` and `resource` definition
 - acceptance test created or updated
 - documentation created or updated
-- example created or updated
+- example created or updated (optional)
 
 Data sources, resources and tests are defined in the [azurerm](https://github.com/terraform-providers/terraform-provider-azurerm/tree/master/azurerm) folder of the repository.
 
@@ -197,13 +197,13 @@ client.registerBatchClients(endpoint, c.SubscriptionID, auth)
 
 By doing the four steps above, you will make sure that when developping the data source or the resource, you can access the Azure SDK for Go clients that you need.
 
-### Developping a Data Source
+### Developing a Data Source
 
 The file for a data source is named following the convention: data_source_*NAME_OF_THE_DATA_SOURCE*.go.
 
 A data source is composed of two relevant functions:
 
-- The function that creates a `schema.Resource` object that returns the schema (definition) of the data source,i.e. the property that compose the data source, and some rules about those properties (for example, if it is mandatory or not, computed etc.). This function is named by convention dataSourceArm*NAME_OF_THE_DATA_SOURCE*, for example `dataSourceArmBatchAccount` for a Batch Account. 
+- The function that creates a `schema.Resource` object that returns the schema (definition) of the data source,i.e. the property that compose the data source, and some rules about those properties. You only need to provide required properties to locate that resource, and mark all other properties returned from the service as `Computed`.  This function is named by convention dataSourceArm*NAME_OF_THE_DATA_SOURCE*, for example `dataSourceArmBatchAccount` for a Batch Account.  
 - The function that retrieves the data from Azure using the Azure SDK for Go client and set all the values related to the data source. This function is named by convention dataSourceArm*NAME_OF_THE_DATA_SOURCE*Read, for example `dataSourceArmBatchAccountRead` for a Batch Account.
  
 This function takes a `schema.ResourceData` in parameter. You can get the name of the object to retrieve and any property that is defined by the user on that object:
@@ -232,7 +232,7 @@ You can check the whole definition of the Azure Batch Account data source [here]
 Developing a resource is really similar to developing a data source. Instead of having only a function to read the data from Azure, it also offers the possibility to write functions to create, update and delete the resource. Apart from that, concepts are the same:
 
 - The file is named using the convention: resource_arm_*NAME_OF_RESOURCE*.go
-- One function to define the structure of the resource, named by convention resourceArm*NAME_OF_RESOURCE*, for example `resourceArmBatchAccount`.
+- One function to define the schema of the resource, named by convention resourceArm*NAME_OF_RESOURCE*, for example `resourceArmBatchAccount`.
 - One function to create the resource, named by convention resourceArm*NAME_OF_RESOURCE*Create, for example `resourceArmBatchAccountCreate`.
 - One function to read the resource, named by convention resourceArm*NAME_OF_RESOURCE*Read, for example `resourceArmBatchAccountRead`.
 - One function to update the resource, named by convention resourceArm*NAME_OF_RESOURCE*Update, for example `resourceArmBatchAccountUpdate`.
