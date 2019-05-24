@@ -149,7 +149,7 @@ If you are a new contributor, there is a [good first issue](https://github.com/t
 
 For each piece of code that you write into the provider, you need to make sure that you have:
 
-- the implementation in both `data source` and `resource` definition
+- the implementations of the `data source` and/or `resource` definition
 - acceptance test created or updated
 - documentation created or updated
 - example created or updated (optional)
@@ -227,6 +227,13 @@ d.Set("account_endpoint", resp.AccountEndpoint)
 
 You can check the whole definition of the Azure Batch Account data source [here](https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/azurerm/data_source_batch_account.go).
 
+Once your data source is defined, you need to register it into data sources map in the `provider.go` file:
+
+```go
+DataSourcesMap: map[string]*schema.Resource{
+            "azurerm_api_management":                         dataSourceApiManagementService(),
+```
+
 ### Developing a resource
 
 Developing a resource is really similar to developing a data source. Instead of having only a function to read the data from Azure, it also offers the possibility to write functions to create, update and delete the resource. Apart from that, concepts are the same:
@@ -249,6 +256,13 @@ Tests are definied in the `azurerm` directory, aside with data sources and resou
 You can find examples of tests for Azure Batch Account data source [here](https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/azurerm/data_source_batch_account_test.go) and Azure Batch Account resource [here](https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/azurerm/resource_arm_batch_account_test.go).
 
 Please refer to the above section to learn on to run the acceptance tests on your laptop.
+
+Once your resource is defined, you need to register it into the resources map in the `provider.go` file:
+
+```go
+ResourcesMap: map[string]*schema.Resource{
+			"azurerm_api_management":                                     resourceArmApiManagementService(),
+``` 
 
 ## Other
 
