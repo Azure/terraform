@@ -1,3 +1,13 @@
+# Contributing
+This project welcomes contributions and suggestions.
+
+## Modules
+Module summary
+[Module contribution guide](./module/CONTRIBUTE.md)
+
+## Providers
+Provider summary
+[Provider contribution guide](./provider/CONTRIBUTE.md)
 
 # Contributing
 
