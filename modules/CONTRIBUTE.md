@@ -1,5 +1,6 @@
 # Contribute to Terraform Modules Registry
 This document describes the basic process of authoring and contributing re-usable, verifiable Terraform templates to Terraform Registry (https://registry.terraform.io). Terraform Registry serves as a centralized location to discover, learn and use Terraform artifacts to provision infrastructure into Azure, as well as into other cloud platforms.
+
 ## Basic Steps
 Below are the basic steps to create and publish a verified Azure module into the Terraform Registry:
 
