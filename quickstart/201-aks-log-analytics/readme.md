@@ -1,4 +1,4 @@
-# Azure Kubernetes Service
+# AKS with Log Analytics
 
 
 This template deploys an [Azure Kubernetes Service](https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html) instance which sends system and container logs to Azure Log Analytics, which can be visualized with the Container Monitoring solution.

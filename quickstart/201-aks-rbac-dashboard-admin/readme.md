@@ -1,4 +1,4 @@
-# Azure Kubernetes Service
+# AKS with an Admin Dashboard
 
 
 This template deploys an [Azure Kubernetes Service](https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html) instance with Role Based Access Control (RBAC) enabled. With this, by default the robust Kubernetes dashboard has no rights to view or make changes to the cluster. In this template we leverage the Kubernetes provider to provision a role binding for the Dashboard accoutn to give it `cluster-admin` rights - something we shoudl not do in production but can be very useful in development. 
