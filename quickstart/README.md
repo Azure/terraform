@@ -2,7 +2,7 @@
 
 This repo contains all currently available Azure Terraform templates contributed by the community.
 
-A of now this reposity should be considered in preview.  As it grows a set of best-practice guidelines for contributing will be developed and implemented.
+As of now, this repository should be considered in preview.  As it grows, a set of best-practice guidelines for contributing will be developed and implemented.
 
 # Contributing
 
