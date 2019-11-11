@@ -1,6 +1,6 @@
-# AKC + ACR with Managed Identity
+# AKC + ACR with Service Principal
 
-This template deploys an Azure Kubernetes Service cluster with a user-assigned Identity along with an Azure Container Registry.  The identity of the AKS cluster has an assigned reader role to the ACR instance so AKS can pull containers without needing to have a Docker username and password configured.
+This template deploys an Azure Kubernetes Service cluster with a service principal along with an Azure Container Registry.  The identity of the AKS cluster has an assigned AcrPull role to the ACR instance so AKS can pull containers without needing to have a Docker username and password configured.
 
 ## Variables
 
