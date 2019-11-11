@@ -18,7 +18,7 @@ resource "azuread_service_principal_password" "default" {
 }
 
 resource "azurerm_role_assignment" "aks_acr" {
-  scope                = "${data.azurerm_subscription.current.id}/resourceGroups/${azurerm_resource_group.default.name}/providers/Microsoft.ContainerRegistry/registries/${azurerm_container_registry.default.name}"
+  scope                = "${azurerm_container_registry.default.id}"
   role_definition_name = "AcrPull"
   principal_id         = "${azuread_service_principal.default.id}"
 }
