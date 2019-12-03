@@ -9,8 +9,8 @@ locals {
   publicIPAddressName       = "publicIp"
   networkSecurityGroupName  = "NSG"
   networkSecurityRule       = ["default-allow-rdp"]
-  storageAccountName        = lower(join("", ["diag", "${random_string.asaname-01.result}"]))
-  osDiskName                = join("",["${local.virtualMachineName}", "_OsDisk_1_", lower("${random_string.avmosd-01.result}")])
+  storageAccountName        = lower(join("", ["diag", random_string.asaname-01.result]))
+  osDiskName                = join("",[local.virtualMachineName, "_OsDisk_1_", lower(random_string.avmosd-01.result)])
 }
 
 resource "azurerm_resource_group" "arg-01" {
