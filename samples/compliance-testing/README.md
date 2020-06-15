@@ -1,6 +1,6 @@
 # Terraform Compliance Testing
 
-“Compliance testing” also known as Conformance testing is a nonfunctional testing technique which is done to validate, whether the system developed meets the organization’s prescribed standards or not. Most software teams do an analysis to check that the standards are properly enforced and implemented. Often working simultaneously to improve the standards, which will, in turn, lead to better quality.
+Compliance testing, also known as Conformance testing, is a nonfunctional testing technique which is done to validate whether the system developed meets the organization’s prescribed standards or not. Most software teams do an analysis to check that the standards are properly enforced and implemented. Often working simultaneously to improve the standards, which will, in turn, lead to better quality.
 
 ## When to use Compliance Testing
 
