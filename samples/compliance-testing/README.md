@@ -1,20 +1,6 @@
----
-title: Terraform Compliance Testing
-description: This article shows how to apply BDD-style compliance testing to terraform 
-ms.topic: tutorial
-ms.date: 06/15/2020
----
-
 # Tutorial: Terraform Compliance Testing
 
 Compliance testing, also known as Conformance testing, is a nonfunctional testing technique which is done to validate whether the system developed meets the organization’s prescribed standards or not. Most software teams do an analysis to check that the standards are properly enforced and implemented. Often working simultaneously to improve the standards, which will, in turn, lead to better quality.
-
-## Prerequisites
-
-- **Terraform:** [install and run](configure-vs-code-extension-for-terraform.md) your first Terraform command from your machine.
-- **Docker:** [install](https://docs.docker.com/get-docker/) the docker command on your machine.
-- **terraform-compliance:** [install](https://terraform-compliance.com/pages/installation/docker) the terraform-compliance tool on your machine.
-- **Fork testing samples:** to get started quickly, we recommend that you fork [this repository](https://github.com/Azure/terraform) into your own GitHub organization.
 
 ## When to use Compliance Testing
 
@@ -125,7 +111,7 @@ docker run --rm -v $PWD:/target -it eerkunt/terraform-compliance -f features -p 
 
 This should result in a failing test run. We see our first rule of requiring existence of tags suceed but we don't comply with the full spec of tags: `Role` and `Creator` tags are missing:
 
-![tf-compliance-run-tagging-fail](media/best-practice-compliance-testing/tf-compliance-run-tagging-fail.png)
+![tf-compliance-run-tagging-fail](assets/tf-compliance-run-tagging-fail.png)
 
 Make the test green again by adding all required tags to `main.tf`:
 
@@ -148,9 +134,5 @@ terraform plan -out tf.out
 
 Now, we should be green when running the tests suite again. We see our first rule of requiring existence of tags suceed and now we also provide the full spec of tags too:
 
-![tf-compliance-run-tagging-succeed](media/best-practice-compliance-testing/tf-compliance-run-tagging-succeed.png)
+![tf-compliance-run-tagging-succeed](assets/tf-compliance-run-tagging-succeed.png)
 
-## Next steps
-
-> [!div class="nextstepaction"]
-> [Create and run end-to-end tests in Terraform projects](best-practices-end-to-end-testing.md)
