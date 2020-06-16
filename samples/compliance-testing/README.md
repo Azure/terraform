@@ -1,4 +1,4 @@
-# Terraform Compliance Testing
+# Tutorial: Terraform Compliance Testing
 
 Compliance testing, also known as Conformance testing, is a nonfunctional testing technique which is done to validate whether the system developed meets the organization’s prescribed standards or not. Most software teams do an analysis to check that the standards are properly enforced and implemented. Often working simultaneously to improve the standards, which will, in turn, lead to better quality.
 
@@ -17,7 +17,7 @@ One of the problems you might have in your team is environments getting hosed wh
 
 An obvious response could be to call out a policy to require tags on resources where applicable and add a `role` and `creator` tag to the resource that is deployed. [Terraform-compliance](https://terraform-compliance.com) is a tool that helps you with that. It mainly focuses on negative testing instead of having fully-fledged functional tests that are mostly used for proving a component of code is performing properly.
 
-Fortunately, `terraform` is a marvellous abstraction layer for any API that creates/updates/destroys entities. `Terraform` also provides the capability to ensure everything is up-to-date between the local configuration and the remote API(s) responses. Since `terraform` is mostly used against Cloud APIs we still miss a way to ensure the code deployed against the infrastructure must follow specific policies - like HashiCorp currently provides with `Sentinel` for Enterprise Products. `Terraform-compliance` is providing a similar functionality only for terraform while it is free-to-use and it is Open Source.
+Fortunately, `terraform` is a marvellous abstraction layer for any API that creates/updates/destroys entities. `Terraform` also provides the capability to ensure everything is up-to-date between the local configuration and the remote API(s) responses. Since `terraform` is mostly used against Cloud APIs we still miss a way to ensure the code deployed against the infrastructure must follow specific policies - like HashiCorp currently provides with [Sentinel](https://docs.hashicorp.com/sentinel/intro/what/) for Enterprise Products. `Terraform-compliance` is providing a similar functionality only for terraform while it is free-to-use and it is Open Source.
 
 A sample compliance policy for the issue mentioned could be like this: `if you are working with Azure, you should not create a resource, without having any tags`.`Terraform-compliance` provides a test framework to create these policies that will be executed against your terraform plan file in a context where both developers and security teams can understand easily while reading it, by applying [Behaviour Driven Development](https://en.wikipedia.org/wiki/Behavior-driven_development) principles.
 
@@ -76,14 +76,14 @@ Scenario Outline: Ensure that specific tags are defined
     Examples:
       | tags        | value              |
       | Creator     | .+                 |
-      | application | .+                 |
-      | role        | .+                 |
-      | environment | ^(prod\|uat\|dev)$ |
+      | Application | .+                 |
+      | Role        | .+                 |
+      | Environment | ^(prod\|uat\|dev)$ |
 ```
 
 ## How-to run this example
 
-The example above is taken from the [github.com/terrraform-testing](https://github.com/LeagueOfExtraordinaryHackers/terraform-testing/tree/compliance-testing/examples/compliance-testing) repository.
+The example above is taken from the [github.com/Azure/terrraform](https://github.com/Azure/terrraform/tree/compliance-testing/examples/master) repository.
 
 After checkout the repo ...
 
@@ -109,7 +109,7 @@ docker run --rm -v $PWD:/target -it eerkunt/terraform-compliance -f features -p 
 
 ### From Red to Green
 
-This should result in a failing test run:
+This should result in a failing test run. We see our first rule of requiring existence of tags suceed but we don't comply with the full spec of tags: `Role` and `Creator` tags are missing:
 
 ![tf-compliance-run-tagging-fail](assets/tf-compliance-run-tagging-fail.png)
 
@@ -120,7 +120,7 @@ Make the test green again by adding all required tags to `main.tf`:
     Environment = "dev"
     Application = "Azure Compliance"
     Creator     = "Azure Compliance"
-    Version     = "Azure Compliance"
+    Role        = "Azure Compliance"
   } 
 
 ```
@@ -132,6 +132,7 @@ terraform validate
 terraform plan -out tf.out 
 ```
 
-Now, we should be green when running the tests suite again:
+Now, we should be green when running the tests suite again. We see our first rule of requiring existence of tags suceed and now we also provide the full spec of tags too:
 
 ![tf-compliance-run-tagging-succeed](assets/tf-compliance-run-tagging-succeed.png)
+
