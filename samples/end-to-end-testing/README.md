@@ -1,0 +1,44 @@
+# Terraform end-to-end testing
+
+This is an example of how to use [Terratest](https://github.com/gruntwork-io/terratest) to perform end-to-end testing on a Terraform project.
+
+## What about end-to-end testing
+
+End-to-end tests validate that a program actually works in real conditions, the closest as possible to production environment. Let's imagine that we are writing a Terraform module to deploy two virtual machines into a virtual network but we don't want those machines to be able to ping each other. End-to-end tests are exactly what we need to make sure that the deployment of this module create the expected resources, but also that the virtual machines cannot ping each other.
+
+In order to achieve that, the end-to-end test will apply the Terraform configuration, give the hand back to some code / scripts to make the required tests, and finally tear down the infrastructure. They are much longer than integration or unit tests so they are not executed part of the continuous integration process.
+
+## What about Terratest
+
+[Terratest](https://github.com/gruntwork-io/terratest) is an open-source framework, written in [Go](http://golang.org/dl) and relying on the Go test framework, that helps to write end-to-end tests for Terraform projects. Basically, it provides helper and tools to:
+
+1. Deploy a Terraform configuration
+2. Give you the hand back to write any Go test to validate what has been actually deployed
+3. Tear down the deployed infrastructure
+
+## Scenario of this sample
+
+In this sample, we are going to use a Terraform configuration that deploys two Linux virtual machines into the same virtual network. `vm-linux-1` has a public IP address. Only port 22 is opened to allow SSH connection. `vm-linux-2` has no public IP address. The scenario we want to validate with the end-to-end test is to make sure that:
+
+- infrastructure is deployed correctly
+- it's possible to open an SSH session to `vm-linux-1` using port 22
+- it's possible to ping `vm-linux-2` from `vm-linux-1` SSH session
+
+![End-to-end scenario](assets/scenario.png)
+
+> NOTE: this is a simple scenario to illustrate how to write a basic end-to-end test. We don't recommend having production virtual machines that exposes SSH port over a public IP address.
+
+## Terraform configuration
+
+The Terraform configuration for this scenario can be found in the [src/main.tf](src/main.tf) file. It contains everything to deploy the Azure infrastructure represented on the figure above.
+
+If you are not familiar with creating Linux virtual machine using Terraform we recommend that you read [this page of the documentation](https://docs.microsoft.com/azure/developer/terraform/create-linux-virtual-machine-with-infrastructure) before.
+
+## End-to-end test
+
+As mentioned in the introduction, the end-to-end test is written in Go language and uses the Terratest framework. It is defined in the [src/test/end2end_test.go](src/test/end2end_test.go) file.
+
+## Running the test
+
+To be able to run the test, you need to install [Go](golang.org/dl/).
+
