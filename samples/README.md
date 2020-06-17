@@ -5,3 +5,5 @@ This repository contains real-world examples that will walk you through differen
 ## Testing Best Practices
 
 - [Integration Testing](integration-testing/README.md)
+- [Compliance Testing](compliance-testing/README.md)
+- [End-to-end Testing](end-to-end-testing/README.md)
