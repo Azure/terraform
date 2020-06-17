@@ -71,6 +71,8 @@ func TestEndToEndDeploymentScenario(t *testing.T) {
 
     test_structure.RunTestStage(t, "validate", func() {
         // run validation checks here
+        terraformOptions := test_structure.LoadTerraformOptions(t, fixtureFolder)
+		publicIpAddress := terraform.Output(t, terraformOptions, "public_ip_address")
     })
 
     // When the test is completed, teardown the infrastructure by calling terraform destroy
@@ -83,13 +85,21 @@ func TestEndToEndDeploymentScenario(t *testing.T) {
 
 As you can see in the snippet above, the test is composed by three stages:
 
-1. setup: this stage is responsible for running Terraform to deploy the configuration
-2. validate: this stage is responsible for doing the validation checks / assertions. In this scenario, we will use Go to open an SSH session to the first linux VM and try to ping the second linux VM from there
-3. teardown: this stage is responsible for calling the terraform destroy command to clean up the infrastructure
+1. `setup`: this stage is responsible for running Terraform to deploy the configuration.
+2. `validate`: this stage is responsible for doing the validation checks / assertions.
+3. `teardown`: this stage is responsible for cleaning up the infrastructure.
+
+Some relevant functions provided by Terratest framework are:
+
+- `terraform.InitAndApply` allows to run the `terraform init` and `terraform apply` commands from Go code.
+- `terraform.Output` allows to retrieve the value of a deployment output variable.
+- `terraform.Destroy` allows to run the `terraform destroy` command from Go code.
+- `test_structure.LoadTerraformOptions` allows to load Terraform options (config, variables etc.) from the state.
+- `test_structure.SaveTerraformOptions` allows to save Terraform options (config, variables etc.) to the state.
 
 ## Run the end-to-end test
 
-Running the test requires that Terraform is installed and configured on your machine and that you are connected to your Azure subscription with the Azure CLI command `az login`.
+Running the test requires that Terraform is installed and configured on your machine and that you are connected to your Azure subscription with the Azure CLI command `az login`. It also assumes that you have an SSH public key in your home 
 
 Once ready, because the end-to-end test is just a Go test, it can be run like the following:
 

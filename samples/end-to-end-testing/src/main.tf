@@ -116,6 +116,7 @@ resource "azurerm_linux_virtual_machine" "vm2" {
   location            = azurerm_resource_group.rg.location
   size                = "Standard_B2s"
   admin_username      = "azureuser"
+
   network_interface_ids = [
     azurerm_network_interface.nic2.id,
   ]
