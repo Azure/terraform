@@ -38,7 +38,70 @@ If you are not familiar with creating Linux virtual machine using Terraform we r
 
 As mentioned in the introduction, the end-to-end test is written in Go language and uses the Terratest framework. It is defined in the [src/test/end2end_test.go](src/test/end2end_test.go) file.
 
-## Running the test
+This is the common structure of a Golang test using Terratest:
 
-To be able to run the test, you need to install [Go](golang.org/dl/).
+```Go
+package test
 
+import (
+    "testing"
+
+    "github.com/gruntwork-io/terratest/modules/terraform"
+    test_structure "github.com/gruntwork-io/terratest/modules/test-structure"
+)
+
+func TestEndToEndDeploymentScenario(t *testing.T) {
+    t.Parallel()
+
+    fixtureFolder := "../"
+
+    // User Terratest to deploy the infrastructure
+    test_structure.RunTestStage(t, "setup", func() {
+        terraformOptions := &terraform.Options{
+            // Indicate the directory that contains the Terraform configuration to deploy
+            TerraformDir: fixtureFolder,
+        }
+
+        // Save options for later test stages
+        test_structure.SaveTerraformOptions(t, fixtureFolder, terraformOptions)
+
+        // Triggers the terraform init and terraform apply command
+        terraform.InitAndApply(t, terraformOptions)
+    })
+
+    test_structure.RunTestStage(t, "validate", func() {
+        // run validation checks here
+    })
+
+    // When the test is completed, teardown the infrastructure by calling terraform destroy
+    test_structure.RunTestStage(t, "teardown", func() {
+        terraformOptions := test_structure.LoadTerraformOptions(t, fixtureFolder)
+        terraform.Destroy(t, terraformOptions)
+    })
+}
+```
+
+As you can see in the snippet above, the test is composed by three stages:
+
+1. setup: this stage is responsible for running Terraform to deploy the configuration
+2. validate: this stage is responsible for doing the validation checks / assertions. In this scenario, we will use Go to open an SSH session to the first linux VM and try to ping the second linux VM from there
+3. teardown: this stage is responsible for calling the terraform destroy command to clean up the infrastructure
+
+## Run the end-to-end test
+
+Running the test requires that Terraform is installed and configured on your machine and that you are connected to your Azure subscription with the Azure CLI command `az login`.
+
+Once ready, because the end-to-end test is just a Go test, it can be run like the following:
+
+```console
+cd test
+go test -v ./ -timeout 10m
+```
+
+Once the test is ended, it displays the results:
+
+```console
+--- PASS: TestEndToEndDeploymentScenario (390.99s)
+PASS
+ok      test    391.052s
+```
