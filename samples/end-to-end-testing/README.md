@@ -99,11 +99,13 @@ Some relevant functions provided by Terratest framework are:
 
 ## Run the end-to-end test
 
-Running the test requires that Terraform is installed and configured on your machine and that you are connected to your Azure subscription with the Azure CLI command `az login`. It also assumes that you have an SSH public key in your home 
+Running the test requires that Terraform is installed and configured on your machine and that you are connected to your Azure subscription with the Azure CLI command `az login`.
 
 Once ready, because the end-to-end test is just a Go test, it can be run like the following:
 
 ```console
+# Set the path of the SSH private key to use to connect the virtual machine
+TEST_SSH_KEY_PATH="/home/bob/id_rsa"
 cd test
 go test -v ./ -timeout 10m
 ```

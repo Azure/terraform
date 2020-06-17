@@ -3,6 +3,7 @@ package test
 import (
 	"fmt"
 	"io/ioutil"
+	"os"
 	"testing"
 	"time"
 
@@ -15,6 +16,11 @@ func TestEndToEndDeploymentScenario(t *testing.T) {
 	t.Parallel()
 
 	fixtureFolder := "../"
+	sshKeyPath := os.Getenv("TEST_SSH_KEY_PATH")
+
+	if sshKeyPath == "" {
+		t.Fatalf("TEST_SSH_KEY_PATH environment variable cannot be empty.")
+	}
 
 	// User Terratest to deploy the infrastructure
 	test_structure.RunTestStage(t, "setup", func() {
@@ -51,7 +57,7 @@ func TestEndToEndDeploymentScenario(t *testing.T) {
 			t.Fatal("Cannot retrieve the public IP address value for the linux vm 1.")
 		}
 
-		key, err := ioutil.ReadFile("/home/jcorioland/.ssh/id_rsa")
+		key, err := ioutil.ReadFile(sshKeyPath)
 		if err != nil {
 			t.Fatalf("Unable to read private key: %v", err)
 		}
