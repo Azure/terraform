@@ -32,7 +32,7 @@ In this sample, we are going to use a Terraform configuration that deploys two L
 
 The Terraform configuration for this scenario can be found in the [src/main.tf](src/main.tf) file. It contains everything to deploy the Azure infrastructure represented on the figure above.
 
-If you are not familiar with creating Linux virtual machine using Terraform we recommend that you read [this page of the documentation](https://docs.microsoft.com/azure/developer/terraform/create-linux-virtual-machine-with-infrastructure) before.
+If you are not familiar with creating a Linux virtual machine using Terraform we recommend that you read [this page of the documentation](https://docs.microsoft.com/azure/developer/terraform/create-linux-virtual-machine-with-infrastructure) before.
 
 ## End-to-end test
 
@@ -101,11 +101,11 @@ Some relevant functions provided by Terratest framework are:
 
 Running the test requires that Terraform is installed and configured on your machine and that you are connected to your Azure subscription with the Azure CLI command `az login`.
 
-Once ready, because the end-to-end test is just a Go test, it can be run like the following:
+Once ready, since the end-to-end test is just a Go test, it can be run like the following:
 
 ```console
 # Set the path of the SSH private key to use to connect the virtual machine
-TEST_SSH_KEY_PATH="/home/bob/id_rsa"
+export TEST_SSH_KEY_PATH="/home/bob/.ssh/id_rsa"
 cd test
 go test -v ./ -timeout 10m
 ```
