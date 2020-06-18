@@ -6,14 +6,14 @@ This is an example of how to use [Terratest](https://github.com/gruntwork-io/ter
 
 End-to-end tests validate that a program actually works in real conditions, the closest as possible to production environment. Let's imagine that we are writing a Terraform module to deploy two virtual machines into a virtual network but we don't want those machines to be able to ping each other. End-to-end tests are exactly what we need to make sure that the deployment of this module create the expected resources, but also that the virtual machines cannot ping each other.
 
-In order to achieve that, the end-to-end test will apply the Terraform configuration, give the hand back to some code / scripts to make the required tests, and finally tear down the infrastructure. They are much longer than integration or unit tests so they are not executed part of the continuous integration process.
+In order to achieve that, the end-to-end test will apply the Terraform configuration, run all required tests, and finally tear down the infrastructure. They are much longer than integration or unit tests so they are not executed part of the continuous integration process.
 
 ## What about Terratest
 
-[Terratest](https://github.com/gruntwork-io/terratest) is an open-source framework, written in [Go](http://golang.org/dl) and relying on the Go test framework, that helps to write end-to-end tests for Terraform projects. Basically, it provides helper and tools to:
+[Terratest](https://github.com/gruntwork-io/terratest) is an open-source framework, written in [Go](http://golang.org/dl) and relying on the Go test framework, that helps to write end-to-end tests for Terraform projects. It provides helper and tools to:
 
 1. Deploy a Terraform configuration
-2. Give you the hand back to write any Go test to validate what has been actually deployed
+2. Goes back to the Go tests to validate what has been actually deployed
 3. Tear down the deployed infrastructure
 
 ## Scenario of this sample
@@ -107,7 +107,7 @@ Once ready, since the end-to-end test is just a Go test, it can be run like the 
 # Set the path of the SSH private key to use to connect the virtual machine
 export TEST_SSH_KEY_PATH="/home/bob/.ssh/id_rsa"
 cd test
-go test -v ./ -timeout 10m
+go test -v ./ -timeout 30m
 ```
 
 Once the test is ended, it displays the results:
