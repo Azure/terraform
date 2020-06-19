@@ -128,6 +128,20 @@ ARM_TEST_LOCATION_ALT=<AZURE_LOCATION_2>
 TF_ACC=1
 ```
 
+If you would preffer to use the UI to launch the tests, it is aso possible to specify the environment variables used by vscode integrated testing by modifying the settings.json. Two options are available
+ * Use the built in variables definition:
+ ```json 
+    "go.testEnvVars": {
+        "ARM_CLIENT_ID" : "<YOUR_SERVICE_PRINCIPAL_CLIENT_ID>"
+        ...
+        ...
+    },    
+ ```
+  * Use the contents of a file as `private.env`
+```json
+    "go.testEnvFile": "${workspaceRoot}/.vscode/private.env"
+```
+
 *Note: it is possible to customize the logging level of Terraform. It might be super useful in some situations. It can be done by setting the `TF_LOG` environment variable. Refer to [the official debugging documentation](https://www.terraform.io/docs/internals/debugging.html) for more details.*
 
 Once done, you can just press F5 and the debug will start! You can place breakpoints in your code to do step by step debugging:
