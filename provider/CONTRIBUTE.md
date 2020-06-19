@@ -70,6 +70,9 @@ If your `terraform` binary is in the `$GOPATH/bin` folder on your machine, then 
 
 If not, the init operation will download the AzureRM Provider for you. You can just remove it, and replace it with your local copy. Do a `terraform init` again and you're done ! :-) 
 
+`terraform init` will look for the providers in the folder where the `.tf` files are located, so it is possible to just copy the provider from `$GOPATH/bin` to your current folder and it will be used instead of getting downloaded. 
+
+
 ## Debug the AzureRM provider using Visual Studio Code and Delve
 
 It is possible to use Visual Studio Code and Delve (the Golang debugger) to debug the AzureRM provider.
