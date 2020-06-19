@@ -44,7 +44,7 @@ If you are running Windows, then you need to install Git Bash and Make for Windo
 
 First, go to the [AzureRM Terraform provider](https://github.com/terraform-providers/terraform-provider-azurerm) project page and fork the repository into your GitHub account.
 
-Once done, you need to clone your fork into the `$GOPATH/src/github.com/terraform-providers/terraform-provider-azurerm` folder.
+As the provider uses go modules, you can clone the repository in any path.
 
 ## Build the sources
 
