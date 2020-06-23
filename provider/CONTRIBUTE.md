@@ -206,7 +206,7 @@ The file for a data source is named following the convention: *NAME_OF_THE_DATA_
 
 A data source is composed of two relevant functions:
 
-- The function that creates a `schema.Resource` object that returns the schema (definition) of the data source,i.e. the property that compose the data source, and some rules about those properties. You only need to provide required properties to locate that resource, and mark all other properties returned from the service as `Computed`.  This function is named by convention dataSource*NAME_OF_THE_DATA_SOURCE*, for example `dataSourceArmBatchAccount` for a Batch Account.  
+- The function that creates a `schema.Resource` object that returns the schema (definition) of the data source,i.e. the property that compose the data source, and some rules about those properties. You only need to provide required properties to locate that resource, and mark all other properties returned from the service as `Computed`.  This function is named by convention dataSourceArm*NAME_OF_THE_DATA_SOURCE*, for example `dataSourceArmBatchAccount` for a Batch Account.  
 - The function that retrieves the data from Azure using the Azure SDK for Go client and set all the values related to the data source. This function is named by convention dataSourceArm*NAME_OF_THE_DATA_SOURCE*Read, for example `dataSourceArmBatchAccountRead` for a Batch Account.
  
 This function takes a `schema.ResourceData` in parameter. You can get the name of the object to retrieve and any property that is defined by the user on that object:
