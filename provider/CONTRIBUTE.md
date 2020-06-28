@@ -7,22 +7,22 @@ We also recommend that you read the [README](https://github.com/terraform-provid
 
 ### Terraform
 
-You need to install Terraform on your dev environment. You can downlaod it from [this page](https://www.terraform.io/downloads.html).
+You need to install Terraform on your dev environment. You can downlaod it from [terraform](https://www.terraform.io/downloads.html).
 
 ### Go tools
 
-Terraform is developed using Go Programming Language. You need to install Go Programming Language **1.x.x** to be able to build and debug the provider locally.
-You can download it from [this page](https://golang.org/dl/) and find the installation instructions for your system [here](https://golang.org/doc/install#install)
+Terraform is developed using Go Programming Language. You need to install Go Programming Language **1.x.x** to be able to build and debug the provider locally. You can check to see what version of Go is currently being used in the project by checking the [go.mod](https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/go.mod) file in the root directory.
+You can download it from [golang](https://golang.org/dl/) and find the installation instructions for your system [golang install](https://golang.org/doc/install#install)
 
-Then you can test your environment following the instructions on [this page](https://golang.org/doc/install#testing).
+Then you can test your environment following the instructions on [golang testing](https://golang.org/doc/install#testing).
 
 ### Check your environment variables
 
-As with many Go project, AzureRM Terraform provider rely on your GOPATH environment variable. You may want to make sure it is well configured for your system, reading [this page](https://github.com/golang/go/wiki/SettingGOPATH).
+As with many Go project, AzureRM Terraform provider rely on your GOPATH environment variable. You may want to make sure it is well configured for your system, reading [golang setting go path](https://github.com/golang/go/wiki/SettingGOPATH).
 
 ### Visual Studio Code
 
-You can use the IDE you love, but in this documentation we will describe how to contribute to the Terraform AzureRM provider using Visual Studio Code. You can download it for your system from [this page](https://code.visualstudio.com/Download).
+You can use the IDE you love, but in this documentation we will describe how to contribute to the Terraform AzureRM provider using Visual Studio Code. You can download it for your system from [visual studio](https://code.visualstudio.com/Download).
 
 Once installed, download the Go extension for VS Code:
 
@@ -38,7 +38,7 @@ Once installed, open VS Code and look for the `Go: Install/Update Tools` in the 
 
 ### Specific requirements for Windows users
 
-If you are running Windows, then you need to install Git Bash and Make for Windows. Check the dedicated section on Terraform on Azure repository [here](https://github.com/terraform-providers/terraform-provider-azurerm#developer-requirements).
+If you are running Windows, then you need to install Git Bash and Make for Windows. Check the dedicated section on Terraform on Azure repository [terraform developer requirements](https://github.com/terraform-providers/terraform-provider-azurerm#developer-requirements).
 
 ## Get the sources
 
@@ -67,7 +67,7 @@ Once you have built a new version of the AzureRM Terraform provider, you can use
 
 First, you need to move your `terraform` binary which is in the `$GOPATH/bin` folder on your machine, to the third-party plugins folder which is located at `~/.terraform.d/plugins` on most operating systems and `%APPDATA%\terraform.d\plugins` on Windows.
 
-Then you can go to your terraform test folder where `main.tf` exists and inialize your terraform working directory by `terraform init`.
+Then you will need to go to your terraform test folder where the `main.tf` configuration file exists and initialize your terraform working directory by using the `terraform init` command.
 
 If the third-party plugin folder is empty, the init operation will download the AzureRM Provider for you.
 
@@ -157,13 +157,13 @@ For each piece of code that you write into the provider, you need to make sure t
 - documentation created or updated
 - example created or updated (optional)
 
-Data sources, resources and tests are defined in the [azurerm](https://github.com/terraform-providers/terraform-provider-azurerm/tree/master/azurerm/internal/services) folder of the repository.
+Data sources, resources and tests are defined in the [azurerm/internal/services](https://github.com/terraform-providers/terraform-provider-azurerm/tree/master/azurerm/internal/services) folder of the repository.
 
 Documentation for data sources is in the [website/docs/d](https://github.com/terraform-providers/terraform-provider-azurerm/tree/master/website/docs/d) folder and documentation for resources is in the [website/docs/r](https://github.com/terraform-providers/terraform-provider-azurerm/tree/master/website/docs/r) folder.
 
 Finally, examples are located in the [examples](https://github.com/terraform-providers/terraform-provider-azurerm/tree/master/examples) folder.
 
-AzureRM Terraform provider uses the [Azure SDK for Go](https://github.com/Azure/azure-sdk-for-go) to interact with Azure. It's important that you respect that rule. If you are trying to do something that is not available in the Azure SDK for Go, then you should check if the API is availble in [Azure Service Repository](https://github.com/Azure/azure-rest-api-specs) and open an issue if necessary.
+AzureRM Terraform provider uses the [Azure SDK for Go](https://github.com/Azure/azure-sdk-for-go) to interact with Azure. It's important that you respect that rule. If you are trying to do something that is not available in the Azure SDK for Go, then you should check if the API is availble in [Azure Service Repository](https://github.com/Azure/azure-rest-api-specs) and open an issue in the **Azure SDK for Go** repository to have it added to a future release of the Azure SDK for Go.
 
 We recommand that you start with fixing issues/patching an existing data source or resource to understand how it works in details before trying to implement a brand new one.
 
@@ -171,14 +171,14 @@ Don't forget that you are working on your own fork of the repository and that yo
 
 ### Working with Azure SDK for Go
 
-All the imports for the Azure Go SDK services have to be done in the [client.go](https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/azurerm/internal/clients/client.go) file. It exposes a top level struct, `Client` that exposes all the service client that you may use in a data source or resource to interact with Azure.If the service exist, you can skip this step.
+All the imports for the Azure for Go SDK services have to be done in the [client.go](https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/azurerm/internal/clients/client.go) file. It exposes a top level struct, `Client` that exposes all the service clients that you may use in a data source or resource to interact with Azure. If the service already exist and you are just modifying an existing resource you can skip this step.
 
 Then you need to register your subservice in `client.go` in your corresponding service folder.
 
 For example, if you need to work on implementing Azure Batch Account support to the provider:
 
 1. Check if the service `Batch` registered in service [client.go](https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/azurerm/internal/clients/client.go). If not, you need to register your service.
-2. Go to your corresponding service folder [batch](https://github.com/terraform-providers/terraform-provider-azurerm/tree/master/azurerm/internal/services/batch) and write a `client.go` in client folder. If the service folder doesn't exist, you need to create one.
+2. Go to your corresponding service folder [batch](https://github.com/terraform-providers/terraform-provider-azurerm/tree/master/azurerm/internal/services/batch) and write a `client.go` in client folder. If the service folder does not exist, you will need to create one.
 3. Add a variable `AccountClient` which is created by the service api `NewAccountClientWithBaseURI` from `"github.com/Azure/azure-sdk-for-go/services/batch/mgmt/2019-08-01/batch"`.
 ```go
 type Client struct {
@@ -202,7 +202,8 @@ By doing the four steps above, you will make sure that when developping the data
 
 ### Developing a Data Source
 
-The file for a data source is named following the convention: *NAME_OF_THE_DATA_SOURCE*_data_source.go.
+When naming a new data source file it should follow the below naming convention:
+**name_of_the_data_source**_data_source.go
 
 A data source is composed of two relevant functions:
 
@@ -230,7 +231,7 @@ d.Set("account_endpoint", resp.AccountEndpoint)
 
 You can check the whole definition of the Azure Batch Account data source [here](https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/azurerm/internal/services/batch/batch_account_data_source.go).
 
-Once your data source is defined, you need to register it into data sources map in the `registration.go` file:
+Once your data source is defined, you need to register it into the data sources map in the `registration.go` file:
 
 ```go
 func (r Registration) SupportedDataSources() map[string]*schema.Resource {
@@ -244,7 +245,7 @@ func (r Registration) SupportedDataSources() map[string]*schema.Resource {
 
 Developing a resource is really similar to developing a data source. Instead of having only a function to read the data from Azure, it also offers the possibility to write functions to create, update and delete the resource. Apart from that, concepts are the same:
 
-- The file is named using the convention: *NAME_OF_RESOURCE*_resource.go
+- The file is named using the convention: *name_of_resource*_resource.go
 - One function to define the schema of the resource, named by convention resourceArm*NAME_OF_RESOURCE*, for example `resourceArmBatchAccount`.
 - One function to create the resource, named by convention resourceArm*NAME_OF_RESOURCE*Create, for example `resourceArmBatchAccountCreate`.
 - One function to read the resource, named by convention resourceArm*NAME_OF_RESOURCE*Read, for example `resourceArmBatchAccountRead`.
@@ -265,11 +266,11 @@ func (r Registration) SupportedResources() map[string]*schema.Resource {
 
 ### Acceptance tests
 
-Acceptance tests are test that will run live on your Azure subscription to validate that your data source or resource is working well. Each data source should have its acceptance tests and each resource should have its acceptance test.
+Acceptance tests are tests that will run live on your Azure subscription to validate that your resource/data source is working as expected. Each resource/data source should have its own set of acceptance tests that will run independently of each other.
 
-Tests are definied in the `test` directory, aside with data sources and resources. The file name is the same than the one for the data source or resource, with the `_test` suffix.
+All tests for a given resource/data source are located in the `test` folder which is a sub folder of the service folder. The file name for the tests will be exactly the same as the resource/data source with the addition of the `_test.go` suffix. For example, if you created a data source for `batch account`, the data source file would be named **batch_account_data_source.go** and the test file would have the name **batch_account_data_source_test.go**.
 
 You can find examples of tests for Azure Batch Account data source [here](https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/azurerm/internal/services/batch/batch_account_data_source_test.go) and Azure Batch Account resource [here](https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/azurerm/internal/services/batch/batch_account_resource_test.go).
 
-Please refer to the above section to learn on to run the acceptance tests on your laptop.
+Please refer to the above section to learn how to run the acceptance tests on your computer.
 
