@@ -1,0 +1,211 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "An application for hosting Texas Hold EM poker games",
+        "version": "PokerHostApplication v1",
+        "title": "PokerHostApplication",
+        "termsOfService": "Terms of service",
+        "contact": {
+            "name": "chrisvugrinec@gmail.com"
+        },
+        "license": {
+            "name": "Disclaimer: Usage of this game is at own risk. You should not rely on anything related to this game as basis for making any business, legal or other decisions.",
+            "url": "https://swagger.io/docs/"
+        }
+    },
+    "host": "localhost:8080",
+    "basePath": "/pokerhost",
+    "tags": [
+        {
+            "name": "poker-host-endpoint",
+            "description": "Poker Host Endpoint"
+        }
+    ],
+    "paths": {
+        "/v1/deal": {
+            "get": {
+                "tags": [
+                    "poker-host-endpoint"
+                ],
+                "summary": "Deal hand to players, can only be called after INIT",
+                "description": "Gives the players 2 random cards from card stack",
+                "operationId": "dealUsingGET",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/v1/init": {
+            "post": {
+                "tags": [
+                    "poker-host-endpoint"
+                ],
+                "summary": "Initialize players",
+                "description": "Assign ID's to group of players and position them (Big Blind)",
+                "operationId": "initUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "nrOfPlayers",
+                        "in": "query",
+                        "description": "Number of players for this game",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int32",
+                        "allowEmptyValue": false
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/v1/testdeal": {
+            "get": {
+                "tags": [
+                    "poker-host-endpoint"
+                ],
+                "summary": "Deal hand to players, can only be called after INIT",
+                "description": "Gives the players 2 random cards from card stack",
+                "operationId": "testdealUsingGET",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "nrOfPlayers",
+                        "in": "query",
+                        "description": "Number of players for this game",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int32",
+                        "allowEmptyValue": false
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        }
+    },
+    "definitions": {
+        "CardDeck": {
+            "type": "object",
+            "properties": {
+                "card": {
+                    "type": "string"
+                },
+                "stack": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "title": "CardDeck"
+        },
+        "Game": {
+            "type": "object",
+            "properties": {
+                "bigBlindPostion": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "deck": {
+                    "$ref": "#/definitions/CardDeck"
+                },
+                "gameId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "pokerHands": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/PokerHand"
+                    }
+                },
+                "smallBlindPostion": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            },
+            "title": "Game"
+        },
+        "PokerHand": {
+            "type": "object",
+            "properties": {
+                "card1": {
+                    "type": "string"
+                },
+                "card2": {
+                    "type": "string"
+                },
+                "playerID": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "position": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            },
+            "title": "PokerHand"
+        }
+    }
+}

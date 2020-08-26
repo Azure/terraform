@@ -1,0 +1,4 @@
+apiVersion: v1
+description: Azure APIM demo 
+name: pokerservice
+version: 0.1.0

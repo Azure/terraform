@@ -1,0 +1,16 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: rolebinding-aks-user
+  namespace: dev
+subjects:
+# AKS User Group 
+- kind: Group
+  name: "e45ef353-966a-44e8-836f-dda15435b25c"
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: "bedf1091-0819-47a7-8b6a-1efba6cafdb3"
+roleRef:
+  kind: Role
+  name: role-aks-user
+  apiGroup: rbac.authorization.k8s.io
