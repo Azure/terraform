@@ -2,6 +2,8 @@
 
 This is an example of how to use [Terratest](https://github.com/gruntwork-io/terratest) to perform end-to-end testing on a Terraform project.
 
+> Note: this sample is used as the support for the [Terraform on Azure - End-to-end testing](https://docs.microsoft.com/azure/developer/terraform/best-practices-end-to-end-testing) documentation.
+
 ## What about end-to-end testing
 
 End-to-end tests validate that a program actually works in real conditions, the closest as possible to production environment. Let's imagine that we are writing a Terraform module to deploy two virtual machines into a virtual network but we don't want those machines to be able to ping each other. End-to-end tests are exactly what we need to make sure that the deployment of this module create the expected resources, but also that the virtual machines cannot ping each other.

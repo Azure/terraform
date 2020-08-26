@@ -4,6 +4,8 @@ This repository contains real-world examples that will walk you through differen
 
 ## Testing Best Practices
 
-- [Integration Testing](integration-testing/README.md)
-- [Compliance Testing](compliance-testing/README.md)
-- [End-to-end Testing](end-to-end-testing/README.md)
+> These samples are used as a support for the [Terraform on Azure testing best practices](https://docs.microsoft.com/azure/developer/terraform/best-practices-testing-overview) documentation section.
+
+- [Integration Testing](https://docs.microsoft.com/azure/developer/terraform/best-practices-integration-testing)
+- [Compliance Testing](https://docs.microsoft.com/azure/developer/terraform/best-practices-compliance-testing)
+- [End-to-end Testing](https://docs.microsoft.com/azure/developer/terraform/best-practices-end-to-end-testing)

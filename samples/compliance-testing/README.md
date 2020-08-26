@@ -2,6 +2,8 @@
 
 Compliance testing, also known as Conformance testing, is a nonfunctional testing technique which is done to validate whether the system developed meets the organization’s prescribed standards or not. Most software teams do an analysis to check that the standards are properly enforced and implemented. Often working simultaneously to improve the standards, which will, in turn, lead to better quality.
 
+> Note: this sample is used as the support for the [Terraform on Azure - Compliance testing](https://docs.microsoft.com/azure/developer/terraform/best-practices-compliance-testing) documentation.
+
 ## When to use Compliance Testing
 
 Compliance testing is performed to ensure the compliance of the deliverables of each phase of the development lifecycle. If you you have to enforce sufficient tests to validate the degree of compliance to the methodology and identify the violators. 

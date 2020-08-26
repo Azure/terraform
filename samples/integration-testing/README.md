@@ -2,6 +2,8 @@
 
 This is an example about the minimum level of integration testing that we recommend to be implemented on every Terraform project.
 
+> Note: this sample is used as the support for the [Terraform on Azure - Integration testing](https://docs.microsoft.com/azure/developer/terraform/best-practices-integration-testing) documentation.
+
 ## What about integration testing
 
 Testing is an important part of a software development project, and this is also for infrastructure as code projects. When working with Terraform, there are a bunch of tools that can help you to set up continuous integration quickly. Making sure that every time you and your colleagues are pushing changes, this code is automatically validated and tested.
