@@ -7,14 +7,14 @@ trigger:
     - '*'
   paths:
     include:
-    - 'examples/validation-testing/src/*'
+    - 'samples/integration-testing/src/*'
 
 variables:
   # There must be an Azure Service Connection with that name defined in your Azure DevOps settings. See https://docs.microsoft.com/en-us/azure/devops/pipelines/library/connect-to-azure?view=azure-devops
   serviceConnection: 'terraform-basic-testing-azure-connection'
   azureLocation: 'westeurope'
   # Terraform settings
-  terraformWorkingDirectory: '$(System.DefaultWorkingDirectory)/examples/basic-testing/src'
+  terraformWorkingDirectory: '$(System.DefaultWorkingDirectory)/samples/integration-testing/src'
   terraformVersion: '0.12.25'
 
 stages:
