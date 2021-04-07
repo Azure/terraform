@@ -85,7 +85,7 @@ Scenario Outline: Ensure that specific tags are defined
 
 ## How-to run this example
 
-The example above is taken from the [github.com/Azure/terrraform](https://github.com/Azure/terrraform/tree/compliance-testing/examples/master) repository.
+The example above is taken from the [github.com/Azure/terraform](https://github.com/Azure/terraform/tree/compliance-testing/examples/master) repository.
 
 After checkout the repo ...
 
