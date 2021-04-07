@@ -57,7 +57,7 @@ func TestEndToEndDeploymentScenario(t *testing.T) {
 
     fixtureFolder := "../"
 
-    // User Terratest to deploy the infrastructure
+    // Use Terratest to deploy the infrastructure
     test_structure.RunTestStage(t, "setup", func() {
         terraformOptions := &terraform.Options{
             // Indicate the directory that contains the Terraform configuration to deploy
