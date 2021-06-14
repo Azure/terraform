@@ -1,0 +1,49 @@
+info:
+  version: '1.0'
+  title: Swaggerized Rest API
+host: '10.1.0.100'
+paths:
+  /sayhello:
+    post:
+      tags:
+        - default
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/Model'
+      parameters:
+        - required: true
+          in: body
+          name: payload
+          schema:
+            $ref: '#/definitions/Model'
+        - description: An optional fields mask
+          format: mask
+          type: string
+          name: X-Fields
+          in: header
+      operationId: post_greeter
+responses:
+  MaskError:
+    description: When any error occurs on mask
+  ParseError:
+    description: When a mask can't be parsed
+tags:
+  - name: default
+    description: Default namespace
+basePath: /
+produces:
+  - application/json
+definitions:
+  Model:
+    required:
+      - name
+    type: object
+    properties:
+      name:
+        type: string
+swagger: '2.0'
+consumes:
+  - application/json
+
