@@ -73,6 +73,9 @@ If the third-party plugin folder is empty, the init operation will download the 
 
 More information [here](https://www.terraform.io/docs/extend/how-terraform-works.html#plugin-locations).
 
+`terraform init` will look for the providers in the folder where the `.tf` files are located, so it is possible to just copy the provider from `$GOPATH/bin` to your current folder and it will be used instead of getting downloaded. 
+
+
 ## Debug the AzureRM provider using Visual Studio Code and Delve
 
 It is possible to use Visual Studio Code and Delve (the Golang debugger) to debug the AzureRM provider.
