@@ -3,7 +3,7 @@ variable "environment" {
 }
 
 variable "name" {
-  default = "rg"
+  default = "sample"
 }
 
 variable "location" {
