@@ -21,4 +21,4 @@ This template deploys an Azure virtual machine scale set with a jumpbox.
 
 ## Example
 
-To see how to run this example, see [https://docs.microsoft.com/azure/developer/terraform/create-vm-scaleset-network-disks-hcl]
+To see how to run this example, see [Create an Azure virtual machine scale set using Terraform](https://docs.microsoft.com/azure/developer/terraform/create-vm-scaleset-network-disks-hcl).

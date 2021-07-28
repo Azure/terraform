@@ -18,4 +18,4 @@ This template deploys an Azure resource group.
 
 ## Example
 
-To see how to run this example, see [https://docs.microsoft.com/azure/developer/terraform/create-resource-group]
+To see how to run this example, see [Create an Azure resource group using Terraform](https://docs.microsoft.com/azure/developer/terraform/create-resource-group).
