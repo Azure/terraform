@@ -16,6 +16,7 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 
 #### Beginner
 
+- [Azure resource group](./101-resource-group)
 - [Static Website hosted on Azure Storage](./101-storage-static-website)
 - [Azure Web App hosting a Linux Container](./101-web-app-linux-container)
 - [Azure Web App hosting a Java 8 App on Linux](./101-web-app-linux-java)
