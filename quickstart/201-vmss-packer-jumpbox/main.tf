@@ -15,9 +15,7 @@ resource "azurerm_resource_group" "vmss" {
   name     = var.resource_group_name
   location = var.location
 
-  tags = {
-    environment = "codelab"
-  }
+  tags = var.tags
 }
 
 resource "azurerm_virtual_network" "vmss" {
@@ -26,16 +24,14 @@ resource "azurerm_virtual_network" "vmss" {
   location            = var.location
   resource_group_name = azurerm_resource_group.vmss.name
 
-  tags = {
-    environment = "codelab"
-  }
+  tags = var.tags
 }
 
 resource "azurerm_subnet" "vmss" {
   name                 = "vmss-subnet"
   resource_group_name  = azurerm_resource_group.vmss.name
   virtual_network_name = azurerm_virtual_network.vmss.name
-  address_prefix       = "10.0.2.0/24"
+  address_prefixes       = ["10.0.2.0/24"]
 }
 
 resource "azurerm_public_ip" "vmss" {
@@ -43,11 +39,8 @@ resource "azurerm_public_ip" "vmss" {
   location                     = var.location
   resource_group_name          = azurerm_resource_group.vmss.name
   allocation_method            = "Static"
-  domain_name_label            = azurerm_resource_group.vmss.name
 
-  tags = {
-    environment = "codelab"
-  }
+  tags = var.tags
 }
 
 resource "azurerm_lb" "vmss" {
@@ -60,13 +53,10 @@ resource "azurerm_lb" "vmss" {
     public_ip_address_id = azurerm_public_ip.vmss.id
   }
 
-  tags = {
-    environment = "codelab"
-  }
+  tags = var.tags
 }
 
 resource "azurerm_lb_backend_address_pool" "bpepool" {
-  resource_group_name = azurerm_resource_group.vmss.name
   loadbalancer_id     = azurerm_lb.vmss.id
   name                = "BackEndAddressPool"
 }
@@ -91,11 +81,11 @@ resource "azurerm_lb_rule" "lbnatrule" {
 }
 
 data "azurerm_resource_group" "image" {
-  name = "myResourceGroup"
+  name                = var.packer_resource_group_name
 }
 
 data "azurerm_image" "image" {
-  name                = "myPackerImage"
+  name                = var.packer_image_name
   resource_group_name = data.azurerm_resource_group.image.name
 }
 
@@ -156,9 +146,7 @@ resource "azurerm_virtual_machine_scale_set" "vmss" {
     }
   }
   
-  tags = {
-    environment = "codelab"
-  }
+  tags = var.tags
 }
 
 resource "azurerm_public_ip" "jumpbox" {
@@ -166,11 +154,8 @@ resource "azurerm_public_ip" "jumpbox" {
   location                     = var.location
   resource_group_name          = azurerm_resource_group.vmss.name
   allocation_method            = "Static"
-  domain_name_label            = "${azurerm_resource_group.vmss.name}-ssh"
 
-  tags = {
-    environment = "codelab"
-  }
+  tags = var.tags
 }
 
 resource "azurerm_network_interface" "jumpbox" {
@@ -185,9 +170,7 @@ resource "azurerm_network_interface" "jumpbox" {
     public_ip_address_id          = azurerm_public_ip.jumpbox.id
   }
 
-  tags = {
-    environment = "codelab"
-  }
+  tags = var.tags
 }
 
 resource "azurerm_virtual_machine" "jumpbox" {
@@ -226,8 +209,6 @@ resource "azurerm_virtual_machine" "jumpbox" {
     }
   }
 
-  tags = {
-    environment = "codelab"
-  }
+  tags = var.tags
 }
 
