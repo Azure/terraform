@@ -14,8 +14,14 @@ provider "azurerm" {
 resource "azurerm_resource_group" "vmss" {
   name     = var.resource_group_name
   location = var.location
-
   tags = var.tags
+}
+
+resource "random_string" "fqdn" {
+ length  = 6
+ special = false
+ upper   = false
+ number  = false
 }
 
 resource "azurerm_virtual_network" "vmss" {
@@ -23,7 +29,6 @@ resource "azurerm_virtual_network" "vmss" {
   address_space       = ["10.0.0.0/16"]
   location            = var.location
   resource_group_name = azurerm_resource_group.vmss.name
-
   tags = var.tags
 }
 
@@ -39,7 +44,7 @@ resource "azurerm_public_ip" "vmss" {
   location                     = var.location
   resource_group_name          = azurerm_resource_group.vmss.name
   allocation_method            = "Static"
-
+  domain_name_label            = random_string.fqdn.result
   tags = var.tags
 }
 
@@ -154,7 +159,7 @@ resource "azurerm_public_ip" "jumpbox" {
   location                     = var.location
   resource_group_name          = azurerm_resource_group.vmss.name
   allocation_method            = "Static"
-
+  domain_name_label            = "${random_string.fqdn.result}-ssh"
   tags = var.tags
 }
 
