@@ -1,11 +1,7 @@
-variable "environment" {
-  default = "dev"
+variable "resource_group_name" {
+  default = "myResourceGroup"
 }
 
-variable "name" {
-  default = "sample"
-}
-
-variable "location" {
+variable "resource_group_location" {
   default = "eastus"
 }
