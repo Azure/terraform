@@ -7,7 +7,7 @@ variable "resource_group_location" {
 }
 
 variable "policy_file" {
-  default = "./certs/cert.pem"
+  default = "~/.certs/cert.pem"
 }
 
 variable "attestation_provider_name" {
