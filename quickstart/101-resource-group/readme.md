@@ -1,20 +1,18 @@
 # Azure resource group
 
-This template deploys an Azure resource group.
+This template deploys an Azure resource group with a random name beginning with "rg-".
 
-## Resources
+## Terraform resource types
 
-| Terraform Resource Type | Description |
-| - | - |
-| `azurerm_resource_group` | The resource group all resources are deployed into |
+- [random_uuid](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/uuid)
+- [azurerm_resource_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group)
 
 ## Variables
 
 | Name | Description |
 |-|-|
-| `name` | Name of the deployment |
-| `environment` | The depolyment environment name (used for postfixing resource names) |
-| `location` | The Azure Region to deploy these resources in |
+| `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random number so name is unique in your Azure subscription. |
+| `resource_group_location` | The Azure Region to deploy these resources in |
 
 ## Example
 

@@ -14,7 +14,9 @@ provider "azurerm" {
   features {}
 }
 
+resource "random_uuid" "uuid" {}
+
 resource "azurerm_resource_group" "rg" {
-  name = var.resource_group_name
-  location = var.resource_group_location
+  name      = "${var.resource_group_name_prefix}-${random_uuid.uuid.result}"
+  location  = var.resource_group_location
 }
