@@ -12,7 +12,7 @@ resource "azurerm_key_vault" "default" {
   resource_group_name      = azurerm_resource_group.default.name
   tenant_id                = data.azurerm_client_config.current.tenant_id
   sku_name                 = "premium"
-  purge_protection_enabled = false
+  purge_protection_enabled = true
   
   network_acls {
     default_action = "Deny"
@@ -54,53 +54,6 @@ resource "azurerm_machine_learning_workspace" "default" {
   identity {
     type = "SystemAssigned"
   }
-}
-
-# Virtual network
-resource "azurerm_virtual_network" "default" {
-  name                = "${var.name}-${var.environment}-vnet"
-  address_space       = ["10.0.0.0/16"]
-  location            = azurerm_resource_group.default.location
-  resource_group_name = azurerm_resource_group.default.name
-}
-
-resource "azurerm_subnet" "mlsubnet" {
-  name                 = "mlsubnet"
-  resource_group_name  = azurerm_resource_group.default.name
-  virtual_network_name = azurerm_virtual_network.default.name
-  address_prefixes     = ["10.0.1.0/24"]
-  enforce_private_link_endpoint_network_policies = true
-}
-
-# DNS zones
-resource "azurerm_private_dns_zone" "dnsvault" {
-  name                = "privatelink.vaultcore.azure.net"
-  resource_group_name = azurerm_resource_group.default.name
-}
-
-resource "azurerm_private_dns_zone" "dnsstorageblob" {
-  name                = "privatelink.blob.core.windows.net"
-  resource_group_name = azurerm_resource_group.default.name
-}
-
-resource "azurerm_private_dns_zone" "dnsstoragefile" {
-  name                = "privatelink.file.core.windows.net"
-  resource_group_name = azurerm_resource_group.default.name
-}
-
-resource "azurerm_private_dns_zone" "dnscontainerregistry" {
-  name                = "privatelink.azurecr.io"
-  resource_group_name = azurerm_resource_group.default.name
-}
-
-resource "azurerm_private_dns_zone" "dnsazureml" {
-  name                = "privatelink.api.azureml.ms"
-  resource_group_name = azurerm_resource_group.default.name
-}
-
-resource "azurerm_private_dns_zone" "dnsnotebooks" {
-  name                = "privatelink.azureml.notebooks.net"
-  resource_group_name = azurerm_resource_group.default.name
 }
 
 # Private endpoints
@@ -181,7 +134,7 @@ resource "azurerm_private_endpoint" "cr_ple" {
 }
 
 resource "azurerm_private_endpoint" "ml_ple" {
-  name                = "${var.name}-${var.environment}-ple"
+  name                = "${var.name}-${var.environment}-ml-ple"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
   subnet_id           = azurerm_subnet.mlsubnet.id
@@ -200,4 +153,5 @@ resource "azurerm_private_endpoint" "ml_ple" {
     subresource_names              = [ "amlworkspace" ]
     is_manual_connection           = false
   }
+
 }
