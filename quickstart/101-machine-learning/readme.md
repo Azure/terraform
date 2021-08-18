@@ -1,9 +1,9 @@
 # Azure Machine Learning workspace
 
-This deployment template specifies an [Azure Machine Learning workspace](https://docs.microsoft.com/en-us/azure/machine-learning/concept-workspace), 
+This deployment configuration specifies an [Azure Machine Learning workspace](https://docs.microsoft.com/en-us/azure/machine-learning/concept-workspace), 
 and its associated resources including Azure Key Vault, Azure Storage, Azure Application Insights and Azure Container Registry.
 
-This template describes the minimal set of resources you require to get started with Azure Machine Learning.
+This configuration describes the minimal set of resources you require to get started with Azure Machine Learning.
 
 ## Resources
 

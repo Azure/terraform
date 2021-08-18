@@ -1,18 +1,18 @@
-# Dependent resources for the workspace
+# Dependent resources for Azure Machine Learning
 resource "azurerm_application_insights" "default" {
-  name                = "${var.name}-${var.environment}-ain"
+  name                = "appi-${var.name}-${var.environment}"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
   application_type    = "web"
 }
 
 resource "azurerm_key_vault" "default" {
-  name                     = "${var.name}${var.environment}kv"
+  name                     = "kv-${var.name}-${var.environment}"
   location                 = azurerm_resource_group.default.location
   resource_group_name      = azurerm_resource_group.default.name
   tenant_id                = data.azurerm_client_config.current.tenant_id
   sku_name                 = "premium"
-  purge_protection_enabled = true
+  purge_protection_enabled = false
   
   network_acls {
     default_action = "Deny"
@@ -21,7 +21,7 @@ resource "azurerm_key_vault" "default" {
 }
 
 resource "azurerm_storage_account" "default" {
-  name                     = "${var.name}${var.environment}sa"
+  name                     = "st${var.name}${var.environment}"
   location                 = azurerm_resource_group.default.location
   resource_group_name      = azurerm_resource_group.default.name
   account_tier             = "Standard"
@@ -34,7 +34,7 @@ resource "azurerm_storage_account" "default" {
 }
 
 resource "azurerm_container_registry" "default" {
-  name                     = "${var.name}${var.environment}cr"
+  name                     = "cr${var.name}${var.environment}"
   location                 = azurerm_resource_group.default.location
   resource_group_name      = azurerm_resource_group.default.name
   sku                      = "Premium"
@@ -43,7 +43,7 @@ resource "azurerm_container_registry" "default" {
 
 # Machine Learning workspace
 resource "azurerm_machine_learning_workspace" "default" {
-  name                    = "${var.name}-${var.environment}-aml"
+  name                    = "mlw-${var.name}-${var.environment}"
   location                = azurerm_resource_group.default.location
   resource_group_name     = azurerm_resource_group.default.name
   application_insights_id = azurerm_application_insights.default.id
@@ -57,8 +57,8 @@ resource "azurerm_machine_learning_workspace" "default" {
 }
 
 # Private endpoints
-resource "azurerm_private_endpoint" "keyvault_ple" {
-  name                = "${var.name}-${var.environment}-kv-ple"
+resource "azurerm_private_endpoint" "kv_ple" {
+  name                = "ple-${var.name}-${var.environment}-kv"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
   subnet_id           = azurerm_subnet.mlsubnet.id
@@ -69,15 +69,15 @@ resource "azurerm_private_endpoint" "keyvault_ple" {
   }
 
   private_service_connection {
-    name                           = "${var.name}kv-psc"
+    name                           = "psc-${var.name}-kv"
     private_connection_resource_id = azurerm_key_vault.default.id
     subresource_names              = [ "vault" ]
     is_manual_connection           = false
   }
 }
 
-resource "azurerm_private_endpoint" "storage_ple_blob" {
-  name                = "${var.name}-${var.environment}-sa-ple-blob"
+resource "azurerm_private_endpoint" "st_ple_blob" {
+  name                = "ple-${var.name}-${var.environment}-st-blob"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
   subnet_id           = azurerm_subnet.mlsubnet.id
@@ -88,7 +88,7 @@ resource "azurerm_private_endpoint" "storage_ple_blob" {
   }
 
   private_service_connection {
-    name                           = "${var.name}sa-psc"
+    name                           = "psc-${var.name}-st"
     private_connection_resource_id = azurerm_storage_account.default.id
     subresource_names              = [ "blob" ]
     is_manual_connection           = false
@@ -96,7 +96,7 @@ resource "azurerm_private_endpoint" "storage_ple_blob" {
 }
 
 resource "azurerm_private_endpoint" "storage_ple_file" {
-  name                = "${var.name}-${var.environment}-sa-ple-file"
+  name                = "ple-${var.name}-${var.environment}-st-file"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
   subnet_id           = azurerm_subnet.mlsubnet.id
@@ -107,7 +107,7 @@ resource "azurerm_private_endpoint" "storage_ple_file" {
   }
 
   private_service_connection {
-    name                           = "${var.name}sa-psc"
+    name                           = "psc-${var.name}-st"
     private_connection_resource_id = azurerm_storage_account.default.id
     subresource_names              = [ "file" ]
     is_manual_connection           = false
@@ -115,7 +115,7 @@ resource "azurerm_private_endpoint" "storage_ple_file" {
 }
 
 resource "azurerm_private_endpoint" "cr_ple" {
-  name                = "${var.name}-${var.environment}-cr-ple"
+  name                = "ple-${var.name}-${var.environment}-cr"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
   subnet_id           = azurerm_subnet.mlsubnet.id
@@ -126,15 +126,15 @@ resource "azurerm_private_endpoint" "cr_ple" {
   }
 
   private_service_connection {
-    name                           = "${var.name}cr-psc"
+    name                           = "psc-${var.name}-cr"
     private_connection_resource_id = azurerm_container_registry.default.id
     subresource_names              = [ "registry" ]
     is_manual_connection           = false
   }
 }
 
-resource "azurerm_private_endpoint" "ml_ple" {
-  name                = "${var.name}-${var.environment}-ml-ple"
+resource "azurerm_private_endpoint" "mlw_ple" {
+  name                = "ple-${var.name}-${var.environment}-mlw"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
   subnet_id           = azurerm_subnet.mlsubnet.id
@@ -148,7 +148,7 @@ resource "azurerm_private_endpoint" "ml_ple" {
   }
 
   private_service_connection {
-    name                           = "${var.name}ml-psc"
+    name                           = "psc-${var.name}-mlw"
     private_connection_resource_id = azurerm_machine_learning_workspace.default.id
     subresource_names              = [ "amlworkspace" ]
     is_manual_connection           = false

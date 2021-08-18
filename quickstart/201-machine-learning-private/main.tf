@@ -16,6 +16,6 @@ provider "azurerm" {
 data "azurerm_client_config" "current" {}
 
 resource "azurerm_resource_group" "default" {
-  name     = "${var.name}-${var.environment}-rgp"
-  location = "${var.location}"
+  name     = "rg-${var.name}-${var.environment}"
+  location = var.location
 }

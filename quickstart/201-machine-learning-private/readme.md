@@ -1,12 +1,12 @@
 # Azure Machine Learning workspace using Azure Private Link
 
-This deployment template specifies an [Azure Machine Learning workspace](https://docs.microsoft.com/en-us/azure/machine-learning/concept-workspace), 
+This deployment configuration specifies an [Azure Machine Learning workspace](https://docs.microsoft.com/en-us/azure/machine-learning/concept-workspace), 
 and its associated resources including Azure Key Vault, Azure Storage, Azure Application Insights and Azure Container Registry.
 
-In addition to these core services, this template deploys any networking components that are required to set up Azure Machine Learning
+In addition to these core services, this configuration specifies any networking components that are required to set up Azure Machine Learning
 for private network connectivity using [Azure Private Link](https://docs.microsoft.com/en-us/azure/private-link/). 
 
-This template describes the minimal set of resources you require to get started with Azure Machine Learning in a network-isolated set-up.
+This configuration describes the minimal set of resources you require to get started with Azure Machine Learning in a network-isolated set-up.
 
 To learn more about security configurations in Azure Machine Learning, see [Enterprise security and governance for Azure Machine Learning](https://docs.microsoft.com/en-us/azure/machine-learning/concept-enterprise-security).
 

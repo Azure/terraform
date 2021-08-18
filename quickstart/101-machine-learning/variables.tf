@@ -1,7 +1,6 @@
 variable "name" {
   type        = string
   description = "Name of the deployment"
-  default     = "azureml999"
 }
 
 variable "environment" {

@@ -1,6 +1,6 @@
 # Virtual Network
 resource "azurerm_virtual_network" "default" {
-  name                = "${var.name}-${var.environment}-vnet"
+  name                = "vnet-${var.name}-${var.environment}"
   address_space       = var.vnet_address_space
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
