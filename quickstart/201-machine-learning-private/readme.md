@@ -38,13 +38,7 @@ To learn more about security configurations in Azure Machine Learning, see [Ente
 ## Usage
 
 ```bash
-terraform plan \
-    -var 'name=azureml999' \
-    -var 'environment=dev' \
-    -var 'location=East US' \
-    -out demo.tfplan
+terraform plan -var name=azureml567 -out demo.tfplan
 
-terraform apply demo.tfplan
+terraform apply "demo.tfplan"
 ```
-
-\* Example shown with [Bash](https://www.gnu.org/software/bash/).  For [Powershell](https://docs.microsoft.com/en-us/powershell/) replace backslashes with backticks.

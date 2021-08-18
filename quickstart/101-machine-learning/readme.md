@@ -27,13 +27,7 @@ This template describes the minimal set of resources you require to get started 
 ## Usage
 
 ```bash
-terraform plan \
-    -var 'name=azureml999' \
-    -var 'environment=dev' \
-    -var 'location=East US' \
-    -out demo.tfplan
+terraform plan -var name=azureml567 -out demo.tfplan
 
-terraform apply demo.tfplan
+terraform apply "demo.tfplan"
 ```
-
-\* Example shown with [Bash](https://www.gnu.org/software/bash/).  For [Powershell](https://docs.microsoft.com/en-us/powershell/) replace backslashes with backticks.

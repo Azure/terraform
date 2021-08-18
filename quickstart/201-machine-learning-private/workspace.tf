@@ -1,4 +1,4 @@
-# Dependent resources for Azure Machine Learning
+# Dependent resources for the workspace
 resource "azurerm_application_insights" "default" {
   name                = "${var.name}-${var.environment}-ain"
   location            = azurerm_resource_group.default.location
