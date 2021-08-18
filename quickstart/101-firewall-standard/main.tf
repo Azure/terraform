@@ -79,7 +79,7 @@ resource "azurerm_firewall_application_rule_collection" "app-rc" {
 }
 
 resource "azurerm_firewall_network_rule_collection" "net-rc" {
-  name                = "apptestcollection"
+  name                = "nettestcollection"
   azure_firewall_name = azurerm_firewall.fw.name
   resource_group_name = azurerm_resource_group.rg.name
   priority            = 100
