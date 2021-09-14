@@ -1,4 +1,4 @@
-# Azure Machine Learning workspace using Azure Private Link
+# Azure Machine Learning workspace (highly secure network set up)
 
 This deployment configuration specifies an [Azure Machine Learning workspace](https://docs.microsoft.com/en-us/azure/machine-learning/concept-workspace), 
 and its associated resources including Azure Key Vault, Azure Storage, Azure Application Insights and Azure Container Registry.
