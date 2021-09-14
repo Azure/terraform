@@ -12,7 +12,7 @@ resource "azurerm_key_vault" "default" {
   resource_group_name      = azurerm_resource_group.default.name
   tenant_id                = data.azurerm_client_config.current.tenant_id
   sku_name                 = "premium"
-  purge_protection_enabled = false
+  purge_protection_enabled = true
   
   network_acls {
     default_action = "Deny"
@@ -61,7 +61,7 @@ resource "azurerm_private_endpoint" "kv_ple" {
   name                = "ple-${var.name}-${var.environment}-kv"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
-  subnet_id           = azurerm_subnet.mlsubnet.id
+  subnet_id           = azurerm_subnet.ml-subnet.id
 
   private_dns_zone_group {
     name                 = "private-dns-zone-group"
@@ -80,7 +80,7 @@ resource "azurerm_private_endpoint" "st_ple_blob" {
   name                = "ple-${var.name}-${var.environment}-st-blob"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
-  subnet_id           = azurerm_subnet.mlsubnet.id
+  subnet_id           = azurerm_subnet.ml-subnet.id
 
   private_dns_zone_group {
     name                 = "private-dns-zone-group"
@@ -99,7 +99,7 @@ resource "azurerm_private_endpoint" "storage_ple_file" {
   name                = "ple-${var.name}-${var.environment}-st-file"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
-  subnet_id           = azurerm_subnet.mlsubnet.id
+  subnet_id           = azurerm_subnet.ml-subnet.id
 
   private_dns_zone_group {
     name                 = "private-dns-zone-group"
@@ -118,7 +118,7 @@ resource "azurerm_private_endpoint" "cr_ple" {
   name                = "ple-${var.name}-${var.environment}-cr"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
-  subnet_id           = azurerm_subnet.mlsubnet.id
+  subnet_id           = azurerm_subnet.ml-subnet.id
 
   private_dns_zone_group {
     name                 = "private-dns-zone-group"
@@ -137,7 +137,7 @@ resource "azurerm_private_endpoint" "mlw_ple" {
   name                = "ple-${var.name}-${var.environment}-mlw"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
-  subnet_id           = azurerm_subnet.mlsubnet.id
+  subnet_id           = azurerm_subnet.ml-subnet.id
 
   private_dns_zone_group {
     name                 = "private-dns-zone-group"
@@ -153,5 +153,36 @@ resource "azurerm_private_endpoint" "mlw_ple" {
     subresource_names              = [ "amlworkspace" ]
     is_manual_connection           = false
   }
+}
+#Compute cluster for image building https://docs.microsoft.com/en-us/azure/machine-learning/tutorial-create-secure-workspace#configure-image-builds
 
+resource "azurerm_machine_learning_compute_cluster" "image-builder" {
+  name                          = "${var.image_build_compute_name}"
+  location                      = azurerm_resource_group.default.location
+  vm_priority                   = "LowPriority"
+  vm_size                       = "Standard_DS2_v2"
+  machine_learning_workspace_id = azurerm_machine_learning_workspace.default.id
+  subnet_resource_id            = azurerm_subnet.training-subnet.id
+
+  scale_settings {
+    min_node_count                       = 0
+    max_node_count                       = 1
+    scale_down_nodes_after_idle_duration = "PT30S" # 30 seconds
+  }
+
+  identity {
+    type = "SystemAssigned"
+  }
+}
+
+# Update workspace for image-build-compute
+
+resource "null_resource" "ws_image_build_compute"{
+  provisioner "local-exec" {
+    command = <<EOF
+    az ml workspace update --resource-group ${azurerm_resource_group.default.name} --workspace-name ${azurerm_machine_learning_workspace.default.name} --image-build-compute ${azurerm_machine_learning_compute_cluster.image-builder.name}
+    
+    EOF
+  }
+  depends_on = [azurerm_machine_learning_compute_cluster.image-builder]
 }
