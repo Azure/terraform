@@ -26,11 +26,7 @@ resource "azurerm_storage_account" "default" {
   resource_group_name      = azurerm_resource_group.default.name
   account_tier             = "Standard"
   account_replication_type = "GRS"
-
-  network_rules {
-    default_action = "Deny"
-    bypass = ["AzureServices"]
-  }
+  
 }
 
 resource "azurerm_container_registry" "default" {
