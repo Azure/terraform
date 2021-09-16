@@ -15,7 +15,7 @@ This template deploys a Virtual Machine Scale Set fronted by an Azure Applicatio
 | Name | Description |
 |-|-|
 | `name` | Name of the deployment |
-| `environment` | The depolyment environment name (used for postfixing resource names) |
+| `environment` | The deployment environment name (used for postfixing resource names) |
 | `prefix` | A prefix for globally-unique dns-based resources |
 | `location` | The Azure Region to deploy these resources in |
 
