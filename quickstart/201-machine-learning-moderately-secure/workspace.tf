@@ -61,7 +61,7 @@ resource "azurerm_private_endpoint" "kv_ple" {
   name                = "ple-${var.name}-${var.environment}-kv"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
-  subnet_id           = azurerm_subnet.ml-subnet.id
+  subnet_id           = azurerm_subnet.snet-workspace.id
 
   private_dns_zone_group {
     name                 = "private-dns-zone-group"
@@ -80,7 +80,7 @@ resource "azurerm_private_endpoint" "st_ple_blob" {
   name                = "ple-${var.name}-${var.environment}-st-blob"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
-  subnet_id           = azurerm_subnet.ml-subnet.id
+  subnet_id           = azurerm_subnet.snet-workspace.id
 
   private_dns_zone_group {
     name                 = "private-dns-zone-group"
@@ -99,7 +99,7 @@ resource "azurerm_private_endpoint" "storage_ple_file" {
   name                = "ple-${var.name}-${var.environment}-st-file"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
-  subnet_id           = azurerm_subnet.ml-subnet.id
+  subnet_id           = azurerm_subnet.snet-workspace.id
 
   private_dns_zone_group {
     name                 = "private-dns-zone-group"
@@ -118,7 +118,7 @@ resource "azurerm_private_endpoint" "cr_ple" {
   name                = "ple-${var.name}-${var.environment}-cr"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
-  subnet_id           = azurerm_subnet.ml-subnet.id
+  subnet_id           = azurerm_subnet.snet-workspace.id
 
   private_dns_zone_group {
     name                 = "private-dns-zone-group"
@@ -137,7 +137,7 @@ resource "azurerm_private_endpoint" "mlw_ple" {
   name                = "ple-${var.name}-${var.environment}-mlw"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
-  subnet_id           = azurerm_subnet.ml-subnet.id
+  subnet_id           = azurerm_subnet.snet-workspace.id
 
   private_dns_zone_group {
     name                 = "private-dns-zone-group"
@@ -162,7 +162,7 @@ resource "azurerm_machine_learning_compute_cluster" "image-builder" {
   vm_priority                   = "LowPriority"
   vm_size                       = "Standard_DS2_v2"
   machine_learning_workspace_id = azurerm_machine_learning_workspace.default.id
-  subnet_resource_id            = azurerm_subnet.training-subnet.id
+  subnet_resource_id            = azurerm_subnet.snet-training.id
 
   scale_settings {
     min_node_count                       = 0

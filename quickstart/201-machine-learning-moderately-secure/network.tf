@@ -6,24 +6,24 @@ resource "azurerm_virtual_network" "default" {
   resource_group_name = azurerm_resource_group.default.name
 }
 
-resource "azurerm_subnet" "training-subnet" {
-  name                 = "training-subnet"
+resource "azurerm_subnet" "snet-training" {
+  name                 = "snet-training"
   resource_group_name  = azurerm_resource_group.default.name
   virtual_network_name = azurerm_virtual_network.default.name
   address_prefixes     = var.training_subnet_address_space
   enforce_private_link_endpoint_network_policies = true
 }
 
-resource "azurerm_subnet" "aks-subnet" {
-  name                 = "aks-subnet"
+resource "azurerm_subnet" "snet-aks" {
+  name                 = "snet-aks"
   resource_group_name  = azurerm_resource_group.default.name
   virtual_network_name = azurerm_virtual_network.default.name
   address_prefixes     = var.aks_subnet_address_space
   enforce_private_link_endpoint_network_policies = true
 }
 
-resource "azurerm_subnet" "ml-subnet" {
-  name                 = "ml-subnet"
+resource "azurerm_subnet" "snet-workspace" {
+  name                 = "snet-workspace"
   resource_group_name  = azurerm_resource_group.default.name
   virtual_network_name = azurerm_virtual_network.default.name
   address_prefixes     = var.ml_subnet_address_space
@@ -106,8 +106,8 @@ resource "azurerm_private_dns_zone_virtual_network_link" "vnetlinknbs" {
 
 # Network Security Groups
 
-resource "azurerm_network_security_group" "training-NSG" {
-  name                = "training-NSG"
+resource "azurerm_network_security_group" "nsg-training" {
+  name                = "nsg-training"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
 
@@ -135,29 +135,29 @@ resource "azurerm_network_security_group" "training-NSG" {
   }
 }
 
-resource "azurerm_subnet_network_security_group_association" "training-NSG-link" {
-  subnet_id                 = azurerm_subnet.training-subnet.id
-  network_security_group_id = azurerm_network_security_group.training-NSG.id
+resource "azurerm_subnet_network_security_group_association" "nsg-training-link" {
+  subnet_id                 = azurerm_subnet.snet-training.id
+  network_security_group_id = azurerm_network_security_group.nsg-training.id
 }
 
-resource "azurerm_network_security_group" "aks-NSG" {
-  name                = "aks-NSG"
+resource "azurerm_network_security_group" "nsg-aks" {
+  name                = "nsg-aks"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
 
 
 }
 
-resource "azurerm_subnet_network_security_group_association" "aks-NSG-link" {
-  subnet_id                 = azurerm_subnet.aks-subnet.id
-  network_security_group_id = azurerm_network_security_group.aks-NSG.id
+resource "azurerm_subnet_network_security_group_association" "nsg-aks-link" {
+  subnet_id                 = azurerm_subnet.snet-aks.id
+  network_security_group_id = azurerm_network_security_group.nsg-aks.id
 }
 
 # User Defined Routes
 
 #UDR for Compute instance and compute clusters
-resource "azurerm_route_table" "training-UDR" {
-  name                = "training-UDR"
+resource "azurerm_route_table" "rt-training" {
+  name                = "rt-training"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
 }
@@ -165,7 +165,7 @@ resource "azurerm_route_table" "training-UDR" {
 resource "azurerm_route" "training-Internet-Route" {
   name                = "Internet"
   resource_group_name = azurerm_resource_group.default.name
-  route_table_name    = azurerm_route_table.training-UDR.name
+  route_table_name    = azurerm_route_table.rt-training.name
   address_prefix      = "0.0.0.0/0"
   next_hop_type       = "Internet"
 }
@@ -173,7 +173,7 @@ resource "azurerm_route" "training-Internet-Route" {
 resource "azurerm_route" "training-AzureMLRoute" {
   name                = "AzureMLRoute"
   resource_group_name = azurerm_resource_group.default.name
-  route_table_name    = azurerm_route_table.training-UDR.name
+  route_table_name    = azurerm_route_table.rt-training.name
   address_prefix      = "AzureMachineLearning"
   next_hop_type       = "Internet"
 }
@@ -181,19 +181,19 @@ resource "azurerm_route" "training-AzureMLRoute" {
 resource "azurerm_route" "training-BatchRoute" {
   name                = "BatchRoute"
   resource_group_name = azurerm_resource_group.default.name
-  route_table_name    = azurerm_route_table.training-UDR.name
+  route_table_name    = azurerm_route_table.rt-training.name
   address_prefix      = "BatchNodeManagement"
   next_hop_type       = "Internet"
 }
 
-resource "azurerm_subnet_route_table_association" "training-UDRlink" {
-  subnet_id      = azurerm_subnet.training-subnet.id
-  route_table_id = azurerm_route_table.training-UDR.id
+resource "azurerm_subnet_route_table_association" "rt-training-link" {
+  subnet_id      = azurerm_subnet.snet-training.id
+  route_table_id = azurerm_route_table.rt-training.id
 }
 # Inferencing (AKS) Route
 
-resource "azurerm_route_table" "aks-UDR" {
-  name                = "aks-UDR"
+resource "azurerm_route_table" "rt-aks" {
+  name                = "rt-aks"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
 }
@@ -201,12 +201,12 @@ resource "azurerm_route_table" "aks-UDR" {
 resource "azurerm_route" "aks-Internet-Route" {
   name                = "Internet"
   resource_group_name = azurerm_resource_group.default.name
-  route_table_name    = azurerm_route_table.aks-UDR.name
+  route_table_name    = azurerm_route_table.rt-aks.name
   address_prefix      = "0.0.0.0/0"
   next_hop_type       = "Internet"
 }
 
-resource "azurerm_subnet_route_table_association" "aks-UDR-link" {
-  subnet_id      = azurerm_subnet.aks-subnet.id
-  route_table_id = azurerm_route_table.aks-UDR.id
+resource "azurerm_subnet_route_table_association" "rt-aks-link" {
+  subnet_id      = azurerm_subnet.snet-aks.id
+  route_table_id = azurerm_route_table.rt-aks.id
 }
