@@ -52,8 +52,7 @@ resource "azurerm_machine_learning_workspace" "default" {
   }
 }
 
-# Compite Instance
-
+# Compute Instance
 resource "azurerm_machine_learning_compute_instance" "compute_instance" {
   name                          = "default-instance"
   location                      = azurerm_resource_group.default.location
@@ -62,13 +61,12 @@ resource "azurerm_machine_learning_compute_instance" "compute_instance" {
 }
 
 # Compute Cluster
-
 resource "azurerm_machine_learning_compute_cluster" "compute" {
   name                          = "default-compute"
   location                      = azurerm_resource_group.default.location
   machine_learning_workspace_id = azurerm_machine_learning_workspace.default.id
   vm_priority                   = "Dedicated"
-  vm_size         = "STANDARD_DS2_V2"
+  vm_size                       = "STANDARD_DS2_V2"
   identity {
     type = "SystemAssigned"
   }
