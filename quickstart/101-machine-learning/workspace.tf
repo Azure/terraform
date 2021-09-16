@@ -12,7 +12,7 @@ resource "azurerm_key_vault" "default" {
   resource_group_name      = azurerm_resource_group.default.name
   tenant_id                = data.azurerm_client_config.current.tenant_id
   sku_name                 = "premium"
-  purge_protection_enabled = false
+  purge_protection_enabled = true
   
   network_acls {
     default_action = "Deny"
@@ -74,7 +74,7 @@ resource "azurerm_machine_learning_compute_cluster" "compute" {
   scale_settings {
     min_node_count                       = 0
     max_node_count                       = 3
-    scale_down_nodes_after_idle_duration = "PT5M" # 30 seconds
+    scale_down_nodes_after_idle_duration = "PT10M" # 10 minutes
   }
   
 }
