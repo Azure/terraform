@@ -11,12 +11,14 @@ Network connectivity to the workspace is allowed over public endpoints, making t
 
 | Terraform Resource Type | Description |
 | - | - |
-| `azurerm_resource_group` | The resource group all resources get deployed into |
-| `azurerm_application_insights` | An Azure Application Insights instance associated to the Azure Machine Learning workspace |
-| `azurerm_key_vault` | An Azure Key Vault instance associated to the Azure Machine Learning workspace |
-| `azurerm_storage_account` | An Azure Storage instance associated to the Azure Machine Learning workspace |
-| `azurerm_container_registry` | An Azure Container Registry instance associated to the Azure Machine Learning workspace |
-| `azurerm_machine_learning_workspace` | An Azure Machine Learning workspace instance |
+| `azurerm_resource_group` | The resource group all resources get deployed into. |
+| `azurerm_application_insights` | An Azure Application Insights instance associated to the Azure Machine Learning workspace. |
+| `azurerm_key_vault` | An Azure Key Vault instance associated to the Azure Machine Learning workspace. |
+| `azurerm_storage_account` | An Azure Storage instance associated to the Azure Machine Learning workspace. |
+| `azurerm_container_registry` | An Azure Container Registry instance associated to the Azure Machine Learning workspace. |
+| `azurerm_machine_learning_workspace` | An Azure Machine Learning workspace instance. |
+| `azurerm_machine_learning_compute_instance` | An Azure Machine Learning compute instance. |
+| `azurerm_machine_learning_compute_cluster` | An Azure Machine Learning compute cluster. |
 
 ## Variables
 
