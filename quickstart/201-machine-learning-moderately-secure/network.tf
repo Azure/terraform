@@ -55,7 +55,6 @@ resource "azurerm_private_dns_zone_virtual_network_link" "vnetlinkblob" {
   virtual_network_id    = azurerm_virtual_network.default.id
 }
 
-
 resource "azurerm_private_dns_zone" "dnsstoragefile" {
   name                = "privatelink.file.core.windows.net"
   resource_group_name = azurerm_resource_group.default.name
@@ -155,7 +154,7 @@ resource "azurerm_subnet_network_security_group_association" "nsg-aks-link" {
 
 # User Defined Routes
 
-#UDR for Compute instance and compute clusters
+# UDR for Compute instance and compute clusters
 resource "azurerm_route_table" "rt-training" {
   name                = "rt-training"
   location            = azurerm_resource_group.default.location
@@ -190,8 +189,8 @@ resource "azurerm_subnet_route_table_association" "rt-training-link" {
   subnet_id      = azurerm_subnet.snet-training.id
   route_table_id = azurerm_route_table.rt-training.id
 }
-# Inferencing (AKS) Route
 
+# Inferencing (AKS) Route
 resource "azurerm_route_table" "rt-aks" {
   name                = "rt-aks"
   location            = azurerm_resource_group.default.location
