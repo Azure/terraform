@@ -36,7 +36,11 @@ To learn more about security configurations in Azure Machine Learning, see [Ente
 | name | Name of the deployment |
 | environment | The deployment environment name (used for pre- and postfixing resource names) |
 | location | The Azure region used for deployments |
-
+| vnet_address_space | Address space of the virtual network |
+| training_subnet_address_space | Address space of the training subnet | 
+| aks_subnet_address_space | Address space of the aks subnet |
+| ml_subnet_address_space | Address space of the ML workspace subnet | 
+| image_build_compute_name | Name of the compute cluster to be created and set to build docker images |
 
 ## Usage
 
