@@ -93,7 +93,7 @@ resource "azurerm_private_dns_zone_virtual_network_link" "vnetlinkml" {
 }
 
 resource "azurerm_private_dns_zone" "dnsnotebooks" {
-  name                = "privatelink.azureml.notebooks.net"
+  name                = "privatelink.notebooks.azure.net"
   resource_group_name = azurerm_resource_group.default.name
 }
 

@@ -141,10 +141,7 @@ resource "azurerm_private_endpoint" "mlw_ple" {
 
   private_dns_zone_group {
     name                 = "private-dns-zone-group"
-    private_dns_zone_ids = [
-      azurerm_private_dns_zone.dnsazureml.id,
-      azurerm_private_dns_zone.dnsnotebooks.id
-    ]
+    private_dns_zone_ids = [azurerm_private_dns_zone.dnsazureml.id, azurerm_private_dns_zone.dnsnotebooks.id]
   }
 
   private_service_connection {
