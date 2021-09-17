@@ -17,8 +17,8 @@ Network connectivity to the workspace is allowed over public endpoints, making t
 | `azurerm_storage_account` | An Azure Storage instance associated to the Azure Machine Learning workspace. |
 | `azurerm_container_registry` | An Azure Container Registry instance associated to the Azure Machine Learning workspace. |
 | `azurerm_machine_learning_workspace` | An Azure Machine Learning workspace instance. |
-| `azurerm_machine_learning_compute_instance` | An Azure Machine Learning compute instance. |
-| `azurerm_machine_learning_compute_cluster` | An Azure Machine Learning compute cluster. |
+| `azurerm_machine_learning_compute_instance` | An Azure Machine Learning compute instance a single-node managed compute. |
+| `azurerm_machine_learning_compute_cluster` | An Azure Machine Learning compute cluster as multi-node shared and managed compute. |
 
 ## Variables
 
