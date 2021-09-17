@@ -8,8 +8,6 @@ for private network connectivity using [Azure Private Link](https://docs.microso
 
 This configuration describes the minimal set of resources you require to get started with Azure Machine Learning in a network-isolated set-up.
 
-To learn more about security configurations in Azure Machine Learning, see [Enterprise security and governance for Azure Machine Learning](https://docs.microsoft.com/en-us/azure/machine-learning/concept-enterprise-security).
-
 ## Resources
 
 | Terraform Resource Type | Description |
@@ -49,3 +47,8 @@ terraform plan -var name=azureml567 -out demo.tfplan
 
 terraform apply "demo.tfplan"
 ```
+
+## Learn more
+
+- If you are new to Azure Machine Learning, see [Azure Machine Learning service](https://azure.microsoft.com/services/machine-learning-service/) and [Azure Machine Learning documentation](https://docs.microsoft.com/azure/machine-learning/).
+- To learn more about security configurations in Azure Machine Learning, see [Enterprise security and governance for Azure Machine Learning](https://docs.microsoft.com/en-us/azure/machine-learning/concept-enterprise-security).
