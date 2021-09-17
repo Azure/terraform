@@ -25,6 +25,8 @@ To learn more about security configurations in Azure Machine Learning, see [Ente
 | `azurerm_private_dns_zone` | Private DNS Zones for FQDNs required for Azure Machine Learning and associated resources |
 | `azurerm_private_dns_zone_virtual_network_link` | Virtual network links of the Private DNS Zones to the virtual network resource |
 | `azurerm_private_endpoint` | Private Endpoints for the Azure Machine Learning workspace and associated resources |
+| `azurerm_machine_learning_compute_instance` | An Azure Machine Learning compute instance a single-node managed compute. |
+| `azurerm_machine_learning_compute_cluster` | An Azure Machine Learning compute cluster as multi-node shared and managed compute. |
 
 ## Variables
 
