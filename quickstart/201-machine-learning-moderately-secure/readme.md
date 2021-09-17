@@ -27,6 +27,7 @@ To learn more about security configurations in Azure Machine Learning, see [Ente
 | `azurerm_private_endpoint` | Private Endpoints for the Azure Machine Learning workspace and associated resources |
 | `azurerm_machine_learning_compute_instance` | An Azure Machine Learning compute instance a single-node managed compute. |
 | `azurerm_machine_learning_compute_cluster` | An Azure Machine Learning compute cluster as multi-node shared and managed compute. |
+| `azurerm_network_security_group` | Network security group with required inbound and outbound rules for Azure Machine Learning. |
 
 ## Variables
 
