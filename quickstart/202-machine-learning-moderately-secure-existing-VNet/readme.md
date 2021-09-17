@@ -25,6 +25,10 @@ To learn more about security configurations in Azure Machine Learning, see [Ente
 | `azurerm_private_dns_zone` | Private DNS Zones for FQDNs required for Azure Machine Learning and associated resources |
 | `azurerm_private_dns_zone_virtual_network_link` | Virtual network links of the Private DNS Zones to the virtual network resource |
 | `azurerm_private_endpoint` | Private Endpoints for the Azure Machine Learning workspace and associated resources |
+| `azurerm_machine_learning_compute_instance` | An Azure Machine Learning compute instance a single-node managed compute. |
+| `azurerm_machine_learning_compute_cluster` | An Azure Machine Learning compute cluster as multi-node shared and managed compute. |
+| `azurerm_network_security_group` | Network security group with required inbound and outbound rules for Azure Machine Learning. |
+
 
 ## Variables
 
@@ -33,7 +37,16 @@ To learn more about security configurations in Azure Machine Learning, see [Ente
 | name | Name of the deployment |
 | environment | The deployment environment name (used for pre- and postfixing resource names) |
 | location | The Azure region used for deployments |
-
+| image_build_compute_name | Name of the compute cluster to be created and set to build docker images |
+| training_subnet_resource_id | Resource ID of the existing training subnet |
+| aks_subnet_resource_id | Resource ID of the existing aks subnet |
+| ml_subnet_resource_id | Resource ID of the existing ML workspace subnet |
+| privatelink_api_azureml_ms_resource_id | Resource ID of the existing privatelink.api.azureml.ms private dns zone |
+| privatelink_azurecr_io_resource_id | Resource ID of the existing privatelink.azurecr.io private dns zone |
+| privatelink_notebooks_azure_net_resource_id | Resource ID of the existing privatelink.notebooks.azure.net private dns zone |
+| privatelink_blob_core_windows_net_resource_id | Resource ID of the existing privatelink.blob.core.windows.net private dns zone |
+| privatelink_file_core_windows_net_resource_id | Resource ID of the existing privatelink.file.core.windows.net private dns zone |
+| privatelink_vaultcore_azure_net_resource_id | Resource ID of the existing privatelink.vaultcore.azure.net private dns zone |
 
 ## Usage
 
@@ -42,3 +55,9 @@ terraform plan -var name=azureml567 -out demo.tfplan
 
 terraform apply "demo.tfplan"
 ```
+
+## Learn more
+
+- If you are new to Azure Machine Learning, see [Azure Machine Learning service](https://azure.microsoft.com/services/machine-learning-service/) and [Azure Machine Learning documentation](https://docs.microsoft.com/azure/machine-learning/).
+- To learn more about security configurations in Azure Machine Learning, see [Enterprise security and governance for Azure Machine Learning](https://docs.microsoft.com/en-us/azure/machine-learning/concept-enterprise-security).
+- For all configurations of Azure Machine Learning in Terraform, see [Terraform Hashicorp AzureRM provider documentation](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/machine_learning_workspace).
