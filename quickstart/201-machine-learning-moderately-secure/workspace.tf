@@ -156,8 +156,9 @@ resource "azurerm_private_endpoint" "mlw_ple" {
     is_manual_connection           = false
   }
 }
-#Compute cluster for image building https://docs.microsoft.com/en-us/azure/machine-learning/tutorial-create-secure-workspace#configure-image-builds
 
+# Compute cluster for image building required since the workspace is behind a vnet.
+# For more details, see https://docs.microsoft.com/en-us/azure/machine-learning/tutorial-create-secure-workspace#configure-image-builds.
 resource "azurerm_machine_learning_compute_cluster" "image-builder" {
   name                          = "${var.image_build_compute_name}"
   location                      = azurerm_resource_group.default.location
@@ -169,7 +170,7 @@ resource "azurerm_machine_learning_compute_cluster" "image-builder" {
   scale_settings {
     min_node_count                       = 0
     max_node_count                       = 1
-    scale_down_nodes_after_idle_duration = "PT30S" # 30 seconds
+    scale_down_nodes_after_idle_duration = "PT15M" # 15 minutes
   }
 
   identity {
@@ -178,7 +179,6 @@ resource "azurerm_machine_learning_compute_cluster" "image-builder" {
 }
 
 # Update workspace for image-build-compute
-
 resource "null_resource" "ws_image_build_compute"{
   provisioner "local-exec" {
     command = <<EOF
