@@ -52,3 +52,4 @@ terraform apply "demo.tfplan"
 
 - If you are new to Azure Machine Learning, see [Azure Machine Learning service](https://azure.microsoft.com/services/machine-learning-service/) and [Azure Machine Learning documentation](https://docs.microsoft.com/azure/machine-learning/).
 - To learn more about security configurations in Azure Machine Learning, see [Enterprise security and governance for Azure Machine Learning](https://docs.microsoft.com/en-us/azure/machine-learning/concept-enterprise-security).
+- For all configurations of Azure Machine Learning in Terraform, see [Terraform Hashicorp AzureRM provider documentation](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/machine_learning_workspace).
