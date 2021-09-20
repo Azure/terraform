@@ -1,4 +1,4 @@
-# Azure Machine Learning workspace (moderately secure network set up)
+# Azure Machine Learning workspace (moderately secure network set up - existing virtual network)
 
 This deployment configuration specifies an [Azure Machine Learning workspace](https://docs.microsoft.com/en-us/azure/machine-learning/concept-workspace), 
 and its associated resources including Azure Key Vault, Azure Storage, Azure Application Insights and Azure Container Registry.
@@ -6,9 +6,7 @@ and its associated resources including Azure Key Vault, Azure Storage, Azure App
 In addition to these core services, this configuration specifies any networking components that are required to set up Azure Machine Learning
 for private network connectivity using [Azure Private Link](https://docs.microsoft.com/en-us/azure/private-link/). 
 
-This configuration describes the minimal set of resources you require to get started with Azure Machine Learning in a network-isolated set-up.
-
-To learn more about security configurations in Azure Machine Learning, see [Enterprise security and governance for Azure Machine Learning](https://docs.microsoft.com/en-us/azure/machine-learning/concept-enterprise-security).
+This configuration describes the minimal set of resources you require to get started with Azure Machine Learning in a network-isolated set-up. This configurations assumes that you have existing network components to reuse. The [201 example](../201-machine-learning-moderately-secure/readme.md), alternatively creates new network components. 
 
 ## Resources
 
@@ -51,6 +49,8 @@ To learn more about security configurations in Azure Machine Learning, see [Ente
 ## Usage
 
 ```bash
+terraform init
+
 terraform plan -var name=azureml567 -out demo.tfplan
 
 terraform apply "demo.tfplan"

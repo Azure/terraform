@@ -31,6 +31,8 @@ Network connectivity to the workspace is allowed over public endpoints, making t
 ## Usage
 
 ```bash
+terraform init
+
 terraform plan -var name=azureml567 -out demo.tfplan
 
 terraform apply "demo.tfplan"
