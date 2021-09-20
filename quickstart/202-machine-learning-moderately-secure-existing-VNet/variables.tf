@@ -21,7 +21,6 @@ variable "image_build_compute_name" {
 }
 
 # Existing subnets variables
-
 variable "training_subnet_resource_id" {
   type        = string
   description = "Resource ID of the existing training subnet"
@@ -39,7 +38,6 @@ variable "ml_subnet_resource_id" {
 
 
 # Existing private DNS zones variables
-
 variable "privatelink_api_azureml_ms_resource_id" {
   type        = string
   description = "Resource ID of the existing privatelink.api.azureml.ms private dns zone"

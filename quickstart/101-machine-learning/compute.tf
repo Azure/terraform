@@ -13,6 +13,7 @@ resource "azurerm_machine_learning_compute_cluster" "compute" {
   machine_learning_workspace_id = azurerm_machine_learning_workspace.default.id
   vm_priority                   = "Dedicated"
   vm_size                       = "STANDARD_DS2_V2"
+  
   identity {
     type = "SystemAssigned"
   }

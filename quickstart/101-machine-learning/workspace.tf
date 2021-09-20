@@ -13,7 +13,7 @@ resource "azurerm_key_vault" "default" {
   tenant_id                = data.azurerm_client_config.current.tenant_id
   sku_name                 = "premium"
   purge_protection_enabled = true
-  
+
   network_acls {
     default_action = "Deny"
     bypass = "AzureServices"
@@ -46,7 +46,7 @@ resource "azurerm_machine_learning_workspace" "default" {
   key_vault_id            = azurerm_key_vault.default.id
   storage_account_id      = azurerm_storage_account.default.id
   container_registry_id   = azurerm_container_registry.default.id
-
+  
   identity {
     type = "SystemAssigned"
   }
