@@ -1,9 +1,17 @@
-# Compute Instance
+# Generate random string for unique compute instance name
+resource "random_string" "ci_prefix" {
+  length = 8
+  upper = false
+  special = false
+  number = false
+}
+
+# Compute instance
 resource "azurerm_machine_learning_compute_instance" "compute_instance" {
-  name                          = "default-instance"
+  name                          = "${random_string.ci_prefix.result}instance"
   location                      = azurerm_resource_group.default.location
   machine_learning_workspace_id = azurerm_machine_learning_workspace.default.id
-  virtual_machine_size          = "STANDARD_DS2_V2"    
+  virtual_machine_size          = "STANDARD_DS2_V2"
 }
 
 # Compute Cluster
