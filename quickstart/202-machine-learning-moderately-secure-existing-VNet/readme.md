@@ -8,6 +8,8 @@ for private network connectivity using [Azure Private Link](https://docs.microso
 
 This configuration describes the minimal set of resources you require to get started with Azure Machine Learning in a network-isolated set-up. This configurations assumes that you have existing network components to reuse. The [201 example](../201-machine-learning-moderately-secure/readme.md), alternatively creates new network components. 
 
+Please note that this template does not configure Azure Private DNS zones. The assumption is that you have already configured DNS zones that are linked to your virtual network resources, or use your private DNS. 
+
 ## Resources
 
 | Terraform Resource Type | Description |
@@ -20,8 +22,6 @@ This configuration describes the minimal set of resources you require to get sta
 | `azurerm_machine_learning_workspace` | An Azure Machine Learning workspace instance |
 | `azurerm_virtual_network` | An Azure Machine Learning workspace instance |
 | `azurerm_subnet` | An Azure Machine Learning workspace instance |
-| `azurerm_private_dns_zone` | Private DNS Zones for FQDNs required for Azure Machine Learning and associated resources |
-| `azurerm_private_dns_zone_virtual_network_link` | Virtual network links of the Private DNS Zones to the virtual network resource |
 | `azurerm_private_endpoint` | Private Endpoints for the Azure Machine Learning workspace and associated resources |
 | `azurerm_machine_learning_compute_instance` | An Azure Machine Learning compute instance a single-node managed compute. |
 | `azurerm_machine_learning_compute_cluster` | An Azure Machine Learning compute cluster as multi-node shared and managed compute. |
