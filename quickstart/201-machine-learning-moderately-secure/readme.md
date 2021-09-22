@@ -43,6 +43,8 @@ This configuration describes the minimal set of resources you require to get sta
 ## Usage
 
 ```bash
+terraform init
+
 terraform plan -var name=azureml567 -out demo.tfplan
 
 terraform apply "demo.tfplan"

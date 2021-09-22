@@ -1,4 +1,5 @@
-quickstart/101-machine-learning/.terraform.lock.hcl
-quickstart/101-machine-learning/.terraform/providers/registry.terraform.io/hashicorp/azurerm/2.76.0/windows_amd64/terraform-provider-azurerm_v2.76.0_x5.exe
-quickstart/101-machine-learning/terraform.tfstate
-quickstart/101-machine-learning/demo.tfplan
+*.terraform.lock.hcl
+*.exe
+*.tfstate
+*.tfplan
+*.tfplan
