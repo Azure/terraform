@@ -82,11 +82,6 @@ resource "azurerm_private_dns_zone_virtual_network_link" "vnetlinkcr" {
 resource "azurerm_private_dns_zone" "dnsazureml" {
   name                = "privatelink.api.azureml.ms"
   resource_group_name = azurerm_resource_group.default.name
-
-  depends_on = [
-    azurerm_machine_learning_compute_cluster.compute,
-    azurerm_machine_learning_compute_instance.compute_instance
-  ]
 }
 
 resource "azurerm_private_dns_zone_virtual_network_link" "vnetlinkml" {
@@ -99,11 +94,6 @@ resource "azurerm_private_dns_zone_virtual_network_link" "vnetlinkml" {
 resource "azurerm_private_dns_zone" "dnsnotebooks" {
   name                = "privatelink.notebooks.azure.net"
   resource_group_name = azurerm_resource_group.default.name
-
-  depends_on = [
-    azurerm_machine_learning_compute_cluster.compute,
-    azurerm_machine_learning_compute_instance.compute_instance
-  ]
 }
 
 resource "azurerm_private_dns_zone_virtual_network_link" "vnetlinknbs" {

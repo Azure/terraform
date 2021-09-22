@@ -8,7 +8,7 @@ for private network connectivity using [Azure Private Link](https://docs.microso
 
 This configuration describes the minimal set of resources you require to get started with Azure Machine Learning in a network-isolated set-up. This configurations assumes that you have existing network components to reuse. The [201 example](../201-machine-learning-moderately-secure/readme.md), alternatively creates new network components. 
 
-Please note that this template does not configure Azure Private DNS zones. The assumption is that you have already configured DNS zones that are linked to your virtual network resources, or use your private DNS. 
+Please note that this template does not create Azure Private DNS zones. The assumption is that you have already configured Azure private DNS zones that are linked to your virtual network resources.
 
 ## Resources
 

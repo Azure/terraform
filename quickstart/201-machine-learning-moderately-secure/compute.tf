@@ -13,6 +13,10 @@ resource "azurerm_machine_learning_compute_instance" "compute_instance" {
   machine_learning_workspace_id = azurerm_machine_learning_workspace.default.id
   virtual_machine_size          = "STANDARD_DS2_V2"
   subnet_resource_id            = azurerm_subnet.snet-training.id
+
+  depends_on = [
+    azurerm_private_endpoint.mlw_ple
+  ]
 }
 
 # Compute cluster
@@ -33,5 +37,5 @@ resource "azurerm_machine_learning_compute_cluster" "compute" {
     max_node_count                       = 3
     scale_down_nodes_after_idle_duration = "PT15M" # 15 minutes
   }
-  
+
 }
