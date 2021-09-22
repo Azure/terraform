@@ -12,15 +12,21 @@ resource "azurerm_machine_learning_compute_instance" "compute_instance" {
   location                      = azurerm_resource_group.default.location
   machine_learning_workspace_id = azurerm_machine_learning_workspace.default.id
   virtual_machine_size          = "STANDARD_DS2_V2"
+  subnet_resource_id            = azurerm_subnet.snet-training.id
+
+  depends_on = [
+    azurerm_private_endpoint.mlw_ple
+  ]
 }
 
-# Compute Cluster
+# Compute cluster
 resource "azurerm_machine_learning_compute_cluster" "compute" {
   name                          = "cpu-cluster"
   location                      = azurerm_resource_group.default.location
   machine_learning_workspace_id = azurerm_machine_learning_workspace.default.id
   vm_priority                   = "Dedicated"
   vm_size                       = "STANDARD_DS2_V2"
+  subnet_resource_id            = azurerm_subnet.snet-training.id
   
   identity {
     type = "SystemAssigned"
@@ -31,5 +37,5 @@ resource "azurerm_machine_learning_compute_cluster" "compute" {
     max_node_count                       = 3
     scale_down_nodes_after_idle_duration = "PT15M" # 15 minutes
   }
-  
+
 }
