@@ -59,6 +59,10 @@ resource "azurerm_machine_learning_workspace" "default" {
   identity {
     type = "SystemAssigned"
   }
+  
+  # Args of use when using an Azure Private Link configuration
+  public_network_access_enabled = false
+  image_build_compute_name = var.image_build_compute_name
 }
 
 # Private endpoints
@@ -179,15 +183,4 @@ resource "azurerm_machine_learning_compute_cluster" "image-builder" {
   identity {
     type = "SystemAssigned"
   }
-}
-
-# Update workspace for image-build-compute
-resource "null_resource" "ws_image_build_compute"{
-  provisioner "local-exec" {
-    command = <<EOF
-    az ml workspace update --resource-group ${azurerm_resource_group.default.name} --workspace-name ${azurerm_machine_learning_workspace.default.name} --image-build-compute ${azurerm_machine_learning_compute_cluster.image-builder.name}
-    
-    EOF
-  }
-  depends_on = [azurerm_machine_learning_compute_cluster.image-builder]
 }
