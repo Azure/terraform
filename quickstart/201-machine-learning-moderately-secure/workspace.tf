@@ -55,12 +55,15 @@ resource "azurerm_machine_learning_workspace" "default" {
   key_vault_id            = azurerm_key_vault.default.id
   storage_account_id      = azurerm_storage_account.default.id
   container_registry_id   = azurerm_container_registry.default.id
-
+  
   identity {
     type = "SystemAssigned"
   }
   
+  # Args of use when using an Azure Private Link configuration
+  public_network_access_enabled = false
   image_build_compute_name = var.image_build_compute_name
+  
 }
 
 # Private endpoints
