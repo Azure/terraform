@@ -59,7 +59,9 @@ resource "azurerm_machine_learning_workspace" "default" {
   identity {
     type = "SystemAssigned"
   }
-
+  
+  # Args of use when using an Azure Private Link configuration
+  public_network_access_enabled = false
   image_build_compute_name = var.image_build_compute_name
 }
 
