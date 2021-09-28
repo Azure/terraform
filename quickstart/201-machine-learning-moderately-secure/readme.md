@@ -38,7 +38,7 @@ This configuration describes the minimal set of resources you require to get sta
 | training_subnet_address_space | Address space of the training subnet | 
 | aks_subnet_address_space | Address space of the aks subnet |
 | ml_subnet_address_space | Address space of the ML workspace subnet | 
-| image_build_compute_name | Name of the compute cluster to be created and set to build docker images |
+| image_build_compute_name | Name of the compute cluster to be created and configured for building docker images (Azure ML Environments)  |
 
 ## Usage
 
