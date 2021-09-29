@@ -61,7 +61,7 @@ terraform init
 terraform plan \
           -var name=azureml567 \
           -var environment=dev \
-          -var <for a full list of variables and default values, see 'Variables'> \
+          # -var <for a full list of variables and default values, see 'Variables'> \
           -out demo.tfplan
 
 terraform apply "demo.tfplan"
