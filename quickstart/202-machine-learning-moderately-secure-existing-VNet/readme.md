@@ -33,7 +33,7 @@ Please note that this template does not create Azure Private DNS zones. The assu
 | Name | Description | Default |
 |-|-|-|
 | name | Name of the deployment | - |
-| environment | The deployment environment name (used for pre- and postfixing resource names) | dev  |
+| environment | The deployment environment name (used for pre- and postfixing resource names) | dev |
 | location | The Azure region used for deployments | East US |
 | vnet_resource_group_name | Name of the existing VNet Resource Group | - |
 | vnet_name | Name of the existing VNet | - |
@@ -58,7 +58,11 @@ Please note that this template does not create Azure Private DNS zones. The assu
 ```bash
 terraform init
 
-terraform plan -var name=azureml567 -out demo.tfplan
+terraform plan \
+          -var name=azureml567 \
+          -var environment=dev \
+          -var <for a full list of variables and default values, see 'Variables'> \
+          -out demo.tfplan
 
 terraform apply "demo.tfplan"
 ```

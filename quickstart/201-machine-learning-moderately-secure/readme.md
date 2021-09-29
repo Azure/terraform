@@ -46,7 +46,11 @@ This configuration describes the minimal set of resources you require to get sta
 ```bash
 terraform init
 
-terraform plan -var name=azureml567 -out demo.tfplan
+terraform plan \
+          -var name=azureml567 \
+          -var environment=dev \
+          -var <for a full list of variables and default values, see 'Variables'> \
+          -out demo.tfplan
 
 terraform apply "demo.tfplan"
 ```
