@@ -11,8 +11,8 @@ This template deploys an Azure resource group with a random name beginning with 
 
 | Name | Description |
 |-|-|
-| `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random number so name is unique in your Azure subscription. |
-| `resource_group_location` | The Azure Region to deploy these resources in |
+| `resource_group_name_prefix` | (Optional) Prefix of the resource group name that's combined with a random number so name is unique in your Azure subscription. |
+| `resource_group_location` | (Optional) The Azure Region to deploy these resources in |
 
 ## Example
 
