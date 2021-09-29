@@ -12,6 +12,7 @@ variable "environment" {
 variable "location" {
   type        = string
   description = "Location of the resources"
+  default     = "East US"
 }
 
 variable "image_build_compute_name" {

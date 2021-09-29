@@ -30,21 +30,21 @@ Please note that this template does not create Azure Private DNS zones. The assu
 
 ## Variables
 
-| Name | Description |
-|-|-|
-| name | Name of the deployment |
-| environment | The deployment environment name (used for pre- and postfixing resource names) |
-| location | The Azure region used for deployments |
-| image_build_compute_name | Name of the compute cluster to be created and configured for building docker images (Azure ML Environments)  |
-| training_subnet_resource_id | Resource ID of the existing training subnet |
-| aks_subnet_resource_id | Resource ID of the existing aks subnet |
-| ml_subnet_resource_id | Resource ID of the existing ML workspace subnet |
-| privatelink_api_azureml_ms_resource_id | Resource ID of the existing privatelink.api.azureml.ms private dns zone |
-| privatelink_azurecr_io_resource_id | Resource ID of the existing privatelink.azurecr.io private dns zone |
-| privatelink_notebooks_azure_net_resource_id | Resource ID of the existing privatelink.notebooks.azure.net private dns zone |
-| privatelink_blob_core_windows_net_resource_id | Resource ID of the existing privatelink.blob.core.windows.net private dns zone |
-| privatelink_file_core_windows_net_resource_id | Resource ID of the existing privatelink.file.core.windows.net private dns zone |
-| privatelink_vaultcore_azure_net_resource_id | Resource ID of the existing privatelink.vaultcore.azure.net private dns zone |
+| Name | Description | Default |
+|-|-|-|
+| name | Name of the deployment | - |
+| environment | The deployment environment name (used for pre- and postfixing resource names) | dev  |
+| location | The Azure region used for deployments | East US |
+| training_subnet_resource_id | Resource ID of the existing training subnet | - |
+| aks_subnet_resource_id | Resource ID of the existing aks subnet | - |
+| ml_subnet_resource_id | Resource ID of the existing ML workspace subnet | - |
+| image_build_compute_name | Name of the compute cluster to be created and configured for building docker images (Azure ML Environments) | image-builder |
+| privatelink_api_azureml_ms_resource_id | Resource ID of the existing privatelink.api.azureml.ms private dns zone | - |
+| privatelink_azurecr_io_resource_id | Resource ID of the existing privatelink.azurecr.io private dns zone | - |
+| privatelink_notebooks_azure_net_resource_id | Resource ID of the existing privatelink.notebooks.azure.net private dns zone | - |
+| privatelink_blob_core_windows_net_resource_id | Resource ID of the existing privatelink.blob.core.windows.net private dns zone | - |
+| privatelink_file_core_windows_net_resource_id | Resource ID of the existing privatelink.file.core.windows.net private dns zone | - |
+| privatelink_vaultcore_azure_net_resource_id | Resource ID of the existing privatelink.vaultcore.azure.net private dns zone | - |
 
 ## Usage
 

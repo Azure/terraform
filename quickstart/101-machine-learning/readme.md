@@ -22,11 +22,11 @@ Network connectivity to the workspace is allowed over public endpoints, making t
 
 ## Variables
 
-| Name | Description |
-|-|-|
-| name | Name of the deployment |
-| environment | The deployment environment name (used for pre- and postfixing resource names) |
-| location | The Azure region used for deployments |
+| Name | Description | Default |
+|-|-|-|
+| name | Name of the deployment | - |
+| environment | The deployment environment name (used for pre- and postfixing resource names) | dev  |
+| location | The Azure region used for deployments | East US |
 
 ## Usage
 

@@ -29,16 +29,17 @@ This configuration describes the minimal set of resources you require to get sta
 
 ## Variables
 
-| Name | Description |
-|-|-|
-| name | Name of the deployment |
-| environment | The deployment environment name (used for pre- and postfixing resource names) |
-| location | The Azure region used for deployments |
-| vnet_address_space | Address space of the virtual network |
-| training_subnet_address_space | Address space of the training subnet | 
-| aks_subnet_address_space | Address space of the aks subnet |
-| ml_subnet_address_space | Address space of the ML workspace subnet | 
-| image_build_compute_name | Name of the compute cluster to be created and configured for building docker images (Azure ML Environments)  |
+| Name | Description | Default |
+|-|-|-|
+| name | Name of the deployment | - |
+| environment | The deployment environment name (used for pre- and postfixing resource names) | dev  |
+| location | The Azure region used for deployments | East US |
+| vnet_address_space | Address space of the virtual network | ["10.0.0.0/16"] |
+| training_subnet_address_space | Address space of the training subnet | ["10.0.1.0/24"] |
+| aks_subnet_address_space | Address space of the aks subnet | ["10.0.2.0/23"] |
+| ml_subnet_address_space | Address space of the ML workspace subnet | ["10.0.0.0/24"] |
+| image_build_compute_name | Name of the compute cluster to be created and configured for building docker images (Azure ML Environments) | image-builder |
+
 
 ## Usage
 
