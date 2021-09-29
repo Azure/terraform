@@ -35,9 +35,11 @@ Please note that this template does not create Azure Private DNS zones. The assu
 | name | Name of the deployment | - |
 | environment | The deployment environment name (used for pre- and postfixing resource names) | dev  |
 | location | The Azure region used for deployments | East US |
-| training_subnet_resource_id | Resource ID of the existing training subnet | - |
-| aks_subnet_resource_id | Resource ID of the existing aks subnet | - |
-| ml_subnet_resource_id | Resource ID of the existing ML workspace subnet | - |
+| vnet_resource_group_name | Name of the existing VNet Resource Group | - |
+| vnet_name | Name of the existing VNet | - |
+| training_subnet_name | Name of the existing training subnet | - |
+| aks_subnet_name | Name of the existing aks subnet | - |
+| ml_subnet_name | Name of the existing ML workspace subnet | - |
 | image_build_compute_name | Name of the compute cluster to be created and configured for building docker images (Azure ML Environments) | image-builder |
 | privatelink_api_azureml_ms_resource_id | Resource ID of the existing privatelink.api.azureml.ms private dns zone | - |
 | privatelink_azurecr_io_resource_id | Resource ID of the existing privatelink.azurecr.io private dns zone | - |
