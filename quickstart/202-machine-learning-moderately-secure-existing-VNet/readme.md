@@ -41,6 +41,11 @@ Please note that this template does not create Azure Private DNS zones. The assu
 | aks_subnet_name | Name of the existing aks subnet | - |
 | ml_subnet_name | Name of the existing ML workspace subnet | - |
 | image_build_compute_name | Name of the compute cluster to be created and configured for building docker images (Azure ML Environments) | image-builder |
+| vnet_resource_group_name | Name of the resource group for the existing VNet | - |
+| vnet_name | Name of the existing VNet | - |
+| training_subnet_name | Name of the existing training subnet | - |
+| aks_subnet_name | Name of the existing AKS subnet | - |
+| ml_subnet_name | Name of the existing ML workspace subnet | - |
 | privatelink_api_azureml_ms_resource_id | Resource ID of the existing privatelink.api.azureml.ms private dns zone | - |
 | privatelink_azurecr_io_resource_id | Resource ID of the existing privatelink.azurecr.io private dns zone | - |
 | privatelink_notebooks_azure_net_resource_id | Resource ID of the existing privatelink.notebooks.azure.net private dns zone | - |
