@@ -130,7 +130,6 @@ resource "azurerm_application_gateway" "network" {
     depends_on = [azurerm_virtual_network.test, azurerm_public_ip.test]
 }
 
-```hcl
 resource "azurerm_role_assignment" "ra1" {
     scope                = data.azurerm_subnet.kubesubnet.id
     role_definition_name = "Network Contributor"
@@ -159,7 +158,6 @@ resource "azurerm_role_assignment" "ra4" {
     principal_id         = azurerm_user_assigned_identity.testIdentity.principal_id
     depends_on           = [azurerm_user_assigned_identity.testIdentity, azurerm_application_gateway.network]
 }
-```
 
 resource "azurerm_kubernetes_cluster" "k8s" {
     name       = var.aks_name
