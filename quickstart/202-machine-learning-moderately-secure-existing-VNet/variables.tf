@@ -21,20 +21,31 @@ variable "image_build_compute_name" {
   default     = "image-builder"
 }
 
-# Existing subnets variables
-variable "training_subnet_resource_id" {
+# Existing vnet and subnets variables
+
+variable "vnet_resource_group_name" {
   type        = string
-  description = "Resource ID of the existing training subnet"
+  description = "Name of the resource group for the existing VNet"
 }
 
-variable "aks_subnet_resource_id" {
+variable "vnet_name" {
   type        = string
-  description = "Resource ID of the existing aks subnet"
+  description = "Name of the existing VNet"
 }
 
-variable "ml_subnet_resource_id" {
+variable "training_subnet_name" {
   type        = string
-  description = "Resource ID of the existing ML workspace subnet"
+  description = "Name of the existing training subnet"
+}
+
+variable "aks_subnet_name" {
+  type        = string
+  description = "Name of the existing aks subnet"
+}
+
+variable "ml_subnet_name" {
+  type        = string
+  description = "Name of the existing ML workspace subnet"
 }
 
 

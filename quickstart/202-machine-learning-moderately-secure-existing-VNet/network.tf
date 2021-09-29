@@ -1,3 +1,23 @@
+# Data Sources
+
+data "azurerm_subnet" "training" {
+  name                 = var.training_subnet_name
+  virtual_network_name = var.vnet_name
+  resource_group_name  = var.vnet_resource_group_name
+}
+
+data "azurerm_subnet" "aks" {
+  name                 = var.aks_subnet_name
+  virtual_network_name = var.vnet_name
+  resource_group_name  = var.vnet_resource_group_name
+}
+
+data "azurerm_subnet" "ml" {
+  name                 = var.ml_subnet_name
+  virtual_network_name = var.vnet_name
+  resource_group_name  = var.vnet_resource_group_name
+}
+
 # Network Security Groups
 resource "azurerm_network_security_group" "nsg-training" {
   name                = "nsg-training"
@@ -30,7 +50,7 @@ resource "azurerm_network_security_group" "nsg-training" {
 }
 
 resource "azurerm_subnet_network_security_group_association" "nsg-training-link" {
-  subnet_id                 = var.training_subnet_resource_id
+  subnet_id                 = "${data.azurerm_subnet.training.id}"
   network_security_group_id = azurerm_network_security_group.nsg-training.id
 }
 
@@ -43,7 +63,7 @@ resource "azurerm_network_security_group" "nsg-aks" {
 }
 
 resource "azurerm_subnet_network_security_group_association" "nsg-aks-link" {
-  subnet_id                 = var.aks_subnet_resource_id
+  subnet_id                 = "${data.azurerm_subnet.aks.id}"
   network_security_group_id = azurerm_network_security_group.nsg-aks.id
 }
 
@@ -81,7 +101,7 @@ resource "azurerm_route" "training-BatchRoute" {
 }
 
 resource "azurerm_subnet_route_table_association" "rt-training-link" {
-  subnet_id      = var.training_subnet_resource_id
+  subnet_id      = "${data.azurerm_subnet.training.id}"
   route_table_id = azurerm_route_table.rt-training.id
 }
 
@@ -101,6 +121,6 @@ resource "azurerm_route" "aks-Internet-Route" {
 }
 
 resource "azurerm_subnet_route_table_association" "rt-aks-link" {
-  subnet_id      = var.aks_subnet_resource_id
+  subnet_id      = "${data.azurerm_subnet.aks.id}"
   route_table_id = azurerm_route_table.rt-aks.id
 }

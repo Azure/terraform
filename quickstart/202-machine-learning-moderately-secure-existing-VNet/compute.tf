@@ -12,7 +12,7 @@ resource "azurerm_machine_learning_compute_instance" "compute_instance" {
   location                      = azurerm_resource_group.default.location
   machine_learning_workspace_id = azurerm_machine_learning_workspace.default.id
   virtual_machine_size          = "STANDARD_DS2_V2"
-  subnet_resource_id            = var.training_subnet_resource_id
+  subnet_resource_id            = "${data.azurerm_subnet.training.id}"
 
   depends_on = [
     azurerm_private_endpoint.mlw_ple
@@ -26,7 +26,7 @@ resource "azurerm_machine_learning_compute_cluster" "compute" {
   machine_learning_workspace_id = azurerm_machine_learning_workspace.default.id
   vm_priority                   = "Dedicated"
   vm_size                       = "STANDARD_DS2_V2"
-  subnet_resource_id            = var.training_subnet_resource_id
+  subnet_resource_id            = "${data.azurerm_subnet.training.id}"
 
   identity {
     type = "SystemAssigned"
