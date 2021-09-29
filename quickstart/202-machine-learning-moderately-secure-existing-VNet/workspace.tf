@@ -13,10 +13,10 @@ resource "azurerm_key_vault" "default" {
   tenant_id                = data.azurerm_client_config.current.tenant_id
   sku_name                 = "premium"
   purge_protection_enabled = true
-  
+
   network_acls {
     default_action = "Deny"
-    bypass = "AzureServices"
+    bypass         = "AzureServices"
   }
 }
 
@@ -29,20 +29,20 @@ resource "azurerm_storage_account" "default" {
 
   network_rules {
     default_action = "Deny"
-    bypass = ["AzureServices"]
+    bypass         = ["AzureServices"]
   }
 }
 
 resource "azurerm_container_registry" "default" {
-  name                     = "cr${var.name}${var.environment}"
-  location                 = azurerm_resource_group.default.location
-  resource_group_name      = azurerm_resource_group.default.name
-  sku                      = "Premium"
-  admin_enabled            = true
+  name                = "cr${var.name}${var.environment}"
+  location            = azurerm_resource_group.default.location
+  resource_group_name = azurerm_resource_group.default.name
+  sku                 = "Premium"
+  admin_enabled       = true
 
   network_rule_set {
     default_action = "Deny"
-    }
+  }
   public_network_access_enabled = false
 }
 
@@ -59,10 +59,10 @@ resource "azurerm_machine_learning_workspace" "default" {
   identity {
     type = "SystemAssigned"
   }
-  
+
   # Args of use when using an Azure Private Link configuration
   public_network_access_enabled = false
-  image_build_compute_name = var.image_build_compute_name
+  image_build_compute_name      = var.image_build_compute_name
 }
 
 # Private endpoints
@@ -80,7 +80,7 @@ resource "azurerm_private_endpoint" "kv_ple" {
   private_service_connection {
     name                           = "psc-${var.name}-kv"
     private_connection_resource_id = azurerm_key_vault.default.id
-    subresource_names              = [ "vault" ]
+    subresource_names              = ["vault"]
     is_manual_connection           = false
   }
 }
@@ -99,7 +99,7 @@ resource "azurerm_private_endpoint" "st_ple_blob" {
   private_service_connection {
     name                           = "psc-${var.name}-st"
     private_connection_resource_id = azurerm_storage_account.default.id
-    subresource_names              = [ "blob" ]
+    subresource_names              = ["blob"]
     is_manual_connection           = false
   }
 }
@@ -118,7 +118,7 @@ resource "azurerm_private_endpoint" "storage_ple_file" {
   private_service_connection {
     name                           = "psc-${var.name}-st"
     private_connection_resource_id = azurerm_storage_account.default.id
-    subresource_names              = [ "file" ]
+    subresource_names              = ["file"]
     is_manual_connection           = false
   }
 }
@@ -137,7 +137,7 @@ resource "azurerm_private_endpoint" "cr_ple" {
   private_service_connection {
     name                           = "psc-${var.name}-cr"
     private_connection_resource_id = azurerm_container_registry.default.id
-    subresource_names              = [ "registry" ]
+    subresource_names              = ["registry"]
     is_manual_connection           = false
   }
 }
@@ -149,7 +149,7 @@ resource "azurerm_private_endpoint" "mlw_ple" {
   subnet_id           = var.ml_subnet_resource_id
 
   private_dns_zone_group {
-    name                 = "private-dns-zone-group"
+    name = "private-dns-zone-group"
     private_dns_zone_ids = [
       var.privatelink_api_azureml_ms_resource_id,
       var.privatelink_notebooks_azure_net_resource_id
@@ -159,7 +159,7 @@ resource "azurerm_private_endpoint" "mlw_ple" {
   private_service_connection {
     name                           = "psc-${var.name}-mlw"
     private_connection_resource_id = azurerm_machine_learning_workspace.default.id
-    subresource_names              = [ "amlworkspace" ]
+    subresource_names              = ["amlworkspace"]
     is_manual_connection           = false
   }
 }
@@ -167,7 +167,7 @@ resource "azurerm_private_endpoint" "mlw_ple" {
 # Compute cluster for image building required since the workspace is behind a vnet.
 # For more details, see https://docs.microsoft.com/en-us/azure/machine-learning/tutorial-create-secure-workspace#configure-image-builds.
 resource "azurerm_machine_learning_compute_cluster" "image-builder" {
-  name                          = "${var.image_build_compute_name}"
+  name                          = var.image_build_compute_name
   location                      = azurerm_resource_group.default.location
   vm_priority                   = "LowPriority"
   vm_size                       = "Standard_DS2_v2"

@@ -1,9 +1,9 @@
 # Generate random string for unique compute instance name
 resource "random_string" "ci_prefix" {
-  length = 8
-  upper = false
+  length  = 8
+  upper   = false
   special = false
-  number = false
+  number  = false
 }
 
 # Compute instance
@@ -27,7 +27,7 @@ resource "azurerm_machine_learning_compute_cluster" "compute" {
   vm_priority                   = "Dedicated"
   vm_size                       = "STANDARD_DS2_V2"
   subnet_resource_id            = var.training_subnet_resource_id
-  
+
   identity {
     type = "SystemAssigned"
   }
@@ -37,5 +37,5 @@ resource "azurerm_machine_learning_compute_cluster" "compute" {
     max_node_count                       = 3
     scale_down_nodes_after_idle_duration = "PT15M" # 15 minutes
   }
-  
+
 }

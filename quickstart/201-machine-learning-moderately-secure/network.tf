@@ -7,26 +7,26 @@ resource "azurerm_virtual_network" "default" {
 }
 
 resource "azurerm_subnet" "snet-training" {
-  name                 = "snet-training"
-  resource_group_name  = azurerm_resource_group.default.name
-  virtual_network_name = azurerm_virtual_network.default.name
-  address_prefixes     = var.training_subnet_address_space
+  name                                           = "snet-training"
+  resource_group_name                            = azurerm_resource_group.default.name
+  virtual_network_name                           = azurerm_virtual_network.default.name
+  address_prefixes                               = var.training_subnet_address_space
   enforce_private_link_endpoint_network_policies = true
 }
 
 resource "azurerm_subnet" "snet-aks" {
-  name                 = "snet-aks"
-  resource_group_name  = azurerm_resource_group.default.name
-  virtual_network_name = azurerm_virtual_network.default.name
-  address_prefixes     = var.aks_subnet_address_space
+  name                                           = "snet-aks"
+  resource_group_name                            = azurerm_resource_group.default.name
+  virtual_network_name                           = azurerm_virtual_network.default.name
+  address_prefixes                               = var.aks_subnet_address_space
   enforce_private_link_endpoint_network_policies = true
 }
 
 resource "azurerm_subnet" "snet-workspace" {
-  name                 = "snet-workspace"
-  resource_group_name  = azurerm_resource_group.default.name
-  virtual_network_name = azurerm_virtual_network.default.name
-  address_prefixes     = var.ml_subnet_address_space
+  name                                           = "snet-workspace"
+  resource_group_name                            = azurerm_resource_group.default.name
+  virtual_network_name                           = azurerm_virtual_network.default.name
+  address_prefixes                               = var.ml_subnet_address_space
   enforce_private_link_endpoint_network_policies = true
 }
 
