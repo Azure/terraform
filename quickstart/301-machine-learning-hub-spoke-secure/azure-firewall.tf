@@ -354,6 +354,20 @@ application_rule_collection {
       source_ip_groups = [azurerm_ip_group.ip_group_spoke.id]      
       destination_fqdns = ["dc.services.visualstudio.com"]
     }
+
+    rule {
+      name = "azureml-instances"
+      protocols {
+        type = "Http"
+        port = 80
+      }
+      protocols {
+        type = "Https"
+        port = 443
+      }
+      source_ip_groups = [azurerm_ip_group.ip_group_spoke.id]      
+      destination_fqdns = ["*.instances.azureml.net", "*.instances.azureml.ms"]
+    }
   }
 
  network_rule_collection {
@@ -364,8 +378,8 @@ application_rule_collection {
     rule {
       name                  = "hub-to-spoke-rule"
       protocols             = ["Any"]
-      source_ip_groups      = [azurerm_ip_group.ip_group_spoke.id]   
-      destination_ip_groups = [azurerm_ip_group.ip_group_hub.id]
+      source_ip_groups      = [azurerm_ip_group.ip_group_spoke.id,azurerm_ip_group.ip_group_hub.id]   
+      destination_ip_groups = [azurerm_ip_group.ip_group_hub.id,azurerm_ip_group.ip_group_spoke.id]
       destination_ports     = ["*"]
     }
 
@@ -421,7 +435,7 @@ application_rule_collection {
       name                  = "Azure-Front-Door-Frontend"
       protocols             = ["TCP"]
       source_ip_groups      = [azurerm_ip_group.ip_group_spoke.id]      
-      destination_addresses = ["AzureFrontDoor.Frontend"]
+      destination_addresses = ["AzureFrontDoor.Frontend","AzureFrontDoor.FirstParty"]
       destination_ports     = ["443"]
     }
 
