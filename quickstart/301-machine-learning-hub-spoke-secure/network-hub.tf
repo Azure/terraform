@@ -42,7 +42,11 @@ resource "azurerm_virtual_network_peering" "direction1" {
   allow_forwarded_traffic      = false
   allow_gateway_transit        = false
   use_remote_gateways          = false
-  
+  depends_on = [
+    azurerm_virtual_network.hub,
+    azurerm_virtual_network.default
+  ]
+
 }
 
 resource "azurerm_virtual_network_peering" "direction2" {
@@ -54,7 +58,11 @@ resource "azurerm_virtual_network_peering" "direction2" {
   allow_forwarded_traffic      = false
   allow_gateway_transit        = false
   use_remote_gateways          = false
-
+  depends_on = [
+    azurerm_virtual_network.hub,
+    azurerm_virtual_network.default
+  ]
+  
 }
 
 # Private DNS Zones
@@ -141,4 +149,28 @@ resource "azurerm_network_security_group" "jump_host" {
 resource "azurerm_subnet_network_security_group_association" "jumphost_nsg_assoc" {
   subnet_id                 = azurerm_subnet.snet-jumphost.id 
   network_security_group_id = azurerm_network_security_group.jump_host.id
+  depends_on = [
+    azurerm_network_interface.dsvm
+  ]
+}
+
+# Route Table for Jump host subnet
+resource "azurerm_route_table" "jumphost_rt" {
+  name                = "rt-jumphost"
+  location            = azurerm_resource_group.default.location
+  resource_group_name = azurerm_resource_group.default.name
+}
+
+resource "azurerm_route" "jumphost-fw-route" {
+  name                = "udr-Default"
+  resource_group_name = azurerm_resource_group.default.name
+  route_table_name    = azurerm_route_table.jumphost_rt.name
+  address_prefix      = "0.0.0.0/0"
+  next_hop_type       = "VirtualAppliance"
+  next_hop_in_ip_address = azurerm_firewall.azure_firewall_instance.ip_configuration[0].private_ip_address
+}
+
+resource "azurerm_subnet_route_table_association" "rt-jumphost-link" {
+  subnet_id      = azurerm_subnet.snet-jumphost.id
+  route_table_id = azurerm_route_table.jumphost_rt.id
 }

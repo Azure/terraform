@@ -1,0 +1,4 @@
+quickstart/301-machine-learning-hub-spoke-secure/*.terraform.lock.hcl
+quickstart/301-machine-learning-hub-spoke-secure/*.tfstate
+quickstart/301-machine-learning-hub-spoke-secure/.terraform/providers/registry.terraform.io/hashicorp/azurerm/2.79.1/windows_amd64/terraform-provider-azurerm_v2.79.1_x5.exe
+quickstart/301-machine-learning-hub-spoke-secure/.terraform/providers/registry.terraform.io/hashicorp/random/3.1.0/windows_amd64/terraform-provider-random_v3.1.0_x5.exe

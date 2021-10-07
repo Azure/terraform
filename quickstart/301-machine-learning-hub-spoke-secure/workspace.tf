@@ -182,4 +182,7 @@ resource "azurerm_machine_learning_compute_cluster" "image-builder" {
   identity {
     type = "SystemAssigned"
   }
+  depends_on = [
+    azurerm_private_endpoint.mlw_ple
+  ]
 }

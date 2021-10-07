@@ -4,6 +4,11 @@ resource "azurerm_virtual_network" "default" {
   address_space       = var.vnet_address_space
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
+  dns_servers         = [azurerm_firewall.azure_firewall_instance.ip_configuration[0].private_ip_address]
+  depends_on = [
+    azurerm_virtual_network.hub,
+    azurerm_firewall.azure_firewall_instance
+  ]
 }
 
 resource "azurerm_subnet" "snet-training" {
@@ -88,15 +93,16 @@ resource "azurerm_route_table" "rt-training" {
 }
 
 resource "azurerm_route" "training-Internet-Route" {
-  name                = "Internet"
+  name                = "udr-Default"
   resource_group_name = azurerm_resource_group.default.name
   route_table_name    = azurerm_route_table.rt-training.name
   address_prefix      = "0.0.0.0/0"
-  next_hop_type       = "Internet"
+  next_hop_type       = "VirtualAppliance"
+  next_hop_in_ip_address = azurerm_firewall.azure_firewall_instance.ip_configuration[0].private_ip_address
 }
 
 resource "azurerm_route" "training-AzureMLRoute" {
-  name                = "AzureMLRoute"
+  name                = "udr-AzureML"
   resource_group_name = azurerm_resource_group.default.name
   route_table_name    = azurerm_route_table.rt-training.name
   address_prefix      = "AzureMachineLearning"
@@ -104,7 +110,7 @@ resource "azurerm_route" "training-AzureMLRoute" {
 }
 
 resource "azurerm_route" "training-BatchRoute" {
-  name                = "BatchRoute"
+  name                = "udr-Batch"
   resource_group_name = azurerm_resource_group.default.name
   route_table_name    = azurerm_route_table.rt-training.name
   address_prefix      = "BatchNodeManagement"
@@ -123,12 +129,13 @@ resource "azurerm_route_table" "rt-aks" {
   resource_group_name = azurerm_resource_group.default.name
 }
 
-resource "azurerm_route" "aks-Internet-Route" {
-  name                = "Internet"
+resource "azurerm_route" "aks-default-Route" {
+  name                = "udr-Default"
   resource_group_name = azurerm_resource_group.default.name
   route_table_name    = azurerm_route_table.rt-aks.name
   address_prefix      = "0.0.0.0/0"
-  next_hop_type       = "Internet"
+  next_hop_type       = "VirtualAppliance"
+  next_hop_in_ip_address = azurerm_firewall.azure_firewall_instance.ip_configuration[0].private_ip_address
 }
 
 resource "azurerm_subnet_route_table_association" "rt-aks-link" {

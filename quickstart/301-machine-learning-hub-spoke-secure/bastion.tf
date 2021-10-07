@@ -105,7 +105,10 @@ resource "azurerm_network_security_group" "bastion_nsg" {
 resource "azurerm_subnet_network_security_group_association" "bastion_nsg_assoc" {
   subnet_id                 = azurerm_subnet.azure_bastion.id
   network_security_group_id = azurerm_network_security_group.bastion_nsg.id
-  depends_on = [ azurerm_bastion_host.azure_bastion_instance ]
+  depends_on = [ 
+    azurerm_bastion_host.azure_bastion_instance,
+    azurerm_subnet_network_security_group_association.jumphost_nsg_assoc
+    ]
 }
 
 

@@ -6,7 +6,7 @@ resource "random_string" "ci_prefix" {
   number  = false
 }
 
-/* # Compute instance
+# Compute instance
 resource "azurerm_machine_learning_compute_instance" "compute_instance" {
   name                          = "${random_string.ci_prefix.result}instance"
   location                      = azurerm_resource_group.default.location
@@ -18,7 +18,7 @@ resource "azurerm_machine_learning_compute_instance" "compute_instance" {
     azurerm_private_endpoint.mlw_ple
   ]
 }
-*/
+
 # Compute cluster
 resource "azurerm_machine_learning_compute_cluster" "compute" {
   name                          = "cpu-cluster"
@@ -37,5 +37,8 @@ resource "azurerm_machine_learning_compute_cluster" "compute" {
     max_node_count                       = 3
     scale_down_nodes_after_idle_duration = "PT15M" # 15 minutes
   }
+  depends_on = [
+    azurerm_private_endpoint.mlw_ple
+  ]
 
 }
