@@ -64,6 +64,9 @@ resource "azurerm_machine_learning_workspace" "default" {
   # Args of use when using an Azure Private Link configuration
   public_network_access_enabled = false
   image_build_compute_name      = var.image_build_compute_name
+  depends_on = [
+    azurerm_firewall.azure_firewall_instance
+  ]
 
 }
 
