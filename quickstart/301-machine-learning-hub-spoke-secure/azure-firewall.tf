@@ -1,4 +1,10 @@
-
+# Generate random string for unique firewall diagnostic name
+resource "random_string" "fw_diag_prefix" {
+  length  = 8
+  upper   = false
+  special = false
+  number  = false
+}
 resource "azurerm_ip_group" "ip_group_hub" {
   name                = "hub-ipgroup"
   location            = azurerm_resource_group.hub_rg.location
@@ -61,7 +67,7 @@ resource "azurerm_firewall" "azure_firewall_instance" {
 }
 
 resource "azurerm_monitor_diagnostic_setting" "azure_firewall_instance" {
-  name                        = "diagnostics-${var.name}-${var.environment}"
+  name                        = "diagnostics-${var.name}-${var.environment}-${random_string.fw_diag_prefix.result}"
   target_resource_id          = azurerm_firewall.azure_firewall_instance.id
   log_analytics_workspace_id  = azurerm_log_analytics_workspace.default.id
 
@@ -166,6 +172,20 @@ application_rule_collection {
       }
       source_ip_groups = [azurerm_ip_group.ip_group_spoke.id]      
       destination_fqdns = ["github.com"]
+    }
+
+    rule {
+      name = "raw.githubusercontent.com"
+      protocols {
+        type = "Https"
+        port = 443
+      }
+      protocols {
+        type = "Http"
+        port = 80
+      }
+      source_ip_groups = [azurerm_ip_group.ip_group_spoke.id]      
+      destination_fqdns = ["raw.githubusercontent.com"]
     }
 
     rule {
