@@ -30,6 +30,21 @@ resource "azurerm_subnet" "snet-workspace" {
   enforce_private_link_endpoint_network_policies = true
 }
 
+resource "azurerm_subnet" "snet-dsvm" {
+  name                                           = "snet-dsvm"
+  resource_group_name                            = azurerm_resource_group.default.name
+  virtual_network_name                           = azurerm_virtual_network.default.name
+  address_prefixes                               = var.dsvm_subnet_address_space
+  enforce_private_link_endpoint_network_policies = true
+}
+
+resource "azurerm_subnet" "azure_bastion" {
+    name                        = "AzureBastionSubnet"
+    resource_group_name         = azurerm_resource_group.default.name
+    virtual_network_name        = azurerm_virtual_network.default.name
+    address_prefixes            = var.bastion_subnet_address_space
+}
+
 # Private DNS Zones
 resource "azurerm_private_dns_zone" "dnsvault" {
   name                = "privatelink.vaultcore.azure.net"
