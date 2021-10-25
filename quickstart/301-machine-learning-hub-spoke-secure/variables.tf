@@ -15,9 +15,11 @@ variable "location" {
   default     = "East US"
 }
 
+#Spoke Virtual Network
+
 variable "vnet_address_space" {
   type        = list(string)
-  description = "Address space of the virtual network"
+  description = "Address space of the spoke virtual network"
   default     = ["10.0.0.0/16"]
 }
 
@@ -38,30 +40,46 @@ variable "ml_subnet_address_space" {
   description = "Address space of the ML workspace subnet"
   default     = ["10.0.0.0/24"]
 }
-variable "dsvm_subnet_address_space" {
+
+#Hub Virtual Network
+variable "vnet_hub_address_space" {
   type        = list(string)
-  description = "Address space of the DSVM subnet"
-  default     = ["10.0.4.0/24"]
+  description = "Address space of the Hub virtual network"
+  default     = ["10.1.0.0/16"]
+}
+
+variable "jumphost_subnet_address_space" {
+  type        = list(string)
+  description = "Address space of the Jumphost subnet"
+  default     = ["10.1.2.0/24"]
 }
 
 variable "bastion_subnet_address_space" {
   type        = list(string)
   description = "Address space of the bastion subnet"
-  default     = ["10.0.5.0/24"]
+  default     = ["10.1.3.0/24"]
 }
 
+variable "firewall_subnet_address_space" {
+  type        = list(string)
+  description = "Address space of the Az Fiewall subnet"
+  default     = ["10.1.4.0/24"]
+}
+
+#Image Build Compute
 variable "image_build_compute_name" {
   type        = string
   description = "Name of the compute cluster to be created and set to build docker images"
   default     = "image-builder"
 }
 
-# DSVM Variables
+# DSVM
 variable "dsvm_name" {
   type        = string
   description = "Name of the Data Science VM"
   default     = "vmdsvm01"
 }
+
 variable "dsvm_admin_username" {
   type        = string
   description = "Admin username of the Data Science VM"
@@ -71,5 +89,5 @@ variable "dsvm_admin_username" {
 variable "dsvm_host_password" {
   type        = string
   description = "Password for the admin username of the Data Science VM"
-  sensitive   = true
+  
 }
