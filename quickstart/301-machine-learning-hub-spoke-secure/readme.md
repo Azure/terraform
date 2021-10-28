@@ -13,6 +13,8 @@ This configuration describes the minimal set of resources you require to get sta
 | Terraform Resource Type | Description |
 | - | - |
 | `azurerm_resource_group` | The resource group all resources get deployed into |
+| `azurerm_bastion_host` | An Azure Bastion Instance to securely RDP/SSH into Virtual Machines deployed into the Virtual Network |
+| `azurerm_windows_virtual_machine` | A Windows Data Science Virtual Machine used for connecting to the Azure Machine Learning workspace |
 | `azurerm_application_insights` | An Azure Application Insights instance associated to the Azure Machine Learning workspace |
 | `azurerm_key_vault` | An Azure Key Vault instance associated to the Azure Machine Learning workspace |
 | `azurerm_storage_account` | An Azure Storage instance associated to the Azure Machine Learning workspace |
@@ -26,6 +28,8 @@ This configuration describes the minimal set of resources you require to get sta
 | `azurerm_machine_learning_compute_instance` | An Azure Machine Learning compute instance a single-node managed compute. |
 | `azurerm_machine_learning_compute_cluster` | An Azure Machine Learning compute cluster as multi-node shared and managed compute. |
 | `azurerm_network_security_group` | Network security group with required inbound and outbound rules for Azure Machine Learning. |
+| `azurerm_firewall` | An Azure firewall instance used for egress traffic on the Virtual Network. |
+| `azurerm_public_ip` | A public IP resource used for the Azure Firewall. |
 
 ## Variables
 
@@ -38,8 +42,14 @@ This configuration describes the minimal set of resources you require to get sta
 | training_subnet_address_space | Address space of the training subnet | ["10.0.1.0/24"] |
 | aks_subnet_address_space | Address space of the aks subnet | ["10.0.2.0/23"] |
 | ml_subnet_address_space | Address space of the ML workspace subnet | ["10.0.0.0/24"] |
+| vnet_hub_address_space | Address space of the Hub virtual network | ["10.1.0.0/16"] |
+| jumphost_subnet_address_space | Address space of the Jumphost subnet | ["10.1.2.0/24"] |
+| bastion_subnet_address_space | Address space of the bastion subnet | ["10.1.3.0/24"] |
+| firewall_subnet_address_space | Address space of the Az Fiewall subnet | ["10.1.4.0/24"] |
 | image_build_compute_name | Name of the compute cluster to be created and configured for building docker images (Azure ML Environments) | image-builder |
-
+| dsvm_name | Name of the Windows Data Science VM resource | vmdsvm01 |
+| dsvm_admin_username | Admin username of the Windows Data Science VM | azureadmin |
+| dsvm_host_password | Password for the admin username of the Data Science VM | - |
 
 ## Usage
 
