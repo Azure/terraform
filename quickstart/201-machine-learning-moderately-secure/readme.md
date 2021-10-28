@@ -6,13 +6,15 @@ and its associated resources including Azure Key Vault, Azure Storage, Azure App
 In addition to these core services, this configuration specifies any networking components that are required to set up Azure Machine Learning
 for private network connectivity using [Azure Private Link](https://docs.microsoft.com/en-us/azure/private-link/). 
 
-This configuration describes the minimal set of resources you require to get started with Azure Machine Learning in a network-isolated set-up. This configuration creates new network components. If you want to reuse existing network components, see [202 example](../201-machine-learning-moderately-secure/readme.md).
+This configuration describes the minimal set of resources you require to get started with Azure Machine Learning in a network-isolated set-up. This configuration creates new network components. Use Azure Bastion to securely connect to the Windows Data Science Virtual Machine. If you want to reuse existing network components, see [202 example](../201-machine-learning-moderately-secure/readme.md).
 
 ## Resources
 
 | Terraform Resource Type | Description |
 | - | - |
 | `azurerm_resource_group` | The resource group all resources get deployed into |
+| `azurerm_bastion_host` | An Azure Bastion Instance to securely RDP/SSH into Virtual Machines deployed into the Virtual Network |
+| `azurerm_windows_virtual_machine` | A Windows Data Science Virtual Machine used for connecting to the Azure Machine Learning workspace |
 | `azurerm_application_insights` | An Azure Application Insights instance associated to the Azure Machine Learning workspace |
 | `azurerm_key_vault` | An Azure Key Vault instance associated to the Azure Machine Learning workspace |
 | `azurerm_storage_account` | An Azure Storage instance associated to the Azure Machine Learning workspace |
@@ -39,6 +41,9 @@ This configuration describes the minimal set of resources you require to get sta
 | aks_subnet_address_space | Address space of the aks subnet | ["10.0.2.0/23"] |
 | ml_subnet_address_space | Address space of the ML workspace subnet | ["10.0.0.0/24"] |
 | image_build_compute_name | Name of the compute cluster to be created and configured for building docker images (Azure ML Environments) | image-builder |
+| dsvm_name | Name of the Windows Data Science VM resource | vmdsvm01 |
+| dsvm_admin_username | Admin username of the Windows Data Science VM | azureadmin |
+| dsvm_host_password | Password for the admin username of the Data Science VM | - |
 
 
 ## Usage

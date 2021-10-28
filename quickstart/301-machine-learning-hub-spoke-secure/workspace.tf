@@ -65,7 +65,12 @@ resource "azurerm_machine_learning_workspace" "default" {
   public_network_access_enabled = false
   image_build_compute_name      = var.image_build_compute_name
   depends_on = [
-    azurerm_firewall.azure_firewall_instance
+    azurerm_firewall.azure_firewall_instance,
+    azurerm_private_endpoint.kv_ple,
+    azurerm_private_endpoint.st_ple_blob,
+    azurerm_private_endpoint.storage_ple_file,
+    azurerm_private_endpoint.cr_ple,
+    azurerm_subnet.snet-training
   ]
 
 }
