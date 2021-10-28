@@ -7,11 +7,7 @@ resource "azurerm_network_interface" "dsvm" {
         name                          = "configuration"
         subnet_id                     = azurerm_subnet.snet-jumphost.id 
         private_ip_address_allocation = "Dynamic"        
-    }
-    /*depends_on = [
-      azurerm_route_table.jumphost_rt
-    ]
-    */
+    }    
 }
 
 resource "azurerm_windows_virtual_machine" "dsvm" {
