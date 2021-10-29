@@ -16,6 +16,7 @@ This configuration describes the full set of resources you require to get starte
 | `azurerm_bastion_host` | An Azure Bastion Instance to securely RDP/SSH into Virtual Machines deployed into the Virtual Network |
 | `azurerm_windows_virtual_machine` | A Windows Data Science Virtual Machine used for connecting to the Azure Machine Learning workspace |
 | `azurerm_application_insights` | An Azure Application Insights instance associated to the Azure Machine Learning workspace |
+| `azurerm_log_analytics_workspace` | A Log analytics workspace used for Azure Firewall logs and to also host the Workspace-based Application Insights |
 | `azurerm_key_vault` | An Azure Key Vault instance associated to the Azure Machine Learning workspace |
 | `azurerm_storage_account` | An Azure Storage instance associated to the Azure Machine Learning workspace |
 | `azurerm_container_registry` | An Azure Container Registry instance associated to the Azure Machine Learning workspace |
@@ -25,11 +26,11 @@ This configuration describes the full set of resources you require to get starte
 | `azurerm_private_dns_zone` | Private DNS Zones for FQDNs required for Azure Machine Learning and associated resources |
 | `azurerm_private_dns_zone_virtual_network_link` | Virtual network links of the Private DNS Zones to the virtual network resource |
 | `azurerm_private_endpoint` | Private Endpoints for the Azure Machine Learning workspace and associated resources |
-| `azurerm_machine_learning_compute_instance` | An Azure Machine Learning compute instance a single-node managed compute. |
-| `azurerm_machine_learning_compute_cluster` | An Azure Machine Learning compute cluster as multi-node shared and managed compute. |
-| `azurerm_network_security_group` | Network security group with required inbound and outbound rules for Azure Machine Learning. |
-| `azurerm_firewall` | An Azure firewall instance used for egress traffic on the Virtual Network. |
-| `azurerm_public_ip` | A public IP resource used for the Azure Firewall. |
+| `azurerm_machine_learning_compute_instance` | An Azure Machine Learning compute instance a single-node managed compute |
+| `azurerm_machine_learning_compute_cluster` | An Azure Machine Learning compute cluster as multi-node shared and managed compute |
+| `azurerm_network_security_group` | Network security group with required inbound and outbound rules for Azure Machine Learning |
+| `azurerm_firewall` | An Azure firewall instance used for egress traffic on the Virtual Network |
+| `azurerm_public_ip` | A public IP resource used for the Azure Firewall |
 
 ## Variables
 
