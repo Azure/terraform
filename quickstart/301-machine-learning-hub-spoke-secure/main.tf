@@ -24,5 +24,5 @@ resource "azurerm_resource_group" "default" {
 resource "azurerm_resource_group" "hub_rg" {
   name     = "rg-hub-${var.name}-${var.environment}"
   location = var.location
-  
+
 }
