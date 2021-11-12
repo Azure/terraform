@@ -39,10 +39,10 @@ resource "azurerm_subnet" "snet-dsvm" {
 }
 
 resource "azurerm_subnet" "azure_bastion" {
-    name                        = "AzureBastionSubnet"
-    resource_group_name         = azurerm_resource_group.default.name
-    virtual_network_name        = azurerm_virtual_network.default.name
-    address_prefixes            = var.bastion_subnet_address_space
+  name                 = "AzureBastionSubnet"
+  resource_group_name  = azurerm_resource_group.default.name
+  virtual_network_name = azurerm_virtual_network.default.name
+  address_prefixes     = var.bastion_subnet_address_space
 }
 
 # Private DNS Zones

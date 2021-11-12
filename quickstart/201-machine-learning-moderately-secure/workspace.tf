@@ -63,7 +63,7 @@ resource "azurerm_machine_learning_workspace" "default" {
   # Args of use when using an Azure Private Link configuration
   public_network_access_enabled = false
   image_build_compute_name      = var.image_build_compute_name
-  depends_on = [    
+  depends_on = [
     azurerm_private_endpoint.kv_ple,
     azurerm_private_endpoint.st_ple_blob,
     azurerm_private_endpoint.storage_ple_file,
