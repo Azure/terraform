@@ -8,28 +8,28 @@ resource "azurerm_virtual_network" "hub" {
 }
 
 resource "azurerm_subnet" "snet-jumphost" {
-  name                          = "snet-jumphost"
-  resource_group_name           = azurerm_resource_group.hub_rg.name
-  virtual_network_name          = azurerm_virtual_network.hub.name
-  address_prefixes              = var.jumphost_subnet_address_space
+  name                 = "snet-jumphost"
+  resource_group_name  = azurerm_resource_group.hub_rg.name
+  virtual_network_name = azurerm_virtual_network.hub.name
+  address_prefixes     = var.jumphost_subnet_address_space
 
 }
 
 
 resource "azurerm_subnet" "azure_bastion" {
-    name                        = "AzureBastionSubnet"
-    resource_group_name         = azurerm_resource_group.hub_rg.name
-    virtual_network_name        = azurerm_virtual_network.hub.name
-    address_prefixes            = var.bastion_subnet_address_space
-    
-} 
+  name                 = "AzureBastionSubnet"
+  resource_group_name  = azurerm_resource_group.hub_rg.name
+  virtual_network_name = azurerm_virtual_network.hub.name
+  address_prefixes     = var.bastion_subnet_address_space
+
+}
 resource "azurerm_subnet" "azure_firewall" {
-    name                        = "AzureFirewallSubnet"
-    resource_group_name         = azurerm_resource_group.hub_rg.name
-    virtual_network_name        = azurerm_virtual_network.hub.name
-    address_prefixes            = var.firewall_subnet_address_space
-    
-} 
+  name                 = "AzureFirewallSubnet"
+  resource_group_name  = azurerm_resource_group.hub_rg.name
+  virtual_network_name = azurerm_virtual_network.hub.name
+  address_prefixes     = var.firewall_subnet_address_space
+
+}
 
 #Vnet Peering
 
@@ -62,7 +62,7 @@ resource "azurerm_virtual_network_peering" "direction2" {
     azurerm_virtual_network.hub,
     azurerm_virtual_network.default
   ]
-  
+
 }
 
 # Private DNS Zones
@@ -140,14 +140,14 @@ resource "azurerm_private_dns_zone_virtual_network_link" "vnetlinknbs" {
 
 # NSG for jump_host Subnet
 
-resource "azurerm_network_security_group" "jump_host" { 
-    name                        = "nsg-jumphost-subnet"
-    location                    = azurerm_resource_group.hub_rg.location
-    resource_group_name         = azurerm_resource_group.hub_rg.name
+resource "azurerm_network_security_group" "jump_host" {
+  name                = "nsg-jumphost-subnet"
+  location            = azurerm_resource_group.hub_rg.location
+  resource_group_name = azurerm_resource_group.hub_rg.name
 }
 
 resource "azurerm_subnet_network_security_group_association" "jumphost_nsg_assoc" {
-  subnet_id                 = azurerm_subnet.snet-jumphost.id 
+  subnet_id                 = azurerm_subnet.snet-jumphost.id
   network_security_group_id = azurerm_network_security_group.jump_host.id
   depends_on = [
     azurerm_network_interface.dsvm
@@ -162,11 +162,11 @@ resource "azurerm_route_table" "jumphost_rt" {
 }
 
 resource "azurerm_route" "jumphost-fw-route" {
-  name                = "udr-Default"
-  resource_group_name = azurerm_resource_group.default.name
-  route_table_name    = azurerm_route_table.jumphost_rt.name
-  address_prefix      = "0.0.0.0/0"
-  next_hop_type       = "VirtualAppliance"
+  name                   = "udr-Default"
+  resource_group_name    = azurerm_resource_group.default.name
+  route_table_name       = azurerm_route_table.jumphost_rt.name
+  address_prefix         = "0.0.0.0/0"
+  next_hop_type          = "VirtualAppliance"
   next_hop_in_ip_address = azurerm_firewall.azure_firewall_instance.ip_configuration[0].private_ip_address
 }
 

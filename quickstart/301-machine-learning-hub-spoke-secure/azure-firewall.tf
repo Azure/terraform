@@ -27,11 +27,11 @@ resource "azurerm_ip_group" "ip_group_dsvm_subnet" {
 }
 
 resource "azurerm_public_ip" "azure_firewall" {
-    name                        = "pip-azfw"
-    location                    = azurerm_resource_group.default.location
-    resource_group_name         = azurerm_resource_group.hub_rg.name
-    allocation_method           = "Static"
-    sku                         = "Standard"
+  name                = "pip-azfw"
+  location            = azurerm_resource_group.default.location
+  resource_group_name = azurerm_resource_group.hub_rg.name
+  allocation_method   = "Static"
+  sku                 = "Standard"
 }
 
 resource "azurerm_firewall_policy" "base_policy" {
@@ -41,35 +41,35 @@ resource "azurerm_firewall_policy" "base_policy" {
   dns {
     proxy_enabled = true
   }
-  
+
 }
-resource "azurerm_firewall" "azure_firewall_instance" { 
-    name                        = "afw-${var.name}-${var.environment}"
-    location                    = azurerm_resource_group.default.location
-    resource_group_name         = azurerm_resource_group.hub_rg.name
-    firewall_policy_id          = azurerm_firewall_policy.base_policy.id   
+resource "azurerm_firewall" "azure_firewall_instance" {
+  name                = "afw-${var.name}-${var.environment}"
+  location            = azurerm_resource_group.default.location
+  resource_group_name = azurerm_resource_group.hub_rg.name
+  firewall_policy_id  = azurerm_firewall_policy.base_policy.id
 
-    ip_configuration {
-        name                    = "configuration"
-        subnet_id               = azurerm_subnet.azure_firewall.id 
-        public_ip_address_id    = azurerm_public_ip.azure_firewall.id
-    }
-
-    timeouts {
-      create = "60m"
-      delete = "2h"
+  ip_configuration {
+    name                 = "configuration"
+    subnet_id            = azurerm_subnet.azure_firewall.id
+    public_ip_address_id = azurerm_public_ip.azure_firewall.id
   }
-  depends_on = [ 
+
+  timeouts {
+    create = "60m"
+    delete = "2h"
+  }
+  depends_on = [
     azurerm_public_ip.azure_firewall,
     azurerm_subnet.azure_firewall,
     azurerm_firewall_policy_rule_collection_group.azure_firewall_rules_collection
-    ]
+  ]
 }
 
 resource "azurerm_monitor_diagnostic_setting" "azure_firewall_instance" {
-  name                        = "diagnostics-${var.name}-${var.environment}-${random_string.fw_diag_prefix.result}"
-  target_resource_id          = azurerm_firewall.azure_firewall_instance.id
-  log_analytics_workspace_id  = azurerm_log_analytics_workspace.default.id
+  name                       = "diagnostics-${var.name}-${var.environment}-${random_string.fw_diag_prefix.result}"
+  target_resource_id         = azurerm_firewall.azure_firewall_instance.id
+  log_analytics_workspace_id = azurerm_log_analytics_workspace.default.id
 
   log {
     category = "AzureFirewallApplicationRule"
@@ -95,7 +95,7 @@ resource "azurerm_monitor_diagnostic_setting" "azure_firewall_instance" {
       enabled = false
     }
   }
-  
+
 
   metric {
     category = "AllMetrics"
@@ -112,7 +112,7 @@ resource "azurerm_firewall_policy_rule_collection_group" "azure_firewall_rules_c
   firewall_policy_id = azurerm_firewall_policy.base_policy.id
   priority           = 100
 
-application_rule_collection {
+  application_rule_collection {
     name     = "afwp-base-app-rule-collection"
     priority = 200
     action   = "Allow"
@@ -125,9 +125,9 @@ application_rule_collection {
       }
       protocols {
         type = "Http"
-        port= 80
+        port = 80
       }
-      source_ip_groups = [azurerm_ip_group.ip_group_dsvm_subnet.id]      
+      source_ip_groups  = [azurerm_ip_group.ip_group_dsvm_subnet.id]
       destination_fqdns = ["*"]
     }
 
@@ -137,7 +137,7 @@ application_rule_collection {
         type = "Https"
         port = 443
       }
-      source_ip_groups = [azurerm_ip_group.ip_group_spoke.id]      
+      source_ip_groups      = [azurerm_ip_group.ip_group_spoke.id]
       destination_fqdn_tags = ["AzureKubernetesService"]
     }
 
@@ -147,8 +147,8 @@ application_rule_collection {
         type = "Https"
         port = 443
       }
-      source_ip_groups = [azurerm_ip_group.ip_group_spoke.id]      
-      destination_fqdns = ["api.snapcraft.io","motd.ubuntu.com",]
+      source_ip_groups  = [azurerm_ip_group.ip_group_spoke.id]
+      destination_fqdns = ["api.snapcraft.io", "motd.ubuntu.com", ]
     }
 
     rule {
@@ -157,11 +157,11 @@ application_rule_collection {
         type = "Http"
         port = 80
       }
-      source_ip_groups = [azurerm_ip_group.ip_group_spoke.id]      
+      source_ip_groups = [azurerm_ip_group.ip_group_spoke.id]
       destination_fqdns = ["crl.microsoft.com",
-                          "mscrl.microsoft.com",  
-                          "crl3.digicert.com",
-                          "ocsp.digicert.com"]
+        "mscrl.microsoft.com",
+        "crl3.digicert.com",
+      "ocsp.digicert.com"]
     }
 
     rule {
@@ -170,7 +170,7 @@ application_rule_collection {
         type = "Https"
         port = 443
       }
-      source_ip_groups = [azurerm_ip_group.ip_group_spoke.id]      
+      source_ip_groups  = [azurerm_ip_group.ip_group_spoke.id]
       destination_fqdns = ["github.com"]
     }
 
@@ -184,7 +184,7 @@ application_rule_collection {
         type = "Http"
         port = 80
       }
-      source_ip_groups = [azurerm_ip_group.ip_group_spoke.id]      
+      source_ip_groups  = [azurerm_ip_group.ip_group_spoke.id]
       destination_fqdns = ["raw.githubusercontent.com"]
     }
 
@@ -194,7 +194,7 @@ application_rule_collection {
         type = "Https"
         port = 443
       }
-      source_ip_groups = [azurerm_ip_group.ip_group_spoke.id]      
+      source_ip_groups  = [azurerm_ip_group.ip_group_spoke.id]
       destination_fqdns = ["*.prod.microsoftmetrics.com"]
     }
 
@@ -204,11 +204,11 @@ application_rule_collection {
         type = "Https"
         port = 443
       }
-      source_ip_groups = [azurerm_ip_group.ip_group_spoke.id]      
+      source_ip_groups = [azurerm_ip_group.ip_group_spoke.id]
       destination_fqdns = ["acs-mirror.azureedge.net",
-                           "*.docker.io",
-                           "production.cloudflare.docker.com",
-                          "*.azurecr.io"]
+        "*.docker.io",
+        "production.cloudflare.docker.com",
+      "*.azurecr.io"]
     }
 
     rule {
@@ -217,11 +217,11 @@ application_rule_collection {
         type = "Https"
         port = 443
       }
-      source_ip_groups = [azurerm_ip_group.ip_group_spoke.id]      
+      source_ip_groups  = [azurerm_ip_group.ip_group_spoke.id]
       destination_fqdns = ["login.microsoftonline.com"]
     }
 
-        rule {
+    rule {
       name = "graph.windows.net"
       protocols {
         type = "Http"
@@ -231,7 +231,7 @@ application_rule_collection {
         type = "Https"
         port = 443
       }
-      source_ip_groups = [azurerm_ip_group.ip_group_spoke.id]      
+      source_ip_groups  = [azurerm_ip_group.ip_group_spoke.id]
       destination_fqdns = ["graph.windows.net"]
     }
 
@@ -245,7 +245,7 @@ application_rule_collection {
         type = "Https"
         port = 443
       }
-      source_ip_groups = [azurerm_ip_group.ip_group_spoke.id]      
+      source_ip_groups  = [azurerm_ip_group.ip_group_spoke.id]
       destination_fqdns = ["anaconda.com", "*.anaconda.com"]
     }
 
@@ -259,10 +259,10 @@ application_rule_collection {
         type = "Https"
         port = 443
       }
-      source_ip_groups = [azurerm_ip_group.ip_group_spoke.id]      
+      source_ip_groups  = [azurerm_ip_group.ip_group_spoke.id]
       destination_fqdns = ["*.anaconda.org"]
     }
-    
+
     rule {
       name = "pypi.org"
       protocols {
@@ -273,7 +273,7 @@ application_rule_collection {
         type = "Https"
         port = 443
       }
-      source_ip_groups = [azurerm_ip_group.ip_group_spoke.id]      
+      source_ip_groups  = [azurerm_ip_group.ip_group_spoke.id]
       destination_fqdns = ["pypi.org"]
     }
 
@@ -287,7 +287,7 @@ application_rule_collection {
         type = "Https"
         port = 443
       }
-      source_ip_groups = [azurerm_ip_group.ip_group_spoke.id]      
+      source_ip_groups  = [azurerm_ip_group.ip_group_spoke.id]
       destination_fqdns = ["cloud.r-project.org"]
     }
 
@@ -301,7 +301,7 @@ application_rule_collection {
         type = "Https"
         port = 443
       }
-      source_ip_groups = [azurerm_ip_group.ip_group_spoke.id]      
+      source_ip_groups  = [azurerm_ip_group.ip_group_spoke.id]
       destination_fqdns = ["*pytorch.org"]
     }
 
@@ -315,7 +315,7 @@ application_rule_collection {
         type = "Https"
         port = 443
       }
-      source_ip_groups = [azurerm_ip_group.ip_group_spoke.id]      
+      source_ip_groups  = [azurerm_ip_group.ip_group_spoke.id]
       destination_fqdns = ["*.tensorflow.org"]
     }
 
@@ -329,7 +329,7 @@ application_rule_collection {
         type = "Https"
         port = 443
       }
-      source_ip_groups = [azurerm_ip_group.ip_group_spoke.id]      
+      source_ip_groups  = [azurerm_ip_group.ip_group_spoke.id]
       destination_fqdns = ["update.code.visualstudio.com", "*.vo.msecnd.net"]
     }
 
@@ -343,7 +343,7 @@ application_rule_collection {
         type = "Https"
         port = 443
       }
-      source_ip_groups = [azurerm_ip_group.ip_group_spoke.id]      
+      source_ip_groups  = [azurerm_ip_group.ip_group_spoke.id]
       destination_fqdns = ["dc.applicationinsights.azure.com"]
     }
 
@@ -357,7 +357,7 @@ application_rule_collection {
         type = "Https"
         port = 443
       }
-      source_ip_groups = [azurerm_ip_group.ip_group_spoke.id]      
+      source_ip_groups  = [azurerm_ip_group.ip_group_spoke.id]
       destination_fqdns = ["dc.applicationinsights.microsoft.com"]
     }
 
@@ -371,7 +371,7 @@ application_rule_collection {
         type = "Https"
         port = 443
       }
-      source_ip_groups = [azurerm_ip_group.ip_group_spoke.id]      
+      source_ip_groups  = [azurerm_ip_group.ip_group_spoke.id]
       destination_fqdns = ["dc.services.visualstudio.com"]
     }
 
@@ -385,12 +385,12 @@ application_rule_collection {
         type = "Https"
         port = 443
       }
-      source_ip_groups = [azurerm_ip_group.ip_group_spoke.id]      
+      source_ip_groups  = [azurerm_ip_group.ip_group_spoke.id]
       destination_fqdns = ["*.instances.azureml.net", "*.instances.azureml.ms"]
     }
   }
 
- network_rule_collection {
+  network_rule_collection {
     name     = "afwp-base-network-rule-collection"
     priority = 100
     action   = "Allow"
@@ -398,15 +398,15 @@ application_rule_collection {
     rule {
       name                  = "hub-to-spoke-rule"
       protocols             = ["Any"]
-      source_ip_groups      = [azurerm_ip_group.ip_group_spoke.id,azurerm_ip_group.ip_group_hub.id]   
-      destination_ip_groups = [azurerm_ip_group.ip_group_hub.id,azurerm_ip_group.ip_group_spoke.id]
+      source_ip_groups      = [azurerm_ip_group.ip_group_spoke.id, azurerm_ip_group.ip_group_hub.id]
+      destination_ip_groups = [azurerm_ip_group.ip_group_hub.id, azurerm_ip_group.ip_group_spoke.id]
       destination_ports     = ["*"]
     }
 
-     rule {
+    rule {
       name                  = "aks-global-network-rule"
       protocols             = ["TCP"]
-      source_ip_groups      = [azurerm_ip_group.ip_group_spoke.id]      
+      source_ip_groups      = [azurerm_ip_group.ip_group_spoke.id]
       destination_addresses = ["AzureCloud"]
       destination_ports     = ["443", "9000"]
     }
@@ -414,7 +414,7 @@ application_rule_collection {
     rule {
       name                  = "aks-ntp-network-rule"
       protocols             = ["UDP"]
-      source_ip_groups      = [azurerm_ip_group.ip_group_spoke.id]      
+      source_ip_groups      = [azurerm_ip_group.ip_group_spoke.id]
       destination_addresses = ["*"]
       destination_ports     = ["123"]
     }
@@ -422,7 +422,7 @@ application_rule_collection {
     rule {
       name                  = "Azure-Active-Directory"
       protocols             = ["TCP"]
-      source_ip_groups      = [azurerm_ip_group.ip_group_spoke.id]      
+      source_ip_groups      = [azurerm_ip_group.ip_group_spoke.id]
       destination_addresses = ["AzureActiveDirectory"]
       destination_ports     = ["*"]
     }
@@ -430,7 +430,7 @@ application_rule_collection {
     rule {
       name                  = "Azure-Machine-Learning"
       protocols             = ["TCP"]
-      source_ip_groups      = [azurerm_ip_group.ip_group_spoke.id]      
+      source_ip_groups      = [azurerm_ip_group.ip_group_spoke.id]
       destination_addresses = ["AzureMachineLearning"]
       destination_ports     = ["443"]
     }
@@ -438,7 +438,7 @@ application_rule_collection {
     rule {
       name                  = "Azure-Resource-Manager"
       protocols             = ["TCP"]
-      source_ip_groups      = [azurerm_ip_group.ip_group_spoke.id]      
+      source_ip_groups      = [azurerm_ip_group.ip_group_spoke.id]
       destination_addresses = ["AzureResourceManager"]
       destination_ports     = ["443"]
     }
@@ -446,7 +446,7 @@ application_rule_collection {
     rule {
       name                  = "Azure-Storage"
       protocols             = ["TCP"]
-      source_ip_groups      = [azurerm_ip_group.ip_group_spoke.id]      
+      source_ip_groups      = [azurerm_ip_group.ip_group_spoke.id]
       destination_addresses = ["Storage"]
       destination_ports     = ["443"]
     }
@@ -454,15 +454,15 @@ application_rule_collection {
     rule {
       name                  = "Azure-Front-Door-Frontend"
       protocols             = ["TCP"]
-      source_ip_groups      = [azurerm_ip_group.ip_group_spoke.id]      
-      destination_addresses = ["AzureFrontDoor.Frontend","AzureFrontDoor.FirstParty"]
+      source_ip_groups      = [azurerm_ip_group.ip_group_spoke.id]
+      destination_addresses = ["AzureFrontDoor.Frontend", "AzureFrontDoor.FirstParty"]
       destination_ports     = ["443"]
     }
 
     rule {
       name                  = "Azure-Container-Registry"
       protocols             = ["TCP"]
-      source_ip_groups      = [azurerm_ip_group.ip_group_spoke.id]      
+      source_ip_groups      = [azurerm_ip_group.ip_group_spoke.id]
       destination_addresses = ["AzureContainerRegistry"]
       destination_ports     = ["443"]
     }
@@ -470,7 +470,7 @@ application_rule_collection {
     rule {
       name                  = "Azure-Key-Vault"
       protocols             = ["TCP"]
-      source_ip_groups      = [azurerm_ip_group.ip_group_spoke.id]      
+      source_ip_groups      = [azurerm_ip_group.ip_group_spoke.id]
       destination_addresses = ["AzureKeyVault"]
       destination_ports     = ["443"]
     }
@@ -478,13 +478,13 @@ application_rule_collection {
     rule {
       name                  = "Microsoft-Container-Registry"
       protocols             = ["TCP"]
-      source_ip_groups      = [azurerm_ip_group.ip_group_spoke.id]      
+      source_ip_groups      = [azurerm_ip_group.ip_group_spoke.id]
       destination_addresses = ["MicrosoftContainerRegistry"]
       destination_ports     = ["443"]
     }
- }
- depends_on = [
-   azurerm_ip_group.ip_group_hub,
-   azurerm_ip_group.ip_group_spoke
- ]
+  }
+  depends_on = [
+    azurerm_ip_group.ip_group_hub,
+    azurerm_ip_group.ip_group_spoke
+  ]
 }
