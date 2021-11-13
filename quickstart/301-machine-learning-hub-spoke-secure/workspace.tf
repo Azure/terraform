@@ -3,6 +3,7 @@ resource "azurerm_application_insights" "default" {
   name                = "appi-${var.name}-${var.environment}"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
+  workspace_id        = azurerm_log_analytics_workspace.default.id
   application_type    = "web"
 }
 
@@ -64,6 +65,7 @@ resource "azurerm_machine_learning_workspace" "default" {
   public_network_access_enabled = false
   image_build_compute_name      = var.image_build_compute_name
   depends_on = [
+    azurerm_firewall.azure_firewall_instance,
     azurerm_private_endpoint.kv_ple,
     azurerm_private_endpoint.st_ple_blob,
     azurerm_private_endpoint.storage_ple_file,
@@ -188,4 +190,7 @@ resource "azurerm_machine_learning_compute_cluster" "image-builder" {
   identity {
     type = "SystemAssigned"
   }
+  depends_on = [
+    azurerm_private_endpoint.mlw_ple
+  ]
 }
