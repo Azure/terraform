@@ -49,7 +49,7 @@ This directory contains the various components for building out Azure Virtual De
 	as an alternate to Azure Files storage this deploys NetApp Files storage for profiles in a dedicated subnet (access needs to be granted to the ANF service) [Set up Azure NetApp Files](https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-quickstart-set-up-account-create-volumes?tabs=azure-portal)
 
 ## Variable Inputs
-[Variable Inputs](https://github.com/jensheerin/AVD-Terraform/blob/main/USAGE.md#inputs)
+[Variable Inputs](../USAGE.md#inputs)
 
 ## Deploy
 If you’ve not previously setup terraform, check out this article to get it installed [Quickstart - Configure Terraform using Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/developer/terraform/get-started-cloud-shell) 
