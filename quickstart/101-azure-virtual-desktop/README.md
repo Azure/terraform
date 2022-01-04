@@ -30,47 +30,26 @@ This directory contains the various components for building out Azure Virtual De
 * `afstorage.tf`  
 	deploys Azure Files storage for profiles and creates file share with RBAC permissions for the users group ([NTFS permissions will need to be configured](https://docs.microsoft.com/en-us/azure/virtual-desktop/create-file-share))
 * `rbac.tf`  
-	deploys rbac assignment for the users group 
+	deploys rbac assignment for the users group
 * `variables.tf`  
 	Input variables 
+* `loganalytics.tf`  
+	deploys log anaylytics workspace
+* `sig.tf`
+	deploys log anaylytics workspace
+* `random.tf`
+	Random provider configuration
 * `defaults.tfvars`  
 	 declares the actual input values (keep security in mind if you are putting confidential data)
 * `provider.tf`  
-	Azure RM and Azure AD provider configuation
+	Azure RM and Azure AD provider configuration
 * `outputs.tf`
 	defines the outputs that will be displayed on deployment
 * `netappstorage.tf`  
 	as an alternate to Azure Files storage this deploys NetApp Files storage for profiles in a dedicated subnet (access needs to be granted to the ANF service) [Set up Azure NetApp Files](https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-quickstart-set-up-account-create-volumes?tabs=azure-portal)
 
-## Varialble Inputs
-
-| Name | Description | Default |
-|:---|:---|:---|
-| `rg_name` | Name of the Resource Group in which to deploy these resources | `AVD-TF` |
-| `deploy_location` | Region in which to deploy these resources | - |
-| `hostpool` | Name of the Azure Virtual Desktop host pool | `AVD-TF-HP` |
-| `ad_vnet` | Name of domain controller VNet | - |
-| `dns_servers` | Custom DNS configuration | - |
-| `vnet_range` | Address range for deployment VNet | - |
-| `subnet_range` | Address range for session host subnet | - |
-| `avd_users` | The resource group for AD VM | `[]` |
-| `aad_group_name` | Azure Active Directory Group for AVD users | - |
-| `rdsh_count` | Number of AVD machines to deploy | 2 |
-| `prefix` | Prefix of the name of the AVD machine(s) | - |
-| `domain_name` | Name of the domain to join | - |
-| `domain_user_upn` | Username for domain join (do not include domain name as this is appended | - |
-| `domain_password` | Password of the user to authenticate with the domain | - |
-| `vm_size` | Size of the machine to deploy | `Standard_DS2_v2` |
-| `ou_path` | The ou path for AD | `""` |
-| `local_admin_username` | The local admin username for the VM | - |
-| `local_admin_password` | The local admin password for the VM | - |
-| `netapp_acct_name` | The NetApp account name | `AVD_NetApp` |
-| `netapp_pool_name` | The NetApp pool name | `AVD_NetApp_pool` |
-| `netapp_volume_name` | The NetApp volume name | `AVD_NetApp_volume` |
-| `netapp_smb_name` | The NetApp smb name | `AVDNetApp` |
-| `netapp_volume_path` | The NetApp volume path | `AVDNetAppVolume` |
-| `netapp_subnet_name` | The NetApp subnet name | `NetAppSubnet` |
-| `netapp_address` | The Address range for NetApp Subnet | - |
+## Variable Inputs
+[Variable Inputs](https://github.com/jensheerin/AVD-Terraform/blob/main/USAGE.md#inputs)
 
 ## Deploy
 If you’ve not previously setup terraform, check out this article to get it installed [Quickstart - Configure Terraform using Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/developer/terraform/get-started-cloud-shell) 
