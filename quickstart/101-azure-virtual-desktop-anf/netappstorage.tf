@@ -1,3 +1,5 @@
+# As an alternate to Azure Files storage use this file to replace afstorage.tf to deploy NetApp Files storage for profiles in a dedicated subnet (access needs to be granted to the ANF service)
+# Set up Azure NetApp Files https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-quickstart-set-up-account-create-volumes?tabs=azure-portal
 resource "azurerm_subnet" "netapp_subnet" {
   name                 = var.netapp_subnet_name
   resource_group_name  = var.rg_name
