@@ -31,6 +31,7 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 - [Azure Kubernetes Service with ACR](./201-aks-acr-identity/)
 - [Azure virtual machine scale set with jumpbox](./201-vmss-jumpbox)
 - [Azure virtual machine scale set with jumpbox from Packer custom image](./201-vmss-packer-jumpbox)
+- [Azure PostgreSQL Flexible Server Database](./201-postgresql-fs-db)
 
 #### Advanced
 - [Azure Service Fabric](./301-service-fabric/)
