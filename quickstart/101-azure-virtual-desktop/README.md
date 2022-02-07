@@ -50,7 +50,7 @@ This directory contains the various components for building out Azure Virtual De
 
 ## Variable Inputs
 
-[Variable Inputs](../USAGE.md#inputs)
+[Variable Inputs](USAGE.md#inputs)
 
 ## Deploy
 
