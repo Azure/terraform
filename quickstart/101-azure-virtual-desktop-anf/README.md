@@ -29,8 +29,6 @@ This directory contains the various components for building out Azure Virtual De
   deploys a new vnet, subnet, nsg and peering to AD vnet
 * `host.tf`  
  deploys new session host from the marketplace build and join to domain
-* `afstorage.tf`  
- deploys Azure Files storage for profiles and creates file share with RBAC permissions for the users group ([NTFS permissions will need to be configured](https://docs.microsoft.com/en-us/azure/virtual-desktop/create-file-share))
 * `rbac.tf`  
  deploys rbac assignment for the users group
 * `variables.tf`  

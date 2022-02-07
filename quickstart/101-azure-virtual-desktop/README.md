@@ -47,8 +47,6 @@ This directory contains the various components for building out Azure Virtual De
  Azure RM and Azure AD provider configuration
 * `outputs.tf`
  defines the outputs that will be displayed on deployment
-* `netappstorage.tf`  
- as an alternate to Azure Files storage this deploys NetApp Files storage for profiles in a dedicated subnet (access needs to be granted to the ANF service) [Set up Azure NetApp Files](https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-quickstart-set-up-account-create-volumes?tabs=azure-portal)
 
 ## Variable Inputs
 
