@@ -19,7 +19,7 @@ This template deploys an [Azure PostgreSQL Flexible Server Database](https://reg
 
 | Name | Description |
 |-|-|
-| `name_prefix` | (Optional) Prefix of the resource name that's combined with a random ID so name is unique in your Azure subscription. Value defaults to: postgresqlfs|
+| `name_prefix` | (Optional) Prefix of the resource name. Value defaults to: postgresqlfs|
 | `location` | (Optional) Azure Region in which to deploy these resources. Value defaults to: eastus |
 
 ## Example
