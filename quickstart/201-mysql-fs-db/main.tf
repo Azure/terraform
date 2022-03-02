@@ -7,11 +7,12 @@ resource "azurerm_resource_group" "default" {
   location = var.location
 }
 
-resource "azurerm_mysql_flexible_server" "test" {
+resource "azurerm_mysql_flexible_server" "default" {
   name                   = "${var.name_prefix}-server"
   resource_group_name    = azurerm_resource_group.default.name
   location               = azurerm_resource_group.default.location
   administrator_login    = "adminTerraform"
   administrator_password = "QAZwsx123"
   sku_name               = "B_Standard_B1s"
+  zone                   = "1"
 }
