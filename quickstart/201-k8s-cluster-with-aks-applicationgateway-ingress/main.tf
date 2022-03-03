@@ -166,17 +166,13 @@ resource "azurerm_kubernetes_cluster" "k8s" {
 
     resource_group_name = data.azurerm_resource_group.rg.name
 
+    http_application_routing_enabled = false
+
     linux_profile {
     admin_username = var.vm_user_name
 
     ssh_key {
         key_data = file(var.public_ssh_key_path)
-    }
-    }
-
-    addon_profile {
-    http_application_routing {
-        enabled = false
     }
     }
 
