@@ -1,13 +1,3 @@
-# Randomized resource group name to ensure uniqueness in your environment
-resource "random_pet" "rg-name" {
-  prefix = var.name_prefix
-}
-
-resource "azurerm_resource_group" "default" {
-  name     = random_pet.rg-name.id
-  location = var.location
-}
-
 # Locals block for hardcoded names
 locals {
     backend_address_pool_name      = "${azurerm_virtual_network.test.name}-beap"
@@ -20,13 +10,13 @@ locals {
 }
 
 data "azurerm_resource_group" "rg" {
-    name = azurerm_resource_group.default.name
+    name = var.resource_group_name
 }
 
 # User Assigned Identities 
 resource "azurerm_user_assigned_identity" "testIdentity" {
-    resource_group_name = azurerm_resource_group.default.name
-    location            = azurerm_resource_group.default.location
+    resource_group_name = data.azurerm_resource_group.rg.name
+    location            = data.azurerm_resource_group.rg.location
 
     name = "identity1"
 
@@ -35,8 +25,8 @@ resource "azurerm_user_assigned_identity" "testIdentity" {
 
 resource "azurerm_virtual_network" "test" {
     name                = var.virtual_network_name
-    location            = azurerm_resource_group.default.location
-    resource_group_name = azurerm_resource_group.default.name
+    location            = data.azurerm_resource_group.rg.location
+    resource_group_name = data.azurerm_resource_group.rg.name
     address_space       = [var.virtual_network_address_prefix]
 
     subnet {
@@ -55,22 +45,22 @@ resource "azurerm_virtual_network" "test" {
 data "azurerm_subnet" "kubesubnet" {
     name                 = var.aks_subnet_name
     virtual_network_name = azurerm_virtual_network.test.name
-    resource_group_name  = azurerm_resource_group.default.name
+    resource_group_name  = data.azurerm_resource_group.rg.name
     depends_on = [azurerm_virtual_network.test]
 }
 
 data "azurerm_subnet" "appgwsubnet" {
     name                 = "appgwsubnet"
     virtual_network_name = azurerm_virtual_network.test.name
-    resource_group_name  = azurerm_resource_group.default.name
+    resource_group_name  = data.azurerm_resource_group.rg.name
     depends_on = [azurerm_virtual_network.test]
 }
 
 # Public Ip 
 resource "azurerm_public_ip" "test" {
     name                         = "publicIp1"
-    location                     = azurerm_resource_group.default.location
-    resource_group_name          = azurerm_resource_group.default.name
+    location                     = data.azurerm_resource_group.rg.location
+    resource_group_name          = data.azurerm_resource_group.rg.name
     allocation_method            = "Static"
     sku                          = "Standard"
 
@@ -79,8 +69,8 @@ resource "azurerm_public_ip" "test" {
 
 resource "azurerm_application_gateway" "network" {
     name                = var.app_gateway_name
-    resource_group_name = azurerm_resource_group.default.name
-    location            = azurerm_resource_group.default.location
+    resource_group_name = data.azurerm_resource_group.rg.name
+    location            = data.azurerm_resource_group.rg.location
 
     sku {
     name     = var.app_gateway_sku
@@ -163,7 +153,7 @@ resource "azurerm_role_assignment" "ra3" {
 }
 
 resource "azurerm_role_assignment" "ra4" {
-    scope                = azurerm_resource_group.default.id
+    scope                = data.azurerm_resource_group.rg.id
     role_definition_name = "Reader"
     principal_id         = azurerm_user_assigned_identity.testIdentity.principal_id
     depends_on           = [azurerm_user_assigned_identity.testIdentity, azurerm_application_gateway.network]
@@ -171,10 +161,10 @@ resource "azurerm_role_assignment" "ra4" {
 
 resource "azurerm_kubernetes_cluster" "k8s" {
     name       = var.aks_name
-    location   = azurerm_resource_group.default.location
+    location   = data.azurerm_resource_group.rg.location
     dns_prefix = var.aks_dns_prefix
 
-    resource_group_name = azurerm_resource_group.default.name
+    resource_group_name = data.azurerm_resource_group.rg.name
 
     linux_profile {
     admin_username = var.vm_user_name
