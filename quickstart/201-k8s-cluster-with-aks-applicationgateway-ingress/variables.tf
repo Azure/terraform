@@ -124,7 +124,3 @@ variable "tags" {
     source = "terraform"
     }
 }
-
-variable "storage_account_name" {
-    description = "Name of storage account"
-}
