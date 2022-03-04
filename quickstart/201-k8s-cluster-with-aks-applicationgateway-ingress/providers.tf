@@ -9,8 +9,8 @@ terraform {
     }
   }
   backend "azurerm" {
-    resource_group_name = <storage_account_resource_group>
-    storage_account_name = <storage_account_name>
+    resource_group_name = "<storage_account_resource_group>"
+    storage_account_name = "<storage_account_name>"
     container_name = "tfstate"
     key = "codelab.microsoft.tfstate"
   }
