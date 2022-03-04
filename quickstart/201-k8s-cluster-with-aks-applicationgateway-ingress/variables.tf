@@ -1,9 +1,6 @@
-variable "resource_group_name" {
-    description = "Name of the resource group."
-}
-
 variable "location" {
-    description = "Location of the cluster."
+  default     = "eastus"
+  description = "Location of the resource."
 }
 
 variable "aks_service_principal_app_id" {

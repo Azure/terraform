@@ -1,3 +1,12 @@
+resource "random_pet" "rg-name" {
+  prefix = var.name_prefix
+}
+
+resource "azurerm_resource_group" "default" {
+  name     = random_pet.rg-name.id
+  location = var.location
+}
+
 # Locals block for hardcoded names
 locals {
     backend_address_pool_name      = "${azurerm_virtual_network.test.name}-beap"
