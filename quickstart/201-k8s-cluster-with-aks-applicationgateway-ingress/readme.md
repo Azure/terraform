@@ -23,10 +23,10 @@ This template creates an Application Gateway Ingress Controller in Azure Kuberne
 | `aks_service_principal_client_secret` | Secret of the service principal. Used by AKS to manage Azure. | |
 | `aks_service_principal_object_id` | Object ID of the service principal. | |
 | `virtual_network_name` | Virtual network name. | aksVirtualNetwork |
-| `virtual_network_address_prefix` | VNET address prefix. | 15.0.0.0/8 |
+| `virtual_network_address_prefix` | VNET address prefix. | 192.168.0.0/16 |
 | `aks_subnet_name` | Subnet name. | kubesubnet |
-| `aks_subnet_address_prefix` | Subnet address prefix. | 15.0.0.0/16 |
-| `app_gateway_subnet_address_prefix` | Subnet server IP address. | 15.1.0.0/16 |
+| `aks_subnet_address_prefix` | Subnet address prefix. | 192.168.0.0/16 |
+| `app_gateway_subnet_address_prefix` | Subnet server IP address. | 192.168.0.0/16 |
 | `app_gateway_name` | Name of the Application Gateway. | ApplicationGateway1 |
 | `app_gateway_sku` | Name of the Application Gateway SKU. | Standard_v2 |
 | `app_gateway_tier` | Tier of the Application Gateway tier. | Standard_v2 |

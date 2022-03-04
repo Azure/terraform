@@ -22,7 +22,7 @@ variable "virtual_network_name" {
 
 variable "virtual_network_address_prefix" {
     description = "VNET address prefix"
-    default     = "15.0.0.0/8"
+    default     = "192.168.0.0/16"
 }
 
 variable "aks_subnet_name" {
@@ -32,12 +32,12 @@ variable "aks_subnet_name" {
 
 variable "aks_subnet_address_prefix" {
     description = "Subnet address prefix."
-    default     = "15.0.0.0/16"
+    default     = "192.168.0.0/16"
 }
 
 variable "app_gateway_subnet_address_prefix" {
     description = "Subnet server IP address."
-    default     = "15.1.0.0/16"
+    default     = "192.168.0.0/16"
 }
 
 variable "app_gateway_name" {
