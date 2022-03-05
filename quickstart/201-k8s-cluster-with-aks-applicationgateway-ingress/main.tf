@@ -1,3 +1,12 @@
+resource "random_pet" "rg-name" {
+  prefix    = var.resource_group_name_prefix
+}
+
+resource "azurerm_resource_group" "rg" {
+  name      = random_pet.rg-name.id
+  location  = var.resource_group_location
+}
+
 # Locals block for hardcoded names
 locals {
     backend_address_pool_name      = "${azurerm_virtual_network.test.name}-beap"
@@ -6,17 +15,13 @@ locals {
     http_setting_name              = "${azurerm_virtual_network.test.name}-be-htst"
     listener_name                  = "${azurerm_virtual_network.test.name}-httplstn"
     request_routing_rule_name      = "${azurerm_virtual_network.test.name}-rqrt"
-    app_gateway_subnet_name = "appgwsubnet"
-}
-
-data "azurerm_resource_group" "rg" {
-    name = var.resource_group_name
+    app_gateway_subnet_name        = "appgwsubnet"
 }
 
 # User Assigned Identities 
 resource "azurerm_user_assigned_identity" "testIdentity" {
-    resource_group_name = data.azurerm_resource_group.rg.name
-    location            = data.azurerm_resource_group.rg.location
+    resource_group_name = azurerm_resource_group.rg.name
+    location            = azurerm_resource_group.rg.location
 
     name = "identity1"
 
@@ -25,8 +30,8 @@ resource "azurerm_user_assigned_identity" "testIdentity" {
 
 resource "azurerm_virtual_network" "test" {
     name                = var.virtual_network_name
-    location            = data.azurerm_resource_group.rg.location
-    resource_group_name = data.azurerm_resource_group.rg.name
+    location            = azurerm_resource_group.rg.location
+    resource_group_name = azurerm_resource_group.rg.name
     address_space       = [var.virtual_network_address_prefix]
 
     subnet {
@@ -45,22 +50,22 @@ resource "azurerm_virtual_network" "test" {
 data "azurerm_subnet" "kubesubnet" {
     name                 = var.aks_subnet_name
     virtual_network_name = azurerm_virtual_network.test.name
-    resource_group_name  = data.azurerm_resource_group.rg.name
+    resource_group_name  = azurerm_resource_group.rg.name
     depends_on = [azurerm_virtual_network.test]
 }
 
 data "azurerm_subnet" "appgwsubnet" {
     name                 = "appgwsubnet"
     virtual_network_name = azurerm_virtual_network.test.name
-    resource_group_name  = data.azurerm_resource_group.rg.name
+    resource_group_name  = azurerm_resource_group.rg.name
     depends_on = [azurerm_virtual_network.test]
 }
 
 # Public Ip 
 resource "azurerm_public_ip" "test" {
     name                         = "publicIp1"
-    location                     = data.azurerm_resource_group.rg.location
-    resource_group_name          = data.azurerm_resource_group.rg.name
+    location                     = azurerm_resource_group.rg.location
+    resource_group_name          = azurerm_resource_group.rg.name
     allocation_method            = "Static"
     sku                          = "Standard"
 
@@ -69,8 +74,8 @@ resource "azurerm_public_ip" "test" {
 
 resource "azurerm_application_gateway" "network" {
     name                = var.app_gateway_name
-    resource_group_name = data.azurerm_resource_group.rg.name
-    location            = data.azurerm_resource_group.rg.location
+    resource_group_name = azurerm_resource_group.rg.name
+    location            = azurerm_resource_group.rg.location
 
     sku {
     name     = var.app_gateway_sku
@@ -153,7 +158,7 @@ resource "azurerm_role_assignment" "ra3" {
 }
 
 resource "azurerm_role_assignment" "ra4" {
-    scope                = data.azurerm_resource_group.rg.id
+    scope                = azurerm_resource_group.rg.id
     role_definition_name = "Reader"
     principal_id         = azurerm_user_assigned_identity.testIdentity.principal_id
     depends_on           = [azurerm_user_assigned_identity.testIdentity, azurerm_application_gateway.network]
@@ -161,10 +166,10 @@ resource "azurerm_role_assignment" "ra4" {
 
 resource "azurerm_kubernetes_cluster" "k8s" {
     name       = var.aks_name
-    location   = data.azurerm_resource_group.rg.location
+    location   = azurerm_resource_group.rg.location
     dns_prefix = var.aks_dns_prefix
 
-    resource_group_name = data.azurerm_resource_group.rg.name
+    resource_group_name = azurerm_resource_group.rg.name
 
     http_application_routing_enabled = false
 

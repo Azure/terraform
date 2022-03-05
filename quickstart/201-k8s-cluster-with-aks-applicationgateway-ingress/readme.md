@@ -18,21 +18,23 @@ This template creates an Application Gateway Ingress Controller in Azure Kuberne
 
 | Name | Description | Default value |
 |-|-|-|
-| `location` | (Optional) Azure Region in which to deploy these resources.| eastus |
+
+| `resource_group_name_prefix` | (Optional) Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. | rg |
+| `location` | (Optional) Azure region in which to deploy demo resources.| eastus |
 | `aks_service_principal_app_id` | Application ID/Client ID  of the service principal. Used by AKS to manage AKS related resources on Azure like vms, subnets.| |
 | `aks_service_principal_client_secret` | Secret of the service principal. Used by AKS to manage Azure. | |
 | `aks_service_principal_object_id` | Object ID of the service principal. | |
 | `virtual_network_name` | Virtual network name. | aksVirtualNetwork |
 | `virtual_network_address_prefix` | VNET address prefix. | 192.168.0.0/16 |
 | `aks_subnet_name` | Subnet name. | kubesubnet |
-| `aks_subnet_address_prefix` | Subnet address prefix. | 192.168.0.0/16 |
-| `app_gateway_subnet_address_prefix` | Subnet server IP address. | 192.168.0.0/16 |
+| `aks_subnet_address_prefix` | Subnet address prefix. | 192.168.0.0/24 |
+| `app_gateway_subnet_address_prefix` | Subnet server IP address. | 192.168.1.0/24 |
 | `app_gateway_name` | Name of the Application Gateway. | ApplicationGateway1 |
 | `app_gateway_sku` | Name of the Application Gateway SKU. | Standard_v2 |
 | `app_gateway_tier` | Tier of the Application Gateway tier. | Standard_v2 |
 | `aks_name` | AKS cluster name. | aks-cluster1 |
 | `aks_dns_prefix` | (Optional) DNS prefix to use with hosted Kubernetes API server FQDN. | aks |
-| `aks_agent_os_disk_size` | Disk size (in GB) to provision for each of the agent pool nodes. This value ranges from 0 to 1023. Specifying 0 applies the default disk size for that agentVMSize. | 40 |
+| `aks_agent_os_disk_size` | Disk size (in GB) to provision for each of the agent pool nodes. This value ranges from 0 to 1023. Value of 0 applies the default disk size for that agentVMSize. | 40 |
 | `aks_agent_count` | The number of agent nodes for the cluster. | 3 |
 | `aks_agent_vm_size` | VM size. | Standard_D3_v2 |
 | `kubernetes_version` | Kubernetes version | 1.11.5 |
