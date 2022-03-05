@@ -1,11 +1,9 @@
-variable "resource_group_name_prefix" {
-  default       = "rg"
-  description   = "Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription."
+variable "resource_group_name" {
+    description = "Name of the resource group."
 }
 
-variable "resource_group_location" {
-  default = "eastus"
-  description   = "Location of the resource group."
+variable "location" {
+    description = "Location of the cluster."
 }
 
 variable "aks_service_principal_app_id" {
@@ -27,7 +25,7 @@ variable "virtual_network_name" {
 
 variable "virtual_network_address_prefix" {
     description = "VNET address prefix"
-    default     = "192.168.0.0/16"
+    default     = "15.0.0.0/8"
 }
 
 variable "aks_subnet_name" {
@@ -37,12 +35,12 @@ variable "aks_subnet_name" {
 
 variable "aks_subnet_address_prefix" {
     description = "Subnet address prefix."
-    default     = "192.168.0.0/16"
+    default     = "15.0.0.0/16"
 }
 
 variable "app_gateway_subnet_address_prefix" {
     description = "Subnet server IP address."
-    default     = "192.168.0.0/16"
+    default     = "15.1.0.0/16"
 }
 
 variable "app_gateway_name" {

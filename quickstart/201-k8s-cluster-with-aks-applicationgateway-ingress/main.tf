@@ -1,12 +1,3 @@
-resource "random_pet" "rg-name" {
-  prefix    = var.resource_group_name_prefix
-}
-
-data "azurerm_resource_group" "rg" {
-  name      = random_pet.rg-name.id
-  location  = var.resource_group_location
-}
-
 # Locals block for hardcoded names
 locals {
     backend_address_pool_name      = "${azurerm_virtual_network.test.name}-beap"
@@ -16,6 +7,10 @@ locals {
     listener_name                  = "${azurerm_virtual_network.test.name}-httplstn"
     request_routing_rule_name      = "${azurerm_virtual_network.test.name}-rqrt"
     app_gateway_subnet_name = "appgwsubnet"
+}
+
+data "azurerm_resource_group" "rg" {
+    name = var.resource_group_name
 }
 
 # User Assigned Identities 

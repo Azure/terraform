@@ -1,5 +1,9 @@
-aks_service_principal_app_id = "<Service principal appId>"
+resource_group_name = "<resource_group_location>"
+
+location = "<resource_group_location>"
+
+aks_service_principal_app_id = "<service_principal_appId>"
     
-aks_service_principal_client_secret = "<Service principal password>"
+aks_service_principal_client_secret = "<service_principal_password>"
     
-aks_service_principal_object_id = "<Service principal object ID>"
+aks_service_principal_object_id = "<service_principal_object_id>"
