@@ -18,7 +18,6 @@ This template creates an Application Gateway Ingress Controller in Azure Kuberne
 
 | Name | Description | Default value |
 |-|-|-|
-
 | `resource_group_name_prefix` | (Optional) Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. | rg |
 | `location` | (Optional) Azure region in which to deploy demo resources.| eastus |
 | `aks_service_principal_app_id` | Application ID/Client ID  of the service principal. Used by AKS to manage AKS related resources on Azure like vms, subnets.| |
