@@ -1,3 +1,12 @@
+variable "resource_group_name_prefix" {
+  default       = "rg"
+  description   = "Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription."
+}
+
+variable "resource_group_location" {
+  default       = "eastus"
+  description   = "Location of the resource group."
+}
 variable "rg_name" {
   type        = string
   default     = "avd-resources-rg"
@@ -6,7 +15,7 @@ variable "rg_name" {
 
 variable "deploy_location" {
   type        = string
-  default     = "east us"
+  default     = "eastus"
   description = "The Azure Region in which all resources in this example should be created."
 }
 

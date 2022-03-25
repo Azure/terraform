@@ -1,7 +1,11 @@
-# Create AVD Resource Group
+# Randomization of resource group name.
+# Resource group name is output when execution plan is applied.
+resource "random_pet" "rg-name" {
+  prefix    = var.resource_group_name_prefix
+}
 resource "azurerm_resource_group" "rg" {
-  name     = var.rg_name
-  location = var.deploy_location
+  name      = random_pet.rg-name.id
+  location  = var.resource_group_location
 }
 
 # Create AVD workspace
@@ -11,10 +15,6 @@ resource "azurerm_virtual_desktop_workspace" "workspace" {
   location            = var.deploy_location
   friendly_name       = "${var.prefix} Workspace"
   description         = "${var.prefix} Workspace"
-}
-
-resource "time_rotating" "avd_token" {
-  rotation_days = 30
 }
 
 # Create AVD host pool
@@ -30,9 +30,14 @@ resource "azurerm_virtual_desktop_host_pool" "hostpool" {
   maximum_sessions_allowed = 16
   load_balancer_type       = "DepthFirst" #[BreadthFirst DepthFirst]
 
-  registration_info {
-    expiration_date = time_rotating.avd_token.rotation_rfc3339
-  }
+
+# Create registration info
+resource "time_rotating" "avd_token" {
+  rotation_days = 30
+}
+resource "azurerm_virtual_desktop_host_pool_registration_info" "registrationinfo" {
+  hostpool_id     = azurerm_virtual_desktop_host_pool.hostpool.id
+  expiration_date = time_rotating.avd_token.rfc3339
 }
 
 # Create AVD DAG
