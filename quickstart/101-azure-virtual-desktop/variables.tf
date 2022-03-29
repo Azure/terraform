@@ -52,8 +52,8 @@ variable "ad_vnet" {
 }
 
 variable "rfc3339" {
-  type = string
-  default = "2022-03-30T12:43:13Z"
+  type        = string
+  default     = "2022-03-30T12:43:13Z"
   description = "Registration token expiration"
 }
 
