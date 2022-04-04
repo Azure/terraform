@@ -6,6 +6,10 @@ terraform {
       source  = "hashicorp/azurerm"
       version = "=2.78.0"
     }
+
+    azureml = {
+      source = "registry.terraform.io/Telemaco019/azureml"
+    }
   }
 }
 
