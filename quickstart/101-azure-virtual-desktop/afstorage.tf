@@ -1,7 +1,7 @@
 ## Create a Resource Group for Storage
 resource "azurerm_resource_group" "rg_storage" {
-  location = "east us"
-  name     = "af-storage-rg"
+  location = var.deploy_location
+  name     = var.rg_stor
 }
 
 # generate a random string (consisting of four characters)
