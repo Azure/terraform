@@ -1,4 +1,4 @@
-name: 'Verified Module Bug 🐞 Report'
+name: 'Azure Verified Module Bug Report' 
 description: File a bug/issue for a verified module
 title: "<title>"
 labels: [bug, module]
@@ -16,18 +16,22 @@ body:
     description: The name of the module where you found the bug. 
   validations:
     required: true
-- type: textarea
+- type: input
   attributes:
-    label: Environment
+    label: Terraform Version
     description: |
-      examples:
-        - **Terraform Version**: 1.1.8
-        - **Module Version**: 1.0.0
-        - **Operating System**: MacOS 12.3.1
-    value: |
-        - Terraform Version:
-        - Module Version:
-        - Operating System:
+      What version of Terraform were you using when you encountered this issue?
+
+      `terraform --version
+    placeholder: 1.0.0
+  validations:
+    required: true
+- type: input
+  attributes:
+    label: Module Version
+    description: |
+      What version of the Azure module were you using when you encountered this issue?
+    placeholder: 0.1.0
   validations:
     required: true
 - type: textarea

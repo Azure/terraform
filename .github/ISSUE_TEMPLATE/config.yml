@@ -3,3 +3,4 @@ contact_links:
   - name: AzureRM provider issues and Feature requests
     url: https://github.com/hashicorp/terraform-provider-azurerm/issues
     about: Please ask questions and report issues with the AzureRM provider and related resources here. 
+    
