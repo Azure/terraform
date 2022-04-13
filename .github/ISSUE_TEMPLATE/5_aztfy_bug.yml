@@ -28,11 +28,10 @@ body:
     description: Steps to reproduce the behavior.
     placeholder: |
       1. In this environment...
-      2. With this config...
-      3. Run '...'
-      4. See error...
+      2. Run '...'
+      3. See error...
   validations:
-    required: false
+    required: true
 - type: textarea
   attributes:
     label: Anything else?
