@@ -1,5 +1,5 @@
 name: 'Azure Terraform example Bug Report' 
-description: File a bug/issue for a example (Quickstart, samples, etc.)
+description: File a bug/issue for a configuration example (Quickstart, samples, etc.)
 title: "<title>"
 labels: [bug, example]
 body:
