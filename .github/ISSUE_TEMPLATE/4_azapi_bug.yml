@@ -43,6 +43,13 @@ body:
     required: true
 - type: textarea
   attributes:
+    label: Terraform configuration
+    description: Please provide the minimum Terraform configuration that is resulting in the bug / issue.
+    render: terraform
+  validations:
+    required: true
+- type: textarea
+  attributes:
     label: Steps To Reproduce
     description: |
       Steps to reproduce the behavior.
@@ -53,13 +60,6 @@ body:
       2. See error...
   validations:
     required: false
-- type: textarea
-  attributes:
-    label: Terraform configuration
-    description: Please provide the minimum Terraform configuration that is resulting in the bug / issue.
-    render: terraform
-  validations:
-    required: true
 - type: textarea
   attributes:
     label: Anything else?
