@@ -1,7 +1,7 @@
-name: 'Azure Verified Module Bug Report' 
-description: File a bug/issue for a verified module
+name: 'AzAPI Provider Bug Report' 
+description: File a bug/issue for the AzAPI Terraform Provider
 title: "<title>"
-labels: [bug, module]
+labels: [bug, azapi]
 body:
 - type: checkboxes
   attributes:
@@ -12,32 +12,27 @@ body:
       required: true
 - type: input
   attributes:
-    label: Module Name 
-    description: The name of the module where you found the bug. 
-  validations:
-    required: true
-- type: input
-  attributes:
     label: Terraform Version
     description: |
       What version of Terraform were you using when you encountered this issue?
+        Please include operating system when applicable.
 
-      `terraform --version
+      `terraform --version`
     placeholder: 1.0.0
   validations:
     required: true
 - type: input
   attributes:
-    label: Module Version
+    label: Provider Version
     description: |
-      What version of the Azure module were you using when you encountered this issue?
+      What version of the AzAPI provider were you using when you encountered this issue?
     placeholder: 0.1.0
   validations:
     required: true
 - type: textarea
   attributes:
     label: Current Behavior
-    description: A concise description of what you're experiencing.
+    description: A concise description of what you're experiencing. Include Error output where applicable.
   validations:
     required: true
 - type: textarea
@@ -48,20 +43,23 @@ body:
     required: true
 - type: textarea
   attributes:
-    label: Terraform configuration
-    description: Please provide the minimum Terraform configuration that is resulting in the bug / issue.
-    render: terraform
-  validations:
-    required: true
-- type: textarea
-  attributes:
     label: Steps To Reproduce
-    description: Steps to reproduce the behavior.
+    description: |
+      Steps to reproduce the behavior.
+
+      `terraform apply`
     placeholder: |
       1. Run '...'
       2. See error...
   validations:
     required: false
+- type: textarea
+  attributes:
+    label: Terraform configuration
+    description: Please provide the minimum Terraform configuration that is resulting in the bug / issue.
+    render: terraform
+  validations:
+    required: true
 - type: textarea
   attributes:
     label: Anything else?
