@@ -3,7 +3,7 @@ output "location" {
   value       = azurerm_resource_group.sigrg.location
 }
 
-output "Compute Gallery" {
+output "Compute_Gallery" {
   description = "Azure Compute Gallery"
   value       = azurerm_shared_image_gallery.sig.name
 }

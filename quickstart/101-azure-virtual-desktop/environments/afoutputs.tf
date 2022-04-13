@@ -12,3 +12,8 @@ output "storage_account_share" {
   description = "Name of the Azure File Share created for FSLogix"
   value       = azurerm_storage_share.FSShare.name
 }
+
+output "AVD_user_groupname" {
+  description = "Azure Active Directory Group for AVD users"
+  value       = azuread_group.aad_group.display_name
+}
