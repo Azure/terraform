@@ -1,5 +1,5 @@
 name: 'Azure Terraform feature Ask' 
-description: File a bug/issue for a verified module
+description: Request a feature for Azure Terraform Verified Modules, Examples, AzAPI provider, Azure Terrafy, etc.
 title: "<title>"
 labels: [enhancement]
 body:

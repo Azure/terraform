@@ -1,5 +1,5 @@
 name: 'Azure Terrafy Bug Report' 
-description: File a bug/issue for a Azure Terrafy (aztfy)
+description: File a bug/issue for Azure Terrafy (aztfy)
 title: "<title>"
 labels: [bug, aztfy]
 body:
