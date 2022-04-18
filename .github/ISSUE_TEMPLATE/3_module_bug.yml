@@ -49,7 +49,8 @@ body:
 - type: textarea
   attributes:
     label: Terraform configuration
-    description: Please provide the Terraform configuration that is resulting in the bug / ssue.
+    description: Please provide the minimum Terraform configuration that is resulting in the bug / issue.
+    render: terraform
   validations:
     required: true
 - type: textarea
@@ -57,10 +58,8 @@ body:
     label: Steps To Reproduce
     description: Steps to reproduce the behavior.
     placeholder: |
-      1. In this environment...
-      2. With this config...
-      3. Run '...'
-      4. See error...
+      1. Run '...'
+      2. See error...
   validations:
     required: false
 - type: textarea

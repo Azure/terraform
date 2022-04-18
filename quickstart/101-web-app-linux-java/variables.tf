@@ -12,7 +12,7 @@ variable "environment" {
 
 variable "location" {
   type        = "string"
-  description = "Location to deploy the resoruce group"
+  description = "Location to deploy the resource group"
   default     = "West US 2"
 }
 
