@@ -1,6 +1,6 @@
-# Cosmos db autoscaling with SQL DB
+# Cosmos db manual scaling with SQL DB
 
-This template deploys a cosmos db account with sql db and autoscaling enabled. A similar example can be created using the [azurerm/cosmosdb module](https://github.com/azure/terraform-azurerm-cosmosdb).
+This template deploys a cosmos db account with sql db and manual scaling. A similar example can be created using the [azurerm/cosmosdb module](https://github.com/azure/terraform-azurerm-cosmosdb).
 
 ## Terraform resource types
 - [azurerm_resource_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group)
