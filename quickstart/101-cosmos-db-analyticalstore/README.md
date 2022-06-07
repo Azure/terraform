@@ -21,9 +21,9 @@ This template deploys a cosmos db account with sql db and analytical store enabl
 
 ## Example terraform.tfvars file
 ```
-resource_group_name       = "rg-cosmosdb-103"
+resource_group_name       = "rg-cosmosdb-101"
 location                  = "centralus"
-cosmosdb_account_name     = "cosmosdb-dev-centralus-103"
+cosmosdb_account_name     = "cosmosdb-dev-centralus-101"
 cosmosdb_account_location = "centralus"
 cosmosdb_sqldb_name       = "sqlapidb"
 throughput                = 400
@@ -59,14 +59,14 @@ Terraform will perform the following actions:
       + local_authentication_disabled         = false
       + location                              = "centralus"
       + mongo_server_version                  = (known after apply)
-      + name                                  = "cosmosdb-dev-centralus-103"
+      + name                                  = "cosmosdb-dev-centralus-101"
       + network_acl_bypass_for_azure_services = false
       + offer_type                            = "Standard"
       + primary_key                           = (sensitive value)
       + primary_readonly_key                  = (sensitive value)
       + public_network_access_enabled         = true
       + read_endpoints                        = (known after apply)
-      + resource_group_name                   = "rg-cosmosdb-103"
+      + resource_group_name                   = "rg-cosmosdb-101"
       + secondary_key                         = (sensitive value)
       + secondary_readonly_key                = (sensitive value)
       + write_endpoints                       = (known after apply)
@@ -106,7 +106,7 @@ Terraform will perform the following actions:
 
   # azurerm_cosmosdb_sql_container.example will be created
   + resource "azurerm_cosmosdb_sql_container" "example" {
-      + account_name           = "cosmosdb-dev-centralus-103"
+      + account_name           = "cosmosdb-dev-centralus-101"
       + analytical_storage_ttl = 600
       + database_name          = "sqlapidb"
       + default_ttl            = (known after apply)
@@ -114,7 +114,7 @@ Terraform will perform the following actions:
       + name                   = "example-container"
       + partition_key_path     = "/definition/id"
       + partition_key_version  = 1
-      + resource_group_name    = "rg-cosmosdb-103"
+      + resource_group_name    = "rg-cosmosdb-101"
       + throughput             = 400
 
       + conflict_resolution_policy {
@@ -148,10 +148,10 @@ Terraform will perform the following actions:
 
   # azurerm_cosmosdb_sql_database.example will be created
   + resource "azurerm_cosmosdb_sql_database" "example" {
-      + account_name        = "cosmosdb-dev-centralus-103"
+      + account_name        = "cosmosdb-dev-centralus-101"
       + id                  = (known after apply)
       + name                = "sqlapidb"
-      + resource_group_name = "rg-cosmosdb-103"
+      + resource_group_name = "rg-cosmosdb-101"
       + throughput          = 400
     }
 
@@ -159,7 +159,7 @@ Terraform will perform the following actions:
   + resource "azurerm_resource_group" "example" {
       + id       = (known after apply)
       + location = "centralus"
-      + name     = "rg-cosmosdb-103"
+      + name     = "rg-cosmosdb-101"
     }
 
 Plan: 4 to add, 0 to change, 0 to destroy.
