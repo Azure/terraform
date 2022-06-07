@@ -23,16 +23,15 @@ variable "cosmosdb_sqldb_name" {
   description = "value"
 }
 
-variable "max_throughput" {
+variable "throughput" {
   type        = number
-  description = "Cosmos db database max throughput"
+  description = "Cosmos db database throughput"
   validation {
-    condition     = var.max_throughput >= 4000 && var.max_throughput <= 1000000
-    error_message = "Cosmos db autoscale max throughput should be equal to or greater than 4000 and less than or equal to 1000000."
+    condition     = var.throughput >= 400 && var.throughput <= 1000000
+    error_message = "Cosmos db manual throughput should be equal to or greater than 400 and less than or equal to 1000000."
   }
   validation {
-    condition = var.max_throughput % 100 == 0 
-    error_message = "Cosmos db max throughput should be in increments of 100."
+    condition = var.throughput % 100 == 0 
+    error_message = "Cosmos db throughput should be in increments of 100."
   }
 }
-

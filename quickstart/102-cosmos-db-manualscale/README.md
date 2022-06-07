@@ -15,16 +15,16 @@ This template deploys a cosmos db account with sql db and autoscaling enabled. A
 | `resource_group_location` | Resource group location | 
 | `cosmosdb_account_name` | Cosmos db account name | 
 | `cosmosdb_location` | Cosmos db primary location |
-| `max_throughput` | DB Max throughput for autoscaling | 
+| `throughput` | DB manual throughput | 
 
 ## Example terraform.tfvars file
 ```
-resource_group_name   = "rg-cosmosdb-101"
+resource_group_name   = "rg-cosmosdb-102"
 location              = "centralus"
-cosmosdb_account_name = "cosmosdb-dev-centralus-101"
+cosmosdb_account_name = "cosmosdb-dev-centralus-102"
 cosmosdb_account_location = "centralus"
 cosmosdb_sqldb_name = "sqlapidb"
-max_throughput = 4000
+throughput = 400
 ```
 
 ## Usage
@@ -54,14 +54,14 @@ Terraform will perform the following actions:
       + local_authentication_disabled         = false
       + location                              = "centralus"
       + mongo_server_version                  = (known after apply)
-      + name                                  = "cosmosdb-dev-centralus-101"
+      + name                                  = "cosmosdb-dev-centralus-102"
       + network_acl_bypass_for_azure_services = false
       + offer_type                            = "Standard"
       + primary_key                           = (sensitive value)
       + primary_readonly_key                  = (sensitive value)
       + public_network_access_enabled         = true
       + read_endpoints                        = (known after apply)
-      + resource_group_name                   = "rg-cosmosdb-101"
+      + resource_group_name                   = "rg-cosmosdb-102"
       + secondary_key                         = (sensitive value)
       + secondary_readonly_key                = (sensitive value)
       + write_endpoints                       = (known after apply)
@@ -101,22 +101,18 @@ Terraform will perform the following actions:
 
   # azurerm_cosmosdb_sql_database.example will be created
   + resource "azurerm_cosmosdb_sql_database" "example" {
-      + account_name        = "cosmosdb-dev-centralus-101"
+      + account_name        = "cosmosdb-dev-centralus-102"
       + id                  = (known after apply)
       + name                = "sqlapidb"
-      + resource_group_name = "rg-cosmosdb-101"
-      + throughput          = (known after apply)
-
-      + autoscale_settings {
-          + max_throughput = 4000
-        }
+      + resource_group_name = "rg-cosmosdb-102"
+      + throughput          = 400
     }
 
   # azurerm_resource_group.example will be created
   + resource "azurerm_resource_group" "example" {
       + id       = (known after apply)
       + location = "centralus"
-      + name     = "rg-cosmosdb-101"
+      + name     = "rg-cosmosdb-102"
     }
 
 Plan: 3 to add, 0 to change, 0 to destroy.
@@ -124,5 +120,6 @@ Plan: 3 to add, 0 to change, 0 to destroy.
 Changes to Outputs:
   + cosmosdb_account_id      = (known after apply)
   + cosmosdb_sql_database_id = (known after apply)
+
 ```
 
