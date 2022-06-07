@@ -5,6 +5,7 @@ This template deploys a cosmos db account with sql db and manual scaling. A simi
 - [azurerm_resource_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group)
 - [azurerm_cosmosdb_account](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/cosmosdb_account)
 - [azurerm_cosmosdb_sql_database](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/cosmosdb_sql_database)
+- [azurerm_cosmosdb_sql_container](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/cosmosdb_sql_container)
 
 ## Variables
 
@@ -14,6 +15,7 @@ This template deploys a cosmos db account with sql db and manual scaling. A simi
 | `resource_group_location` | Resource group location | 
 | `cosmosdb_account_name` | Cosmos db account name | 
 | `cosmosdb_location` | Cosmos db primary location |
+| `sql_container_name` | Name of sql container | 
 | `throughput` | DB manual throughput | 
 
 ## Example terraform.tfvars file
@@ -23,6 +25,7 @@ location              = "centralus"
 cosmosdb_account_name = "cosmosdb-dev-centralus-102"
 cosmosdb_account_location = "centralus"
 cosmosdb_sqldb_name = "sqlapidb"
+sql_container_name        = "example-container"
 throughput = 400
 ```
 
@@ -30,7 +33,6 @@ throughput = 400
 
 ```bash
 >terraform plan
-
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
   + create
 
@@ -98,6 +100,47 @@ Terraform will perform the following actions:
         }
     }
 
+  # azurerm_cosmosdb_sql_container.example will be created
+  + resource "azurerm_cosmosdb_sql_container" "example" {
+      + account_name          = "cosmosdb-dev-centralus-102"
+      + database_name         = "sqlapidb"
+      + default_ttl           = (known after apply)
+      + id                    = (known after apply)
+      + name                  = "example-container"
+      + partition_key_path    = "/definition/id"
+      + partition_key_version = 1
+      + resource_group_name   = "rg-cosmosdb-102"
+      + throughput            = 400
+
+      + conflict_resolution_policy {
+          + conflict_resolution_path      = (known after apply)
+          + conflict_resolution_procedure = (known after apply)
+          + mode                          = (known after apply)
+        }
+
+      + indexing_policy {
+          + indexing_mode = "consistent"
+
+          + excluded_path {
+              + path = "/excluded/?"
+            }
+
+          + included_path {
+              + path = "/*"
+            }
+          + included_path {
+              + path = "/included/?"
+            }
+        }
+
+      + unique_key {
+          + paths = [
+              + "/definition/idlong",
+              + "/definition/idshort",
+            ]
+        }
+    }
+
   # azurerm_cosmosdb_sql_database.example will be created
   + resource "azurerm_cosmosdb_sql_database" "example" {
       + account_name        = "cosmosdb-dev-centralus-102"
@@ -114,7 +157,7 @@ Terraform will perform the following actions:
       + name     = "rg-cosmosdb-102"
     }
 
-Plan: 3 to add, 0 to change, 0 to destroy.
+Plan: 4 to add, 0 to change, 0 to destroy.
 
 Changes to Outputs:
   + cosmosdb_account_id      = (known after apply)

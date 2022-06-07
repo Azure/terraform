@@ -23,6 +23,11 @@ variable "cosmosdb_sqldb_name" {
   description = "value"
 }
 
+variable "sql_container_name" {
+  type        = string
+  description = "SQL API container name."
+}
+
 variable "throughput" {
   type        = number
   description = "Cosmos db database throughput"
@@ -31,7 +36,7 @@ variable "throughput" {
     error_message = "Cosmos db manual throughput should be equal to or greater than 400 and less than or equal to 1000000."
   }
   validation {
-    condition = var.throughput % 100 == 0 
+    condition     = var.throughput % 100 == 0
     error_message = "Cosmos db throughput should be in increments of 100."
   }
 }
