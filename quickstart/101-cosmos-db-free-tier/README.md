@@ -1,13 +1,11 @@
-# Cosmos db with role definition and assignment
-This template deploys a cosmos db account with sql db and aad role definition and assignment. A similar example can be created using the [azurerm/cosmosdb module](https://github.com/azure/terraform-azurerm-cosmosdb).
+# Cosmos db free tier
+This template deploys a cosmos db account with sql db and manual scaling in free tier. A similar example can be created using the [azurerm/cosmosdb module](https://github.com/azure/terraform-azurerm-cosmosdb).
 
 ## Terraform resource types
 - [azurerm_resource_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group)
 - [azurerm_cosmosdb_account](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/cosmosdb_account)
 - [azurerm_cosmosdb_sql_database](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/cosmosdb_sql_database)
 - [azurerm_cosmosdb_sql_container](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/cosmosdb_sql_container)
-- [azurerm_cosmosdb_sql_role_assignment](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/cosmosdb_sql_role_assignment)
-- [azurerm_cosmosdb_sql_role_definition](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/cosmosdb_sql_role_definition)
 
 ## Variables
 
@@ -17,24 +15,25 @@ This template deploys a cosmos db account with sql db and aad role definition an
 | `resource_group_location` | Resource group location | 
 | `cosmosdb_account_name` | Cosmos db account name | 
 | `cosmosdb_location` | Cosmos db primary location |
-| `throughput` | DB manual throughput | 
 | `sql_container_name` | Name of sql container | 
+| `throughput` | DB manual throughput | 
 
 ## Example terraform.tfvars file
 ```
-resource_group_name       = "rg-cosmosdb-101"
-location                  = "centralus"
-cosmosdb_account_name     = "cosmosdb-dev-centralus-101"
+resource_group_name   = "rg-cosmosdb-101"
+location              = "centralus"
+cosmosdb_account_name = "cosmosdb-dev-centralus-101"
 cosmosdb_account_location = "centralus"
-cosmosdb_sqldb_name       = "sqlapidb"
-throughput                = 400
+cosmosdb_sqldb_name = "sqlapidb"
 sql_container_name        = "example-container"
+throughput = 400
 ```
 
 ## Usage
 
 ```bash
 >terraform plan
+
 
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
   + create
@@ -49,7 +48,7 @@ Terraform will perform the following actions:
       + create_mode                           = (known after apply)
       + default_identity_type                 = "FirstPartyIdentity"
       + enable_automatic_failover             = false
-      + enable_free_tier                      = false
+      + enable_free_tier                      = true
       + enable_multiple_write_locations       = false
       + endpoint                              = (known after apply)
       + id                                    = (known after apply)
@@ -153,36 +152,6 @@ Terraform will perform the following actions:
       + throughput          = 400
     }
 
-  # azurerm_cosmosdb_sql_role_assignment.example will be created
-  + resource "azurerm_cosmosdb_sql_role_assignment" "example" {
-      + account_name        = "cosmosdb-dev-centralus-101"
-      + id                  = (known after apply)
-      + name                = (known after apply)
-      + principal_id        = "1b887731-4609-4904-a699-64f06f3d380d"
-      + resource_group_name = "rg-cosmosdb-101"
-      + role_definition_id  = (known after apply)
-      + scope               = "/subscriptions/aa86e73d-372b-4cd6-a37e-0d12ae93e964/resourceGroups/rg-cosmosdb-101/providers/Microsoft.DocumentDB/databaseAccounts/cosmosdb-dev-centralus-101"
-    }
-
-  # azurerm_cosmosdb_sql_role_definition.example will be created
-  + resource "azurerm_cosmosdb_sql_role_definition" "example" {
-      + account_name        = "cosmosdb-dev-centralus-101"
-      + assignable_scopes   = [
-          + "/subscriptions/aa86e73d-372b-4cd6-a37e-0d12ae93e964/resourceGroups/rg-cosmosdb-101/providers/Microsoft.DocumentDB/databaseAccounts/cosmosdb-dev-centralus-101",
-        ]
-      + id                  = (known after apply)
-      + name                = "examplesqlroledef"
-      + resource_group_name = "rg-cosmosdb-101"
-      + role_definition_id  = (known after apply)
-      + type                = "CustomRole"
-
-      + permissions {
-          + data_actions = [
-              + "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/items/read",
-            ]
-        }
-    }
-
   # azurerm_resource_group.example will be created
   + resource "azurerm_resource_group" "example" {
       + id       = (known after apply)
@@ -190,10 +159,10 @@ Terraform will perform the following actions:
       + name     = "rg-cosmosdb-101"
     }
 
-Plan: 6 to add, 0 to change, 0 to destroy.
+Plan: 4 to add, 0 to change, 0 to destroy.
 
 Changes to Outputs:
   + cosmosdb_account_id      = (known after apply)
   + cosmosdb_sql_database_id = (known after apply)
-```
 
+```
