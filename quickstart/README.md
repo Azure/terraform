@@ -33,6 +33,9 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 - [Azure virtual machine scale set with jumpbox from Packer custom image](./201-vmss-packer-jumpbox)
 - [Azure PostgreSQL Flexible Server Database](./201-postgresql-fs-db)
 - [Azure MySQL Flexible Server Database](./201-mysql-fs-db)
+- [Azure Confidential OS Disk](./201-confidential-os-disk)
+- [Azure Confidential Virtual Machine](./201-confidential-vm)
+- [Azure Confidential Virtual Machine Scale Set](./201-confidential-vmss)
 
 #### Advanced
 - [Azure Service Fabric](./301-service-fabric/)
