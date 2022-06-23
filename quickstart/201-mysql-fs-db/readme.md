@@ -24,4 +24,4 @@ This template deploys an [Azure MySQL Flexible Server Database](https://registry
 
 ## Example
 
-To see how to run this example, see [Create an Azure MySQL Flexible Server Database using Terraform](https://docs.microsoft.com/azure/developer/terraform/deploy-mysql-flexible-server-database).
+To see how to run this example, see [Create an Azure MySQL Flexible Server Database using Terraform](https://docs.microsoft.com/azure/mysql/flexible-server/quickstart-create-terraform).
