@@ -111,7 +111,10 @@ resource "azurerm_linux_virtual_machine" "test" {
   name                = "${var.name_prefix}-vm"
   resource_group_name = azurerm_resource_group.example.name
   location            = azurerm_resource_group.example.location
+  
+  # Available sizes for Confidential VM can be found at: https://docs.microsoft.com/azure/confidential-computing/confidential-vm-overview
   size                = "Standard_DC2as_v5"
+  
   admin_username      = "azureuser"
   network_interface_ids = [
     azurerm_network_interface.example.id,

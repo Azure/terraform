@@ -12,7 +12,7 @@ This template deploys an Azure confidential os disk encrypted by platform key.
 | Name | Description |
 |-|-|
 | `location` | (Required) Azure Region in which to deploy these resources.|
-| `name_prefix` | (Optional) Prefix of the resource name. Value defaults to: tftest|
+| `name_prefix` | (Required) Prefix of the resource name.|
 
 ## Example
 

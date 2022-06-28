@@ -21,7 +21,10 @@ resource "azurerm_windows_virtual_machine_scale_set" "example" {
   name                 = "${var.name_prefix}-vmss"
   resource_group_name  = azurerm_resource_group.example.name
   location             = azurerm_resource_group.example.location
+
+  # Available skus for Confidential VMSS can be found at: https://docs.microsoft.com/azure/confidential-computing/confidential-vm-overview
   sku                  = "Standard_DC2as_v5"
+  
   instances            = 2
   admin_username       = "adminuser"
   admin_password       = var.admin_password

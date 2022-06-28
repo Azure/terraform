@@ -19,8 +19,8 @@ This template deploys an Azure confidential virtual machine with disk encrypted 
 | Name | Description |
 |-|-|
 | `location` | (Required) Azure Region in which to deploy these resources.|
+| `name_prefix` | (Required) Prefix of the resource name.|
 | `vm_public_key` | (Required) Public key of the Virtual Machine.|
-| `name_prefix` | (Optional) Prefix of the resource name. Value defaults to: tftest|
 
 ## Example
 
