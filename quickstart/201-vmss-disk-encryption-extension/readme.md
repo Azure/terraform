@@ -19,7 +19,7 @@ This template deploys an Azure virtual machine scale set with disk encryption ex
 |-|-|
 | `admin_password` | (Required) Admin password of the virtual machine scale set.|
 | `location` | (Required) Azure Region in which to deploy these resources.|
-| `name_prefix` | (Optional) Prefix of the resource name. Value defaults to: tftest|
+| `name_prefix` | (Required) Prefix of the resource name.|
 
 ## Example
 

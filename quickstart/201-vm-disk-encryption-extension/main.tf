@@ -39,7 +39,7 @@ resource "azurerm_key_vault_access_policy" "service-principal" {
 resource "azurerm_key_vault_key" "example" {
   name         = "examplekey"
   key_vault_id = azurerm_key_vault.example.id
-  key_type     = "RSA"
+  key_type     = "RSA-HSM"
   key_size     = 2048
 
   key_opts = [
@@ -120,15 +120,13 @@ resource "azurerm_virtual_machine_extension" "example" {
   auto_upgrade_minor_version = false
   virtual_machine_id         = azurerm_linux_virtual_machine.example.id
 
-  settings = <<SETTINGS
-{
-  "EncryptionOperation": "EnableEncryption",
-  "KeyEncryptionAlgorithm": "RSA-OAEP",
-  "KeyVaultURL": "${azurerm_key_vault.example.vault_uri}",
-  "KeyVaultResourceId": "${azurerm_key_vault.example.id}",
-  "KeyEncryptionKeyURL": "${azurerm_key_vault_key.example.id}",
-  "KekVaultResourceId": "${azurerm_key_vault.example.id}",
-  "VolumeType": "All"
-}
-SETTINGS
+  settings = jsonencode({
+    "EncryptionOperation"    = "EnableEncryption"
+    "KeyEncryptionAlgorithm" = "RSA-OAEP"
+    "KeyVaultURL"            = azurerm_key_vault.example.vault_uri
+    "KeyVaultResourceId"     = azurerm_key_vault.example.id
+    "KeyEncryptionKeyURL"    = azurerm_key_vault_key.example.id
+    "KekVaultResourceId"     = azurerm_key_vault.example.id
+    "VolumeType"             = "All"
+  })
 }
