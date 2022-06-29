@@ -29,6 +29,8 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 - [Azure Kubernetes Service with Log Analytics](./201-aks-log-analytics/)
 - [Azure Kubernetes Service with Helm](./201-aks-helm/)
 - [Azure Kubernetes Service with ACR](./201-aks-acr-identity/)
+- [Azure Virtual Machine Disk Encryption Extension](./201-vm-disk-encryption-extension)
+- [Azure Virtual Machine Scale Set Disk Encryption Extension](./201-vmss-disk-encryption-extension)
 - [Azure virtual machine scale set with jumpbox](./201-vmss-jumpbox)
 - [Azure virtual machine scale set with jumpbox from Packer custom image](./201-vmss-packer-jumpbox)
 - [Azure PostgreSQL Flexible Server Database](./201-postgresql-fs-db)
