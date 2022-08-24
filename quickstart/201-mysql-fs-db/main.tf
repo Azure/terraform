@@ -1,5 +1,5 @@
 // Generate random value for the Resource Group name
-resource "random_pet" "rg-name" {
+resource "random_pet" "rg_name" {
   prefix = var.name_prefix
 }
 
@@ -22,7 +22,7 @@ resource "random_password" "password" {
 
 // Manages the Resource Group where the resource exists
 resource "azurerm_resource_group" "default" {
-  name     = "mysqlfsRG-${random_pet.rg-name.id}"
+  name     = "mysqlfsRG-${random_pet.rg_name.id}"
   location = var.location
 }
 
