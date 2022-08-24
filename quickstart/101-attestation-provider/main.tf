@@ -7,7 +7,7 @@ resource "azurerm_resource_group" "rg" {
   location = var.resource_group_location
 }
 
-resource "azurerm_attestation_provider" "corpAttestation" {
+resource "azurerm_attestation_provider" "corp_attestation" {
   name                = var.attestation_provider_name
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
