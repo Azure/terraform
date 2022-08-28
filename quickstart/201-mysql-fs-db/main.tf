@@ -1,9 +1,14 @@
-// Generate random value for the Resource Group name
+# Generate random resource group name
 resource "random_pet" "rg_name" {
-  prefix = var.name_prefix
+  prefix = var.resource_group_name_prefix
 }
 
-// Generate random value for the name
+resource "azurerm_resource_group" "rg" {
+  name     = random_pet.rg_name.id
+  location = var.resource_group_location
+}
+
+# Generate random value for the name
 resource "random_string" "name" {
   length  = 8
   upper   = false
@@ -11,7 +16,7 @@ resource "random_string" "name" {
   special = false
 }
 
-// Generate random value for the login password
+# Generate random value for the login password
 resource "random_password" "password" {
   length           = 8
   upper            = true
@@ -20,13 +25,7 @@ resource "random_password" "password" {
   override_special = "_"
 }
 
-// Manages the Resource Group where the resource exists
-resource "azurerm_resource_group" "default" {
-  name     = "mysqlfsRG-${random_pet.rg_name.id}"
-  location = var.location
-}
-
-// Manages the Virtual Network
+# Manages the Virtual Network
 resource "azurerm_virtual_network" "default" {
   name                = "vnet-${random_string.name.result}"
   location            = azurerm_resource_group.default.location
@@ -34,7 +33,7 @@ resource "azurerm_virtual_network" "default" {
   address_space       = ["10.0.0.0/16"]
 }
 
-// Manages the Subnet
+# Manages the Subnet
 resource "azurerm_subnet" "default" {
   name                 = "subnet-${random_string.name.result}"
   resource_group_name  = azurerm_resource_group.default.name
@@ -55,13 +54,13 @@ resource "azurerm_subnet" "default" {
   }
 }
 
-// Enables you to manage Private DNS zones within Azure DNS
+# Enables you to manage Private DNS zones within Azure DNS
 resource "azurerm_private_dns_zone" "default" {
   name                = "${random_string.name.result}.mysql.database.azure.com"
   resource_group_name = azurerm_resource_group.default.name
 }
 
-// Enables you to manage Private DNS zone Virtual Network Links
+# Enables you to manage Private DNS zone Virtual Network Links
 resource "azurerm_private_dns_zone_virtual_network_link" "default" {
   name                  = "mysqlfsVnetZone${random_string.name.result}.com"
   private_dns_zone_name = azurerm_private_dns_zone.default.name
@@ -69,7 +68,7 @@ resource "azurerm_private_dns_zone_virtual_network_link" "default" {
   resource_group_name   = azurerm_resource_group.default.name
 }
 
-// Manages the MySQL Flexible Server
+# Manages the MySQL Flexible Server
 resource "azurerm_mysql_flexible_server" "default" {
   name                         = "mysqlfs-${random_string.name.result}"
   resource_group_name          = azurerm_resource_group.default.name

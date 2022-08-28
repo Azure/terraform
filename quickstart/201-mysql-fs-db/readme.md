@@ -17,10 +17,10 @@ This template deploys an [Azure MySQL Flexible Server Database](https://registry
 
 ## Variables
 
-| Name | Description |
-|-|-|
-| `name_prefix` | (Optional) Prefix of the resource name. Value defaults to: tftest|
-| `location` | (Optional) Azure Region in which to deploy these resources. Value defaults to: eastus |
+| Name | Description | Default |
+|-|-|-|
+| `resource_group_name_prefix` | (Optional) Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. Value defaults to: rg|
+| `resource_group_location` | (Optional) Azure Region in which to deploy these resources. Value defaults to: eastus |
 
 ## Example
 
