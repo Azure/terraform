@@ -24,29 +24,22 @@ variable "cluster_name" {
   default = "k8stest"
 }
 
-variable "resource_group_name" {
-  default = "azure-k8stest"
-}
-
-variable "location" {
-  default = "Central US"
-}
-
 variable "log_analytics_workspace_name" {
   default = "testLogAnalyticsWorkspaceName"
 }
 
-# refer https://azure.microsoft.com/global-infrastructure/services/?products=monitor for log analytics available regions
+# Refer to https://azure.microsoft.com/global-infrastructure/services/?products=monitor for available Log Analytics regions.
 variable "log_analytics_workspace_location" {
   default = "eastus"
 }
 
-# refer https://azure.microsoft.com/pricing/details/monitor/ for log analytics pricing 
+# Refer to https://azure.microsoft.com/pricing/details/monitor/ for Log Analytics pricing 
 variable "log_analytics_workspace_sku" {
   default = "PerGB2018"
 }
 
-# these following three entries are placeholder references; we will specify values later in terraform.tfvars
+# The following three variable declarations are placeholder references.
+# Set the values for these variable in terraform.tfvars
 variable "aks_service_principal_app_id" {
   default = ""
 }
@@ -58,4 +51,3 @@ variable "aks_service_principal_client_secret" {
 variable "aks_service_principal_object_id" {
   default = ""
 }
-    
