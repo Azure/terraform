@@ -22,21 +22,22 @@ resource "random_password" "password" {
   upper            = true
   lower            = true
   special          = true
+  numeric          = false
   override_special = "_"
 }
 
 # Manages the Virtual Network
 resource "azurerm_virtual_network" "default" {
   name                = "vnet-${random_string.name.result}"
-  location            = azurerm_resource_group.default.location
-  resource_group_name = azurerm_resource_group.default.name
+  location            = azurerm_resource_group.rg.location
+  resource_group_name = azurerm_resource_group.rg.name
   address_space       = ["10.0.0.0/16"]
 }
 
 # Manages the Subnet
 resource "azurerm_subnet" "default" {
   name                 = "subnet-${random_string.name.result}"
-  resource_group_name  = azurerm_resource_group.default.name
+  resource_group_name  = azurerm_resource_group.rg.name
   virtual_network_name = azurerm_virtual_network.default.name
   address_prefixes     = ["10.0.2.0/24"]
   service_endpoints    = ["Microsoft.Storage"]
@@ -57,7 +58,7 @@ resource "azurerm_subnet" "default" {
 # Enables you to manage Private DNS zones within Azure DNS
 resource "azurerm_private_dns_zone" "default" {
   name                = "${random_string.name.result}.mysql.database.azure.com"
-  resource_group_name = azurerm_resource_group.default.name
+  resource_group_name = azurerm_resource_group.rg.name
 }
 
 # Enables you to manage Private DNS zone Virtual Network Links
@@ -65,14 +66,14 @@ resource "azurerm_private_dns_zone_virtual_network_link" "default" {
   name                  = "mysqlfsVnetZone${random_string.name.result}.com"
   private_dns_zone_name = azurerm_private_dns_zone.default.name
   virtual_network_id    = azurerm_virtual_network.default.id
-  resource_group_name   = azurerm_resource_group.default.name
+  resource_group_name   = azurerm_resource_group.rg.name
 }
 
 # Manages the MySQL Flexible Server
 resource "azurerm_mysql_flexible_server" "default" {
   name                         = "mysqlfs-${random_string.name.result}"
-  resource_group_name          = azurerm_resource_group.default.name
-  location                     = azurerm_resource_group.default.location
+  resource_group_name          = azurerm_resource_group.rg.name
+  location                     = azurerm_resource_group.rg.location
   administrator_login          = random_string.name.result
   administrator_password       = random_password.password.result
   zone                         = "1"
