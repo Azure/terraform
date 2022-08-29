@@ -13,17 +13,17 @@ This template deploys a Linux virtual machine (VM) with infrastructure that incl
 - [azurerm_network_security_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_security_group)
 - [azurerm_network_interface](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_interface)
 - [azurerm_network_interface_security_group_association](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_interface_security_group_association)
-- [random_id](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/id)
+- [random_id](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/id)
 - [azurerm_storage_account](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account)
-- [tls_private_key](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_key)
+- [tls_private_key](https://registry.terraform.io/providers/hashicorp/tls/latest/docs/resources/private_key)
 - [azurerm_linux_virtual_machine](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/linux_virtual_machine)
 
 ## Variables
 
-| Name | Description |
+| Name | Description | Default |
 |-|-|
-| `resource_group_name_prefix` | (Optional) Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. Value defaults to: rg|
-| `resource_group_location` | (Optional) Azure Region in which to deploy these resources. Value defaults to: eastus |
+| `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. | rg |
+| `resource_group_location` | Location of the resource group. | eastus |
 
 ## Example
 
