@@ -4,8 +4,8 @@ resource "random_pet" "rg_name" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name     = random_pet.rg_name.id
   location = var.resource_group_location
+  name     = random_pet.rg_name.id
 }
 
 resource "random_id" "log_analytics_workspace_name_suffix" {
@@ -13,32 +13,40 @@ resource "random_id" "log_analytics_workspace_name_suffix" {
 }
 
 resource "azurerm_log_analytics_workspace" "test" {
+  location            = var.log_analytics_workspace_location
   # The WorkSpace name has to be unique across the whole of azure, not just the current subscription/tenant.
   name                = "${var.log_analytics_workspace_name}-${random_id.log_analytics_workspace_name_suffix.dec}"
-  location            = var.log_analytics_workspace_location
   resource_group_name = azurerm_resource_group.rg.name
   sku                 = var.log_analytics_workspace_sku
 }
 
 resource "azurerm_log_analytics_solution" "test" {
-  solution_name         = "ContainerInsights"
   location              = azurerm_log_analytics_workspace.test.location
   resource_group_name   = azurerm_resource_group.rg.name
-  workspace_resource_id = azurerm_log_analytics_workspace.test.id
+  solution_name         = "ContainerInsights"
   workspace_name        = azurerm_log_analytics_workspace.test.name
+  workspace_resource_id = azurerm_log_analytics_workspace.test.id
 
   plan {
-    publisher = "Microsoft"
     product   = "OMSGallery/ContainerInsights"
+    publisher = "Microsoft"
   }
 }
 
 resource "azurerm_kubernetes_cluster" "k8s" {
-  name                = var.cluster_name
   location            = azurerm_resource_group.rg.location
+  name                = var.cluster_name
   resource_group_name = azurerm_resource_group.rg.name
   dns_prefix          = var.dns_prefix
+  tags                = {
+    Environment = "Development"
+  }
 
+  default_node_pool {
+    name       = "agentpool"
+    vm_size    = "Standard_D2_v2"
+    node_count = var.agent_count
+  }
   linux_profile {
     admin_username = "ubuntu"
 
@@ -46,24 +54,12 @@ resource "azurerm_kubernetes_cluster" "k8s" {
       key_data = file(var.ssh_public_key)
     }
   }
-
-  default_node_pool {
-    name       = "agentpool"
-    node_count = var.agent_count
-    vm_size    = "Standard_D2_v2"
+  network_profile {
+    network_plugin    = "kubenet"
+    load_balancer_sku = "standard"
   }
-
   service_principal {
     client_id     = var.aks_service_principal_app_id
     client_secret = var.aks_service_principal_client_secret
-  }
-
-  network_profile {
-    load_balancer_sku = "standard"
-    network_plugin    = "kubenet"
-  }
-
-  tags = {
-    Environment = "Development"
   }
 }
