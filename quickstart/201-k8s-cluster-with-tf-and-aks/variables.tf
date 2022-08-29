@@ -38,16 +38,12 @@ variable "log_analytics_workspace_sku" {
   default = "PerGB2018"
 }
 
-# The following three variable declarations are placeholder references.
+# The following two variable declarations are placeholder references.
 # Set the values for these variable in terraform.tfvars
 variable "aks_service_principal_app_id" {
   default = ""
 }
 
 variable "aks_service_principal_client_secret" {
-  default = ""
-}
-
-variable "aks_service_principal_object_id" {
   default = ""
 }
