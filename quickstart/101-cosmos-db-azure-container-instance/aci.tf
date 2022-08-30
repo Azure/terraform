@@ -1,9 +1,3 @@
-# This code sets two environment variables: COSMOS_DB_ENDPOINT and COSMOS_DB_MASTERKEY. 
-# These variables hold the location and key for accessing the database.
-# The values for these variables are obtained from the database instance created in main.tf
-# This process is known as interpolation. 
-# To learn more about Terraform interpolation, see https://www.terraform.io/language/v1.1.x/configuration-0-11/interpolation. 
-
 resource "azurerm_container_group" "vote_aci" {
   name                = "vote_aci"
   location            = azurerm_resource_group.rg.location
@@ -24,7 +18,7 @@ resource "azurerm_container_group" "vote_aci" {
 
     secure_environment_variables = {
       "COSMOS_DB_ENDPOINT"  = azurerm_cosmosdb_account.vote_cosmos_db.endpoint
-      "COSMOS_DB_MASTERKEY" = azurerm_cosmosdb_account.vote_cosmos_db.primary_master_key
+      "COSMOS_DB_MASTERKEY" = azurerm_cosmosdb_account.vote_cosmos_db.primary_key
       "TITLE"               = "Azure Voting App"
       "VOTE1VALUE"          = "Cats"
       "VOTE2VALUE"          = "Dogs"
