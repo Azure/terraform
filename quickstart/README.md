@@ -17,6 +17,8 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 #### Beginner
 
 - [Azure resource group](./101-resource-group)
+- [Azure attestation provider](./101-attestation-provider)
+- [Azure Cosmos DB in an Azure Container Instance](./101-cosmos-db-azure-container-instance)
 - [Static Website hosted on Azure Storage](./101-storage-static-website)
 - [Azure Web App hosting a Linux Container](./101-web-app-linux-container)
 - [Azure Web App hosting a Java 8 App on Linux](./101-web-app-linux-java)
@@ -25,6 +27,7 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 #### Intermediate
 
 - [Azure Web App with ACR](./201-web-app-docker-acr/)
+- [Azure Kubernetes Service with Kubernetes cluster](./201-k8s-cluster-with-tf-and-aks)
 - [Azure Kubernetes Service with an Admin Dashboard](./201-aks-rbac-dashboard-admin/)
 - [Azure Kubernetes Service with Log Analytics](./201-aks-log-analytics/)
 - [Azure Kubernetes Service with Helm](./201-aks-helm/)
