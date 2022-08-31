@@ -20,11 +20,6 @@ This template deploys a Linux virtual machine (VM) with infrastructure that incl
 
 ## Variables
 
-| **Name**                     | **Description**                                                                                                  | **Default** |
-|------------------------------|------------------------------------------------------------------------------------------------------------------|-------------|
-| `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. | rg          |
-| `resource_group_location`    | Location of the resource group.                                                                                  | eastus      |
-
 | **Name** | **Description** | **Default** |
 |---|---|---|
 | `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. | rg |
