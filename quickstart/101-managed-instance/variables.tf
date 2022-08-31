@@ -21,7 +21,7 @@ variable "azurerm_subnet_name" {
 variable "location" {
   type        = string
   description = "Enter the location where you want to deploy the resources"
-  default     = "eastus2euap"
+  default     = "eastus"
 }
 
 variable "administrator_login" {
@@ -34,6 +34,7 @@ variable "administrator_login_password" {
   type        = string
   description = "Enter administrator password for the database"
   default     = "IamAVeryStrongP@ssw0rd123"
+  sensitive = true
 }
 
 variable "database_name" {
@@ -53,12 +54,12 @@ variable "license_type" {
   default     = "BasePrice"
 }
 variable "vcores" {
-  type        = string
+  type        = number
   description = "Enter number of vCores you want to deploy"
   default     = 8
 }
 variable "storage_size_in_gb" {
-  type        = string
-  description = "Enter database name"
+  type        = number
+  description = "Enter storage size in GB"
   default     = 32
 }
