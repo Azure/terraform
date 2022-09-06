@@ -1,3 +1,6 @@
+# TODO set the variables below either enter them in plain text after = sign, or change them in variables.tf
+#  (var.xyz will take the default value from variables.tf if you don't change it)
+
 # Create resource group
 resource "azurerm_resource_group" "example" {
   name     = var.azurerm_resource_group_name
@@ -15,7 +18,7 @@ resource "azurerm_network_security_group" "example" {
 resource "azurerm_virtual_network" "example" {
   name                = var.azurerm_virtual_network_name
   resource_group_name = azurerm_resource_group.example.name
-  address_space       = ["10.0.0.0/16"]
+  address_space       = ["10.0.0.0/24"]
   location            = azurerm_resource_group.example.location
 }
 
@@ -24,7 +27,7 @@ resource "azurerm_subnet" "example" {
   name                 = var.azurerm_subnet_name
   resource_group_name  = azurerm_resource_group.example.name
   virtual_network_name = azurerm_virtual_network.example.name
-  address_prefixes     = ["10.0.0.0/24"]
+  address_prefixes     = ["10.0.0.0/27"]
 
   delegation {
     name = "managedinstancedelegation"
@@ -69,8 +72,6 @@ resource "azurerm_mssql_managed_instance" "example" {
   resource_group_name          = azurerm_resource_group.example.name
   location                     = azurerm_resource_group.example.location
   subnet_id                    = azurerm_subnet.example.id
-  # TODO set the options below either in plain text or in variables.tf
-  #  (var.xyz will prompt you to enter the value when creating the plan)
   administrator_login          = var.administrator_login
   administrator_login_password = var.administrator_login_password
   license_type                 = var.license_type
