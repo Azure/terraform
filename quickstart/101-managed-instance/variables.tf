@@ -34,7 +34,7 @@ variable "administrator_login_password" {
   type        = string
   description = "Enter administrator password for the database"
   default     = "IamAVeryStrongP@ssw0rd123"
-  sensitive = true
+  sensitive   = true
 }
 
 variable "database_name" {
