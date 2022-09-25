@@ -1,10 +1,5 @@
 resource "azurerm_resource_group" "default" {
   name     = "${var.name_prefix}-rg"
-  location = "east us"
-}
-
-resource "azurerm_resource_group" "default" {
-  name     = "${var.name_prefix}-rg"
   location = "var.location"
 }
 
