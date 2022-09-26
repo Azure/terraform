@@ -51,7 +51,7 @@ rule "terraform_required_version" {
 }
 
 rule "terraform_standard_module_structure" {
-  enabled = true
+  enabled = false
 }
 
 rule "terraform_typed_variables" {

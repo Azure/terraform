@@ -11,6 +11,30 @@ This template deploys an Azure Web App running on dotnet.
 <!-- docker run --rm -v ${pwd}:/src -w /src mcr.microsoft.com/azterraform:latest checkov --skip-framework dockerfile --quiet -d ./ -->
 <!-- -->
 <!-- BEGIN_TF_DOCS -->
+## Resources
+
+| Name                                                                                                                               | Type     |
+|------------------------------------------------------------------------------------------------------------------------------------|----------|
+| [azurerm_resource_group.default](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group)   | resource |
+| [azurerm_service_plan.default](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/service_plan)       | resource |
+| [azurerm_windows_web_app.default](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/windows_web_app) | resource |
+## Inputs
+
+| Name                                                                  | Description                           | Type     | Default       | Required |
+|-----------------------------------------------------------------------|---------------------------------------|----------|---------------|:--------:|
+| <a name="input_location"></a> [location](#input\_location)            | Location to deploy the resource group | `string` | `"West US 2"` |    no    |
+| <a name="input_name_prefix"></a> [name\_prefix](#input\_name\_prefix) | Prefix of the resource name           | `string` | n/a           |   yes    |
+## Providers
+
+| Name                                                          | Version |
+|---------------------------------------------------------------|---------|
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | ~>3.8   |
+## Requirements
+
+| Name                                                                      | Version |
+|---------------------------------------------------------------------------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >=1.0   |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm)       | ~>3.8   |
 <!-- END_TF_DOCS -->
 
 ## Example
