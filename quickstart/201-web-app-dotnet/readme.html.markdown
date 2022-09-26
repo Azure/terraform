@@ -7,6 +7,8 @@ This template deploys an Azure Web App running on dotnet.
 <!-- docker run --rm -v ${pwd}:/src -w /src mcr.microsoft.com/azterraform:latest markdown-table-formatter readme.html.markdown -->
 <!-- Run the following command to lint Terraform code with tflint -->
 <!-- docker run --rm -v ${pwd}:/src -w /src mcr.microsoft.com/azterraform:latest tflint --config=.tflint.hcl -->
+<!-- Run the following command to lint Terraform code with Checkov -->
+<!-- docker run --rm -v ${pwd}:/src -w /src mcr.microsoft.com/azterraform:latest checkov --skip-framework dockerfile --quiet -d ./ -->
 <!-- -->
 <!-- BEGIN_TF_DOCS -->
 <!-- END_TF_DOCS -->
