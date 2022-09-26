@@ -1,6 +1,4 @@
 
-data "azurerm_subscription" "current" {}
-
 resource "azurerm_resource_group" "default" {
   name     = "${var.name_prefix}-rg"
   location = var.location
@@ -25,7 +23,7 @@ resource "azurerm_container_registry" "default" {
   }
 }
 
-resource "azurerm_service_plan" "default-linux" {
+resource "azurerm_service_plan" "default_linux" {
   name                = "${var.name_prefix}-sp"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
@@ -33,7 +31,7 @@ resource "azurerm_service_plan" "default-linux" {
   os_type             = "Linux"
 }
 
-resource "azurerm_service_plan" "default-windows" {
+resource "azurerm_service_plan" "default_windows" {
   name                = "${var.name_prefix}-sp"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
@@ -41,12 +39,12 @@ resource "azurerm_service_plan" "default-windows" {
   os_type             = "Windows"
 }
 
-// when setting docker container for web app, please use app_setting block to specify the container registry information such as URL and credentials, instead of docker_container_registry property in application_stack block. Service will try to locate the docker image based on linuxFxVersion/ windowsFxVersion property and they are composed following the format: DOCKER|containerRegistry/containerName:containerTag in terraform provider.
+# when setting docker container for web app, please use app_setting block to specify the container registry information such as URL and credentials, instead of docker_container_registry property in application_stack block. Service will try to locate the docker image based on linuxFxVersion/ windowsFxVersion property and they are composed following the format: DOCKER|containerRegistry/containerName:containerTag in terraform provider.
 resource "azurerm_linux_web_app" "default" {
   name                = "${var.name_prefix}-lwa"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
-  service_plan_id     = azurerm_service_plan.default-linux.id
+  service_plan_id     = azurerm_service_plan.default_linux.id
   app_settings = {
     "DOCKER_REGISTRY_SERVER_URL"          = "https://${azurerm_container_registry.default.name}.azurecr.io"
     "DOCKER_REGISTRY_SERVER_USERNAME"     = ""
@@ -64,7 +62,7 @@ resource "azurerm_windows_web_app" "test" {
   name                = "${var.name_prefix}-wwa"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
-  service_plan_id     = azurerm_service_plan.default-windows.id
+  service_plan_id     = azurerm_service_plan.default_windows.id
 
   app_settings = {
     "DOCKER_REGISTRY_SERVER_URL"          = "https://index.docker.io"
