@@ -1,13 +1,9 @@
-
-data "azurerm_subscription" "current" {}
-
 resource "azurerm_resource_group" "default" {
   name     = "${var.name_prefix}-rg"
   location = var.location
 }
 
 resource "azurerm_storage_account" "default" {
-  # Storage account names must be lower case containing only letter and numbers and less than 24 characters long.
   name                     = "${var.name_prefix}sa"
   resource_group_name      = azurerm_resource_group.default.name
   location                 = azurerm_resource_group.default.location
@@ -17,7 +13,7 @@ resource "azurerm_storage_account" "default" {
   min_tls_version = "TLS1_2"
 }
 
-resource "azurerm_service_plan" "default-linux" {
+resource "azurerm_service_plan" "default_linux" {
   name                = "${var.name_prefix}-sp"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
@@ -25,7 +21,7 @@ resource "azurerm_service_plan" "default-linux" {
   os_type             = "Linux"
 }
 
-resource "azurerm_service_plan" "default-windows" {
+resource "azurerm_service_plan" "default_windows" {
   name                = "${var.name_prefix}-sp"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
@@ -33,12 +29,12 @@ resource "azurerm_service_plan" "default-windows" {
   os_type             = "Windows"
 }
 
-// Please use application_stack in site_config to set the node version, instead of specifying the WEBSITE_NODE_DEFAULT_VERSION under app_setting block. Terraform provider will handle the app_setting and set the necessary node runtime keys such as FUNCTIONS_EXTENSION_VERSION and WEBSITE_NODE_DEFAULT_VERSION.
+# Please use application_stack in site_config to set the node version, instead of specifying the WEBSITE_NODE_DEFAULT_VERSION under app_setting block. Terraform provider will handle the app_setting and set the necessary node runtime keys such as FUNCTIONS_EXTENSION_VERSION and WEBSITE_NODE_DEFAULT_VERSION.
 resource "azurerm_linux_function_app" "default" {
   name                       = "${var.name_prefix}-fa"
   location                   = azurerm_resource_group.default.location
   resource_group_name        = azurerm_resource_group.default.name
-  service_plan_id            = azurerm_service_plan.default-linux.id
+  service_plan_id            = azurerm_service_plan.default_linux.id
   storage_account_name       = azurerm_storage_account.default.name
   storage_account_access_key = azurerm_storage_account.default.primary_access_key
   identity {
@@ -55,7 +51,7 @@ resource "azurerm_windows_function_app" "default" {
   name                       = "${var.name_prefix}-fa"
   location                   = azurerm_resource_group.default.location
   resource_group_name        = azurerm_resource_group.default.name
-  service_plan_id            = azurerm_service_plan.default-windows.id
+  service_plan_id            = azurerm_service_plan.default_windows.id
   storage_account_name       = azurerm_storage_account.default.name
   storage_account_access_key = azurerm_storage_account.default.primary_access_key
   identity {
