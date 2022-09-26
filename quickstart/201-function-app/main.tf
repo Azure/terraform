@@ -1,6 +1,6 @@
 resource "azurerm_resource_group" "default" {
   name     = "${var.name_prefix}-rg"
-  location = "var.location"
+  location =  var.location
 }
 
 resource "azurerm_storage_account" "default" {
@@ -21,12 +21,12 @@ resource "azurerm_service_plan" "default" {
   os_type             = "Linux"
 
 }
-/* please note:
-1. You may see custom (~4) is set to the app's runtime version, along with a warning says “Your app is pinned to an unsupported runtime version for ‘dotnet’. For better performance, we recommend using one of our supported versions instead: xxx.”. This is because azure function v4 runtime requires .NET6.0 but the default value is 4.0. You need to set the .netframeworkversion to v6.0 to support azure funtion v4.
-2. If you would like to set the function runtime version, please use functions_extension_version property, terraform will set the FUNCTIONS_EXTENSION_VERSION in app_setting block, you don't need to specify the key in app_setting block.
-3. If you would like to set the required number of failed requests for an instance to be deemed unhealthy and removed from the load balancer under health check feature, using health_check_eviction_time_in_min property under site_config block. Terraform will set the key WEBSITE_HEALTHCHECK_MAXPINGFAILURES
-in app_setting for you.
-*/
+# please note:
+# You may see custom (~4) is set to the app's runtime version, along with a warning says “Your app is pinned to an unsupported runtime version for ‘dotnet’. For better performance, we recommend using one of our supported versions instead: xxx.”. This is because azure function v4 runtime requires .NET6.0 but the default value is 4.0. You need to set the .netframeworkversion to v6.0 to support azure funtion v4.
+# If you would like to set the function runtime version, please use functions_extension_version property, terraform will set the FUNCTIONS_EXTENSION_VERSION in app_setting block, you don't need to specify the key in app_setting block.
+# If you would like to set the required number of failed requests for an instance to be deemed unhealthy and removed from the load balancer under health check feature, using health_check_eviction_time_in_min property under site_config block. Terraform will set the key WEBSITE_HEALTHCHECK_MAXPINGFAILURES
+# in app_setting for you.
+
 resource "azurerm_linux_function_app" "test" {
   name                       = "${var.name_prefix}-lfa"
   location                   = azurerm_resource_group.default.location
