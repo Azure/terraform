@@ -2,19 +2,14 @@
 
 This template deploys an Azure Web App running on dotnet.
 
-## Resources
-
-- [azurerm_resource_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group)
-- [azurerm_service_plan](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/service_plan)
-- [azurerm_windows_web_app](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/windows_web_app)
-- [azurerm_linux_web_app](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/linux_web_app)
-
-## Variables
-
-| Name | Description |
-|-|-|
-| `location` | (Required) Azure Region in which to deploy these resources.|
-| `name_prefix` | (Required) Prefix of the resource name.|
+<!-- Run the following commands on your Windows machine to update document -->
+<!-- docker run --rm -v ${pwd}:/src -w /src mcr.microsoft.com/azterraform:latest terraform-docs markdown table --output-file readme.html.markdown --output-mode inject ./ -->
+<!-- docker run --rm -v ${pwd}:/src -w /src mcr.microsoft.com/azterraform:latest markdown-table-formatter readme.html.markdown -->
+<!-- Run the following command to lint Terraform code with tflint -->
+<!-- docker run --rm -v ${pwd}:/src -w /src mcr.microsoft.com/azterraform:latest tflint --config=.tflint.hcl -->
+<!-- -->
+<!-- BEGIN_TF_DOCS -->
+<!-- END_TF_DOCS -->
 
 ## Example
 
