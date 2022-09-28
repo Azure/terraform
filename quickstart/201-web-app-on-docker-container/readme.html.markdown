@@ -21,7 +21,7 @@ This template deploys an Azure Function App running on Docker Container
 | [azurerm_service_plan.default_linux](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/service_plan)               | resource |
 | [azurerm_service_plan.default_windows](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/service_plan)             | resource |
 | [azurerm_user_assigned_identity.default](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/user_assigned_identity) | resource |
-| [azurerm_windows_web_app.test](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/windows_web_app)                  | resource |
+| [azurerm_windows_web_app.default](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/windows_web_app)               | resource |
 ## Inputs
 
 | Name                                                                  | Description                           | Type     | Default       | Required |

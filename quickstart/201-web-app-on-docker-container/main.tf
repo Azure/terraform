@@ -1,4 +1,3 @@
-
 resource "azurerm_resource_group" "default" {
   name     = "${var.name_prefix}-rg"
   location = var.location
@@ -11,7 +10,7 @@ resource "azurerm_user_assigned_identity" "default" {
 }
 
 resource "azurerm_container_registry" "default" {
-  name                = "${var.name_prefix}-acr"
+  name                = "${var.name_prefix}acr"
   resource_group_name = azurerm_resource_group.default.name
   location            = azurerm_resource_group.default.location
   sku                 = "Premium"
@@ -24,18 +23,18 @@ resource "azurerm_container_registry" "default" {
 }
 
 resource "azurerm_service_plan" "default_linux" {
-  name                = "${var.name_prefix}-sp"
+  name                = "${var.name_prefix}-sp-linux"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
-  sku_name            = "EP1"
+  sku_name            = "P1v3"
   os_type             = "Linux"
 }
 
 resource "azurerm_service_plan" "default_windows" {
-  name                = "${var.name_prefix}-sp"
+  name                = "${var.name_prefix}-sp-windows"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
-  sku_name            = "EP1"
+  sku_name            = "P1v3"
   os_type             = "Windows"
 }
 
@@ -53,27 +52,26 @@ resource "azurerm_linux_web_app" "default" {
   }
   site_config {
     application_stack {
-      docker_image     = "tftest/testimage"
+      docker_image     = "testimage"
       docker_image_tag = "latest"
     }
   }
 }
-resource "azurerm_windows_web_app" "test" {
+
+resource "azurerm_windows_web_app" "default" {
   name                = "${var.name_prefix}-wwa"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
   service_plan_id     = azurerm_service_plan.default_windows.id
-
   app_settings = {
     "DOCKER_REGISTRY_SERVER_URL"          = "https://index.docker.io"
     "DOCKER_REGISTRY_SERVER_USERNAME"     = ""
     "DOCKER_REGISTRY_SERVER_PASSWORD"     = ""
     "WEBSITES_ENABLE_APP_SERVICE_STORAGE" = "false"
   }
-
   site_config {
     application_stack {
-      docker_container_name = "tftest/testimage"
+      docker_container_name = "testimage"
       docker_container_tag  = "latest"
     }
   }
