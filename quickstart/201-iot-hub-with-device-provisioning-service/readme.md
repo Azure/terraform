@@ -22,7 +22,6 @@ This template deploys an instance of [Device Provisioning Service](https://learn
 | ---- | ----------- | ------- |
 | `resource_group_location` | Location of the resource group. | `eastus` |
 | `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random ID so the name is unique in your Azure subscription. | `rg` |
-| `storage_account_name_prefix` | Prefix of the storage account name that's combined with a random ID so name is unique in your Azure subscription. | `sa` |
 | `eventhub_namespace_name_prefix` | Prefix of the event hub namespace name that's combined with a random ID so the name is unique in your Azure subscription. | `namespace` |
 | `iothub_name_prefix` | Prefix of the IoT hub name that's combined with a random ID so the name is unique in your Azure subscription. | `iothub` |
 | `dps_name_prefix` | Prefix of the dps name that's combined with a random ID so the name is unique in your Azure subscription. | `dps` |

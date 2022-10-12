@@ -9,9 +9,9 @@ resource "azurerm_resource_group" "rg" {
 
 # Create storage account & container
 resource "random_string" "sa_name" {
-  length = 12
+  length  = 12
   special = false
-  upper = false
+  upper   = false
 }
 
 resource "azurerm_storage_account" "sa" {
@@ -30,12 +30,12 @@ resource "azurerm_storage_container" "my_terraform_container" {
 
 
 # Create an Event Hub & Authorization Rule
-resource "random_pet" "eventhubnamespace_name" {
+resource "random_pet" "eventhub_namespace_name" {
   prefix = var.eventhub_namespace_name_prefix
 }
 
 resource "azurerm_eventhub_namespace" "namespace" {
-  name                = random_pet.eventhubnamespace_name.id
+  name                = random_pet.eventhub_namespace_name.id
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   sku                 = "Basic"
@@ -82,7 +82,7 @@ resource "azurerm_iothub" "iothub" {
     max_chunk_size_in_bytes    = 10485760
     container_name             = azurerm_storage_container.my_terraform_container.name
     encoding                   = "Avro"
-   file_name_format           = "{iothub}/{partition}_{YYYY}_{MM}_{DD}_{HH}_{mm}"
+    file_name_format           = "{iothub}/{partition}_{YYYY}_{MM}_{DD}_{HH}_{mm}"
   }
 
   endpoint {
@@ -129,7 +129,7 @@ resource "azurerm_iothub" "iothub" {
 }
 
 #Create IoT Hub Access Policy
-resource "azurerm_iothub_shared_access_policy" "hubaccesspolicy" {
+resource "azurerm_iothub_shared_access_policy" "hub_access_policy" {
   name                = "terraform-policy"
   resource_group_name = azurerm_resource_group.rg.name
   iothub_name         = azurerm_iothub.iothub.name
@@ -157,7 +157,7 @@ resource "azurerm_iothub_dps" "dps" {
   }
 
   linked_hub {
-    connection_string       = azurerm_iothub_shared_access_policy.hubaccesspolicy.primary_connection_string
+    connection_string       = azurerm_iothub_shared_access_policy.hub_access_policy.primary_connection_string
     location                = azurerm_resource_group.rg.location
     allocation_weight       = 150
     apply_allocation_policy = true
