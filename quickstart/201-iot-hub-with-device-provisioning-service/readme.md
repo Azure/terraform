@@ -1,6 +1,6 @@
-# Azure IoT Hub Device Provisioning Service
+# Azure IoT Hub and IoT Hub Device Provisioning Service
 
-This template deploys an instance of [Device Provisioning Service](https://learn.microsoft.com/azure/iot-dps/) on Azure.
+This template deploys an instance of [Azure IoT Hub](https://learn.microsoft.com/azure/iot-hub/) and [IoT Hub Device Provisioning Service](https://learn.microsoft.com/azure/iot-dps/) on Azure.
 
 ## Terraform resource types
 

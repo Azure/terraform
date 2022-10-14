@@ -71,7 +71,7 @@ resource "azurerm_iothub" "iothub" {
 
   sku {
     name     = "S1"
-    capacity = "1"
+    capacity = 1
   }
 
   endpoint {
@@ -134,8 +134,8 @@ resource "azurerm_iothub_shared_access_policy" "hub_access_policy" {
   resource_group_name = azurerm_resource_group.rg.name
   iothub_name         = azurerm_iothub.iothub.name
 
-  registry_read  = true
-  registry_write = true
+  registry_read   = true
+  registry_write  = true
   service_connect = true
 }
 
@@ -153,7 +153,7 @@ resource "azurerm_iothub_dps" "dps" {
 
   sku {
     name     = "S1"
-    capacity = "1"
+    capacity = 1
   }
 
   linked_hub {
