@@ -93,15 +93,15 @@ resource "azurerm_windows_function_app" "default" {
 
   storage_key_vault_secret_id = azurerm_key_vault_secret.default.id
 
-  identity {
-    type         = "UserAssigned"
-    identity_ids = [azurerm_user_assigned_identity.default.id]
-  }
-
   key_vault_reference_identity_id = azurerm_user_assigned_identity.default.id
 
   app_settings = {
     WEBSITE_SKIP_CONTENTSHARE_VALIDATION = 1
+  }
+
+  identity {
+    type         = "UserAssigned"
+    identity_ids = [azurerm_user_assigned_identity.default.id]
   }
 
   site_config {
