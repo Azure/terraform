@@ -46,8 +46,8 @@ resource "azurerm_linux_web_app" "default" {
   service_plan_id     = azurerm_service_plan.default_linux.id
   app_settings = {
     "DOCKER_REGISTRY_SERVER_URL"          = "https://${azurerm_container_registry.default.name}.azurecr.io"
-    "DOCKER_REGISTRY_SERVER_USERNAME"     = ""
-    "DOCKER_REGISTRY_SERVER_PASSWORD"     = ""
+    "DOCKER_REGISTRY_SERVER_USERNAME"     = "username"
+    "DOCKER_REGISTRY_SERVER_PASSWORD"     = "password"
     "WEBSITES_ENABLE_APP_SERVICE_STORAGE" = "false"
   }
   site_config {
@@ -65,8 +65,8 @@ resource "azurerm_windows_web_app" "default" {
   service_plan_id     = azurerm_service_plan.default_windows.id
   app_settings = {
     "DOCKER_REGISTRY_SERVER_URL"          = "https://index.docker.io"
-    "DOCKER_REGISTRY_SERVER_USERNAME"     = ""
-    "DOCKER_REGISTRY_SERVER_PASSWORD"     = ""
+    "DOCKER_REGISTRY_SERVER_USERNAME"     = "username"
+    "DOCKER_REGISTRY_SERVER_PASSWORD"     = "password"
     "WEBSITES_ENABLE_APP_SERVICE_STORAGE" = "false"
   }
   site_config {
