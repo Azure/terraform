@@ -14,7 +14,7 @@ resource "azurerm_storage_account" "default" {
 }
 
 resource "azurerm_service_plan" "default_linux" {
-  name                = "${var.name_prefix}-sp"
+  name                = "${var.name_prefix}-sp-linux"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
   sku_name            = "Y1"
@@ -22,7 +22,7 @@ resource "azurerm_service_plan" "default_linux" {
 }
 
 resource "azurerm_service_plan" "default_windows" {
-  name                = "${var.name_prefix}-sp"
+  name                = "${var.name_prefix}-sp-windows"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
   sku_name            = "Y1"
@@ -31,7 +31,7 @@ resource "azurerm_service_plan" "default_windows" {
 
 # Please use application_stack in site_config to set the node version, instead of specifying the WEBSITE_NODE_DEFAULT_VERSION under app_setting block. Terraform provider will handle the app_setting and set the necessary node runtime keys such as FUNCTIONS_EXTENSION_VERSION and WEBSITE_NODE_DEFAULT_VERSION.
 resource "azurerm_linux_function_app" "default" {
-  name                       = "${var.name_prefix}-fa"
+  name                       = "${var.name_prefix}-fa-linux"
   location                   = azurerm_resource_group.default.location
   resource_group_name        = azurerm_resource_group.default.name
   service_plan_id            = azurerm_service_plan.default_linux.id
@@ -48,7 +48,7 @@ resource "azurerm_linux_function_app" "default" {
 }
 
 resource "azurerm_windows_function_app" "default" {
-  name                       = "${var.name_prefix}-fa"
+  name                       = "${var.name_prefix}-fa-windows"
   location                   = azurerm_resource_group.default.location
   resource_group_name        = azurerm_resource_group.default.name
   service_plan_id            = azurerm_service_plan.default_windows.id
