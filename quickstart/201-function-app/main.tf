@@ -1,6 +1,6 @@
 resource "azurerm_resource_group" "default" {
   name     = "${var.name_prefix}-rg"
-  location =  var.location
+  location = var.location
 }
 
 resource "azurerm_storage_account" "default" {
@@ -28,14 +28,14 @@ resource "azurerm_service_plan" "default" {
 # in app_setting for you.
 
 resource "azurerm_linux_function_app" "test" {
-  name                       = "${var.name_prefix}-lfa"
-  location                   = azurerm_resource_group.default.location
-  resource_group_name        = azurerm_resource_group.default.name
-  service_plan_id            = azurerm_service_plan.default.id
-  storage_account_name       = azurerm_storage_account.default.name
-  storage_account_access_key = azurerm_storage_account.default.primary_access_key
-  https_only                 = true
-  builtin_logging_enabled    = false
+  name                        = "${var.name_prefix}-lfa"
+  location                    = azurerm_resource_group.default.location
+  resource_group_name         = azurerm_resource_group.default.name
+  service_plan_id             = azurerm_service_plan.default.id
+  storage_account_name        = azurerm_storage_account.default.name
+  storage_account_access_key  = azurerm_storage_account.default.primary_access_key
+  https_only                  = true
+  builtin_logging_enabled     = false
   functions_extension_version = "~4"
 
   site_config {
