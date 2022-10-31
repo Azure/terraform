@@ -4,7 +4,11 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "=2.79.1"
+      version = "=2.78.0"
+    }
+
+    azureml = {
+      source = "registry.terraform.io/Telemaco019/azureml"
     }
   }
 }

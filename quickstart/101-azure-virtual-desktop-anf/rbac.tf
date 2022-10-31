@@ -8,7 +8,7 @@ data "azurerm_role_definition" "role" { # access an existing built-in role
 }
 
 resource "azuread_group" "aad_group" {
-  display_name = var.aad_group_name
+  display_name     = var.aad_group_name
   security_enabled = true
 }
 

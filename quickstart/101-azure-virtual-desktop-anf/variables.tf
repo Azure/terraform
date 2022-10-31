@@ -1,12 +1,35 @@
+variable "resource_group_location" {
+  default     = "eastus"
+  description = "Location of the resource group."
+}
+
+variable "rg" {
+  type        = string
+  default     = "rg-avd-compute"
+  description = "Name of the Resource group in which to deploy session host"
+}
+
 variable "rg_name" {
   type        = string
-  default     = "avd-resources-rg"
-  description = "Name of the Resource group in which to deploy these resources"
+  default     = "rg-avd-resources"
+  description = "Name of the Resource group in which to deploy service objects"
+}
+
+variable "rg_stor" {
+  type        = string
+  default     = "rg-avd-storage"
+  description = "Name of the Resource group in which to deploy storage"
+}
+
+variable "rg_shared_name" {
+  type        = string
+  default     = "rg-shared-resources"
+  description = "Name of the Resource group in which to deploy shared resources"
 }
 
 variable "deploy_location" {
   type        = string
-  default     = "east us"
+  default     = "eastus"
   description = "The Azure Region in which all resources in this example should be created."
 }
 
@@ -28,6 +51,13 @@ variable "ad_vnet" {
   description = "Name of domain controller vnet"
 }
 
+variable "rfc3339" {
+  type        = string
+  default     = "2022-03-30T12:43:13Z"
+  description = "Registration token expiration"
+}
+
+
 variable "dns_servers" {
   type        = list(string)
   default     = ["10.0.1.4", "168.63.129.16"]
@@ -36,12 +66,12 @@ variable "dns_servers" {
 
 variable "vnet_range" {
   type        = list(string)
-  default     = ["10.1.0.0/16"]
+  default     = ["10.2.0.0/16"]
   description = "Address range for deployment VNet"
 }
 variable "subnet_range" {
   type        = list(string)
-  default     = ["10.1.0.0/24"]
+  default     = ["10.2.0.0/24"]
   description = "Address range for session host subnet"
 }
 
@@ -54,8 +84,8 @@ variable "ad_rg" {
 variable "avd_users" {
   description = "AVD users"
   default = [
-    "avduser01@infra.local",
-    "avduser01@infra.local"
+    "avduser01@contoso.net",
+    "avduser02@contoso.net"
   ]
 }
 
@@ -84,7 +114,7 @@ variable "domain_name" {
 
 variable "domain_user_upn" {
   type        = string
-  default     = "admin" # do not include domain name as this is appended
+  default     = "domainjoineruser" # do not include domain name as this is appended
   description = "Username for domain join (do not include domain name as this is appended)"
 }
 
@@ -140,8 +170,7 @@ variable "netapp_volume_path" {
 variable "netapp_subnet_name" {
   default = "NetAppSubnet"
 }
-
 variable "netapp_address" {
-  default = ["10.1.1.0/24"]
+  default     = ["10.1.1.0/24"]
   description = "Address range for NetApp Subnet"
 }

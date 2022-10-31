@@ -1,5 +1,5 @@
 locals {
-  registration_token = azurerm_virtual_desktop_host_pool.hostpool.registration_info[0].token
+  registration_token = azurerm_virtual_desktop_host_pool_registration_info.registrationinfo.token
 }
 
 resource "random_string" "AVD_local_password" {
@@ -10,11 +10,16 @@ resource "random_string" "AVD_local_password" {
   override_special = "*!@#?"
 }
 
+resource "azurerm_resource_group" "rg" {
+  name     = var.rg
+  location = var.resource_group_location
+}
+
 resource "azurerm_network_interface" "avd_vm_nic" {
   count               = var.rdsh_count
   name                = "${var.prefix}-${count.index + 1}-nic"
-  resource_group_name = var.rg_name
-  location            = var.deploy_location
+  resource_group_name = azurerm_resource_group.rg.name
+  location            = azurerm_resource_group.rg.location
 
   ip_configuration {
     name                          = "nic${count.index + 1}_config"
@@ -30,8 +35,8 @@ resource "azurerm_network_interface" "avd_vm_nic" {
 resource "azurerm_windows_virtual_machine" "avd_vm" {
   count                 = var.rdsh_count
   name                  = "${var.prefix}-${count.index + 1}"
-  resource_group_name   = var.rg_name
-  location              = var.deploy_location
+  resource_group_name   = azurerm_resource_group.rg.name
+  location              = azurerm_resource_group.rg.location
   size                  = var.vm_size
   network_interface_ids = ["${azurerm_network_interface.avd_vm_nic.*.id[count.index]}"]
   provision_vm_agent    = true

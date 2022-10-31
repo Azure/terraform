@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "log" {
-  name     = "${var.shared}-resources"
+  name     = var.rg_shared_name
   location = var.deploy_location
 }
 

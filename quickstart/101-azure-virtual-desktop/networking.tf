@@ -44,13 +44,13 @@ data "azurerm_virtual_network" "ad_vnet_data" {
 }
 
 resource "azurerm_virtual_network_peering" "peer1" {
-  name                      = "peer_avd_ad"
+  name                      = "peer_avdspoke_ad"
   resource_group_name       = var.rg_name
   virtual_network_name      = azurerm_virtual_network.vnet.name
   remote_virtual_network_id = data.azurerm_virtual_network.ad_vnet_data.id
 }
 resource "azurerm_virtual_network_peering" "peer2" {
-  name                      = "peer_ad_avd"
+  name                      = "peer_ad_avdspoke"
   resource_group_name       = var.ad_rg
   virtual_network_name      = var.ad_vnet
   remote_virtual_network_id = azurerm_virtual_network.vnet.id

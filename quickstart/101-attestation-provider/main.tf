@@ -1,28 +1,15 @@
-terraform {
-
-  required_version = ">=0.12"
-    
-  required_providers {
-    azurerm = {
-      source = "hashicorp/azurerm"
-      version = "~>2.0"
-    }
-  }
-}
-
-provider "azurerm" {
-  features {}
+resource "random_pet" "rg_name" {
+  prefix = var.resource_group_name_prefix
 }
 
 resource "azurerm_resource_group" "rg" {
-  name = var.resource_group_name
   location = var.resource_group_location
+  name     = random_pet.rg_name.id
 }
 
-resource "azurerm_attestation_provider" "corpAttestation" {
-    name                              = var.attestation_provider_name
-    resource_group_name               = azurerm_resource_group.rg.name
-    location                          = azurerm_resource_group.rg.location
-
-    policy_signing_certificate_data   = file(var.policy_file)
+resource "azurerm_attestation_provider" "corp_attestation" {
+  location                        = azurerm_resource_group.rg.location
+  name                            = var.attestation_provider_name
+  resource_group_name             = azurerm_resource_group.rg.name
+  policy_signing_certificate_data = file(var.policy_file)
 }
