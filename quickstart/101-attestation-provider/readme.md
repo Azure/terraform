@@ -12,8 +12,8 @@ This template deploys an [Attestation provider](/azure/attestation/overview) on 
 
 | Name | Description | Default |
 |-|-|-|
-| `resource_group_name_prefix` | (Optional) Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription.| rg |
-| `resource_group_location` | (Optional) Azure Region in which to deploy these resources.| eastus |
+| `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. | rg |
+| `resource_group_location` | Location of the resource group. | eastus |
 | `attestation_provider_name` | Name of the Attestation provider | attestationprovider007 |
 
 ## Example
