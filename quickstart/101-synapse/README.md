@@ -25,11 +25,11 @@ Network connectivity to the workspace is allowed over public endpoints, making t
 | name | Name of the deployment | - |
 | environment | The deployment environment name (used for pre- and postfixing resource names) | dev  |
 | location | The Azure region used for deployments | East US |
-| aad_admin.login | The login name of the Azure AD Administrator of this Synapse Workspace | - |
-| aad_admin.object_id| The object id of the Azure AD Administrator of this Synapse Workspace | - |
-| aad_admin.tenant_id| The tenant id of the Azure AD Administrator of this Synapse Workspace | - |
-| synadmin_username| Specifies The login name of the SQL administrator | sqladminuser |
-| synadmin_password| The Password associated with the sql_administrator_login for the SQL administrator | ThisIsNotVerySecure! |
+| aad_admin.login | The login name of the Azure AD Administrator of the Synapse Workspace | - |
+| aad_admin.object_id| The object id of the Azure AD Administrator of the Synapse Workspace | - |
+| aad_admin.tenant_id| The tenant id of the Azure AD Administrator of the Synapse Workspace | - |
+| synadmin_username| Specifies the login name of the SQL administrator | sqladminuser |
+| synadmin_password| The Password associated with the synadmin_username for the SQL administrator | ThisIsNotVerySecure! |
 | enable_syn_sparkpool| A feature flag to enable/disable the Spark pool | false |
 | enable_syn_sqlpool| A feature flag to enable/disable the SQL pool | false |
 
