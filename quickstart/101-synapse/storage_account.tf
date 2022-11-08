@@ -6,6 +6,8 @@ resource "azurerm_storage_account" "default" {
   account_replication_type = "LRS"
   account_kind             = "StorageV2"
   is_hns_enabled           = true
+
+  tags = local.tags
 }
 
 resource "azurerm_role_assignment" "sbdc_current_user" {
