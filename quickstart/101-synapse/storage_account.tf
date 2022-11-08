@@ -1,13 +1,11 @@
 resource "azurerm_storage_account" "default" {
-  name                     = "st${local.safe_name}${local.safe_environment}"
+  name                     = "st${local.safe_basename}"
   resource_group_name      = azurerm_resource_group.default.name
   location                 = azurerm_resource_group.default.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
   account_kind             = "StorageV2"
   is_hns_enabled           = true
-
-  tags = local.tags
 }
 
 resource "azurerm_role_assignment" "sbdc_current_user" {

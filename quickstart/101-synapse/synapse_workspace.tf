@@ -9,8 +9,6 @@ resource "azurerm_synapse_workspace" "default" {
 
   managed_resource_group_name = "${azurerm_resource_group.default.name}-syn-managed"
 
-  public_network_access_enabled = true
-
   aad_admin {
     login     = var.aad_login.name
     object_id = var.aad_login.object_id
@@ -20,8 +18,6 @@ resource "azurerm_synapse_workspace" "default" {
   identity {
     type = "SystemAssigned"
   }
-
-  tags = local.tags
 }
 
 resource "azurerm_synapse_firewall_rule" "allow_my_ip" {
