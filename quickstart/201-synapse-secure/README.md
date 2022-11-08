@@ -12,22 +12,16 @@ This configuration describes the minimal set of resources you require to get sta
 
 | Terraform Resource Type | Description |
 | - | - |
-| `azurerm_resource_group` | The resource group all resources get deployed into |
-| `azurerm_bastion_host` | An Azure Bastion Instance to securely RDP/SSH into Virtual Machines deployed into the Virtual Network |
-| `azurerm_windows_virtual_machine` | A Windows Data Science Virtual Machine used for connecting to the Azure Machine Learning workspace |
-| `azurerm_application_insights` | An Azure Application Insights instance associated to the Azure Machine Learning workspace |
-| `azurerm_key_vault` | An Azure Key Vault instance associated to the Azure Machine Learning workspace |
-| `azurerm_storage_account` | An Azure Storage instance associated to the Azure Machine Learning workspace |
-| `azurerm_container_registry` | An Azure Container Registry instance associated to the Azure Machine Learning workspace |
-| `azurerm_machine_learning_workspace` | An Azure Machine Learning workspace instance |
-| `azurerm_virtual_network` | An Azure Machine Learning workspace instance |
-| `azurerm_subnet` | An Azure Machine Learning workspace instance |
-| `azurerm_private_dns_zone` | Private DNS Zones for FQDNs required for Azure Machine Learning and associated resources |
-| `azurerm_private_dns_zone_virtual_network_link` | Virtual network links of the Private DNS Zones to the virtual network resource |
-| `azurerm_private_endpoint` | Private Endpoints for the Azure Machine Learning workspace and associated resources |
-| `azurerm_machine_learning_compute_instance` | An Azure Machine Learning compute instance a single-node managed compute. |
-| `azurerm_machine_learning_compute_cluster` | An Azure Machine Learning compute cluster as multi-node shared and managed compute. |
-| `azurerm_network_security_group` | Network security group with required inbound and outbound rules for Azure Machine Learning. |
+| `azurerm_resource_group` | The resource group all resources get deployed into. |
+| `azurerm_bastion_host` | An Azure Bastion Instance to securely RDP into Virtual Machines deployed into the Virtual Network. |
+| `azurerm_windows_virtual_machine` | A Windows Data Science Virtual Machine (jumphost) used for connecting to the Azure Synapse Analytics workspace. |
+| `azurerm_storage_account` | An Azure Storage instance associated to the Azure Synapse Analytics workspace. |
+| `azurerm_synapse_workspace` | An Azure Synapse Analytics workspace instance. |
+| `azurerm_synapse_private_link_hub` | An Azure Synapse Private Link Hub to allow securely connecting to Synapse Studio. |
+| `azurerm_synapse_spark_pool` | An Azure Synapse Analytics spark pool. |
+| `azurerm_synapse_sql_pool` | An Azure Synapse Analytics dedicated SQL pool. |
+| `azurerm_virtual_network` | A default vnet. |
+| `azurerm_subnet` | `bastion` and `default` subnets. |
 
 ## Variables
 
@@ -36,14 +30,16 @@ This configuration describes the minimal set of resources you require to get sta
 | name | Name of the deployment | - |
 | environment | The deployment environment name (used for pre- and postfixing resource names) | dev  |
 | location | The Azure region used for deployments | East US |
-| vnet_address_space | Address space of the virtual network | ["10.0.0.0/16"] |
-| training_subnet_address_space | Address space of the training subnet | ["10.0.1.0/24"] |
-| aks_subnet_address_space | Address space of the aks subnet | ["10.0.2.0/23"] |
-| ml_subnet_address_space | Address space of the ML workspace subnet | ["10.0.0.0/24"] |
-| image_build_compute_name | Name of the compute cluster to be created and configured for building docker images (Azure ML Environments) | image-builder |
-| dsvm_name | Name of the Windows Data Science VM resource | vmdsvm01 |
-| dsvm_admin_username | Admin username of the Windows Data Science VM | azureadmin |
-| dsvm_host_password | Password for the admin username of the Data Science VM | - |
+| aad_admin.login | The login name of the Azure AD Administrator of the Synapse Workspace | - |
+| aad_admin.object_id| The object id of the Azure AD Administrator of the Synapse Workspace | - |
+| aad_admin.tenant_id| The tenant id of the Azure AD Administrator of the Synapse Workspace | - |
+| synadmin_username| Specifies the login name of the SQL administrator | sqladminuser |
+| synadmin_password| The Password associated with the synadmin_username for the SQL administrator | ThisIsNotVerySecure! |
+| jumphost_username| Admin username of the VM | azureuser |
+| jumphost_password| Password for the admin username of the VM | ThisIsNotVerySecure! |
+| enable_syn_sparkpool| A feature flag to enable/disable the Spark pool | false |
+| enable_syn_sqlpool| A feature flag to enable/disable the SQL pool | false |
+
 
 
 ## Usage
