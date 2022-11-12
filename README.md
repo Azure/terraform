@@ -1,5 +1,5 @@
 # Contributing
-This project welcomes contributions and suggestions.
+This project welcomes contributions and suggestions.printf(Test);
 
 ## Modules
 Module summary
