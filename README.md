@@ -1,6 +1,8 @@
+
 # Contributing
 This project welcomes contributions and suggestions.
-
+#BITSTEST Assignment
+printf(Test);
 ## Modules
 Module summary
 [Module contribution guide](./module/CONTRIBUTE.md)
