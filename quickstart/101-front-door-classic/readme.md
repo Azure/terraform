@@ -12,11 +12,11 @@ This template deploys an [Azure Front Door (classic)](https://registry.terraform
 
 ## Variables
 
-| Name | Description |
-|-|-|
-| `location` | The location for all the deployed resources. |
-| `resource_group_name` | The name of the resource group to deploy. |
-| `backend_address` | The host name or IP address of the backend application. |
+| Name | Description | Default Value |
+|-|-|-|
+| `location` | The location for all the deployed resources. | `westus2` |
+| `resource_group_name` | The name of the resource group to deploy. | `FrontDoor` |
+| `backend_address` | The host name or IP address of the backend application. | |
 
 ## Example
 
