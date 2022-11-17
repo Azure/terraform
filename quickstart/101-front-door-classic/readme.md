@@ -6,8 +6,9 @@ This template deploys an [Azure Front Door (classic)](https://registry.terraform
 
 | Terraform Resource Type | Description |
 | - | - |
-| `azurerm_resource_group` | The resource group for all the deployed resources.|
+| `azurerm_resource_group` | The resource group for all the deployed resources. |
 | `azurerm_frontdoor` | The Front Door (classic). |
+| `random_id` | A random identifier generator to generate a unique Front Door resource name. |
 
 ## Variables
 

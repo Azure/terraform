@@ -11,7 +11,3 @@ variable "resource_group_name" {
 variable "backend_address" {
   type = string
 }
-
-resource "random_id" "front_door_name" {
-  byte_length = 8
-}
