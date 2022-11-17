@@ -31,11 +31,3 @@ variable "front_door_sku_name" {
     error_message = "The SKU value must be Standard_AzureFrontDoor or Premium_AzureFrontDoor."
   }
 }
-
-resource "random_id" "app_name" {
-  byte_length = 8
-}
-
-resource "random_id" "front_door_endpoint_name" {
-  byte_length = 8
-}

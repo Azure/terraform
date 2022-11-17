@@ -14,17 +14,18 @@ This template deploys an [Azure Front Door Standard/Premium profile](https://reg
 | `azurerm_cdn_frontdoor_route` | The Front Door route. |
 | `azurerm_service_plan` | The App Service plan. |
 | `azurerm_windows_web_app` | The App Service app. |
+| `random_id` | Two random identifier generators to generate a unique Front Door endpoint resource name and App Service app name. |
 
 ## Variables
 
-| Name | Description |
-|-|-|
-| `location` | The location for all the deployed resources. |
-| `resource_group_name` | The name of the resource group. |
-| `app_service_plan_sku_name` | The SKU for the App Service plan. |
-| `app_service_plan_sku_tier_name` | The name of the tier that the App Service plan SKU is in. |
-| `app_service_plan_capacity` | The capacity (number of worker instances) for the App Service plan. |
-| `front_door_sku_name` | The name of the SKU for the Front Door profile. |
+| Name | Description | Default Value |
+|-|-|-|
+| `location` | The location for all the deployed resources. | `westus2` |
+| `resource_group_name` | The name of the resource group. | `FrontDoor` |
+| `app_service_plan_sku_name` | The SKU for the App Service plan. | `S1` |
+| `app_service_plan_sku_tier_name` | The name of the tier that the App Service plan SKU is in. | `Standard` |
+| `app_service_plan_capacity` | The capacity (number of worker instances) for the App Service plan. | 1 |
+| `front_door_sku_name` | The name of the SKU for the Front Door profile. Must be either `Standard_AzureFrontDoor` or `Premium_AzureFrontDoor`. | `Standard_AzureFrontDoor` |
 
 ## Example
 
