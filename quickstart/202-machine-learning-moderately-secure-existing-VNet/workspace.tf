@@ -21,11 +21,11 @@ resource "azurerm_key_vault" "default" {
 }
 
 resource "azurerm_storage_account" "default" {
-  name                     = "st${var.name}${var.environment}"
-  location                 = azurerm_resource_group.default.location
-  resource_group_name      = azurerm_resource_group.default.name
-  account_tier             = "Standard"
-  account_replication_type = "GRS"
+  name                            = "st${var.name}${var.environment}"
+  location                        = azurerm_resource_group.default.location
+  resource_group_name             = azurerm_resource_group.default.name
+  account_tier                    = "Standard"
+  account_replication_type        = "GRS"
   allow_nested_items_to_be_public = false
 
   network_rules {
