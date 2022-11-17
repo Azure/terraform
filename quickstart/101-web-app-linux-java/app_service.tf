@@ -22,8 +22,6 @@ resource "azurerm_app_service" "default" {
 
   site_config {
     always_on        = true
-    java_version           = "1.8"
-    java_container         = "tomcat"
-    java_container_version = "9.0"
+    linux_fx_version = "TOMCAT|8.5-java11"
   }
 }
