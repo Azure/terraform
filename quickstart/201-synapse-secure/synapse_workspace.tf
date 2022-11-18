@@ -8,7 +8,9 @@ resource "azurerm_synapse_workspace" "default" {
   sql_administrator_login_password = var.synadmin_password
 
   managed_virtual_network_enabled = true
-  managed_resource_group_name = "${azurerm_resource_group.default.name}-syn-managed"
+  managed_resource_group_name     = "${azurerm_resource_group.default.name}-syn-managed"
+
+  public_network_access_enabled = false
 
   aad_admin {
     login     = var.aad_login.name
@@ -19,13 +21,6 @@ resource "azurerm_synapse_workspace" "default" {
   identity {
     type = "SystemAssigned"
   }
-}
-
-resource "azurerm_synapse_firewall_rule" "allow_my_ip" {
-  name                 = "AllowMyPublicIp"
-  synapse_workspace_id = azurerm_synapse_workspace.default.id
-  start_ip_address     = data.http.ip.body
-  end_ip_address       = data.http.ip.body
 }
 
 # DNS Zones

@@ -32,25 +32,21 @@ variable "aad_login" {
 variable "jumphost_username" {
   type        = string
   description = "Admin username of the VM"
-  default     = "azureuser"
 }
 
 variable "jumphost_password" {
   type        = string
   description = "Password for the admin username of the VM"
-  default     = "ThisIsNotVerySecure!"
 }
 
 variable "synadmin_username" {
   type        = string
   description = "Specifies The login name of the SQL administrator"
-  default     = "sqladminuser"
 }
 
 variable "synadmin_password" {
   type        = string
   description = "The Password associated with the sql_administrator_login for the SQL administrator"
-  default     = "ThisIsNotVerySecure!"
 }
 
 variable "enable_syn_sparkpool" {

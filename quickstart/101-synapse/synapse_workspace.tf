@@ -23,6 +23,6 @@ resource "azurerm_synapse_workspace" "default" {
 resource "azurerm_synapse_firewall_rule" "allow_my_ip" {
   name                 = "AllowMyPublicIp"
   synapse_workspace_id = azurerm_synapse_workspace.default.id
-  start_ip_address     = data.http.ip.body
-  end_ip_address       = data.http.ip.body
+  start_ip_address     = data.http.ip.response_body
+  end_ip_address       = data.http.ip.response_body
 }

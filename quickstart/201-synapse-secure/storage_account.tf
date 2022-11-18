@@ -41,7 +41,7 @@ resource "azurerm_storage_account_network_rules" "firewall_rules" {
   storage_account_id = azurerm_storage_account.default.id
 
   default_action             = "Deny"
-  ip_rules                   = [data.http.ip.body]
+  ip_rules                   = [data.http.ip.response_body]
   virtual_network_subnet_ids = []
   bypass                     = ["None"]
 }

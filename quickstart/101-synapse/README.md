@@ -9,7 +9,6 @@ Network connectivity to the workspace is allowed over public endpoints, making t
 
 ## Resources
 
-
 | Terraform Resource Type | Description |
 | - | - |
 | `azurerm_resource_group` | The resource group all resources get deployed into. |
@@ -46,6 +45,6 @@ Network connectivity to the workspace is allowed over public endpoints, making t
 
 ## Learn more
 
-- If you are new to Azure Synapse Analytics, see [Azure Synapse Analytics service](https://azure.microsoft.com/services/synapse-analytics/) and [Azure Synapse Analytics documentation](https://learn.microsoft.com/azure/synapse-analytics/overview-what-is).
-- To learn more about security configurations in Azure Synapse Analytics, see [Azure Synapse Analytics security white paper](https://learn.microsoft.com/azure/synapse-analytics/guidance/security-white-paper-introduction).
+- If you are new to Azure Synapse Analytics, see [Azure Synapse Analytics service](https://azure.microsoft.com/services/synapse-analytics/) and [Azure Synapse Analytics documentation](https://learn.microsoft.com/azure/synapse-analytics/guidance/success-by-design-introduction).
+- To learn more about security configurations in Azure Synapse Analytics, see [Azure Synapse Analytics security white paper](https://learn.microsoft.com/azure/synapse-analytics/guidance/security-white-paper-introduction) and watch [Success with Synapse - Security videos](https://www.youtube.com/playlist?list=PLzUAjXZBFU9OWYjSI5TdlpMV0ltAjLaNw).
 - For all configurations of Azure Synapse Analytics in Terraform, see [Terraform Hashicorp AzureRM provider documentation](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/synapse_workspace).

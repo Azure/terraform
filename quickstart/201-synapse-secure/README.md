@@ -6,7 +6,7 @@ and its associated resources including Azure Data Lake Storage (gen2), Synapse S
 In addition to these core services, this configuration specifies any networking components that are required to set up Azure Synapse Analytics
 for private network connectivity using [Azure Private Link](https://docs.microsoft.com/en-us/azure/private-link/). 
 
-This configuration describes the minimal set of resources you require to get started with Azure Synapse Analytics in a network-isolated set-up. This configuration creates new network components. Use Azure Bastion to securely connect to the Virtual Machine.
+This configuration describes the minimal set of resources you require to get started with Azure Synapse Analytics in a network-isolated set-up. This configuration creates new network components. Use Azure Bastion to securely connect to the Virtual Machine. 
 
 ## Resources
 
@@ -40,8 +40,6 @@ This configuration describes the minimal set of resources you require to get sta
 | enable_syn_sparkpool| A feature flag to enable/disable the Spark pool | false |
 | enable_syn_sqlpool| A feature flag to enable/disable the SQL pool | false |
 
-
-
 ## Usage
 
 1. Copy `terraform.tfvars.example` to `terraform.tfvars`
@@ -55,6 +53,6 @@ This configuration describes the minimal set of resources you require to get sta
 
 ## Learn more
 
-- If you are new to Azure Synapse Analytics, see [Azure Synapse Analytics service](https://azure.microsoft.com/services/synapse-analytics/) and [Azure Synapse Analytics documentation](https://learn.microsoft.com/azure/synapse-analytics/overview-what-is).
-- To learn more about security configurations in Azure Synapse Analytics, see [Azure Synapse Analytics security white paper](https://learn.microsoft.com/azure/synapse-analytics/guidance/security-white-paper-introduction).
+- If you are new to Azure Synapse Analytics, see [Azure Synapse Analytics service](https://azure.microsoft.com/services/synapse-analytics/) and [Azure Synapse Analytics documentation](https://learn.microsoft.com/azure/synapse-analytics/guidance/success-by-design-introduction).
+- To learn more about security configurations in Azure Synapse Analytics, see [Azure Synapse Analytics security white paper](https://learn.microsoft.com/azure/synapse-analytics/guidance/security-white-paper-introduction) and watch [Success with Synapse - Security videos](https://www.youtube.com/playlist?list=PLzUAjXZBFU9OWYjSI5TdlpMV0ltAjLaNw).
 - For all configurations of Azure Synapse Analytics in Terraform, see [Terraform Hashicorp AzureRM provider documentation](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/synapse_workspace).
