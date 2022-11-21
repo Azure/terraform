@@ -27,8 +27,8 @@ Network connectivity to the workspace is allowed over public endpoints, making t
 | aad_admin.login | The login name of the Azure AD Administrator of the Synapse Workspace | - |
 | aad_admin.object_id| The object id of the Azure AD Administrator of the Synapse Workspace | - |
 | aad_admin.tenant_id| The tenant id of the Azure AD Administrator of the Synapse Workspace | - |
-| synadmin_username| Specifies the login name of the SQL administrator | sqladminuser |
-| synadmin_password| The Password associated with the synadmin_username for the SQL administrator | ThisIsNotVerySecure! |
+| synadmin_username| Specifies the login name of the SQL administrator | - |
+| synadmin_password| The Password associated with the synadmin_username for the SQL administrator | - |
 | enable_syn_sparkpool| A feature flag to enable/disable the Spark pool | false |
 | enable_syn_sqlpool| A feature flag to enable/disable the SQL pool | false |
 

@@ -33,10 +33,10 @@ This configuration describes the minimal set of resources you require to get sta
 | aad_admin.login | The login name of the Azure AD Administrator of the Synapse Workspace | - |
 | aad_admin.object_id| The object id of the Azure AD Administrator of the Synapse Workspace | - |
 | aad_admin.tenant_id| The tenant id of the Azure AD Administrator of the Synapse Workspace | - |
-| synadmin_username| Specifies the login name of the SQL administrator | sqladminuser |
-| synadmin_password| The Password associated with the synadmin_username for the SQL administrator | ThisIsNotVerySecure! |
-| jumphost_username| Admin username of the VM | azureuser |
-| jumphost_password| Password for the admin username of the VM | ThisIsNotVerySecure! |
+| synadmin_username| Specifies the login name of the SQL administrator | - |
+| synadmin_password| The Password associated with the synadmin_username for the SQL administrator | - |
+| jumphost_username| Admin username of the VM | - |
+| jumphost_password| Password for the admin username of the VM | - |
 | enable_syn_sparkpool| A feature flag to enable/disable the Spark pool | false |
 | enable_syn_sqlpool| A feature flag to enable/disable the SQL pool | false |
 
