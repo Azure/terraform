@@ -1,0 +1,39 @@
+name: Main Branch Push
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - 'quickstart/**'
+jobs:
+  main-branch-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get-default-branch
+        run: |
+          branch=$(curl -s "https://api.github.com/repos/$GITHUB_REPOSITORY" | jq -r '.default_branch')
+          echo "default_branch=$branch" >> $GITHUB_ENV
+      - name: checkout
+        uses: actions/checkout@v3
+      - uses: 8BitJonny/gh-get-current-pr@2.1.0
+        id: PR
+      - name: Download artifact
+        id: download-artifact
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          workflow: e2e.yaml
+          pr: ${{ steps.PR.outputs.number }}
+          name: TestRecord-${{ steps.PR.outputs.number }}
+          path: TestRecord
+          if_no_artifact_found: ignore
+      - name: Update
+        run: |
+          sh scripts/update-test-record.sh
+      - name: Commit & Push changes
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          message: 'Update TestRecord'
+          branch: ${{ env.default_branch }}
