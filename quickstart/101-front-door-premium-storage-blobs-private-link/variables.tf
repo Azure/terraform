@@ -27,3 +27,12 @@ variable "storage_account_blob_container_name" {
   type    = string
   default = "mycontainer"
 }
+
+variable "waf_mode" {
+  type = string
+  default = "Prevention"
+}
+
+variable "custom_domain_name" {
+  type = string
+}

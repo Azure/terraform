@@ -1,11 +1,14 @@
 locals {
-  front_door_profile_name      = "MyFrontDoor"
-  front_door_sku_name          = "Premium_AzureFrontDoor" // Must be premium for Private Link support.
-  front_door_endpoint_name     = "afd-${lower(random_id.front_door_endpoint_name.hex)}"
-  front_door_origin_group_name = "MyOriginGroup"
-  front_door_origin_name       = "MyBlobContainerOrigin"
-  front_door_route_name        = "MyRoute"
-  front_door_origin_path       = "/${var.storage_account_blob_container_name}" // The path to the blob container.
+  front_door_profile_name         = "MyFrontDoor"
+  front_door_sku_name             = "Premium_AzureFrontDoor" // Must be premium for Private Link support.
+  front_door_endpoint_name        = "afd-${lower(random_id.front_door_endpoint_name.hex)}"
+  front_door_origin_group_name    = "MyOriginGroup"
+  front_door_origin_name          = "MyBlobContainerOrigin"
+  front_door_route_name           = "MyRoute"
+  front_door_origin_path          = "/${var.storage_account_blob_container_name}" // The path to the blob container.
+  front_door_custom_domain_name   = "MyCustomDomain"
+  front_door_firewall_policy_name = "MyWAFPolicy"
+  front_door_security_policy_name = "MySecurityPolicy"
 }
 
 resource "azurerm_cdn_frontdoor_profile" "my_front_door" {
@@ -70,4 +73,58 @@ resource "azurerm_cdn_frontdoor_route" "my_route" {
   link_to_default_domain    = true
   https_redirect_enabled    = true
   cdn_frontdoor_origin_path = local.front_door_origin_path
+
+  cdn_frontdoor_custom_domain_ids = [
+    azurerm_cdn_frontdoor_custom_domain.my_custom_domain.id
+   ]
+}
+
+resource "azurerm_cdn_frontdoor_custom_domain" "my_custom_domain" {
+  name                     = local.front_door_custom_domain_name
+  cdn_frontdoor_profile_id = azurerm_cdn_frontdoor_profile.my_front_door.id
+  host_name                = var.custom_domain_name
+
+  tls {
+    certificate_type    = "ManagedCertificate"
+    minimum_tls_version = "TLS12"
+  }
+}
+
+resource "azurerm_cdn_frontdoor_firewall_policy" "my_waf_policy" {
+  name                = local.front_door_firewall_policy_name
+  resource_group_name = azurerm_resource_group.my_resource_group.name
+  sku_name            = local.front_door_sku_name
+  enabled             = true
+  mode                = var.waf_mode
+
+  managed_rule {
+    type    = "Microsoft_DefaultRuleSet"
+    version = "2.1"
+    action  = "Block"
+  }
+
+  managed_rule {
+    type    = "Microsoft_BotManagerRuleSet"
+    version = "1.0"
+    action  = "Block"
+  }
+}
+
+resource "azurerm_cdn_frontdoor_security_policy" "my_security_policy" {
+  name                     = local.front_door_security_policy_name
+  cdn_frontdoor_profile_id = azurerm_cdn_frontdoor_profile.my_front_door.id
+
+  security_policies {
+    firewall {
+      cdn_frontdoor_firewall_policy_id = azurerm_cdn_frontdoor_firewall_policy.my_waf_policy.id
+
+      association {
+        patterns_to_match = ["/*"]
+
+        domain {
+          cdn_frontdoor_domain_id = azurerm_cdn_frontdoor_custom_domain.my_custom_domain.id
+        }
+      }
+    }
+  }
 }

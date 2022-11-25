@@ -1,6 +1,6 @@
 # Azure Front Door Premium with blob origin and Private Link
 
-This template deploys an [Azure Front Door Premium profile](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/cdn_frontdoor_profile) with an Azure Storage blob container origin, using a private endpoint to access the storage account.
+This quickstart deploys an [Azure Front Door Premium profile](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/cdn_frontdoor_profile) with an Azure Storage blob container origin, using a private endpoint to access the storage account.
 
 ## Architecture
 
@@ -17,6 +17,32 @@ The data flows through the solution are:
 1. The PoP returns the response to the client.
 1. Any requests directly to the storage account through the internet are blocked by the Azure Storage firewall.
 
+## Usage
+
+### Approve custom domain
+
+After you deploy the Terraform file, you need to validate your ownership of the custom domain by updating your DNS server. You must create a TXT record with the name specified in the `customDomainValidationDnsTxtRecordName` deployment output, and use the value specified in the `customDomainValidationDnsTxtRecordValue` deployment output. You must the validation before the time specified in the `customDomainValidationExpiry` deployment output.
+
+Front Door validates your domin ownership and updates the status automatically. You can monitor the validation process, or trigger an immediate validation, in the domain configuration in the Azure portal.
+
+Next, you should configure your DNS server with a CNAME record to direct the traffic to Front Door. You must create a CNAME record at the host name you specified in the `customDomainName` deployment parameter, and use the value specified in the `frontDoorEndpointHostName` deployment output.
+
+### Approve private endpoint connection
+
+You need to approve the private endpoint connection to your storage account. This step is necessary because the private endpoint created by Front Door is deployed into a Microsoft-owned Azure subscription, and cross-subscription private endpoint connections require explicit approval. To approve the private endpoint:
+
+1. Open the Azure portal and navigate to the storage account.
+2. Click the **Networking** tab, and then click the **Private endpoint connections** tab.
+3. Select the private endpoint that is awaiting approval, and click the **Approve** button. This can take a couple of minutes to complete.
+
+After approving the private endpoint, wait a few minutes before you attempt to access your Front Door endpoint to allow time for Front Door to propagate the settings throughout its network.
+
+### Access the storage account
+
+You can then access the Front Door endpoint. The hostname is emitted as an output from the deployment - the output is named `frontDoorEndpointHostName`. You should see a page saying _The specified resource does not exist_. This is returned by Azure Storage because no files have been uploaded to the blob container and therefore there is no content to show yet. If you see a different error page, wait a few minutes and try again.
+
+You can also attempt to access the Azure Storage blob hostname directly. The hostname is also emitted as an output from the deployment - the output is named `blobEndpointHostName`. You should see an error saying _This request is not authorized to perform this operation_ error, since your storage account is configured to not accepts requests that come from the internet.
+
 ## Resources
 
 | Terraform Resource Type | Description |
@@ -27,8 +53,11 @@ The data flows through the solution are:
 | `azurerm_cdn_frontdoor_origin_group` | The Front Door origin group. |
 | `azurerm_cdn_frontdoor_origin` | The Front Door origin, which refers to the storage account. |
 | `azurerm_cdn_frontdoor_route` | The Front Door route. |
+| `azurerm_cdn_frontdoor_custom_domain` | The Front Door custom domain. See above for details on custom domain provisioning. |
+| `azurerm_cdn_frontdoor_firewall_policy` | The WAF policy. |
+| `azurerm_cdn_frontdoor_security_policy` | The Front Door security policy, which associates the WAF policy with the custom domain. |
 | `azurerm_storage_account` | The Azure Storage account. |
-| `azurerm_storage_container` | The blob container within the Azure Storage account. |
+| `azapi_resource` | The blob container within the Azure Storage account. |
 | `random_id` | Two random identifier generators to generate a unique Front Door endpoint resource name and storage account name. |
 
 ## Variables
@@ -40,7 +69,9 @@ The data flows through the solution are:
 | `resource_group_name` | The name of the resource group. | `FrontDoor` |
 | `storage_account_tier` | The tier of the storage account. | `Standard` |
 | `storage_account_replication_type` | The level of replication to be configured for the storage account. | `LRS` |
-| `storage_account_blob_container_name` | The name of the blob contianer. | `mycontainer` |
+| `storage_account_blob_container_name` | The name of the blob container. | `mycontainer` |
+| `waf_mode` | The mode that the WAF should be deployed using. In 'Prevention' mode, the WAF will block requests it detects as malicious. In 'Detection' mode, the WAF will not block requests and will simply log the request.' | `Prevention` |
+| `custom_domain_name` | The custom domain name to associate with your Front Door endpoint. | |
 
 ## Example
 
@@ -121,6 +152,7 @@ Terraform will perform the following actions:
       + cdn_frontdoor_endpoint_id     = (known after apply)
       + cdn_frontdoor_origin_group_id = (known after apply)
       + cdn_frontdoor_origin_ids      = (known after apply)
+      + cdn_frontdoor_origin_path     = "/mycontainer"
       + enabled                       = true
       + forwarding_protocol           = "HttpsOnly"
       + https_redirect_enabled        = true
@@ -225,9 +257,14 @@ Terraform will perform the following actions:
 
       + network_rules {
           + bypass                     = (known after apply)
-          + default_action             = "Deny"
+          + default_action             = (known after apply)
           + ip_rules                   = (known after apply)
           + virtual_network_subnet_ids = (known after apply)
+
+          + private_link_access {
+              + endpoint_resource_id = (known after apply)
+              + endpoint_tenant_id   = (known after apply)
+            }
         }
 
       + queue_properties {
@@ -291,6 +328,16 @@ Terraform will perform the following actions:
         }
     }
 
+  # azurerm_storage_account_network_rules.my_network_rules will be created
+  + resource "azurerm_storage_account_network_rules" "my_network_rules" {
+      + bypass                     = (known after apply)
+      + default_action             = "Deny"
+      + id                         = (known after apply)
+      + ip_rules                   = (known after apply)
+      + storage_account_id         = (known after apply)
+      + virtual_network_subnet_ids = (known after apply)
+    }
+
   # azurerm_storage_container.my_storage_container will be created
   + resource "azurerm_storage_container" "my_storage_container" {
       + container_access_type   = "blob"
@@ -323,7 +370,7 @@ Terraform will perform the following actions:
       + id          = (known after apply)
     }
 
-Plan: 10 to add, 0 to change, 0 to destroy.
+Plan: 11 to add, 0 to change, 0 to destroy.
 
 Changes to Outputs:
   + frontDoorEndpointHostName = (known after apply)
