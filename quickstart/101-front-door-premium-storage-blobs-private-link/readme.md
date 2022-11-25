@@ -83,6 +83,50 @@ Terraform used the selected providers to generate the following execution plan. 
 
 Terraform will perform the following actions:
 
+  # azapi_resource.my_storage_container will be created
+  + resource "azapi_resource" "my_storage_container" {
+      + body                      = jsonencode(
+            {
+              + properties = {
+                  + publicAccess = "Blob"
+                }
+            }
+        )
+      + id                        = (known after apply)
+      + ignore_casing             = false
+      + ignore_missing_property   = true
+      + location                  = (known after apply)
+      + name                      = "mycontainer"
+      + output                    = (known after apply)
+      + parent_id                 = (known after apply)
+      + schema_validation_enabled = true
+      + tags                      = (known after apply)
+      + type                      = "Microsoft.Storage/storageAccounts/blobServices/containers@2021-04-01"
+
+      + identity {
+          + identity_ids = (known after apply)
+          + principal_id = (known after apply)
+          + tenant_id    = (known after apply)
+          + type         = (known after apply)
+        }
+    }
+
+  # azurerm_cdn_frontdoor_custom_domain.my_custom_domain will be created
+  + resource "azurerm_cdn_frontdoor_custom_domain" "my_custom_domain" {
+      + cdn_frontdoor_profile_id = (known after apply)
+      + expiration_date          = (known after apply)
+      + host_name                = "my-custom-domain-name.com"
+      + id                       = (known after apply)
+      + name                     = "MyCustomDomain"
+      + validation_token         = (known after apply)
+
+      + tls {
+          + cdn_frontdoor_secret_id = (known after apply)
+          + certificate_type        = "ManagedCertificate"
+          + minimum_tls_version     = "TLS12"
+        }
+    }
+
   # azurerm_cdn_frontdoor_endpoint.my_endpoint will be created
   + resource "azurerm_cdn_frontdoor_endpoint" "my_endpoint" {
       + cdn_frontdoor_profile_id = (known after apply)
@@ -90,6 +134,28 @@ Terraform will perform the following actions:
       + host_name                = (known after apply)
       + id                       = (known after apply)
       + name                     = (known after apply)
+    }
+
+  # azurerm_cdn_frontdoor_firewall_policy.my_waf_policy will be created
+  + resource "azurerm_cdn_frontdoor_firewall_policy" "my_waf_policy" {
+      + enabled               = true
+      + frontend_endpoint_ids = (known after apply)
+      + id                    = (known after apply)
+      + mode                  = "Prevention"
+      + name                  = "MyWAFPolicy"
+      + resource_group_name   = "FrontDoor"
+      + sku_name              = "Premium_AzureFrontDoor"
+
+      + managed_rule {
+          + action  = "Block"
+          + type    = "Microsoft_DefaultRuleSet"
+          + version = "2.1"
+        }
+      + managed_rule {
+          + action  = "Block"
+          + type    = "Microsoft_BotManagerRuleSet"
+          + version = "1.0"
+        }
     }
 
   # azurerm_cdn_frontdoor_origin.my_blob_container_origin will be created
@@ -149,23 +215,48 @@ Terraform will perform the following actions:
 
   # azurerm_cdn_frontdoor_route.my_route will be created
   + resource "azurerm_cdn_frontdoor_route" "my_route" {
-      + cdn_frontdoor_endpoint_id     = (known after apply)
-      + cdn_frontdoor_origin_group_id = (known after apply)
-      + cdn_frontdoor_origin_ids      = (known after apply)
-      + cdn_frontdoor_origin_path     = "/mycontainer"
-      + enabled                       = true
-      + forwarding_protocol           = "HttpsOnly"
-      + https_redirect_enabled        = true
-      + id                            = (known after apply)
-      + link_to_default_domain        = true
-      + name                          = "MyRoute"
-      + patterns_to_match             = [
+      + cdn_frontdoor_custom_domain_ids = (known after apply)
+      + cdn_frontdoor_endpoint_id       = (known after apply)
+      + cdn_frontdoor_origin_group_id   = (known after apply)
+      + cdn_frontdoor_origin_ids        = (known after apply)
+      + cdn_frontdoor_origin_path       = "/mycontainer"
+      + enabled                         = true
+      + forwarding_protocol             = "HttpsOnly"
+      + https_redirect_enabled          = true
+      + id                              = (known after apply)
+      + link_to_default_domain          = true
+      + name                            = "MyRoute"
+      + patterns_to_match               = [
           + "/*",
         ]
-      + supported_protocols           = [
+      + supported_protocols             = [
           + "Http",
           + "Https",
         ]
+    }
+
+  # azurerm_cdn_frontdoor_security_policy.my_security_policy will be created
+  + resource "azurerm_cdn_frontdoor_security_policy" "my_security_policy" {
+      + cdn_frontdoor_profile_id = (known after apply)
+      + id                       = (known after apply)
+      + name                     = "MySecurityPolicy"
+
+      + security_policies {
+          + firewall {
+              + cdn_frontdoor_firewall_policy_id = (known after apply)
+
+              + association {
+                  + patterns_to_match = [
+                      + "/*",
+                    ]
+
+                  + domain {
+                      + active                  = (known after apply)
+                      + cdn_frontdoor_domain_id = (known after apply)
+                    }
+                }
+            }
+        }
     }
 
   # azurerm_resource_group.my_resource_group will be created
@@ -338,18 +429,6 @@ Terraform will perform the following actions:
       + virtual_network_subnet_ids = (known after apply)
     }
 
-  # azurerm_storage_container.my_storage_container will be created
-  + resource "azurerm_storage_container" "my_storage_container" {
-      + container_access_type   = "blob"
-      + has_immutability_policy = (known after apply)
-      + has_legal_hold          = (known after apply)
-      + id                      = (known after apply)
-      + metadata                = (known after apply)
-      + name                    = "mycontainer"
-      + resource_manager_id     = (known after apply)
-      + storage_account_name    = (known after apply)
-    }
-
   # random_id.front_door_endpoint_name will be created
   + resource "random_id" "front_door_endpoint_name" {
       + b64_std     = (known after apply)
@@ -370,7 +449,7 @@ Terraform will perform the following actions:
       + id          = (known after apply)
     }
 
-Plan: 11 to add, 0 to change, 0 to destroy.
+Plan: 14 to add, 0 to change, 0 to destroy.
 
 Changes to Outputs:
   + frontDoorEndpointHostName = (known after apply)
