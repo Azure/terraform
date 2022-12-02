@@ -2,9 +2,9 @@ resource "azurerm_container_group" "vote_aci" {
   name                = "vote-aci"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
-  ip_address_type     = "public"
+  ip_address_type     = "Public"
   dns_name_label      = "vote-aci-${random_integer.ri.result}"
-  os_type             = "linux"
+  os_type             = "Linux"
 
   container {
     name   = "vote-aci"
