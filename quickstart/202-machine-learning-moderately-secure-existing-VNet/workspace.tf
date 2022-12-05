@@ -1,3 +1,11 @@
+# Generate random string for unique KV, SA, MCR instance names
+resource "random_string" "uni_suffix" {
+  length  = 5
+  upper   = false
+  special = false
+  number  = false
+}
+
 # Dependent resources for Azure Machine Learning
 resource "azurerm_application_insights" "default" {
   name                = "appi-${var.name}-${var.environment}"
@@ -7,7 +15,7 @@ resource "azurerm_application_insights" "default" {
 }
 
 resource "azurerm_key_vault" "default" {
-  name                     = "kv-${var.name}-${var.environment}"
+  name                     = "kv-${var.name}-${var.environment}${random_string.uni_suffix.result}"
   location                 = azurerm_resource_group.default.location
   resource_group_name      = azurerm_resource_group.default.name
   tenant_id                = data.azurerm_client_config.current.tenant_id
@@ -21,7 +29,7 @@ resource "azurerm_key_vault" "default" {
 }
 
 resource "azurerm_storage_account" "default" {
-  name                            = "st${var.name}${var.environment}"
+  name                            = "st${var.name}${var.environment}${random_string.uni_suffix.result}"
   location                        = azurerm_resource_group.default.location
   resource_group_name             = azurerm_resource_group.default.name
   account_tier                    = "Standard"
@@ -35,7 +43,7 @@ resource "azurerm_storage_account" "default" {
 }
 
 resource "azurerm_container_registry" "default" {
-  name                = "cr${var.name}${var.environment}"
+  name                = "cr${var.name}${var.environment}${random_string.uni_suffix.result}"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
   sku                 = "Premium"
