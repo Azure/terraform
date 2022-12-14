@@ -1,19 +1,19 @@
+data "azuread_client_config" "current" {}
+
 resource "azuread_application" "default" {
-  name = "${var.name}-${var.environment}"
+  display_name = "${var.name}-${var.environment}"
+  owners       = [data.azuread_client_config.current.object_id]
 }
 
 resource "azuread_service_principal" "default" {
   application_id = "${azuread_application.default.application_id}"
+  app_role_assignment_required = true
+  owners                       = [data.azuread_client_config.current.object_id]
 }
 
-resource "random_string" "password" {
-  length  = 32
-  special = true
-}
 
 resource "azuread_service_principal_password" "default" {
   service_principal_id = "${azuread_service_principal.default.id}"
-  value                = "${random_string.password.result}"
   end_date             = "2099-01-01T01:00:00Z"
 }
 

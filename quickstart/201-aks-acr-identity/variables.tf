@@ -1,12 +1,10 @@
 // Naming
 variable "name" {
-  type        = "string"
   description = "Location of the azure resource group."
   default     = "demo-tfquickstart"
 }
 
 variable "environment" {
-  type        = "string"
   description = "Name of the deployment environment"
   default     = "dev"
 }
@@ -14,27 +12,34 @@ variable "environment" {
 // Resource information
 
 variable "location" {
-  type        = "string"
   description = "Location of the azure resource group."
   default     = "WestUS2"
 }
 
 // Node type information
 
-variable "node_count" {
-  type        = "string"
+// Node type information
+variable "agent_node_count" {
   description = "The number of K8S nodes to provision."
   default     = 3
 }
 
-variable "node_type" {
-  type        = "string"
+variable "agent_node_type" {
   description = "The size of each node."
-  default     = "Standard_D1_v2"
+  default     = "Standard_D2_v5"
+}
+
+variable "system_node_count" {
+  description = "The number of K8S nodes to provision."
+  default     = 1
+}
+
+variable "system_node_type" {
+  description = "The size of each node."
+  default     = "Standard_D2_v5"
 }
 
 variable "dns_prefix" {
-  type        = "string"
   description = "DNS Prefix"
   default     = "tfq"
 }
