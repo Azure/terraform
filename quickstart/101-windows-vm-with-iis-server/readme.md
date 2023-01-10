@@ -19,11 +19,11 @@ This template deploys a Windows Server virtual machine that includes a virtual n
 
 ## Variables
 
-| Name | Description |
+| Name | Description | Default
 |-|-|
 | `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. | rg |
 | `resource_group_location` | Location of the resource group. |
-| `admin_password` | The password to assign to the Windows Administrator user account.
+| `admin_password` | The password to assign to the Windows Administrator user account. | None. The supplied password must be 6-72 characters long and must satisfy at least three of the following password complexity requirements: one uppercase character, one lowercase character, one numeric digit, or one special character.
 
 ## Example
 
