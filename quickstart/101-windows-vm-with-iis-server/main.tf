@@ -144,6 +144,4 @@ resource "azurerm_virtual_machine_extension" "web_server_install" {
       "commandToExecute": "powershell -ExecutionPolicy Unrestricted Install-WindowsFeature -Name Web-Server -IncludeAllSubFeature -IncludeManagementTools"
     }
   SETTINGS
-
-  depends_on = [ azurerm_windows_virtual_machine.my_terraform_vm ]
 }
