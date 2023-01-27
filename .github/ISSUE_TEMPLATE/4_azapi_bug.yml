@@ -1,0 +1,71 @@
+name: 'AzAPI Provider Bug Report' 
+description: File a bug/issue for the AzAPI Terraform Provider
+title: "<title>"
+labels: [bug, azapi]
+body:
+- type: checkboxes
+  attributes:
+    label: Is there an existing issue for this?
+    description: Please search to see if an issue already exists for the bug you encountered.
+    options:
+    - label: I have searched the existing issues
+      required: true
+- type: input
+  attributes:
+    label: Terraform Version
+    description: |
+      What version of Terraform were you using when you encountered this issue?
+        Please include operating system when applicable.
+
+      `terraform --version`
+    placeholder: 1.0.0
+  validations:
+    required: true
+- type: input
+  attributes:
+    label: Provider Version
+    description: |
+      What version of the AzAPI provider were you using when you encountered this issue?
+    placeholder: 0.1.0
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Current Behavior
+    description: A concise description of what you're experiencing. Include Error output where applicable.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Expected Behavior
+    description: A concise description of what you expected to happen.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Terraform configuration
+    description: Please provide the minimum Terraform configuration that is resulting in the bug / issue.
+    render: terraform
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Steps To Reproduce
+    description: |
+      Steps to reproduce the behavior.
+
+      `terraform apply`
+    placeholder: |
+      1. Run '...'
+      2. See error...
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Anything else?
+    description: |
+      Links? References? Anything that will give us more context about the issue you are encountering!
+
+      Tip: You can attach images or log files by clicking this area to highlight it and then dragging files in.
+  validations:
+    required: false

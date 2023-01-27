@@ -1,0 +1,104 @@
+[submodule "provider/terraform-provider-azurerm"]
+	path = provider/terraform-provider-azurerm
+	url = git@github.com:terraform-providers/terraform-provider-azurerm.git
+	branch = master
+[submodule "module/terraform-azurerm-compute"]
+	path = module/terraform-azurerm-compute
+	url = git@github.com:Azure/terraform-azurerm-compute.git
+	branch = master
+[submodule "module/terraform-azurerm-network"]
+	path = module/terraform-azurerm-network
+	url = git@github.com:Azure/terraform-azurerm-network.git
+	branch = master
+[submodule "module/terraform-azurerm-database"]
+	path = module/terraform-azurerm-database
+	url = git@github.com:Azure/terraform-azurerm-database.git
+	branch = master
+[submodule "module/terraform-azurerm-loadbalancer"]
+	path = module/terraform-azurerm-loadbalancer
+	url = git@github.com:Azure/terraform-azurerm-loadbalancer.git
+	branch = master
+[submodule "module/terraform-azurerm-computegroup"]
+	path = module/terraform-azurerm-computegroup
+	url = git@github.com:Azure/terraform-azurerm-computegroup.git
+	branch = master
+[submodule "module/terraform-azurerm-network-security-group"]
+	path = module/terraform-azurerm-network-security-group
+	url = git@github.com:Azure/terraform-azurerm-network-security-group.git
+	branch = master
+[submodule "module/terraform-azurerm-manageddisk"]
+	path = module/terraform-azurerm-manageddisk
+	url = git@github.com:Azure/terraform-azurerm-manageddisk.git
+	branch = master
+[submodule "module/terraform-azurerm-vm"]
+	path = module/terraform-azurerm-vm
+	url = git@github.com:Azure/terraform-azurerm-vm.git
+	branch = master
+[submodule "module/terraform-azurerm-vmss-cloudinit"]
+	path = module/terraform-azurerm-vmss-cloudinit
+	url = git@github.com:Azure/terraform-azurerm-vmss-cloudinit.git
+	branch = master
+[submodule "module/terraform-azurerm-vnet"]
+	path = module/terraform-azurerm-vnet
+	url = git@github.com:Azure/terraform-azurerm-vnet.git
+	branch = master
+[submodule "module/terraform-azurerm-encryptedmanageddisk"]
+	path = module/terraform-azurerm-encryptedmanageddisk
+	url = git@github.com:Azure/terraform-azurerm-encryptedmanageddisk.git
+	branch = master
+[submodule "module/terraform-azurerm-diskencrypt"]
+	path = module/terraform-azurerm-diskencrypt
+	url = git@github.com:Azure/terraform-azurerm-diskencrypt.git
+	branch = master
+[submodule "module/terraform-azurerm-postgresql"]
+	path = module/terraform-azurerm-postgresql
+	url = git@github.com:Azure/terraform-azurerm-postgresql.git
+	branch = master
+[submodule "module/terraform-azurerm-storage-account"]
+	path = module/terraform-azurerm-storage-account
+	url = git@github.com:Azure/terraform-azurerm-storage-account.git
+	branch = master
+[submodule "module/terraform-azurerm-routetable"]
+	path = module/terraform-azurerm-routetable
+	url = git@github.com:Azure/terraform-azurerm-routetable.git
+	branch = master
+[submodule "module/terraform-azurerm-search-service"]
+	path = module/terraform-azurerm-search-service
+	url = git@github.com:Azure/terraform-azurerm-search-service.git
+	branch = master
+[submodule "module/terraform-azurerm-vnetpeering"]
+	path = module/terraform-azurerm-vnetpeering
+	url = git@github.com:Azure/terraform-azurerm-vnetpeering.git
+	branch = master
+[submodule "module/terraform-azurerm-aks"]
+	path = module/terraform-azurerm-aks
+	url = git@github.com:Azure/terraform-azurerm-aks.git
+	branch = master
+[submodule "module/terraform-azurerm-consul"]
+	path = module/terraform-azurerm-consul
+	url = git@github.com:Azure/terraform-azurerm-consul.git
+	branch = master
+[submodule "module/terraform-azurerm-aci"]
+	path = module/terraform-azurerm-aci
+	url = git@github.com:Azure/terraform-azurerm-aci.git
+	branch = master
+[submodule "module/terraform-azurerm-disk-snapshot"]
+	path = module/terraform-azurerm-disk-snapshot
+	url = git@github.com:Azure/terraform-azurerm-disk-snapshot.git
+	branch = master
+[submodule "module/terraform-azurerm-resource-group"]
+	path = module/terraform-azurerm-resource-group
+	url = git@github.com:Azure/terraform-azurerm-resource-group.git
+	branch = master
+[submodule "module/terraform-azurerm-vm-extension-msi"]
+	path = module/terraform-azurerm-vm-extension-msi
+	url = git@github.com:Azure/terraform-azurerm-vm-extension-msi.git
+	branch = master
+[submodule "module/terraform-azurerm-application-security-group"]
+	path = module/terraform-azurerm-application-security-group
+	url = git@github.com:Azure/terraform-azurerm-application-security-group.git
+	branch = master
+[submodule "module/terraform-azurerm-module-test-jenkins"]
+	path = module/terraform-azurerm-module-test-jenkins
+	url = git@github.com:Azure/terraform-azurerm-module-test-jenkins.git
+	branch = master
