@@ -6,8 +6,6 @@ on:
       - '.github/**'
       - '.github/workflows/**'
       - 'quickstart/**'
-  schedule:
-    - cron: '0 0 * * 0'
 
 jobs:
   prepr-check:
