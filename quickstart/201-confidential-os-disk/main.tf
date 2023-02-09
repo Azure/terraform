@@ -6,12 +6,12 @@ data "azurerm_platform_image" "example" {
 }
 
 resource "azurerm_resource_group" "example" {
-  name     = "${var.name_prefix}-rg"
+  name     = "${var.name_prefix}-${random_id.example.hex}-rg"
   location = var.location
 }
 
-resource "azurerm_managed_disk" "example" {
-  name                 = "${var.name_prefix}-disk"
+resource "azurerm_managed_disk" "main" {
+  name                 = "${var.name_prefix}-${random_id.example.hex}-disk"
   location             = azurerm_resource_group.example.location
   resource_group_name  = azurerm_resource_group.example.name
   storage_account_type = "Standard_LRS"
@@ -21,4 +21,8 @@ resource "azurerm_managed_disk" "example" {
   hyper_v_generation   = "V2"
 
   security_type = "ConfidentialVM_DiskEncryptedWithPlatformKey"
+}
+
+resource "random_id" "example" {
+  byte_length = 8
 }
