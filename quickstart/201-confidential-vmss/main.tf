@@ -1,24 +1,24 @@
 resource "azurerm_resource_group" "example" {
-  name     = "${var.name_prefix}-rg"
+  name     = "${random_pet.random_prefix.id}-rg"
   location = var.location
 }
 
 resource "azurerm_virtual_network" "example" {
-  name                = "${var.name_prefix}-vnet"
+  name                = "${random_pet.random_prefix.id}-vnet"
   address_space       = ["10.0.0.0/16"]
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
 }
 
 resource "azurerm_subnet" "example" {
-  name                 = "${var.name_prefix}-subnet"
+  name                 = "${random_pet.random_prefix.id}-subnet"
   resource_group_name  = azurerm_resource_group.example.name
   virtual_network_name = azurerm_virtual_network.example.name
   address_prefixes     = ["10.0.2.0/24"]
 }
 
-resource "azurerm_windows_virtual_machine_scale_set" "example" {
-  name                 = "${var.name_prefix}-vmss"
+resource "azurerm_windows_virtual_machine_scale_set" "main" {
+  name                 = "${random_pet.random_prefix.id}-vmss"
   resource_group_name  = azurerm_resource_group.example.name
   location             = azurerm_resource_group.example.location
 
@@ -27,7 +27,7 @@ resource "azurerm_windows_virtual_machine_scale_set" "example" {
   
   instances            = 2
   admin_username       = "adminuser"
-  admin_password       = var.admin_password
+  admin_password       = random_password.password.result
   computer_name_prefix = "vmss"
 
   source_image_reference {
@@ -55,4 +55,17 @@ resource "azurerm_windows_virtual_machine_scale_set" "example" {
 
   vtpm_enabled        = true
   secure_boot_enabled = true
+}
+
+resource "random_password" "password" {
+  length      = 20
+  min_lower   = 1
+  min_upper   = 1
+  min_numeric = 1
+  min_special = 1
+  special     = true
+}
+
+resource "random_pet" "random_prefix" {
+  prefix = var.name_prefix
 }
