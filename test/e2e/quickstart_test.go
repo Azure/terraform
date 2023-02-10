@@ -12,6 +12,10 @@ import (
 )
 
 func Test_Quickstarts(t *testing.T) {
+	msiId := os.Getenv("MSI_ID")
+	if msiId != "" {
+		_ = os.Setenv("TF_VAR_msi_id", msiId)
+	}
 	input := os.Getenv("CHANGED_FOLDERS")
 	folders := strings.Split(input, ",")
 	if input == "" {

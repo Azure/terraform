@@ -17,3 +17,6 @@ _repo.*/
 go.sum
 
 TestRecord
+**/TestRecord.md.tmp
+terraform.tfstate
+terraform.tfstate.backup
