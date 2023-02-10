@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "example" {
-  name     = var.resource_group_name
+  name     = "${random_pet.random_prefix.id}-rg"
   location = var.location
 }
 
@@ -34,7 +34,7 @@ resource "azurerm_cosmosdb_sql_database" "example" {
   throughput          = var.throughput
 }
 
-resource "azurerm_cosmosdb_sql_container" "example" {
+resource "azurerm_cosmosdb_sql_container" "main" {
   name                   = var.sql_container_name
   resource_group_name    = azurerm_resource_group.example.name
   account_name           = azurerm_cosmosdb_account.example.name
@@ -63,4 +63,8 @@ resource "azurerm_cosmosdb_sql_container" "example" {
   unique_key {
     paths = ["/definition/idlong", "/definition/idshort"]
   }
+}
+
+resource "random_pet" "random_prefix" {
+  prefix = var.name_prefix
 }
