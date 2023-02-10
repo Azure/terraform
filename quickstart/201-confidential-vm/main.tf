@@ -1,5 +1,7 @@
+resource "random_pet" "prefix" {}
+
 resource "azurerm_resource_group" "example" {
-  name     = "${var.name_prefix}-rg"
+  name     = "${random_pet.prefix.id}-rg"
   location = var.location
 }
 
@@ -7,7 +9,7 @@ resource "azurerm_resource_group" "example" {
 data "azurerm_client_config" "current" {}
 
 resource "azurerm_key_vault" "example" {
-  name                        = "${var.name_prefix}-kv"
+  name                        = "${random_pet.prefix.id}-kv"
   location                    = azurerm_resource_group.example.location
   resource_group_name         = azurerm_resource_group.example.name
   sku_name                    = "premium"
@@ -56,7 +58,7 @@ resource "azurerm_key_vault_key" "example" {
 }
 
 resource "azurerm_disk_encryption_set" "example" {
-  name                = "${var.name_prefix}-des"
+  name                = "${random_pet.prefix.id}-des"
   resource_group_name = azurerm_resource_group.example.name
   location            = azurerm_resource_group.example.location
   key_vault_key_id    = azurerm_key_vault_key.example.id
@@ -82,21 +84,21 @@ resource "azurerm_key_vault_access_policy" "disk-encryption" {
 
 // Virtual Machine
 resource "azurerm_virtual_network" "example" {
-  name                = "${var.name_prefix}-vnet"
+  name                = "${random_pet.prefix.id}-vnet"
   address_space       = ["10.0.0.0/16"]
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
 }
 
 resource "azurerm_subnet" "example" {
-  name                 = "${var.name_prefix}-subnet"
+  name                 = "${random_pet.prefix.id}-subnet"
   resource_group_name  = azurerm_resource_group.example.name
   virtual_network_name = azurerm_virtual_network.example.name
   address_prefixes     = ["10.0.2.0/24"]
 }
 
 resource "azurerm_network_interface" "example" {
-  name                = "${var.name_prefix}-nic"
+  name                = "${random_pet.prefix.id}-nic"
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
 
@@ -107,22 +109,27 @@ resource "azurerm_network_interface" "example" {
   }
 }
 
+resource "tls_private_key" "vm_key" {
+  algorithm = "RSA"
+  rsa_bits  = 4096
+}
+
 resource "azurerm_linux_virtual_machine" "test" {
-  name                = "${var.name_prefix}-vm"
+  name                = "${random_pet.prefix.id}-vm"
   resource_group_name = azurerm_resource_group.example.name
   location            = azurerm_resource_group.example.location
-  
+
   # Available sizes for Confidential VM can be found at: https://docs.microsoft.com/azure/confidential-computing/confidential-vm-overview
-  size                = "Standard_DC2as_v5"
-  
-  admin_username      = "azureuser"
+  size = "Standard_DC2as_v5"
+
+  admin_username        = "azureuser"
   network_interface_ids = [
     azurerm_network_interface.example.id,
   ]
 
   admin_ssh_key {
     username   = "azureuser"
-    public_key = var.vm_public_key
+    public_key = tls_private_key.vm_key.public_key_openssh
   }
 
   os_disk {
