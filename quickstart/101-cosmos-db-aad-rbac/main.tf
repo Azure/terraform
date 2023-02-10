@@ -1,7 +1,11 @@
 data "azurerm_client_config" "current" {}
 
+locals {
+  current_user_object_id = coalesce(var.msi_id, data.azurerm_client_config.current.object_id)
+}
+
 resource "azurerm_resource_group" "example" {
-  name     = var.resource_group_name
+  name     = "${random_pet.prefix.id}-rg"
   location = var.location
 }
 
@@ -81,6 +85,10 @@ resource "azurerm_cosmosdb_sql_role_assignment" "example" {
   resource_group_name = azurerm_resource_group.example.name
   account_name        = azurerm_cosmosdb_account.example.name
   role_definition_id  = azurerm_cosmosdb_sql_role_definition.example.id
-  principal_id        = data.azurerm_client_config.current.object_id
+  principal_id        = local.current_user_object_id
   scope               = "/subscriptions/${data.azurerm_client_config.current.subscription_id}/resourceGroups/${azurerm_resource_group.example.name}/providers/Microsoft.DocumentDB/databaseAccounts/${azurerm_cosmosdb_account.example.name}"
+}
+
+resource "random_pet" "prefix" {
+  prefix = var.name_prefix
 }
