@@ -1,8 +1,8 @@
 variable "attestation_provider_name" {
-  default = "attestationprovider007"
+  default = "attestation"
 }
 
-variable "policy_file" {
+variable "cert_path" {
   default = "~/.certs/cert.pem"
 }
 
