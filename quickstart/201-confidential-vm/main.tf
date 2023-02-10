@@ -8,6 +8,10 @@ resource "azurerm_resource_group" "example" {
 // Key Vault and Disk Encryption Set
 data "azurerm_client_config" "current" {}
 
+locals {
+  current_user_object_id = coalesce(var.msi_id, data.azurerm_client_config.current.object_id)
+}
+
 resource "azurerm_key_vault" "example" {
   name                        = "${random_pet.prefix.id}-kv"
   location                    = azurerm_resource_group.example.location
@@ -22,7 +26,7 @@ resource "azurerm_key_vault" "example" {
 resource "azurerm_key_vault_access_policy" "service-principal" {
   key_vault_id = azurerm_key_vault.example.id
   tenant_id    = data.azurerm_client_config.current.tenant_id
-  object_id    = data.azurerm_client_config.current.object_id
+  object_id    = local.current_user_object_id
 
   key_permissions = [
     "Create",
