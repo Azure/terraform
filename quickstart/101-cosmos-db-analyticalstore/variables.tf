@@ -50,6 +50,6 @@ variable "sql_container_name" {
 
 variable "analytical_storage_ttl" {
   type        = number
-  default     = 0
+  default     = -1
   description = "Analytical Storage TTL in seconds."
 }
