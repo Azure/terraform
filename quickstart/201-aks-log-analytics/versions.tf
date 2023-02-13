@@ -15,3 +15,5 @@ provider "azurerm" {
     }
   }
 }
+
+provider "random" {}
