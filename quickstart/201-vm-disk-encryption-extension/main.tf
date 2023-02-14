@@ -24,7 +24,7 @@ resource "azurerm_key_vault" "example" {
 resource "azurerm_key_vault_access_policy" "service-principal" {
   key_vault_id = azurerm_key_vault.example.id
   tenant_id    = data.azurerm_client_config.current.tenant_id
-  object_id    = data.azurerm_client_config.current.object_id
+  object_id    = local.current_user_object_id
 
   key_permissions = [
     "Create",
@@ -116,7 +116,7 @@ resource "azurerm_linux_virtual_machine" "example" {
 }
 
 // Disk Encryption Extension
-resource "azurerm_virtual_machine_extension" "example" {
+resource "azurerm_virtual_machine_extension" "main" {
   name                       = "AzureDiskEncryptionForLinux"
   publisher                  = "Microsoft.Azure.Security"
   type                       = "AzureDiskEncryptionForLinux"
@@ -135,7 +135,10 @@ resource "azurerm_virtual_machine_extension" "example" {
   })
 }
 
-resource "random_pet" "prefix" {}
+resource "random_pet" "prefix" {
+  length = 1
+  prefix = var.prefix
+}
 
 resource "tls_private_key" "vm_key" {
   algorithm = "RSA"

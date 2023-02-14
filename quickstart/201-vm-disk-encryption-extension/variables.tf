@@ -5,7 +5,13 @@ variable "location" {
 }
 
 variable "msi_id" {
-  type = string
-  default = null
+  type        = string
+  default     = null
   description = "If you're executing the test with user assigned identity, please pass the identity principal id to this variable."
+}
+
+variable "prefix" {
+  type        = string
+  default     = "vm-disk-e-e"
+  description = "Prefix of the resource name"
 }
