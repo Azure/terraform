@@ -10,7 +10,7 @@ resource "azurerm_role_assignment" "default" {
   principal_id         = azurerm_user_assigned_identity.aks_identity.principal_id
 }
 
-resource "azurerm_kubernetes_cluster" "default" {
+resource "azurerm_kubernetes_cluster" "main" {
   name                              = "${var.name}-aks"
   location                          = azurerm_resource_group.default.location
   resource_group_name               = azurerm_resource_group.default.name
