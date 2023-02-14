@@ -39,7 +39,7 @@ resource "azurerm_public_ip" "pip" {
 }
 
 
-resource "azurerm_application_gateway" "network" {
+resource "azurerm_application_gateway" "main" {
   name                = "myAppGateway"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
@@ -111,7 +111,7 @@ resource "azurerm_network_interface_application_gateway_backend_address_pool_ass
   count                   = 2
   network_interface_id    = azurerm_network_interface.nic[count.index].id
   ip_configuration_name   = "nic-ipconfig-${count.index+1}"
-  backend_address_pool_id = one(azurerm_application_gateway.network.backend_address_pool).id
+  backend_address_pool_id = one(azurerm_application_gateway.main.backend_address_pool).id
 }
 
 resource "random_password" "password" {
