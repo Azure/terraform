@@ -14,6 +14,8 @@ This template deploys a Windows virtual machine within an Azure DevTest Lab.
 
 | Name | Description | Default |
 |-|-|-|
+| `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. | rg |
+| `resource_group_location` | Location of the resource group. | eastus |
 | `lab_name` | The name of the new lab instance to be created. | |
 | `vm_name` | The name of the VM to be created. | |
 | `vm_size` | The size of the VM to be created. | Standard_D4_v3 |
