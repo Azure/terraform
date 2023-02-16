@@ -137,7 +137,7 @@ resource "azurerm_virtual_machine_extension" "example" {
 
 resource "local_sensitive_file" "lsf" {
   content  = tls_private_key.vm_key.public_key_openssh
-  filename = "id.rsa"
+  filename = "id_rsa"
 }
 
 resource "random_pet" "prefix" {
