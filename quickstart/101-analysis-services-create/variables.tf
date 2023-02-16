@@ -10,6 +10,7 @@ variable "resource_group_name_prefix" {
 
 variable "server_name" {
   description = "The name of the Azure Analysis Services server to create. Server name must begin with a letter, be lowercase alphanumeric, and between 3 and 63 characters in length. Server name must be unique per region."
+  default     = "myserver"
 }
 
 variable "sku" {
