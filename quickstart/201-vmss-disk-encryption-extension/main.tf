@@ -75,7 +75,7 @@ resource "azurerm_subnet" "example" {
   address_prefixes     = ["10.0.2.0/24"]
 }
 
-resource "azurerm_windows_virtual_machine_scale_set" "example" {
+resource "azurerm_windows_virtual_machine_scale_set" "main" {
   name                 = "${random_pet.prefix.id}-vmss"
   resource_group_name  = azurerm_resource_group.example.name
   location             = azurerm_resource_group.example.location
@@ -110,13 +110,13 @@ resource "azurerm_windows_virtual_machine_scale_set" "example" {
 }
 
 // Disk Encryption Extension
-resource "azurerm_virtual_machine_scale_set_extension" "main" {
+resource "azurerm_virtual_machine_scale_set_extension" "example" {
   name                         = "AzureDiskEncryption"
   publisher                    = "Microsoft.Azure.Security"
   type                         = "AzureDiskEncryption"
   type_handler_version         = "2.2"
   auto_upgrade_minor_version   = false
-  virtual_machine_scale_set_id = azurerm_windows_virtual_machine_scale_set.example.id
+  virtual_machine_scale_set_id = azurerm_windows_virtual_machine_scale_set.main.id
 
   settings = jsonencode({
     "EncryptionOperation"    = "EnableEncryption"
