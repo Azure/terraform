@@ -9,6 +9,7 @@ variable "resource_group_name_prefix" {
 }
 
 variable "publisher_email" {
+  default     = "test@contoso.com"
   description = "The email address of the owner of the service"
   type        = string
   validation {
@@ -18,6 +19,7 @@ variable "publisher_email" {
 }
 
 variable "publisher_name" {
+  default     = "publisher"
   description = "The name of the owner of the service"
   type        = string
   validation {
