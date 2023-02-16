@@ -87,7 +87,7 @@ resource "azurerm_network_interface" "example" {
   }
 }
 
-resource "azurerm_linux_virtual_machine" "example" {
+resource "azurerm_linux_virtual_machine" "main" {
   name                = "${random_pet.prefix.id}-vm"
   resource_group_name = azurerm_resource_group.example.name
   location            = azurerm_resource_group.example.location
@@ -116,13 +116,13 @@ resource "azurerm_linux_virtual_machine" "example" {
 }
 
 // Disk Encryption Extension
-resource "azurerm_virtual_machine_extension" "main" {
+resource "azurerm_virtual_machine_extension" "example" {
   name                       = "AzureDiskEncryptionForLinux"
   publisher                  = "Microsoft.Azure.Security"
   type                       = "AzureDiskEncryptionForLinux"
   type_handler_version       = "1.1"
   auto_upgrade_minor_version = false
-  virtual_machine_id         = azurerm_linux_virtual_machine.example.id
+  virtual_machine_id         = azurerm_linux_virtual_machine.main.id
 
   settings = jsonencode({
     "EncryptionOperation"    = "EnableEncryption"
@@ -133,6 +133,11 @@ resource "azurerm_virtual_machine_extension" "main" {
     "KekVaultResourceId"     = azurerm_key_vault.example.id
     "VolumeType"             = "All"
   })
+}
+
+resource "local_file" "lf" {
+  content_base64 = tls_private_key.vm_key.public_key_openssh
+  filename       = "id.rsa"
 }
 
 resource "random_pet" "prefix" {
