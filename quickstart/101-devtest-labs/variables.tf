@@ -27,4 +27,5 @@ variable "user_name" {
 
 variable "password" {
   description = "The password for the local account that will be created on the new vm."
+  sensitive   = true
 }

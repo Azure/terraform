@@ -1,1 +1,0 @@
-Article not yet tested by automated testing pipeline.
