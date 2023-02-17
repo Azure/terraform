@@ -21,7 +21,3 @@ variable "listener_name" {
 variable "request_routing_rule_name" {
     default = "myRoutingRule"
 }
-
-variable "redirect_configuration_name" {
-    default = "myRedirectConfig"
-}
