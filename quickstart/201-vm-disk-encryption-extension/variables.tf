@@ -1,14 +1,17 @@
 variable "location" {
   type        = string
+  default     = "eastus"
   description = "Location where resources will be created"
 }
 
-variable "name_prefix" {
+variable "msi_id" {
   type        = string
-  description = "Prefix of the resource name"
+  default     = null
+  description = "If you're executing the test with user assigned identity, please pass the identity principal id to this variable."
 }
 
-variable "vm_public_key" {
+variable "prefix" {
   type        = string
-  description = "Public key of the Virtual Machine"
+  default     = "vm-disk-e-e"
+  description = "Prefix of the resource name"
 }
