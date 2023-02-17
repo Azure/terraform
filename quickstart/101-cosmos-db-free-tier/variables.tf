@@ -1,35 +1,24 @@
-variable "resource_group_name" {
+variable "prefix" {
   type        = string
-  description = "Resource group name"
+  default     = "cosmos-db-free-tier"
+  description = "Prefix of the resource name"
 }
 
 variable "location" {
   type        = string
+  default     = "eastus"
   description = "Resource group location"
-}
-
-variable "cosmosdb_account_name" {
-  type        = string
-  description = "Cosmos db account name"
 }
 
 variable "cosmosdb_account_location" {
   type        = string
+  default     = "eastus"
   description = "Cosmos db account location"
-}
-
-variable "cosmosdb_sqldb_name" {
-  type        = string
-  description = "value"
-}
-
-variable "sql_container_name" {
-  type        = string
-  description = "SQL API container name."
 }
 
 variable "throughput" {
   type        = number
+  default     = 400
   description = "Cosmos db database throughput"
   validation {
     condition     = var.throughput >= 400 && var.throughput <= 1000000
