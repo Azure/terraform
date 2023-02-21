@@ -1,5 +1,5 @@
 locals {
-  front_door_name                         = "afd-${lower(random_id.front_door_name.hex)}"
+  front_door_name                         = "${random_pet.prefix.id}-afd"
   front_door_frontend_endpoint_name       = "frontEndEndpoint"
   front_door_load_balancing_settings_name = "loadBalancingSettings"
   front_door_health_probe_settings_name   = "healthProbeSettings"
@@ -7,9 +7,9 @@ locals {
   front_door_backend_pool_name            = "backendPool"
 }
 
-resource "azurerm_frontdoor" "my_front_door" {
+resource "azurerm_frontdoor" "main" {
   name                = local.front_door_name
-  resource_group_name = azurerm_resource_group.my_resource_group.name
+  resource_group_name = azurerm_resource_group.rg.name
 
   frontend_endpoint {
     name                     = local.front_door_frontend_endpoint_name
@@ -43,6 +43,11 @@ resource "azurerm_frontdoor" "my_front_door" {
 
     load_balancing_name = local.front_door_load_balancing_settings_name
     health_probe_name   = local.front_door_health_probe_settings_name
+  }
+
+  backend_pool_settings {
+    backend_pools_send_receive_timeout_seconds   = 0
+    enforce_backend_pools_certificate_name_check = false
   }
 
   routing_rule {

@@ -3,11 +3,13 @@ variable "location" {
   default = "westus2"
 }
 
-variable "resource_group_name" {
+variable "backend_address" {
+  default = "www.bing.com"
   type    = string
-  default = "FrontDoor"
 }
 
-variable "backend_address" {
-  type = string
+variable "prefix" {
+  type        = string
+  default     = "front-door-classic"
+  description = "Prefix of the resource name"
 }
