@@ -1,5 +1,5 @@
 locals {
-  front_door_name                         = "afd-${lower(random_id.front_door_name.hex)}"
+  front_door_name                         = "${random_pet.prefix.id}-afd"
   front_door_frontend_endpoint_name       = "frontEndEndpoint"
   front_door_load_balancing_settings_name = "loadBalancingSettings"
   front_door_health_probe_settings_name   = "healthProbeSettings"
@@ -7,9 +7,9 @@ locals {
   front_door_backend_pool_name            = "backendPool"
 }
 
-resource "azurerm_frontdoor" "my_front_door" {
+resource "azurerm_frontdoor" "main" {
   name                = local.front_door_name
-  resource_group_name = azurerm_resource_group.my_resource_group.name
+  resource_group_name = azurerm_resource_group.rg.name
 
   frontend_endpoint {
     name                     = local.front_door_frontend_endpoint_name
