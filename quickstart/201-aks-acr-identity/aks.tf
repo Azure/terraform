@@ -3,7 +3,6 @@ resource "azurerm_kubernetes_cluster" "default" {
   location                          = azurerm_resource_group.default.location
   resource_group_name               = azurerm_resource_group.default.name
   dns_prefix                        = "${var.dns_prefix}-${var.name}-aks-${var.environment}"
-  depends_on                        = ["azure_role_assignment.aks_network", "azurerm_role_assignment.aks_acr"]
   role_based_access_control_enabled = true
 
   default_node_pool {
@@ -16,4 +15,6 @@ resource "azurerm_kubernetes_cluster" "default" {
     type         = "UserAssigned"
     identity_ids = [azurerm_user_assigned_identity.aks.id]
   }
+
+  depends_on                        = [azurerm_role_assignment.aks_network, azurerm_role_assignment.aks_acr]
 }
