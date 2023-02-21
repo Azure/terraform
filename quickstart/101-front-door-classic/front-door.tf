@@ -45,6 +45,11 @@ resource "azurerm_frontdoor" "main" {
     health_probe_name   = local.front_door_health_probe_settings_name
   }
 
+  backend_pool_settings {
+    backend_pools_send_receive_timeout_seconds   = 0
+    enforce_backend_pools_certificate_name_check = false
+  }
+
   routing_rule {
     name               = local.front_door_routing_rule_name
     accepted_protocols = ["Http", "Https"]
