@@ -1,8 +1,9 @@
-resource "azurerm_resource_group" "my_resource_group" {
-  name     = var.resource_group_name
+resource "azurerm_resource_group" "rg" {
+  name     = "${random_pet.prefix.id}-rg"
   location = var.location
 }
 
-resource "random_id" "front_door_name" {
-  byte_length = 8
+resource "random_pet" "prefix" {
+  prefix = var.prefix
+  length = 1
 }
