@@ -30,7 +30,7 @@ variable "node_count" {
 variable "node_type" {
   type        = string
   description = "The size of each node."
-  default     = "Standard_D1_v2"
+  default     = "Standard_D2s_v3"
 }
 
 variable "dns_prefix" {
