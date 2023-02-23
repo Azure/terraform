@@ -10,10 +10,12 @@ variable "resource_group_name_prefix" {
 
 variable "lab_name" {
   description = "The name of the new lab instance to be created"
+  default     = "ExampleLab"
 }
 
 variable "vm_name" {
   description = "The name of the vm to be created."
+  default     = "example-vm"
 }
 
 variable "vm_size" {
@@ -23,9 +25,11 @@ variable "vm_size" {
 
 variable "user_name" {
   description = "The username for the local account that will be created on the new vm."
+  default     = "exampleuser"
 }
 
 variable "password" {
   description = "The password for the local account that will be created on the new vm."
   sensitive   = true
+  default     = null
 }
