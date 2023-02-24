@@ -10,7 +10,7 @@ resource "azurerm_app_service_plan" "default" {
   }
 }
 
-resource "azurerm_app_service" "default" {
+resource "azurerm_app_service" "main" {
   name                = "${var.dns_prefix}-${random_pet.prefix.id}-aspnet-${var.environment}-app"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
