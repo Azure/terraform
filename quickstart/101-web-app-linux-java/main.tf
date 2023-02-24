@@ -1,8 +1,9 @@
-provider "azurerm" {
-  version = "=1.36.0"
+resource "azurerm_resource_group" "default" {
+  name     = "${random_pet.prefix.id}-${var.environment}-rg"
+  location = var.location
 }
 
-resource "azurerm_resource_group" "default" {
-  name     = "${var.name}-${var.environment}-rg"
-  location = "${var.location}"
+resource "random_pet" "prefix" {
+  prefix = var.prefix
+  length = 2
 }
