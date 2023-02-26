@@ -1,10 +1,10 @@
 resource "azurerm_resource_group" "default" {
-  name     = "${var.name_prefix}-rg"
+  name     = "${random_pet.prefix.id}-rg"
   location = var.location
 }
 
 resource "azurerm_storage_account" "default" {
-  name                     = "${var.name_prefix}sa"
+  name                     = "${replace(random_pet.prefix.id, "-", "")}sa"
   resource_group_name      = azurerm_resource_group.default.name
   location                 = azurerm_resource_group.default.location
   account_tier             = "Standard"
@@ -14,7 +14,7 @@ resource "azurerm_storage_account" "default" {
 }
 
 resource "azurerm_service_plan" "default" {
-  name                = "${var.name_prefix}-sap"
+  name                = "${random_pet.prefix.id}-sap"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
   sku_name            = "Y1"
@@ -27,8 +27,8 @@ resource "azurerm_service_plan" "default" {
 # If you would like to set the required number of failed requests for an instance to be deemed unhealthy and removed from the load balancer under health check feature, using health_check_eviction_time_in_min property under site_config block. Terraform will set the key WEBSITE_HEALTHCHECK_MAXPINGFAILURES
 # in app_setting for you.
 
-resource "azurerm_linux_function_app" "test" {
-  name                        = "${var.name_prefix}-lfa"
+resource "azurerm_linux_function_app" "main" {
+  name                        = "${random_pet.prefix.id}-lfa"
   location                    = azurerm_resource_group.default.location
   resource_group_name         = azurerm_resource_group.default.name
   service_plan_id             = azurerm_service_plan.default.id
@@ -45,3 +45,7 @@ resource "azurerm_linux_function_app" "test" {
   }
 }
 
+resource "random_pet" "prefix" {
+  prefix = var.prefix
+  length = 2
+}
