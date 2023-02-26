@@ -34,13 +34,14 @@ resource "azurerm_container_registry" "default" {
 
 # Machine Learning workspace
 resource "azurerm_machine_learning_workspace" "default" {
-  name                    = "${random_pet.prefix.id}-mlw"
-  location                = azurerm_resource_group.default.location
-  resource_group_name     = azurerm_resource_group.default.name
-  application_insights_id = azurerm_application_insights.default.id
-  key_vault_id            = azurerm_key_vault.default.id
-  storage_account_id      = azurerm_storage_account.default.id
-  container_registry_id   = azurerm_container_registry.default.id
+  name                          = "${random_pet.prefix.id}-mlw"
+  location                      = azurerm_resource_group.default.location
+  resource_group_name           = azurerm_resource_group.default.name
+  application_insights_id       = azurerm_application_insights.default.id
+  key_vault_id                  = azurerm_key_vault.default.id
+  storage_account_id            = azurerm_storage_account.default.id
+  container_registry_id         = azurerm_container_registry.default.id
+  public_network_access_enabled = true
 
   identity {
     type = "SystemAssigned"
