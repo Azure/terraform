@@ -1,18 +1,18 @@
 data "azurerm_client_config" "current" {}
 
 resource "azurerm_resource_group" "default" {
-  name     = "${var.name_prefix}-rg"
+  name     = "${random_pet.prefix.id}-rg"
   location = var.location
 }
 
 resource "azurerm_user_assigned_identity" "default" {
-  name                = "${var.name_prefix}-uai"
+  name                = "${random_pet.prefix.id}-uai"
   resource_group_name = azurerm_resource_group.default.name
   location            = azurerm_resource_group.default.location
 }
 
 resource "azurerm_storage_account" "default" {
-  name                     = "${var.name_prefix}sa"
+  name                     = "${replace(random_pet.prefix.id, "-", "")}sa"
   resource_group_name      = azurerm_resource_group.default.name
   location                 = azurerm_resource_group.default.location
   account_tier             = "Standard"
@@ -20,16 +20,15 @@ resource "azurerm_storage_account" "default" {
 }
 
 resource "azurerm_service_plan" "default" {
-  name                = "${var.name_prefix}-sp"
+  name                = "${random_pet.prefix.id}-sp"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
   os_type             = "Windows"
   sku_name            = "Y1"
 }
 
-
 resource "azurerm_key_vault" "default" {
-  name                       = "${var.name_prefix}-kv"
+  name                       = "${random_pet.prefix.id}-kv"
   location                   = azurerm_resource_group.default.location
   resource_group_name        = azurerm_resource_group.default.name
   tenant_id                  = data.azurerm_client_config.current.tenant_id
@@ -70,7 +69,7 @@ resource "azurerm_key_vault" "default" {
 }
 
 resource "azurerm_key_vault_secret" "default" {
-  name         = "${var.name_prefix}-kvs"
+  name         = "${random_pet.prefix.id}-kvs"
   value        = azurerm_storage_account.default.primary_connection_string
   key_vault_id = azurerm_key_vault.default.id
 }
@@ -84,8 +83,8 @@ To avoid the failure of the azure file check mentioned above, you can skip the v
 
 2. please make sure to set storage_key_vault_secret_id property to configure the app to use this identity for Key Vault reference operations.
  */
-resource "azurerm_windows_function_app" "default" {
-  name                = "${var.name_prefix}-wfa"
+resource "azurerm_windows_function_app" "main" {
+  name                = "${random_pet.prefix.id}-wfa"
   resource_group_name = azurerm_resource_group.default.name
   location            = azurerm_resource_group.default.location
 
@@ -109,4 +108,9 @@ resource "azurerm_windows_function_app" "default" {
       node_version = "~14"
     }
   }
+}
+
+resource "random_pet" "prefix" {
+  prefix = var.prefix
+  length = 1
 }
