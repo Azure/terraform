@@ -24,11 +24,6 @@ resource "azurerm_mysql_database" "webAppBackend" {
   collation   = "utf8_unicode_ci"
 }
 
-resource "random_integer" "id" {
-  max = 0
-  min = 0
-}
-
 resource "random_password" "password" {
   length      = 20
   min_lower   = 1
