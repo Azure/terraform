@@ -10,7 +10,7 @@ resource "azurerm_app_service_plan" "web_app_frontend" {
   }
 }
 
-resource "azurerm_app_service" "web_app_frontend" {
+resource "azurerm_app_service" "main" {
   name                = "${replace(random_pet.prefix.id, "-", "")}service"
   location            = azurerm_resource_group.web_app_mysql_rg.location
   resource_group_name = azurerm_resource_group.web_app_mysql_rg.name

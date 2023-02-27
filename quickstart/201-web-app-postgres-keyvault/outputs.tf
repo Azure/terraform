@@ -1,5 +1,5 @@
 output "web_app_url" {
-  value = azurerm_app_service.web_app_frontend.default_site_hostname
+  value = azurerm_app_service.main.default_site_hostname
 }
 
 output "database_name" {
