@@ -1,4 +1,4 @@
-resource "azurerm_resource_group" "webAppMySqlRg" {
+resource "azurerm_resource_group" "web_app_mysql_rg" {
   name     = "${random_pet.prefix.id}-rg"
   location = var.loc
   tags     = var.tags

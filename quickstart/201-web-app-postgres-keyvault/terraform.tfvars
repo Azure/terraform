@@ -4,5 +4,5 @@ tags = {
   services = "MySql, WebApp, Azure database"
 }
 
-servicePlanTier = "Standard"
-servicePlanSize = "S1"
+service_plan_tier = "Standard"
+service_plan_size = "S1"

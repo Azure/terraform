@@ -13,19 +13,19 @@ variable "tags" {
   description = "Azure Tags for all resources."
 }
 
-variable "databaseSkuName" {
+variable "database_sku_name" {
   type        = string
   default     = "GP_Gen5_2"
   description = "The name of the SKU, follows the tier + family + cores pattern (e.g. `B_Gen4_1`, `GP_Gen5_8`)."
 }
 
-variable "databaseSkuSizeMB" {
+variable "database_sku_size_MB" {
   type        = number
   default     = 5120
   description = "Azure database for MySQL Sku Size"
 }
 
-variable "mysqlVersion" {
+variable "mysql_version" {
   type        = string
   default     = "5.7"
   description = "MySQL version"
@@ -37,13 +37,13 @@ variable "loc" {
   description = "Location for all resources."
 }
 
-variable "servicePlanTier" {
+variable "service_plan_tier" {
   type        = string
   default     = "Standard"
   description = "Azure managed application service plan pricing tier"
 }
 
-variable "servicePlanSize" {
+variable "service_plan_size" {
   type        = string
   default     = "S1"
   description = "Azure managed application service plan instance size"

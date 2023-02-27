@@ -1,24 +1,24 @@
-output "webAppUrl" {
-  value = azurerm_app_service.webAppFrontend.default_site_hostname
+output "web_app_url" {
+  value = azurerm_app_service.web_app_frontend.default_site_hostname
 }
 
-output "databaseName" {
-  value = azurerm_mysql_database.webAppBackend.name
+output "database_name" {
+  value = azurerm_mysql_database.web_app_backend.name
 }
 
-output "databaseServerName" {
-  value = azurerm_mysql_server.webAppBackend.fqdn
+output "database_server_name" {
+  value = azurerm_mysql_server.web_app_backend.fqdn
 }
 
-output "appServicePlanName" {
-  value = azurerm_app_service_plan.webAppFrontend.name
+output "app_service_plan_name" {
+  value = azurerm_app_service_plan.web_app_frontend.name
 }
 
 output "mysql_server_admin_name" {
-  value = azurerm_mysql_server.webAppBackend.administrator_login
+  value = azurerm_mysql_server.web_app_backend.administrator_login
 }
 
 output "mysql_server_admin_password" {
   sensitive = true
-  value     = azurerm_mysql_server.webAppBackend.administrator_login_password
+  value     = azurerm_mysql_server.web_app_backend.administrator_login_password
 }
