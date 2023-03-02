@@ -1,12 +1,8 @@
-rg      = "mcg623webAppMysql"
-loc     = "eastus2"
-tags    = {
-    type = "sample"
-    services = "MySql, WebApp, Azure database"
-} 
+loc = "eastus2"
+tags = {
+  type     = "sample"
+  services = "MySql, WebApp, Azure database"
+}
 
-administratorLogin = "markg"
-siteName = "mcgecd69mysql"
-
-servicePlanTier = "Standard"
-servicePlanSize = "S1"
+service_plan_tier = "Standard"
+service_plan_size = "S1"
