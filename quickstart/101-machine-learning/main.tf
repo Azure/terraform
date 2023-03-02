@@ -1,21 +1,16 @@
-terraform {
-  required_version = ">=1.0"
-
-  required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "=2.76.0"
-    }
-  }
-}
-
-provider "azurerm" {
-  features {}
-}
-
 data "azurerm_client_config" "current" {}
 
 resource "azurerm_resource_group" "default" {
-  name     = "rg-${var.name}-${var.environment}"
+  name     = "${random_pet.prefix.id}-rg"
   location = var.location
+}
+
+resource "random_pet" "prefix" {
+  prefix = var.prefix
+  length = 2
+}
+
+resource "random_integer" "suffix" {
+  min = 10000000
+  max = 99999999
 }

@@ -1,8 +1,3 @@
-variable "name" {
-  type        = string
-  description = "Name of the deployment"
-}
-
 variable "environment" {
   type        = string
   description = "Name of the environment"
@@ -12,5 +7,11 @@ variable "environment" {
 variable "location" {
   type        = string
   description = "Location of the resources"
-  default     = "East US"
+  default     = "eastus"
+}
+
+variable "prefix" {
+  type        = string
+  description = "Prefix of the resource name"
+  default     = "ml"
 }
