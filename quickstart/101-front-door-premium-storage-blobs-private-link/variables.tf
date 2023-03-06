@@ -29,10 +29,11 @@ variable "storage_account_blob_container_name" {
 }
 
 variable "waf_mode" {
-  type = string
+  type    = string
   default = "Prevention"
 }
 
 variable "custom_domain_name" {
-  type = string
+  type    = string
+  default = "contoso.fabrikam.com"
 }
