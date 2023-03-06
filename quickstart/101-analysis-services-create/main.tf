@@ -7,8 +7,15 @@ resource "azurerm_resource_group" "rg" {
   location = var.resource_group_location
 }
 
+resource "random_string" "azurerm_analysis_services_server_name" {
+  length  = 25
+  upper   = false 
+  numeric = false
+  special = false
+}
+
 resource "azurerm_analysis_services_server" "server" {
-  name                = var.server_name
+  name                = random_string.azurerm_analysis_services_server_name.result
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   sku                 = var.sku
