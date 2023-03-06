@@ -27,6 +27,7 @@ jobs:
           cd .git
           sudo chmod -R a+rwX .
           sudo find . -type d -exec chmod g+s '{}' +
+          git config --global --add safe.directory '*'
       - name: Commit & Push changes
         uses: actions-js/push@master
         with:
