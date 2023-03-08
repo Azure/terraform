@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+git config --global --add safe.directory '*'
+
 if [ ! -d "TestRecord" ]; then
   echo "No TestRecord found, exit"
   exit 0
