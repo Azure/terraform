@@ -7,7 +7,7 @@ resource "azurerm_resource_group" "rg" {
   location = var.resource_group_location
 }
 
-resource "random_string" "name" {
+resource "random_string" "azurerm_api_management_name" {
   length  = 13
   lower   = true
   numeric = false
@@ -16,7 +16,7 @@ resource "random_string" "name" {
 }
 
 resource "azurerm_api_management" "api" {
-  name                = "apiservice${random_string.name.result}"
+  name                = "apiservice${random_string.azurerm_api_management_name.result}"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   publisher_email     = var.publisher_email
