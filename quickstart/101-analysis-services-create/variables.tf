@@ -10,7 +10,7 @@ variable "resource_group_name_prefix" {
   description = "Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription."
 }
 
-variable "azurerm_analysis_services_server_name_prefix" {
+variable "analysis_services_server_name_prefix" {
   type        = string
   default     = "mys"
   description = "Prefix of the Azure Analysis Services Server name that's combined with a random string to create a unique server name in your Azure subscription."
