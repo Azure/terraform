@@ -16,7 +16,10 @@ resource "random_string" "azurerm_dns_zone_name" {
 }
 
 resource "azurerm_dns_zone" "zone" {
-  name                = var.dns_zone_name != null ? var.dns_zone_name : "www.${random_string.azurerm_dns_zone_name.result}.azurequickstart.org"
+  name                = <<EOF
+                      var.dns_zone_name != null ? var.dns_zone_name 
+                      : "www.${random_string.azurerm_dns_zone_name.result}.azurequickstart.org"
+                      EOF
   resource_group_name = azurerm_resource_group.rg.name
 }
 
