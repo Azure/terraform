@@ -29,7 +29,7 @@ variable "aad_login" {
 variable "synadmin_username" {
   type        = string
   description = "Specifies The login name of the SQL administrator"
-  default     = "admin"
+  default     = "synapseadmin"
 }
 
 variable "synadmin_password" {
