@@ -9,8 +9,16 @@ resource "azurerm_resource_group" "example" {
   location = var.location
 }
 
+resource "random_pet" "db_account_name" {
+  count = var.cosmosdb_account_name == null ? 1 : 0
+}
+
+locals {
+  cosmosdb_account_name = try(random_pet.db_account_name[0].id, var.cosmosdb_account_name)
+}
+
 resource "azurerm_cosmosdb_account" "example" {
-  name                      = var.cosmosdb_account_name
+  name                      = local.cosmosdb_account_name
   location                  = var.cosmosdb_account_location
   resource_group_name       = azurerm_resource_group.example.name
   offer_type                = "Standard"
