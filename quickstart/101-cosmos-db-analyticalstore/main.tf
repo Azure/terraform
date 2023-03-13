@@ -3,12 +3,17 @@ resource "azurerm_resource_group" "example" {
   location = var.location
 }
 
-resource "random_pet" "db_account_name" {
+resource "random_string" "db_account_name" {
   count = var.cosmosdb_account_name == null ? 1 : 0
+
+  length  = 20
+  upper   = false
+  special = false
+  numeric = false
 }
 
 locals {
-  cosmosdb_account_name = try(random_pet.db_account_name[0].id, var.cosmosdb_account_name)
+  cosmosdb_account_name = try(random_string.db_account_name[0].result, var.cosmosdb_account_name)
 }
 
 resource "azurerm_cosmosdb_account" "example" {
