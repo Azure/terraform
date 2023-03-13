@@ -1,13 +1,18 @@
-provider "azurerm" {
-  version = "=1.36.0"
+resource "azurerm_resource_group" "default" {
+  name     = "${local.name}-${var.environment}-rg"
+  location = var.location
 }
 
-resource "azurerm_resource_group" "default" {
-  name     = "${var.name}-${var.environment}-rg"
-  location = "westus"
+resource "random_string" "name" {
+  count = var.name == null ? 1 : 0
+
+  length  = 8
+  upper   = false
+  special = false
 }
 
 locals {
-  storage_account_name = "${var.dns_prefix}${var.name}${substr(var.environment, 0, 2)}"
+  name                 = try(random_string.name[0].result, var.name)
+  storage_account_name = "${var.dns_prefix}${local.name}${substr(var.environment, 0, 2)}"
 }
 
