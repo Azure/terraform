@@ -1,3 +1,7 @@
+locals {
+  current_user_id = coalesce(var.msi_id, data.azurerm_client_config.current.object_id)
+}
+
 resource "azurerm_storage_account" "default" {
   name                     = "st${local.safe_basename}"
   resource_group_name      = azurerm_resource_group.default.name
@@ -11,7 +15,7 @@ resource "azurerm_storage_account" "default" {
 resource "azurerm_role_assignment" "sbdc_current_user" {
   scope                = azurerm_storage_account.default.id
   role_definition_name = "Storage Blob Data Contributor"
-  principal_id         = data.azurerm_client_config.current.object_id
+  principal_id         = local.current_user_id
 }
 
 resource "azurerm_role_assignment" "sbdc_syn_ws" {
