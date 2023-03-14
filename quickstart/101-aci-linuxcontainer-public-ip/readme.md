@@ -6,6 +6,7 @@ This template deploys an Azure Container Instance with a public IP address.
 
 - [random_pet](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/pet)
 - [azurerm_resource_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group)
+- [random_string](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string)
 - [azurerm_container_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/container_group)
 
 ## Variables
@@ -14,7 +15,6 @@ This template deploys an Azure Container Instance with a public IP address.
 |-|-|-|
 | `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. | rg |
 | `resource_group_location` | Location of the resource group. | eastus |
-| `name` | Name for the container group | acilinuxpublicipcontainergroup |
 | `image` | Container image to deploy. | mcr.microsoft.com/azuredocs/aci-helloworld" |
 | `port` | Port to open on the container and the public IP address. | 80 |
 | `cpu_cores` | Quantity of CPU cores to allocate to the container. | 1 |
@@ -23,4 +23,4 @@ This template deploys an Azure Container Instance with a public IP address.
 
 ## Example
 
-To see how to run this example, see [Create an Azure resource group using Terraform](https://docs.microsoft.com/azure/developer/terraform/create-resource-group).
+To see how to run this example, see [Create an Azure Container Instance with a public IP address using Terraform](https://learn.microsoft.com/azure/container-instances/container-instances-quickstart-terraform).
