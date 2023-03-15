@@ -12,7 +12,7 @@ variable "location" {
 
 variable "cosmosdb_account_name" {
   type        = string
-  default     = "default-cosmosdb-user"
+  default     = null
   description = "Cosmos db account name"
 }
 

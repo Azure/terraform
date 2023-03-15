@@ -4,7 +4,7 @@ resource "azurerm_resource_group" "example" {
 }
 
 resource "azurerm_cosmosdb_account" "example" {
-  name                      = "${random_pet.prefix.id}-cosmosdb-account"
+  name                      = random_pet.prefix.id
   location                  = var.cosmosdb_account_location
   resource_group_name       = azurerm_resource_group.example.name
   offer_type                = "Standard"
