@@ -9,7 +9,7 @@ on:
 
 jobs:
   e2e-check:
-    runs-on: [self-hosted, 1ES.Pool=azterraform]
+    runs-on: [self-hosted, 1ES.Pool=terraform-azurerm-doc]
     environment:
       name: acctests
     steps:
@@ -29,3 +29,10 @@ jobs:
           export ARM_SUBSCRIPTION_ID=$(az login --identity --username $MSI_ID | jq -r '.[0] | .id')
           export ARM_TENANT_ID=$(az login --identity --username $MSI_ID | jq -r '.[0] | .tenantId')
           export CHANGED_FOLDERS="${{ steps.changed-files.outputs.all_changed_files }}"
+          docker run --rm -v $(pwd):/src -w /src/test --network=host -e MSI_ID -e ARM_SUBSCRIPTION_ID -e ARM_TENANT_ID -e ARM_USE_MSI=true -e CHANGED_FOLDERS mcr.microsoft.com/azterraform:latest sh -c "go mod tidy && go test -timeout=360m -v ./e2e"
+      - uses: actions/upload-artifact@v3
+        with:
+          name: TestRecord-${{ github.event.number }}
+          retention-days: 60
+          path: |
+            quickstart/**/TestRecord.md.tmp
