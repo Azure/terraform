@@ -1,6 +1,7 @@
 variable "name" {
   type        = string
   description = "Name of the deployment"
+  default     = "ml-secure"
 }
 
 variable "environment" {
@@ -70,6 +71,7 @@ variable "dsvm_admin_username" {
 
 variable "dsvm_host_password" {
   type        = string
-  description = "Password for the admin username of the Data Science VM"
+  description = "Password for the admin username of the Data Science VM. Leave blank to generate a random password"
+  default     = null
   sensitive   = true
 }

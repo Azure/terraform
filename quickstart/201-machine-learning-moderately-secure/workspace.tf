@@ -21,7 +21,7 @@ resource "azurerm_key_vault" "default" {
 }
 
 resource "azurerm_storage_account" "default" {
-  name                     = "st${var.name}${var.environment}"
+  name                     = replace("st${var.name}${var.environment}", "-", "")
   location                 = azurerm_resource_group.default.location
   resource_group_name      = azurerm_resource_group.default.name
   account_tier             = "Standard"
@@ -34,7 +34,7 @@ resource "azurerm_storage_account" "default" {
 }
 
 resource "azurerm_container_registry" "default" {
-  name                = "cr${var.name}${var.environment}"
+  name                = replace("cr${var.name}${var.environment}", "-", "")
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
   sku                 = "Premium"
