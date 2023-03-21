@@ -21,7 +21,7 @@ resource "azurerm_key_vault" "example" {
   soft_delete_retention_days  = 7
 }
 
-resource "azurerm_key_vault_access_policy" "service-principal" {
+resource "azurerm_key_vault_access_policy" "current_user" {
   key_vault_id = azurerm_key_vault.example.id
   tenant_id    = data.azurerm_client_config.current.tenant_id
   object_id    = local.current_user_object_id
@@ -31,6 +31,7 @@ resource "azurerm_key_vault_access_policy" "service-principal" {
     "Delete",
     "Get",
     "Update",
+    "GetRotationPolicy",
   ]
 
   secret_permissions = [
@@ -56,7 +57,7 @@ resource "azurerm_key_vault_key" "example" {
   ]
 
   depends_on = [
-    azurerm_key_vault_access_policy.service-principal
+    azurerm_key_vault_access_policy.current_user
   ]
 }
 
