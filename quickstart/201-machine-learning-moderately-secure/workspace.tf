@@ -6,8 +6,14 @@ resource "azurerm_application_insights" "default" {
   application_type    = "web"
 }
 
+resource "random_string" "kv_suffix" {
+  length  = 24
+  upper   = false
+  special = false
+}
+
 resource "azurerm_key_vault" "default" {
-  name                     = "kv-${var.name}-${var.environment}"
+  name                     = substr("kv-${var.name}-${var.environment}-${random_string.kv_suffix.result}", 0, 24)
   location                 = azurerm_resource_group.default.location
   resource_group_name      = azurerm_resource_group.default.name
   tenant_id                = data.azurerm_client_config.current.tenant_id
