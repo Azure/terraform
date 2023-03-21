@@ -1,21 +1,22 @@
-resource "random_pet" "rg-name" {
+resource "random_pet" "name_prefix" {
   prefix = var.name_prefix
+  length = 1
 }
 
 resource "azurerm_resource_group" "default" {
-  name     = random_pet.rg-name.id
+  name     = random_pet.name_prefix.id
   location = var.location
 }
 
 resource "azurerm_virtual_network" "default" {
-  name                = "${var.name_prefix}-vnet"
+  name                = "${random_pet.name_prefix.id}-vnet"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
   address_space       = ["10.0.0.0/16"]
 }
 
 resource "azurerm_network_security_group" "default" {
-  name                = "${var.name_prefix}-nsg"
+  name                = "${random_pet.name_prefix.id}-nsg"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
 
@@ -33,7 +34,7 @@ resource "azurerm_network_security_group" "default" {
 }
 
 resource "azurerm_subnet" "default" {
-  name                 = "${var.name_prefix}-subnet"
+  name                 = "${random_pet.name_prefix.id}-subnet"
   virtual_network_name = azurerm_virtual_network.default.name
   resource_group_name  = azurerm_resource_group.default.name
   address_prefixes     = ["10.0.2.0/24"]
@@ -58,28 +59,32 @@ resource "azurerm_subnet_network_security_group_association" "default" {
 }
 
 resource "azurerm_private_dns_zone" "default" {
-  name                = "${var.name_prefix}-pdz.postgres.database.azure.com"
+  name                = "${random_pet.name_prefix.id}-pdz.postgres.database.azure.com"
   resource_group_name = azurerm_resource_group.default.name
 
   depends_on = [azurerm_subnet_network_security_group_association.default]
 }
 
 resource "azurerm_private_dns_zone_virtual_network_link" "default" {
-  name                  = "${var.name_prefix}-pdzvnetlink.com"
+  name                  = "${random_pet.name_prefix.id}-pdzvnetlink.com"
   private_dns_zone_name = azurerm_private_dns_zone.default.name
   virtual_network_id    = azurerm_virtual_network.default.id
   resource_group_name   = azurerm_resource_group.default.name
 }
 
+resource "random_password" "pass" {
+  length = 20
+}
+
 resource "azurerm_postgresql_flexible_server" "default" {
-  name                   = "${var.name_prefix}-server"
+  name                   = "${random_pet.name_prefix.id}-server"
   resource_group_name    = azurerm_resource_group.default.name
   location               = azurerm_resource_group.default.location
   version                = "13"
   delegated_subnet_id    = azurerm_subnet.default.id
   private_dns_zone_id    = azurerm_private_dns_zone.default.id
   administrator_login    = "adminTerraform"
-  administrator_password = "QAZwsx123"
+  administrator_password = random_password.pass.result
   zone                   = "1"
   storage_mb             = 32768
   sku_name               = "GP_Standard_D2s_v3"
