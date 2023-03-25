@@ -7,7 +7,7 @@ resource "azurerm_resource_group" "rg" {
   location = var.resource_group_location
 }
 
-resource "random_string" "ddos_protection_plan_name" {
+resource "random_string" "ddos_protection_plan" {
   length  = 13
   upper   = false
   numeric = false
@@ -15,7 +15,7 @@ resource "random_string" "ddos_protection_plan_name" {
 }
 
 resource "azurerm_network_ddos_protection_plan" "ddos" {
-  name                = random_string.ddos_protection_plan_name.result
+  name                = random_string.ddos_protection_plan.result
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
 }

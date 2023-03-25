@@ -24,4 +24,4 @@ This template creates an Azure DDoS protection plan and a virtual network.
 
 ## Example
 
-To see how to run this example, see [Create an Azure DDoS protection plan and virtual network using Terraform](https://docs.microsoft.com/azure/developer/terraform/create-ddos-protection-plan-and-virtual-network).
+To see how to run this example, see [Create and configure Azure DDoS Network Protection using Terraform](https://learn.microsoft.com/azure/ddos-protection/manage-ddos-protection-terraform).

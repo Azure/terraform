@@ -10,18 +10,6 @@ variable "resource_group_name_prefix" {
   default     = "rg"
 }
 
-variable "ddos_protection_plan_name" {
-  type        = string
-  description = "Specify a DDoS protection plan name."
-  default     = null
-}
-
-variable "virtual_network_name" {
-  type        = string
-  description = "Specify a DDoS virtual network name."
-  default     = null
-}
-
 variable "vnet_address_prefix" {
   type        = string
   description = "Specify the virtual network address prefix"
