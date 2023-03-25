@@ -16,8 +16,8 @@ This template deploys an Azure Key Vault.
 |-|-|-|
 | `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. | rg |
 | `resource_group_location` | Location of the resource group. | eastus |
-| `vault_name` | The name of the key vault to be created. | Randomly generated if not specified. |
-| `key_name` | The name of the key to be created. | Randomly generated if not specified. |
+| `vault_name` | The name of the key vault to be created. The value is randomly generated if not specified or blank. | "" |
+| `key_name` | The name of the key to be created. | The value is randomly generated if not specified or blank. |
 | `sku_name` | The SKU of the vault to be created. | standard |
 | `key_type` | The JsonWebKeyType of the key to be created. | RSA |
 | `key_ops` | The permitted JSON web key operations of the key to be created. | Empty list of strings. |
@@ -25,4 +25,4 @@ This template deploys an Azure Key Vault.
 
 ## Example
 
-To see how to run this example, see [Deploy an Azure Key Vault using Terraform](https://learn.microsoft.com/azure/key-vault-get-started-bicep).
+To see how to run this example, see [Create an Azure key vault and a key by using Terraform](https://learn.microsoft.com/azure/key-vault/keys/quick-create-terraform).

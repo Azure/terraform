@@ -10,18 +10,6 @@ variable "resource_group_name_prefix" {
   default     = "rg"
 }
 
-variable "vault_name" {
-  type        = string
-  description = "The name of the key vault to be created."
-  default     = ""
-}
-
-variable "key_name" {
-  type        = string
-  description = "The name of the key to be created."
-  default     = ""
-}
-
 variable "sku_name" {
   type        = string
   description = "The SKU of the vault to be created."
@@ -30,6 +18,18 @@ variable "sku_name" {
     condition     = contains(["standard", "premium"], var.sku_name)
     error_message = "The sku_name must be one of the following: standard, premium."
   }
+}
+
+variable "key_permissions" {
+  type        = list(string)
+  description = "List of key permissions."
+  default     = ["List", "Create", "Delete", "Get", "Purge", "Recover", "Update", "GetRotationPolicy", "SetRotationPolicy"]
+}
+
+variable "secret_permissions" {
+  type        = list(string)
+  description = "List of secret permissions."
+  default     = ["Set"]
 }
 
 variable "key_type" {
@@ -45,7 +45,7 @@ variable "key_type" {
 variable "key_ops" {
   type        = list(string)
   description = "The permitted JSON web key operations of the key to be created."
-  default     = []
+  default     = ["decrypt", "encrypt", "sign", "unwrapKey", "verify", "wrapKey"]
 }
 
 variable "key_size" {

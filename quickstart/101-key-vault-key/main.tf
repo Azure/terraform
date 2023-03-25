@@ -22,28 +22,15 @@ resource "azurerm_key_vault" "vault" {
   location                   = azurerm_resource_group.rg.location
   resource_group_name        = azurerm_resource_group.rg.name
   tenant_id                  = data.azurerm_client_config.current.tenant_id
-  sku_name                   = "premium"
+  sku_name                   = var.sku_name
   soft_delete_retention_days = 7
 
   access_policy {
     tenant_id = data.azurerm_client_config.current.tenant_id
     object_id = data.azurerm_client_config.current.object_id
 
-    key_permissions = [
-      "List",
-      "Create",
-      "Delete",
-      "Get",
-      "Purge",
-      "Recover",
-      "Update",
-      "GetRotationPolicy",
-      "SetRotationPolicy"
-    ]
-
-    secret_permissions = [
-      "Set",
-    ]
+    key_permissions    = var.key_permissions
+    secret_permissions = var.secret_permissions
   }
 }
 
@@ -60,17 +47,9 @@ resource "azurerm_key_vault_key" "key" {
   ? var.vault_name : "key-${random_string.azurerm_key_vault_name.result}")
 
   key_vault_id = azurerm_key_vault.vault.id
-  key_type     = "RSA"
-  key_size     = 2048
-
-  key_opts = [
-    "decrypt",
-    "encrypt",
-    "sign",
-    "unwrapKey",
-    "verify",
-    "wrapKey",
-  ]
+  key_type     = var.key_type
+  key_size     = var.key_size
+  key_opts     = var.key_ops
 
   rotation_policy {
     automatic {
