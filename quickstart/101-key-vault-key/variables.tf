@@ -10,6 +10,18 @@ variable "resource_group_name_prefix" {
   default     = "rg"
 }
 
+variable "vault_name" {
+  type        = string
+  description = "The name of the key vault to be created. The value will be randomly generated if blank."
+  default     = ""
+}
+
+variable "key_name" {
+  type        = string
+  description = "The name of the key to be created. The value will be randomly generated if blank."
+  default     = ""
+}
+
 variable "sku_name" {
   type        = string
   description = "The SKU of the vault to be created."

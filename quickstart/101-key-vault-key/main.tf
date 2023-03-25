@@ -43,8 +43,8 @@ resource "random_string" "azurerm_key_vault_key_name" {
 }
 
 resource "azurerm_key_vault_key" "key" {
-  name = ((var.vault_name != "")
-  ? var.vault_name : "key-${random_string.azurerm_key_vault_name.result}")
+  name = ((var.key_name != "")
+  ? var.key_name : "key-${random_string.azurerm_key_vault_key_name.result}")
 
   key_vault_id = azurerm_key_vault.vault.id
   key_type     = var.key_type
