@@ -1,3 +1,40 @@
+## 26 Mar 23 05:10 UTC
+
+Success: false
+
+### Versions
+
+
+
+### Error
+
+
+[0m[1mInitializing the backend...[0m
+
+[0m[1mInitializing provider plugins...[0m
+- Finding hashicorp/local versions matching "2.3.0"...
+- Finding hashicorp/random versions matching ">= 3.0.0"...
+- Finding hashicorp/tls versions matching "4.0.4"...
+- Finding hashicorp/azurerm versions matching ">= 3.0.0, < 4.0.0"...
+- Installing hashicorp/azurerm v3.49.0...
+- Installed hashicorp/azurerm v3.49.0 (signed by HashiCorp)
+- Installing hashicorp/random v3.4.3...
+- Installed hashicorp/random v3.4.3 (signed by HashiCorp)
+- Installing hashicorp/tls v4.0.4...
+- Installed hashicorp/tls v4.0.4 (signed by HashiCorp)
+[31m[31m╷[0m[0m
+[31m│[0m [0m[1m[31mError: [0m[0m[1mFailed to query available provider packages[0m
+[31m│[0m [0m
+[31m│[0m [0m[0mCould not retrieve the list of available versions for provider
+[31m│[0m [0mhashicorp/local: could not connect to registry.terraform.io: failed to
+[31m│[0m [0mrequest discovery document: Get
+[31m│[0m [0m"https://registry.terraform.io/.well-known/terraform.json": read tcp
+[31m│[0m [0m172.17.0.2:34278->108.138.64.35:443: read: connection reset by peer
+[31m╵[0m[0m
+[0m[0m
+
+---
+
 ## 19 Mar 23 04:44 UTC
 
 Success: false
