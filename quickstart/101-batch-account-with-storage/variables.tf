@@ -14,4 +14,8 @@ variable "storage_account_type" {
   type        = string
   default     = "Standard_LRS"
   description = "Azure Storage account type."
+  validation {
+    condition     = can(split("_", var.storage_account_type)[1])
+    error_message = "Storage account type must be a valid value, such as 'Standard_LRS'."
+  }
 }
