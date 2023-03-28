@@ -17,8 +17,12 @@ resource "random_string" "azurerm_key_vault_name" {
   upper   = false
 }
 
+locals {
+  current_user_id = coalesce(var.msi_id, data.azurerm_client_config.current.object_id)
+}
+
 resource "azurerm_key_vault" "vault" {
-  name                       = (var.vault_name != "") ? var.vault_name : "vault-${random_string.azurerm_key_vault_name.result}"
+  name                       = coalesce(var.vault_name, "vault-${random_string.azurerm_key_vault_name.result}")
   location                   = azurerm_resource_group.rg.location
   resource_group_name        = azurerm_resource_group.rg.name
   tenant_id                  = data.azurerm_client_config.current.tenant_id
@@ -27,7 +31,7 @@ resource "azurerm_key_vault" "vault" {
 
   access_policy {
     tenant_id = data.azurerm_client_config.current.tenant_id
-    object_id = data.azurerm_client_config.current.object_id
+    object_id = local.current_user_id
 
     key_permissions    = var.key_permissions
     secret_permissions = var.secret_permissions
@@ -43,8 +47,7 @@ resource "random_string" "azurerm_key_vault_key_name" {
 }
 
 resource "azurerm_key_vault_key" "key" {
-  name = ((var.key_name != "")
-  ? var.key_name : "key-${random_string.azurerm_key_vault_key_name.result}")
+  name = coalesce(var.key_name, "key-${random_string.azurerm_key_vault_key_name.result}")
 
   key_vault_id = azurerm_key_vault.vault.id
   key_type     = var.key_type

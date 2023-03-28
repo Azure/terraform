@@ -1,3 +1,7 @@
+locals {
+  current_user_id = coalesce(var.msi_id, data.azurerm_client_config.current.object_id)
+}
+
 variable "resource_group_location" {
   type        = string
   description = "Location for all resources."
@@ -64,4 +68,10 @@ variable "key_size" {
   type        = number
   description = "The size in bits of the key to be created."
   default     = 2048
+}
+
+variable "msi_id" {
+  type        = string
+  description = "The Managed Service Identity ID. If this value isn't null (the default), the Azure Key Vault Object ID will be set to this value."
+  default     = null
 }

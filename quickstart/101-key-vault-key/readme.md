@@ -22,6 +22,7 @@ This template deploys an Azure Key Vault.
 | `key_type` | The JsonWebKeyType of the key to be created. | RSA |
 | `key_ops` | The permitted JSON web key operations of the key to be created. | Empty list of strings. |
 | `key_size` | The size in bits of the key to be created. | 2048 |
+| `msi_id` | The Managed Service Identity ID. If this value isn't null (the default), the Azure Key Vault Object ID will be set to this value. | null |
 
 ## Example
 
