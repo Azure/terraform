@@ -16,9 +16,9 @@ This template creates an Azure CDN profile and endpoint.
 |-|-|-|
 | `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. | rg |
 | `resource_group_location` | Location of the resource group. | eastus |
-| `origin_url` | Url of the origin. | null |
+| `origin_url` | Url of the origin. | www.contoso.com |
 | `cdn_sku` | CDN SKU names. | Standard_Microsoft |
 
 ## Example
 
-To see how to run this example, see [Create an Azure CDN profile and endpoint using Terraform](https://learn.microsoft.com/azure/cdn/create-profile-endpoint-bicep).
+To see how to run this example, see [Create an Azure CDN profile and endpoint using Terraform](https://learn.microsoft.com/azure/cdn/create-profile-endpoint-terraform).
