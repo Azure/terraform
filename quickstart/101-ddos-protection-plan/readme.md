@@ -16,8 +16,6 @@ This template creates an Azure DDoS protection plan and a virtual network.
 |-|-|-|
 | `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. | rg |
 | `resource_group_location` | Location of the resource group. | eastus |
-| `ddos_protection_plan_name` | Specify a DDoS protection plan name. | null |
-| `virtual_network_name` | Specify a DDoS virtual network name. | null |
 | `vnet_address_prefix` | Specify the virtual network address prefix | 172.17.0.0/16 |
 | `subnet_prefix` | Specify the virtual network subnet prefix | 172.17.0.0/24 |
 | `ddos_protection_plan_enabled` | Enable DDoS protection plan. | true |
