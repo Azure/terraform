@@ -19,6 +19,8 @@ This template deploys an Azure Key Vault.
 | `vault_name` | The name of the key vault to be created. The value is randomly generated if not specified or blank. | "" |
 | `key_name` | The name of the key to be created. | The value is randomly generated if not specified or blank. |
 | `sku_name` | The SKU of the vault to be created. | standard |
+| `key_permissions` | List of key permissions. | ["List", "Create", "Delete", "Get", "Purge", "Recover", "Update", "GetRotationPolicy", "SetRotationPolicy"] |
+| `secret_permissions` | List of secret permissions. | ["Set"] |
 | `key_type` | The JsonWebKeyType of the key to be created. | RSA |
 | `key_ops` | The permitted JSON web key operations of the key to be created. | Empty list of strings. |
 | `key_size` | The size in bits of the key to be created. | 2048 |
