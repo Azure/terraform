@@ -16,8 +16,7 @@ This template creates an Azure Notification Hubs namespace and hub.
 |-|-|-|
 | `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. | rg |
 | `resource_group_location` | Location of the resource group. | eastus |
-| `namespace_name` | The name of the Notification Hubs namespace. | null |
 
 ## Example
 
-To see how to run this example, see [Create a notification hub using Terraform](https://learn.microsoft.com/en-us/azure/notification-hubs/create-notification-hub-terraform).
+To see how to run this example, see [Create a notification hub using Terraform](https://learn.microsoft.com/azure/notification-hubs/create-notification-hub-terraform).
