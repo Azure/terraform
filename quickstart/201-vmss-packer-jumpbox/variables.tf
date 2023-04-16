@@ -9,11 +9,6 @@ variable "packer_image_name" {
 }
 
 variable "resource_group_name" {
-   description = "Name of the resource group in which the Packer image  will be created"
-   default     = "myPackerImages"
-}
-
-variable "resource_group_name" {
    description = "Name of the resource group in which the resources will be created"
    default     = "myResourceGroup"
 }
