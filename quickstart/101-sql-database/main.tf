@@ -7,12 +7,8 @@ resource "azurerm_resource_group" "rg" {
   location = var.resource_group_location
 }
 
-resource "random_string" "azurerm_mssql_server_name" {
-  length  = 13
-  lower   = true
-  numeric = false
-  special = false
-  upper   = false
+resource "random_pet" "azurerm_mssql_server_name" {
+  prefix = "sql"
 }
 
 resource "random_password" "admin_password" {
@@ -30,7 +26,7 @@ locals {
 }
 
 resource "azurerm_mssql_server" "server" {
-  name                         = "sql${random_string.azurerm_mssql_server_name.result}"
+  name                         = random_pet.azurerm_mssql_server_name.id
   resource_group_name          = azurerm_resource_group.rg.name
   location                     = azurerm_resource_group.rg.location
   administrator_login          = var.admin_username

@@ -6,7 +6,6 @@ This template deploys an Azure SQL Database.
 
 - [random_pet](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/pet)
 - [azurerm_resource_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group)
-- [random_string](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string)
 - [random_password](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/password)
 - [azurerm_mssql_server](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/mssql_server)
 - [azurerm_mssql_database](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/mssql_database)
