@@ -1,5 +1,5 @@
 resource "random_pet" "rg_name" {
-  prefix = var.resource_group_name_prefix
+  prefix = "rg"
 }
 
 resource "azurerm_resource_group" "rg" {
@@ -7,15 +7,12 @@ resource "azurerm_resource_group" "rg" {
   location = var.resource_group_location
 }
 
-resource "random_string" "stream_analytics_job_name" {
-  length  = 25
-  upper   = false
-  numeric = false
-  special = false
+resource "random_pet" "stream_analytics_job_name" {
+  prefix = "job"
 }
 
 resource "azurerm_stream_analytics_job" "job" {
-  name                                     = random_string.stream_analytics_job_name.result
+  name                                     = random_pet.stream_analytics_job_name.id
   resource_group_name                      = azurerm_resource_group.rg.name
   location                                 = azurerm_resource_group.rg.location
   streaming_units                          = var.number_of_streaming_units
