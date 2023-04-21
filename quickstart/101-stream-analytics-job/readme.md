@@ -17,4 +17,4 @@ This template deploys an Azure Stream Analytics Job.
 
 ## Example
 
-To see how to run this example, see [Deploy an Azure Stream Analytics job using Terraform](https://learn.microsoft.com/azure/stream-analytics/stream-analytics-get-started-bicep).
+To see how to run this example, see [Create an Azure Stream Analytics job using Terraform](https://learn.microsoft.com/azure/stream-analytics/quick-create-terraform)
