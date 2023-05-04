@@ -20,13 +20,13 @@ This template configures customer managed keys (CMK) for DBFS.
 | `resource_group_location` | Location of the resource group. | East US 2 |
 | `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. | rg |
 | `workspace_name_prefix` | Prefix of the Azure Databricks Workspace name that's combined with a random ID so name is unique in your Azure subscription. | db |
-| `workspace_name` | Azure Databricks workspace name. The value is randomly generated if not specified or blank. | |
+| `workspace_name` | Azure Databricks workspace name. The value is randomly generated if not specified or blank. | "" |
 | `wssku` | Pricing Tier of the Azure Databricks workspace. | premium |
 | `key_vault_name_prefix` | Prefix of the Azure Key Vault name that's combined with a random ID so name is unique in your Azure subscription. | vault |
-| `key_vault_name` | Name of new key vault. The value is randomly generated if not specified or blank. | |
+| `key_vault_name` | Name of new key vault. The value is randomly generated if not specified or blank. | "" |
 | `sku_name` | SKU tier of Azure Key Vault | premium |
 | `key_name_prefix` | Prefix of the Key Vault key name that's combined with a random ID so name is unique in your Azure subscription. | key |
-| `key_name` | The name of the key to be created. | The value is randomly generated if not specified or blank. |
+| `key_name` | The name of the key to be created. The value is randomly generated if not specified or blank. | "" |
 | `key_permissions` | List of key permissions. | ["Get", "List", "Create", "Decrypt", "Encrypt", "Sign", "UnwrapKey", "Verify", "WrapKey", "Delete", "Restore", "Recover", "Update", "Purge", "GetRotationPolicy", "SetRotationPolicy"] |
 | `secret_permissions` | List of secret permissions. | ["Set"] |
 | `key_type` | The JsonWebKeyType of the key to be created. Choose from: EC, EC-HSM, RSA, RSA-HSM | RSA |
