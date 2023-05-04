@@ -97,7 +97,7 @@ variable "key_type" {
   }
 }
 
-variable "key_ops" {
+variable "key_opts" {
   type        = list(string)
   description = "The permitted JSON web key operations of the key to be created."
   default     = ["decrypt", "encrypt", "sign", "unwrapKey", "verify", "wrapKey"]

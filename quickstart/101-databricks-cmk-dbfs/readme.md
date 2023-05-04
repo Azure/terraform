@@ -27,10 +27,10 @@ This template configures customer managed keys (CMK) for DBFS.
 | `sku_name` | SKU tier of Azure Key Vault | premium |
 | `key_name_prefix` | Prefix of the Key Vault key name that's combined with a random ID so name is unique in your Azure subscription. | key |
 | `key_name` | The name of the key to be created. The value is randomly generated if not specified or blank. | "" |
-| `key_permissions` | List of key permissions. Choose from: Backup, Create, Decrypt, Delete, Encrypt, Get, Import, List, Purge, Recover, Restore, Sign, UnwrapKey, Update, Verify, WrapKey, Release, Rotate, GetRotationPolicy and SetRotationPolicy. | ["Get", "List", "Create", "Decrypt", "Encrypt", "Sign", "UnwrapKey", "Verify", "WrapKey", "Delete", "Restore", "Recover", "Update", "Purge", "GetRotationPolicy", "SetRotationPolicy"] |
-| `secret_permissions` | List of secret permissions. Choose from: Backup, Delete, Get, List, Purge, Recover, Restore and Set. | ["Set"] |
+| `key_permissions` | List of key permissions. Choose from: Backup, Create, Decrypt, Delete, Encrypt, Get, GetRotationPolicy, Import, List, Purge, Recover, Release, Restore, Rotate, SetRotationPolicy, Sign, UnwrapKey, Update, Verify, WrapKey | ["Create", "Decrypt", "Delete", "Encrypt", "Get", "GetRotationPolicy", "List", "Purge", "Recover", "Restore", "SetRotationPolicy", "Sign", "UnwrapKey", "Update", "Verify", "WrapKey"] |
+| `secret_permissions` | List of secret permissions. Choose from: Backup, Delete, Get, List, Purge, Recover, Restore, Set. | ["Set"] |
 | `key_type` | The JsonWebKeyType of the key to be created. Choose from: EC, EC-HSM, RSA, RSA-HSM | RSA |
-| `key_ops` | The permitted JSON web key operations of the key to be created. | ["decrypt", "encrypt", "sign", "unwrapKey", "verify", "wrapKey"] |
+| `key_opts` | The permitted JSON web key operations of the key to be created. Choose from: decrypt, encrypt, sign, unwrapKey, verify, wrapKey. | ["decrypt", "encrypt", "sign", "unwrapKey", "verify", "wrapKey"] |
 | `key_size` | The size (in bytes) of the key to be created. | 2048 |
 | `msi_id` | The Managed Service Identity ID. If this value isn't null (the default), the Azure Key Vault Object ID will be set to this value. | null |
 
