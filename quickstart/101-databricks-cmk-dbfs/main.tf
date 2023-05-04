@@ -15,20 +15,17 @@ locals {
 }
 
 resource "random_pet" "azurerm_databricks_workspace_name" {
-  count  = var.workspace_name == "" ? 1 : 0
+  count  = var.workspace_name == null ? 1 : 0
   prefix = var.workspace_name_prefix
 }
 
 # Create workspace.
 resource "azurerm_databricks_workspace" "databricks" {
-  name                         = coalesce(var.workspace_name, random_pet.azurerm_databricks_workspace_name.id)
+  name                         = coalesce(var.workspace_name, random_pet.azurerm_databricks_workspace_name[0].id)
   resource_group_name          = azurerm_resource_group.rg.name
   location                     = azurerm_resource_group.rg.location
   sku                          = var.wssku
   customer_managed_key_enabled = true
-  tags = {
-    Environment = "test"
-  }
 }
 
 # Configure CMK.
@@ -40,13 +37,13 @@ resource "azurerm_databricks_workspace_customer_managed_key" "cmk" {
 }
 
 resource "random_pet" "azurerm_key_vault_name" {
-  count  = var.key_vault_name == "" ? 1 : 0
+  count  = var.key_vault_name == null ? 1 : 0
   prefix = var.key_vault_name_prefix
 }
 
 # Create Key Vault.
 resource "azurerm_key_vault" "vault" {
-  name                       = coalesce(var.key_vault_name, random_pet.azurerm_key_vault_name.id)
+  name                       = coalesce(var.key_vault_name, random_pet.azurerm_key_vault_name[0].id)
   location                   = azurerm_resource_group.rg.location
   resource_group_name        = azurerm_resource_group.rg.name
   tenant_id                  = data.azurerm_client_config.current.tenant_id
@@ -64,13 +61,13 @@ resource "azurerm_key_vault" "vault" {
 }
 
 resource "random_pet" "azurerm_key_vault_key_name" {
-  count  = var.key_name == "" ? 1 : 0
+  count  = var.key_name == null ? 1 : 0
   prefix = var.key_name_prefix
 }
 
 # Create Key Vault key.
 resource "azurerm_key_vault_key" "key" {
-  name         = coalesce(var.key_name, random_pet.azurerm_key_vault_key_name.id)
+  name         = coalesce(var.key_name, random_pet.azurerm_key_vault_key_name[0].id)
   key_vault_id = azurerm_key_vault.vault.id
   key_type     = var.key_type
   key_size     = var.key_size
