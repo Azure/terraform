@@ -15,6 +15,7 @@ locals {
 }
 
 resource "random_pet" "azurerm_databricks_workspace_name" {
+  count  = var.workspace_name == "" ? 1 : 0
   prefix = var.workspace_name_prefix
 }
 
@@ -32,12 +33,14 @@ resource "azurerm_databricks_workspace" "databricks" {
 
 # Configure CMK.
 resource "azurerm_databricks_workspace_customer_managed_key" "cmk" {
-  depends_on       = [azurerm_key_vault_access_policy.databricks]
   workspace_id     = azurerm_databricks_workspace.databricks.id
   key_vault_key_id = azurerm_key_vault_key.key.id
+
+  depends_on = [azurerm_key_vault_access_policy.databricks]
 }
 
 resource "random_pet" "azurerm_key_vault_name" {
+  count  = var.key_vault_name == "" ? 1 : 0
   prefix = var.key_vault_name_prefix
 }
 
@@ -61,6 +64,7 @@ resource "azurerm_key_vault" "vault" {
 }
 
 resource "random_pet" "azurerm_key_vault_key_name" {
+  count  = var.key_name == "" ? 1 : 0
   prefix = var.key_name_prefix
 }
 
@@ -85,7 +89,6 @@ resource "azurerm_key_vault_key" "key" {
 
 # Create access policy.
 resource "azurerm_key_vault_access_policy" "databricks" {
-  depends_on   = [azurerm_databricks_workspace.databricks]
   key_vault_id = azurerm_key_vault.vault.id
   tenant_id    = azurerm_databricks_workspace.databricks.storage_account_identity.0.tenant_id
   object_id    = azurerm_databricks_workspace.databricks.storage_account_identity.0.principal_id
@@ -94,4 +97,6 @@ resource "azurerm_key_vault_access_policy" "databricks" {
     "UnwrapKey",
     "WrapKey",
   ]
+
+  depends_on = [azurerm_databricks_workspace.databricks]
 }

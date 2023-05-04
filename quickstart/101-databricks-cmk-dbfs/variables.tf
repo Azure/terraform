@@ -19,7 +19,7 @@ variable "workspace_name_prefix" {
 variable "workspace_name" {
   type        = string
   description = "Azure Databricks workspace name."
-  default     = ""
+  default     = null
 }
 
 variable "wssku" {
@@ -37,7 +37,7 @@ variable "key_vault_name_prefix" {
 variable "key_vault_name" {
   type        = string
   description = "The name of the key vault to be created. The value will be randomly generated if blank."
-  default     = ""
+  default     = null
 }
 
 variable "sku_name" {
@@ -55,7 +55,7 @@ variable "key_name_prefix" {
 variable "key_name" {
   type        = string
   description = "The name of the key to be created. The value will be randomly generated if blank."
-  default     = ""
+  default     = null
 }
 
 variable "key_permissions" {

@@ -20,13 +20,13 @@ This template configures customer managed keys (CMK) for DBFS.
 | `resource_group_location` | Location of the resource group. | East US 2 |
 | `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. | rg |
 | `workspace_name_prefix` | Prefix of the Azure Databricks Workspace name that's combined with a random ID so name is unique in your Azure subscription. | db |
-| `workspace_name` | Azure Databricks workspace name. The value is randomly generated if not specified or blank. | "" |
+| `workspace_name` | Azure Databricks workspace name. The value is randomly generated if null. | null |
 | `wssku` | Pricing Tier of the Azure Databricks workspace. | premium |
 | `key_vault_name_prefix` | Prefix of the Azure Key Vault name that's combined with a random ID so name is unique in your Azure subscription. | vault |
-| `key_vault_name` | Name of new key vault. The value is randomly generated if not specified or blank. | "" |
+| `key_vault_name` | Name of new key vault. The value is randomly generated if null. | null |
 | `sku_name` | SKU tier of Azure Key Vault | premium |
 | `key_name_prefix` | Prefix of the Key Vault key name that's combined with a random ID so name is unique in your Azure subscription. | key |
-| `key_name` | The name of the key to be created. The value is randomly generated if not specified or blank. | "" |
+| `key_name` | The name of the key to be created. The value is randomly generated if null. | null |
 | `key_permissions` | List of key permissions. Choose from: Backup, Create, Decrypt, Delete, Encrypt, Get, GetRotationPolicy, Import, List, Purge, Recover, Release, Restore, Rotate, SetRotationPolicy, Sign, UnwrapKey, Update, Verify, WrapKey | ["Create", "Decrypt", "Delete", "Encrypt", "Get", "GetRotationPolicy", "List", "Purge", "Recover", "Restore", "SetRotationPolicy", "Sign", "UnwrapKey", "Update", "Verify", "WrapKey"] |
 | `secret_permissions` | List of secret permissions. Choose from: Backup, Delete, Get, List, Purge, Recover, Restore, Set. | ["Set"] |
 | `key_type` | The JsonWebKeyType of the key to be created. Choose from: EC, EC-HSM, RSA, RSA-HSM | RSA |
