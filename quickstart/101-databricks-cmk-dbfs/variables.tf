@@ -52,6 +52,12 @@ variable "key_name_prefix" {
   default     = "key"
 }
 
+variable "key_name" {
+  type        = string
+  description = "The name of the key to be created. The value will be randomly generated if blank."
+  default     = ""
+}
+
 variable "key_permissions" {
   type        = list(string)
   description = "List of key permissions."
@@ -81,12 +87,6 @@ variable "secret_permissions" {
   default     = ["Set"]
 }
 
-variable "key_name" {
-  type        = string
-  description = "The name of the key to be created. The value will be randomly generated if blank."
-  default     = ""
-}
-
 variable "key_type" {
   type        = string
   description = "The JsonWebKeyType of the key to be created."
@@ -111,6 +111,6 @@ variable "key_size" {
 
 variable "msi_id" {
   type        = string
-  description = "The Managed Service Identity ID. If this value isn't null (the default), 'data.azurerm_client_config.current.object_id' will be set to this value."
+  description = "The Managed Service Identity ID. If this value isn't null (the default), the Azure Key Vault Object ID will be set to this value."
   default     = null
 }
