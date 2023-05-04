@@ -62,22 +62,22 @@ variable "key_permissions" {
   type        = list(string)
   description = "List of key permissions."
   default = [
-    "Get",
-    "List",
     "Create",
     "Decrypt",
+    "Delete",
     "Encrypt",
+    "Get",
+    "GetRotationPolicy",
+    "List",
+    "Purge",
+    "Recover",
+    "Restore",
+    "SetRotationPolicy",
     "Sign",
     "UnwrapKey",
-    "Verify",
-    "WrapKey",
-    "Delete",
-    "Restore",
-    "Recover",
     "Update",
-    "Purge",
-    "GetRotationPolicy",
-    "SetRotationPolicy"
+    "Verify",
+    "WrapKey"
   ]
 }
 

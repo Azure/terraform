@@ -71,7 +71,7 @@ resource "azurerm_key_vault_key" "key" {
   key_type     = var.key_type
   key_size     = var.key_size
 
-  key_opts = var.key_ops
+  key_opts = var.key_opts
 
   rotation_policy {
     automatic {
