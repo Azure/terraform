@@ -94,6 +94,4 @@ resource "azurerm_key_vault_access_policy" "databricks" {
     "UnwrapKey",
     "WrapKey",
   ]
-
-  depends_on = [azurerm_databricks_workspace.databricks]
 }
