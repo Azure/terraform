@@ -5,12 +5,11 @@ resource "azurerm_resource_group" "sigrg" {
 
 # generate a random string (consisting of four characters)
 # https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string
-resource "random_string" "rando" {
+resource "random_string" "random" {
   length  = 4
   upper   = false
   special = false
 }
-
 
 # Creates Shared Image Gallery
 # https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/shared_image_gallery
