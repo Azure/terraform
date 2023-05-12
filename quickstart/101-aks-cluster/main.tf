@@ -32,7 +32,7 @@ resource "random_pet" "azurerm_kubernetes_cluster_name" {
   prefix = "cluster"
 }
 
-resource "random_pet" "azurerm_kubernetes_dns_prefix" {
+resource "random_pet" "azurerm_kubernetes_cluster_dns_prefix" {
   prefix = "dns"
 }
 

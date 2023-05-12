@@ -10,7 +10,7 @@ output "azurerm_kubernetes_cluster_name" {
   value = azurerm_kubernetes_cluster.aks.name
 }
 
-output "azurerm_kubernetes_dns_prefix" {
+output "azurerm_kubernetes_cluster_dns_prefix" {
   value = azurerm_kubernetes_cluster.aks.dns_prefix
 }
 
