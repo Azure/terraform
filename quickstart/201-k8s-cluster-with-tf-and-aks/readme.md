@@ -25,8 +25,8 @@ This template provisions an [AKS / Azure Kubernetes service (also known as a Man
 | `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. | rg |
 | `resource_group_location` | Location of the resource group. | eastus |
 | `node_count` | Initial number of nodes which should exist in this Node Pool. Value must be between 1 and 1000. | 3 |
-| `log_analytics_workspace_location` | Location of the log analytics workspace. | eastus |
-| `log_analytics_workspace_sku` | SKU of the Log Analytics Workspace. | PerGB2018 |
+| `log_analytics_workspace_location` | Location of the Log Analytics workspace. | eastus |
+| `log_analytics_workspace_sku` | SKU of the Log Analytics workspace. The SKU of the log analytics workspace. Choose from: Free, PerNode, Premium, Standard, Standalone, Unlimited, CapacityReservation, PerGB2018 | PerGB2018 |
 
 ## Example
 
