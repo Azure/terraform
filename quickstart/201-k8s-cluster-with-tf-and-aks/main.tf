@@ -19,7 +19,7 @@ resource "random_pet" "azurerm_log_analytics_workspace_name" {
 }
 
 resource "azurerm_log_analytics_workspace" "test" {
-  location = var.log_analytics_workspace_location
+  location            = var.log_analytics_workspace_location
   name                = random_pet.azurerm_log_analytics_workspace_name.id
   resource_group_name = azurerm_resource_group.rg.name
   sku                 = var.log_analytics_workspace_sku
