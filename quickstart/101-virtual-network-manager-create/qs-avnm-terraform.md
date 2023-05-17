@@ -1,19 +1,16 @@
-<!-- 
-To write a Terraform quickstart, follow the steps in this template and remove all HTML comments.
--->
-
 ---
-title: 'Quickstart: <!-- What the code does. Start with a verb and include the terms Azure and Terraform. -->'
+title: 'Quickstart: Deploy a hub-and-spoke topology with Azure Virtual Network Manager and Terraform'
 description: <!-- "Learn how to ..." -->
 keywords: <!-- Space-separated terms associated with article - include azure, devops, terraform. -->
 ms.topic: quickstart
-ms.date: <!-- MM/DD/YYYY -->
+ms.date: 05/25/2023
 ms.custom: devx-track-terraform
-author: <!-- Your GitHub ID. -->
-ms.author: <!-- Your Microsoft alias. -->
+author: mbender-ms
+ms.author: mbender
+ms.service: virtual-network-manager
 ---
 
-# Quickstart: <!-- H1 generally has the same value as the title metadata field. -->
+# Quickstart: Deploy a hub-and-spoke topology with Azure Virtual Network Manager and Terraform
 
 <!-- Update the Terraform and Terraform provider information to show the customer what the 
 article code was tested with. -->
