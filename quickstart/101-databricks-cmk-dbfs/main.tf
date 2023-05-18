@@ -31,7 +31,7 @@ resource "azurerm_databricks_workspace" "databricks" {
 # Configure CMK.
 resource "azurerm_databricks_workspace_customer_managed_key" "cmk" {
   workspace_id     = azurerm_databricks_workspace.databricks.id
-  key_vault_key_id = azurerm_key_vault_key.key.id
+  key_vault_key_id = azurerm_key_vault_key.key[0].id
 
   depends_on = [azurerm_key_vault_access_policy.databricks]
 }
@@ -50,14 +50,6 @@ resource "azurerm_key_vault" "vault" {
   sku_name                   = var.sku_name
   purge_protection_enabled   = true
   soft_delete_retention_days = 7
-
-  access_policy {
-    tenant_id = data.azurerm_client_config.current.tenant_id
-    object_id = local.current_user_id
-
-    key_permissions    = var.key_permissions
-    secret_permissions = var.secret_permissions
-  }
 }
 
 resource "random_pet" "azurerm_key_vault_key_name" {
@@ -65,8 +57,19 @@ resource "random_pet" "azurerm_key_vault_key_name" {
   prefix = var.key_name_prefix
 }
 
+# Create Key Vault access policy.
+resource "azurerm_key_vault_access_policy" "current_user" {
+  key_vault_id = azurerm_key_vault.vault.id
+  tenant_id    = data.azurerm_client_config.current.tenant_id
+  object_id    = local.current_user_id
+
+  key_permissions    = var.key_permissions
+  secret_permissions = var.secret_permissions
+}
+
 # Create Key Vault key.
 resource "azurerm_key_vault_key" "key" {
+  count        = var.key_name == null || var.key_name == "" ? 1 : 0
   name         = coalesce(var.key_name, random_pet.azurerm_key_vault_key_name[0].id)
   key_vault_id = azurerm_key_vault.vault.id
   key_type     = var.key_type
@@ -82,13 +85,15 @@ resource "azurerm_key_vault_key" "key" {
     expire_after         = "P90D"
     notify_before_expiry = "P29D"
   }
+
+  depends_on = [azurerm_key_vault_access_policy.current_user]
 }
 
 # Create access policy.
 resource "azurerm_key_vault_access_policy" "databricks" {
   key_vault_id = azurerm_key_vault.vault.id
-  tenant_id    = azurerm_databricks_workspace.databricks.storage_account_identity.0.tenant_id
-  object_id    = azurerm_databricks_workspace.databricks.storage_account_identity.0.principal_id
+  tenant_id    = azurerm_databricks_workspace.databricks.storage_account_identity[0].tenant_id
+  object_id    = azurerm_databricks_workspace.databricks.storage_account_identity[0].principal_id
   key_permissions = [
     "Get",
     "UnwrapKey",
