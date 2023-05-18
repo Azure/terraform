@@ -6,53 +6,36 @@ resource "random_pet" "rg_name" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  location = var.region
+  location = var.resource_group_location
   name     = random_pet.rg_name.id
-}
-
-# Create a Virtual Network Manager instance
-
-data "azurerm_subscription" "current" {
-}
-
-resource "azurerm_network_manager" "networkManager" {
-  name                = var.networkManager
-  location            = var.region
-  resource_group_name = azurerm_resource_group.rg.name
-  scope {
-    subscription_ids = [data.azurerm_subscription.current.id]
-  }
-  scope_accesses = ["Connectivity", "SecurityAdmin"]
-  description    = "example network manager"
-  tags = {
-    foo = "bar"
-  }
-  depends_on = [ azurerm_resource_group.rg ]
 }
 
 # Create three virtual networks
 resource "azurerm_virtual_network" "vnet_001" {
   name                = "vnet-learn-prod-eastus-001"
   resource_group_name = azurerm_resource_group.rg.name
-  location            = var.region
+  location            = azurerm_resource_group.rg.location
   address_space       = ["10.0.0.0/16"]
-  depends_on = [ azurerm_resource_group.rg ]
+
+  depends_on = [azurerm_resource_group.rg]
 }
 
 resource "azurerm_virtual_network" "vnet_002" {
   name                = "vnet-learn-prod-eastus-002"
   resource_group_name = azurerm_resource_group.rg.name
-  location            = var.region
+  location            = azurerm_resource_group.rg.location
   address_space       = ["10.1.0.0/16"]
-  depends_on = [ azurerm_resource_group.rg ]
+
+  depends_on = [azurerm_resource_group.rg]
 }
 
 resource "azurerm_virtual_network" "vnet_003" {
   name                = "vnet-learn-test-eastus-003"
   resource_group_name = azurerm_resource_group.rg.name
-  location            = var.region
+  location            = azurerm_resource_group.rg.location
   address_space       = ["10.2.0.0/16"]
-  depends_on = [ azurerm_resource_group.rg ]
+
+  depends_on = [azurerm_resource_group.rg]
 }
 
 # Add a subnet to each virtual network
@@ -62,6 +45,7 @@ resource "azurerm_subnet" "subnet_vnet_001" {
   virtual_network_name = azurerm_virtual_network.vnet_001.name
   resource_group_name  = azurerm_resource_group.rg.name
   address_prefixes     = ["10.0.0.0/24"]
+
   depends_on = [azurerm_virtual_network.vnet_001]
 }
 
@@ -70,6 +54,7 @@ resource "azurerm_subnet" "subnet_vnet_002" {
   virtual_network_name = azurerm_virtual_network.vnet_002.name
   resource_group_name  = azurerm_resource_group.rg.name
   address_prefixes     = ["10.1.0.0/24"]
+
   depends_on = [azurerm_virtual_network.vnet_002]
 }
 
@@ -78,53 +63,77 @@ resource "azurerm_subnet" "subnet_vnet_003" {
   virtual_network_name = azurerm_virtual_network.vnet_003.name
   resource_group_name  = azurerm_resource_group.rg.name
   address_prefixes     = ["10.2.0.0/24"]
+
   depends_on =[azurerm_virtual_network.vnet_003]
 }
 
-# Create a network group
+# Install extension for Azure CLI
 resource "null_resource" "install_tools" {
   provisioner "local-exec" {
     command = "az config set extension.use_dynamic_install=yes_without_prompt"
   }
-  depends_on = [azurerm_network_manager.networkManager]
+
+  depends_on = [azurerm_network_manager.network_manager_instance]
 }
 
-resource "null_resource" "ng_create" {
-  provisioner "local-exec" {
-    command = "az network manager group create --name ${var.networkGroup} --network-manager-name ${var.networkManager} --resource-group ${azurerm_resource_group.rg.name}"
+# Create a Virtual Network Manager instance
+
+data "azurerm_subscription" "current" {
+}
+
+resource "azurerm_network_manager" "network_manager_instance" {
+  name                = "nm-learn-eastus-001"
+  location            = azurerm_resource_group.rg.location
+  resource_group_name = azurerm_resource_group.rg.name
+  scope_accesses      = ["Connectivity"]
+  description         = "example network manager"
+  scope {
+    subscription_ids  = [data.azurerm_subscription.current.id]
   }
+
+  depends_on = [azurerm_resource_group.rg]
+}
+
+# Create a network group
+resource "null_resource" "network_group" {
+  provisioner "local-exec" {
+    command = "az network manager group create --name ng-learn-eastus-001 --network-manager-name ${azurerm_network_manager.network_manager_instance.name}  --resource-group ${azurerm_resource_group.rg.name}"
+  }
+
   depends_on = [null_resource.install_tools]
 }
 # Define membership for a mesh configuration 
 
 resource "null_resource" "static_members"{
   provisioner "local-exec"{
-    command="az network manager group static-member create --name vnet-02 --network-group ${var.networkGroup} --network-manager-name ${var.networkManager} --resource-group ${azurerm_resource_group.rg.name} --resource-id /subscriptions/${var.subscriptionID}/resourceGroups/${azurerm_resource_group.rg.name}/providers/Microsoft.Network/virtualnetworks/vnet-learn-prod-eastus-002"
+    command="az network manager group static-member create --name vnet-02 --network-group ng-learn-eastus-001 --network-manager-name ${azurerm_network_manager.network_manager_instance.name} --resource-group ${azurerm_resource_group.rg.name} --resource-id /subscriptions/${var.subscription_ID}/resourceGroups/${azurerm_resource_group.rg.name}/providers/Microsoft.Network/virtualnetworks/vnet-learn-prod-eastus-002"
   }
-  depends_on=[null_resource.ng_create]
+
+  depends_on=[null_resource.network_group]
 }
 
 
 resource "null_resource" "static_members01"{
   provisioner "local-exec"{
-    command="az network manager group static-member create --name vnet-01 --network-group ${var.networkGroup} --network-manager-name ${var.networkManager} --resource-group ${azurerm_resource_group.rg.name} --resource-id /subscriptions/${var.subscriptionID}/resourceGroups/${azurerm_resource_group.rg.name}/providers/Microsoft.Network/virtualnetworks/vnet-learn-prod-eastus-001"
+    command="az network manager group static-member create --name vnet-01 --network-group ng-learn-eastus-001 --network-manager-name ${azurerm_network_manager.network_manager_instance.name}  --resource-group ${azurerm_resource_group.rg.name} --resource-id /subscriptions/${var.subscription_ID}/resourceGroups/${azurerm_resource_group.rg.name}/providers/Microsoft.Network/virtualnetworks/vnet-learn-prod-eastus-001"
   }
-  depends_on=[null_resource.ng_create]
+
+  depends_on=[null_resource.network_group]
 }
 
-
 # Create a connectivity configuration
-resource "null_resource" "connectivityConfig"{
+resource "null_resource" "connectivity_config" {
   provisioner "local-exec"{
-    command="az network manager connect-config create --configuration-name ${var.configurationName} --applies-to-groups network-group-id=/subscriptions/${var.subscriptionID}/resourceGroups/${azurerm_resource_group.rg.name}/providers/Microsoft.Network/networkManagers/myAVNM/networkGroups/${var.networkGroup} --connectivity-topology ${var.connectivityTopology} --network-manager-name ${var.networkManager} --resource-group ${azurerm_resource_group.rg.name}"
+    command="az network manager connect-config create --configuration-name cc-learn-prod-eastus-001 --applies-to-groups network-group-id=/subscriptions/6a5f35e9-6951-499d-a36b-83c6c6eed44a/resourceGroups/${azurerm_resource_group.rg.name}/providers/Microsoft.Network/networkManagers/nm-learn-eastus-001/networkGroups/ng-learn-eastus-001 --connectivity-topology Mesh --network-manager-name nm-learn-eastus-001 --resource-group ${azurerm_resource_group.rg.name}"
   }
-  depends_on=[null_resource.ng_create]
+
+  depends_on=[null_resource.network_group]
 }
 
 # Commit deployment
-resource "null_resource" "commitDeployment"{
+resource "null_resource" "commit_deployment"{
   provisioner "local-exec"{
-    command="az network manager post-commit --network-manager-name ${var.networkManager} --commit-type ${var.commitType} --configuration-ids /subscriptions/${var.subscriptionID}/resourceGroups/${azurerm_resource_group.rg.name}/providers/Microsoft.Network/networkManagers/${var.networkManager}/connectivityConfigurations/${var.configurationName} --target-locations ${var.connectivityRegions} --resource-group ${azurerm_resource_group.rg.name}"
+    command="az network manager post-commit --network-manager-name nm-learn-eastus-001 --commit-type Connectivity --configuration-ids /subscriptions/6a5f35e9-6951-499d-a36b-83c6c6eed44a/resourceGroups/{var.resourceGroup}/providers/Microsoft.Network/networkManagers/${azurerm_resource_group.rg.name}/connectivityConfigurations/cc-learn-prod-eastus-001 --target-locations EastUS --resource-group ${azurerm_resource_group.rg.name}"
   }
-  depends_on=[null_resource.ng_create]
+  depends_on=[null_resource.network_group]
 }
