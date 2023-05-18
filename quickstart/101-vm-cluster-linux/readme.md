@@ -1,6 +1,6 @@
 # Azure Linux VM cluster
 
-This template deploys a Windows VM cluster on Azure.
+This template deploys a Linux VM cluster on Azure.
 
 ## Terraform resource types
 
@@ -25,4 +25,4 @@ This template deploys a Windows VM cluster on Azure.
 
 ## Example
 
-To see how to run this example, see [Create an Azure VM cluster with Terraform and HC](https://learn.microsoft.com/azure/developer/terraform/create-vm-cluster-with-infrastructure).
+To see how to run this example, see [Create an Azure Linux VM cluster with Terraform](https://learn.microsoft.com/azure/developer/terraform/create-vm-cluster-with-infrastructure).

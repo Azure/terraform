@@ -8,7 +8,7 @@ resource "azurerm_resource_group" "rg" {
 }
 
 resource "random_pet" "azurerm_virtual_network_name" {
-  prefix = "vn"
+  prefix = "vnet"
 }
 
 resource "azurerm_virtual_network" "test" {
