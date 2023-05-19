@@ -14,6 +14,7 @@ This template deploys a Linux VM cluster on Azure.
 - [azurerm_network_interface](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_interface)
 - [azurerm_managed_disk](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/managed_disk)
 - [azurerm_availability_set](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/availability_set)
+- [random_password](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/password)
 - [azurerm_linux_virtual_machine](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/linux_virtual_machine)
 
 ## Variables
@@ -22,6 +23,8 @@ This template deploys a Linux VM cluster on Azure.
 |-|-|-|
 | `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. | rg |
 | `resource_group_location` | Location of the resource group. | eastus |
+| `user_name` | The username for the local account that will be created on the new VM. | |
+| `password` | The password for the local account that will be created on the new VM. | |
 
 ## Example
 
