@@ -13,7 +13,7 @@ variable "resource_group_name_prefix" {
 variable "user_name" {
   type        = string
   description = "The username for the local account that will be created on the new vm."
-  default     = "exampleuser"
+  default     = "azureadmin"
 }
 
 variable "password" {
