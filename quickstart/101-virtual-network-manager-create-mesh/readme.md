@@ -1,6 +1,6 @@
 # Azure resource group
 
-This template deploys an Azure Virtual Network Manager instance with a connectivity configuration for a mesh topology. It includes resources including virtual networks, subnets, and more.
+This template deploys an Azure Virtual Network Manager instance with a connectivity configuration for a Mesh topology. It includes resources including virtual networks, subnets, and more.
 
 ## Terraform resource types
 
@@ -11,10 +11,10 @@ This template deploys an Azure Virtual Network Manager instance with a connectiv
 - [random_id](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/id)
 - [azurerm_virtual_network_manager_deployment](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_deployment)
 - [azurerm_virtual_network_manager](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager)
-- azurerm_network_manager_network_group
-- azurerm_network_manager_static_member
-- azurerm_network_manager_connectivity_configuration
-- azurerm_network_manager_deployment
+- [azurerm_network_manager_network_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_network_group)
+- [azurerm_network_manager_static_member](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_static_member)
+- [azurerm_network_manager_connectivity_configuration](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_connectivity_configuration)
+- [azurerm_network_manager_deployment](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_deployment)
 
 ## Variables
 
@@ -25,4 +25,4 @@ This template deploys an Azure Virtual Network Manager instance with a connectiv
 
 ## Example
 
-To see how to run this example, see [Quickstart: Configure a Virtual Network Manager in Azure using Terraform]().
+To see how to run this example, see [Quickstart: Deploy a Virtual Network Manager in Azure using Terraform](https://learn.microsoft.com/azure/virtual-network-manager/create-virtual-network-manager-terraform).

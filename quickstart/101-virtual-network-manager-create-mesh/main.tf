@@ -96,7 +96,7 @@ resource "azurerm_network_manager_network_group" "network_group" {
   depends_on         = [azurerm_network_manager.network_manager_instance]
 }
 
-# Define membership for a mesh configuration 
+# Define network group membership
 
 resource "azurerm_network_manager_static_member" "static_members_001" {
   name                      = "sm-learn-prod-eastus-001"
