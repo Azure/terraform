@@ -1,18 +1,22 @@
 
 # Create the Resource Group
 
-resource "random_pet" "random_pet" {
-  length = 2
+resource "random_pet" "rg_name" {
+  prefix = var.resource_group_name_prefix
 }
 
 resource "azurerm_resource_group" "rg" {
   location = var.resource_group_location
-  name     = "rg-${random_pet.random_pet.id}-001"
+  name     = random_pet.rg_name.id
 }
 
 # Create three virtual networks
+
+resource "random_pet" "virtual_network_name" {
+  prefix = "vnet-"
+}
 resource "azurerm_virtual_network" "vnet_001" {
-  name                = "vnet-${random_pet.random_pet.id}-prod-001"
+  name                = "${random_pet.virtual_network_name.id}-01"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   address_space       = ["10.0.0.0/16"]
@@ -21,16 +25,19 @@ resource "azurerm_virtual_network" "vnet_001" {
 }
 
 resource "azurerm_virtual_network" "vnet_002" {
-  name                = "vnet-${random_pet.random_pet.id}-prod-002"
+  name                = "${random_pet.virtual_network_name.id}-02"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   address_space       = ["10.1.0.0/16"]
 
   depends_on          = [azurerm_resource_group.rg]
 }
-
+resource "random_id" "vnet_name_3" {
+  prefix = "vnet-test-"
+  byte_length = 4
+}
 resource "azurerm_virtual_network" "vnet_003" {
-  name                = "vnet-${random_pet.random_pet.id}-test-003"
+  name                = "${random_pet.virtual_network_name.id}-03"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   address_space       = ["10.2.0.0/16"]
@@ -75,7 +82,7 @@ data "azurerm_subscription" "current" {
 }
 
 resource "azurerm_network_manager" "network_manager_instance" {
-  name                = "nm-${random_pet.random_pet.id}-001"
+  name                = "network-manager"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   scope_accesses      = ["Connectivity"]
@@ -90,7 +97,7 @@ resource "azurerm_network_manager" "network_manager_instance" {
 # Create a network group
 
 resource "azurerm_network_manager_network_group" "network_group" {
-  name               = "ng-${random_pet.random_pet.id}-prod-001"
+  name               = "network-group"
   network_manager_id = azurerm_network_manager.network_manager_instance.id
 
   depends_on         = [azurerm_network_manager.network_manager_instance]
@@ -99,14 +106,14 @@ resource "azurerm_network_manager_network_group" "network_group" {
 # Define network group membership
 
 resource "azurerm_network_manager_static_member" "static_members_001" {
-  name                      = "sm-${random_pet.random_pet.id}-prod-001"
+  name                      = "static-member-${azurerm_virtual_network.vnet_001.name}"
   network_group_id          = azurerm_network_manager_network_group.network_group.id
   target_virtual_network_id = azurerm_virtual_network.vnet_001.id
 
   depends_on                = [azurerm_virtual_network.vnet_001]
 }
 resource "azurerm_network_manager_static_member" "static_members_002" {
-  name                      = "sm-${random_pet.random_pet.id}-prod-002"
+  name                      = "static-member-${azurerm_virtual_network.vnet_002.name}"
   network_group_id          = azurerm_network_manager_network_group.network_group.id
   target_virtual_network_id = azurerm_virtual_network.vnet_002.id
 
@@ -116,7 +123,7 @@ resource "azurerm_network_manager_static_member" "static_members_002" {
 # Create a connectivity configuration
 
 resource "azurerm_network_manager_connectivity_configuration" "connectivity_config" {
-  name                  = "cc-${random_pet.random_pet.id}-prod-001"
+  name                  = "connectivity-config"
   network_manager_id    = azurerm_network_manager.network_manager_instance.id
   connectivity_topology = "Mesh"
   applies_to_group {
