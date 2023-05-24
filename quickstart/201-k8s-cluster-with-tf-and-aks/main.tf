@@ -72,4 +72,6 @@ resource "azurerm_kubernetes_cluster" "k8s" {
     client_id     = azuread_service_principal.app.application_id
     client_secret = azuread_service_principal_password.app.value
   }
+
+  depends_on = [time_sleep.wait_30_seconds]
 }
