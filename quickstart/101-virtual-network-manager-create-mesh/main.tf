@@ -1,18 +1,18 @@
 
 # Create the Resource Group
 
-resource "random_pet" "rg_name" {
-  prefix = var.resource_group_name_prefix
+resource "random_pet" "random_pet" {
+  length = 2
 }
 
 resource "azurerm_resource_group" "rg" {
   location = var.resource_group_location
-  name     = random_pet.rg_name.id
+  name     = "rg-${random_pet.random_pet.id}-001"
 }
 
 # Create three virtual networks
 resource "azurerm_virtual_network" "vnet_001" {
-  name                = "vnet-learn-prod-eastus-001"
+  name                = "vnet-${random_pet.random_pet.id}-prod-001"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   address_space       = ["10.0.0.0/16"]
@@ -21,7 +21,7 @@ resource "azurerm_virtual_network" "vnet_001" {
 }
 
 resource "azurerm_virtual_network" "vnet_002" {
-  name                = "vnet-learn-prod-eastus-002"
+  name                = "vnet-${random_pet.random_pet.id}-prod-002"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   address_space       = ["10.1.0.0/16"]
@@ -30,7 +30,7 @@ resource "azurerm_virtual_network" "vnet_002" {
 }
 
 resource "azurerm_virtual_network" "vnet_003" {
-  name                = "vnet-learn-test-eastus-003"
+  name                = "vnet-${random_pet.random_pet.id}-test-003"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   address_space       = ["10.2.0.0/16"]
@@ -75,7 +75,7 @@ data "azurerm_subscription" "current" {
 }
 
 resource "azurerm_network_manager" "network_manager_instance" {
-  name                = "nm-learn-eastus-001"
+  name                = "nm-${random_pet.random_pet.id}-001"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   scope_accesses      = ["Connectivity"]
@@ -90,7 +90,7 @@ resource "azurerm_network_manager" "network_manager_instance" {
 # Create a network group
 
 resource "azurerm_network_manager_network_group" "network_group" {
-  name               = "ng-learn-eastus-001"
+  name               = "ng-${random_pet.random_pet.id}-prod-001"
   network_manager_id = azurerm_network_manager.network_manager_instance.id
 
   depends_on         = [azurerm_network_manager.network_manager_instance]
@@ -99,14 +99,14 @@ resource "azurerm_network_manager_network_group" "network_group" {
 # Define network group membership
 
 resource "azurerm_network_manager_static_member" "static_members_001" {
-  name                      = "sm-learn-prod-eastus-001"
+  name                      = "sm-${random_pet.random_pet.id}-prod-001"
   network_group_id          = azurerm_network_manager_network_group.network_group.id
   target_virtual_network_id = azurerm_virtual_network.vnet_001.id
 
   depends_on                = [azurerm_virtual_network.vnet_001]
 }
 resource "azurerm_network_manager_static_member" "static_members_002" {
-  name                      = "sm-learn-prod-eastus-002"
+  name                      = "sm-${random_pet.random_pet.id}-prod-002"
   network_group_id          = azurerm_network_manager_network_group.network_group.id
   target_virtual_network_id = azurerm_virtual_network.vnet_002.id
 
@@ -116,7 +116,7 @@ resource "azurerm_network_manager_static_member" "static_members_002" {
 # Create a connectivity configuration
 
 resource "azurerm_network_manager_connectivity_configuration" "connectivity_config" {
-  name                  = "cc-learn-prod-eastus-001"
+  name                  = "cc-${random_pet.random_pet.id}-prod-001"
   network_manager_id    = azurerm_network_manager.network_manager_instance.id
   connectivity_topology = "Mesh"
   applies_to_group {
