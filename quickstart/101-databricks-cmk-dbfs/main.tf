@@ -31,7 +31,7 @@ resource "azurerm_databricks_workspace" "databricks" {
 # Configure CMK.
 resource "azurerm_databricks_workspace_customer_managed_key" "cmk" {
   workspace_id     = azurerm_databricks_workspace.databricks.id
-  key_vault_key_id = azurerm_key_vault_key.key[0].id
+  key_vault_key_id = azurerm_key_vault_key.key.id
 
   depends_on = [azurerm_key_vault_access_policy.databricks]
 }
@@ -69,7 +69,6 @@ resource "azurerm_key_vault_access_policy" "current_user" {
 
 # Create Key Vault key.
 resource "azurerm_key_vault_key" "key" {
-  count        = var.key_name == null || var.key_name == "" ? 1 : 0
   name         = coalesce(var.key_name, random_pet.azurerm_key_vault_key_name[0].id)
   key_vault_id = azurerm_key_vault.vault.id
   key_type     = var.key_type
