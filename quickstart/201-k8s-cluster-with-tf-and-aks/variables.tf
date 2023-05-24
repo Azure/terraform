@@ -32,7 +32,7 @@ variable "log_analytics_workspace_sku" {
   default     = "PerGB2018"
 
   validation {
-    condition = contains(["Free", "PerNode", "Premium", "Standard", "Standalone", "Unlimited", "CapacityReservation", "PerGB2018"], var.log_analytics_workspace_sku)    
+    condition     = contains(["Free", "PerNode", "Premium", "Standard", "Standalone", "Unlimited", "CapacityReservation", "PerGB2018"], var.log_analytics_workspace_sku)
     error_message = "The Log Analytics workspace SKU must be one of the following: Free, PerNode, Premium, Standard, Standalone, Unlimited, CapacityReservation, PerGB2018"
   }
 }
