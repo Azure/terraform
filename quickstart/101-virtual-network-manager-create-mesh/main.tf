@@ -13,9 +13,9 @@ resource "azurerm_resource_group" "rg" {
 # Create three virtual networks
 
 resource "random_pet" "virtual_network_name" {
-  prefix = "vnet-"
+  prefix = "vnet"
 }
-resource "azurerm_virtual_network" "vnet_001" {
+resource "azurerm_virtual_network" "vnet_01" {
   name                = "${random_pet.virtual_network_name.id}-01"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
@@ -24,7 +24,7 @@ resource "azurerm_virtual_network" "vnet_001" {
   depends_on          = [azurerm_resource_group.rg]
 }
 
-resource "azurerm_virtual_network" "vnet_002" {
+resource "azurerm_virtual_network" "vnet_02" {
   name                = "${random_pet.virtual_network_name.id}-02"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
@@ -32,11 +32,8 @@ resource "azurerm_virtual_network" "vnet_002" {
 
   depends_on          = [azurerm_resource_group.rg]
 }
-resource "random_id" "vnet_name_3" {
-  prefix = "vnet-test-"
-  byte_length = 4
-}
-resource "azurerm_virtual_network" "vnet_003" {
+
+resource "azurerm_virtual_network" "vnet_03" {
   name                = "${random_pet.virtual_network_name.id}-03"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
@@ -47,34 +44,32 @@ resource "azurerm_virtual_network" "vnet_003" {
 
 # Add a subnet to each virtual network
 
-resource "azurerm_subnet" "subnet_vnet_001" {
+resource "azurerm_subnet" "subnet_vnet_01" {
   name                 = "default"
-  virtual_network_name = azurerm_virtual_network.vnet_001.name
+  virtual_network_name = azurerm_virtual_network.vnet_01.name
   resource_group_name  = azurerm_resource_group.rg.name
   address_prefixes     = ["10.0.0.0/24"]
 
-  depends_on           = [azurerm_virtual_network.vnet_001]
+  depends_on           = [azurerm_virtual_network.vnet_01]
 }
 
-resource "azurerm_subnet" "subnet_vnet_002" {
+resource "azurerm_subnet" "subnet_vnet_02" {
   name                 = "default"
-  virtual_network_name = azurerm_virtual_network.vnet_002.name
+  virtual_network_name = azurerm_virtual_network.vnet_02.name
   resource_group_name  = azurerm_resource_group.rg.name
   address_prefixes     = ["10.1.0.0/24"]
 
-  depends_on           = [azurerm_virtual_network.vnet_002]
+  depends_on           = [azurerm_virtual_network.vnet_02]
 }
 
-resource "azurerm_subnet" "subnet_vnet_003" {
+resource "azurerm_subnet" "subnet_vnet_03" {
   name                 = "default"
-  virtual_network_name = azurerm_virtual_network.vnet_003.name
+  virtual_network_name = azurerm_virtual_network.vnet_03.name
   resource_group_name  = azurerm_resource_group.rg.name
   address_prefixes     = ["10.2.0.0/24"]
 
-  depends_on           = [azurerm_virtual_network.vnet_003]
+  depends_on           = [azurerm_virtual_network.vnet_03]
 }
-
-
 
 # Create a Virtual Network Manager instance
 
@@ -105,19 +100,19 @@ resource "azurerm_network_manager_network_group" "network_group" {
 
 # Define network group membership
 
-resource "azurerm_network_manager_static_member" "static_members_001" {
-  name                      = "static-member-${azurerm_virtual_network.vnet_001.name}"
+resource "azurerm_network_manager_static_member" "static_members_01" {
+  name                      = "static-member-01"
   network_group_id          = azurerm_network_manager_network_group.network_group.id
-  target_virtual_network_id = azurerm_virtual_network.vnet_001.id
+  target_virtual_network_id = azurerm_virtual_network.vnet_01.id
 
-  depends_on                = [azurerm_virtual_network.vnet_001]
+  depends_on                = [azurerm_virtual_network.vnet_01]
 }
-resource "azurerm_network_manager_static_member" "static_members_002" {
-  name                      = "static-member-${azurerm_virtual_network.vnet_002.name}"
+resource "azurerm_network_manager_static_member" "static_members_02" {
+  name                      = "static-member-02"
   network_group_id          = azurerm_network_manager_network_group.network_group.id
-  target_virtual_network_id = azurerm_virtual_network.vnet_002.id
+  target_virtual_network_id = azurerm_virtual_network.vnet_02.id
 
-  depends_on                = [azurerm_virtual_network.vnet_002]
+  depends_on                = [azurerm_virtual_network.vnet_02]
 }
 
 # Create a connectivity configuration
