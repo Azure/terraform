@@ -8,12 +8,6 @@ resource "azurerm_resource_group" "rg" {
   name     = random_pet.rg_name.id
 }
 
-data "azurerm_client_config" "current" {}
-
-locals {
-  current_user_id = coalesce(var.msi_id, data.azurerm_client_config.current.object_id)
-}
-
 resource "random_pet" "azurerm_kubernetes_cluster_name" {
   prefix = "cluster"
 }
