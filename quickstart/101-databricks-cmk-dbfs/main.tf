@@ -15,7 +15,7 @@ locals {
 }
 
 resource "random_pet" "azurerm_databricks_workspace_name" {
-  count  = var.workspace_name == null ? 1 : 0
+  count  = var.workspace_name == null || var.workspace_name == "" ? 1 : 0
   prefix = var.workspace_name_prefix
 }
 
@@ -37,7 +37,7 @@ resource "azurerm_databricks_workspace_customer_managed_key" "cmk" {
 }
 
 resource "random_pet" "azurerm_key_vault_name" {
-  count  = var.key_vault_name == null ? 1 : 0
+  count  = var.key_vault_name == null || var.key_vault_name == "" ? 1 : 0
   prefix = var.key_vault_name_prefix
 }
 
@@ -53,7 +53,7 @@ resource "azurerm_key_vault" "vault" {
 }
 
 resource "random_pet" "azurerm_key_vault_key_name" {
-  count  = var.key_name == null ? 1 : 0
+  count  = var.key_name == null || var.key_name == "" ? 1 : 0
   prefix = var.key_name_prefix
 }
 
