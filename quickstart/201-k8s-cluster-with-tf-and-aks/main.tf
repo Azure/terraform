@@ -22,6 +22,10 @@ resource "azurerm_kubernetes_cluster" "k8s" {
   resource_group_name = azurerm_resource_group.rg.name
   dns_prefix          = random_pet.azurerm_kubernetes_cluster_dns_prefix.id
 
+  identity {
+    type = "SystemAssigned"
+  }
+
   default_node_pool {
     name       = "agentpool"
     vm_size    = "Standard_D2_v2"
@@ -38,10 +42,4 @@ resource "azurerm_kubernetes_cluster" "k8s" {
     network_plugin    = "kubenet"
     load_balancer_sku = "standard"
   }
-  service_principal {
-    client_id     = azuread_service_principal.app.application_id
-    client_secret = azuread_service_principal_password.app.value
-  }
-
-  depends_on = [time_sleep.wait_30_seconds]
 }
