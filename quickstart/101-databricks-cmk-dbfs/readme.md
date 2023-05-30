@@ -32,7 +32,7 @@ This template configures customer managed keys (CMK) for DBFS.
 | `key_type` | The JsonWebKeyType of the key to be created. Choose from: EC, EC-HSM, RSA, RSA-HSM | RSA |
 | `key_opts` | The permitted JSON web key operations of the key to be created. Choose from: decrypt, encrypt, sign, unwrapKey, verify, wrapKey. | ["decrypt", "encrypt", "sign", "unwrapKey", "verify", "wrapKey"] |
 | `key_size` | The size (in bytes) of the key to be created. | 2048 |
-| `msi_id` | The Managed Service Identity ID. If this value isn't null (the default), the Azure Key Vault Object ID will be set to this value. | null |
+| `msi_id` | The Managed Service Identity ID. Set this value if you're running this example using Managed Identity as the authentication method. | null |
 
 ## Example
 

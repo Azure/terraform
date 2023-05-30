@@ -111,6 +111,6 @@ variable "key_size" {
 
 variable "msi_id" {
   type        = string
-  description = "The Managed Service Identity ID. If this value isn't null (the default), the Azure Key Vault Object ID will be set to this value."
+  description = "The Managed Service Identity ID. Set this value if you're running this example using Managed Identity as the authentication method."
   default     = null
 }
