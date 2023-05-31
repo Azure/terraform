@@ -3,17 +3,17 @@ output "resource_group_name" {
 }
 
 output "windows_vm_public_name" {
-  value = module.windowsservers.public_ip_dns_name
+  value = module.windows_server.public_ip_dns_name
 }
 
 output "vm_public_ip" {
-  value = module.windowsservers.public_ip_address
+  value = module.windows_server.public_ip_address
 }
 
 output "vm_private_ips" {
-  value = module.windowsservers.network_interface_private_ip
+  value = module.windows_server.network_interface_private_ip
 }
 
 output "vm_hostname" {
-  value = module.windowsservers.vm_names
+  value = module.windows_server.vm_names
 }
