@@ -21,6 +21,7 @@ This template provisions an [AKS / Azure Kubernetes service (also known as a Man
 | `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. | rg |
 | `resource_group_location` | Location of the resource group. | eastus |
 | `node_count` | Initial number of nodes which should exist in this Node Pool. Value must be between 1 and 1000. | 3 |
+| `msi_id` | The Managed Service Identity ID. Set this value if you're running this example using Managed Identity as the authentication method. | null |
 
 ## Example
 

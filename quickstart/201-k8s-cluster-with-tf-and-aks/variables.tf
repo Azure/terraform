@@ -18,6 +18,6 @@ variable "node_count" {
 
 variable "msi_id" {
   type        = string
-  description = "The Managed Service Identity ID used to create the service principal. If this value is null (the default), the AzureRM provider configuration Object ID is used.."
+  description = "The Managed Service Identity ID. Set this value if you're running this example using Managed Identity as the authentication method."
   default     = null
 }
