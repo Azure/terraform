@@ -135,7 +135,7 @@ resource "azurerm_network_manager_network_group" "network_group" {
   network_manager_id = azurerm_network_manager.network_manager_instance.id
 }
 
-# Add the two spoke virtual networks to a network group as dynamic members
+# Add the two spoke virtual networks to a network group as dynamic members with Azure Policy
 
 resource "random_pet" "network_group_policy_name" {
   prefix = "network-group-policy"
@@ -205,10 +205,11 @@ resource "azurerm_network_manager_connectivity_configuration" "connectivity_conf
     resource_type = "Microsoft.Network/virtualNetworks"
   }
 }
+
 #create a security admin configuration
 
 resource "azurerm_network_manager_security_admin_configuration" "security_admin_config" {
-  name               = "example-admin-config"
+  name               = "security-admin-config"
   network_manager_id = azurerm_network_manager.network_manager_instance.id
 }
 
@@ -220,24 +221,20 @@ resource "azurerm_network_manager_admin_rule_collection" "admin_rule_collection"
 
 resource "azurerm_network_manager_admin_rule" "admin_rule" {
   name                     = "admin-rule"
-  admin_rule_collection_id = azurerm_network_manager_admin_rule_collection.example.id
+  admin_rule_collection_id = azurerm_network_manager_admin_rule_collection.admin_rule_collection.id
   action                   = "Deny"
   direction                = "Outbound"
   priority                 = 1
   protocol                 = "Tcp"
-  source_port_ranges       = ["80","443", "1024-65535"]
-  destination_port_ranges  = ["80","443"]
+  source_port_ranges       = ["80", "443"]
+  destination_port_ranges  = ["80", "443"]
   source {
+    address_prefix_type = "IPPrefix"
+    address_prefix      = "*"
+  }
+  destination {
     address_prefix_type = "ServiceTag"
     address_prefix      = "Internet"
-  }
-  destination {
-    address_prefix_type = "IPPrefix"
-    address_prefix      = "10.1.0.1"
-  }
-  destination {
-    address_prefix_type = "IPPrefix"
-    address_prefix      = "10.0.0.0/24"
   }
   description = "Example of security admin rule"
 }
