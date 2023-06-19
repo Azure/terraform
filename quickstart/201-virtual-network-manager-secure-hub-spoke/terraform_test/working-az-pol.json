@@ -1,0 +1,48 @@
+{
+    "properties": {
+      "policyType": "Custom",
+      "mode": "Microsoft.Network.Data",
+      "metadata": {
+        "category": "Azure Virtual Network Manager",
+        "createdBy": "9297f371-d435-4968-b575-51396e2cb555",
+        "createdOn": "2023-06-10T01:47:40.2831395Z",
+        "updatedBy": null,
+        "updatedOn": null
+      },
+      "policyRule": {
+        "if": {
+          "allOf": [
+            {
+              "field": "type",
+              "equals": "Microsoft.Network/virtualNetworks"
+            },
+            {
+              "allOf": [
+                {
+                  "field": "Name",
+                  "contains": "spoke-vnet"
+                }
+              ]
+            }
+          ]
+        },
+        "then": {
+          "effect": "addToNetworkGroup",
+          "details": {
+            "networkGroupId": "/subscriptions/6a5f35e9-6951-499d-a36b-83c6c6eed44a/resourceGroups/rg-sterling-seahorse/providers/Microsoft.Network/networkManagers/network-manager/networkGroups/network-group"
+          }
+        }
+      }
+    },
+    "id": "/subscriptions/6a5f35e9-6951-499d-a36b-83c6c6eed44a/providers/Microsoft.Authorization/policyDefinitions/new-azure-policy",
+    "type": "Microsoft.Authorization/policyDefinitions",
+    "name": "new-azure-policy",
+    "systemData": {
+      "createdBy": "mbender@microsoft.com",
+      "createdByType": "User",
+      "createdAt": "2023-06-10T01:47:40.240191Z",
+      "lastModifiedBy": "mbender@microsoft.com",
+      "lastModifiedByType": "User",
+      "lastModifiedAt": "2023-06-10T01:47:40.240191Z"
+    }
+  }
