@@ -8,7 +8,7 @@ resource "azurerm_resource_group" "rg" {
 }
 
 resource "random_string" "windows_server_vm_hostname" {
-  length  = 10
+  length  = 8
   lower   = true
   upper   = false
   special = false
