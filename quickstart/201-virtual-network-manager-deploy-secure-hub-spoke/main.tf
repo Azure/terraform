@@ -182,7 +182,7 @@ resource "azurerm_policy_definition" "network_group_policy" {
 }
 
 resource "azurerm_subscription_policy_assignment" "azure_policy_assignment" {
-  name                 = "policy-assignment"
+  name                 = "${random_pet.network_group_policy_name.id}-policy-assignment"
   policy_definition_id = azurerm_policy_definition.network_group_policy.id
   subscription_id      = data.azurerm_subscription.current.id
 }
@@ -217,6 +217,8 @@ resource "azurerm_network_manager_admin_rule_collection" "admin_rule_collection"
   name                            = "admin-rule-collection"
   security_admin_configuration_id = azurerm_network_manager_security_admin_configuration.security_admin_config.id
   network_group_ids               = [azurerm_network_manager_network_group.network_group.id]
+
+  depends_on = [azurerm_policy_definition.network_group_policy]
 }
 
 resource "azurerm_network_manager_admin_rule" "admin_rule" {
@@ -253,4 +255,6 @@ resource "azurerm_network_manager_deployment" "commit_deployment_security_admin"
   location           = azurerm_resource_group.rg.location
   scope_access       = "SecurityAdmin"
   configuration_ids  = [azurerm_network_manager_security_admin_configuration.security_admin_config.id]
+
+  depends_on = [azurerm_network_manager_security_admin_configuration.security_admin_config]
 }
