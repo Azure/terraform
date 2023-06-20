@@ -58,7 +58,7 @@ resource "azurerm_network_manager_network_group" "network_group" {
   network_manager_id = azurerm_network_manager.network_manager_instance.id
 }
 
-# Add the 3 virtual networks to a network group as dynamic members with Azure Policy
+# Add three virtual networks to a network group as dynamic members with Azure Policy
 
 resource "random_pet" "network_group_policy_name" {
   prefix = "network-group-policy"
