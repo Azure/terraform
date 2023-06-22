@@ -26,9 +26,9 @@ resource "random_password" "password" {
   numeric = true
 }
 
-# Define 3 Windows Server VMs
+# https://registry.terraform.io/modules/Azure/compute/azurerm
 module "windows_server" {
-  count               = 3
+  count               = 3 # Define 3 Windows Server VMs
   source              = "Azure/compute/azurerm"
   resource_group_name = azurerm_resource_group.rg.name
   vnet_subnet_id      = module.network.vnet_subnets[0]
@@ -37,9 +37,9 @@ module "windows_server" {
   admin_password      = random_password.password.result
   vm_os_simple        = "WindowsServer"
   public_ip_dns       = ["${random_pet.windows_server_public_ip_dns.id}-${count.index}"]
-  depends_on          = [azurerm_resource_group.rg]
 }
 
+# https://registry.terraform.io/modules/Azure/network/azurerm
 module "network" {
   source              = "Azure/network/azurerm"
   resource_group_name = azurerm_resource_group.rg.name
@@ -47,5 +47,4 @@ module "network" {
   subnet_prefixes     = ["10.0.1.0/24"]
   subnet_names        = ["subnet1"]
   use_for_each        = true
-  depends_on          = [azurerm_resource_group.rg]
 }

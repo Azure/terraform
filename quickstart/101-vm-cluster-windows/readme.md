@@ -8,6 +8,9 @@ This template deploys a Windows VM cluster on Azure.
 - [azurerm_resource_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group)
 - [random_string](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string)
 - [random_password](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/password)
+
+## Terraform modules
+
 - [windows_server](https://registry.terraform.io/modules/Azure/compute/azurerm)
 - [network](https://registry.terraform.io/modules/Azure/network/azurerm)
 
