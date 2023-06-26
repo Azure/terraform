@@ -26,7 +26,9 @@ resource "random_password" "password" {
   numeric = true
 }
 
-# https://registry.terraform.io/modules/Azure/compute/azurerm
+# The following module is a Terraform Verified Module. 
+# For more information about Verified Modules, see 
+# https://github.com/azure/terraform-azure-modules/
 module "windows_server" {
   count               = 3 # Define 3 Windows Server VMs
   source              = "Azure/compute/azurerm"
@@ -39,7 +41,9 @@ module "windows_server" {
   public_ip_dns       = ["${random_pet.windows_server_public_ip_dns.id}-${count.index}"]
 }
 
-# https://registry.terraform.io/modules/Azure/network/azurerm
+# The following module is a Terraform Verified Module. 
+# For more information about Verified Modules, see 
+# https://github.com/azure/terraform-azure-modules/
 module "network" {
   source              = "Azure/network/azurerm"
   resource_group_name = azurerm_resource_group.rg.name
