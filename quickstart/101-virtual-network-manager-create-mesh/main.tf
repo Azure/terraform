@@ -11,9 +11,14 @@ resource "azurerm_resource_group" "rg" {
 }
 
 # Create three virtual networks
+resource "random_string" "prefix" {
+  length = 4
+  special = false
+  upper = false
+}
 
 resource "random_pet" "virtual_network_name" {
-  prefix = "vnet"
+  prefix = "vnet-${random_string.prefix.result}"
 }
 resource "azurerm_virtual_network" "vnet" {
   count = 3
@@ -58,14 +63,56 @@ resource "azurerm_network_manager_network_group" "network_group" {
   network_manager_id = azurerm_network_manager.network_manager_instance.id
 }
 
-# Add the three virtual networks to the network group as static members
+# Add three virtual networks to a network group as dynamic members with Azure Policy
 
-resource "azurerm_network_manager_static_member" "static_members" {
-  count = 3
+resource "random_pet" "network_group_policy_name" {
+  prefix = "network-group-policy"
+}
 
-  name                      = "static-member-0${count.index}"
-  network_group_id          = azurerm_network_manager_network_group.network_group.id
-  target_virtual_network_id = azurerm_virtual_network.vnet[count.index].id
+resource "azurerm_policy_definition" "network_group_policy" {
+  name         = "${random_pet.network_group_policy_name.id}"
+  policy_type  = "Custom"
+  mode         = "Microsoft.Network.Data"
+  display_name = "Policy Definition for Network Group"
+
+  metadata = <<METADATA
+    {
+      "category": "Azure Virtual Network Manager"
+    }
+  METADATA
+
+  policy_rule = <<POLICY_RULE
+    {
+      "if": {
+        "allOf": [
+          {
+              "field": "type",
+              "equals": "Microsoft.Network/virtualNetworks"
+          },
+          {
+            "allOf": [
+              {
+              "field": "Name",
+              "contains": "${random_pet.virtual_network_name.id}"
+              }
+            ]
+          }
+        ]
+      },
+      "then": {
+        "effect": "addToNetworkGroup",
+        "details": {
+          "networkGroupId": "${azurerm_network_manager_network_group.network_group.id}"
+        }
+      }
+    }
+  POLICY_RULE
+}
+
+resource "azurerm_subscription_policy_assignment" "azure_policy_assignment" {
+  name                 = "${random_pet.network_group_policy_name.id}-policy-assignment"
+  policy_definition_id = azurerm_policy_definition.network_group_policy.id
+  subscription_id      = data.azurerm_subscription.current.id
 }
 
 # Create a connectivity configuration
