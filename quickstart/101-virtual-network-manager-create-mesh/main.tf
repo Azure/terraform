@@ -11,9 +11,14 @@ resource "azurerm_resource_group" "rg" {
 }
 
 # Create three virtual networks
+resource "random_string" "prefix" {
+  length = 4
+  special = false
+  upper = false
+}
 
 resource "random_pet" "virtual_network_name" {
-  prefix = "vnet"
+  prefix = "vnet-${random_string.prefix.result}"
 }
 resource "azurerm_virtual_network" "vnet" {
   count = 3
@@ -88,7 +93,7 @@ resource "azurerm_policy_definition" "network_group_policy" {
             "allOf": [
               {
               "field": "Name",
-              "contains": "vnet"
+              "contains": "${random_pet.virtual_network_name.id}"
               }
             ]
           }

@@ -5,6 +5,7 @@ This template deploys an Azure Virtual Network Manager instance with a connectiv
 ## Terraform resource types
 
 - [random_pet](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/pet)
+- [random_string](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string)
 - [azurerm_resource_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group)
 - [azurerm_virtual_network](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_network)
 - [azurerm_subnet](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet)
