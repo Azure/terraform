@@ -30,15 +30,16 @@ resource "random_password" "password" {
 # For more information about Verified Modules, see 
 # https://github.com/azure/terraform-azure-modules/
 module "windows_server" {
-  count               = 3 # Define 3 Windows Server VMs
-  source              = "Azure/compute/azurerm"
-  resource_group_name = azurerm_resource_group.rg.name
-  vnet_subnet_id      = module.network.vnet_subnets[0]
-  is_windows_image    = true
-  vm_hostname         = "vm-${random_string.windows_server_vm_hostname.result}-${count.index}"
-  admin_password      = random_password.password.result
-  vm_os_simple        = "WindowsServer"
-  public_ip_dns       = ["${random_pet.windows_server_public_ip_dns.id}-${count.index}"]
+  count                         = 3 # Define 3 Windows Server VMs
+  source                        = "Azure/compute/azurerm"
+  resource_group_name           = azurerm_resource_group.rg.name
+  vnet_subnet_id                = module.network.vnet_subnets[0]
+  is_windows_image              = true
+  vm_hostname                   = "vm-${random_string.windows_server_vm_hostname.result}-${count.index}"
+  delete_os_disk_on_termination = true
+  admin_password                = random_password.password.result
+  vm_os_simple                  = "WindowsServer"
+  public_ip_dns                 = ["${random_pet.windows_server_public_ip_dns.id}-${count.index}"]
 }
 
 # The following module is a Terraform Verified Module. 
