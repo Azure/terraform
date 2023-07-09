@@ -1,3 +1,20 @@
+## 09 Jul 23 02:33 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.5.0
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.27.0
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+
+
+---
+
 ## 02 Jul 23 02:21 UTC
 
 Success: true
