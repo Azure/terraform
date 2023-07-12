@@ -13,8 +13,3 @@ output "subnet_name" {
 output "linux_virtual_machine_names" {
   value = [for s in azurerm_linux_virtual_machine.test : s.name[*]]
 }
-
-output "linux_virtual_machine_password" {
-  sensitive = true
-  value     = local.password
-}
