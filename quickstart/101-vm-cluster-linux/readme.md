@@ -24,6 +24,7 @@ This template deploys a Linux VM cluster on Azure.
 |-|-|-|
 | `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. | rg |
 | `resource_group_location` | Location of the resource group. | eastus |
+| `username` | The username for the local account that will be created on the new VM. | azureadmin |
 
 ## Example
 
