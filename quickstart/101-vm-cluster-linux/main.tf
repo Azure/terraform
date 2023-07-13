@@ -78,20 +78,6 @@ resource "random_pet" "azurerm_linux_virtual_machine_name" {
   prefix = "vm"
 }
 
-resource "random_password" "password" {
-  count       = var.password == null ? 1 : 0
-  length      = 20
-  special     = true
-  min_numeric = 1
-  min_upper   = 1
-  min_lower   = 1
-  min_special = 1
-}
-
-locals {
-  password = try(random_password.password[0].result, var.password)
-}
-
 resource "azurerm_linux_virtual_machine" "test" {
   count                 = 2
   name                  = "${random_pet.azurerm_linux_virtual_machine_name.id}${count.index}"
@@ -114,16 +100,19 @@ resource "azurerm_linux_virtual_machine" "test" {
     version   = "latest"
   }
 
+  admin_ssh_key {
+    username   = coalesce(var.username, "azureuser")
+    public_key = jsondecode(azapi_resource_action.ssh_public_key_gen.output).publicKey
+  }
+
   os_disk {
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
     name                 = "myosdisk${count.index}"
   }
 
-  computer_name                   = "hostname"
-  admin_username                  = var.user_name
-  admin_password                  = local.password
-  disable_password_authentication = false
+  computer_name  = "hostname"
+  admin_username = coalesce(var.username, "azureuser")
 }
 
 resource "azurerm_managed_disk" "test" {

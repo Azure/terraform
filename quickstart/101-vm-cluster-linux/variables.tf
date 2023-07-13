@@ -10,15 +10,8 @@ variable "resource_group_name_prefix" {
   default     = "rg"
 }
 
-variable "user_name" {
+variable "username" {
   type        = string
-  description = "The username for the local account that will be created on the new vm."
+  description = "The username for the local account that will be created on the new VM."
   default     = "azureadmin"
-}
-
-variable "password" {
-  type        = string
-  description = "The password for the local account that will be created on the new vm."
-  sensitive   = true
-  default     = null
 }
