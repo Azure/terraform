@@ -1,3 +1,24 @@
+## 16 Jul 23 05:09 UTC
+
+Success: false
+
+### Versions
+
+
+
+### Error
+
+
+[0m[1mInitializing the backend...[0m
+[31m[31m╷[0m[0m
+[31m│[0m [0m[1m[31mError: [0m[0m[1mFailed to get existing workspaces: Error retrieving keys for Storage Account "<storage_account_name>": storage.AccountsClient#ListKeys: Invalid input: autorest/validation: validation failed: parameter=resourceGroupName constraint=Pattern value="<storage_account_resource_group>" details: value doesn't match pattern ^[-\w\._\(\)]+$[0m
+[31m│[0m [0m
+[31m│[0m [0m[0m
+[31m╵[0m[0m
+[0m[0m
+
+---
+
 ## 09 Jul 23 00:48 UTC
 
 Success: false
