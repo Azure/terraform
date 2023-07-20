@@ -101,7 +101,7 @@ resource "azurerm_linux_virtual_machine" "test" {
   }
 
   admin_ssh_key {
-    username   = coalesce(var.username, "azureuser")
+    username   = coalesce(var.username, "azureadmin")
     public_key = jsondecode(azapi_resource_action.ssh_public_key_gen.output).publicKey
   }
 
@@ -112,7 +112,7 @@ resource "azurerm_linux_virtual_machine" "test" {
   }
 
   computer_name  = "hostname"
-  admin_username = coalesce(var.username, "azureuser")
+  admin_username = coalesce(var.username, "azureadmin")
 }
 
 resource "azurerm_managed_disk" "test" {
