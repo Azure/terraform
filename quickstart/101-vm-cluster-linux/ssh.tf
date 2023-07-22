@@ -22,8 +22,3 @@ resource "azapi_resource" "ssh_public_key" {
 output "key_data" {
   value = jsondecode(azapi_resource_action.ssh_public_key_gen.output).publicKey
 }
-
-output "private_key_data" {
-  sensitive = true
-  value = jsondecode(azapi_resource_action.ssh_public_key_gen.output).privateKey
-}
