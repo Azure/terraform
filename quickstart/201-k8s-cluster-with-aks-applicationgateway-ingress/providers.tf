@@ -1,18 +1,19 @@
 terraform {
-
-  required_version = ">=0.12"
+  required_version = ">=1.0"
 
   required_providers {
+    azapi = {
+      source  = "azure/azapi"
+      version = "~>1.5"
+    }
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "~>2.0"
+      version = "~>3.0"
     }
-  }
-  backend "azurerm" {
-    resource_group_name  = "<storage_account_resource_group>"
-    storage_account_name = "<storage_account_name>"
-    container_name       = "tfstate"
-    key                  = "codelab.microsoft.tfstate"
+    random = {
+      source  = "hashicorp/random"
+      version = "~>3.0"
+    }
   }
 }
 

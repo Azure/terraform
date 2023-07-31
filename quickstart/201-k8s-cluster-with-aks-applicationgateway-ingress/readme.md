@@ -1,4 +1,4 @@
-# Create an Application Gateway Ingress Controller in Azure Kubernetes Service using Terraform
+# Application Gateway Ingress Controller in Azure Kubernetes Service using Terraform
 
 This template creates an Application Gateway Ingress Controller in Azure Kubernetes Service using Terraform.
 
@@ -11,18 +11,17 @@ This template creates an Application Gateway Ingress Controller in Azure Kuberne
 - [azurerm_subnet](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet)
 - [azurerm_public_ip](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/public_ip)
 - [azurerm_application_gateway](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/application_gateway)
-- [azurerm_role_assignment](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment)
 - [azurerm_kubernetes_cluster](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/kubernetes_cluster)
+
+## Terraform data sources
+- [azurerm_subnet](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/subnet)
 
 ## Variables
 
 | Name | Description | Default value |
 |-|-|-|
-| `resource_group_name_prefix` | (Optional) Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. | rg |
-| `location` | (Optional) Azure region in which to deploy demo resources.| eastus |
-| `aks_service_principal_app_id` | Application ID/Client ID  of the service principal. Used by AKS to manage AKS related resources on Azure like vms, subnets.| |
-| `aks_service_principal_client_secret` | Secret of the service principal. Used by AKS to manage Azure. | |
-| `aks_service_principal_object_id` | Object ID of the service principal. | |
+| `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. | rg |
+| `resource_group_location` | Location of the resource group. | eastus |
 | `virtual_network_name` | Virtual network name. | aksVirtualNetwork |
 | `virtual_network_address_prefix` | VNET address prefix. | 192.168.0.0/16 |
 | `aks_subnet_name` | Subnet name. | kubesubnet |
@@ -41,6 +40,7 @@ This template creates an Application Gateway Ingress Controller in Azure Kuberne
 | `aks_dns_service_ip` | DNS server IP address. | 10.0.0.10 |
 | `aks_docker_bridge_cidr` | CIDR notation IP for Docker bridge. | 172.17.0.1/16 |
 | `aks_enable_rbac` | Enable RBAC on the AKS cluster. | false |
+| `msi_id` | The Managed Service Identity ID. Set this value if you're running this example using Managed Identity as the authentication method. | null |
 | `vm_user_name` | User name for the VM. | vmuser1 |
 | `public_ssh_key_path` | Public key path for SSH. | ~/.ssh/id_rsa.pub |
 
