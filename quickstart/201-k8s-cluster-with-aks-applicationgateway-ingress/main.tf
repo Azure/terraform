@@ -24,8 +24,6 @@ resource "azurerm_user_assigned_identity" "testIdentity" {
   location            = azurerm_resource_group.rg.location
 
   name = "identity1"
-
-  tags = var.tags
 }
 
 resource "azurerm_virtual_network" "test" {
@@ -43,22 +41,18 @@ resource "azurerm_virtual_network" "test" {
     name           = "appgwsubnet"
     address_prefix = var.app_gateway_subnet_address_prefix
   }
-
-  tags = var.tags
 }
 
 data "azurerm_subnet" "kubesubnet" {
   name                 = var.aks_subnet_name
   virtual_network_name = azurerm_virtual_network.test.name
   resource_group_name  = azurerm_resource_group.rg.name
-  depends_on           = [azurerm_virtual_network.test]
 }
 
 data "azurerm_subnet" "appgwsubnet" {
   name                 = "appgwsubnet"
   virtual_network_name = azurerm_virtual_network.test.name
   resource_group_name  = azurerm_resource_group.rg.name
-  depends_on           = [azurerm_virtual_network.test]
 }
 
 # Public Ip 
@@ -68,8 +62,6 @@ resource "azurerm_public_ip" "test" {
   resource_group_name = azurerm_resource_group.rg.name
   allocation_method   = "Static"
   sku                 = "Standard"
-
-  tags = var.tags
 }
 
 resource "azurerm_application_gateway" "network" {
@@ -128,56 +120,28 @@ resource "azurerm_application_gateway" "network" {
     http_listener_name         = local.listener_name
     backend_address_pool_name  = local.backend_address_pool_name
     backend_http_settings_name = local.http_setting_name
+    priority                   = 1
   }
-
-  tags = var.tags
-
-  depends_on = [azurerm_virtual_network.test, azurerm_public_ip.test]
-}
-
-resource "azurerm_role_assignment" "ra1" {
-  scope                = data.azurerm_subnet.kubesubnet.id
-  role_definition_name = "Network Contributor"
-  principal_id         = var.aks_service_principal_object_id
-
-  depends_on = [azurerm_virtual_network.test]
-}
-
-resource "azurerm_role_assignment" "ra2" {
-  scope                = azurerm_user_assigned_identity.testIdentity.id
-  role_definition_name = "Managed Identity Operator"
-  principal_id         = var.aks_service_principal_object_id
-  depends_on           = [azurerm_user_assigned_identity.testIdentity]
-}
-
-resource "azurerm_role_assignment" "ra3" {
-  scope                = azurerm_application_gateway.network.id
-  role_definition_name = "Contributor"
-  principal_id         = azurerm_user_assigned_identity.testIdentity.principal_id
-  depends_on           = [azurerm_user_assigned_identity.testIdentity, azurerm_application_gateway.network]
-}
-
-resource "azurerm_role_assignment" "ra4" {
-  scope                = azurerm_resource_group.rg.id
-  role_definition_name = "Reader"
-  principal_id         = azurerm_user_assigned_identity.testIdentity.principal_id
-  depends_on           = [azurerm_user_assigned_identity.testIdentity, azurerm_application_gateway.network]
 }
 
 resource "azurerm_kubernetes_cluster" "k8s" {
-  name       = var.aks_name
+  name       = var.aks_cluster_name
   location   = azurerm_resource_group.rg.location
   dns_prefix = var.aks_dns_prefix
+
+  identity {
+    type = "SystemAssigned"
+  }
 
   resource_group_name = azurerm_resource_group.rg.name
 
   http_application_routing_enabled = false
 
   linux_profile {
-    admin_username = var.vm_user_name
+    admin_username = var.vm_username
 
     ssh_key {
-      key_data = file(var.public_ssh_key_path)
+      key_data = jsondecode(azapi_resource_action.ssh_public_key_gen.output).publicKey
     }
   }
 
@@ -189,22 +153,10 @@ resource "azurerm_kubernetes_cluster" "k8s" {
     vnet_subnet_id  = data.azurerm_subnet.kubesubnet.id
   }
 
-  service_principal {
-    client_id     = var.aks_service_principal_app_id
-    client_secret = var.aks_service_principal_client_secret
-  }
-
   network_profile {
     network_plugin     = "azure"
     dns_service_ip     = var.aks_dns_service_ip
     docker_bridge_cidr = var.aks_docker_bridge_cidr
     service_cidr       = var.aks_service_cidr
   }
-
-  role_based_access_control {
-    enabled = var.aks_enable_rbac
-  }
-
-  depends_on = [azurerm_virtual_network.test, azurerm_application_gateway.network]
-  tags       = var.tags
 }
