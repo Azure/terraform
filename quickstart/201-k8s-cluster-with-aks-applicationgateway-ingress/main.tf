@@ -17,6 +17,7 @@ locals {
   request_routing_rule_name      = "${azurerm_virtual_network.vnet.name}-rqrt"
 }
 
+# Subnets
 data "azurerm_subnet" "kubesubnet" {
   name                 = var.aks_subnet_name
   virtual_network_name = azurerm_virtual_network.vnet.name
@@ -34,6 +35,7 @@ data "azurerm_user_assigned_identity" "ingress" {
   resource_group_name = azurerm_kubernetes_cluster.aks.node_resource_group
 }
 
+# Virtual network (vnet)
 resource "azurerm_virtual_network" "vnet" {
   name                = var.virtual_network_name
   location            = azurerm_resource_group.rg.location
@@ -57,6 +59,7 @@ resource "azurerm_user_assigned_identity" "aks" {
   location            = azurerm_resource_group.rg.location
 }
 
+# AKS cluster
 resource "azurerm_kubernetes_cluster" "aks" {
   name                    = var.aks_cluster_name
   location                = azurerm_resource_group.rg.location
@@ -161,7 +164,7 @@ resource "azurerm_application_gateway" "appgw" {
   }
 }
 
-# Reader permissions on the resource group containing the Application Gateway allow the ingress controller to determine the gateways public IP Address
+# Role assignments
 resource "azurerm_role_assignment" "ra1" {
   scope                = azurerm_resource_group.rg.id
   role_definition_name = "Reader"
