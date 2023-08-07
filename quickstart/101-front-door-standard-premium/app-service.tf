@@ -24,19 +24,19 @@ resource "azurerm_windows_web_app" "app" {
   site_config {
     ftps_state          = "Disabled"
     minimum_tls_version = "1.2"
-    ip_restriction = [{
+    ip_restriction {
       service_tag               = "AzureFrontDoor.Backend"
       ip_address                = null
       virtual_network_subnet_id = null
       action                    = "Allow"
       priority                  = 100
-      headers = [{
+      headers {
         x_azure_fdid      = [azurerm_cdn_frontdoor_profile.my_front_door.resource_guid]
         x_fd_health_probe = []
         x_forwarded_for   = []
         x_forwarded_host  = []
-      }]
+      }
       name = "Allow traffic from Front Door"
-    }]
+    }
   }
 }
