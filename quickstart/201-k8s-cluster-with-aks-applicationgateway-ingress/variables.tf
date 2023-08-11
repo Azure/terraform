@@ -86,12 +86,6 @@ variable "aks_dns_service_ip" {
   default     = "192.168.0.10"
 }
 
-variable "aks_docker_bridge_cidr" {
-  type        = string
-  description = "(Optional) IP address (in CIDR notation) used as the Docker bridge IP address on nodes."
-  default     = "172.17.0.1/16"
-}
-
 variable "aks_private_cluster" {
   type        = bool
   description = "(Optional) Should this Kubernetes Cluster have its API server only exposed on internal IP addresses? This provides a Private IP Address for the Kubernetes API on the Virtual Network where the Kubernetes Cluster is located."
