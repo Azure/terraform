@@ -61,12 +61,13 @@ resource "azurerm_user_assigned_identity" "aks" {
 
 # AKS cluster
 resource "azurerm_kubernetes_cluster" "aks" {
-  name                    = var.aks_cluster_name
-  location                = azurerm_resource_group.rg.location
-  resource_group_name     = azurerm_resource_group.rg.name
-  dns_prefix              = var.aks_cluster_name
-  private_cluster_enabled = var.aks_private_cluster
-  sku_tier                = var.aks_sku_tier
+  name                              = var.aks_cluster_name
+  location                          = azurerm_resource_group.rg.location
+  resource_group_name               = azurerm_resource_group.rg.name
+  dns_prefix                        = var.aks_cluster_name
+  private_cluster_enabled           = var.aks_private_cluster
+  role_based_access_control_enabled = var.aks_enable_rbac
+  sku_tier                          = var.aks_sku_tier
 
   default_node_pool {
     name            = "agentpool"
@@ -78,23 +79,19 @@ resource "azurerm_kubernetes_cluster" "aks" {
   }
 
   identity {
-    type                      = "UserAssigned"
-    user_assigned_identity_id = azurerm_user_assigned_identity.aks.id
+    type         = "UserAssigned"
+    identity_ids = [azurerm_user_assigned_identity.aks.id]
   }
 
-  role_based_access_control {
-    enabled = var.aks_enable_rbac
-  }
 
   network_profile {
-    network_plugin     = "azure"
-    dns_service_ip     = var.aks_dns_service_ip
-    docker_bridge_cidr = var.aks_docker_bridge_cidr
-    service_cidr       = var.aks_service_cidr
+    network_plugin = "azure"
+    dns_service_ip = var.aks_dns_service_ip
+    service_cidr   = var.aks_service_cidr
   }
 
   ingress_application_gateway {
-    gateway_id = resource.azurerm_application_gateway.appgw.id
+    gateway_id = azurerm_application_gateway.appgw.id
   }
 
   depends_on = [
@@ -157,10 +154,21 @@ resource "azurerm_application_gateway" "appgw" {
 
   request_routing_rule {
     name                       = local.request_routing_rule_name
+    priority                   = 1
     rule_type                  = "Basic"
     http_listener_name         = local.listener_name
     backend_address_pool_name  = local.backend_address_pool_name
     backend_http_settings_name = local.http_setting_name
+  }
+  lifecycle {
+    ignore_changes = [
+      tags,
+      backend_address_pool,
+      backend_http_settings,
+      http_listener,
+      probe,
+      request_routing_rule,
+    ]
   }
 }
 
