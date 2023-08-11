@@ -1,5 +1,18 @@
+resource "random_pet" "rg-name" {
+  prefix = var.resource_group_name_prefix
+}
+
+resource "azurerm_resource_group" "rg" {
+  name     = random_pet.rg-name.id
+  location = var.resource_group_location
+}
+
+resource "random_id" "front_door_name" {
+  byte_length = 8
+}
+
 locals {
-  front_door_name                         = "${random_pet.prefix.id}-afd"
+  front_door_name                         = "afd-${lower(random_id.front_door_name.hex)}"
   front_door_frontend_endpoint_name       = "frontEndEndpoint"
   front_door_load_balancing_settings_name = "loadBalancingSettings"
   front_door_health_probe_settings_name   = "healthProbeSettings"
