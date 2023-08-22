@@ -1,8 +1,6 @@
 # Deploy Azure Firewall and a Firewall Policy
 
-This template deploys an Azure Firewall and a Firewall Policy. The Firewall Policy is associated to the Firewall.
-
-## Resources 
+## Resources
 
 | Terraform Resource Type | Description |
 | - | - |
@@ -227,4 +225,4 @@ terraform plan -out main.tfplan
     }
 
 Plan: 10 to add, 0 to change, 0 to destroy.
-``````
+```

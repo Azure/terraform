@@ -1,8 +1,6 @@
-# Deploy Azure Firewall and a Firewall Policy
+# Deploy Azure Firewall and a Firewall Policy to a Secure Hub
 
-This template deploys an Azure Firewall and a Firewall Policy to a Secure Hub. The Firewall Policy is associated with the Firewall policy.
-
-## Resources 
+## Resources
 
 | Terraform Resource Type | Description |
 | - | - |
