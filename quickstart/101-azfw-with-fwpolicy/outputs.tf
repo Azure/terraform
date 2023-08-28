@@ -3,5 +3,5 @@ output "resource_group_name" {
 }
 
 output "firewall_name" {
-  value = azurerm_firewall.azfw.name
+  value = azurerm_firewall.fw.name
 }
