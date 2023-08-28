@@ -1,30 +1,24 @@
 // Create Variables for Location and Tags
-variable "location" {
+variable "resource_group_location" {
+  type = string
+  description = "Location for all resources."
   default = "eastus"
 }
-variable "tags" {
-  default = {
-    environment = "dev"
-    costcenter  = "1234556677"
-    owner       = "cloud team"
-    workload    = "azure firewall"
-  }
-}
-
 // Create Firewall Variables
-variable "fw_sku" {
+variable "firewall_sku_name" {
+  type = string
+  description = "SKU name for the firewall."
   default = "Premium" # Valid values are Standard and Premium
 }
 
 // Create Virtual Machine Sku Size Variables
-variable "vm_size" {
+variable "virtual_machine_size" {
+  type = string
+  description = "Size of the virtual machine."
   default = "Standard_D2_v3"
 }
 
 // Create Admin Username and Password
 variable "admin_username" {
   default = "azureuser"
-}
-variable "admin_password" {
-  default = "P@ssw0rd1234!"
 }

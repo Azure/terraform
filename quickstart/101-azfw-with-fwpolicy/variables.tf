@@ -1,18 +1,14 @@
 // Create Variables for Location and Tags
-variable "location" {
+variable "resource_group_location" {
+  type    = string
+  description = "Location for all resources."
   default = "eastus"
-}
-variable "tags" {
-  default = {
-    environment = "dev"
-    costcenter  = "1234556677"
-    owner       = "cloud team"
-    workload    = "azure firewall"
-  }
 }
 
 // Create Firewall Variables
-variable "fw_sku" {
+variable "firewall_sku_tier" {
+  type    = string
+  description = "Firewall SKU."
   default = "Premium" # Valid values are Standard and Premium
 }
 
