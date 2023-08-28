@@ -1,24 +1,27 @@
-// Create Variables for Location and Tags
 variable "resource_group_location" {
   type        = string
   description = "Location for all resources."
   default     = "eastus"
 }
-// Create Firewall Variables
+
+variable "resource_group_name_prefix" {
+  type = string
+  description = "Prefix for the Resource Group Name that's combined with a random id so name is unique in your Azure subcription."  
+  default = "rg"
+}
+
 variable "firewall_sku_name" {
   type        = string
   description = "SKU name for the firewall."
   default     = "Premium" # Valid values are Standard and Premium
 }
 
-// Create Virtual Machine Sku Size Variables
 variable "virtual_machine_size" {
   type        = string
   description = "Size of the virtual machine."
   default     = "Standard_D2_v3"
 }
 
-// Create Admin Username and Password
 variable "admin_username" {
   default = "azureuser"
 }

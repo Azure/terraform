@@ -1,10 +1,12 @@
+resource "random_pet" "rg-name" {
+  prefix = var.resource_group_name_prefix
+}
 
-// Create a Resource Group
 resource "azurerm_resource_group" "rg" {
-  name     = "azfw-rg"
+  name     = random_pet.rg-name.id
   location = var.resource_group_location
 }
-// Create a Virtual Network
+
 resource "azurerm_virtual_network" "azfw_vnet" {
   name                = "azfw-vnet"
   location            = azurerm_resource_group.rg.location
@@ -12,7 +14,6 @@ resource "azurerm_virtual_network" "azfw_vnet" {
   address_space       = ["10.10.0.0/24"]
 }
 
-// Create IP Groups
 resource "azurerm_ip_group" "workload_ip_group" {
   name                = "workload-ip-group"
   resource_group_name = azurerm_resource_group.rg.name
@@ -26,7 +27,6 @@ resource "azurerm_ip_group" "infra_ip_group" {
   cidrs               = ["10.40.0.0/24", "10.50.0.0/24"]
 }
 
-// Create the Azure Firewall Subnet
 resource "azurerm_subnet" "azfw_subnet" {
   name                 = "AzureFirewallSubnet"
   resource_group_name  = azurerm_resource_group.rg.name
@@ -34,7 +34,6 @@ resource "azurerm_subnet" "azfw_subnet" {
   address_prefixes     = ["10.10.0.0/26"]
 }
 
-// Create a Public IP Address for Azure Firewall
 resource "azurerm_public_ip" "pip_azfw" {
   name                = "pip-azfw"
   location            = azurerm_resource_group.rg.location
@@ -43,7 +42,6 @@ resource "azurerm_public_ip" "pip_azfw" {
   sku                 = "Standard"
 }
 
-// Create a Azure Firewall Policy
 resource "azurerm_firewall_policy" "azfw_policy" {
   name                     = "azfw-policy"
   resource_group_name      = azurerm_resource_group.rg.name
@@ -52,9 +50,6 @@ resource "azurerm_firewall_policy" "azfw_policy" {
   threat_intelligence_mode = "Alert"
 }
 
-// Create a Network Rule Collection Group
-// Create a Network Rule Collection
-// Create rules for NTP
 resource "azurerm_firewall_policy_rule_collection_group" "net_policy_rule_collection_group" {
   name               = "DefaultNetworkRuleCollectionGroup"
   firewall_policy_id = azurerm_firewall_policy.azfw_policy.id
@@ -73,10 +68,6 @@ resource "azurerm_firewall_policy_rule_collection_group" "net_policy_rule_collec
   }
 }
 
-// Create a Azure Firewall Policy Rule Collection Group
-// Create a Application Rule Collection
-// Create rules for Windows Update
-// Create rules for Microsoft.com
 resource "azurerm_firewall_policy_rule_collection_group" "app_policy_rule_collection_group" {
   name               = "DefaulApplicationtRuleCollectionGroup"
   firewall_policy_id = azurerm_firewall_policy.azfw_policy.id
@@ -114,7 +105,6 @@ resource "azurerm_firewall_policy_rule_collection_group" "app_policy_rule_collec
   }
 }
 
-// Create the Azure Firewall
 resource "azurerm_firewall" "fw" {
   name                = "azfw"
   location            = azurerm_resource_group.rg.location
