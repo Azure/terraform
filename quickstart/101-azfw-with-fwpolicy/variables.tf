@@ -1,14 +1,14 @@
 // Create Variables for Location and Tags
 variable "resource_group_location" {
-  type    = string
+  type        = string
   description = "Location for all resources."
-  default = "eastus"
+  default     = "eastus"
 }
 
 // Create Firewall Variables
 variable "firewall_sku_tier" {
-  type    = string
+  type        = string
   description = "Firewall SKU."
-  default = "Premium" # Valid values are Standard and Premium
+  default     = "Premium" # Valid values are Standard and Premium
 }
 

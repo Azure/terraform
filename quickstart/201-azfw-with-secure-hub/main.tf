@@ -34,7 +34,7 @@ resource "azurerm_virtual_hub_connection" "azfw_vwan_hub_connection" {
     associated_route_table_id = azurerm_virtual_hub_route_table.vhub_rt.id
     propagated_route_table {
       route_table_ids = [azurerm_virtual_hub_route_table.vhub_rt.id]
-      labels = ["VNet"]
+      labels          = ["VNet"]
     }
   }
 }
@@ -226,7 +226,7 @@ resource "azurerm_windows_virtual_machine" "vm_jump" {
   name                  = "jump-vm"
   resource_group_name   = azurerm_resource_group.rg.name
   location              = azurerm_resource_group.rg.location
-  size                  = var.virtual_network_name
+  size                  = var.virtual_machine_size
   admin_username        = var.admin_username
   admin_password        = random_password.password.result
   network_interface_ids = [azurerm_network_interface.vm_jump_nic.id]
@@ -284,10 +284,10 @@ resource "azurerm_virtual_hub_route_table" "vhub_rt" {
 }
 
 resource "random_password" "password" {
-  length           = 20
-  min_lower       = 1
-  min_upper       = 1
-  min_numeric     = 1
-  min_special     = 1
-  special          = true
+  length      = 20
+  min_lower   = 1
+  min_upper   = 1
+  min_numeric = 1
+  min_special = 1
+  special     = true
 }

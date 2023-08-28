@@ -1,21 +1,21 @@
 // Create Variables for Location and Tags
 variable "resource_group_location" {
-  type = string
+  type        = string
   description = "Location for all resources."
-  default = "eastus"
+  default     = "eastus"
 }
 // Create Firewall Variables
 variable "firewall_sku_name" {
-  type = string
+  type        = string
   description = "SKU name for the firewall."
-  default = "Premium" # Valid values are Standard and Premium
+  default     = "Premium" # Valid values are Standard and Premium
 }
 
 // Create Virtual Machine Sku Size Variables
 variable "virtual_machine_size" {
-  type = string
+  type        = string
   description = "Size of the virtual machine."
-  default = "Standard_D2_v3"
+  default     = "Standard_D2_v3"
 }
 
 // Create Admin Username and Password

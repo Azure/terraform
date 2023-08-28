@@ -3,16 +3,16 @@ output "resource_group_name" {
 }
 
 output "virtual_hub_name" {
-  value = azurerm_secure_hub.secure_hub.name
+  value = azurerm_virtual_hub.azfw_vwan_hub.name
 }
 
 output "jump_admin_password" {
   sensitive = true
-  value = azurerm_secure_hub.vm_jump.admin_password
+  value     = azurerm_windows_virtual_machine.vm_jump.admin_password
 }
 
 output "workload_admin_password" {
   sensitive = true
-  value = azurerm_secure_hub.vm_workload.admin_password
+  value     = azurerm_windows_virtual_machine.vm_workload.admin_password
 }
 
