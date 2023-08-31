@@ -160,6 +160,12 @@ resource "azurerm_application_gateway" "appgw" {
     backend_address_pool_name  = local.backend_address_pool_name
     backend_http_settings_name = local.http_setting_name
   }
+
+  # Since this sample is creating an Application Gateway 
+  # that is later managed by an Ingress Controller, there is no need 
+  # to create a backend address pool (BEP). However, the BEP is still 
+  # required by the resource. Therefore, "lifecycle:ignore_changes" is 
+  # used to prevent TF from managing the gateway.
   lifecycle {
     ignore_changes = [
       tags,
