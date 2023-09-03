@@ -1,3 +1,33 @@
+## 03 Sep 23 05:32 UTC
+
+Success: false
+
+### Versions
+
+
+
+### Error
+
+
+[0m[1mInitializing the backend...[0m
+
+[0m[1mInitializing provider plugins...[0m
+- Finding hashicorp/azurerm versions matching "~> 3.0"...
+- Finding hashicorp/random versions matching "~> 3.0"...
+- Installing hashicorp/azurerm v3.71.0...
+- Installing hashicorp/random v3.5.1...
+- Installed hashicorp/random v3.5.1 (signed by HashiCorp)
+[31m[31m╷[0m[0m
+[31m│[0m [0m[1m[31mError: [0m[0m[1mFailed to install provider[0m
+[31m│[0m [0m
+[31m│[0m [0m[0mError while installing hashicorp/azurerm v3.71.0: write
+[31m│[0m [0m.terraform/providers/registry.terraform.io/hashicorp/azurerm/3.71.0/linux_amd64/terraform-provider-azurerm_v3.71.0_x5:
+[31m│[0m [0mno space left on device
+[31m╵[0m[0m
+[0m[0m
+
+---
+
 ## 27 Aug 23 05:15 UTC
 
 Success: true

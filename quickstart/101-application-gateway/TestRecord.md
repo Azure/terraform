@@ -1,3 +1,38 @@
+## 03 Sep 23 05:46 UTC
+
+Success: false
+
+### Versions
+
+
+
+### Error
+
+
+[0m[1mInitializing the backend...[0m
+
+[0m[1mInitializing provider plugins...[0m
+- Finding hashicorp/azurerm versions matching "~> 3.0"...
+- Finding hashicorp/random versions matching "~> 3.0"...
+- Installing hashicorp/azurerm v3.71.0...
+- Installing hashicorp/random v3.5.1...
+[31m[31m╷[0m[0m
+[31m│[0m [0m[1m[31mError: [0m[0m[1mFailed to install provider[0m
+[31m│[0m [0m
+[31m│[0m [0m[0mError while installing hashicorp/azurerm v3.71.0: write
+[31m│[0m [0m/tmp/terraform-provider1159449006: no space left on device
+[31m╵[0m[0m
+[0m[0m
+[31m[31m╷[0m[0m
+[31m│[0m [0m[1m[31mError: [0m[0m[1mFailed to install provider[0m
+[31m│[0m [0m
+[31m│[0m [0m[0mError while installing hashicorp/random v3.5.1: write
+[31m│[0m [0m/tmp/terraform-provider856965826: no space left on device
+[31m╵[0m[0m
+[0m[0m
+
+---
+
 ## 27 Aug 23 05:18 UTC
 
 Success: true
