@@ -6,8 +6,14 @@ resource "azurerm_application_insights" "default" {
   application_type    = "web"
 }
 
+resource "random_string" "kv_suffix" {
+  length  = 24
+  upper   = false
+  special = false
+}
+
 resource "azurerm_key_vault" "default" {
-  name                     = "kv-${var.name}-${var.environment}"
+  name                     = substr("kv-${var.name}-${var.environment}-${random_string.kv_suffix.result}", 0, 24)
   location                 = azurerm_resource_group.default.location
   resource_group_name      = azurerm_resource_group.default.name
   tenant_id                = data.azurerm_client_config.current.tenant_id
@@ -20,8 +26,14 @@ resource "azurerm_key_vault" "default" {
   }
 }
 
+resource "random_string" "storage_suffix" {
+  length  = 4
+  upper   = false
+  special = false
+}
+
 resource "azurerm_storage_account" "default" {
-  name                     = "st${var.name}${var.environment}"
+  name                     = replace("st${var.name}${var.environment}${random_string.storage_suffix.result}", "-", "")
   location                 = azurerm_resource_group.default.location
   resource_group_name      = azurerm_resource_group.default.name
   account_tier             = "Standard"
@@ -33,8 +45,14 @@ resource "azurerm_storage_account" "default" {
   }
 }
 
+resource "random_string" "cr_suffix" {
+  length  = 4
+  upper   = false
+  special = false
+}
+
 resource "azurerm_container_registry" "default" {
-  name                = "cr${var.name}${var.environment}"
+  name                = replace("cr${var.name}${var.environment}${random_string.cr_suffix.result}", "-", "")
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
   sku                 = "Premium"
@@ -63,7 +81,7 @@ resource "azurerm_machine_learning_workspace" "default" {
   # Args of use when using an Azure Private Link configuration
   public_network_access_enabled = false
   image_build_compute_name      = var.image_build_compute_name
-  depends_on = [
+  depends_on                    = [
     azurerm_private_endpoint.kv_ple,
     azurerm_private_endpoint.st_ple_blob,
     azurerm_private_endpoint.storage_ple_file,
