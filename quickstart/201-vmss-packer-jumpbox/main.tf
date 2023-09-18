@@ -7,6 +7,14 @@ terraform {
       source  = "hashicorp/azurerm"
       version = "~>2.0"
     }
+    azapi = {
+      source = "Azure/azapi"
+      version = "~> 1.0"
+    }
+    local = {
+      source  = "hashicorp/local"
+      version = "2.4.0"
+    }
     random = {
       source  = "hashicorp/random"
       version = "3.5.1"
@@ -22,8 +30,10 @@ provider "azurerm" {
   features {}
 }
 
+resource "random_pet" "id" {}
+
 resource "azurerm_resource_group" "vmss" {
-  name     = var.resource_group_name
+  name     = coalesce(var.resource_group_name, "201-vmss-packer-jumpbox-${random_pet.id.id}")
   location = var.location
   tags     = var.tags
 }
@@ -105,10 +115,29 @@ data "azurerm_image" "image" {
   resource_group_name = data.azurerm_resource_group.image.name
 }
 
-# RSA key of size 4096 bits
-resource "tls_private_key" "rsa-4096" {
-  algorithm = "RSA"
-  rsa_bits  = 4096
+resource "azapi_resource" "ssh_public_key" {
+  type      = "Microsoft.Compute/sshPublicKeys@2022-11-01"
+  name      = random_pet.id.id
+  location  = azurerm_resource_group.vmss.location
+  parent_id = azurerm_resource_group.vmss.id
+}
+
+resource "azapi_resource_action" "ssh_public_key_gen" {
+  type        = "Microsoft.Compute/sshPublicKeys@2022-11-01"
+  resource_id = azapi_resource.ssh_public_key.id
+  action      = "generateKeyPair"
+  method      = "POST"
+
+  response_export_values = ["publicKey", "privateKey"]
+}
+
+resource "random_password" "password" {
+  count  = var.admin_password == null ? 1 : 0
+  length = 20
+}
+
+locals {
+  admin_password = try(random_password.password[0].result, var.admin_password)
 }
 
 resource "azurerm_virtual_machine_scale_set" "vmss" {
@@ -144,7 +173,7 @@ resource "azurerm_virtual_machine_scale_set" "vmss" {
   os_profile {
     computer_name_prefix = "vmlab"
     admin_username       = var.admin_user
-    admin_password       = var.admin_password
+    admin_password       = local.admin_password
   }
 
   os_profile_linux_config {
@@ -152,7 +181,7 @@ resource "azurerm_virtual_machine_scale_set" "vmss" {
 
     ssh_keys {
       path     = "/home/azureuser/.ssh/authorized_keys"
-      key_data = tls_private_key.rsa-4096.public_key_openssh
+      key_data = jsondecode(azapi_resource_action.ssh_public_key_gen.output).publicKey
     }
   }
 
@@ -219,7 +248,7 @@ resource "azurerm_virtual_machine" "jumpbox" {
   os_profile {
     computer_name  = "jumpbox"
     admin_username = var.admin_user
-    admin_password = var.admin_password
+    admin_password = local.admin_password
   }
 
   os_profile_linux_config {
@@ -227,7 +256,7 @@ resource "azurerm_virtual_machine" "jumpbox" {
 
     ssh_keys {
       path     = "/home/azureuser/.ssh/authorized_keys"
-      key_data = file("~/.ssh/id_rsa.pub")
+      key_data = jsondecode(azapi_resource_action.ssh_public_key_gen.output).publicKey
     }
   }
 

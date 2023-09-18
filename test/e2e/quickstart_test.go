@@ -3,6 +3,7 @@ package e2e
 import (
 	"github.com/gruntwork-io/terratest/modules/files"
 	"github.com/gruntwork-io/terratest/modules/packer"
+	test_structure "github.com/gruntwork-io/terratest/modules/test-structure"
 	"github.com/stretchr/testify/require"
 	"os"
 	"path/filepath"
@@ -14,7 +15,7 @@ import (
 )
 
 var speicalTests = map[string]func(*testing.T){
-	"quickstart/201-vmss-packer-jumpbox": test201VmssPackerJumpbox,
+	"quickstart/201-vmss-packer-jumpbox": Test201VmssPackerJumpbox,
 }
 
 func Test_Quickstarts(t *testing.T) {
@@ -69,8 +70,12 @@ func allExamples() ([]string, error) {
 	return r, nil
 }
 
-func test201VmssPackerJumpbox(t *testing.T) {
+func Test201VmssPackerJumpbox(t *testing.T) {
 	examplePath := filepath.Join("..", "..", "quickstart", "201-vmss-packer-jumpbox")
+	examplePath = test_structure.CopyTerraformFolderToTemp(t, examplePath, "")
+	defer func() {
+		_ = os.RemoveAll(examplePath)
+	}()
 	harnessPath := filepath.Join(examplePath, "test_harness")
 	harnessOptions := &terraform.Options{
 		TerraformDir: harnessPath,
@@ -79,7 +84,7 @@ func test201VmssPackerJumpbox(t *testing.T) {
 	terraform.InitAndApply(t, harnessOptions)
 	harnessOutput := terraform.OutputAll(t, harnessOptions)
 	imageResourceGroupName := harnessOutput["resource_group_name"].(string)
-	pkrCfg := filepath.Join("..", "..", "quickstart", "201-vmss-packer-jumpbox", "ubuntu.pkr.hcl")
+	pkrCfg := filepath.Join(examplePath, "ubuntu.pkr.hcl")
 	packerVars := map[string]string{
 		"image_resource_group_name": imageResourceGroupName,
 	}
@@ -98,5 +103,8 @@ func test201VmssPackerJumpbox(t *testing.T) {
 	require.NoError(t, err)
 	helper.RunE2ETest(t, examplePath, "", terraform.Options{
 		Upgrade: true,
+		Vars: map[string]interface{}{
+			"packer_resource_group_name": imageResourceGroupName,
+		},
 	}, nil)
 }
