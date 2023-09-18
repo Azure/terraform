@@ -20,6 +20,7 @@ jobs:
           dir_names: "true"
           separator: ","
           files: "quickstart/*"
+          dir_names_max_depth: 2
       - name: pr-check
         run: |
           export CHANGED_FOLDERS="${{ steps.changed-files.outputs.all_changed_files }}"

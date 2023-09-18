@@ -32,6 +32,7 @@ func Test_Quickstarts(t *testing.T) {
 			t.Fatalf(err.Error())
 		}
 	}
+	folders = removeDuplicates(folders)
 	for _, f := range folders {
 		f = strings.TrimSpace(f)
 		if filepath.Dir(f) != "quickstart" {
@@ -107,4 +108,16 @@ func test201VmssPackerJumpbox(t *testing.T) {
 			"packer_resource_group_name": imageResourceGroupName,
 		},
 	}, nil)
+}
+
+func removeDuplicates(s []string) []string {
+	m := make(map[string]struct{})
+	result := []string{}
+	for _, item := range s {
+		if _, ok := m[item]; !ok {
+			m[item] = struct{}{}
+			result = append(result, item)
+		}
+	}
+	return result
 }
