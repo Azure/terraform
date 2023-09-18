@@ -15,7 +15,7 @@ import (
 )
 
 var speicalTests = map[string]func(*testing.T){
-	"quickstart/201-vmss-packer-jumpbox": Test201VmssPackerJumpbox,
+	"quickstart/201-vmss-packer-jumpbox": test201VmssPackerJumpbox,
 }
 
 func Test_Quickstarts(t *testing.T) {
@@ -70,7 +70,7 @@ func allExamples() ([]string, error) {
 	return r, nil
 }
 
-func Test201VmssPackerJumpbox(t *testing.T) {
+func test201VmssPackerJumpbox(t *testing.T) {
 	examplePath := filepath.Join("..", "..", "quickstart", "201-vmss-packer-jumpbox")
 	examplePath = test_structure.CopyTerraformFolderToTemp(t, examplePath, "")
 	defer func() {
