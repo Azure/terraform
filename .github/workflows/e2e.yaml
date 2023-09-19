@@ -23,6 +23,7 @@ jobs:
           separator: ","
           files: "quickstart/*"
           files_ignore: "**/TestRecord.md"
+          dir_names_max_depth: 2
       - name: test pr
         run: |
           az login --identity --username $MSI_ID > /dev/null
