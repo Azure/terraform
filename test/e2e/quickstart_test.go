@@ -15,7 +15,7 @@ import (
 )
 
 var speicalTests = map[string]func(*testing.T){
-	"quickstart/201-vmss-packer-jumpbox": Test201VmssPackerJumpbox,
+	"quickstart/201-vmss-packer-jumpbox": test201VmssPackerJumpbox,
 }
 
 func Test_Quickstarts(t *testing.T) {
@@ -71,7 +71,7 @@ func allExamples() ([]string, error) {
 	return r, nil
 }
 
-func Test201VmssPackerJumpbox(t *testing.T) {
+func test201VmssPackerJumpbox(t *testing.T) {
 	examplePath := filepath.Join("..", "..", "quickstart", "201-vmss-packer-jumpbox")
 	examplePath = test_structure.CopyTerraformFolderToTemp(t, examplePath, "")
 	defer func() {
@@ -89,11 +89,13 @@ func Test201VmssPackerJumpbox(t *testing.T) {
 	packerVars := map[string]string{
 		"image_resource_group_name": imageResourceGroupName,
 	}
+	useMsi := false
 	if clientId := os.Getenv("ARM_CLIENT_ID"); clientId != "" {
 		packerVars["client_id"] = clientId
 	}
 	if identityId := os.Getenv("MSI_ID"); identityId != "" {
 		packerVars["client_id"] = identityId
+		useMsi = true
 	}
 	if clientSecret := os.Getenv("ARM_CLIENT_SECRET"); clientSecret != "" {
 		packerVars["client_secret"] = clientSecret
@@ -101,7 +103,7 @@ func Test201VmssPackerJumpbox(t *testing.T) {
 	if subscriptionId := os.Getenv("ARM_SUBSCRIPTION_ID"); subscriptionId != "" {
 		packerVars["subscription_id"] = subscriptionId
 	}
-	if tenantId := os.Getenv("ARM_TENANT_ID"); tenantId != "" {
+	if tenantId := os.Getenv("ARM_TENANT_ID"); !useMsi && tenantId != "" {
 		packerVars["tenant_id"] = tenantId
 	}
 	_, err := packer.BuildArtifactE(t, &packer.Options{
