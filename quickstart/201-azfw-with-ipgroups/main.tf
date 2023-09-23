@@ -1,4 +1,4 @@
-resource "random_pet" "rg-name" {
+resource "random_pet" "rg_name" {
   prefix = var.resource_group_name_prefix
 }
 
@@ -10,8 +10,17 @@ resource "random_string" "storage_account_name" {
   upper   = false
 }
 
+resource "random_password" "password" {
+  length      = 20
+  min_lower   = 1
+  min_upper   = 1
+  min_numeric = 1
+  min_special = 1
+  special     = true
+}
+
 resource "azurerm_resource_group" "rg" {
-  name     = random_pet.rg-name.id
+  name     = random_pet.rg_name.id
   location = var.resource_group_location
 }
 
@@ -267,11 +276,4 @@ resource "azurerm_subnet_route_table_association" "jump_subnet_rt_association" {
   route_table_id = azurerm_route_table.rt.id
 }
 
-resource "random_password" "password" {
-  length      = 20
-  min_lower   = 1
-  min_upper   = 1
-  min_numeric = 1
-  min_special = 1
-  special     = true
-}
+
