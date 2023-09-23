@@ -1,3 +1,99 @@
+## 20 Sep 23 10:55 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.5.6
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
+
+### Error
+
+
+
+---
+
+## 17 Sep 23 04:25 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.5.5
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
+
+### Error
+
+
+
+---
+
+## 10 Sep 23 04:59 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.5.4
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
+
+### Error
+
+
+
+---
+
+## 03 Sep 23 00:30 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.5.4
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
+
+### Error
+
+
+
+---
+
+## 27 Aug 23 05:16 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.5.4
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
+
+### Error
+
+
+
+---
+
+## 20 Aug 23 00:17 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.5.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
+
+### Error
+
+
+
+---
+
 ## 13 Aug 23 00:11 UTC
 
 Success: false
