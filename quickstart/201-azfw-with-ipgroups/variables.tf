@@ -29,9 +29,3 @@ variable "virtual_machine_size" {
 variable "admin_username" {
   default = "azureuser"
 }
-
-variable "storage_name" {
-  type        = string
-  description = "value of the storage account name"
-  default     = "azfwteststgacctipg"
-}

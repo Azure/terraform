@@ -49,42 +49,36 @@ resource "azurerm_firewall_policy" "azfw_policy" {
   threat_intelligence_mode = "Alert"
 }
 
-resource "azurerm_firewall_policy_rule_collection_group" "net_policy_rule_collection_group" {
-  name               = "DefaultNetworkRuleCollectionGroup"
-  firewall_policy_id = azurerm_firewall_policy.azfw_policy.id
-  priority           = 200
-  network_rule_collection {
-    name     = "DefaultNetworkRuleCollection"
-    action   = "Allow"
-    priority = 200
-    rule {
-      name                  = "networkRule"
-      protocols             = ["Any"]
-      destination_ip_groups = [azurerm_ip_group.ip_group_2.id]
-      destination_ports     = ["90"]
-      source_ip_groups      = [azurerm_ip_group.ip_group_1.id]
-    }
-  }
-}
-
-resource "azurerm_firewall_policy_rule_collection_group" "app_policy_rule_collection_group" {
-  name               = "DefaulApplicationtRuleCollectionGroup"
-  firewall_policy_id = azurerm_firewall_policy.azfw_policy.id
-  priority           = 300
-  application_rule_collection {
-    name     = "DefaultApplicationRuleCollection"
-    action   = "Allow"
-    priority = 500
-    rule {
-      name = "SomeAppRule"
-      protocols {
-        type = "Http"
-        port = 8080
+resource "azurerm_firewall_policy_rule_collection_group" "prcg" {
+    name = "prcg"
+    firewall_policy_id = azurerm_firewall_policy.azfw_policy.id
+    priority = 300
+    application_rule_collection {
+      name = "app-rule-collection-1"
+      priority = 101
+      action = "Allow"
+      rule {
+        name = "someAppRule"
+        protocols {
+          type = "Https"
+          port = 443
+        }
+        destination_fqdns = [ "*bing.com" ]
+        source_ip_groups = [ azurerm_ip_group.ip_group_1.id ]
       }
-      source_ip_groups  = [azurerm_ip_group.ip_group_1.id]
-      destination_fqdns = ["*bing.com"]
     }
-  }
+    network_rule_collection {
+      name = "net-rule-collection-1"
+      priority = 200
+      action = "Allow"
+      rule {
+        name = "someNetRule"
+        protocols = [ "TCP", "UDP", "ICMP" ]
+        source_ip_groups = [ azurerm_ip_group.ip_group_1.id ]
+        destination_ip_groups = [ azurerm_ip_group.ip_group_2.id ]
+        destination_ports = ["90"]
+      }
+    }
 }
 
 resource "azurerm_firewall" "fw" {
@@ -129,7 +123,7 @@ resource "azurerm_subnet" "azfw_subnet" {
 }
 
 resource "azurerm_subnet" "server_subnet" {
-  name                 = "subnet-workload"
+  name                 = "subnet-server"
   resource_group_name  = azurerm_resource_group.rg.name
   virtual_network_name = azurerm_virtual_network.azfw_vnet.name
   address_prefixes     = ["10.10.1.0/24"]
