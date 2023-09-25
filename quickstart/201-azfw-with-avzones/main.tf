@@ -30,6 +30,7 @@ resource "azurerm_public_ip" "pip_azfw" {
   resource_group_name = azurerm_resource_group.rg.name
   allocation_method   = "Static"
   sku                 = "Standard"
+  zones               = [ "1", "2", "3" ]  
 }
 
 resource "azurerm_storage_account" "sa" {
@@ -135,19 +136,19 @@ resource "azurerm_network_interface_security_group_association" "vm_jump_nsg_ass
   network_security_group_id = azurerm_network_security_group.vm_jump_nsg.id
 }
 
-resource "azurerm_linux_virtual_machine" "vm_server" {
-  name                            = "server-vm"
-  resource_group_name             = azurerm_resource_group.rg.name
-  location                        = azurerm_resource_group.rg.location
-  computer_name                   = "server"
-  size                            = var.virtual_machine_size
-  admin_username                  = var.admin_username
-  admin_password                  = random_password.password.result
-  network_interface_ids           = [azurerm_network_interface.vm_server_nic.id]
+resource "azurerm_windows_virtual_machine" "vm_server" {
+  name                  = "server-vm"
+  resource_group_name   = azurerm_resource_group.rg.name
+  location              = azurerm_resource_group.rg.location
+  computer_name         = "server"
+  size                  = var.virtual_machine_size
+  admin_username        = var.admin_username
+  admin_password        = random_password.password.result
+  network_interface_ids = [azurerm_network_interface.vm_server_nic.id]
   os_disk {
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
-    disk_size_gb = "128"
+    disk_size_gb         = "128"
   }
   source_image_reference {
     publisher = "MicrosoftWindowsServer"
@@ -160,19 +161,19 @@ resource "azurerm_linux_virtual_machine" "vm_server" {
   }
 }
 
-resource "azurerm_linux_virtual_machine" "vm_jump" {
-  name                            = "jump-vm"
-  resource_group_name             = azurerm_resource_group.rg.name
-  location                        = azurerm_resource_group.rg.location
-  computer_name                   = "jumpbox"
-  size                            = var.virtual_machine_size
-  admin_username                  = var.admin_username
-  admin_password                  = random_password.password.result
-  network_interface_ids           = [azurerm_network_interface.vm_jump_nic.id]
+resource "azurerm_windows_virtual_machine" "vm_jump" {
+  name                  = "jump-vm"
+  resource_group_name   = azurerm_resource_group.rg.name
+  location              = azurerm_resource_group.rg.location
+  computer_name         = "jumpbox"
+  size                  = var.virtual_machine_size
+  admin_username        = var.admin_username
+  admin_password        = random_password.password.result
+  network_interface_ids = [azurerm_network_interface.vm_jump_nic.id]
   os_disk {
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
-    disk_size_gb = "128"
+    disk_size_gb         = "128"
   }
   source_image_reference {
     publisher = "MicrosoftWindowsServer"
@@ -194,36 +195,37 @@ resource "azurerm_firewall_policy" "azfw_policy" {
 }
 
 resource "azurerm_firewall_policy_rule_collection_group" "prcg" {
-    name = "prcg"
-    firewall_policy_id = azurerm_firewall_policy.azfw_policy.id
-    priority = 300
+  name               = "prcg"
+  firewall_policy_id = azurerm_firewall_policy.azfw_policy.id
+  priority           = 300
   application_rule_collection {
-    name = "appRc1"
+    name     = "appRc1"
     priority = 101
-    action = "Allow"
+    action   = "Allow"
     rule {
-        name = "appRule1"
-        protocols {
-          type = "Http"
-          port = 80 
-        }
-        protocols {
-            type = "Https"
-            port = 443
-        }
-        destination_fqdns = [ "www.microsoft.com" ]
-        source_addresses = ["10.10.1.0/24"]
+      name = "appRule1"
+      protocols {
+        type = "Http"
+        port = 80
+      }
+      protocols {
+        type = "Https"
+        port = 443
+      }
+      destination_fqdns = ["www.microsoft.com"]
+      source_addresses  = ["10.10.1.0/24"]
     }
   }
   network_rule_collection {
-    name = "netRc1"
+    name     = "netRc1"
     priority = 200
-    action = "Allow"
+    action   = "Allow"
     rule {
-      name = "netRule1"
-      protocols = [ "TCP" ]
-      source_addresses = [ "10.10.1.0/24" ]
-      destination_ports = [ "8000", "8999" ]
+      name              = "netRule1"
+      protocols         = ["TCP"]
+      source_addresses  = ["10.10.1.0/24"]
+      destination_addresses = [ "*" ]
+      destination_ports = ["8000", "8999"]
     }
   }
 }
@@ -234,7 +236,7 @@ resource "azurerm_firewall" "fw" {
   resource_group_name = azurerm_resource_group.rg.name
   sku_name            = "AZFW_VNet"
   sku_tier            = var.firewall_sku_tier
-  zones              = ["1", "2", "3"]
+  zones               = ["1", "2", "3"]
   ip_configuration {
     name                 = "azfw-ipconfig"
     subnet_id            = azurerm_subnet.azfw_subnet.id
