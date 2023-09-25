@@ -3,6 +3,7 @@ resource "random_pet" "rg_name" {
 }
 
 resource "random_password" "password" {
+  count = 2
   length      = 20
   min_lower   = 1
   min_upper   = 1
@@ -15,9 +16,9 @@ resource "azurerm_resource_group" "rg" {
   name     = random_pet.rg_name.id
   location = var.resource_group_location
 }
+
 resource "azurerm_public_ip_prefix" "pip_prefix" {
-  count = 2
-  name                = "pip-prefix-${count.index + 1}"
+  name                = "pip-prefix"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   sku                 = "Standard"
@@ -25,13 +26,12 @@ resource "azurerm_public_ip_prefix" "pip_prefix" {
 }
 
 resource "azurerm_public_ip" "pip_azfw" {
-  count               = 2
-  name                = "pip-azfw-${count.index + 1}"
+  name                = "pip-azfw"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   sku                 = "Standard"
   allocation_method   = "Static"
-  public_ip_prefix_id = azurerm_public_ip_prefix.pip_prefix[count.index].id
+  public_ip_prefix_id = azurerm_public_ip_prefix.pip_prefix.id
 }
 
 resource "azurerm_virtual_network" "azfw_vnet" {
@@ -56,7 +56,7 @@ resource "azurerm_subnet" "backend_subnet" {
 }
 
 resource "azurerm_network_interface" "backend_nic" {
- count               = 2
+  count               = 2
   name                = "nic-backend-${count.index + 1}"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
@@ -86,7 +86,7 @@ resource "azurerm_network_security_group" "backend_nsg" {
 }
 
 resource "azurerm_network_interface_security_group_association" "vm_backend_nsg_association" {
-    count                     = 2
+  count                     = 2
   network_interface_id      = azurerm_network_interface.backend_nic[count.index].id
   network_security_group_id = azurerm_network_security_group.backend_nsg.id
 }
@@ -98,7 +98,7 @@ resource "azurerm_windows_virtual_machine" "vm_backend" {
   location              = azurerm_resource_group.rg.location
   size                  = var.virtual_machine_size
   admin_username        = var.admin_username
-  admin_password        = random_password.password.result
+  admin_password        = random_password.password[count.index].result
   network_interface_ids = [azurerm_network_interface.backend_nic[count.index].id]
   os_disk {
     caching              = "ReadWrite"
@@ -178,7 +178,7 @@ resource "azurerm_firewall_policy_rule_collection_group" "policy_rule_collection
       translated_address  = "10.10.1.4"
       translated_port     = "3389"
       source_addresses    = ["*"]
-      destination_address = azurerm_public_ip.pip_azfw[count.index].ip_address
+      destination_address = azurerm_public_ip.pip_azfw.ip_address
       destination_ports   = ["3389"]
     }
     rule {
@@ -187,7 +187,7 @@ resource "azurerm_firewall_policy_rule_collection_group" "policy_rule_collection
       translated_address  = "10.10.1.5"
       translated_port     = "3389"
       source_addresses    = ["*"]
-      destination_address = azurerm_public_ip.pip_azfw[count.index].ip_address
+      destination_address = azurerm_public_ip.pip_azfw.ip_address
       destination_ports   = ["3389"]
     }
   }
@@ -200,10 +200,9 @@ resource "azurerm_firewall" "fw" {
   sku_name            = "AZFW_VNet"
   sku_tier            = var.firewall_sku_tier
   ip_configuration {
-    count                = 2
-    name                 = "azfw-ipconfig-${count.index + 1}"
+    name                 = "azfw-ipconfig"
     subnet_id            = azurerm_subnet.azfw_subnet.id
-    public_ip_address_id = azurerm_public_ip.pip_azfw[count.index].id
+    public_ip_address_id = azurerm_public_ip.pip_azfw.id
   }
   firewall_policy_id = azurerm_firewall_policy.azfw_policy.id
 }
