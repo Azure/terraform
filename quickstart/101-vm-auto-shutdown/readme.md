@@ -37,6 +37,6 @@ This repository contains Terraform code to create resources in Azure, including 
 | `storage_account_replication_type` | Replication type for the storage account. | LRS |
 | `automation_account_sku_name` | SKU name for the Azure Automation Account. | Basic |
 | `runbook_type` | Type of the runbook. | PowerShell |
-| `runbook_uri` | URI for the runbook content. | "https://example.com/script.ps1" |
+| `runbook_uri` | URI for the runbook content. | https://raw.githubusercontent.com/azureautomation/runbooks/master/Utility/ASM/Set-AzureScheduleWithRunbook.ps1 |
 | `one_time_schedule_start_time` | Start time for the one-time runbook schedule. | "2023-09-23T00:00:00Z" |
 | `hourly_schedule_start_time` | Start time for the hourly runbook schedule. | "2023-09-23T01:00:00Z" |
