@@ -1,6 +1,6 @@
 # Deploying Azure Firewall with IP Groups
 
-This template deploys an [Azure Firewall](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/firewall) with [IP Groups](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/ip_group)
+This template deploys an [Azure Firewall](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/firewall) with [IP Groups](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/ip_group) used in a network rule and application rule. An IP Group is a top-level resource that allows you to define and group IP addresses, ranges, and subnets into a single object. IP Group is useful for managing IP addresses in Azure Firewall rules.
 
 ## Terraform resource types
 
