@@ -21,16 +21,16 @@ This template deploys an [Azure Firewall](https://registry.terraform.io/provider
 - [azurerm_storage_account](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account)
 - [random_password](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/password)
 - [random_pet](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/pet)
-- [random_string](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string)}
+- [random_string](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string)
 
 ## Variables
 
 | Name | Description | Default value |
 |-|-|-|
-| `resource_group_location`    | location for your resources                       | eastus  |
-| `firewall_sku_tier`          | Sku size for your Firewall and Firewall Policy    | Premium |
-| `resource_group_name_prefix` | Prefix for your resource group                    | rg      |
-| `virtual_machine_size`       | Sku size for your jump and workload vms           | Standard_D2_v3 |
-| `admin_username`             | admin username for the jump and workload vms      | azureuser      |
+| `resource_group_location`    | The location of the resource group.                 | eastus  |
+| `firewall_sku_tier`          | the sku size for your Firewall and Firewall Policy.    | Possible values: Standard, Premium |
+| `resource_group_name_prefix` | The prefix of the resource group name that's combined with a random ID so that name is unique in your Azure subscription.                  | rg      |
+| `virtual_machine_size`       | The sku size for your jump and workload VMs.           | Standard_D2_v3 |
+| `admin_username`             | The admin username for the jump and workload VMs.     | azureuser      |
 
 ## Example

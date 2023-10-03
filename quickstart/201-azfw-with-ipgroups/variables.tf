@@ -27,5 +27,7 @@ variable "virtual_machine_size" {
 }
 
 variable "admin_username" {
+  type = string
+  description = "value of the admin username."
   default = "azureuser"
 }
