@@ -30,7 +30,7 @@ resource "azurerm_public_ip" "pip_azfw" {
   resource_group_name = azurerm_resource_group.rg.name
   allocation_method   = "Static"
   sku                 = "Standard"
-  zones               = [ "1", "2", "3" ]  
+  zones               = ["1", "2", "3"]
 }
 
 resource "azurerm_storage_account" "sa" {
@@ -221,11 +221,11 @@ resource "azurerm_firewall_policy_rule_collection_group" "prcg" {
     priority = 200
     action   = "Allow"
     rule {
-      name              = "netRule1"
-      protocols         = ["TCP"]
-      source_addresses  = ["10.10.1.0/24"]
-      destination_addresses = [ "*" ]
-      destination_ports = ["8000", "8999"]
+      name                  = "netRule1"
+      protocols             = ["TCP"]
+      source_addresses      = ["10.10.1.0/24"]
+      destination_addresses = ["*"]
+      destination_ports     = ["8000", "8999"]
     }
   }
 }
@@ -254,7 +254,7 @@ resource "azurerm_route_table" "rt" {
     name                   = "azfwDefaultRoute"
     address_prefix         = "0.0.0.0/0"
     next_hop_type          = "VirtualAppliance"
-    next_hop_in_ip_address = "10.10.0.4"
+    next_hop_in_ip_address = azurerm_firewall.fw.ip_configuration[0].private_ip_address
   }
 }
 
