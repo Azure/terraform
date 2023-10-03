@@ -3,7 +3,7 @@ resource "random_pet" "rg_name" {
 }
 
 resource "random_password" "password" {
-  count = 2
+  count       = 2
   length      = 20
   min_lower   = 1
   min_upper   = 1
@@ -27,6 +27,15 @@ resource "azurerm_public_ip_prefix" "pip_prefix" {
 
 resource "azurerm_public_ip" "pip_azfw" {
   name                = "pip-azfw"
+  location            = azurerm_resource_group.rg.location
+  resource_group_name = azurerm_resource_group.rg.name
+  sku                 = "Standard"
+  allocation_method   = "Static"
+  public_ip_prefix_id = azurerm_public_ip_prefix.pip_prefix.id
+}
+
+resource "azurerm_public_ip" "pip_azfw_2" {
+  name                = "pip-azfw-1"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   sku                 = "Standard"
@@ -203,6 +212,10 @@ resource "azurerm_firewall" "fw" {
     name                 = "azfw-ipconfig"
     subnet_id            = azurerm_subnet.azfw_subnet.id
     public_ip_address_id = azurerm_public_ip.pip_azfw.id
+  }
+  ip_configuration {
+    name                 = "azfw-ipconfig-2"
+    public_ip_address_id = azurerm_public_ip.pip_azfw_2.id
   }
   firewall_policy_id = azurerm_firewall_policy.azfw_policy.id
 }
