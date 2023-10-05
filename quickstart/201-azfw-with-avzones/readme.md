@@ -34,7 +34,7 @@ A user-defined route points network traffic from the server-subnet through the f
 |-|-|-|
 | `resource_group_location`    | Location of the resource group                                                                                                          | eastus         |
 | `firewall_sku_tier`          | SKU size for your Firewall and Firewall Policy. Possible values: Standard, Premium                                                      | Premium        |
-| `resource_group_name_prefix` |  Prefix of the resource group name that's combined with a random ID so that name is unique in your Azure subscription.                  | rg             |
+| `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random ID so that name is unique in your Azure subscription.                  | rg             |
 | `virtual_machine_size`       | SKU size for your jump and workload VMs                                                                                                 | Standard_D2_v3 |
 | `admin_username`             | The admin username for the jump and workload VMs                                                                                        | azureuser      |
 
