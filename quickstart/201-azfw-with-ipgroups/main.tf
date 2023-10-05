@@ -203,16 +203,16 @@ resource "azurerm_network_interface_security_group_association" "vm_jump_nsg_ass
 }
 
 resource "azurerm_linux_virtual_machine" "vm_server" {
-  name                            = "server-vm"
-  resource_group_name             = azurerm_resource_group.rg.name
-  location                        = azurerm_resource_group.rg.location
-  size                            = var.virtual_machine_size
-  admin_username                  = var.admin_username
+  name                = "server-vm"
+  resource_group_name = azurerm_resource_group.rg.name
+  location            = azurerm_resource_group.rg.location
+  size                = var.virtual_machine_size
+  admin_username      = var.admin_username
   admin_ssh_key {
     username   = var.admin_username
     public_key = jsondecode(azapi_resource_action.ssh_public_key_gen.output).publicKey
   }
-  network_interface_ids           = [azurerm_network_interface.vm_server_nic.id]
+  network_interface_ids = [azurerm_network_interface.vm_server_nic.id]
   os_disk {
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
