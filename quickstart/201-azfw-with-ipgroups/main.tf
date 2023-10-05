@@ -50,35 +50,35 @@ resource "azurerm_firewall_policy" "azfw_policy" {
 }
 
 resource "azurerm_firewall_policy_rule_collection_group" "prcg" {
-    name = "prcg"
-    firewall_policy_id = azurerm_firewall_policy.azfw_policy.id
-    priority = 300
-    application_rule_collection {
-      name = "app-rule-collection-1"
-      priority = 101
-      action = "Allow"
-      rule {
-        name = "someAppRule"
-        protocols {
-          type = "Https"
-          port = 443
-        }
-        destination_fqdns = [ "*bing.com" ]
-        source_ip_groups = [ azurerm_ip_group.ip_group_1.id ]
+  name               = "prcg"
+  firewall_policy_id = azurerm_firewall_policy.azfw_policy.id
+  priority           = 300
+  application_rule_collection {
+    name     = "app-rule-collection-1"
+    priority = 101
+    action   = "Allow"
+    rule {
+      name = "someAppRule"
+      protocols {
+        type = "Https"
+        port = 443
       }
+      destination_fqdns = ["*bing.com"]
+      source_ip_groups  = [azurerm_ip_group.ip_group_1.id]
     }
-    network_rule_collection {
-      name = "net-rule-collection-1"
-      priority = 200
-      action = "Allow"
-      rule {
-        name = "someNetRule"
-        protocols = [ "TCP", "UDP", "ICMP" ]
-        source_ip_groups = [ azurerm_ip_group.ip_group_1.id ]
-        destination_ip_groups = [ azurerm_ip_group.ip_group_2.id ]
-        destination_ports = ["90"]
-      }
+  }
+  network_rule_collection {
+    name     = "net-rule-collection-1"
+    priority = 200
+    action   = "Allow"
+    rule {
+      name                  = "someNetRule"
+      protocols             = ["TCP", "UDP", "ICMP"]
+      source_ip_groups      = [azurerm_ip_group.ip_group_1.id]
+      destination_ip_groups = [azurerm_ip_group.ip_group_2.id]
+      destination_ports     = ["90"]
     }
+  }
 }
 
 resource "azurerm_firewall" "fw" {
@@ -184,7 +184,7 @@ resource "azurerm_network_security_group" "vm_jump_nsg" {
     priority                   = 1000
     direction                  = "Inbound"
     access                     = "Allow"
-    protocol                   = "Tcp"
+    protocol                   = "SSH"
     source_port_range          = "*"
     destination_port_range     = "22"
     source_address_prefix      = "*"
@@ -208,8 +208,10 @@ resource "azurerm_linux_virtual_machine" "vm_server" {
   location                        = azurerm_resource_group.rg.location
   size                            = var.virtual_machine_size
   admin_username                  = var.admin_username
-  admin_password                  = random_password.password.result
-  disable_password_authentication = false
+  admin_ssh_key {
+    username   = var.admin_username
+    public_key = jsondecode(azapi_resource_action.ssh_public_key_gen.output).publicKey
+  }
   network_interface_ids           = [azurerm_network_interface.vm_server_nic.id]
   os_disk {
     caching              = "ReadWrite"
@@ -227,17 +229,19 @@ resource "azurerm_linux_virtual_machine" "vm_server" {
 }
 
 resource "azurerm_linux_virtual_machine" "vm_jump" {
-  name                            = "jump-vm"
-  resource_group_name             = azurerm_resource_group.rg.name
-  location                        = azurerm_resource_group.rg.location
-  size                            = var.virtual_machine_size
-  admin_username                  = var.admin_username
-  admin_password                  = random_password.password.result
-  disable_password_authentication = false
-  network_interface_ids           = [azurerm_network_interface.vm_jump_nic.id]
+  name                  = "jump-vm"
+  resource_group_name   = azurerm_resource_group.rg.name
+  location              = azurerm_resource_group.rg.location
+  size                  = var.virtual_machine_size
+  network_interface_ids = [azurerm_network_interface.vm_jump_nic.id]
+  admin_username        = var.admin_username
   os_disk {
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
+  }
+  admin_ssh_key {
+    username   = var.admin_username
+    public_key = jsondecode(azapi_resource_action.ssh_public_key_gen.output).publicKey
   }
   source_image_reference {
     publisher = "Canonical"
