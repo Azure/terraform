@@ -1,10 +1,10 @@
 # Deploying Azure Firewall in Availability Zones
 
-This template deploys a test network environment with [Azure Firewall](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/firewall) in Availability Zones. The network has one virtual network (VNet) with three subnets: AzureFirewallSubnet, ServersSubnet, and JumpboxSubnet. The ServersSubnet and JumpboxSubnet subnet each have a single, two-core Windows Server virtual machine.
+This template deploys a test network environment with [Azure Firewall](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/firewall) in Availability Zones. The network has one virtual network (VNet) with three subnets: AzureFirewallSubnet, server_subnet, and jump_subnet. The server-subnet and jump_subnet subnet each have a single, two-core Windows Server virtual machine.
 
 The firewall is in the AzureFirewallSubnet subnet, and has an application rule collection with a single rule that allows access to www.microsoft.com.
 
-A user-defined route points network traffic from the ServersSubnet subnet through the firewall, where the firewall rules are applied.
+A user-defined route points network traffic from the server-subnet through the firewall, where the firewall rules are applied.
 
 
 
@@ -36,6 +36,6 @@ A user-defined route points network traffic from the ServersSubnet subnet throug
 | `firewall_sku_tier`          | SKU size for your Firewall and Firewall Policy. Possible values: Standard, Premium                                                      | Premium        |
 | `resource_group_name_prefix` |  Prefix of the resource group name that's combined with a random ID so that name is unique in your Azure subscription.                  | rg             |
 | `virtual_machine_size`       | SKU size for your jump and workload VMs                                                                                                 | Standard_D2_v3 |
-| `admin_username`             | THe admin username for the jump and workload VMs                                                                                        | azureuser      |
+| `admin_username`             | The admin username for the jump and workload VMs                                                                                        | azureuser      |
 
 ## Example
