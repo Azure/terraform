@@ -16,7 +16,7 @@ variable "firewall_sku_tier" {
   default     = "Premium" # Valid values are Standard and Premium
   validation {
     condition     = contains(["Standard", "Premium"], var.firewall_sku_tier)
-    error_message = "The sku must be one of the following: Standard, Premium"
+    error_message = "The SKU must be one of the following: Standard, Premium"
   }
 }
 
@@ -28,6 +28,6 @@ variable "virtual_machine_size" {
 
 variable "admin_username" {
   type        = string
-  description = "value of the admin username."
+  description = "Value of the admin username."
   default     = "azureuser"
 }

@@ -1,6 +1,6 @@
 # Deploy Azure Firewall with multiple public IP addresses
 
-This template deploys an [Azure Firewall](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/firewall) with multiple [Public IP Address](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/public_ip) from a public IP address prefix. The deployed firewall has NAT rule collection rules that allow RDP connections to two Windows Server 2019 virtual machines.\
+This template deploys an [Azure Firewall](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/firewall) with multiple [Public IP Address](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/public_ip) from a public IP address prefix. The deployed firewall has NAT rule collection rules that allow RDP connections to two Windows Server 2019 virtual machines.
 
 ## Terraform resource types
 
@@ -27,6 +27,6 @@ This template deploys an [Azure Firewall](https://registry.terraform.io/provider
 |-|-|-|
 | `resource_group_location`    | Location of the resource group                                                                                                          | eastus         |
 | `firewall_sku_tier`          | SKU size for your Firewall and Firewall Policy. Possible values: Standard, Premium                                                      | Premium        |
-| `resource_group_name_prefix` |  Prefix of the resource group name that's combined with a random ID so that name is unique in your Azure subscription.                  | rg             |
+| `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random ID so that name is unique in your Azure subscription.                   | rg             |
 | `virtual_machine_size`       | SKU size for your jump and workload VMs                                                                                                 | Standard_D2_v3 |
 | `admin_username`             | THe admin username for the jump and workload VMs                                                                                        | azureuser      |
