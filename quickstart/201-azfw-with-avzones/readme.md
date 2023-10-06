@@ -1,6 +1,6 @@
 # Deploying Azure Firewall in Availability Zones
 
-This template deploys a test network environment with [Azure Firewall](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/firewall) in Availability Zones. The network has one virtual network (VNet) with three subnets: AzureFirewallSubnet, server_subnet, and jump_subnet. The server-subnet and jump_subnet subnet each have a single, two-core Windows Server virtual machine.
+This template deploys a test network environment with [Azure Firewall](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/firewall) in Availability Zones. The network has one virtual network (VNet) with three subnets: AzureFirewallSubnet, server_subnet, and jump_subnet. The server-subnet and jump-subnet subnet each have a single, two-core Windows Server virtual machine.
 
 The firewall is in the AzureFirewallSubnet subnet, and has an application rule collection with a single rule that allows access to www.microsoft.com.
 
