@@ -21,6 +21,7 @@ resource "azurerm_subnet" "my_terraform_subnet" {
   resource_group_name  = azurerm_resource_group.rg.name
   virtual_network_name = azurerm_virtual_network.my_terraform_network.name
   address_prefixes     = ["10.0.1.0/24"]
+  network_security_group_id = azurerm_network_security_group.my_terraform_nsg.id
 }
 
 # Create public IPs
@@ -89,7 +90,16 @@ resource "azurerm_storage_account" "my_storage_account" {
   account_replication_type      = "ZRS"
   min_tls_version               = "TLS1_2"
   public_network_access_enabled = false
-  allow_nested_items_to_be_public = false  
+  allow_nested_items_to_be_public = false 
+
+  enable_blob_soft_delete = true
+  enable_file_soft_delete = true
+
+  network_rules {
+	default_action          = "Deny"
+	bypass			= ["AzureServices"]
+	virtual_network_subnet_ids = [azurerm_subnet.my_subnet.id]
+  } 
 
   queue_properties {
   	logging {
