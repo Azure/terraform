@@ -10,9 +10,9 @@ on:
 jobs:
   scan:
     permissions:
-      contents: read 
+      contents: read-all 
       security-events: write 
-      actions: read 
+      actions: read-all 
       
     runs-on: ubuntu-latest
 
