@@ -1,6 +1,11 @@
 name: checkov
 
-on: pull_request
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
 
 jobs:
   scan:
@@ -13,6 +18,7 @@ jobs:
 
     steps:
       - name: Check out repository
+        uses: actions/checkout@v2
         with:
           repository: QTN21/terraform-labocloud
           path: 'quickstart/101-vm-with-infrastructure'
@@ -28,3 +34,4 @@ jobs:
         if: success() || failure()
         with:
           sarif_file: results.sarif
+
