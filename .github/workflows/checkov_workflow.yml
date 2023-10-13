@@ -19,13 +19,11 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
-        with:
-          repository: QTN21/terraform-labocloud
-          path: 'quickstart/101-vm-with-infrastructure'
 
       - name: Checkov GitHub Action
         uses: bridgecrewio/checkov-action@v12
         with:
+          directory: 'quickstart/101-vm-with-infrastructure/'
           output_format: cli,sarif
           output_file_path: console,results.sarif
         
