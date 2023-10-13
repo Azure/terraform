@@ -44,9 +44,9 @@ resource "azurerm_network_security_group" "my_terraform_nsg" {
     access                     = "Allow"
     protocol                   = "Tcp"
     source_port_range          = "*"
-    destination_port_range     = "22"
-    source_address_prefix      = "*"
-    destination_address_prefix = "*"
+    destination_port_range     = "1034"
+    source_address_prefix      = ""
+    destination_address_prefix = ""
   }
 }
 
@@ -60,7 +60,7 @@ resource "azurerm_network_interface" "my_terraform_nic" {
     name                          = "my_nic_configuration"
     subnet_id                     = azurerm_subnet.my_terraform_subnet.id
     private_ip_address_allocation = "Dynamic"
-    public_ip_address_id          = azurerm_public_ip.my_terraform_public_ip.id
+    # public_ip_address_id          = azurerm_public_ip.my_terraform_public_ip.id
   }
 }
 
@@ -82,20 +82,32 @@ resource "random_id" "random_id" {
 
 # Create storage account for boot diagnostics
 resource "azurerm_storage_account" "my_storage_account" {
-  name                     = "diag${random_id.random_id.hex}"
-  location                 = azurerm_resource_group.rg.location
-  resource_group_name      = azurerm_resource_group.rg.name
-  account_tier             = "Standard"
-  account_replication_type = "LRS"
+  name                          = "diag${random_id.random_id.hex}"
+  location                      = azurerm_resource_group.rg.location
+  resource_group_name           = azurerm_resource_group.rg.name
+  account_tier                  = "Standard"
+  account_replication_type      = "LRS"
+  min_tls_version               = "TLS1_2"
+  public_network_access_enabled = false
+  queue_properties {
+  	logging {
+		delete                  = true
+        	read                    = true
+        	write                   = true
+        	version                 = "1.0"
+        	retention_policy_days   = 10
+  	}
+  }
 }
 
 # Create virtual machine
 resource "azurerm_linux_virtual_machine" "my_terraform_vm" {
-  name                  = "myVM"
+  name                  = "VM_LAB"
   location              = azurerm_resource_group.rg.location
   resource_group_name   = azurerm_resource_group.rg.name
   network_interface_ids = [azurerm_network_interface.my_terraform_nic.id]
   size                  = "Standard_DS1_v2"
+  allow_extension_operations = false
 
   os_disk {
     name                 = "myOsDisk"
