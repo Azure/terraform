@@ -1,0 +1,25 @@
+name: Checkov Security Scan
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  security_scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install Checkov
+        run: |
+          curl -L https://github.com/bridgecrewio/checkov/releases/latest/download/checkov_linux_amd64 -o checkov
+          chmod +x checkov
+          sudo mv checkov /usr/local/bin/
+
+      - name: Run Checkov
+        run: checkov -d .
