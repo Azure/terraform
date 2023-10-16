@@ -2,24 +2,29 @@ name: Static Security Analysis
 
 on:
   push:
-    branches:
-      - master
+    branches : ["master", "main"]
   pull_request:
-    branches:
-      - master
+    branches : ["master", "main"]
 
 jobs:
-  security_analysis:
+  scan:
+    permissions:
+      contents: read # for actions/checkout to fetch code
+      security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
+      actions: read
     runs-on: ubuntu-latest
+    
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v2
-
-    - name: Run Checkov Security Analysis
-      run: /home/kali/.local/pipx/venvs/checkov/bin/checkov -d  --skip-check CKV_AWS_20,CKV_AWS_21
-
-    - name: Upload Checkov Results
-      uses: actions/upload-artifact@v2
+      uses: bridgecrewio/checkov-action@v12
       with:
-        name: checkov-results
-        path: checkov_report.html
+          directory: 'quickstart/101-vm-with-infrastructure/'
+          output_format: cli,sarif
+          output_file_path: console,results.sarif
+
+    - name: Upload SARIF file
+      uses: github/codeql-action/upload-sarif@v2 
+    
+      if: success() || failure()
+      with:
+        sarif_file: results.sarif
