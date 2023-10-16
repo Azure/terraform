@@ -16,7 +16,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Run Checkov Security Analysis
-      run: /home/kali/.local/pipx/venvs/checkov/bin/checkov -d . --skip-check CKV_AWS_20,CKV_AWS_21
+      run: /home/kali/.local/pipx/venvs/checkov/bin/checkov -d  --skip-check CKV_AWS_20,CKV_AWS_21
 
     - name: Upload Checkov Results
       uses: actions/upload-artifact@v2
