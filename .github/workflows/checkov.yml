@@ -15,12 +15,6 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
-    - name: Install Checkov
-      run: |
-        wget https://github.com/bridgecrewio/checkov/releases/latest/download/checkov-linux-amd64
-        chmod +x checkov-linux-amd64
-        sudo mv checkov-linux-amd64 /usr/local/bin/checkov
-
     - name: Run Checkov Security Analysis
       run: checkov -d . --skip-check CKV_AWS_20,CKV_AWS_21
 
