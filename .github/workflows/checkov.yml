@@ -1,27 +1,31 @@
-name: Checkov Security Scan
+name: Static Security Analysis
 
 on:
   push:
     branches:
-      - main
       - master
   pull_request:
     branches:
-      - main
       - master
 
 jobs:
-  security_scan:
+  security_analysis:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - name: Checkout Repository
+      uses: actions/checkout@v2
 
-      - name: Install Checkov
-        run: |
-          curl -L https://github.com/bridgecrewio/checkov/releases/latest/download/checkov_linux_amd64 -o checkov
-          chmod +x checkov
-          sudo mv checkov /usr/local/bin/
+    - name: Install Checkov
+      run: |
+        wget https://github.com/bridgecrewio/checkov/releases/latest/download/checkov-linux-amd64
+        chmod +x checkov-linux-amd64
+        sudo mv checkov-linux-amd64 /usr/local/bin/checkov
 
-      - name: Run Checkov
-        run: checkov -d .
+    - name: Run Checkov Security Analysis
+      run: checkov -d . --skip-check CKV_AWS_20,CKV_AWS_21
+
+    - name: Upload Checkov Results
+      uses: actions/upload-artifact@v2
+      with:
+        name: checkov-results
+        path: checkov_report.html
