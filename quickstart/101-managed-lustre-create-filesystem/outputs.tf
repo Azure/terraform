@@ -10,7 +10,7 @@ output "subnet_name" {
   value = azurerm_subnet.example.name
 }
 
-output "azurerm_managed_lustre_file_system" {
+output "managed_lustre_file_system_name" {
   value = azurerm_managed_lustre_file_system.example.name
 }
 
