@@ -1,0 +1,139 @@
+{
+  "properties": {
+    "displayName": "Configure Azure PaaS services to use private DNS zones",
+    "description": "Configure Azure PaaS services to use private DNS zones",
+    "policyType": "Custom",
+    "mode": "Indexed",
+    "metadata": {
+      "category": "Network",
+      "version": "1.0.0"
+    },
+    "parameters": {
+      "privateDnsZoneIds": {
+        "type": "array",
+        "metadata": {
+          "displayName": "Array of Private Dns Zone Id",
+          "description": "The list of private DNS zone to deploy in a new private DNS zone group and link to the private endpoint"
+        }
+      },
+      "privateEndpointPrivateLinkServiceId": {
+        "type": "string",
+        "metadata": {
+          "displayName": "Private Endpoint Link Service Id",
+          "description": "A group Id for the private endpoint"
+        }
+      },
+      "privateEndpointGroupId": {
+        "type": "string",
+        "metadata": {
+          "displayName": "Private Endpoint Group Id",
+          "description": "A group Id for the private endpoint"
+        }
+      },
+      "effect": {
+        "type": "string",
+        "metadata": {
+          "displayName": "Effect",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "allowedValues": [
+          "DeployIfNotExists",
+          "Disabled"
+        ],
+        "defaultValue": "DeployIfNotExists"
+      }
+    },
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.Network/privateEndpoints"
+          },
+          {
+            "count": {
+              "field": "Microsoft.Network/privateEndpoints/privateLinkServiceConnections[*]",
+              "where": {
+                "allOf": [
+                  {
+                    "field": "Microsoft.Network/privateEndpoints/privateLinkServiceConnections[*].privateLinkServiceId",
+                    "contains": "[parameters('privateEndpointPrivateLinkServiceId')]"
+                  },
+                  {
+                    "field": "Microsoft.Network/privateEndpoints/privateLinkServiceConnections[*].groupIds[*]",
+                    "equals": "[parameters('privateEndpointGroupId')]"
+                  }
+                ]
+              }
+            },
+            "greaterOrEquals": 1
+          }
+        ]
+      },
+      "then": {
+        "effect": "[parameters('effect')]",
+        "details": {
+          "type": "Microsoft.Network/privateEndpoints/privateDnsZoneGroups",
+          "evaluationDelay": "AfterProvisioningSuccess",
+          "roleDefinitionIds": [
+            "/providers/Microsoft.Authorization/roleDefinitions/4d97b98b-1d4f-4787-a291-c67834d212e7"
+          ],
+          "deployment": {
+            "properties": {
+              "mode": "incremental",
+              "name": "parameters('privateEndpointPrivateLinkServiceId')",
+              "template": {
+                "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+                "contentVersion": "1.0.0.0",
+                "parameters": {
+                  "privateDnsZoneIds": {
+                    "type": "array"
+                  },
+                  "privateEndpointName": {
+                    "type": "string"
+                  },
+                  "location": {
+                    "type": "string"
+                  }
+                },
+                "resources": [
+                  {
+                      "type": "Microsoft.Network/privateEndpoints/privateDnsZoneGroups",
+                      "apiVersion": "2020-03-01",
+                      "name": "[concat(parameters('privateEndpointName'), '/deployedByPolicy')]",
+                      "location": "[parameters('location')]",
+                      "properties": {
+                          "copy": [
+                              {
+                                  "name": "privateDnsZoneConfigs",
+                                  "count": "[length(parameters('privateDnsZoneIds'))]",
+                                  "input": {
+                                      "name": "[concat(last(split(parameters('privateDnsZoneIds')[copyIndex('privateDnsZoneConfigs')], '/')), '-', parameters('privateEndpointName'))]",
+                                      "properties": {
+                                          "privateDnsZoneId": "[parameters('privateDnsZoneIds')[copyIndex('privateDnsZoneConfigs')]]"
+                                      }
+                                  }
+                              }
+                          ]
+                      }
+                  }
+                ]
+              },
+              "parameters": {
+                "privateDnsZoneIds": {
+                  "value": "[parameters('privateDnsZoneIds')]"
+                },
+                "privateEndpointName": {
+                  "value": "[field('name')]"
+                },
+                "location": {
+                  "value": "[field('location')]"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

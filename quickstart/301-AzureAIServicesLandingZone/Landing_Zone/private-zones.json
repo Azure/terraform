@@ -1,0 +1,10 @@
+{
+    "private-zones-mapping": [
+        {
+            "resource": "Cognitive Services",
+            "privateLinkResourceType": "Microsoft.CognitiveServices/accounts",
+            "subresource": "account",
+            "privateDnsZoneName": ["privatelink.cognitiveservices.azure.com", "privatelink.openai.azure.com"]
+        }
+    ]
+}
