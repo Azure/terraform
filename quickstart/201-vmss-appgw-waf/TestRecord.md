@@ -1,3 +1,18 @@
+## 05 Nov 23 00:31 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
+
+### Error
+
+
+
+---
+
 ## 29 Oct 23 00:36 UTC
 
 Success: false
