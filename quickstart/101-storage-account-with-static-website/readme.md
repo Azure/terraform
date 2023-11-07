@@ -5,6 +5,9 @@ This template deploys an [Azure Storage Account](https://www.terraform.io/docs/p
 
 - [random_pet](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/pet)
 - [azurerm_resource_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group)
+- [random_string](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string)
+- [azurerm_storage_account](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account)
+- [azurerm_storage_blob](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_blob)
 
 ## Variables
 
@@ -15,4 +18,4 @@ This template deploys an [Azure Storage Account](https://www.terraform.io/docs/p
 
 ## Example
 
-To see how to run this example, see [Create an Azure resource group using Terraform](https://docs.microsoft.com/azure/developer/terraform/create-resource-group).
+To see how to run this example, see [Quickstart: Deploy a static website on Azure Storage using Terraform](https://docs.microsoft.com/azure/storage/quickstart-storage-blob-static-website).
