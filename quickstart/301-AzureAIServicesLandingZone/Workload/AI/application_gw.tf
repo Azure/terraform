@@ -1,14 +1,14 @@
-resource "azurerm_public_ip" "example" {
-  name                = "example-pip"
-  resource_group_name =  azurerm_resource_group.network.name
+resource "azurerm_public_ip" "this" {
+  name                = "local.appgw_pip"
+  resource_group_name = azurerm_resource_group.this.name
   location            = local.location
   allocation_method   = "Static"
-  sku                 = "Standard"
+  sku                 = var.pip_sku
 }
 
 resource "azurerm_application_gateway" "appgateway" {
-  name                = "apgw-ai-services"
-  resource_group_name =  azurerm_resource_group.network.name
+  name                = local.appgw_name
+  resource_group_name =  azurerm_resource_group.this.name
   location            = local.location
   sku {
     name     = "WAF_v2"
@@ -16,23 +16,23 @@ resource "azurerm_application_gateway" "appgateway" {
     capacity = 1
   }
   gateway_ip_configuration {
-    name      = "my-gateway-ip-config"
+    name      = "app-gw-ip-config"
     subnet_id = lookup(module.vnet_ai.vnet_subnets_name_id, "snet_ag")
   }
   frontend_port {
-    name = "my-frontend-port"
+    name = "fe-port"
     port = 80
   }
   frontend_ip_configuration {
-    name                 = "my-frontend-ip-config"
-    public_ip_address_id = azurerm_public_ip.example.id
+    name                 = "fe-ip-config"
+    public_ip_address_id = azurerm_public_ip.this.id
   }
   backend_address_pool {
-    name  = "my-backend-pool"
+    name  = "be-pool"
     fqdns = [trimsuffix(module.linux_web_app.app_service_default_site_hostname, ".")] 
   }
   backend_http_settings {
-    name                  = "my-backend-http-settings"
+    name                  = "be-http-settings"
     cookie_based_affinity = "Disabled"
     path                  = "/"
     port                  = 443
@@ -43,9 +43,9 @@ resource "azurerm_application_gateway" "appgateway" {
   }
 
   http_listener {
-    name                           = "my-http-listener"
-    frontend_ip_configuration_name = "my-frontend-ip-config"
-    frontend_port_name             = "my-frontend-port"
+    name                           = "http-listener"
+    frontend_ip_configuration_name = "fe-ip-config"
+    frontend_port_name             = "fe-port"
     protocol                       = "Http"
     ssl_certificate_name           = null
   }
@@ -53,9 +53,9 @@ resource "azurerm_application_gateway" "appgateway" {
   request_routing_rule {
     name                       = "my-routing-rule"
     rule_type                  = "Basic"
-    http_listener_name         = "my-http-listener"
-    backend_address_pool_name  = "my-backend-pool"
-    backend_http_settings_name = "my-backend-http-settings"
+    http_listener_name         = "http-listener"
+    backend_address_pool_name  = "be-pool"
+    backend_http_settings_name = "be-http-settings"
     priority                   = 100
   }
 

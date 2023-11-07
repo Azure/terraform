@@ -11,6 +11,6 @@ terraform {
 provider "azurerm" {
   features {}
   skip_provider_registration = true
-  subscription_id = local.ai_subscription
+  subscription_id = var.ai_subscription
 }
 
