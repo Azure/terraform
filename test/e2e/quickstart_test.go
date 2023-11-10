@@ -35,23 +35,23 @@ func Test_Quickstarts(t *testing.T) {
 		}
 	}
 	folders = removeDuplicates(folders)
-	for _, fn := range folders {
-		fn = strings.TrimSpace(fn)
+	for _, f := range folders {
+		f = strings.TrimSpace(f)
 		rootPath := filepath.Join("..", "..")
-		if skip(rootPath, fn) {
+		if skip(rootPath, f) {
 			continue
 		}
 
-		test, ok := speicalTests[fn]
+		test, ok := speicalTests[f]
 		if !ok {
 			test = func(t *testing.T) {
-				helper.RunE2ETest(t, rootPath, fn, terraform.Options{
+				helper.RunE2ETest(t, rootPath, f, terraform.Options{
 					Upgrade: true,
 				}, nil)
 			}
 		}
 
-		t.Run(fn, test)
+		t.Run(f, test)
 	}
 }
 
@@ -72,8 +72,7 @@ func skip(rootPath string, f string) bool {
 	if !files.IsExistingDir(f) {
 		return true
 	}
-	sprintf := fmt.Sprintf("%squickstart", string(os.PathSeparator))
-	if !strings.HasSuffix(filepath.Dir(f), sprintf) {
+	if !strings.HasSuffix(filepath.Dir(f), fmt.Sprintf("%squickstart", string(os.PathSeparator))) {
 		return true
 	}
 	return !containsTerraformFile(f)
