@@ -1,14 +1,16 @@
 package e2e
 
 import (
-	"github.com/gruntwork-io/terratest/modules/files"
-	"github.com/gruntwork-io/terratest/modules/packer"
-	test_structure "github.com/gruntwork-io/terratest/modules/test-structure"
-	"github.com/stretchr/testify/require"
+	"fmt"
 	"os"
 	"path/filepath"
 	"strings"
 	"testing"
+
+	"github.com/gruntwork-io/terratest/modules/files"
+	"github.com/gruntwork-io/terratest/modules/packer"
+	test_structure "github.com/gruntwork-io/terratest/modules/test-structure"
+	"github.com/stretchr/testify/require"
 
 	helper "github.com/Azure/terraform-module-test-helper"
 	"github.com/gruntwork-io/terratest/modules/terraform"
@@ -33,26 +35,23 @@ func Test_Quickstarts(t *testing.T) {
 		}
 	}
 	folders = removeDuplicates(folders)
-	for _, f := range folders {
-		f = strings.TrimSpace(f)
-		if filepath.Dir(f) != "quickstart" {
-			continue
-		}
+	for _, fn := range folders {
+		fn = strings.TrimSpace(fn)
 		rootPath := filepath.Join("..", "..")
-		path := filepath.Join(rootPath, f)
-		if !files.IsExistingDir(path) {
+		if skip(rootPath, fn) {
 			continue
 		}
-		test, ok := speicalTests[f]
+
+		test, ok := speicalTests[fn]
 		if !ok {
 			test = func(t *testing.T) {
-				helper.RunE2ETest(t, rootPath, f, terraform.Options{
+				helper.RunE2ETest(t, rootPath, fn, terraform.Options{
 					Upgrade: true,
 				}, nil)
 			}
 		}
 
-		t.Run(f, test)
+		t.Run(fn, test)
 	}
 }
 
@@ -63,12 +62,34 @@ func allExamples() ([]string, error) {
 	}
 	var r []string
 	for _, f := range examples {
-		if !f.IsDir() {
-			continue
-		}
 		r = append(r, filepath.Join("quickstart", f.Name()))
 	}
 	return r, nil
+}
+
+func skip(rootPath string, f string) bool {
+	f = filepath.Join(rootPath, f)
+	if !files.IsExistingDir(f) {
+		return true
+	}
+	sprintf := fmt.Sprintf("%squickstart", string(os.PathSeparator))
+	if !strings.HasSuffix(filepath.Dir(f), sprintf) {
+		return true
+	}
+	return !containsTerraformFile(f)
+}
+
+func containsTerraformFile(f string) bool {
+	dir, err := os.ReadDir(f)
+	if err != nil {
+		return false
+	}
+	for _, entry := range dir {
+		if !entry.IsDir() && strings.HasSuffix(entry.Name(), ".tf") {
+			return true
+		}
+	}
+	return false
 }
 
 func test201VmssPackerJumpbox(t *testing.T) {
