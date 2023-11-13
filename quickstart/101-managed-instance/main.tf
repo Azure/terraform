@@ -61,6 +61,8 @@ resource "azurerm_route_table" "example" {
 resource "azurerm_subnet_route_table_association" "example" {
   subnet_id      = azurerm_subnet.example.id
   route_table_id = azurerm_route_table.example.id
+
+  depends_on = [azurerm_subnet_network_security_group_association.example]
 }
 
 # Create managed instance
@@ -75,6 +77,8 @@ resource "azurerm_mssql_managed_instance" "main" {
   sku_name                     = var.sku_name
   vcores                       = var.vcores
   storage_size_in_gb           = var.storage_size_in_gb
+
+  depends_on = [azurerm_subnet_route_table_association.example]
 }
 
 resource "random_password" "password" {
