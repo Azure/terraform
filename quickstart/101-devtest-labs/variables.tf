@@ -16,12 +16,6 @@ variable "lab_name" {
   default     = "ExampleLab"
 }
 
-variable "vm_name" {
-  type        = string
-  description = "The name of the vm to be created."
-  default     = "example-vm"
-}
-
 variable "vm_size" {
   type        = string
   description = "The size of the vm to be created."
