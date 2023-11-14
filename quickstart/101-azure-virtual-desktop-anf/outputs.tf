@@ -23,16 +23,6 @@ output "location" {
   value       = azurerm_resource_group.rg.location
 }
 
-output "storage_account" {
-  description = "Storage account for Profiles"
-  value       = azurerm_storage_account.storage.name
-}
-
-output "storage_account_share" {
-  description = "Name of the Azure File Share created for FSLogix"
-  value       = azurerm_storage_share.FSShare.name
-}
-
 output "session_host_count" {
   description = "The number of VMs created"
   value       = var.rdsh_count
