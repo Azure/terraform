@@ -80,6 +80,7 @@ resource "azurerm_lb_probe" "vmss" {
 }
 
 resource "azurerm_lb_rule" "lbnatrule" {
+  resource_group_name            = azurerm_resource_group.vmss.name
   loadbalancer_id                = azurerm_lb.vmss.id
   name                           = "http"
   protocol                       = "Tcp"
