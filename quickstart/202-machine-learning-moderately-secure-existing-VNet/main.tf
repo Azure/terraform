@@ -8,7 +8,7 @@ terraform {
     }
 
     azureml = {
-      source = "registry.terraform.io/Telemaco019/azureml"
+      source = "registry.terraform.io/orobix/azureml"
     }
   }
 }
