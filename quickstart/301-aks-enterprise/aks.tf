@@ -1,3 +1,5 @@
+data "azurerm_client_config" "current" {}
+
 resource "azurerm_kubernetes_cluster" "default" {
   name                = "${var.name}-aks"
   location            = azurerm_resource_group.default.location
@@ -19,6 +21,7 @@ resource "azurerm_kubernetes_cluster" "default" {
   }
 
   azure_active_directory_role_based_access_control {
+    tenant_id          = data.azurerm_client_config.current.tenant_id
     managed            = true
     azure_rbac_enabled = true
   }
