@@ -130,7 +130,7 @@ resource "azurerm_application_gateway" "gateway" {
     name                  = local.http_setting_name
     cookie_based_affinity = "Disabled"
     port                  = 80
-    protocol              = "http"
+    protocol              = "Http"
     request_timeout       = 1
     probe_name            = local.probe_name
   }
@@ -139,12 +139,12 @@ resource "azurerm_application_gateway" "gateway" {
     name                           = "${local.listener_name}-http"
     frontend_ip_configuration_name = local.frontend_ip_configuration_name
     frontend_port_name             = "${local.frontend_port_name}-http"
-    protocol                       = "http"
+    protocol                       = "Http"
   }
 
   probe {
     name                = local.probe_name
-    protocol            = "http"
+    protocol            = "Http"
     path                = "/nginx-health"
     interval            = 30
     timeout             = 30
