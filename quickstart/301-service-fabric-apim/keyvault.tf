@@ -1,67 +1,67 @@
 resource "azurerm_key_vault" "cluster" {
-  name                            = "${var.dns_prefix}-${substr(var.name,0,12)}-${var.environment_short}-kv"
-  location                        = "${azurerm_resource_group.default.location}"
-  resource_group_name             = "${azurerm_resource_group.default.name}"
-  tenant_id                       = "${data.azurerm_client_config.current.tenant_id}"
+  name                            = "${var.dns_prefix}-${substr(var.name, 0, 12)}-${var.environment_short}-kv"
+  location                        = azurerm_resource_group.default.location
+  resource_group_name             = azurerm_resource_group.default.name
+  tenant_id                       = data.azurerm_client_config.current.tenant_id
   enabled_for_deployment          = true
   enabled_for_disk_encryption     = true
   enabled_for_template_deployment = true
   sku_name                        = "standard"
 
   access_policy {
-    tenant_id = "${data.azurerm_subscription.current.tenant_id}"
-    object_id = "${var.client_object_id}"
+    tenant_id = data.azurerm_subscription.current.tenant_id
+    object_id = var.client_object_id
 
     certificate_permissions = [
-      "create",
-      "delete",
-      "deleteissuers",
-      "get",
-      "getissuers",
-      "import",
-      "list",
-      "listissuers",
-      "managecontacts",
-      "manageissuers",
-      "setissuers",
-      "update",
+      "Create",
+      "Delete",
+      "DeleteIssuers",
+      "Get",
+      "GetIssuers",
+      "Import",
+      "List",
+      "ListIssuers",
+      "ManageContacts",
+      "ManageIssuers",
+      "SetIssuers",
+      "Update",
     ]
 
     key_permissions = [
-      "backup",
-      "create",
-      "decrypt",
-      "delete",
-      "encrypt",
-      "get",
-      "import",
-      "list",
-      "purge",
-      "recover",
-      "restore",
-      "sign",
-      "unwrapKey",
-      "update",
-      "verify",
-      "wrapKey",
+      "Backup",
+      "Create",
+      "Decrypt",
+      "Delete",
+      "Encrypt",
+      "Get",
+      "Import",
+      "List",
+      "Purge",
+      "Recover",
+      "Restore",
+      "Sign",
+      "UnwrapKey",
+      "Update",
+      "Verify",
+      "WrapKey",
     ]
 
     secret_permissions = [
-      "backup",
-      "delete",
-      "get",
-      "list",
-      "purge",
-      "recover",
-      "restore",
-      "set",
+      "Backup",
+      "Delete",
+      "Get",
+      "List",
+      "Purge",
+      "Recover",
+      "Restore",
+      "Set",
     ]
   }
 }
 
 resource "azurerm_key_vault_certificate" "cluster" {
   name         = "service-fabric-cluster"
-  key_vault_id = "${azurerm_key_vault.cluster.id}"
+  key_vault_id = azurerm_key_vault.cluster.id
 
   certificate_policy {
     issuer_parameters {
@@ -115,7 +115,7 @@ resource "azurerm_key_vault_certificate" "cluster" {
 
 resource "azurerm_key_vault_certificate" "client" {
   name         = "service-fabric-client"
-  key_vault_id = "${azurerm_key_vault.cluster.id}"
+  key_vault_id = azurerm_key_vault.cluster.id
 
   certificate_policy {
     issuer_parameters {
