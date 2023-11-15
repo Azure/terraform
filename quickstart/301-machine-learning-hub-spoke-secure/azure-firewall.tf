@@ -48,6 +48,8 @@ resource "azurerm_firewall" "azure_firewall_instance" {
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.hub_rg.name
   firewall_policy_id  = azurerm_firewall_policy.base_policy.id
+  sku_name            = "AZFW_Hub"
+  sku_tier            = "Standard"
 
   ip_configuration {
     name                 = "configuration"
