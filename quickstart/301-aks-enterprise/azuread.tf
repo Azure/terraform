@@ -13,7 +13,6 @@ resource "random_string" "password" {
 
 resource "azuread_service_principal_password" "default" {
   service_principal_id = azuread_service_principal.default.id
-  value                = random_string.password.result
   end_date             = "2099-01-01T01:00:00Z"
 }
 
