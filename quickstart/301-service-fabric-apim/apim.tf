@@ -4,8 +4,7 @@ resource "azurerm_api_management" "default" {
   resource_group_name = azurerm_resource_group.default.name
   publisher_name      = var.api_publisher_name
   publisher_email     = var.api_publisher_email
-
-  sku_name = "Developer_1"
+  sku_name            = "Developer_1"
 
   # Ignore certificate changes in the future
   lifecycle {

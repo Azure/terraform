@@ -20,8 +20,11 @@ resource "random_uuid" "reader" {
 
 # Service Fabric Client
 resource "azuread_application" "client" {
-  display_name  = "${var.name}-client-${var.environment}"
-  redirect_uris = ["https://${azurerm_public_ip.sf.fqdn}:19080/Explorer/index.html"]
+  display_name = "${var.name}-client-${var.environment}"
+
+  web {
+    redirect_uris = ["https://${azurerm_public_ip.sf.fqdn}:19080/Explorer/index.html"]
+  }
 
   app_role {
     id = random_uuid.admin.result
