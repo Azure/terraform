@@ -7,9 +7,8 @@ resource "azurerm_kubernetes_cluster" "default" {
 
   default_node_pool {
     name            = "default"
-    count           = var.node_count
+    node_count      = var.node_count
     vm_size         = var.node_type
-    os_type         = var.node_os
     os_disk_size_gb = 30
     vnet_subnet_id  = azurerm_subnet.aks.id
   }
@@ -20,7 +19,7 @@ resource "azurerm_kubernetes_cluster" "default" {
   }
 
   azure_active_directory_role_based_access_control {
-    enabled = true
+    azure_rbac_enabled = true
   }
 
   network_profile {
@@ -28,7 +27,6 @@ resource "azurerm_kubernetes_cluster" "default" {
   }
 
   oms_agent {
-    enabled                    = true
     log_analytics_workspace_id = azurerm_log_analytics_workspace.default.id
   }
 }

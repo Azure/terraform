@@ -33,12 +33,6 @@ variable "node_type" {
   default     = "Standard_D1_v2"
 }
 
-variable "node_os" {
-  type        = string
-  description = "Windows or Linux"
-  default     = "Linux"
-}
-
 variable "dns_prefix" {
   type        = string
   description = "DNS Prefix"
