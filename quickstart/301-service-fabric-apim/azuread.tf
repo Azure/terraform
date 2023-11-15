@@ -7,14 +7,8 @@ resource "azuread_service_principal" "cluster" {
   application_id = azuread_application.cluster.application_id
 }
 
-resource "random_string" "cluster_password" {
-  length  = 32
-  special = true
-}
-
 resource "azuread_service_principal_password" "cluster" {
   service_principal_id = azuread_service_principal.cluster.id
-  value                = random_string.cluster_password.result
   end_date             = "2099-01-01T01:00:00Z"
 }
 
@@ -26,8 +20,8 @@ resource "random_uuid" "reader" {
 
 # Service Fabric Client
 resource "azuread_application" "client" {
-  display_name = "${var.name}-client-${var.environment}"
-  reply_urls   = ["https://${azurerm_public_ip.sf.fqdn}:19080/Explorer/index.html"]
+  display_name  = "${var.name}-client-${var.environment}"
+  redirect_uris = ["https://${azurerm_public_ip.sf.fqdn}:19080/Explorer/index.html"]
 
   app_role {
     id = random_uuid.admin.result
