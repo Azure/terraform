@@ -11,9 +11,9 @@ resource "azurerm_resource_group" "rg" {
 
 # Create three virtual networks
 resource "random_string" "prefix" {
-  length = 4
+  length  = 4
   special = false
-  upper = false
+  upper   = false
 }
 
 resource "random_pet" "virtual_network_name" {
@@ -65,9 +65,9 @@ resource "null_resource" "register_rp_to_mg" {
   }
 }
 
-resource "time_sleep" "wait_5_seconds" {  
+resource "time_sleep" "wait_5_seconds" {
   create_duration = "5s"
-  depends_on = [null_resource.register_rp_to_mg]
+  depends_on      = [null_resource.register_rp_to_mg]
 }
 
 # Create a Virtual Network Manager instance
@@ -98,7 +98,7 @@ resource "random_pet" "network_group_policy_name" {
 }
 
 resource "azurerm_policy_definition" "network_group_policy" {
-  name         = "${random_pet.network_group_policy_name.id}"
+  name         = random_pet.network_group_policy_name.id
   policy_type  = "Custom"
   mode         = "Microsoft.Network.Data"
   display_name = "Policy Definition for Network Group"
