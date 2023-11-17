@@ -1,4 +1,4 @@
-# Azure resource group
+# Azure Virtual Network Manager with management group scope
 
 This template deploys an Azure Virtual Network Manager instance with a connectivity configuration for a Mesh topology using a management group scope. It includes resources including virtual networks, subnets, and more.
 
