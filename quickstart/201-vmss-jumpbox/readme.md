@@ -27,7 +27,7 @@ This template deploys an Azure virtual machine scale set with a jumpbox.
 | `tags` | Map of the tags to use for the resources that are deployed |
 | `application_port` | Port that you want to expose to the external load balancer |
 | `admin_user` | User name to use as the admin account on the VMs that will be part of the VM scale set |
-| `admin_password` | Default password for admin account (NOTE: For security reasons, this value is not set in the plaintext variables.tf file.)  |
+| `admin_password` | Default password for admin account  |
 
 ## Example
 
