@@ -63,11 +63,16 @@ resource "azurerm_subnet_network_security_group_association" "gateway" {
   network_security_group_id = azurerm_network_security_group.gateway.id
 }
 
+resource "random_string" "gw_prefix_name" {
+  length  = 30
+  special = false
+  numeric = false
+}
 
 locals {
 
   gateway_name                   = "${var.dns_prefix}-${var.name}-${var.environment}-gateway"
-  gateway_ip_name                = "${var.dns_prefix}-${var.name}-${var.environment}-gateway-ip"
+  gateway_ip_name                = "${random_string.gw_prefix_name.result}-gw-ip"
   gateway_ip_config_name         = "${var.name}-gateway-ipconfig"
   frontend_port_name             = "${var.name}-gateway-feport"
   frontend_ip_configuration_name = "${var.name}-gateway-feip"
