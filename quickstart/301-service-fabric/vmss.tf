@@ -1,7 +1,14 @@
+resource "random_string" "vmss_name_prefix" {
+  length  = 20
+  special = false
+  numeric = false
+  upper   = false
+}
+
 resource "azurerm_storage_account" "vmss" {
-  name                     = "${var.dns_prefix}${substr(replace(var.name, "-", ""), 0, 12)}vmss${var.environment_short}"
-  resource_group_name      = "${azurerm_resource_group.default.name}"
-  location                 = "${azurerm_resource_group.default.location}"
+  name                     = "${random_string.vmss_name_prefix.result}vmss"
+  resource_group_name      = azurerm_resource_group.default.name
+  location                 = azurerm_resource_group.default.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
 }
@@ -9,15 +16,15 @@ resource "azurerm_storage_account" "vmss" {
 # Vm Scale Set
 resource "azurerm_virtual_machine_scale_set" "default" {
   name                = "${var.name}-vmss"
-  location            = "${azurerm_resource_group.default.location}"
-  resource_group_name = "${azurerm_resource_group.default.name}"
+  location            = azurerm_resource_group.default.location
+  resource_group_name = azurerm_resource_group.default.name
   upgrade_policy_mode = "Automatic"
   overprovision       = false
 
   sku {
     name     = "Standard_D1_v2"
     tier     = "Standard"
-    capacity = "${var.cluster_size}"
+    capacity = var.cluster_size
   }
 
   storage_profile_image_reference {
@@ -43,12 +50,12 @@ resource "azurerm_virtual_machine_scale_set" "default" {
 
   os_profile {
     computer_name_prefix = "sfvm"
-    admin_username       = "${var.admin_username}"
-    admin_password       = "${var.admin_password}"
+    admin_username       = var.admin_username
+    admin_password       = var.admin_password
   }
 
   os_profile_secrets {
-    source_vault_id = "${azurerm_key_vault.cluster.id}"
+    source_vault_id = azurerm_key_vault.cluster.id
 
     vault_certificates {
       certificate_url   = "${azurerm_key_vault.cluster.vault_uri}secrets/${azurerm_key_vault_certificate.cluster.name}/${azurerm_key_vault_certificate.cluster.version}"
@@ -63,8 +70,8 @@ resource "azurerm_virtual_machine_scale_set" "default" {
   }
 
   boot_diagnostics {
-    enabled = true
-    storage_uri = "${azurerm_storage_account.vmss.primary_blob_endpoint}"
+    enabled     = true
+    storage_uri = azurerm_storage_account.vmss.primary_blob_endpoint
   }
 
   network_profile {
@@ -74,7 +81,7 @@ resource "azurerm_virtual_machine_scale_set" "default" {
     ip_configuration {
       primary                                = true
       name                                   = "IPConfiguration"
-      subnet_id                              = "${azurerm_subnet.sf.id}"
+      subnet_id                              = azurerm_subnet.sf.id
       load_balancer_backend_address_pool_ids = ["${azurerm_lb_backend_address_pool.sf.id}"]
       load_balancer_inbound_nat_rules_ids    = ["${azurerm_lb_nat_pool.sf[0].id}"]
     }

@@ -1,15 +1,22 @@
+resource "random_string" "sf_name_prefix" {
+  length  = 22
+  special = false
+  numeric = false
+  upper   = false
+}
+
 resource "azurerm_storage_account" "sf" {
-  name                     = "${var.dns_prefix}${substr(replace(var.name, "-", ""), 0, 16)}sf${var.environment_short}"
-  resource_group_name      = "${azurerm_resource_group.default.name}"
-  location                 = "${azurerm_resource_group.default.location}"
+  name                     = "${random_string.sf_name_prefix.result}sf"
+  resource_group_name      = azurerm_resource_group.default.name
+  location                 = azurerm_resource_group.default.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
 }
 
 resource "azurerm_service_fabric_cluster" "default" {
   name                = "${var.name}-sf"
-  resource_group_name = "${azurerm_resource_group.default.name}"
-  location            = "${azurerm_resource_group.default.location}"
+  resource_group_name = azurerm_resource_group.default.name
+  location            = azurerm_resource_group.default.location
   reliability_level   = "Bronze"
   vm_image            = "Windows"
   management_endpoint = "https://${azurerm_public_ip.sf.fqdn}:19080"
@@ -36,9 +43,9 @@ resource "azurerm_service_fabric_cluster" "default" {
   }
 
   azure_active_directory {
-    tenant_id              = "${data.azurerm_subscription.current.tenant_id}"
-    cluster_application_id = "${azuread_application.client.application_id}"
-    client_application_id  = "${azuread_application.cluster.application_id}"
+    tenant_id              = data.azurerm_subscription.current.tenant_id
+    cluster_application_id = azuread_application.client.application_id
+    client_application_id  = azuread_application.cluster.application_id
   }
 
   fabric_settings {
@@ -58,21 +65,21 @@ resource "azurerm_service_fabric_cluster" "default" {
   }
 
   certificate {
-    thumbprint           = "${azurerm_key_vault_certificate.cluster.thumbprint}"
-    thumbprint_secondary = "${azurerm_key_vault_certificate.cluster.thumbprint}"
+    thumbprint           = azurerm_key_vault_certificate.cluster.thumbprint
+    thumbprint_secondary = azurerm_key_vault_certificate.cluster.thumbprint
     x509_store_name      = "My"
   }
 
   client_certificate_thumbprint {
-    thumbprint = "${azurerm_key_vault_certificate.client.thumbprint}"
+    thumbprint = azurerm_key_vault_certificate.client.thumbprint
     is_admin   = true
   }
 
   diagnostics_config {
-    storage_account_name = "${azurerm_storage_account.sf.name}"
+    storage_account_name       = azurerm_storage_account.sf.name
     protected_account_key_name = "StorageAccountKey1"
-    blob_endpoint = "${azurerm_storage_account.sf.primary_blob_endpoint}"
-    queue_endpoint = "${azurerm_storage_account.sf.primary_queue_endpoint}"
-    table_endpoint = "${azurerm_storage_account.sf.primary_table_endpoint}"
+    blob_endpoint              = azurerm_storage_account.sf.primary_blob_endpoint
+    queue_endpoint             = azurerm_storage_account.sf.primary_queue_endpoint
+    table_endpoint             = azurerm_storage_account.sf.primary_table_endpoint
   }
 }
