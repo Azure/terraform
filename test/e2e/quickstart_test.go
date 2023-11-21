@@ -3,6 +3,7 @@ package e2e
 import (
 	"fmt"
 	"os"
+	"os/exec"
 	"path/filepath"
 	"strings"
 	"testing"
@@ -17,7 +18,8 @@ import (
 )
 
 var speicalTests = map[string]func(*testing.T){
-	"quickstart/201-vmss-packer-jumpbox": test201VmssPackerJumpbox,
+	"quickstart/201-vmss-packer-jumpbox":                                   test201VmssPackerJumpbox,
+	"quickstart/101-virtual-network-manager-create-management-group-scope": test101VirtualNetworkManagerCreateManagementGroupScope,
 }
 
 func Test_Quickstarts(t *testing.T) {
@@ -138,6 +140,36 @@ func test201VmssPackerJumpbox(t *testing.T) {
 		Vars: map[string]interface{}{
 			"packer_resource_group_name": imageResourceGroupName,
 		},
+	}, nil)
+}
+
+func test101VirtualNetworkManagerCreateManagementGroupScope(t *testing.T) {
+	rootPath := filepath.Join("..", "..")
+	f := filepath.Join("quickstart", "101-virtual-network-manager-create-management-group-scope")
+	tenantId := os.Getenv("ARM_TENANT_ID")
+	clientId := os.Getenv("ARM_CLIENT_ID")
+	clientSecret := os.Getenv("ARM_CLIENT_SECRET")
+	msiId := os.Getenv("MSI_ID")
+	var cmd *exec.Cmd
+	if tenantId != "" && clientId != "" && clientSecret != "" {
+		cmd = exec.Command("az", "login", "--service-principal", "-u", clientId, "-p", clientSecret, "--tenant", tenantId)
+		err := cmd.Run()
+		require.NoError(t, err, "cannot login via service principal: %+v", err)
+	} else if msiId != "" {
+		cmd = exec.Command("az", "login", "--identity", "--username", msiId)
+		err := cmd.Run()
+		require.NoError(t, err, "cannot login via identity: %+v", err)
+	} else {
+		t.Fatalf("To test `quickstart/101-virtual-network-manager-create-management-group-scope` you must set `ARM_TENANT_ID`, `ARM_CLIENT_ID`, `ARM_CLIENT_SECRET`, or set `MSI_ID` so we can run `az login`.")
+	}
+	cmd.Stdout = discardWriter
+	defer func() {
+		cmd := exec.Command("az", "logout")
+		cmd.Stdout = discardWriter
+		_ = cmd.Run()
+	}()
+	helper.RunE2ETest(t, rootPath, f, terraform.Options{
+		Upgrade: true,
 	}, nil)
 }
 
