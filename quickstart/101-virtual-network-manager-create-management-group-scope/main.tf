@@ -47,6 +47,7 @@ data "azurerm_subscription" "current" {
 resource "random_pet" "management_group_name" {
   prefix = "AVNM-management-group"
 }
+
 resource "azurerm_management_group" "mg" {
   display_name = random_pet.management_group_name.id
 
@@ -55,14 +56,21 @@ resource "azurerm_management_group" "mg" {
   ]
 }
 
+data "azurerm_client_config" "this" {}
+
+resource "azurerm_role_assignment" "management_group_owner" {
+  principal_id         = coalesce(var.msi_id, data.azurerm_client_config.this.object_id)
+  scope                = azurerm_management_group.mg.id
+  role_definition_name = "Contributor"
+}
+
 # register Microsoft.Network to the Management Group
 
 resource "null_resource" "register_rp_to_mg" {
   provisioner "local-exec" {
-    command = <<CMD
-         az provider register --namespace 'Microsoft.Network' -m ${azurerm_management_group.mg.name}
-    CMD
+    command = "az provider register --namespace Microsoft.Network -m ${azurerm_management_group.mg.name}"
   }
+  depends_on = [azurerm_role_assignment.management_group_owner]
 }
 
 resource "time_sleep" "wait_5_seconds" {
