@@ -23,6 +23,7 @@ var speicalTests = map[string]func(*testing.T){
 }
 
 func Test_Quickstarts(t *testing.T) {
+	t.Parallel()
 	msiId := os.Getenv("MSI_ID")
 	if msiId != "" {
 		_ = os.Setenv("TF_VAR_msi_id", msiId)
