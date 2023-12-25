@@ -1,4 +1,4 @@
-# Azure resource group
+# Azure Linux VM
 
 This template deploys a Linux virtual machine (VM) with infrastructure that includes a virtual network, subnet, public IP address, and more.
 
