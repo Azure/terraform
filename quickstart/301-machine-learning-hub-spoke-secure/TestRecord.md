@@ -1,3 +1,35 @@
+## 31 Dec 23 00:17 UTC
+
+Success: false
+
+### Versions
+
+
+
+### Error
+
+
+Initializing the backend...
+
+Initializing provider plugins...
+- Finding latest version of hashicorp/random...
+- Finding hashicorp/azurerm versions matching "2.78.0"...
+- Finding latest version of telemaco019/azureml...
+- Installing hashicorp/random v3.6.0...
+- Installed hashicorp/random v3.6.0 (signed by HashiCorp)
+- Installing hashicorp/azurerm v2.78.0...
+- Installed hashicorp/azurerm v2.78.0 (signed by HashiCorp)
+- Installing telemaco019/azureml v0.0.5...
+
+Error: Failed to install provider
+
+Error while installing telemaco019/azureml v0.0.5: checksum list has no
+SHA-256 hash for
+"https://github.com/orobix/terraform-provider-azureml/releases/download/v0.0.5/terraform-provider-azureml_0.0.5_linux_amd64.zip"
+
+
+---
+
 ## 24 Dec 23 00:17 UTC
 
 Success: false
