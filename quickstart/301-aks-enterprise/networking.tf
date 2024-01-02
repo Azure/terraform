@@ -71,7 +71,7 @@ resource "random_string" "gw_prefix_name" {
 
 locals {
 
-  gateway_name                   = "${var.dns_prefix}-${var.name}-${var.environment}-gateway"
+  gateway_name                   = "${var.dns_prefix}-${random_string.gw_prefix_name.result}-gateway"
   gateway_ip_name                = "${random_string.gw_prefix_name.result}-gw-ip"
   gateway_ip_config_name         = "${var.name}-gateway-ipconfig"
   frontend_port_name             = "${var.name}-gateway-feport"
