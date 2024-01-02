@@ -1,6 +1,7 @@
 variable "name" {
   type        = string
   description = "Name of the deployment"
+  default     = "testdeploy"
 }
 
 variable "environment" {
@@ -26,28 +27,32 @@ variable "image_build_compute_name" {
 variable "vnet_resource_group_name" {
   type        = string
   description = "Name of the resource group for the existing VNet"
+  default     = "testvnetrg"
 }
 
 variable "vnet_name" {
   type        = string
   description = "Name of the existing VNet"
+  default     = "testvnet"
 }
 
 variable "training_subnet_name" {
   type        = string
   description = "Name of the existing training subnet"
+  default     = "testtrainingsubnet"
 }
 
 variable "aks_subnet_name" {
   type        = string
   description = "Name of the existing aks subnet"
+  default     = "testakssubnet"
 }
 
 variable "ml_subnet_name" {
   type        = string
   description = "Name of the existing ML workspace subnet"
+  default     = "testmlsubnet"
 }
-
 
 # Existing private DNS zones variables
 variable "privatelink_api_azureml_ms_resource_id" {
