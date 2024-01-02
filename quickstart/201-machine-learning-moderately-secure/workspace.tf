@@ -6,15 +6,8 @@ resource "azurerm_application_insights" "default" {
   application_type    = "web"
 }
 
-resource "random_string" "kv_prefix" {
-  length  = 4
-  upper   = false
-  special = false
-  numeric = false
-}
-
 resource "azurerm_key_vault" "default" {
-  name                     = "kv-${random_string.kv_prefix.result}-${var.environment}"
+  name                     = "kv-${var.name}-${var.environment}"
   location                 = azurerm_resource_group.default.location
   resource_group_name      = azurerm_resource_group.default.name
   tenant_id                = data.azurerm_client_config.current.tenant_id
@@ -27,15 +20,8 @@ resource "azurerm_key_vault" "default" {
   }
 }
 
-resource "random_string" "sa_prefix" {
-  length  = 4
-  upper   = false
-  special = false
-  numeric = false
-}
-
 resource "azurerm_storage_account" "default" {
-  name                     = "st${random_string.sa_prefix.result}${var.environment}"
+  name                     = "st${var.name}${var.environment}"
   location                 = azurerm_resource_group.default.location
   resource_group_name      = azurerm_resource_group.default.name
   account_tier             = "Standard"
