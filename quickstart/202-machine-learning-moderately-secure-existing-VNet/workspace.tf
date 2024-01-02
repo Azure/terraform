@@ -21,12 +21,12 @@ resource "azurerm_key_vault" "default" {
 }
 
 resource "azurerm_storage_account" "default" {
-  name                            = "st${var.name}${var.environment}"
-  location                        = azurerm_resource_group.default.location
-  resource_group_name             = azurerm_resource_group.default.name
-  account_tier                    = "Standard"
-  account_replication_type        = "GRS"
-  allow_nested_items_to_be_public = false
+  name                     = "st${var.name}${var.environment}"
+  location                 = azurerm_resource_group.default.location
+  resource_group_name      = azurerm_resource_group.default.name
+  account_tier             = "Standard"
+  account_replication_type = "GRS"
+  allow_blob_public_access = false
 
   network_rules {
     default_action = "Deny"
@@ -150,7 +150,7 @@ resource "azurerm_private_endpoint" "mlw_ple" {
   subnet_id           = data.azurerm_subnet.ml.id
 
   private_dns_zone_group {
-    name = "private-dns-zone-group"
+    name                 = "private-dns-zone-group"
     private_dns_zone_ids = [
       var.privatelink_api_azureml_ms_resource_id,
       var.privatelink_notebooks_azure_net_resource_id

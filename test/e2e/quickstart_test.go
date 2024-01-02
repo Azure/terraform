@@ -8,18 +8,18 @@ import (
 	"strings"
 	"testing"
 
+	helper "github.com/Azure/terraform-module-test-helper"
 	"github.com/gruntwork-io/terratest/modules/files"
 	"github.com/gruntwork-io/terratest/modules/packer"
+	"github.com/gruntwork-io/terratest/modules/terraform"
 	test_structure "github.com/gruntwork-io/terratest/modules/test-structure"
 	"github.com/stretchr/testify/require"
-
-	helper "github.com/Azure/terraform-module-test-helper"
-	"github.com/gruntwork-io/terratest/modules/terraform"
 )
 
 var speicalTests = map[string]func(*testing.T){
-	"quickstart/201-vmss-packer-jumpbox":                                   test201VmssPackerJumpbox,
 	"quickstart/101-virtual-network-manager-create-management-group-scope": test101VirtualNetworkManagerCreateManagementGroupScope,
+	"quickstart/201-vmss-packer-jumpbox": test201VmssPackerJumpbox,
+	"quickstart/202-machine-learning-moderately-secure-existing-VNet": Test202machineLearningModeratelySecureExistingVnet,
 }
 
 func Test_Quickstarts(t *testing.T) {
@@ -172,6 +172,29 @@ func test101VirtualNetworkManagerCreateManagementGroupScope(t *testing.T) {
 	helper.RunE2ETest(t, rootPath, f, terraform.Options{
 		Upgrade: true,
 	}, nil)
+}
+
+func Test202machineLearningModeratelySecureExistingVnet(t *testing.T) {
+	rootPath := filepath.Join("..", "..")
+	examplePath := filepath.Join("quickstart", "202-machine-learning-moderately-secure-existing-VNet")
+	prequistePath := filepath.Join(examplePath, "prequisite")
+	helper.RunE2ETest(t, rootPath, prequistePath, terraform.Options{}, func(t *testing.T, output helper.TerraformOutput) {
+		helper.RunE2ETest(t, rootPath, examplePath, terraform.Options{
+			Vars: map[string]interface{}{
+				"vnet_name":                                     output["vnet_name"],
+				"vnet_resource_group_name":                      output["resource_group_name"],
+				"training_subnet_name":                          output["training_subnet_name"],
+				"aks_subnet_name":                               output["aks_subnet_name"],
+				"ml_subnet_name":                                output["ml_subnet_name"],
+				"privatelink_api_azureml_ms_resource_id":        output["privatelink_api_azureml_ms_resource_id"],
+				"privatelink_azurecr_io_resource_id":            output["privatelink_azurecr_io_resource_id"],
+				"privatelink_notebooks_azure_net_resource_id":   output["privatelink_notebooks_azure_net_resource_id"],
+				"privatelink_blob_core_windows_net_resource_id": output["privatelink_blob_core_windows_net_resource_id"],
+				"privatelink_file_core_windows_net_resource_id": output["privatelink_file_core_windows_net_resource_id"],
+				"privatelink_vaultcore_azure_net_resource_id":   output["privatelink_vaultcore_azure_net_resource_id"],
+			},
+		}, nil)
+	})
 }
 
 func removeDuplicates(s []string) []string {
