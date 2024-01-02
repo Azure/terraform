@@ -18,8 +18,8 @@ import (
 
 var speicalTests = map[string]func(*testing.T){
 	"quickstart/101-virtual-network-manager-create-management-group-scope": test101VirtualNetworkManagerCreateManagementGroupScope,
-	"quickstart/201-vmss-packer-jumpbox": test201VmssPackerJumpbox,
-	"quickstart/202-machine-learning-moderately-secure-existing-VNet": Test202machineLearningModeratelySecureExistingVnet,
+	"quickstart/201-vmss-packer-jumpbox":                                   test201VmssPackerJumpbox,
+	"quickstart/202-machine-learning-moderately-secure-existing-VNet":      test202machineLearningModeratelySecureExistingVnet,
 }
 
 func Test_Quickstarts(t *testing.T) {
@@ -174,7 +174,7 @@ func test101VirtualNetworkManagerCreateManagementGroupScope(t *testing.T) {
 	}, nil)
 }
 
-func Test202machineLearningModeratelySecureExistingVnet(t *testing.T) {
+func test202machineLearningModeratelySecureExistingVnet(t *testing.T) {
 	rootPath := filepath.Join("..", "..")
 	examplePath := filepath.Join("quickstart", "202-machine-learning-moderately-secure-existing-VNet")
 	prequistePath := filepath.Join(examplePath, "prequisite")
