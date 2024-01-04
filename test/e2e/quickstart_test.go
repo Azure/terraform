@@ -116,8 +116,7 @@ func test201VmssPackerJumpbox(t *testing.T) {
 	if clientId := os.Getenv("ARM_CLIENT_ID"); clientId != "" {
 		packerVars["client_id"] = clientId
 	}
-	if identityId := os.Getenv("MSI_ID"); identityId != "" {
-		packerVars["client_id"] = identityId
+	if os.Getenv("MSI_ID") != "" {
 		useMsi = true
 	}
 	if clientSecret := os.Getenv("ARM_CLIENT_SECRET"); clientSecret != "" {
