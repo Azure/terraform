@@ -12,7 +12,7 @@ jobs:
       name: crontests
     steps:
       - name: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 #v3.6.0
       - name: test all examples
         continue-on-error: true
         timeout-minutes: 1440
@@ -21,7 +21,8 @@ jobs:
           az login --identity --username $MSI_ID > /dev/null
           export ARM_SUBSCRIPTION_ID=$(az login --identity --username $MSI_ID | jq -r '.[0] | .id')
           export ARM_TENANT_ID=$(az login --identity --username $MSI_ID | jq -r '.[0] | .tenantId')
-          docker run --rm -v $(pwd):/src -w /src/test -e MSI_ID -e ARM_SUBSCRIPTION_ID -e ARM_TENANT_ID -e ARM_USE_MSI=true -e CHANGED_FOLDERS mcr.microsoft.com/azterraform sh -c "go mod tidy && go test -timeout=1440m -v ./e2e"
+          ARM_CLIENT_ID=$(az identity list | jq -r --arg MSI_ID "$MSI_ID" '.[] | select(.principalId == $MSI_ID) | .clientId')
+          docker run --rm -v $(pwd):/src -w /src/test -e MSI_ID -e ARM_SUBSCRIPTION_ID -e ARM_CLIENT_ID -e ARM_TENANT_ID -e ARM_USE_MSI=true -e CHANGED_FOLDERS mcr.microsoft.com/azterraform sh -c "go mod tidy && go test -timeout=1440m -parallel 10 -v ./e2e"
       - name: Update
         run: |
           docker run --rm -v $(pwd):/src -w /src mcr.microsoft.com/azterraform sh scripts/update-test-record.sh
@@ -29,7 +30,7 @@ jobs:
           sudo chmod -R a+rwX .
           sudo find . -type d -exec chmod g+s '{}' +
       - name: Commit & Push changes
-        uses: actions-js/push@master
+        uses: actions-js/push@156f2b10c3aa000c44dbe75ea7018f32ae999772 #v1.4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           message: 'Update TestRecord'

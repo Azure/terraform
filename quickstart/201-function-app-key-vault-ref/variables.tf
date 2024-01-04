@@ -1,6 +1,6 @@
 variable "prefix" {
   type        = string
-  default     = "func-app-kvref"
+  default     = "funcappkvref"
   description = "Prefix of the resource name"
 }
 

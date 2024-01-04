@@ -2,6 +2,13 @@ resource "random_pet" "rg_name" {
   prefix = var.resource_group_name_prefix
 }
 
+resource "random_string" "vm_suffix" {
+  length  = 5
+  upper   = false
+  special = false
+  numeric = false
+}
+
 resource "azurerm_resource_group" "rg" {
   name     = random_pet.rg_name.id
   location = var.resource_group_location
@@ -34,7 +41,7 @@ resource "azurerm_dev_test_virtual_network" "vnet" {
 }
 
 resource "azurerm_dev_test_windows_virtual_machine" "vm" {
-  name                   = var.vm_name
+  name                   = "ExampleVM-${random_string.vm_suffix.result}"
   lab_name               = azurerm_dev_test_lab.lab.name
   lab_subnet_name        = "Dtl${var.lab_name}Subnet"
   resource_group_name    = azurerm_resource_group.rg.name
