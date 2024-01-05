@@ -29,7 +29,7 @@ resource "azurerm_windows_virtual_machine" "dsvm" {
   os_disk {
     name                 = "osdisk-${var.dsvm_name}"
     caching              = "ReadWrite"
-    storage_account_type = "Premium_LRS"
+    storage_account_type = "Standard_LRS"
   }
 
   identity {
