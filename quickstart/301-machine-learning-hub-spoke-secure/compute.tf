@@ -11,7 +11,7 @@ resource "azurerm_machine_learning_compute_instance" "compute_instance" {
   name                          = "${random_string.ci_prefix.result}instance"
   location                      = azurerm_resource_group.default.location
   machine_learning_workspace_id = azurerm_machine_learning_workspace.default.id
-  virtual_machine_size          = "STANDARD_DS2_V2"
+  virtual_machine_size          = "STANDARD_DS_V2"
   subnet_resource_id            = azurerm_subnet.snet-training.id
 
   depends_on = [

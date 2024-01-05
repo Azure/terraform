@@ -19,8 +19,10 @@ provider "azurerm" {
 
 data "azurerm_client_config" "current" {}
 
+resource "random_pet" "pet" {}
+
 resource "azurerm_resource_group" "default" {
-  name     = "rg-${var.name}-${var.environment}"
+  name     = "rg-${var.name}-${var.environment}-${random_pet.pet.id}"
   location = var.location
 }
 

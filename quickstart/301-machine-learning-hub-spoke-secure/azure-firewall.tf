@@ -3,7 +3,7 @@ resource "random_string" "fw_diag_prefix" {
   length  = 8
   upper   = false
   special = false
-  number  = false
+  numeric = false
 }
 resource "azurerm_ip_group" "ip_group_hub" {
   name                = "hub-ipgroup"
@@ -160,10 +160,12 @@ resource "azurerm_firewall_policy_rule_collection_group" "azure_firewall_rules_c
         port = 80
       }
       source_ip_groups = [azurerm_ip_group.ip_group_spoke.id]
-      destination_fqdns = ["crl.microsoft.com",
+      destination_fqdns = [
+        "crl.microsoft.com",
         "mscrl.microsoft.com",
         "crl3.digicert.com",
-      "ocsp.digicert.com"]
+        "ocsp.digicert.com"
+      ]
     }
 
     rule {
@@ -207,10 +209,12 @@ resource "azurerm_firewall_policy_rule_collection_group" "azure_firewall_rules_c
         port = 443
       }
       source_ip_groups = [azurerm_ip_group.ip_group_spoke.id]
-      destination_fqdns = ["acs-mirror.azureedge.net",
+      destination_fqdns = [
+        "acs-mirror.azureedge.net",
         "*.docker.io",
         "production.cloudflare.docker.com",
-      "*.azurecr.io"]
+        "*.azurecr.io"
+      ]
     }
 
     rule {
