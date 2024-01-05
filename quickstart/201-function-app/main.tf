@@ -47,5 +47,5 @@ resource "azurerm_linux_function_app" "main" {
 
 resource "random_pet" "prefix" {
   prefix = var.prefix
-  length = 2
+  length = 1
 }
