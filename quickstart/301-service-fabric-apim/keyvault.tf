@@ -1,5 +1,5 @@
 resource "azurerm_key_vault" "cluster" {
-  name                            = "${var.dns_prefix}-${substr(var.name, 0, 12)}-${var.environment_short}-kv"
+  name                            = "${random_string.name_suffix.result}-kv"
   location                        = azurerm_resource_group.default.location
   resource_group_name             = azurerm_resource_group.default.name
   tenant_id                       = data.azurerm_client_config.current.tenant_id

@@ -8,5 +8,12 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "default" {
   name     = "${var.name}-${var.environment}-rg"
-  location = "${var.location}"
+  location = var.location
+}
+
+resource "random_string" "name_suffix" {
+  length  = 8
+  lower   = true
+  upper   = true
+  special = false
 }
