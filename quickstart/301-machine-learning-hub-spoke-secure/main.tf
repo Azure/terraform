@@ -28,7 +28,7 @@ resource "azurerm_resource_group" "default" {
 
 #Hub Resource Group
 resource "azurerm_resource_group" "hub_rg" {
-  name     = "rg-hub-${var.name}-${var.environment}"
+  name     = "301mlhss-hub-${var.name}-${var.environment}-${random_pet.pet.id}"
   location = var.location
 
 }
