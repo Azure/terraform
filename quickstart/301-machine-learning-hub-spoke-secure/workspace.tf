@@ -21,8 +21,14 @@ resource "azurerm_key_vault" "default" {
   }
 }
 
+resource "random_string" "suffix" {
+  length  = 6
+  upper   = false
+  special = false
+}
+
 resource "azurerm_storage_account" "default" {
-  name                            = "st${var.name}${var.environment}"
+  name                            = "st${var.name}${var.environment}${random_string.suffix.result}"
   location                        = azurerm_resource_group.default.location
   resource_group_name             = azurerm_resource_group.default.name
   account_tier                    = "Standard"
@@ -36,7 +42,7 @@ resource "azurerm_storage_account" "default" {
 }
 
 resource "azurerm_container_registry" "default" {
-  name                = "cr${var.name}${var.environment}"
+  name                = "cr${var.name}${var.environment}${random_string.suffix.result}"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
   sku                 = "Premium"
@@ -50,7 +56,7 @@ resource "azurerm_container_registry" "default" {
 
 # Machine Learning workspace
 resource "azurerm_machine_learning_workspace" "default" {
-  name                    = "mlw-${var.name}-${var.environment}"
+  name                    = "mlw-${var.name}-${var.environment}${random_string.suffix.result}"
   location                = azurerm_resource_group.default.location
   resource_group_name     = azurerm_resource_group.default.name
   application_insights_id = azurerm_application_insights.default.id
@@ -65,7 +71,7 @@ resource "azurerm_machine_learning_workspace" "default" {
   # Args of use when using an Azure Private Link configuration
   public_network_access_enabled = false
   image_build_compute_name      = var.image_build_compute_name
-  depends_on = [
+  depends_on                    = [
     azurerm_firewall.azure_firewall_instance,
     azurerm_private_endpoint.kv_ple,
     azurerm_private_endpoint.st_ple_blob,
