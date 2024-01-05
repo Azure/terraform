@@ -20,6 +20,7 @@ var speicalTests = map[string]func(*testing.T){
 	"quickstart/101-virtual-network-manager-create-management-group-scope": test101VirtualNetworkManagerCreateManagementGroupScope,
 	"quickstart/201-vmss-packer-jumpbox":                                   test201VmssPackerJumpbox,
 	"quickstart/202-machine-learning-moderately-secure-existing-VNet":      test202machineLearningModeratelySecureExistingVnet,
+	"quickstart/301-service-fabric-apim":                                   test301ServiceFabricApim,
 }
 
 func Test_Quickstarts(t *testing.T) {
@@ -194,6 +195,19 @@ func test202machineLearningModeratelySecureExistingVnet(t *testing.T) {
 			},
 		}, nil)
 	})
+}
+
+func test301ServiceFabricApim(t *testing.T) {
+	rootPath := filepath.Join("..", "..")
+	examplePath := filepath.Join("quickstart", "301-service-fabric-apim")
+	vars := map[string]any{}
+	if msiId := os.Getenv("MSI_ID"); msiId != "" {
+		vars["client_object_id"] = msiId
+	}
+
+	helper.RunE2ETest(t, rootPath, examplePath, terraform.Options{
+		Vars: vars,
+	}, nil)
 }
 
 func removeDuplicates(s []string) []string {
