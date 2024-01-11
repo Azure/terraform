@@ -64,7 +64,7 @@ resource "azurerm_subnet_network_security_group_association" "gateway" {
 }
 
 resource "random_string" "gw_prefix_name" {
-  length  = 30
+  length  = 8
   special = false
   numeric = false
 }
