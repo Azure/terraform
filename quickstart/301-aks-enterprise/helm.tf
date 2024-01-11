@@ -25,13 +25,9 @@ controller:
       service.beta.kubernetes.io/azure-load-balancer-internal-subnet: "${azurerm_subnet.ingress.name}"
 EOF
   ]
-
-  depends_on = ["kubernetes_cluster_role_binding.tiller"]
 }
 
 resource "helm_release" "ghost" {
   name  = "ghost-blog"
   chart = "bitnami/ghost"
-
-  depends_on = ["kubernetes_cluster_role_binding.tiller"]
 }
