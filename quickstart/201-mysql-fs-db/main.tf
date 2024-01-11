@@ -88,11 +88,9 @@ resource "azurerm_mysql_flexible_server" "default" {
   private_dns_zone_id          = azurerm_private_dns_zone.default.id
   sku_name                     = "GP_Standard_D2ds_v4"
   version                      = "8.0.21"
-  zone                         = "1"
 
   high_availability {
-    mode                      = "ZoneRedundant"
-    standby_availability_zone = "2"
+    mode                      = "SameZone"
   }
   maintenance_window {
     day_of_week  = 0
