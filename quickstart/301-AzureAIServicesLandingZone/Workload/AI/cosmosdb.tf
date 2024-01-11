@@ -1,11 +1,18 @@
-resource "azurerm_cosmosdb_account" "this" {
-  name                      = local.cosmos_account_name
+resource "azurerm_resource_group" "cosmosdb" {
+  name     = "rg-azure-chatgpt-cosmosdb"
+  location = local.location
+}
+resource "random_pet" "random_name" {
+  length = 2
+}
+resource "azurerm_cosmosdb_account" "example" {
+  name                      = "cosmosdb-${random_pet.random_name.id}"
   location                  = local.location
-  resource_group_name       = local.resource_group_name
-  offer_type                = var.cosmos_offer_type
+  resource_group_name       = azurerm_resource_group.cosmosdb.name
+  offer_type                = "Standard"
   kind                      = "GlobalDocumentDB"
-  enable_automatic_failover = var.cosmos_enable_automatic_failover
-  enable_free_tier          = var.cosmos_enable_free_tier
+  enable_automatic_failover = false
+  enable_free_tier          = false
   geo_location {
     location          = local.location
     failover_priority = 0
@@ -15,18 +22,20 @@ resource "azurerm_cosmosdb_account" "this" {
     max_interval_in_seconds = 300
     max_staleness_prefix    = 100000
   }
-
+  depends_on = [
+    azurerm_resource_group.cosmosdb
+  ]
 }
 
-resource "azurerm_cosmosdb_sql_database" "this" {
-  name                = local.cosmos_db_name
-  resource_group_name = local.resource_group_name
-  account_name        = local.cosmos_account_name
+resource "azurerm_cosmosdb_sql_database" "main" {
+  name                = "acgpt-cosmosdb-sqldb"
+  resource_group_name = azurerm_resource_group.cosmosdb.name
+  account_name        = azurerm_cosmosdb_account.example.name
   throughput          = 400
 }
 
-resource "azurerm_cosmosdb_sql_container" "this" {
-  name                  = local.cosmos_container_name
+resource "azurerm_cosmosdb_sql_container" "example" {
+  name                  = "acgpt-sql-container"
   resource_group_name   = azurerm_resource_group.cosmosdb.name
   account_name          = azurerm_cosmosdb_account.example.name
   database_name         = azurerm_cosmosdb_sql_database.main.name

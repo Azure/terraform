@@ -1,5 +1,12 @@
+resource "random_string" "appsrandom" {
+  length           = 20
+  special          = false
+  lower            = true
+  upper            = false
+}
+
 resource "azurerm_linux_web_app" "app_service_linux" {
-  name                = local.app_service_name
+  name                = "${random_string.appsrandom.result}-app001"
   location            = var.location
   resource_group_name = var.resource_group_name
   service_plan_id     = var.service_plan_id

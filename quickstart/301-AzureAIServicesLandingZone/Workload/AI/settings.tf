@@ -1,4 +1,10 @@
 locals {
+  location    = var.location
+  environment = var.environment
+
+  ai_subscription           = var.ai_subscription
+  connectivity_subscription = var.connectivity_subscription
+
   AI = {
     cognitive_service = {
       create_new_resource_group = false
@@ -18,7 +24,7 @@ locals {
     }
 
     open_ai = {
-      resource_group_name = local.resource_group_name
+      resource_group_name = "rg-open-ai"
       identity={
         type="SystemAssigned"
         

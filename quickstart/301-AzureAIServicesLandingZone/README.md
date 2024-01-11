@@ -192,9 +192,6 @@ advanced = {
   open_ai_private_dns_zone_id="/subscriptions/adfc81b4-9732-4b10-88ad-07cf9a644863/resourceGroups/es-dns/providers/Microsoft.Network/privateDnsZones/privatelink.openai.azure.com"
   app_service_private_dns_zone_id="/subscriptions/adfc81b4-9732-4b10-88ad-07cf9a644863/resourceGroups/es-dns/providers/Microsoft.Network/privateDnsZones/privatelink.azurewebsites.net"
   deploy_apim = false
-  location = "eastus"
-  environment = "dev"
-
 ```
 
 ### 4. Deploy Azure Chat Web App and configure it

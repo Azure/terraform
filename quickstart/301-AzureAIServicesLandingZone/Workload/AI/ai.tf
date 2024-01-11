@@ -1,8 +1,13 @@
+resource "azurerm_resource_group" "cognitive" {
+  location = local.location
+  name     = "rg-cognitive-services"
+  provider = azurerm
+}
 module "cognitive_services" {
   count = var.deploy_cognitive_services ? 1 : 0
   source                           = "../../Modules/AI/cognitive_services" # Replace this with the actual path to your module
   create_new_resource_group        = local.AI.cognitive_service.create_new_resource_group
-  resource_group_name              = azurerm_resource_group.this.name
+  resource_group_name              = azurerm_resource_group.cognitive.name
   resource_group_location          = local.location
   existing_resource_group_name     = local.AI.cognitive_service.existing_resource_group_name
   existing_resource_group_location = local.AI.cognitive_service.existing_resource_group_location
@@ -16,7 +21,7 @@ module "cognitive_search" {
   source = "../../Modules/AI/cognitive_search" # Replace this with the actual path to the directory containing the module
 
   create_new_resource_group        = local.AI.cognitive_search.create_new_resource_group
-  resource_group_name              = azurerm_resource_group.this.name
+  resource_group_name              = azurerm_resource_group.cognitive.name
   resource_group_location          = local.location
   existing_resource_group_name     = local.AI.cognitive_search.existing_resource_group_name
   existing_resource_group_location = local.AI.cognitive_search.existing_resource_group_location
@@ -24,6 +29,12 @@ module "cognitive_search" {
   replica_count                    = local.AI.cognitive_search.replica_count
   partition_count                  = local.AI.cognitive_search.partition_count
 
+}
+
+resource "azurerm_resource_group" "this" {
+  location = local.location
+  name     = "rg-openai"
+  provider = azurerm
 }
 
 module "openai" {
@@ -42,7 +53,7 @@ module "openai" {
     ip_rules       = module.linux_web_app.app_service_outbound_ip_addresses
     virtual_network_rules = [
       {
-        subnet_id                            = lookup(module.vnet_ai.subnets, "snet_web")
+        subnet_id                            = lookup(module.vnet_ai.vnet_subnets_name_id, "snet_web")
         ignore_missing_vnet_service_endpoint = true
       }
     ]
@@ -50,30 +61,34 @@ module "openai" {
 
   depends_on = [
     module.vnet_ai,
-    ]
+    azurerm_resource_group.this,
+  ]
 }
 
-data "azurerm_private_dns_zone" "this" {
-  name                = "privatelink.search.windows.net"
-  resource_group_name = "es-dns"
-  provider = azurerm.connectivity
-}
 
-module "private_endpoint" {
-  source  = "../../Modules/Core/networking/pe"
+module "private_endpoint_ai" {
+  source  = "andrewCluey/private-endpoint/azurerm"
+  version = "2.0.4"
 
-
-  private_endpoint_name =    "pe-${module.cognitive_search.name}"
-  location   = local.location
+  location               = local.location
   pe_resource_group_name = azurerm_resource_group.this.name
-  endpoint_resource_id   = module.cognitive_search.search_service_name
-  pe_subnet_id = lookup(module.vnet_ai.subnets, "snet_ai")
+  endpoint_resource_id   = module.openai.openai_id
 
-
-  dns = {
-    zone_ids  = [data.azurerm_private_dns_zone.this.id]
-    zone_name = "privatelink.search.windows.net"
+  pe_network = {
+    resource_group_name = azurerm_resource_group.network.name
+    vnet_name           = module.vnet_ai.vnet_name
+    subnet_name         = "snet_ai"
   }
 
-  subresource_names = ["searchService"]
+  dns = {
+    zone_ids  = [var.open_ai_private_dns_zone_id]
+    zone_name = "privatelink.azurewebsites.net"
+  }
+
+  subresource_names = ["account"]
+  depends_on = [ azurerm_resource_group.this ]
 }
+
+
+
+
