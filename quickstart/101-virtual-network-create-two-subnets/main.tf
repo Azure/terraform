@@ -29,6 +29,6 @@ resource "azurerm_subnet" "my_terraform_subnet_2" {
 }
 
 resource "random_pet" "prefix" {
-  prefix = var.prefix
+  prefix = var.resource_group_name_prefix
   length = 1
 }
