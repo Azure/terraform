@@ -15,6 +15,5 @@ This template deploys an Azure Virtual Network with two subnets.
 |-|-|-|
 | `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. | rg |
 | `resource_group_location` | Location of the resource group. | eastus |
-| `vnet_address_space` | Address space of the virtual network. | 10.0.0.0/16 |
 
 ## Example
