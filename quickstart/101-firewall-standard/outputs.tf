@@ -6,11 +6,11 @@ output "virtual_network_name" {
   value = azurerm_virtual_network.vnet.name
 }
 
-output "subnet_name"{
+output "subnet_name" {
   value = azurerm_subnet.subnet.name
 }
 
-output "public_ip"{
+output "public_ip" {
   value = azurerm_public_ip.pip.ip_address
 }
 
