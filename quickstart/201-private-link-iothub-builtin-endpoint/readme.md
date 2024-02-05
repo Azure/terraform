@@ -22,6 +22,6 @@ In addition to deploying the two resources above, it deploys the necessary netwo
 
 | Name | Description | Default |
 | ---- | ----------- | ------- |
-| `location` | Location of the resource group. | `eastus` |
+| `location` | Location of the resource group. | `westeurope` |
 | `vnet_address_space` | Private IP address range of the virtual network | `10.0.0.0/16` |
 | `iothub_subnet_address_space` | Private IP address of the iothub subnet  | `10.0.3.0/24` |
