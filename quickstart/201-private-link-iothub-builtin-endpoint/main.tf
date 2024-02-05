@@ -10,9 +10,9 @@ resource "azurerm_resource_group" "rg" {
 }
 
 resource "azurerm_iothub" "iothub" {
-  name                = "iothub-${random_string.suffix.result}"
-  resource_group_name = azurerm_resource_group.rg.name
-  location            = azurerm_resource_group.rg.location
+  name                          = "iothub-${random_string.suffix.result}"
+  resource_group_name           = azurerm_resource_group.rg.name
+  location                      = azurerm_resource_group.rg.location
   public_network_access_enabled = false
 
   sku {
@@ -45,10 +45,10 @@ resource "azurerm_iothub_shared_access_policy" "iothub_policy" {
 }
 
 resource "azurerm_iothub_dps" "dps" {
-  name                = "test-device-${random_string.suffix.result}"
-  resource_group_name = azurerm_resource_group.rg.name
-  location            = azurerm_resource_group.rg.location
-  allocation_policy   = "Hashed"
+  name                          = "test-device-${random_string.suffix.result}"
+  resource_group_name           = azurerm_resource_group.rg.name
+  location                      = azurerm_resource_group.rg.location
+  allocation_policy             = "Hashed"
   public_network_access_enabled = false
 
   sku {
@@ -57,8 +57,8 @@ resource "azurerm_iothub_dps" "dps" {
   }
 
   linked_hub {
-    connection_string = azurerm_iothub_shared_access_policy.iothub_policy.primary_connection_string
-    location = azurerm_resource_group.rg.location
+    connection_string       = azurerm_iothub_shared_access_policy.iothub_policy.primary_connection_string
+    location                = azurerm_resource_group.rg.location
     allocation_weight       = 150
     apply_allocation_policy = true
   }
