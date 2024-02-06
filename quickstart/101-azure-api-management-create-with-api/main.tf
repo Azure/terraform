@@ -45,6 +45,14 @@ resource "random_string" "api_name" {
   upper   = false
 }
 
+resource "random_string" "content_value" {
+  length  = 8
+  lower   = true
+  numeric = false
+  special = false
+  upper   = false
+}
+
 resource "azurerm_api_management_api" "api" {
   name                = "${random_string.api_name.result}-api"
   resource_group_name = azurerm_resource_group.rg.name
