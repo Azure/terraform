@@ -12,7 +12,7 @@ variable "resource_group_location" {
 
 variable "open_api_spec_content_format" {
   type        = string
-  default     = ""
+  default     = "openapi"
   description = "The format of the content from which the API Definition should be imported. Possible values are: openapi, openapi+json, openapi+json-link, openapi-link, swagger-json, swagger-link-json, wadl-link-json, wadl-xml, wsdl and wsdl-link."
   validation {
     condition     = contains(["openapi", "openapi+json", "openapi+json-link", "openapi-link", "swagger-json", "swagger-link-json", "wadl-link-json", "wadl-xml", "wsdl", "wsdl-link"], var.open_api_spec_content_format)
