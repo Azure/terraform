@@ -12,7 +12,7 @@ variable "resource_group_location" {
 
 variable "open_api_spec_content_format" {
   type        = string
-  default     = "openapi"
+  default     = "swagger-link-json"
   description = "The format of the content from which the API Definition should be imported. Possible values are: openapi, openapi+json, openapi+json-link, openapi-link, swagger-json, swagger-link-json, wadl-link-json, wadl-xml, wsdl and wsdl-link."
   validation {
     condition     = contains(["openapi", "openapi+json", "openapi+json-link", "openapi-link", "swagger-json", "swagger-link-json", "wadl-link-json", "wadl-xml", "wsdl", "wsdl-link"], var.open_api_spec_content_format)
@@ -22,6 +22,6 @@ variable "open_api_spec_content_format" {
 
 variable "open_api_spec_content_value" {
   type        = string
-  default     = ""
+  default     = "http://conferenceapi.azurewebsites.net/?format=json"
   description = "The Content from which the API Definition should be imported. When a content_format of *-link-* is specified this must be a URL, otherwise this must be defined inline."
 }
