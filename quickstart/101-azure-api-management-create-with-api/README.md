@@ -1,6 +1,6 @@
 # Azure API Management
 
-This template deploys an Azure API Management service, containing an API based on a provided Open API spec, a Group, and a Product that is associated with both.
+This template deploys an Azure API Management service, containing an API (based on a provided Open API spec). An API Management group and product are then created that are associated with the service and API.
 
 ## Terraform resource types
 
@@ -24,5 +24,3 @@ This template deploys an Azure API Management service, containing an API based o
 | `open_api_spec_content_value` | The Content from which the API Definition should be imported. When a content_format of *-link-* is specified this must be a URL, otherwise this must be defined inline. | "" |
 
 ## Example
-
-[Quickstart: Deploy an Azure API Management service](https://learn.microsoft.com/azure/api-management/deploy-api-management-service-terraform)
