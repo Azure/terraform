@@ -44,17 +44,17 @@ output "api_outputs" {
   }
 }
 
-output "product_ids" {
+output "product_id" {
   description = "The ID of the Product created"
   value       = azurerm_api_management_product.product.id
 }
 
-output "product_api_ids" {
+output "product_api_id" {
   description = "The ID of the Product/API association created"
   value       = azurerm_api_management_product_api.product_api.id
 }
 
-output "product_group_ids" {
+output "product_group_id" {
   description = "The ID of the Product/Group association created"
   value       = azurerm_api_management_product_group.product_group.id
 }
