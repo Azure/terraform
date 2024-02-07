@@ -21,7 +21,3 @@ output "windows_web_app_name" {
 output "windows_web_app_default_hostname" {
   value = azurerm_windows_web_app.example.default_hostname
 }
-
-output "windows_web_app_default_site_hostname" {
-  value = azurerm_windows_web_app.example.default_site_hostname
-}
