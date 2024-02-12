@@ -13,7 +13,7 @@ output "subnet_name_1" {
   value       = azurerm_subnet.my_terraform_subnet_1.name
 }
 
-output "nat_gateway"{
+output "nat_gateway" {
   description = "The name of the created NAT gateway."
   value       = azurerm_nat_gateway.my_nat_gateway.id
 }
