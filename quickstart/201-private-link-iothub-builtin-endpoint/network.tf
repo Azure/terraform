@@ -88,3 +88,12 @@ resource "azurerm_private_endpoint" "dps" {
     private_dns_zone_ids = [azurerm_private_dns_zone.dps.id]
   }
 }
+
+## Add DNS Record for Built-in eventhub
+resource "azurerm_private_dns_a_record" "eventhub" {
+  name                = azurerm_iothub.iothub.event_hub_events_namespace
+  ttl                 = 10000
+  zone_name           = azurerm_private_dns_zone.eventhub.name
+  resource_group_name = azurerm_resource_group.rg.name
+  records             = [azurerm_private_endpoint.iothub.custom_dns_configs[0].ip_addresses[0]]
+}
