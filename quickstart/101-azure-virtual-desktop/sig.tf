@@ -15,7 +15,7 @@ resource "random_string" "rando" {
 # Creates Shared Image Gallery
 # https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/shared_image_gallery
 resource "azurerm_shared_image_gallery" "sig" {
-  name                = "sig${random_string.random.id}"
+  name                = "sig${random_string.rando.id}"
   resource_group_name = azurerm_resource_group.sigrg.name
   location            = azurerm_resource_group.sigrg.location
   description         = "Shared images"

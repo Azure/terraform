@@ -36,6 +36,11 @@ data "azurerm_role_definition" "storage_role" {
   name = "Storage File Data SMB Share Contributor"
 }
 
+resource "azuread_group" "aad_group" {
+  display_name     = var.aad_group_name
+  security_enabled = true
+}
+
 resource "azurerm_role_assignment" "af_role" {
   scope              = azurerm_storage_account.storage.id
   role_definition_id = data.azurerm_role_definition.storage_role.id
