@@ -18,4 +18,4 @@ This template deploys an [Azure Storage Account](https://www.terraform.io/docs/p
 
 ## Example
 
-To see how to run this example, see [Quickstart: Deploy a static website on Azure Storage using Terraform](https://docs.microsoft.com/azure/storage/quickstart-storage-blob-static-website).
+To see how to run this example, see [Quickstart: Deploy a static website on Azure Storage using Terraform](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-static-website-terraform).
