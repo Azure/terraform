@@ -9,7 +9,7 @@ resource "azurerm_resource_group" "rg" {
 
 # Create virtual network
 resource "azurerm_virtual_network" "my_terraform_network" {
-  name                = "myVnet"
+  name                = "${var.resource_name_prefix}Vnet"
   address_space       = ["10.0.0.0/16"]
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
@@ -17,15 +17,25 @@ resource "azurerm_virtual_network" "my_terraform_network" {
 
 # Create subnet
 resource "azurerm_subnet" "my_terraform_subnet" {
-  name                 = "mySubnet"
+  name                 = "${var.resource_name_prefix}Subnet"
   resource_group_name  = azurerm_resource_group.rg.name
   virtual_network_name = azurerm_virtual_network.my_terraform_network.name
   address_prefixes     = ["10.0.1.0/24"]
 }
 
+# Create subnet2
+resource "azurerm_subnet" "my_terraform_subnet" {
+  name                 = "${var.resource_name_prefix}Subnet2"
+  resource_group_name  = azurerm_resource_group.rg.name
+  virtual_network_name = azurerm_virtual_network.my_terraform_network.name
+  address_prefixes     = ["10.0.2.0/24"]
+}
+
+
+
 # Create public IPs
 resource "azurerm_public_ip" "my_terraform_public_ip" {
-  name                = "myPublicIP"
+  name                = "${var.resource_name_prefix}Publicip"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   allocation_method   = "Dynamic"
@@ -33,7 +43,7 @@ resource "azurerm_public_ip" "my_terraform_public_ip" {
 
 # Create Network Security Group and rule
 resource "azurerm_network_security_group" "my_terraform_nsg" {
-  name                = "myNetworkSecurityGroup"
+  name                = "${var.resource_name_prefix}NetworkSecurityGroup"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
 
@@ -52,7 +62,7 @@ resource "azurerm_network_security_group" "my_terraform_nsg" {
 
 # Create network interface
 resource "azurerm_network_interface" "my_terraform_nic" {
-  name                = "myNIC"
+  name                = "${var.resource_name_prefix}NIC"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
 
@@ -91,14 +101,15 @@ resource "azurerm_storage_account" "my_storage_account" {
 
 # Create virtual machine
 resource "azurerm_linux_virtual_machine" "my_terraform_vm" {
-  name                  = "myVM"
+  count                 = var.disater_recovery_copies
+  name                  = "${var.resource_name_prefix}-${element(random_pet_rg_name.*.id"
   location              = azurerm_resource_group.rg.location
   resource_group_name   = azurerm_resource_group.rg.name
   network_interface_ids = [azurerm_network_interface.my_terraform_nic.id]
   size                  = "Standard_DS1_v2"
 
   os_disk {
-    name                 = "myOsDisk"
+    name                 = "${var.resource_name_prefix}OsDisk"
     caching              = "ReadWrite"
     storage_account_type = "Premium_LRS"
   }
@@ -122,3 +133,41 @@ resource "azurerm_linux_virtual_machine" "my_terraform_vm" {
     storage_account_uri = azurerm_storage_account.my_storage_account.primary_blob_endpoint
   }
 }
+
+
+# Create virtual machine  2
+resource "azurerm_linux_virtual_machine" "my_terraform_vm2" {
+  count                 = var.disater_recovery_copies
+  name                  = "${var.resource_name_prefix}-${element(random_pet_rg_name.*.id"
+  location              = azurerm_resource_group.rg.location
+  resource_group_name   = azurerm_resource_group.rg.name
+  network_interface_ids = [azurerm_network_interface.my_terraform_nic.id]
+  size                  = "Standard_DS1_v2"
+
+  os_disk {
+    name                 = "${var.resource_name_prefix}OsDisk"
+    caching              = "ReadWrite"
+    storage_account_type = "Premium_LRS"
+  }
+
+  source_image_reference {
+    publisher = "MicrosoftWindowServer"
+    offer     = "WindowsServer"
+    sku       = "2019-datacenter"
+    version   = "latest"
+  }
+
+  computer_name  = "hostname"
+  admin_username = var.username
+
+  admin_ssh_key {
+    username   = var.username
+    public_key = jsondecode(azapi_resource_action.ssh_public_key_gen.output).publicKey
+  }
+
+  boot_diagnostics {
+    storage_account_uri = azurerm_storage_account.my_storage_account.primary_blob_endpoint
+  }
+}
+
+
