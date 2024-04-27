@@ -15,3 +15,16 @@ variable "username" {
   description = "The username for the local account that will be created on the new VM."
   default     = "azureadmin"
 }
+
+
+variable "resource_name_prefix" {
+  type        = string
+  description = " Prefix of the resource name""
+  default     = "holx"
+}
+
+variable "disaster_recovery_copies" {
+   type       = number
+   default    =  1
+
+
