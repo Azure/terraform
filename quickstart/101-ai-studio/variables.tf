@@ -16,3 +16,13 @@ variable "sku" {
     description = "The sku name of the Azure Analysis Services server to create. Choose from: B1, B2, D1, S0, S1, S2, S3, S4, S8, S9. Some skus are region specific. See https://docs.microsoft.com/en-us/azure/analysis-services/analysis-services-overview#availability-by-region"
     default     = "S0"
 }
+
+//Optional: For Customer Managed Keys, uncomment this part AND the corresponding section in hub.tf
+variable "cmk_keyvault_key_uri" {
+    description = "Key vault uri to access the encryption key."
+}
+
+variable "encryption_status" {
+    description = "Indicates whether or not the encryption is enabled for the workspace."
+    default = "Enabled"
+}

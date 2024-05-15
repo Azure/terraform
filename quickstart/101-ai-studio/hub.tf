@@ -19,6 +19,16 @@ resource "azapi_resource" "hub" {
       applicationInsight = azurerm_application_insights.default.id
       containerRegistry = azurerm_container_registry.default.id
       */
+
+      //Optional: To enable Customer Managed Keys, the corresponding 
+      encryption = {
+        status = var.encryption_status
+        keyVaultProperties = {
+            keyVaultArmId = azurerm_key_vault.default.id
+            keyIdentifier = var.cmk_keyvault_key_uri
+        }
+      }
+      
     }
     kind = "hub"
   })
