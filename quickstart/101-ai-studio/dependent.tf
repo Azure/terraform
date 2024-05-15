@@ -24,7 +24,7 @@ resource "azurerm_key_vault" "default" {
 
 // AzAPI AIServices
 resource "azapi_resource" "AIServicesResource"{
-  type = "Microsoft.CognitiveServices/accounts@2024-01-01-preview"
+  type = "Microsoft.CognitiveServices/accounts@2024-04-01-preview"
   name = "${var.names}AIServicesResource"
   location = azurerm_resource_group.default.location
   parent_id = azurerm_resource_group.default.id
