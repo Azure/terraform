@@ -21,6 +21,5 @@ resource "azapi_resource" "AIServicesConnection" {
         
       }
     })
-  schema_validation_enabled = false
   response_export_values = ["*"]
 }
