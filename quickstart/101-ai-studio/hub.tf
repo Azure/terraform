@@ -1,5 +1,5 @@
 resource "azapi_resource" "hub" {
-  type = "Microsoft.MachineLearningServices/workspaces@2024-04-01"
+  type = "Microsoft.MachineLearningServices/workspaces@2024-04-01-preview"
   name = "my-ai-hub"
   location = azurerm_resource_group.default.location
   parent_id = azurerm_resource_group.default.id
@@ -20,7 +20,7 @@ resource "azapi_resource" "hub" {
       containerRegistry = azurerm_container_registry.default.id
       */
 
-      //Optional: To enable Customer Managed Keys, the corresponding 
+      /*Optional: To enable Customer Managed Keys, the corresponding 
       encryption = {
         status = var.encryption_status
         keyVaultProperties = {
@@ -28,9 +28,9 @@ resource "azapi_resource" "hub" {
             keyIdentifier = var.cmk_keyvault_key_uri
         }
       }
+      */
       
     }
     kind = "hub"
   })
-  schema_validation_enabled = false
 }
