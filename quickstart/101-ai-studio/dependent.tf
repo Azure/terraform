@@ -1,6 +1,6 @@
 
 resource "azurerm_resource_group" "default" {
-  name     = "azapi-template-rg-${var.names}"
+  name     = "rg-${var.names}"
   location = var.location
 }
 
@@ -24,7 +24,7 @@ resource "azurerm_key_vault" "default" {
 
 // AzAPI AIServices
 resource "azapi_resource" "AIServicesResource"{
-  type = "Microsoft.CognitiveServices/accounts@2024-04-01-preview"
+  type = "Microsoft.CognitiveServices/accounts@2023-10-01-preview"
   name = "${var.names}AIServicesResource"
   location = azurerm_resource_group.default.location
   parent_id = azurerm_resource_group.default.id
@@ -45,7 +45,6 @@ resource "azapi_resource" "AIServicesResource"{
     }
     })
 
-  schema_validation_enabled = false
   response_export_values = ["*"]
 }
 

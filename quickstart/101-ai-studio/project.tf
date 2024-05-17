@@ -1,5 +1,5 @@
 resource "azapi_resource" "project" {
-  type = "Microsoft.MachineLearningServices/workspaces@2024-04-01"
+  type = "Microsoft.MachineLearningServices/workspaces@2024-04-01-preview"
   name = "my-ai-project"
   location = azurerm_resource_group.default.location
   parent_id = azurerm_resource_group.default.id
@@ -16,5 +16,4 @@ resource "azapi_resource" "project" {
     }
     kind = "project"
   })
-  schema_validation_enabled = false
 }

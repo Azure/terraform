@@ -17,7 +17,7 @@ variable "sku" {
     default     = "S0"
 }
 
-//Optional: For Customer Managed Keys, uncomment this part AND the corresponding section in hub.tf
+/*Optional: For Customer Managed Keys, uncomment this part AND the corresponding section in hub.tf
 variable "cmk_keyvault_key_uri" {
     description = "Key vault uri to access the encryption key."
 }
@@ -26,3 +26,4 @@ variable "encryption_status" {
     description = "Indicates whether or not the encryption is enabled for the workspace."
     default = "Enabled"
 }
+*/
