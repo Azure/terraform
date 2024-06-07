@@ -181,7 +181,7 @@ resource "azurerm_virtual_machine_scale_set" "vmss" {
 
     ssh_keys {
       path     = "/home/azureuser/.ssh/authorized_keys"
-      key_data = jsondecode(azapi_resource_action.ssh_public_key_gen.output).publicKey
+      key_data = azapi_resource_action.ssh_public_key_gen.output.publicKey
     }
   }
 
@@ -256,7 +256,7 @@ resource "azurerm_virtual_machine" "jumpbox" {
 
     ssh_keys {
       path     = "/home/azureuser/.ssh/authorized_keys"
-      key_data = jsondecode(azapi_resource_action.ssh_public_key_gen.output).publicKey
+      key_data = azapi_resource_action.ssh_public_key_gen.output.publicKey
     }
   }
 
