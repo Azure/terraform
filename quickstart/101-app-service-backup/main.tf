@@ -70,8 +70,10 @@ data "azurerm_storage_account_sas" "example" {
     file  = false
   }
 
-  start  = "2024-01-01"
-  expiry = "2024-12-31"
+  # Please change the start_date variable (in variables.tf) to the appropriate 
+  # value for your environment.
+  start  = formatdate(var.start_date, timestamp())
+  expiry = formatdate(var.start_date, timeadd(timestamp(), "8765h"))
 
   permissions {
     read    = false

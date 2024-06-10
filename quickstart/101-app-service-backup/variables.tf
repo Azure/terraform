@@ -9,3 +9,10 @@ variable "resource_group_location" {
   default     = "eastus"
   description = "Location of the resource group."
 }
+
+
+variable "start_date" {
+  type        = string
+  default     = "2024-06-01"
+  description = "Start date."
+}
