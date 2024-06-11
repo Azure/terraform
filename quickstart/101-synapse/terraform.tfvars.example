@@ -1,0 +1,15 @@
+name        = "syn101"
+environment = "dev"
+location    = "East US"
+
+synadmin_username = "sqladminuser"
+synadmin_password = "ThisIsNotVerySecure!"
+
+aad_login = {
+  name = "azureuser@contoso.com"
+  object_id = "00000000-0000-0000-0000-000000000000"
+  tenant_id = "00000000-0000-0000-0000-000000000000"
+}
+
+enable_syn_sparkpool = false
+enable_syn_sqlpool   = false

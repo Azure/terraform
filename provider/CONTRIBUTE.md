@@ -44,7 +44,7 @@ If you are running Windows, then you need to install Git Bash and Make for Windo
 
 First, go to the [AzureRM Terraform provider](https://github.com/terraform-providers/terraform-provider-azurerm) project page and fork the repository into your GitHub account.
 
-Once done, you need to clone your fork into the `$GOPATH/src/github.com/terraform-providers/terraform-provider-azurerm` folder.
+As the provider uses go modules, you can clone the repository in any path.
 
 ## Build the sources
 
@@ -72,6 +72,9 @@ Then you will need to go to your terraform test folder where the `main.tf` confi
 If the third-party plugin folder is empty, the init operation will download the AzureRM Provider for you.
 
 More information [here](https://www.terraform.io/docs/extend/how-terraform-works.html#plugin-locations).
+
+`terraform init` will look for the providers in the folder where the `.tf` files are located, so it is possible to just copy the provider from `$GOPATH/bin` to your current folder and it will be used instead of getting downloaded. 
+
 
 ## Debug the AzureRM provider using Visual Studio Code and Delve
 
@@ -129,6 +132,20 @@ ARM_TENANT_ID=<YOUR_AZURE_TENANT_ID>
 ARM_TEST_LOCATION=<AZURE_LOCATION_1>
 ARM_TEST_LOCATION_ALT=<AZURE_LOCATION_2>
 TF_ACC=1
+```
+
+If you would preffer to use the UI to launch the tests, it is aso possible to specify the environment variables used by vscode integrated testing by modifying the settings.json. Two options are available
+ * Use the built in variables definition:
+ ```json 
+    "go.testEnvVars": {
+        "ARM_CLIENT_ID" : "<YOUR_SERVICE_PRINCIPAL_CLIENT_ID>"
+        ...
+        ...
+    },    
+ ```
+  * Use the contents of a file as `private.env`
+```json
+    "go.testEnvFile": "${workspaceRoot}/.vscode/private.env"
 ```
 
 *Note: it is possible to customize the logging level of Terraform. It might be super useful in some situations. It can be done by setting the `TF_LOG` environment variable. Refer to [the official debugging documentation](https://www.terraform.io/docs/internals/debugging.html) for more details.*

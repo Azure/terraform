@@ -26,6 +26,7 @@ resource "azurerm_storage_account" "default" {
   resource_group_name      = azurerm_resource_group.default.name
   account_tier             = "Standard"
   account_replication_type = "GRS"
+  allow_blob_public_access = false
 
   network_rules {
     default_action = "Deny"
@@ -46,9 +47,14 @@ resource "azurerm_container_registry" "default" {
   public_network_access_enabled = false
 }
 
+resource "random_string" "workspace_suffix" {
+  length  = 10
+  special = false
+}
+
 # Machine Learning workspace
 resource "azurerm_machine_learning_workspace" "default" {
-  name                    = "mlw-${var.name}-${var.environment}"
+  name                    = "mlw-${var.name}-${var.environment}-${random_string.workspace_suffix.result}"
   location                = azurerm_resource_group.default.location
   resource_group_name     = azurerm_resource_group.default.name
   application_insights_id = azurerm_application_insights.default.id
@@ -149,7 +155,7 @@ resource "azurerm_private_endpoint" "mlw_ple" {
   subnet_id           = data.azurerm_subnet.ml.id
 
   private_dns_zone_group {
-    name = "private-dns-zone-group"
+    name                 = "private-dns-zone-group"
     private_dns_zone_ids = [
       var.privatelink_api_azureml_ms_resource_id,
       var.privatelink_notebooks_azure_net_resource_id

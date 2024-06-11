@@ -1,24 +1,32 @@
-resource "azurerm_kubernetes_cluster" "default" {
-  name                = "${var.name}-aks"
-  location            = "${azurerm_resource_group.default.location}"
-  resource_group_name = "${azurerm_resource_group.default.name}"
-  dns_prefix          = "${var.dns_prefix}-${var.name}-aks-${var.environment}"
-  depends_on          = ["azurerm_role_assignment.default"]
+resource "azurerm_user_assigned_identity" "aks_identity" {
+  location            = azurerm_resource_group.default.location
+  name                = "${var.name}-aks-identity"
+  resource_group_name = azurerm_resource_group.default.name
+}
 
-  agent_pool_profile {
+resource "azurerm_role_assignment" "default" {
+  scope                = azurerm_resource_group.default.id
+  role_definition_name = "Network Contributor"
+  principal_id         = azurerm_user_assigned_identity.aks_identity.principal_id
+}
+
+resource "azurerm_kubernetes_cluster" "main" {
+  name                              = "${var.name}-aks"
+  location                          = azurerm_resource_group.default.location
+  resource_group_name               = azurerm_resource_group.default.name
+  dns_prefix                        = "${var.dns_prefix}-${var.name}-aks-${var.environment}"
+  role_based_access_control_enabled = true
+
+  default_node_pool {
     name            = "default"
-    count           = "${var.node_count}"
-    vm_size         = "${var.node_type}"
-    os_type         = "Linux"
+    node_count      = var.node_count
+    vm_size         = var.node_type
     os_disk_size_gb = 30
   }
-
-  service_principal {
-    client_id     = "${azuread_application.default.application_id}"
-    client_secret = "${azuread_service_principal_password.default.value}"
+  identity {
+    type         = "UserAssigned"
+    identity_ids = [azurerm_user_assigned_identity.aks_identity.id]
   }
 
-  role_based_access_control {
-    enabled = true
-  }
+  depends_on = [azurerm_role_assignment.default]
 }

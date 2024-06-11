@@ -1,10 +1,23 @@
 resource "azurerm_resource_group" "example" {
-  name     = var.resource_group_name
+  name     = "${random_pet.prefix.id}-rg"
   location = var.location
 }
 
+resource "random_string" "db_account_name" {
+  count = var.cosmosdb_account_name == null ? 1 : 0
+
+  length  = 20
+  upper   = false
+  special = false
+  numeric = false
+}
+
+locals {
+  cosmosdb_account_name = try(random_string.db_account_name[0].result, var.cosmosdb_account_name)
+}
+
 resource "azurerm_cosmosdb_account" "example" {
-  name                      = var.cosmosdb_account_name
+  name                      = local.cosmosdb_account_name
   location                  = var.cosmosdb_account_location
   resource_group_name       = azurerm_resource_group.example.name
   offer_type                = "Standard"
@@ -24,7 +37,7 @@ resource "azurerm_cosmosdb_account" "example" {
   ]
 }
 
-resource "azurerm_cosmosdb_sql_database" "example" {
+resource "azurerm_cosmosdb_sql_database" "main" {
   name                = var.cosmosdb_sqldb_name
   resource_group_name = azurerm_resource_group.example.name
   account_name        = azurerm_cosmosdb_account.example.name
@@ -37,7 +50,7 @@ resource "azurerm_cosmosdb_sql_container" "example" {
   name                  = var.sql_container_name
   resource_group_name   = azurerm_resource_group.example.name
   account_name          = azurerm_cosmosdb_account.example.name
-  database_name         = azurerm_cosmosdb_sql_database.example.name
+  database_name         = azurerm_cosmosdb_sql_database.main.name
   partition_key_path    = "/definition/id"
   partition_key_version = 1
   autoscale_settings {
@@ -63,4 +76,9 @@ resource "azurerm_cosmosdb_sql_container" "example" {
   unique_key {
     paths = ["/definition/idlong", "/definition/idshort"]
   }
+}
+
+resource "random_pet" "prefix" {
+  prefix = var.prefix
+  length = 1
 }

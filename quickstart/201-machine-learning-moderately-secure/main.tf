@@ -8,13 +8,17 @@ terraform {
     }
 
     azureml = {
-      source = "registry.terraform.io/Telemaco019/azureml"
+      source = "registry.terraform.io/orobix/azureml"
     }
   }
 }
 
 provider "azurerm" {
-  features {}
+  features {
+    resource_group {
+      prevent_deletion_if_contains_resources = false
+    }
+  }
 }
 
 data "azurerm_client_config" "current" {}

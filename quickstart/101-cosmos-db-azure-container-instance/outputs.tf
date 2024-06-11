@@ -7,5 +7,5 @@ output "cosmosdb_account_name" {
 }
 
 output "dns" {
-  value = azurerm_container_group.vote_aci.fqdn
+  value = azurerm_container_group.main.fqdn
 }

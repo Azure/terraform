@@ -1,4 +1,4 @@
-# Azure resource group
+# Azure Linux VM
 
 This template deploys a Linux virtual machine (VM) with infrastructure that includes a virtual network, subnet, public IP address, and more.
 
@@ -15,8 +15,9 @@ This template deploys a Linux virtual machine (VM) with infrastructure that incl
 - [azurerm_network_interface_security_group_association](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_interface_security_group_association)
 - [random_id](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/id)
 - [azurerm_storage_account](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account)
-- [tls_private_key](https://registry.terraform.io/providers/hashicorp/tls/latest/docs/resources/private_key)
 - [azurerm_linux_virtual_machine](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/linux_virtual_machine)
+- [azapi_resource](https://registry.terraform.io/providers/Azure/azapi/latest/docs/resources/azapi_resource)
+- [azapi_resource_action](https://registry.terraform.io/providers/Azure/azapi/latest/docs/resources/azapi_resource_action)
 
 ## Variables
 
@@ -24,7 +25,8 @@ This template deploys a Linux virtual machine (VM) with infrastructure that incl
 |---|---|---|
 | `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. | rg |
 | `resource_group_location` | Location of the resource group. | eastus |
+| `username` | The username for the local account that will be created on the new VM. | azureadmin |
 
 ## Example
 
-To see how to run this example, see [Quickstart: Configure a Linux virtual machine in Azure using Terraform](https://docs.microsoft.com/azure/developer/terraform/create-linux-virtual-machine-with-infrastructure).
+To see how to run this example, see [Quickstart: Configure a Linux virtual machine in Azure using Terraform](https://learn.microsoft.com/azure/virtual-machines/linux/quick-create-terraform).

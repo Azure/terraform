@@ -51,7 +51,7 @@ resource "azurerm_subnet" "default" {
     name = "fs"
 
     service_delegation {
-      name    = "Microsoft.DBforMySQL/flexibleServers"
+      name = "Microsoft.DBforMySQL/flexibleServers"
       actions = [
         "Microsoft.Network/virtualNetworks/subnets/join/action",
       ]
@@ -71,6 +71,8 @@ resource "azurerm_private_dns_zone_virtual_network_link" "default" {
   private_dns_zone_name = azurerm_private_dns_zone.default.name
   resource_group_name   = azurerm_resource_group.rg.name
   virtual_network_id    = azurerm_virtual_network.default.id
+
+  depends_on = [azurerm_subnet.default]
 }
 
 # Manages the MySQL Flexible Server
@@ -86,11 +88,9 @@ resource "azurerm_mysql_flexible_server" "default" {
   private_dns_zone_id          = azurerm_private_dns_zone.default.id
   sku_name                     = "GP_Standard_D2ds_v4"
   version                      = "8.0.21"
-  zone                         = "1"
 
   high_availability {
-    mode                      = "ZoneRedundant"
-    standby_availability_zone = "2"
+    mode                      = "SameZone"
   }
   maintenance_window {
     day_of_week  = 0

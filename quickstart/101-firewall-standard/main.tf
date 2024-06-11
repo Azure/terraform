@@ -1,26 +1,10 @@
-terraform {
-
-  required_version = ">=0.12"
-  
-  required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = ">=2.46.0"
-    }
-  }
-}
-
-provider "azurerm" {
-  features {}
-}
-
 resource "azurerm_resource_group" "rg" {
-  name     = "test-resources"
+  name     = "${random_pet.prefix.id}-rg"
   location = var.resource_group_location
 }
 
 resource "azurerm_virtual_network" "vnet" {
-  name                = "testvnet"
+  name                = "${random_pet.prefix.id}-vnet"
   address_space       = ["10.0.0.0/16"]
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
@@ -34,17 +18,19 @@ resource "azurerm_subnet" "subnet" {
 }
 
 resource "azurerm_public_ip" "pip" {
-  name                = "testpip"
+  name                = "${random_pet.prefix.id}-pip"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   allocation_method   = "Static"
   sku                 = "Standard"
 }
 
-resource "azurerm_firewall" "fw" {
-  name                = "testfirewall"
+resource "azurerm_firewall" "main" {
+  name                = "${random_pet.prefix.id}-fw"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
+  sku_name            = "AZFW_VNet"
+  sku_tier            = "Standard"
 
   ip_configuration {
     name                 = "configuration"
@@ -54,8 +40,8 @@ resource "azurerm_firewall" "fw" {
 }
 
 resource "azurerm_firewall_application_rule_collection" "app-rc" {
-  name                = "apptestcollection"
-  azure_firewall_name = azurerm_firewall.fw.name
+  name                = "${random_pet.prefix.id}-app-rc"
+  azure_firewall_name = azurerm_firewall.main.name
   resource_group_name = azurerm_resource_group.rg.name
   priority            = 100
   action              = "Allow"
@@ -79,8 +65,8 @@ resource "azurerm_firewall_application_rule_collection" "app-rc" {
 }
 
 resource "azurerm_firewall_network_rule_collection" "net-rc" {
-  name                = "nettestcollection"
-  azure_firewall_name = azurerm_firewall.fw.name
+  name                = "${random_pet.prefix.id}-net-rc"
+  azure_firewall_name = azurerm_firewall.main.name
   resource_group_name = azurerm_resource_group.rg.name
   priority            = 100
   action              = "Allow"
@@ -106,4 +92,9 @@ resource "azurerm_firewall_network_rule_collection" "net-rc" {
       "UDP",
     ]
   }
+}
+
+resource "random_pet" "prefix" {
+  prefix = var.prefix
+  length = 1
 }

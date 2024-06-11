@@ -1,34 +1,42 @@
-resource "random_pet" "rg-name" {
+resource "random_pet" "rg_name" {
   prefix = var.resource_group_name_prefix
 }
 
 resource "azurerm_resource_group" "rg" {
-  name     = random_pet.rg-name.id
+  name     = random_pet.rg_name.id
   location = var.resource_group_location
 }
 
 # Locals block for hardcoded names
 locals {
-  backend_address_pool_name      = "${azurerm_virtual_network.test.name}-beap"
-  frontend_port_name             = "${azurerm_virtual_network.test.name}-feport"
-  frontend_ip_configuration_name = "${azurerm_virtual_network.test.name}-feip"
-  http_setting_name              = "${azurerm_virtual_network.test.name}-be-htst"
-  listener_name                  = "${azurerm_virtual_network.test.name}-httplstn"
-  request_routing_rule_name      = "${azurerm_virtual_network.test.name}-rqrt"
-  app_gateway_subnet_name        = "appgwsubnet"
+  backend_address_pool_name      = "${azurerm_virtual_network.vnet.name}-beap"
+  frontend_port_name             = "${azurerm_virtual_network.vnet.name}-feport"
+  frontend_ip_configuration_name = "${azurerm_virtual_network.vnet.name}-feip"
+  http_setting_name              = "${azurerm_virtual_network.vnet.name}-be-htst"
+  listener_name                  = "${azurerm_virtual_network.vnet.name}-httplstn"
+  request_routing_rule_name      = "${azurerm_virtual_network.vnet.name}-rqrt"
 }
 
-# User Assigned Identities 
-resource "azurerm_user_assigned_identity" "testIdentity" {
-  resource_group_name = azurerm_resource_group.rg.name
-  location            = azurerm_resource_group.rg.location
-
-  name = "identity1"
-
-  tags = var.tags
+# Subnets
+data "azurerm_subnet" "kubesubnet" {
+  name                 = var.aks_subnet_name
+  virtual_network_name = azurerm_virtual_network.vnet.name
+  resource_group_name  = azurerm_resource_group.rg.name
 }
 
-resource "azurerm_virtual_network" "test" {
+data "azurerm_subnet" "appgwsubnet" {
+  name                 = var.appgw_subnet_name
+  virtual_network_name = azurerm_virtual_network.vnet.name
+  resource_group_name  = azurerm_resource_group.rg.name
+}
+
+data "azurerm_user_assigned_identity" "ingress" {
+  name                = "ingressapplicationgateway-${azurerm_kubernetes_cluster.aks.name}"
+  resource_group_name = azurerm_kubernetes_cluster.aks.node_resource_group
+}
+
+# Virtual network (vnet)
+resource "azurerm_virtual_network" "vnet" {
   name                = var.virtual_network_name
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
@@ -40,47 +48,74 @@ resource "azurerm_virtual_network" "test" {
   }
 
   subnet {
-    name           = "appgwsubnet"
+    name           = var.appgw_subnet_name
     address_prefix = var.app_gateway_subnet_address_prefix
   }
-
-  tags = var.tags
 }
 
-data "azurerm_subnet" "kubesubnet" {
-  name                 = var.aks_subnet_name
-  virtual_network_name = azurerm_virtual_network.test.name
-  resource_group_name  = azurerm_resource_group.rg.name
-  depends_on           = [azurerm_virtual_network.test]
-}
-
-data "azurerm_subnet" "appgwsubnet" {
-  name                 = "appgwsubnet"
-  virtual_network_name = azurerm_virtual_network.test.name
-  resource_group_name  = azurerm_resource_group.rg.name
-  depends_on           = [azurerm_virtual_network.test]
-}
-
-# Public Ip 
-resource "azurerm_public_ip" "test" {
-  name                = "publicIp1"
-  location            = azurerm_resource_group.rg.location
+resource "azurerm_user_assigned_identity" "aks" {
+  name                = "aks-${var.aks_cluster_name}"
   resource_group_name = azurerm_resource_group.rg.name
+  location            = azurerm_resource_group.rg.location
+}
+
+# AKS cluster
+resource "azurerm_kubernetes_cluster" "aks" {
+  name                              = var.aks_cluster_name
+  location                          = azurerm_resource_group.rg.location
+  resource_group_name               = azurerm_resource_group.rg.name
+  dns_prefix                        = var.aks_cluster_name
+  private_cluster_enabled           = var.aks_private_cluster
+  role_based_access_control_enabled = var.aks_enable_rbac
+  sku_tier                          = var.aks_sku_tier
+
+  default_node_pool {
+    name            = "agentpool"
+    node_count      = var.aks_node_count
+    vm_size         = var.aks_vm_size
+    os_disk_size_gb = var.aks_os_disk_size
+    max_pods        = 100
+    vnet_subnet_id  = data.azurerm_subnet.kubesubnet.id
+  }
+
+  identity {
+    type         = "UserAssigned"
+    identity_ids = [azurerm_user_assigned_identity.aks.id]
+  }
+
+
+  network_profile {
+    network_plugin = "azure"
+    dns_service_ip = var.aks_dns_service_ip
+    service_cidr   = var.aks_service_cidr
+  }
+
+  ingress_application_gateway {
+    gateway_id = azurerm_application_gateway.appgw.id
+  }
+
+  depends_on = [
+    azurerm_application_gateway.appgw
+  ]
+}
+
+resource "azurerm_public_ip" "pip" {
+  name                = "appgw-pip"
+  resource_group_name = azurerm_resource_group.rg.name
+  location            = azurerm_resource_group.rg.location
   allocation_method   = "Static"
   sku                 = "Standard"
-
-  tags = var.tags
 }
 
-resource "azurerm_application_gateway" "network" {
+resource "azurerm_application_gateway" "appgw" {
   name                = var.app_gateway_name
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
 
   sku {
-    name     = var.app_gateway_sku
-    tier     = "Standard_v2"
-    capacity = 2
+    name     = var.app_gateway_tier
+    tier     = var.app_gateway_tier
+    capacity = 1
   }
 
   gateway_ip_configuration {
@@ -93,14 +128,9 @@ resource "azurerm_application_gateway" "network" {
     port = 80
   }
 
-  frontend_port {
-    name = "httpsPort"
-    port = 443
-  }
-
   frontend_ip_configuration {
     name                 = local.frontend_ip_configuration_name
-    public_ip_address_id = azurerm_public_ip.test.id
+    public_ip_address_id = azurerm_public_ip.pip.id
   }
 
   backend_address_pool {
@@ -124,87 +154,45 @@ resource "azurerm_application_gateway" "network" {
 
   request_routing_rule {
     name                       = local.request_routing_rule_name
+    priority                   = 1
     rule_type                  = "Basic"
     http_listener_name         = local.listener_name
     backend_address_pool_name  = local.backend_address_pool_name
     backend_http_settings_name = local.http_setting_name
   }
 
-  tags = var.tags
-
-  depends_on = [azurerm_virtual_network.test, azurerm_public_ip.test]
+  # Since this sample is creating an Application Gateway 
+  # that is later managed by an Ingress Controller, there is no need 
+  # to create a backend address pool (BEP). However, the BEP is still 
+  # required by the resource. Therefore, "lifecycle:ignore_changes" is 
+  # used to prevent TF from managing the gateway.
+  lifecycle {
+    ignore_changes = [
+      tags,
+      backend_address_pool,
+      backend_http_settings,
+      http_listener,
+      probe,
+      request_routing_rule,
+    ]
+  }
 }
 
+# Role assignments
 resource "azurerm_role_assignment" "ra1" {
-  scope                = data.azurerm_subnet.kubesubnet.id
-  role_definition_name = "Network Contributor"
-  principal_id         = var.aks_service_principal_object_id
-
-  depends_on = [azurerm_virtual_network.test]
+  scope                = azurerm_resource_group.rg.id
+  role_definition_name = "Reader"
+  principal_id         = data.azurerm_user_assigned_identity.ingress.principal_id
 }
 
 resource "azurerm_role_assignment" "ra2" {
-  scope                = azurerm_user_assigned_identity.testIdentity.id
-  role_definition_name = "Managed Identity Operator"
-  principal_id         = var.aks_service_principal_object_id
-  depends_on           = [azurerm_user_assigned_identity.testIdentity]
+  scope                = azurerm_virtual_network.vnet.id
+  role_definition_name = "Network Contributor"
+  principal_id         = data.azurerm_user_assigned_identity.ingress.principal_id
 }
 
 resource "azurerm_role_assignment" "ra3" {
-  scope                = azurerm_application_gateway.network.id
+  scope                = azurerm_application_gateway.appgw.id
   role_definition_name = "Contributor"
-  principal_id         = azurerm_user_assigned_identity.testIdentity.principal_id
-  depends_on           = [azurerm_user_assigned_identity.testIdentity, azurerm_application_gateway.network]
-}
-
-resource "azurerm_role_assignment" "ra4" {
-  scope                = azurerm_resource_group.rg.id
-  role_definition_name = "Reader"
-  principal_id         = azurerm_user_assigned_identity.testIdentity.principal_id
-  depends_on           = [azurerm_user_assigned_identity.testIdentity, azurerm_application_gateway.network]
-}
-
-resource "azurerm_kubernetes_cluster" "k8s" {
-  name       = var.aks_name
-  location   = azurerm_resource_group.rg.location
-  dns_prefix = var.aks_dns_prefix
-
-  resource_group_name = azurerm_resource_group.rg.name
-
-  http_application_routing_enabled = false
-
-  linux_profile {
-    admin_username = var.vm_user_name
-
-    ssh_key {
-      key_data = file(var.public_ssh_key_path)
-    }
-  }
-
-  default_node_pool {
-    name            = "agentpool"
-    node_count      = var.aks_agent_count
-    vm_size         = var.aks_agent_vm_size
-    os_disk_size_gb = var.aks_agent_os_disk_size
-    vnet_subnet_id  = data.azurerm_subnet.kubesubnet.id
-  }
-
-  service_principal {
-    client_id     = var.aks_service_principal_app_id
-    client_secret = var.aks_service_principal_client_secret
-  }
-
-  network_profile {
-    network_plugin     = "azure"
-    dns_service_ip     = var.aks_dns_service_ip
-    docker_bridge_cidr = var.aks_docker_bridge_cidr
-    service_cidr       = var.aks_service_cidr
-  }
-
-  role_based_access_control {
-    enabled = var.aks_enable_rbac
-  }
-
-  depends_on = [azurerm_virtual_network.test, azurerm_application_gateway.network]
-  tags       = var.tags
+  principal_id         = data.azurerm_user_assigned_identity.ingress.principal_id
 }

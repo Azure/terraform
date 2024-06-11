@@ -1,13 +1,17 @@
 resource "azurerm_resource_group" "example" {
-  name     = "${var.name_prefix}-rg"
+  name     = "${random_pet.prefix.id}-rg"
   location = var.location
 }
 
 // Key Vault Key
 data "azurerm_client_config" "current" {}
 
+locals {
+  current_user_object_id = coalesce(var.msi_id, data.azurerm_client_config.current.object_id)
+}
+
 resource "azurerm_key_vault" "example" {
-  name                        = "${var.name_prefix}-kv"
+  name                        = "${random_pet.prefix.id}-kv"
   location                    = azurerm_resource_group.example.location
   resource_group_name         = azurerm_resource_group.example.name
   tenant_id                   = data.azurerm_client_config.current.tenant_id
@@ -17,16 +21,17 @@ resource "azurerm_key_vault" "example" {
   soft_delete_retention_days  = 7
 }
 
-resource "azurerm_key_vault_access_policy" "service-principal" {
+resource "azurerm_key_vault_access_policy" "current_user" {
   key_vault_id = azurerm_key_vault.example.id
   tenant_id    = data.azurerm_client_config.current.tenant_id
-  object_id    = data.azurerm_client_config.current.object_id
+  object_id    = local.current_user_object_id
 
   key_permissions = [
     "Create",
     "Delete",
     "Get",
     "Update",
+    "GetRotationPolicy",
   ]
 
   secret_permissions = [
@@ -52,27 +57,27 @@ resource "azurerm_key_vault_key" "example" {
   ]
 
   depends_on = [
-    azurerm_key_vault_access_policy.service-principal
+    azurerm_key_vault_access_policy.current_user
   ]
 }
 
 // Virtual Machine
 resource "azurerm_virtual_network" "example" {
-  name                = "${var.name_prefix}-vnet"
+  name                = "${random_pet.prefix.id}-vnet"
   address_space       = ["10.0.0.0/16"]
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
 }
 
 resource "azurerm_subnet" "example" {
-  name                 = "${var.name_prefix}-subnet"
+  name                 = "${random_pet.prefix.id}-subnet"
   resource_group_name  = azurerm_resource_group.example.name
   virtual_network_name = azurerm_virtual_network.example.name
   address_prefixes     = ["10.0.2.0/24"]
 }
 
 resource "azurerm_network_interface" "example" {
-  name                = "${var.name_prefix}-nic"
+  name                = "${random_pet.prefix.id}-nic"
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
 
@@ -83,8 +88,8 @@ resource "azurerm_network_interface" "example" {
   }
 }
 
-resource "azurerm_linux_virtual_machine" "example" {
-  name                = "${var.name_prefix}-vm"
+resource "azurerm_linux_virtual_machine" "main" {
+  name                = "${random_pet.prefix.id}-vm"
   resource_group_name = azurerm_resource_group.example.name
   location            = azurerm_resource_group.example.location
   size                = "Standard_D2s_v3"
@@ -95,7 +100,7 @@ resource "azurerm_linux_virtual_machine" "example" {
 
   admin_ssh_key {
     username   = "azureuser"
-    public_key = var.vm_public_key
+    public_key = tls_private_key.vm_key.public_key_openssh
   }
 
   source_image_reference {
@@ -118,7 +123,7 @@ resource "azurerm_virtual_machine_extension" "example" {
   type                       = "AzureDiskEncryptionForLinux"
   type_handler_version       = "1.1"
   auto_upgrade_minor_version = false
-  virtual_machine_id         = azurerm_linux_virtual_machine.example.id
+  virtual_machine_id         = azurerm_linux_virtual_machine.main.id
 
   settings = jsonencode({
     "EncryptionOperation"    = "EnableEncryption"
@@ -129,4 +134,19 @@ resource "azurerm_virtual_machine_extension" "example" {
     "KekVaultResourceId"     = azurerm_key_vault.example.id
     "VolumeType"             = "All"
   })
+}
+
+resource "local_sensitive_file" "lsf" {
+  content  = tls_private_key.vm_key.private_key_pem
+  filename = "key.pem"
+}
+
+resource "random_pet" "prefix" {
+  length = 1
+  prefix = var.prefix
+}
+
+resource "tls_private_key" "vm_key" {
+  algorithm = "RSA"
+  rsa_bits  = 4096
 }

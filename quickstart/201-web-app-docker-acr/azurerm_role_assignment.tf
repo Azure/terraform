@@ -1,5 +1,5 @@
 resource "azurerm_role_assignment" "acr" {
-  scope                = "${data.azurerm_subscription.current.id}/resourceGroups/${azurerm_resource_group.default.name}/providers/Microsoft.Web/serverFarms/${azurerm_app_service.default.name}"
+  scope                = azurerm_app_service_plan.default.id
   role_definition_name = "Reader"
-  principal_id         = "${azurerm_app_service.default.identity[0].principal_id}"
+  principal_id         = azurerm_app_service.main.identity[0].principal_id
 }

@@ -1,128 +1,123 @@
-variable "resource_group_name_prefix" {
-  default     = "rg"
-  description = "Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription."
-}
-
 variable "resource_group_location" {
+  type        = string
   default     = "eastus"
-  description = "Location of the resource group."
+  description = "Location for all resources."
 }
 
-variable "aks_service_principal_app_id" {
-  description = "Application ID/Client ID  of the service principal. Used by AKS to manage AKS related resources on Azure like vms, subnets."
-}
-
-variable "aks_service_principal_client_secret" {
-  description = "Secret of the service principal. Used by AKS to manage Azure."
-}
-
-variable "aks_service_principal_object_id" {
-  description = "Object ID of the service principal."
+variable "resource_group_name_prefix" {
+  type        = string
+  default     = "rg"
+  description = "Prefix of the resource group name that's combined with a random value so name is unique in your Azure subscription."
 }
 
 variable "virtual_network_name" {
-  description = "Virtual network name"
+  type        = string
+  description = "Virtual network name."
   default     = "aksVirtualNetwork"
 }
 
 variable "virtual_network_address_prefix" {
-  description = "VNET address prefix"
-  default     = "192.168.0.0/16"
+  type        = string
+  description = "VNET address prefix."
+  default     = "10.1.0.0/18"
 }
 
 variable "aks_subnet_name" {
-  description = "Subnet Name."
-  default     = "kubesubnet"
+  type        = string
+  description = "Name of the subset."
+  default     = "akssubnet"
 }
 
-variable "aks_subnet_address_prefix" {
-  description = "Subnet address prefix."
-  default     = "192.168.0.0/24"
+variable "appgw_subnet_name" {
+  type        = string
+  description = "Name of the subset."
+  default     = "appgwsubnet"
 }
 
-variable "app_gateway_subnet_address_prefix" {
-  description = "Subnet server IP address."
-  default     = "192.168.1.0/24"
+variable "aks_cluster_name" {
+  type        = string
+  description = "The name of the Managed Kubernetes Cluster to create."
+  default     = "aks-cluster"
 }
 
-variable "app_gateway_name" {
-  description = "Name of the Application Gateway"
-  default     = "ApplicationGateway1"
+variable "aks_os_disk_size" {
+  type        = number
+  description = "(Optional) The size of the OS Disk which should be used for each agent in the Node Pool."
+  default     = 50
 }
 
-variable "app_gateway_sku" {
-  description = "Name of the Application Gateway SKU"
-  default     = "Standard_v2"
-}
-
-variable "app_gateway_tier" {
-  description = "Tier of the Application Gateway tier"
-  default     = "Standard_v2"
-}
-
-variable "aks_name" {
-  description = "AKS cluster name"
-  default     = "aks-cluster1"
-}
-variable "aks_dns_prefix" {
-  description = "Optional DNS prefix to use with hosted Kubernetes API server FQDN."
-  default     = "aks"
-}
-
-variable "aks_agent_os_disk_size" {
-  description = "Disk size (in GB) to provision for each of the agent pool nodes. This value ranges from 0 to 1023. Specifying 0 applies the default disk size for that agentVMSize."
-  default     = 40
-}
-
-variable "aks_agent_count" {
-  description = "The number of agent nodes for the cluster."
+variable "aks_node_count" {
+  type        = number
+  description = "(Optional) The initial number of nodes which should exist in this Node Pool."
   default     = 3
 }
 
-variable "aks_agent_vm_size" {
-  description = "VM size"
+variable "aks_sku_tier" {
+  type        = string
+  description = "(Optional) The SKU tier that should be used for this Kubernetes Cluster. Possible values are Free and Paid (which includes the Uptime SLA)."
+  default     = "Free"
+  validation {
+    condition     = contains(["Free", "Paid"], var.aks_sku_tier)
+    error_message = "Invalid SKU tier. The value should be one of the following: 'Free','Paid'."
+  }
+}
+
+variable "aks_vm_size" {
+  type        = string
+  description = "The size of the virtual machine."
   default     = "Standard_D3_v2"
 }
 
 variable "kubernetes_version" {
-  description = "Kubernetes version"
-  default     = "1.11.5"
+  type        = string
+  description = "(Optional) Version of Kubernetes specified when creating the AKS managed cluster."
+  default     = "1.19.11"
 }
 
 variable "aks_service_cidr" {
-  description = "CIDR notation IP range from which to assign service cluster IPs"
-  default     = "10.0.0.0/16"
+  type        = string
+  description = "(Optional) The Network Range used by the Kubernetes service."
+  default     = "192.168.0.0/20"
 }
 
 variable "aks_dns_service_ip" {
-  description = "DNS server IP address"
-  default     = "10.0.0.10"
+  type        = string
+  description = "(Optional) IP address within the Kubernetes service address range that will be used by cluster service discovery (kube-dns)."
+  default     = "192.168.0.10"
 }
 
-variable "aks_docker_bridge_cidr" {
-  description = "CIDR notation IP for Docker bridge."
-  default     = "172.17.0.1/16"
+variable "aks_private_cluster" {
+  type        = bool
+  description = "(Optional) Should this Kubernetes Cluster have its API server only exposed on internal IP addresses? This provides a Private IP Address for the Kubernetes API on the Virtual Network where the Kubernetes Cluster is located."
+  default     = false
+}
+
+variable "aks_subnet_address_prefix" {
+  description = "Subnet address prefix."
+  type        = string
+  default     = "10.1.0.0/22"
+}
+
+variable "app_gateway_subnet_address_prefix" {
+  type        = string
+  description = "Subnet address prefix."
+  default     = "10.1.4.0/24"
+}
+
+variable "app_gateway_name" {
+  description = "Name of the Application Gateway"
+  type        = string
+  default     = "ApplicationGateway1"
+}
+
+variable "app_gateway_tier" {
+  description = "Tier of the Application Gateway tier."
+  type        = string
+  default     = "Standard_v2"
 }
 
 variable "aks_enable_rbac" {
-  description = "Enable RBAC on the AKS cluster. Defaults to false."
-  default     = "false"
-}
-
-variable "vm_user_name" {
-  description = "User name for the VM"
-  default     = "vmuser1"
-}
-
-variable "public_ssh_key_path" {
-  description = "Public key path for SSH."
-  default     = "~/.ssh/id_rsa.pub"
-}
-
-variable "tags" {
-  type = map(string)
-
-  default = {
-    source = "terraform"
-  }
+  description = "(Optional) Is Role Based Access Control based on Azure AD enabled?"
+  type        = bool
+  default     = false
 }
