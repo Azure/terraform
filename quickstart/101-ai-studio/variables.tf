@@ -17,6 +17,12 @@ variable "sku" {
     default     = "S0"
 }
 
+resource "random_string" "suffix" {  
+  length           = 4  
+  special          = false  
+  upper            = false  
+} 
+
 /*Optional: For Customer Managed Keys, uncomment this part AND the corresponding section in hub.tf
 variable "cmk_keyvault_key_uri" {
     description = "Key vault uri to access the encryption key."
