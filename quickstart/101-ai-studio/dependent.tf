@@ -5,7 +5,7 @@ resource "azurerm_resource_group" "default" {
 }
 
 resource "azurerm_storage_account" "default" {
-  name                            = "${var.names}storage"
+  name                            = "${var.names}storage${random_string.suffix.result}"
   location                        = azurerm_resource_group.default.location
   resource_group_name             = azurerm_resource_group.default.name
   account_tier                    = "Standard"
@@ -14,7 +14,7 @@ resource "azurerm_storage_account" "default" {
 }
 
 resource "azurerm_key_vault" "default" {
-  name                     = "${var.names}keyvault"
+  name                     = "${var.names}keyvault${random_string.suffix.result}"
   location                 = azurerm_resource_group.default.location
   resource_group_name      = azurerm_resource_group.default.name
   tenant_id                = data.azurerm_client_config.current.tenant_id
