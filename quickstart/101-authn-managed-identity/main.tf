@@ -3,28 +3,28 @@ resource "random_pet" "rg_name" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name     = random_pet.rg_name.id
   location = var.resource_group_location
+  name     = random_pet.rg_name.id
 }
 
 data "azurerm_subscription" "current" {}
 
 resource "azurerm_virtual_network" "example" {
-  name                = "nanxuvnet06071"
+  name                = "myVnet"
   address_space       = ["10.0.0.0/16"]
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
 }
 
 resource "azurerm_subnet" "example" {
-  name                 = "nanxusubnet06071"
+  name                 = "mySubnet"
   resource_group_name  = azurerm_resource_group.rg.name
   virtual_network_name = azurerm_virtual_network.example.name
   address_prefixes     = ["10.0.2.0/24"]
 }
 
 resource "azurerm_network_interface" "example" {
-  name                = "nanxunic06071"
+  name                = "myNic"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
 
@@ -36,7 +36,7 @@ resource "azurerm_network_interface" "example" {
 }
 
 resource "azurerm_linux_virtual_machine" "example" {
-  name                = "nanxuvm06071"
+  name                = "myVm"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   size                = "Standard_F2"
@@ -78,4 +78,3 @@ resource "azurerm_role_assignment" "example" {
   role_definition_name = "Contributor"
   principal_id       = azurerm_linux_virtual_machine.example.identity[0].principal_id
 }
-
