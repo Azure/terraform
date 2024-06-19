@@ -1,4 +1,4 @@
-# Azure Linux VM
+# Authentication using managed identities for Azure services
 
 This template deploys a Linux virtual machine (VM) to show an example of how to use managed identities for Azure services.
 
@@ -6,20 +6,11 @@ This template deploys a Linux virtual machine (VM) to show an example of how to 
 
 - [random_pet](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/pet)
 - [azurerm_resource_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group)
-
 - [azurerm_virtual_network](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_network)
-
-
 - [azurerm_subnet](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet)
-- [azurerm_public_ip](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/public_ip)
-- [azurerm_network_security_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_security_group)
-- [azurerm_network_interface](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_interface)
-- [azurerm_network_interface_security_group_association](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_interface_security_group_association)
-- [random_id](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/id)
-- [azurerm_storage_account](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account)
+- [azurerm_network_interface](azurerm_network_interface)
 - [azurerm_linux_virtual_machine](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/linux_virtual_machine)
-- [azapi_resource](https://registry.terraform.io/providers/Azure/azapi/latest/docs/resources/azapi_resource)
-- [azapi_resource_action](https://registry.terraform.io/providers/Azure/azapi/latest/docs/resources/azapi_resource_action)
+- [azurerm_role_assignment](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment)
 
 ## Variables
 
@@ -31,3 +22,4 @@ This template deploys a Linux virtual machine (VM) to show an example of how to 
 
 ## Example
 
+To see how to run this example, see [Authenticate Terraform using Managed Identity for Azure services](https://docs.microsoft.com/azure/developer/terraform/authenticate-to-azure-using-msi).
