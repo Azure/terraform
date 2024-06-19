@@ -8,17 +8,12 @@ resource "azapi_resource" "AIServicesConnection" {
       properties = {
         category = "AIServices",
         target = jsondecode(azapi_resource.AIServicesResource.output).properties.endpoint,
-        authType = "AAD", //  or "APIKey"
+        authType = "AAD",
         isSharedToAll = true,
         metadata = {
           ApiType = "Azure",
           ResourceId = azapi_resource.AIServicesResource.id
         }
-        
-        credentials = {
-            Key = "" // <- must input APIKey here
-        }
-        
       }
     })
   response_export_values = ["*"]
