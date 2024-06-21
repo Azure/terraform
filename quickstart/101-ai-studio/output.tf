@@ -1,5 +1,5 @@
 output "ResourceGroup" {
-  value = azurerm_resource_group.default.id
+  value = azurerm_resource_group.rg.id
 }
 
 output "HubId" {
@@ -13,4 +13,3 @@ output "ProjectId" {
 output "endpoint" {
   value = jsondecode(azapi_resource.AIServicesResource.output).properties.endpoint
 }
-

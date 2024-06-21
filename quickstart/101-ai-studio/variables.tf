@@ -1,14 +1,19 @@
-// Names and Try are used for naming conventions in hub.tf and depende
-variable "names" {
-    type = string
-    description="This variable is used to name the hub, project, and dependent resources."
-    default = "tftemplate"
+variable "resource_group_location" {
+  type        = string
+  default     = "eastus"
+  description = "Location of the resource group."
 }
 
-variable "location" {
+variable "resource_group_name_prefix" {
+  type        = string
+  default     = "rg"
+  description = "Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription."
+}
+
+variable "prefix" {
     type = string
-    description = "This is the location for all resources"
-    default = "East US 2"
+    description="This variable is used to name the hub, project, and dependent resources."
+    default = "ai"
 }
 
 variable "sku" {
@@ -23,7 +28,7 @@ resource "random_string" "suffix" {
   upper            = false  
 } 
 
-/*Optional: For Customer Managed Keys, uncomment this part AND the corresponding section in hub.tf
+/*Optional: For Customer Managed Keys, uncomment this part AND the corresponding section in main.tf
 variable "cmk_keyvault_key_uri" {
     description = "Key vault uri to access the encryption key."
 }
