@@ -16,10 +16,6 @@ resource "random_pet" "azurerm_kubernetes_cluster_dns_prefix" {
   prefix = "dns"
 }
 
-resource "random_pet" "azurerm_kubernetes_cluster_node_pool" {
-  prefix = "pool"
-}
-
 resource "azurerm_virtual_network" "vnet" {
   name                = "myvnet"
   location            = azurerm_resource_group.rg.location
@@ -58,12 +54,4 @@ resource "azurerm_kubernetes_cluster" "aks" {
     network_plugin    = "kubenet"
     load_balancer_sku = "standard"
   }
-}
-
-resource "azurerm_kubernetes_cluster_node_pool" "win" {
-  name                  = random_pet.azurerm_kubernetes_cluster_node_pool.id
-  kubernetes_cluster_id = azurerm_kubernetes_cluster.aks.id
-  vm_size               = "Standard_D4s_v3"
-  node_count            = var.node_count_windows
-  os_type               = "Windows"
 }
