@@ -9,10 +9,13 @@ import (
 	"testing"
 
 	helper "github.com/Azure/terraform-module-test-helper"
+	"github.com/agiledragon/gomonkey/v2"
 	"github.com/gruntwork-io/terratest/modules/files"
 	"github.com/gruntwork-io/terratest/modules/packer"
+	"github.com/gruntwork-io/terratest/modules/shell"
 	"github.com/gruntwork-io/terratest/modules/terraform"
 	test_structure "github.com/gruntwork-io/terratest/modules/test-structure"
+	terratest "github.com/gruntwork-io/terratest/modules/testing"
 	"github.com/stretchr/testify/require"
 )
 
@@ -128,6 +131,21 @@ func test201VmssPackerJumpbox(t *testing.T) {
 	if tenantId := os.Getenv("ARM_TENANT_ID"); !useMsi && tenantId != "" {
 		packerVars["tenant_id"] = tenantId
 	}
+	patches := gomonkey.ApplyFunc(shell.RunCommandAndGetOutputE, func(t terratest.TestingT, command shell.Command) (string, error) {
+		output, err := shell.RunCommandAndGetStdOutE(t, command)
+		if err != nil {
+			return output, err
+		}
+
+		if len(command.Args) == 1 && command.Args[0] == "-version" {
+			output = strings.TrimPrefix(output, "Packer ")
+			output = strings.TrimPrefix(output, "v")
+			output = strings.Split(output, "\n")[0]
+		}
+		return output, nil
+	})
+	defer patches.Reset()
+
 	_, err := packer.BuildArtifactE(t, &packer.Options{
 		Template:   pkrCfg,
 		Vars:       packerVars,
