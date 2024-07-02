@@ -1,3 +1,7 @@
+resource "random_pet" "prefix" {
+  prefix = var.prefix
+  length = 1
+}
 resource "azurerm_resource_group" "rg" {
   name     = "${random_pet.prefix.id}-rg"
   location = var.resource_group_location
@@ -92,9 +96,4 @@ resource "azurerm_firewall_network_rule_collection" "net-rc" {
       "UDP",
     ]
   }
-}
-
-resource "random_pet" "prefix" {
-  prefix = var.prefix
-  length = 1
 }
