@@ -50,8 +50,8 @@ resource "azurerm_kubernetes_cluster" "aks" {
   }
 
   windows_profile {
-    admin_username = "azureadmin"
-    admin_password = "Password0123!"
+    admin_username = var.admin_username
+    admin_password = var.admin_password
   }
 
   network_profile {
