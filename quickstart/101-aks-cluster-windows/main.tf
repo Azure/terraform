@@ -17,10 +17,10 @@ resource "random_pet" "azurerm_kubernetes_cluster_dns_prefix" {
 }
 
 resource "random_string" "azurerm_kubernetes_cluster_node_pool" {
-  length  = 12
+  length  = 6
   special = false
   numeric = false
-   lower   = true
+  lower   = true
   upper   = false
 }
 

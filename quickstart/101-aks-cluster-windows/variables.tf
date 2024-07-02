@@ -25,11 +25,11 @@ variable "node_count_windows" {
 variable "admin_username" {
   type        = string
   description = "The admin username for the Windows node pool."
-  default = "azureuser"
+  default     = "azureuser"
 }
 
 variable "admin_password" {
   type        = string
   description = "The admin password for the Windows node pool."
-  default = "Passw0rd1234Us!"
+  default     = "Passw0rd1234Us!"
 }
