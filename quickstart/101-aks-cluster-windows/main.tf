@@ -20,7 +20,7 @@ resource "random_string" "azurerm_kubernetes_cluster_node_pool" {
   length  = 12
   special = false
   numeric = false
-  lower   = true
+   lower   = true
   upper   = false
 }
 
@@ -65,7 +65,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
 }
 
 resource "azurerm_kubernetes_cluster_node_pool" "win" {
-  name                  = random_pet.azurerm_kubernetes_cluster_node_pool.id
+  name                  = random_string.azurerm_kubernetes_cluster_node_pool.result
   kubernetes_cluster_id = azurerm_kubernetes_cluster.aks.id
   vm_size               = "Standard_D4s_v3"
   node_count            = var.node_count_windows
