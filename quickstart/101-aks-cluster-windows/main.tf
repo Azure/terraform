@@ -16,8 +16,12 @@ resource "random_pet" "azurerm_kubernetes_cluster_dns_prefix" {
   prefix = "dns"
 }
 
-resource "random_pet" "azurerm_kubernetes_cluster_node_pool" {
-  prefix = "nodepool"
+resource "random_string" "azurerm_kubernetes_cluster_node_pool" {
+  length  = 12
+  special = false
+  numeric = false
+  lower   = true
+  upper   = false
 }
 
 resource "azurerm_virtual_network" "vnet" {
