@@ -210,7 +210,7 @@ resource "azurerm_linux_virtual_machine" "vm_server" {
   admin_username      = var.admin_username
   admin_ssh_key {
     username   = var.admin_username
-    public_key = jsondecode(azapi_resource_action.ssh_public_key_gen.output).publicKey
+    public_key = azapi_resource_action.ssh_public_key_gen.output.publicKey
   }
   network_interface_ids = [azurerm_network_interface.vm_server_nic.id]
   os_disk {
@@ -241,7 +241,7 @@ resource "azurerm_linux_virtual_machine" "vm_jump" {
   }
   admin_ssh_key {
     username   = var.admin_username
-    public_key = jsondecode(azapi_resource_action.ssh_public_key_gen.output).publicKey
+    public_key = azapi_resource_action.ssh_public_key_gen.output.publicKey
   }
   source_image_reference {
     publisher = "Canonical"
