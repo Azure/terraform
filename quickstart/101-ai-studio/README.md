@@ -19,9 +19,10 @@ This configuration describes the minimal set of resources you require to get sta
 
 | Name | Description | Default |
 | ---- | ----------- | ------- |
-| names | Prefix name for dependent resources. | myfirst |
-| location | The Azure region used for deployments | East US |
-| sku | The SKU for AI Services resources | S0
+| `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. | rg |
+| `resource_group_location` | Location of the resource group. | eastus |
+| `prefix` | This variable is used to name the hub, project, and dependent resources. | ai |
+| `sku` | The SKU for AI Services resources | S0
 
 ## Usage
 
@@ -32,7 +33,7 @@ terraform init
 
 az login 
 
-terraform plan -var names="tftemplate" -out demo.tfplan
+terraform plan -out demo.tfplan
 
 terraform apply "demo.tfplan"
 ```
