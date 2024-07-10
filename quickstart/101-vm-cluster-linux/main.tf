@@ -102,7 +102,7 @@ resource "azurerm_linux_virtual_machine" "test" {
 
   admin_ssh_key {
     username   = var.username
-    public_key = jsondecode(azapi_resource_action.ssh_public_key_gen.output).publicKey
+    public_key = azapi_resource_action.ssh_public_key_gen.output.publicKey
   }
 
   os_disk {
