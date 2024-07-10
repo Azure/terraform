@@ -1,12 +1,8 @@
-output "ResourceGroup" {
+output "resource_group_name" {
   value = azurerm_resource_group.rg.id
 }
 
-output "HubId" {
-    value = azapi_resource.hub.id
-}
-
-output "ProjectId" {
+output "workspace_name" {
     value = azapi_resource.project.id
 }
 
