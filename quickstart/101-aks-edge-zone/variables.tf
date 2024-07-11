@@ -1,6 +1,6 @@
 variable "resource_group_location" {
   type        = string
-  default     = "East US 2"
+  default     = "Central US"
   description = "Location of the resource group."
 }
 
@@ -12,6 +12,6 @@ variable "resource_group_name_prefix" {
 
 variable "edge_zone" {
   type        = string
-  default     = "attatlanta1"
+  default     = "attdetroit1"
   description = "Name of the edge zone."
 }
