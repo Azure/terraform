@@ -12,17 +12,12 @@ resource "random_string" "aks_cluster_name" {
   special = false
 }
 
-resource "random_string" "edge_zone_name" {
-  length  = 12
-  special = false
-}
-
 resource "azurerm_kubernetes_cluster" "aks_cluster" {
   name                = random_string.aks_cluster_name.result
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
-  dns_prefix = "myakscluster"
-  edge_zone = random_string.edge_zone_name.result
+  dns_prefix          = "myakscluster"
+  edge_zone           = var.edge_zone
 
   default_node_pool {
     name       = "default"
