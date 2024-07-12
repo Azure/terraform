@@ -9,14 +9,14 @@ resource "azapi_resource" "ai_studio_project" {
     identity_ids = []
   }
 
-  body = jsonencode({
+  body = {
     kind = "Project"
     properties = {
       description   = "AI Studio Project - ${var.ai_studio_project_name}"
       friendlyName  = title(replace(var.ai_studio_project_name, "-", " "))
       hubResourceId = var.ai_studio_hub_id
     }
-  })
+  }
 
   response_export_values    = []
   schema_validation_enabled = false # Can be reverted once this is closed: https://github.com/Azure/terraform-provider-azapi/issues/524

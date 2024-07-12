@@ -5,7 +5,7 @@ resource "azapi_resource" "ai_studio_project_connection" {
   name      = each.key
   parent_id = azapi_resource.ai_studio_project.id
 
-  body = jsonencode({
+  body = {
     properties = {
       authType       = each.value.auth_type
       category       = each.value.category
@@ -15,8 +15,7 @@ resource "azapi_resource" "ai_studio_project_connection" {
       target         = each.value.target
       metadata       = each.value.metadata
     }
-
-  })
+  }
 
   response_export_values    = []
   schema_validation_enabled = false # Can be reverted once this is closed: https://github.com/Azure/terraform-provider-azapi/issues/524
