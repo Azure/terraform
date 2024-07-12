@@ -2,7 +2,7 @@ resource "azapi_update_resource" "ai_studio_hub_outbound_rules" {
   type        = "Microsoft.MachineLearningServices/workspaces@2024-04-01"
   resource_id = var.ai_studio_hub_id
 
-  body = jsonencode({
+  body = {
     properties = {
       managedNetwork = {
         isolationMode = "AllowOnlyApprovedOutbound"
@@ -13,7 +13,7 @@ resource "azapi_update_resource" "ai_studio_hub_outbound_rules" {
         }
       }
     }
-  })
+  }
 
   response_export_values  = []
   locks                   = []
@@ -29,9 +29,9 @@ resource "azapi_resource_action" "ai_studio_hub_provision_managed_network" {
 
   action = "provisionManagedNetwork"
   method = "POST"
-  body = jsonencode({
+  body = {
     includeSpark = true
-  })
+  }
 
   response_export_values = []
   depends_on             = []
