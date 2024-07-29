@@ -269,7 +269,7 @@ resource "azurerm_route_table" "rt" {
   }
 }
 
-resource "azurerm_subnet_route_table_association" "jump_subnet_rt_association" {
+resource "azurerm_subnet_route_table_association" "server_subnet_rt_association" {
   subnet_id      = azurerm_subnet.server_subnet.id
   route_table_id = azurerm_route_table.rt.id
 }
