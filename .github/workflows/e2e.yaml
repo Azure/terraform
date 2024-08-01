@@ -6,6 +6,8 @@ on:
       - '.github/**'
       - '.github/workflows/**'
       - 'quickstart/**'
+permissions:
+  actions: write
 
 jobs:
   e2e-check:

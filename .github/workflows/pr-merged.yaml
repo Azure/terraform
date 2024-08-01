@@ -6,6 +6,9 @@ on:
       - master
     paths:
       - 'quickstart/**'
+permissions:
+  actions: write
+  contents: write
 jobs:
   main-branch-push:
     runs-on: ubuntu-latest
