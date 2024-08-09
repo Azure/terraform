@@ -1,6 +1,7 @@
 variable "name" {
   type        = string
   description = "Name of the deployment"
+  default     = "exampleml"
 }
 
 variable "environment" {
@@ -89,5 +90,6 @@ variable "dsvm_admin_username" {
 variable "dsvm_host_password" {
   type        = string
   description = "Password for the admin username of the Data Science VM"
+  default     = "ChangeMe123!"
   sensitive   = true
 }

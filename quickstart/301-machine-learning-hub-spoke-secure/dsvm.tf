@@ -17,7 +17,7 @@ resource "azurerm_windows_virtual_machine" "dsvm" {
   network_interface_ids = [
     azurerm_network_interface.dsvm.id
   ]
-  size = "Standard_DS3_v2"
+  size = "Standard_D1_v2"
 
   source_image_reference {
     publisher = "microsoft-dsvm"
@@ -29,7 +29,7 @@ resource "azurerm_windows_virtual_machine" "dsvm" {
   os_disk {
     name                 = "osdisk-${var.dsvm_name}"
     caching              = "ReadWrite"
-    storage_account_type = "Premium_LRS"
+    storage_account_type = "Standard_LRS"
   }
 
   identity {
