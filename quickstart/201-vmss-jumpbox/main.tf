@@ -105,8 +105,8 @@ resource "azurerm_virtual_machine_scale_set" "vmss" {
 
   storage_profile_image_reference {
     publisher = "Canonical"
-    offer     = "UbuntuServer"
-    sku       = "16.04-LTS"
+    offer     = "ubuntu-24_04-lts"
+    sku       = "server-gen1"
     version   = "latest"
   }
 
@@ -183,8 +183,8 @@ resource "azurerm_virtual_machine" "jumpbox" {
 
   storage_image_reference {
     publisher = "Canonical"
-    offer     = "UbuntuServer"
-    sku       = "16.04-LTS"
+    offer     = "ubuntu-24_04-lts"
+    sku       = "server-gen1"
     version   = "latest"
   }
 

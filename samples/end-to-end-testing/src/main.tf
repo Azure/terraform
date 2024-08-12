@@ -90,8 +90,8 @@ resource "azurerm_linux_virtual_machine" "vm1" {
 
   source_image_reference {
     publisher = "Canonical"
-    offer     = "UbuntuServer"
-    sku       = "18.04-LTS"
+    offer     = "ubuntu-24_04-lts"
+    sku       = "server-gen1"
     version   = "latest"
   }
 }
@@ -133,8 +133,8 @@ resource "azurerm_linux_virtual_machine" "vm2" {
 
   source_image_reference {
     publisher = "Canonical"
-    offer     = "UbuntuServer"
-    sku       = "18.04-LTS"
+    offer     = "ubuntu-24_04-lts"
+    sku       = "server-gen1"
     version   = "latest"
   }
 }
