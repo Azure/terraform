@@ -3,7 +3,7 @@ resource "random_string" "fw_diag_prefix" {
   length  = 8
   upper   = false
   special = false
-  number  = false
+  numeric  = false
 }
 resource "azurerm_ip_group" "ip_group_hub" {
   name                = "hub-ipgroup"

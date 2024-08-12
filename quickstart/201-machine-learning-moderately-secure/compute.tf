@@ -3,7 +3,7 @@ resource "random_string" "ci_prefix" {
   length  = 8
   upper   = false
   special = false
-  number  = false
+  numeric  = false
 }
 
 # Compute instance
