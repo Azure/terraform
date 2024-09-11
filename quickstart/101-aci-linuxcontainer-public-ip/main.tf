@@ -14,6 +14,7 @@ resource "random_string" "container_name" {
   special = false
 }
 
+
 resource "azurerm_container_group" "container" {
   name                = "${var.container_group_name_prefix}-${random_string.container_name.result}"
   location            = azurerm_resource_group.rg.location
