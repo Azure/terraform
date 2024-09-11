@@ -1,7 +1,7 @@
 name: E2E Test Check
 on:
   pull_request:
-    types: ['synchronize']
+    types: ['opened', 'synchronize']
     paths:
       - '.github/**'
       - '.github/workflows/**'
@@ -12,8 +12,6 @@ permissions:
 jobs:
   e2e-check:
     runs-on: [self-hosted, 1ES.Pool=terraform-azurerm-doc]
-    environment:
-      name: acctests
     steps:
       - name: checkout
         uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 #v3.6.0
