@@ -1,6 +1,6 @@
 name: E2E Test Check
 on:
-  pull_request:
+  pull_request_target:
     types: ['opened', 'synchronize']
     paths:
       - '.github/**'
@@ -26,22 +26,16 @@ jobs:
           files: "quickstart/*"
           files_ignore: "**/TestRecord.md"
           dir_names_max_depth: 2
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
-        env:
-          AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-          AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
-          AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
       - name: test pr
         env:
+          ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+          ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
           ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
           echo "change files" $ALL_CHANGED_FILES
           export ARM_OIDC_REQUEST_TOKEN=$ACTIONS_ID_TOKEN_REQUEST_TOKEN
           export ARM_OIDC_REQUEST_URL=$ACTIONS_ID_TOKEN_REQUEST_URL
-          export ARM_SUBSCRIPTION_ID=${{ secrets.AZURE_SUBSCRIPTION_ID }}
-          export ARM_TENANT_ID=${{ secrets.AZURE_TENANT_ID }}
-          export ARM_CLIENT_ID=${{ secrets.AZURE_CLIENT_ID }}
           export CHANGED_FOLDERS="${{ steps.changed-files.outputs.all_changed_files }}"
           docker run --rm -v $(pwd):/src -w /src/test --network=host -e ARM_SUBSCRIPTION_ID -e ARM_TENANT_ID -e ARM_CLIENT_ID -e ARM_OIDC_REQUEST_TOKEN -e ARM_OIDC_REQUEST_URL -e ARM_USE_OIDC=true -e CHANGED_FOLDERS mcr.microsoft.com/azterraform:latest sh -c "pkenv install 1.10.2 && go mod tidy && go test -timeout=360m -v ./e2e"
       - uses: actions/upload-artifact@a8a3f3ad30e3422c9c7b888a15615d19a852ae32 #v3.1.3
