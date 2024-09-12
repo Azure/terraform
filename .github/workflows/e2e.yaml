@@ -26,6 +26,12 @@ jobs:
           files: "quickstart/*"
           files_ignore: "**/TestRecord.md"
           dir_names_max_depth: 2
+      - name: Setup upterm session
+        uses: lhotari/action-upterm@v1
+        env:
+          AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+          AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
       - name: test pr
         env:
           ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
