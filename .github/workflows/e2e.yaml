@@ -1,7 +1,7 @@
 name: E2E Test Check
 on:
-  pull_request_target:
-    types: ['opened', 'reopened', 'synchronize']
+  pull_request:
+    types: ['opened', 'synchronize']
     paths:
       - '.github/**'
       - '.github/workflows/**'
@@ -28,9 +28,9 @@ jobs:
           dir_names_max_depth: 2
       - name: test pr
         env:
-          ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-          ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
-          ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+          ARM_SUBSCRIPTION_ID: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+          ARM_TENANT_ID: ${{ vars.AZURE_TENANT_ID }}
+          ARM_CLIENT_ID: ${{ vars.AZURE_CLIENT_ID }}
           ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
           echo "change files" $ALL_CHANGED_FILES
