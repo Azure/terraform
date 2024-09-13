@@ -7,6 +7,7 @@ resource "azurerm_resource_group" "rg" {
   location = var.resource_group_location
 }
 
+
 resource "random_string" "container_name" {
   length  = 25
   lower   = true
