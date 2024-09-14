@@ -35,6 +35,7 @@ variable "image_resource_group_name" {
   default     = "myPackerImages"
 }
 
+# arm builder
 source "azure-arm" "builder" {
   client_id                         = var.client_id
   client_secret                     = var.client_secret
