@@ -127,10 +127,10 @@ func test201VmssPackerJumpbox(t *testing.T) {
 	if tenantId := os.Getenv("ARM_TENANT_ID"); tenantId != "" {
 		packerVars["tenant_id"] = tenantId
 	}
-	if oidcRequestToken := os.Getenv("ACTIONS_ID_TOKEN_REQUEST_TOKEN"); oidcRequestToken != "" {
+	if oidcRequestToken := os.Getenv("ARM_OIDC_REQUEST_TOKEN"); oidcRequestToken != "" {
 		packerVars["oidc_request_token"] = oidcRequestToken
 	}
-	if oidcRequestUrl := os.Getenv("ACTIONS_ID_TOKEN_REQUEST_URL"); oidcRequestUrl != "" {
+	if oidcRequestUrl := os.Getenv("ARM_OIDC_REQUEST_URL"); oidcRequestUrl != "" {
 		packerVars["oidc_request_url"] = oidcRequestUrl
 	}
 	patches := gomonkey.ApplyFunc(shell.RunCommandAndGetOutputE, func(t terratest.TestingT, command shell.Command) (string, error) {
