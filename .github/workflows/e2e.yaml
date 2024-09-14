@@ -6,6 +6,8 @@ on:
       - '.github/**'
       - '.github/workflows/**'
       - 'quickstart/**'
+      - 'test/**'
+      - 'test/e2e/**'
 permissions:
   actions: write
   contents: read
