@@ -17,7 +17,7 @@ jobs:
   e2e-check:
     runs-on: ubuntu-latest
     environment:
-      name: acctests
+      name: test
     steps:
       - name: Checking for Fork
         shell: pwsh
