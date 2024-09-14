@@ -27,12 +27,6 @@ jobs:
       - name: checkout
         if: github.event.pull_request.head.repo.fork == false
         uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 #v3.6.0
-      - name: checkout pr
-        if: github.event.pull_request.head.repo.fork == false
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run:
-          gh pr checkout ${{ inputs.pr_number }}
       - name: Get changed files
         if: github.event.pull_request.head.repo.fork == false
         id: changed-files
