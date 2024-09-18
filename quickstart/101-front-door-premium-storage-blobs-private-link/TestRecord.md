@@ -1,3 +1,21 @@
+## 18 Sep 24 03:26 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.1.0
++ provider registry.terraform.io/hashicorp/azurerm v3.116.0
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+
+
+---
+
 ## 08 Sep 24 01:18 UTC
 
 Success: true
