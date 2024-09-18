@@ -53,3 +53,9 @@ jobs:
           export ARM_CLIENT_ID=${{ secrets.ARM_CLIENT_ID }}
           export CHANGED_FOLDERS="${{ steps.changed-files.outputs.all_changed_files }}"
           docker run --rm -v $(pwd):/src -w /src/test --network=host -e ARM_SUBSCRIPTION_ID -e ARM_TENANT_ID -e ARM_CLIENT_ID -e ARM_OIDC_REQUEST_TOKEN -e ARM_OIDC_REQUEST_URL -e ARM_USE_OIDC=true -e CHANGED_FOLDERS mcr.microsoft.com/azterraform:latest sh -c "pkenv install 1.10.2 && go mod tidy && go test -timeout=360m -v ./e2e"
+      - uses: actions/upload-artifact@a8a3f3ad30e3422c9c7b888a15615d19a852ae32 #v3.1.3
+        with:
+          name: TestRecord-${{ github.event.number }}
+          retention-days: 60
+          path: |
+            quickstart/**/TestRecord.md.tmp

@@ -6,6 +6,7 @@ on:
 permissions:
   actions: write
   contents: write
+  id-token: write
 
 jobs:
   full-e2e-check:
@@ -26,7 +27,7 @@ jobs:
           export ARM_SUBSCRIPTION_ID=${{ secrets.ARM_SUBSCRIPTION_ID }}
           export ARM_TENANT_ID=${{ secrets.ARM_TENANT_ID }}
           export ARM_CLIENT_ID=${{ secrets.ARM_CLIENT_ID_CRONTEST }}
-          docker run --rm -v $(pwd):/src -w /src/test --network=host -e ARM_SUBSCRIPTION_ID -e ARM_CLIENT_ID -e ARM_TENANT_ID -e ARM_OIDC_REQUEST_TOKEN -e ARM_OIDC_REQUEST_URL -e ARM_USE_OIDC=true -e CHANGED_FOLDERS mcr.microsoft.com/azterraform sh -c "go mod tidy && go test -timeout=1440m -parallel 10 -v ./e2e"
+          docker run --rm -v $(pwd):/src -w /src/test --network=host -e ARM_SUBSCRIPTION_ID -e ARM_CLIENT_ID -e ARM_TENANT_ID -e ARM_OIDC_REQUEST_TOKEN -e ARM_OIDC_REQUEST_URL -e ARM_USE_OIDC=true -e CHANGED_FOLDERS mcr.microsoft.com/azterraform sh -c "pkenv install 1.10.2 && go mod tidy && go test -timeout=1440m -parallel 10 -v ./e2e"
       - name: Update
         run: |
           docker run --rm -v $(pwd):/src -w /src mcr.microsoft.com/azterraform sh scripts/update-test-record.sh
