@@ -1,3 +1,26 @@
+## 29 Sep 24 03:02 UTC
+
+Success: false
+
+### Versions
+
+
+
+### Error
+
+Initializing the backend...
+Initializing provider plugins...
+- Finding latest version of telemaco019/azureml...
+- Finding hashicorp/azurerm versions matching "2.78.0"...
+- Finding latest version of hashicorp/random...
+- Installing telemaco019/azureml v0.0.5...
+- Installing hashicorp/azurerm v2.78.0...
+- Installed hashicorp/azurerm v2.78.0 (signed by HashiCorp)
+- Installing hashicorp/random v3.6.3...
+- Installed hashicorp/random v3.6.3 (signed by HashiCorp)
+
+---
+
 ## 29 Sep 24 02:43 UTC
 
 Success: false
