@@ -193,8 +193,11 @@ func test202machineLearningModeratelySecureExistingVnet(t *testing.T) {
 	rootPath := filepath.Join("..", "..")
 	examplePath := filepath.Join("quickstart", "202-machine-learning-moderately-secure-existing-VNet")
 	prequistePath := filepath.Join(examplePath, "prequisite")
-	helper.RunE2ETest(t, rootPath, prequistePath, terraform.Options{}, func(t *testing.T, output helper.TerraformOutput) {
+	helper.RunE2ETest(t, rootPath, prequistePath, terraform.Options{
+		Upgrade: true,
+	}, func(t *testing.T, output helper.TerraformOutput) {
 		helper.RunE2ETest(t, rootPath, examplePath, terraform.Options{
+			Upgrade: true,
 			Vars: map[string]interface{}{
 				"vnet_name":                                     output["vnet_name"],
 				"vnet_resource_group_name":                      output["resource_group_name"],
