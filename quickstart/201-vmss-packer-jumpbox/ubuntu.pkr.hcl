@@ -47,9 +47,9 @@ variable "oidc_request_token" {
 source "azure-arm" "builder" {
   client_id                         = var.client_id
   client_secret                     = var.client_secret
-  image_offer                       = "UbuntuServer"
-  image_publisher                   = "canonical"
-  image_sku                         = "16.04-LTS"
+  image_offer                       = "ubuntu-24_04-lts"
+  image_publisher                   = "Canonical"
+  image_sku                         = "server-gen1"
   location                          = var.location
   managed_image_name                = "myPackerImage"
   managed_image_resource_group_name = var.image_resource_group_name

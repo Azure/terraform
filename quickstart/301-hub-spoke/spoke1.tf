@@ -69,8 +69,8 @@ resource "azurerm_virtual_machine" "spoke1-vm" {
 
     storage_image_reference {
     publisher = "Canonical"
-    offer     = "UbuntuServer"
-    sku       = "16.04-LTS"
+    offer     = "ubuntu-24_04-lts"
+    sku       = "server-gen1"
     version   = "latest"
     }
 
