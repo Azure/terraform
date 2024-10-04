@@ -44,6 +44,7 @@ resource "azurerm_attestation_provider" "corp_attestation" {
   lifecycle {
     ignore_changes = [
       "open_enclave_policy_base64",
+      "sev_snp_policy_base64",
       "sgx_enclave_policy_base64",
       "tpm_policy_base64",
     ]
