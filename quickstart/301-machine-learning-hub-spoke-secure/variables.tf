@@ -1,6 +1,7 @@
 variable "name" {
   type        = string
   description = "Name of the deployment"
+  default     = "301mlhubspokesecure"
 }
 
 variable "environment" {
