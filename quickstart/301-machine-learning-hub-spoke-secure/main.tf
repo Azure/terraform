@@ -19,14 +19,19 @@ provider "azurerm" {
 
 data "azurerm_client_config" "current" {}
 
+resource "random_string" "suffix" {
+  length  = 4
+  upper   = false
+  special = false
+}
+
 resource "azurerm_resource_group" "default" {
-  name     = "rg-${var.name}-${var.environment}"
+  name     = "rg-${var.name}-${var.environment}-${random_string.suffix.result}"
   location = var.location
 }
 
 #Hub Resource Group
 resource "azurerm_resource_group" "hub_rg" {
-  name     = "rg-hub-${var.name}-${var.environment}"
+  name     = "rg-hub-${var.name}-${var.environment}-${random_string.suffix.result}"
   location = var.location
-
 }
