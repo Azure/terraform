@@ -40,6 +40,7 @@ resource "azurerm_attestation_provider" "corp_attestation" {
   name                            = "${var.attestation_provider_name}${random_string.attestation_suffix.result}"
   resource_group_name             = azurerm_resource_group.rg.name
   policy_signing_certificate_data = try(tls_self_signed_cert.attestation[0].cert_pem, file(var.cert_path))
+  #https://github.com/hashicorp/terraform-provider-azurerm/issues/21998#issuecomment-1573312297
   lifecycle {
     ignore_changes = [
       "open_enclave_policy_base64",
