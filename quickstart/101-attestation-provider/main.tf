@@ -21,7 +21,7 @@ resource "tls_private_key" "signing_cert" {
 resource "tls_self_signed_cert" "attestation" {
   count = local.create_signing_cert ? 1 : 0
 
-  private_key_pem = tls_private_key.signing_cert[0].private_key_pem
+  private_key_pem       = tls_private_key.signing_cert[0].private_key_pem
   validity_period_hours = 12
   allowed_uses = [
     "cert_signing",
@@ -40,4 +40,11 @@ resource "azurerm_attestation_provider" "corp_attestation" {
   name                            = "${var.attestation_provider_name}${random_string.attestation_suffix.result}"
   resource_group_name             = azurerm_resource_group.rg.name
   policy_signing_certificate_data = try(tls_self_signed_cert.attestation[0].cert_pem, file(var.cert_path))
+  lifecycle {
+    ignore_changes = [
+      "open_enclave_policy_base64",
+      "sgx_enclave_policy_base64",
+      "tpm_policy_base64",
+    ]
+  }
 }
