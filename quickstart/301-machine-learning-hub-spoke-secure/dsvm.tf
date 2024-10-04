@@ -10,6 +10,15 @@ resource "azurerm_network_interface" "dsvm" {
   }
 }
 
+resource "random_password" "dsvm_host_password" {
+  count  = var.dsvm_host_password == null ? 1 : 0
+  length = 20
+}
+
+locals {
+  dsvm_host_password = try(random_password.dsvm_host_password[0].result, var.dsvm_host_password)
+}
+
 resource "azurerm_windows_virtual_machine" "dsvm" {
   name                = var.dsvm_name
   location            = azurerm_resource_group.default.location
@@ -37,7 +46,7 @@ resource "azurerm_windows_virtual_machine" "dsvm" {
   }
   computer_name  = var.dsvm_name
   admin_username = var.dsvm_admin_username
-  admin_password = var.dsvm_host_password
+  admin_password = local.dsvm_host_password
 
   provision_vm_agent = true
 

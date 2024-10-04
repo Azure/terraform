@@ -91,4 +91,5 @@ variable "dsvm_host_password" {
   type        = string
   description = "Password for the admin username of the Data Science VM"
   sensitive   = true
+  default     = null
 }
