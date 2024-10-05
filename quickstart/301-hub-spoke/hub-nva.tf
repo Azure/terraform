@@ -142,7 +142,7 @@ resource "azurerm_route_table" "spoke1-rt" {
   route {
     name           = "default"
     address_prefix = "0.0.0.0/0"
-    next_hop_type  = "vnetlocal"
+    next_hop_type  = "VnetLocal"
   }
 
   tags = {
@@ -178,7 +178,7 @@ resource "azurerm_route_table" "spoke2-rt" {
   route {
     name           = "default"
     address_prefix = "0.0.0.0/0"
-    next_hop_type  = "vnetlocal"
+    next_hop_type  = "VnetLocal"
   }
 
   tags = {
