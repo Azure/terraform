@@ -4,8 +4,14 @@ locals {
   hub-nva-resource-group = "hub-nva-rg"
 }
 
+resource "random_string" "suffix" {
+  length  = 5
+  special = false
+  upper   = false
+}
+
 resource "azurerm_resource_group" "hub-nva-rg" {
-  name     = "${local.prefix-hub-nva}-rg"
+  name     = "${local.prefix-hub-nva}-rg-${random_string.suffix.result}"
   location = local.hub-nva-location
 
   tags = {
