@@ -19,7 +19,7 @@ provider "azurerm" {
 }
 
 resource "random_password" "password" {
-  count = var.password == null ? 1 : 0
+  count  = var.password == null ? 1 : 0
   length = 20
 }
 

@@ -1,6 +1,6 @@
 locals {
   spoke2-location       = "eastus"
-  spoke2-resource-group = "spoke2-vnet-rg"
+  spoke2-resource-group = "spoke2-vnet-rg-${random_string.suffix.result}"
   prefix-spoke2         = "spoke2"
 }
 

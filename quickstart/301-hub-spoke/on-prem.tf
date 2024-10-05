@@ -1,6 +1,6 @@
 locals {
   onprem-location       = "eastus"
-  onprem-resource-group = "onprem-vnet-rg"
+  onprem-resource-group = "onprem-vnet-rg-${random_string.suffix.result}"
   prefix-onprem         = "onprem"
 }
 
