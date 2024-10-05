@@ -76,6 +76,13 @@ resource "azurerm_machine_learning_workspace" "default" {
 
 }
 
+resource "time_sleep" "one_min" {
+  create_duration = "1m"
+  depends_on = [
+    azurerm_windows_virtual_machine.dsvm
+  ]
+}
+
 # Private endpoints
 resource "azurerm_private_endpoint" "kv_ple" {
   name                = "ple-${var.name}-${var.environment}-kv"
@@ -95,7 +102,7 @@ resource "azurerm_private_endpoint" "kv_ple" {
     is_manual_connection           = false
   }
   depends_on = [
-    azurerm_windows_virtual_machine.dsvm
+    time_sleep.one_min
   ]
 }
 
@@ -117,7 +124,7 @@ resource "azurerm_private_endpoint" "st_ple_blob" {
     is_manual_connection           = false
   }
   depends_on = [
-    azurerm_windows_virtual_machine.dsvm
+    time_sleep.one_min
   ]
 }
 
@@ -139,7 +146,7 @@ resource "azurerm_private_endpoint" "storage_ple_file" {
     is_manual_connection           = false
   }
   depends_on = [
-    azurerm_windows_virtual_machine.dsvm
+    time_sleep.one_min
   ]
 }
 
@@ -161,7 +168,7 @@ resource "azurerm_private_endpoint" "cr_ple" {
     is_manual_connection           = false
   }
   depends_on = [
-    azurerm_windows_virtual_machine.dsvm
+    time_sleep.one_min
   ]
 }
 
@@ -183,7 +190,7 @@ resource "azurerm_private_endpoint" "mlw_ple" {
     is_manual_connection           = false
   }
   depends_on = [
-    azurerm_windows_virtual_machine.dsvm
+    time_sleep.one_min
   ]
 }
 
