@@ -13,3 +13,10 @@ terraform {
 provider "azurerm" {
   features {}
 }
+
+resource "random_string" "name_suffix" {
+  length  = 25
+  lower   = true
+  upper   = true
+  special = false
+}
