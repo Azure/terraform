@@ -3,7 +3,7 @@ resource "random_string" "fw_diag_prefix" {
   length  = 8
   upper   = false
   special = false
-  number  = false
+  numeric = false
 }
 resource "azurerm_ip_group" "ip_group_hub" {
   name                = "hub-ipgroup"
@@ -107,6 +107,11 @@ resource "azurerm_monitor_diagnostic_setting" "azure_firewall_instance" {
     }
   }
 
+  lifecycle {
+    ignore_changes = [
+      log
+    ]
+  }
 }
 
 resource "azurerm_firewall_policy_rule_collection_group" "azure_firewall_rules_collection" {
