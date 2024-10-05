@@ -49,9 +49,15 @@ resource "azurerm_windows_virtual_machine" "dsvm" {
   admin_password = local.dsvm_host_password
 
   provision_vm_agent = true
+  vm_agent_platform_updates_enabled = false
 
   timeouts {
     create = "60m"
     delete = "2h"
+  }
+  lifecycle {
+    ignore_changes = [ 
+      vm_agent_platform_updates_enabled,
+    ]
   }
 }
