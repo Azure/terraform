@@ -8,7 +8,7 @@ resource "azurerm_application_insights" "default" {
 }
 
 resource "azurerm_key_vault" "default" {
-  name                     = "kv-${var.name}-${var.environment}"
+  name                     = "kv-${var.name}-${var.environment}-${random_string.suffix.result}"
   location                 = azurerm_resource_group.default.location
   resource_group_name      = azurerm_resource_group.default.name
   tenant_id                = data.azurerm_client_config.current.tenant_id
@@ -94,6 +94,9 @@ resource "azurerm_private_endpoint" "kv_ple" {
     subresource_names              = ["vault"]
     is_manual_connection           = false
   }
+  depends_on = [
+    azurerm_windows_virtual_machine.dsvm
+  ]
 }
 
 resource "azurerm_private_endpoint" "st_ple_blob" {
@@ -113,6 +116,9 @@ resource "azurerm_private_endpoint" "st_ple_blob" {
     subresource_names              = ["blob"]
     is_manual_connection           = false
   }
+  depends_on = [
+    azurerm_windows_virtual_machine.dsvm
+  ]
 }
 
 resource "azurerm_private_endpoint" "storage_ple_file" {
@@ -132,6 +138,9 @@ resource "azurerm_private_endpoint" "storage_ple_file" {
     subresource_names              = ["file"]
     is_manual_connection           = false
   }
+  depends_on = [
+    azurerm_windows_virtual_machine.dsvm
+  ]
 }
 
 resource "azurerm_private_endpoint" "cr_ple" {
@@ -151,6 +160,9 @@ resource "azurerm_private_endpoint" "cr_ple" {
     subresource_names              = ["registry"]
     is_manual_connection           = false
   }
+  depends_on = [
+    azurerm_windows_virtual_machine.dsvm
+  ]
 }
 
 resource "azurerm_private_endpoint" "mlw_ple" {
@@ -170,6 +182,9 @@ resource "azurerm_private_endpoint" "mlw_ple" {
     subresource_names              = ["amlworkspace"]
     is_manual_connection           = false
   }
+  depends_on = [
+    azurerm_windows_virtual_machine.dsvm
+  ]
 }
 
 # Compute cluster for image building required since the workspace is behind a vnet.
