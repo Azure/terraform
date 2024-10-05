@@ -84,7 +84,7 @@ resource "azurerm_virtual_machine_extension" "enable-routes" {
   settings = <<SETTINGS
     {
         "fileUris": [
-        "https://raw.githubusercontent.com/mspnp/reference-architectures/master/scripts/linux/enable-ip-forwarding.sh"
+        "https://raw.githubusercontent.com/lonegunmanb/reference-architectures/refs/heads/master/scripts/linux/enable-ip-forwarding.sh"
         ],
         "commandToExecute": "bash enable-ip-forwarding.sh"
     }
