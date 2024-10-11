@@ -9,10 +9,13 @@ import (
 	"testing"
 
 	helper "github.com/Azure/terraform-module-test-helper"
+	"github.com/agiledragon/gomonkey/v2"
 	"github.com/gruntwork-io/terratest/modules/files"
 	"github.com/gruntwork-io/terratest/modules/packer"
+	"github.com/gruntwork-io/terratest/modules/shell"
 	"github.com/gruntwork-io/terratest/modules/terraform"
 	test_structure "github.com/gruntwork-io/terratest/modules/test-structure"
+	terratest "github.com/gruntwork-io/terratest/modules/testing"
 	"github.com/stretchr/testify/require"
 )
 
@@ -24,10 +27,6 @@ var speicalTests = map[string]func(*testing.T){
 
 func Test_Quickstarts(t *testing.T) {
 	t.Parallel()
-	msiId := os.Getenv("MSI_ID")
-	if msiId != "" {
-		_ = os.Setenv("TF_VAR_msi_id", msiId)
-	}
 	input := os.Getenv("CHANGED_FOLDERS")
 	folders := strings.Split(input, ",")
 	if input == "" {
@@ -112,12 +111,8 @@ func test201VmssPackerJumpbox(t *testing.T) {
 	packerVars := map[string]string{
 		"image_resource_group_name": imageResourceGroupName,
 	}
-	useMsi := false
 	if clientId := os.Getenv("ARM_CLIENT_ID"); clientId != "" {
 		packerVars["client_id"] = clientId
-	}
-	if os.Getenv("MSI_ID") != "" {
-		useMsi = true
 	}
 	if clientSecret := os.Getenv("ARM_CLIENT_SECRET"); clientSecret != "" {
 		packerVars["client_secret"] = clientSecret
@@ -125,9 +120,30 @@ func test201VmssPackerJumpbox(t *testing.T) {
 	if subscriptionId := os.Getenv("ARM_SUBSCRIPTION_ID"); subscriptionId != "" {
 		packerVars["subscription_id"] = subscriptionId
 	}
-	if tenantId := os.Getenv("ARM_TENANT_ID"); !useMsi && tenantId != "" {
+	if tenantId := os.Getenv("ARM_TENANT_ID"); tenantId != "" {
 		packerVars["tenant_id"] = tenantId
 	}
+	if oidcRequestToken := os.Getenv("ARM_OIDC_REQUEST_TOKEN"); oidcRequestToken != "" {
+		packerVars["oidc_request_token"] = oidcRequestToken
+	}
+	if oidcRequestUrl := os.Getenv("ARM_OIDC_REQUEST_URL"); oidcRequestUrl != "" {
+		packerVars["oidc_request_url"] = oidcRequestUrl
+	}
+	patches := gomonkey.ApplyFunc(shell.RunCommandAndGetOutputE, func(t terratest.TestingT, command shell.Command) (string, error) {
+		output, err := shell.RunCommandAndGetStdOutE(t, command)
+		if err != nil {
+			return output, err
+		}
+
+		if len(command.Args) == 1 && command.Args[0] == "-version" {
+			output = strings.TrimPrefix(output, "Packer ")
+			output = strings.TrimPrefix(output, "v")
+			output = strings.Split(output, "\n")[0]
+		}
+		return output, nil
+	})
+	defer patches.Reset()
+
 	_, err := packer.BuildArtifactE(t, &packer.Options{
 		Template:   pkrCfg,
 		Vars:       packerVars,

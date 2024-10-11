@@ -1,6 +1,6 @@
 # Dependent resources for Azure Machine Learning
 resource "azurerm_application_insights" "default" {
-  name                = "appi-${var.name}-${var.environment}"
+  name                = "appi-${var.name}-${var.environment}-${random_string.suffix.result}"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
   workspace_id        = azurerm_log_analytics_workspace.default.id
@@ -8,7 +8,7 @@ resource "azurerm_application_insights" "default" {
 }
 
 resource "azurerm_key_vault" "default" {
-  name                     = "kv-${var.name}-${var.environment}"
+  name                     = "kv-${var.name}-${var.environment}-${random_string.suffix.result}"
   location                 = azurerm_resource_group.default.location
   resource_group_name      = azurerm_resource_group.default.name
   tenant_id                = data.azurerm_client_config.current.tenant_id
@@ -22,7 +22,7 @@ resource "azurerm_key_vault" "default" {
 }
 
 resource "azurerm_storage_account" "default" {
-  name                            = "st${var.name}${var.environment}"
+  name                            = "st${var.name}${var.environment}${random_string.suffix.result}"
   location                        = azurerm_resource_group.default.location
   resource_group_name             = azurerm_resource_group.default.name
   account_tier                    = "Standard"
@@ -36,7 +36,7 @@ resource "azurerm_storage_account" "default" {
 }
 
 resource "azurerm_container_registry" "default" {
-  name                = "cr${var.name}${var.environment}"
+  name                = "cr${var.name}${var.environment}${random_string.suffix.result}"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
   sku                 = "Premium"
@@ -50,7 +50,7 @@ resource "azurerm_container_registry" "default" {
 
 # Machine Learning workspace
 resource "azurerm_machine_learning_workspace" "default" {
-  name                    = "mlw-${var.name}-${var.environment}"
+  name                    = "mlw-${var.name}-${var.environment}-${random_string.suffix.result}"
   location                = azurerm_resource_group.default.location
   resource_group_name     = azurerm_resource_group.default.name
   application_insights_id = azurerm_application_insights.default.id
@@ -76,6 +76,13 @@ resource "azurerm_machine_learning_workspace" "default" {
 
 }
 
+resource "time_sleep" "one_min" {
+  create_duration = "1m"
+  depends_on = [
+    azurerm_windows_virtual_machine.dsvm
+  ]
+}
+
 # Private endpoints
 resource "azurerm_private_endpoint" "kv_ple" {
   name                = "ple-${var.name}-${var.environment}-kv"
@@ -94,6 +101,9 @@ resource "azurerm_private_endpoint" "kv_ple" {
     subresource_names              = ["vault"]
     is_manual_connection           = false
   }
+  depends_on = [
+    time_sleep.one_min
+  ]
 }
 
 resource "azurerm_private_endpoint" "st_ple_blob" {
@@ -113,6 +123,9 @@ resource "azurerm_private_endpoint" "st_ple_blob" {
     subresource_names              = ["blob"]
     is_manual_connection           = false
   }
+  depends_on = [
+    time_sleep.one_min
+  ]
 }
 
 resource "azurerm_private_endpoint" "storage_ple_file" {
@@ -132,6 +145,9 @@ resource "azurerm_private_endpoint" "storage_ple_file" {
     subresource_names              = ["file"]
     is_manual_connection           = false
   }
+  depends_on = [
+    time_sleep.one_min
+  ]
 }
 
 resource "azurerm_private_endpoint" "cr_ple" {
@@ -151,6 +167,9 @@ resource "azurerm_private_endpoint" "cr_ple" {
     subresource_names              = ["registry"]
     is_manual_connection           = false
   }
+  depends_on = [
+    time_sleep.one_min
+  ]
 }
 
 resource "azurerm_private_endpoint" "mlw_ple" {
@@ -170,6 +189,9 @@ resource "azurerm_private_endpoint" "mlw_ple" {
     subresource_names              = ["amlworkspace"]
     is_manual_connection           = false
   }
+  depends_on = [
+    time_sleep.one_min
+  ]
 }
 
 # Compute cluster for image building required since the workspace is behind a vnet.

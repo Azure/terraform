@@ -5,10 +5,10 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "~>2.0"
+      version = "~>3.0"
     }
     azapi = {
-      source = "Azure/azapi"
+      source  = "Azure/azapi"
       version = "~> 1.0"
     }
     local = {
@@ -27,7 +27,11 @@ terraform {
 }
 
 provider "azurerm" {
-  features {}
+  features {
+    resource_group {
+      prevent_deletion_if_contains_resources = false
+    }
+  }
 }
 
 resource "random_pet" "id" {}
@@ -88,20 +92,18 @@ resource "azurerm_lb_backend_address_pool" "bpepool" {
 }
 
 resource "azurerm_lb_probe" "vmss" {
-  resource_group_name = azurerm_resource_group.vmss.name
-  loadbalancer_id     = azurerm_lb.vmss.id
-  name                = "ssh-running-probe"
-  port                = var.application_port
+  loadbalancer_id = azurerm_lb.vmss.id
+  name            = "ssh-running-probe"
+  port            = var.application_port
 }
 
 resource "azurerm_lb_rule" "lbnatrule" {
-  resource_group_name            = azurerm_resource_group.vmss.name
   loadbalancer_id                = azurerm_lb.vmss.id
   name                           = "http"
   protocol                       = "Tcp"
   frontend_port                  = var.application_port
   backend_port                   = var.application_port
-  backend_address_pool_id        = azurerm_lb_backend_address_pool.bpepool.id
+  backend_address_pool_ids       = [azurerm_lb_backend_address_pool.bpepool.id]
   frontend_ip_configuration_name = "PublicIPAddress"
   probe_id                       = azurerm_lb_probe.vmss.id
 }
@@ -181,7 +183,7 @@ resource "azurerm_virtual_machine_scale_set" "vmss" {
 
     ssh_keys {
       path     = "/home/azureuser/.ssh/authorized_keys"
-      key_data = jsondecode(azapi_resource_action.ssh_public_key_gen.output).publicKey
+      key_data = azapi_resource_action.ssh_public_key_gen.output.publicKey
     }
   }
 
@@ -217,7 +219,7 @@ resource "azurerm_network_interface" "jumpbox" {
   ip_configuration {
     name                          = "IPConfiguration"
     subnet_id                     = azurerm_subnet.vmss.id
-    private_ip_address_allocation = "dynamic"
+    private_ip_address_allocation = "Dynamic"
     public_ip_address_id          = azurerm_public_ip.jumpbox.id
   }
 
@@ -256,7 +258,7 @@ resource "azurerm_virtual_machine" "jumpbox" {
 
     ssh_keys {
       path     = "/home/azureuser/.ssh/authorized_keys"
-      key_data = jsondecode(azapi_resource_action.ssh_public_key_gen.output).publicKey
+      key_data = azapi_resource_action.ssh_public_key_gen.output.publicKey
     }
   }
 

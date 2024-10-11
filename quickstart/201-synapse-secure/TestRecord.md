@@ -1,3 +1,241 @@
+## 06 Oct 24 01:54 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.32.0
++ provider registry.terraform.io/hashicorp/http v3.4.5
+
+### Error
+
+
+
+---
+
+## 29 Sep 24 03:02 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.32.0
++ provider registry.terraform.io/hashicorp/http v3.4.5
+
+### Error
+
+
+
+---
+
+## 29 Sep 24 02:44 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.32.0
++ provider registry.terraform.io/hashicorp/http v3.4.5
+
+### Error
+
+
+
+---
+
+## 29 Sep 24 00:12 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.32.0
++ provider registry.terraform.io/hashicorp/http v3.4.5
+
+### Error
+
+
+
+---
+
+## 27 Sep 24 07:08 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.32.0
++ provider registry.terraform.io/hashicorp/http v3.4.5
+
+### Error
+
+
+
+---
+
+## 22 Sep 24 00:10 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.32.0
++ provider registry.terraform.io/hashicorp/http v3.4.5
+
+### Error
+
+
+
+---
+
+## 18 Sep 24 03:23 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.32.0
++ provider registry.terraform.io/hashicorp/http v3.4.5
+
+### Error
+
+
+
+---
+
+## 08 Sep 24 00:20 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.32.0
++ provider registry.terraform.io/hashicorp/http v3.4.4
+
+### Error
+
+
+
+---
+
+## 01 Sep 24 00:20 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.32.0
++ provider registry.terraform.io/hashicorp/http v3.4.4
+
+### Error
+
+
+
+---
+
+## 25 Aug 24 00:21 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.32.0
++ provider registry.terraform.io/hashicorp/http v3.4.4
+
+### Error
+
+
+
+---
+
+## 18 Aug 24 00:19 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.32.0
++ provider registry.terraform.io/hashicorp/http v3.4.4
+
+### Error
+
+
+
+---
+
+## 11 Aug 24 00:24 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.32.0
++ provider registry.terraform.io/hashicorp/http v3.4.4
+
+### Error
+
+
+
+---
+
+## 04 Aug 24 00:22 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.32.0
++ provider registry.terraform.io/hashicorp/http v3.4.4
+
+### Error
+
+
+
+---
+
+## 01 Aug 24 01:00 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.32.0
++ provider registry.terraform.io/hashicorp/http v3.4.4
+
+### Error
+
+
+
+---
+
 ## 28 Jan 24 00:23 UTC
 
 Success: false

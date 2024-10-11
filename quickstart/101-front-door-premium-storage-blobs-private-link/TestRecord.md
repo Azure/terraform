@@ -1,3 +1,255 @@
+## 06 Oct 24 00:23 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.1.0
++ provider registry.terraform.io/hashicorp/azurerm v3.116.0
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+
+
+---
+
+## 29 Sep 24 03:50 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.1.0
++ provider registry.terraform.io/hashicorp/azurerm v3.116.0
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+
+
+---
+
+## 29 Sep 24 02:48 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.1.0
++ provider registry.terraform.io/hashicorp/azurerm v3.116.0
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+
+
+---
+
+## 29 Sep 24 00:14 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.1.0
++ provider registry.terraform.io/hashicorp/azurerm v3.116.0
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+
+
+---
+
+## 27 Sep 24 08:13 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.1.0
++ provider registry.terraform.io/hashicorp/azurerm v3.116.0
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+
+
+---
+
+## 22 Sep 24 00:13 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.1.0
++ provider registry.terraform.io/hashicorp/azurerm v3.116.0
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+
+
+---
+
+## 18 Sep 24 03:26 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.1.0
++ provider registry.terraform.io/hashicorp/azurerm v3.116.0
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+
+
+---
+
+## 08 Sep 24 01:18 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.1.0
++ provider registry.terraform.io/hashicorp/azurerm v3.116.0
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+
+
+---
+
+## 01 Sep 24 01:11 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.1.0
++ provider registry.terraform.io/hashicorp/azurerm v3.116.0
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+
+
+---
+
+## 25 Aug 24 01:14 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.1.0
++ provider registry.terraform.io/hashicorp/azurerm v3.116.0
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+
+
+---
+
+## 18 Aug 24 01:13 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.1.0
++ provider registry.terraform.io/hashicorp/azurerm v3.116.0
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+
+
+---
+
+## 11 Aug 24 01:11 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.1.0
++ provider registry.terraform.io/hashicorp/azurerm v3.115.0
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+
+
+---
+
+## 04 Aug 24 01:11 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.1.0
++ provider registry.terraform.io/hashicorp/azurerm v3.114.0
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+
+
+---
+
+## 01 Aug 24 01:57 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.1.0
++ provider registry.terraform.io/hashicorp/azurerm v3.113.0
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+
+
+---
+
 ## 28 Jan 24 01:40 UTC
 
 Success: true

@@ -1,3 +1,255 @@
+## 06 Oct 24 02:37 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.116.0
++ provider registry.terraform.io/hashicorp/kubernetes v2.32.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+
+
+---
+
+## 29 Sep 24 03:23 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.116.0
++ provider registry.terraform.io/hashicorp/kubernetes v2.32.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+
+
+---
+
+## 29 Sep 24 02:45 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.116.0
++ provider registry.terraform.io/hashicorp/kubernetes v2.32.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+
+
+---
+
+## 29 Sep 24 00:13 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.116.0
++ provider registry.terraform.io/hashicorp/kubernetes v2.32.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+
+
+---
+
+## 27 Sep 24 07:38 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.116.0
++ provider registry.terraform.io/hashicorp/kubernetes v2.32.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+
+
+---
+
+## 22 Sep 24 00:14 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.116.0
++ provider registry.terraform.io/hashicorp/kubernetes v2.32.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+
+
+---
+
+## 18 Sep 24 03:27 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.116.0
++ provider registry.terraform.io/hashicorp/kubernetes v2.32.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+
+
+---
+
+## 08 Sep 24 00:42 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.116.0
++ provider registry.terraform.io/hashicorp/kubernetes v2.32.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+
+
+---
+
+## 01 Sep 24 00:41 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.116.0
++ provider registry.terraform.io/hashicorp/kubernetes v2.32.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+
+
+---
+
+## 25 Aug 24 00:43 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.116.0
++ provider registry.terraform.io/hashicorp/kubernetes v2.32.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+
+
+---
+
+## 18 Aug 24 00:42 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.116.0
++ provider registry.terraform.io/hashicorp/kubernetes v2.32.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+
+
+---
+
+## 11 Aug 24 00:44 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.115.0
++ provider registry.terraform.io/hashicorp/kubernetes v2.31.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+
+
+---
+
+## 04 Aug 24 00:43 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.114.0
++ provider registry.terraform.io/hashicorp/kubernetes v2.31.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+
+
+---
+
+## 01 Aug 24 01:22 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.9.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.113.0
++ provider registry.terraform.io/hashicorp/kubernetes v2.31.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+
+
+---
+
 ## 28 Jan 24 00:48 UTC
 
 Success: true

@@ -4,7 +4,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "~>2.0"
+      version = "~>3.0"
     }
   }
 }
@@ -17,6 +17,15 @@ provider "azurerm" {
   }
 }
 
+resource "random_password" "password" {
+  count  = var.admin_password == null ? 1 : 0
+  length = 20
+}
+
+locals {
+  admin_password = try(random_password.password[0].result, var.admin_password)
+}
+
 resource "azurerm_resource_group" "vmss" {
   name     = var.resource_group_name
   location = var.location
@@ -27,7 +36,7 @@ resource "random_string" "fqdn" {
   length  = 6
   special = false
   upper   = false
-  number  = false
+  numeric = false
 }
 
 resource "azurerm_virtual_network" "vmss" {
@@ -73,14 +82,12 @@ resource "azurerm_lb_backend_address_pool" "bpepool" {
 }
 
 resource "azurerm_lb_probe" "vmss" {
-  resource_group_name = azurerm_resource_group.vmss.name
   loadbalancer_id     = azurerm_lb.vmss.id
   name                = "ssh-running-probe"
   port                = var.application_port
 }
 
 resource "azurerm_lb_rule" "lbnatrule" {
-  resource_group_name            = azurerm_resource_group.vmss.name
   loadbalancer_id                = azurerm_lb.vmss.id
   name                           = "http"
   protocol                       = "Tcp"
@@ -127,7 +134,7 @@ resource "azurerm_virtual_machine_scale_set" "vmss" {
   os_profile {
     computer_name_prefix = "vmlab"
     admin_username       = var.admin_user
-    admin_password       = var.admin_password
+    admin_password       = local.admin_password
     custom_data          = file("web.conf")
   }
 
@@ -198,7 +205,7 @@ resource "azurerm_virtual_machine" "jumpbox" {
   os_profile {
     computer_name  = "jumpbox"
     admin_username = var.admin_user
-    admin_password = var.admin_password
+    admin_password = local.admin_password
   }
 
   os_profile_linux_config {

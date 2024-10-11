@@ -28,6 +28,6 @@ variable "admin_user" {
 
 variable "admin_password" {
   description = "Default password for admin account"
-  default     = "ChangeMe123!"
+  default     = null
   sensitive   = true
 }

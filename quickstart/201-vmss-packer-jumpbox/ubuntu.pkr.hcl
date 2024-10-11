@@ -8,21 +8,21 @@ packer {
 }
 
 variable client_id {
-  type = string
+  type    = string
   default = null
 }
 variable client_secret {
-  type = string
+  type    = string
   default = null
 }
 
 variable subscription_id {
-  type = string
+  type    = string
   default = null
 }
 
 variable tenant_id {
-  type = string
+  type    = string
   default = null
 }
 
@@ -35,6 +35,15 @@ variable "image_resource_group_name" {
   default     = "myPackerImages"
 }
 
+variable "oidc_request_url" {
+  default = null
+}
+
+variable "oidc_request_token" {
+  default = null
+}
+
+# arm builder
 source "azure-arm" "builder" {
   client_id                         = var.client_id
   client_secret                     = var.client_secret
@@ -47,8 +56,10 @@ source "azure-arm" "builder" {
   os_type                           = "Linux"
   subscription_id                   = var.subscription_id
   tenant_id                         = var.tenant_id
+  oidc_request_url                  = var.oidc_request_url
+  oidc_request_token                = var.oidc_request_token
   vm_size                           = "Standard_DS2_v2"
-  azure_tags                        = {
+  azure_tags = {
     "dept" : "Engineering",
     "task" : "Image deployment",
   }

@@ -3,7 +3,7 @@ resource "random_string" "fw_diag_prefix" {
   length  = 8
   upper   = false
   special = false
-  number  = false
+  numeric = false
 }
 resource "azurerm_ip_group" "ip_group_hub" {
   name                = "hub-ipgroup"
@@ -47,6 +47,8 @@ resource "azurerm_firewall" "azure_firewall_instance" {
   name                = "afw-${var.name}-${var.environment}"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.hub_rg.name
+  sku_name            = "AZFW_VNet"
+  sku_tier            = "Standard"
   firewall_policy_id  = azurerm_firewall_policy.base_policy.id
 
   ip_configuration {
@@ -105,6 +107,11 @@ resource "azurerm_monitor_diagnostic_setting" "azure_firewall_instance" {
     }
   }
 
+  lifecycle {
+    ignore_changes = [
+      log
+    ]
+  }
 }
 
 resource "azurerm_firewall_policy_rule_collection_group" "azure_firewall_rules_collection" {
