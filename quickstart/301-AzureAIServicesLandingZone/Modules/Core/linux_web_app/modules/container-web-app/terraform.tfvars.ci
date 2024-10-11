@@ -1,0 +1,43 @@
+location            = "fr-central"
+location_short      = "frc"
+client_name         = "test"
+environment         = "test"
+stack               = "ci"
+resource_group_name = "test-rg"
+app_service_plan_id = "/subscriptions/aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee/resourceGroups/my-rg/providers/Microsoft.web/serverFarms/my-resource-name"
+app_settings = {
+  foo = "bar"
+}
+extra_tags = {
+  foo = "bar"
+}
+connection_strings = [{
+  name  = "name-ci"
+  type  = "Custom"
+  value = "MyCustomConnectionString"
+}]
+custom_domains = {
+  "example.com" = {
+    certificate_file     = "./example.com.pfx"
+    certificate_password = "examplepassword"
+  }
+  "example2.com" = {
+    certificate_keyvault_certificate_id = "/subscriptions/aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee/resourceGroups/my-rg/providers/Microsoft.KeyVault/vaults/my-keyvault"
+    certificate_password                = "example2password"
+  }
+  "example3.com" = null
+}
+enable_logging                  = true
+logs_retention                  = 7
+logs_storage_account_id         = "/subscriptions/aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee/resourceGroups/rg-test/providers/Microsoft.Storage/storageAccounts/storageaccountname"
+enable_backup                   = true
+backup_storage_account_name     = "storageaccountname"
+backup_storage_account_rg       = "rg-test"
+custom_diagnostic_settings_name = "diag-custom-name"
+authorized_ips                  = ["1.2.3.4/32", "4.3.2.1/32"]
+ip_restriction_headers = {
+  x_forwarded_host = ["myhost1.fr", "myhost2.fr"]
+}
+scm_ip_restriction_headers = {
+  x_forwarded_host = ["myhost1.fr", "myhost2.fr"]
+}
