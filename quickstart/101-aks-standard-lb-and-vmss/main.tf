@@ -26,6 +26,11 @@ resource "azurerm_kubernetes_cluster" "aks_cluster" {
     min_count           = 1
     vm_size             = "Standard_DS2_v2"
     enable_auto_scaling = true
+    upgrade_settings {
+      drain_timeout_in_minutes      = "90m"
+      max_surge                     = "10%"
+      node_soak_duration_in_minutes = 0
+    }
   }
 
   network_profile {
