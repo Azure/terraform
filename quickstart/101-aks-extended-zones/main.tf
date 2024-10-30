@@ -55,4 +55,8 @@ resource "azurerm_kubernetes_cluster" "aks" {
   }
 
   edge_zone = var.aks_extended_zone
+
+  timeouts {
+    create = "3h"
+  }
 }
