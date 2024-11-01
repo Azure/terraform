@@ -1,37 +1,40 @@
-variable "resource_group_name_prefix" {
-  type        = string
-  default     = "rg"
-  description = "Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription."
+variable "az_rg_name" {
+  type    = string
+  default = "azure-functions-example-rg"
 }
 
-variable "resource_group_location" {
-  type        = string
-  default     = "eastus"
-  description = "Location of the resource group."
+variable "location" {
+  type    = string
+  default = "East US"
 }
 
-variable "appName" {
-  type        = string
-  default     = "fnapp"
-  description = "The name of the function app that you wish to create."
+variable "az_sa_account_tier" {
+  type    = string
+  default = "Standard"
 }
 
-variable "storageAccountType" {
-  type        = string
-  default     = "Standard_LRS"
-  validation {
-    condition     = contains(["Standard_LRS", "Standard_GRS", "Standard_RAGRS"], var.storageAccountType)
-    error_message = "Must be one of Standard_LRS, Standard_GRS, Standard_RAGRS"
-  }
-  description = "Storage Account type"
+variable "az_sa_account_replication_type" {
+  type    = string
+  default = "LRS"
 }
 
-variable "runtime" {
-  type        = string
-  default     = "node"
-  validation {
-    condition     = contains(["node", "dotnet", "java"], var.runtime)
-    error_message = "Must be one of node, dotnet, java"
-  }
-  description = "The language worker runtime to load in the function app."
+variable "az_sa_name" {
+  type    = string
+  default = "examplefunctionssa"
 }
+
+variable "az_asp_name" {
+  type    = string
+  default = "example-functions-service-plan"
+}
+
+variable "az_asp_sku_tier" {
+  type    = string
+  default = "Standard"
+}
+
+variable "az_fa_name" {
+  type    = string
+  default = "example-functions-app"
+}
+

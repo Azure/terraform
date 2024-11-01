@@ -1,79 +1,32 @@
-resource "random_pet" "rg_name" {
-  prefix = var.resource_group_name_prefix
+resource "azurerm_resource_group" "az_rg" {
+  name     = var.az_rg_name
+  location = var.location
 }
 
-resource "azurerm_resource_group" "rg" {
-  location = var.resource_group_location
-  name     = random_pet.rg_name.id
+resource "azurerm_storage_account" "az_sa" {
+  name                     = var.az_sa_name
+  resource_group_name      = azurerm_resource_group.az_rg.name
+  location                 = azurerm_resource_group.az_rg.location
+  account_tier             = var.az_sa_account_tier
+  account_replication_type = var.az_sa_account_replication_type
 }
 
-resource "random_string" "unique_id" {
-  length  = 8
-  lower   = true
-  numeric = false
-  special = false
-  upper   = false
-}
+resource "azurerm_app_service_plan" "az_asp" {
+  name                = var.az_asp_name
+  location            = azurerm_resource_group.az_rg.location
+  resource_group_name = azurerm_resource_group.az_rg.name
 
-resource "azurerm_storage_account" "storageAccount" {
-  name                     = random_string.unique_id.result
-  resource_group_name      = azurerm_resource_group.rg.name
-  location                 = azurerm_resource_group.rg.location
-  account_tier             = "Standard"
-  account_replication_type = "LRS"
-}
-
-resource "azurerm_service_plan" "hostingPlan" {
-  name                = random_string.unique_id.result
-  resource_group_name = azurerm_resource_group.rg.name
-  location            = azurerm_resource_group.rg.location
-  os_type             = "Linux"
-  sku_name            = "P1v2"
-}
-
-resource "azurerm_linux_function_app" "example" {
-  name                = "fnapp${random_string.unique_id.result}"
-  location            = azurerm_resource_group.rg.location
-  resource_group_name = azurerm_resource_group.rg.name
-  service_plan_id = azurerm_service_plan.hostingPlan.id
-  storage_account_name = azurerm_storage_account.storageAccount.name
-  storage_account_access_key = azurerm_storage_account.storageAccount.primary_access_key
-
-  identity {
-    type = "SystemAssigned"
-  }
-
-  site_config {
-    application_stack {
-      python_version = "3.9"
-    }
+  sku {
+    tier = var.az_asp_sku_tier
+    size = "S1"
   }
 }
 
-resource "azurerm_function_app_function" "example" {
-  name            = "fnappfcn${random_string.unique_id.result}"
-  function_app_id = azurerm_linux_function_app.example.id
-  language        = "Python"
-  test_data = jsonencode({
-    "name" = "Azure"
-  })
-  config_json = jsonencode({
-    "bindings" = [
-      {
-        "authLevel" = "function"
-        "direction" = "in"
-        "methods" = [
-          "get",
-          "post",
-        ]
-        "name" = "req"
-        "type" = "httpTrigger"
-      },
-      {
-        "direction" = "out"
-        "name"      = "$return"
-        "type"      = "http"
-      },
-    ]
-  })
+resource "azurerm_function_app" "az_fa" {
+  name                       = var.az_fa_name
+  location                   = azurerm_resource_group.az_rg.location
+  resource_group_name        = azurerm_resource_group.az_rg.name
+  app_service_plan_id        = azurerm_app_service_plan.az_asp.id
+  storage_account_name       = azurerm_storage_account.az_sa.name
+  storage_account_access_key = azurerm_storage_account.az_sa.primary_access_key
 }
