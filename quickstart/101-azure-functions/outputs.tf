@@ -7,7 +7,7 @@ output "storage_account_name" {
 }
 
 output "app_service_plan_name" {
-  value = azurerm_app_service_plan.hostingPlan.name
+  value = azurerm_service_plan.hostingPlan.name
 }
 
 output "function_app_name" {
