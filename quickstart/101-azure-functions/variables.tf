@@ -26,11 +26,6 @@ variable "storageAccountType" {
   description = "Storage Account type"
 }
 
-variable "appInsightsLocation" {
-  type        = string
-  description = "Location for Application Insights"
-}
-
 variable "runtime" {
   type        = string
   default     = "node"
