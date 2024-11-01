@@ -13,22 +13,28 @@ resource "random_string" "unique_id" {
 }
 
 locals {
-  functionAppName        = var.appName
-  hostingPlanName        = var.appName
-  applicationInsightsName = var.appName
+  functionAppName        = "fnapp${random_string.unique_id.result}"
+  hostingPlanName        = "fnapp${random_string.unique_id.result}"
+  applicationInsightsName = "fnapp${random_string.unique_id.result}"
   storageAccountName     = "${random_string.unique_id.result}azfunctions"
   functionWorkerRuntime  = var.runtime
 }
 
-resource "azurerm_storage_account" "storageAccount" {
-  name                     = local.storageAccountName
-  location                 = azurerm_resource_group.rg.location
-  resource_group_name      = azurerm_resource_group.rg.name
-  account_tier             = "Standard"
-  account_replication_type = var.storageAccountType
+# Generate random value for the storage account name
+resource "random_string" "storage_account_name" {
+  length  = 8
+  lower   = true
+  numeric = false
+  special = false
+  upper   = false
+}
 
-  enable_https_traffic_only = true
-  allow_blob_public_access  = false
+resource "azurerm_storage_account" "storageAccount" {
+  name                     = random_string.storage_account_name.result
+  resource_group_name      = azurerm_resource_group.rg.name
+  location                 = azurerm_resource_group.rg.location
+  account_tier             = "Standard"
+  account_replication_type = "LRS"
 }
 
 resource "azurerm_app_service_plan" "hostingPlan" {

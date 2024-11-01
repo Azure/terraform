@@ -12,7 +12,7 @@ variable "resource_group_location" {
 
 variable "appName" {
   type        = string
-  default     = "fnapp${random_string.unique_id.result}"
+  default     = "fnapp"
   description = "The name of the function app that you wish to create."
 }
 
