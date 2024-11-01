@@ -82,7 +82,7 @@ resource "azurerm_function_app" "functionApp" {
 
 resource "azurerm_application_insights" "applicationInsights" {
   name                = local.applicationInsightsName
-  location            = var.appInsightsLocation
+  location            = var.resource_group_location
   resource_group_name = azurerm_resource_group.rg.name
   application_type    = "web"
 }
