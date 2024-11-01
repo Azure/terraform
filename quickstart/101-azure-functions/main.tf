@@ -37,15 +37,12 @@ resource "azurerm_storage_account" "storageAccount" {
   account_replication_type = "LRS"
 }
 
-resource "azurerm_app_service_plan" "hostingPlan" {
+resource "azurerm_service_plan" "hostingPlan" {
   name                = local.hostingPlanName
-  location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
-  kind                = "FunctionApp"
-  sku {
-    tier = "Dynamic"
-    size = "Y1"
-  }
+  location            = azurerm_resource_group.rg.location
+  os_type             = "Linux"
+  sku_name            = "P1v2"
 }
 
 resource "azurerm_function_app" "functionApp" {
