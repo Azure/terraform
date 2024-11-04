@@ -12,14 +12,14 @@ variable "resource_group_name_prefix" {
 
 variable "resource_group_location" {
   type        = string
-  default     = "westus"
+  default     = "westeurope"
   description = "Location of the resource group."
 }
 
 variable "sa_account_tier" {
   description = "The tier of the storage account. Possible values are Standard and Premium."
   type        = string
-  default     = "Standard"
+  default     = "Premium"
 }
 
 variable "sa_account_replication_type" {
