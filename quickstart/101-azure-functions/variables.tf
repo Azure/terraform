@@ -43,7 +43,7 @@ variable "asp_name" {
 variable "asp_sku_tier" {
   description = "The SKU tier of the App Service Plan. Possible values are Free, Shared, Basic, Standard, Premium, PremiumV2, and PremiumV3."
   type        = string
-  default     = "Standard"
+  default     = "Premium0V3"
 }
 
 variable "fa_name" {
