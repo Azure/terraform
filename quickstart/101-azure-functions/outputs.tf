@@ -15,19 +15,23 @@ output "fa_name" {
 }
 
 output "sa_primary_access_key" {
-  value = azurerm_storage_account.example.primary_access_key
+  value     = azurerm_storage_account.example.primary_access_key
+  sensitive = true
 }
 
 output "sa_primary_connection_string" {
-  value = azurerm_storage_account.example.primary_connection_string
+  value     = azurerm_storage_account.example.primary_connection_string
+  sensitive = true
 }
 
 output "sa_secondary_access_key" {
-  value = azurerm_storage_account.example.secondary_access_key
+  value     = azurerm_storage_account.example.secondary_access_key
+  sensitive = true
 }
 
 output "sa_secondary_connection_string" {
-  value = azurerm_storage_account.example.secondary_connection_string
+  value     = azurerm_storage_account.example.secondary_connection_string
+  sensitive = true
 }
 
 output "asp_id" {

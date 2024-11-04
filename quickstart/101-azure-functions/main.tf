@@ -30,7 +30,7 @@ resource "azurerm_app_service_plan" "example" {
 
   sku {
     tier = var.asp_sku_tier
-    size = "S1"
+    size = "P0V3"
   }
 }
 
