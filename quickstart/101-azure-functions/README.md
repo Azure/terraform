@@ -16,12 +16,12 @@ This template deploys an Azure Function App.
 | Name | Description | Default value |
 |-|-|-|
 | `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. | rg |
-| `resource_group_location` | Location of the resource group. | eastus |
-| `sa_account_tier` | The tier of the storage account. Possible values are Standard and Premium. | "Standard" |
+| `resource_group_location` | Location of the resource group. | westeurope |
+| `sa_account_tier` | The tier of the storage account. Possible values are Standard and Premium. | "Premium" |
 | `sa_account_replication_type` | The replication type of the storage account. Possible values are LRS, GRS, RAGRS, and ZRS. | "LRS" |
 | `sa_name` | The name of the storage account. | Randomly generated |
 | `asp_name` | The name of the App Service Plan. | Randomly generated |
-| `asp_sku_tier` | The SKU tier of the App Service Plan. Possible values are Free, Shared, Basic, Standard, Premium, PremiumV2, and PremiumV3. | "Standard" |
+| `asp_sku_tier` | The SKU tier of the App Service Plan. Possible values are Free, Shared, Basic, Standard, Premium, PremiumV2, and PremiumV3. | "Premium0V3" |
 | `fa_name` | The name of the Function App." | Randomly generated |
 
 ## Example
