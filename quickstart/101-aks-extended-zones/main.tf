@@ -27,35 +27,108 @@ resource "azurerm_virtual_network" "vnet" {
   }
 }
 
-resource "azurerm_kubernetes_cluster" "aks" {
-  name                = random_pet.azurerm_kubernetes_cluster_name.id
-  location            = azurerm_resource_group.rg.location
-  resource_group_name = azurerm_resource_group.rg.name
-  dns_prefix          = random_pet.azurerm_kubernetes_cluster_dns_prefix.id
-
+resource "azapi_resource" "aks" {
+  count     = 1
+  type      = "Microsoft.ContainerService/ManagedClusters@2024-05-01"
+  name      = random_pet.azurerm_kubernetes_cluster_name.id
+  parent_id = azurerm_resource_group.rg.id
+  location  = azurerm_resource_group.rg.location
   identity {
     type = "SystemAssigned"
   }
-
-  default_node_pool {
-    name           = "agentpool"
-    vm_size        = var.aks_node_vm_size
-    node_count     = var.aks_node_count
-    vnet_subnet_id = element(tolist(azurerm_virtual_network.vnet.subnet), 0).id
+  body = {
+    extendedLocation = {
+      name = var.aks_extended_zone
+      type = "EdgeZone"
+    }
+    sku = {
+      name = "Base"
+      tier = "Free"
+    }
+    properties = {
+      dnsPrefix         = random_pet.azurerm_kubernetes_cluster_dns_prefix.id
+      kubernetesVersion = "1.29"
+      agentPoolProfiles = [
+        {
+          name                   = "agentpool"
+          count                  = var.aks_node_count
+          vmSize                 = var.aks_node_vm_size
+          osDiskSizeGB           = 128
+          kubeletDiskType        = "OS"
+          vnetSubnetID           = element(tolist(azurerm_virtual_network.vnet.subnet), 0).id
+          maxPods                = 30
+          type                   = "VirtualMachineScaleSets"
+          enableAutoScaling      = false,
+          scaleDownMode          = "Delete",
+          orchestratorVersion    = "1.29"
+          enableNodePublicIP     = false
+          mode                   = "System"
+          enableEncryptionAtHost = false
+          enableUltraSSD         = false
+          osType                 = "Linux"
+          osSKU                  = "Ubuntu"
+          upgradeSettings = {
+            maxSurge = "10%"
+          }
+          enableFIPS = false
+        }
+      ]
+      windowsProfile = {
+        adminUsername  = var.admin_username
+        adminPassword  = var.admin_password
+        licenseType    = "None"
+        enableCSIProxy = true
+      }
+      servicePrincipalProfile = {
+        clientId = "msi"
+      }
+      enableRBAC  = true
+      supportPlan = "KubernetesOfficial"
+      networkProfile = {
+        networkPlugin    = "azure"
+        networkPolicy    = "none"
+        networkDataplane = "azure"
+        loadBalancerSku  = "standard"
+        loadBalancerProfile = {
+          managedOutboundIPs = {
+            count = 1
+          }
+          backendPoolType = "nodeIPConfiguration"
+        }
+        serviceCidr  = "10.0.0.0/16"
+        dnsServiceIP = "10.0.0.10"
+        outboundType = "loadBalancer"
+        serviceCidrs = [
+          "10.0.0.0/16",
+        ]
+        ipFamilies = ["IPv4"]
+      }
+      autoUpgradeProfile = {
+        upgradeChannel       = "none"
+        nodeOSUpgradeChannel = "NodeImage"
+      }
+      disableLocalAccounts = false
+      storageProfile = {
+        diskCSIDriver = {
+          enabled = true
+        }
+        fileCSIDriver = {
+          enabled = true
+        }
+        snapshotController = {
+          enabled = true
+        }
+      }
+      oidcIssuerProfile = {
+        enabled = false
+      }
+      azureMonitorProfile = {
+        metrics = {
+          enabled = false
+        }
+      }
+    }
   }
-
-  windows_profile {
-    admin_username = var.admin_username
-    admin_password = var.admin_password
-  }
-
-  network_profile {
-    network_plugin    = "azure"
-    load_balancer_sku = "standard"
-  }
-
-  edge_zone = var.aks_extended_zone
-
   timeouts {
     create = "6h"
   }
