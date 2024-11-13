@@ -22,6 +22,6 @@ variable "open_api_spec_content_format" {
 
 variable "open_api_spec_content_value" {
   type        = string
-  default     = "http://conferenceapi.azurewebsites.net/?format=json"
+  default     = "https://petstore3.swagger.io/api/v3/openapi.json"
   description = "The Content from which the API Definition should be imported. When a content_format of *-link-* is specified this must be a URL, otherwise this must be defined inline."
 }
