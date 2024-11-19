@@ -58,4 +58,8 @@ resource "azurerm_sql_database" "example" {
     disabled_alerts = var.sql_database_threat_detection_policy_disabled_alerts
     retention_days = var.sql_database_threat_detection_policy_retention_days
   }
+
+  lifecycle {
+    ignore_changes = [ app_settings ]
+  }
 }
