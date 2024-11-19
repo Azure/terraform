@@ -52,4 +52,7 @@ resource "azurerm_app_service" "example" {
     type  = var.connection_string_type
     value = var.connection_string_value
   }
+  lifecycle {
+    ignore_changes = [ app_settings ]
+  }
 }

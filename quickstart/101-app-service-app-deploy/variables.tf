@@ -47,8 +47,8 @@ variable "app_service_scm_type" {
 }
 
 variable "app_settings" {
-  type        = map(string)
-  default     = {}
+  type = map(string)
+  default = {}
   description = "A map of key-value pairs for the App Service app settings."
 }
 
