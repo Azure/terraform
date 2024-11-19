@@ -19,7 +19,5 @@ This template deploys an Azure App Service Environment v3.
 | `virtual_network_name` | Name of the virtual network resource. | "" |
 | `subnet_name` | Name of the virtual network subnet. | "" |
 | `app_service_environment_v3_name` | Name of the App Service Environment v3 resource. | "" |
-| `app_service_environment_v3_pricing_tier` | Pricing tier for the App Service Environment v3. Possible values are: I1, I2, and I3. | I1 |
-| `app_service_environment_v3_front_end_scale_factor` | Front-end scale factor for the App Service Environment v3. | 15 |
 
 ## Example

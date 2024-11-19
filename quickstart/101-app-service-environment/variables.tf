@@ -27,19 +27,3 @@ variable "app_service_environment_v3_name" {
   description = "The name of the App Service Environment v3 resource. The value will be randomly generated if blank."
   default     = ""
 }
-
-variable "app_service_environment_v3_pricing_tier" {
-  type        = string
-  default     = "I1"
-  validation {
-    condition     = contains(["I1", "I2", "I3"], var.app_service_environment_v3_pricing_tier)
-    error_message = "The pricing tier value must be one of the following: I1, I2, I3."
-  }
-  description = "Pricing tier for the App Service Environment v3."
-}
-
-variable "app_service_environment_v3_front_end_scale_factor" {
-  type        = number
-  default     = 15
-  description = "Front-end scale factor for the App Service Environment v3."
-}
