@@ -6,7 +6,7 @@ variable "resource_group_name_prefix" {
 
 variable "resource_group_location" {
   type        = string
-  default     = "eastus"
+  default     = "westeurope"
   description = "Location of the resource group."
 }
 
@@ -18,13 +18,13 @@ variable "app_service_plan_name" {
 
 variable "app_service_plan_sku_tier" {
   type        = string
-  default     = "Standard"
+  default     = "Premium0V3"
   description = "The tier of the App Service Plan."
 }
 
 variable "app_service_plan_sku_size" {
   type        = string
-  default     = "S1"
+  default     = "P0v3"
   description = "The size of the App Service Plan."
 }
 
