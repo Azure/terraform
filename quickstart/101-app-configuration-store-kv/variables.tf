@@ -16,20 +16,20 @@ variable "app_configuration_name" {
   default     = ""
 }
 
-variable "app_configuration_key" {
+variable "app_configuration_key_name" {
   type        = string
-  description = "Key of the App Configuration key-value pair."
+  description = "The name of the App Configuration key. The value will be randomly generated if blank."
   default     = ""
 }
 
-variable "app_configuration_label" {
+variable "app_configuration_key_label" {
   type        = string
-  description = "Label of the App Configuration key-value pair."
+  description = "The label of the App Configuration key."
   default     = ""
 }
 
-variable "app_configuration_value" {
+variable "app_configuration_key_value" {
   type        = string
-  description = "Value of the App Configuration key-value pair."
+  description = "The value of the App Configuration key."
   default     = ""
 }
