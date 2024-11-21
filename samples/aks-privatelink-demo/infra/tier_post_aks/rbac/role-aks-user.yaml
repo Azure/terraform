@@ -1,0 +1,21 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: role-aks-user
+  namespace: dev
+rules:
+- apiGroups: [""]
+  resources: ["pods","pods/logs","pods/portforward","nodes","configmaps","secrets","replicationcontrollers","persistentvolumes","persistentvolumeclaims","services","ingresses"]
+  verbs: ["get", "watch", "list","create","update","delete"]
+- apiGroups: ["extensions", "apps"]
+  resources: ["deployments","daemonsets","replicasets","statefulsets","ingresses"]
+  verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+- apiGroups: ["batch", "extensions"]
+  resources: ["jobs","cronjobs"]
+  verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+- apiGroups: [""]
+  resources: ["services/LoadBalancer"]
+  verbs: ["get", "watch", "list"]
+- apiGroups: [""]
+  resources: ["ingresses"]
+  verbs: ["get", "watch", "list","update","create","delete"]
