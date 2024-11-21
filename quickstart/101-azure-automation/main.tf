@@ -20,4 +20,10 @@ resource "azurerm_automation_account" "example" {
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   sku_name            = "Basic"
+  identity {
+    type         = "UserAssigned"
+    identity_ids = [azurerm_user_assigned_identity.example.id]
+  }
+
+  public_network_access_enabled = true
 }
