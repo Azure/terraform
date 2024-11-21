@@ -21,9 +21,20 @@ resource "azurerm_automation_account" "example" {
   location            = azurerm_resource_group.rg.location
   sku_name            = "Basic"
   identity {
-    type         = "UserAssigned"
-    identity_ids = [azurerm_user_assigned_identity.example.id]
+    type         = "SystemAssigned"
   }
 
   public_network_access_enabled = true
+}
+
+data "azurerm_subscription" "current" {}
+
+data "azurerm_role_definition" "contributor" {
+  name = "Contributor"
+}
+
+resource "azurerm_role_assignment" "example" {
+  scope              = data.azurerm_subscription.current.id
+  role_definition_name = "Contributor"
+  principal_id       = azurerm_automation_account.example.identity[0].principal_id
 }
