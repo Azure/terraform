@@ -14,5 +14,15 @@ terraform {
 }
 
 provider "azurerm" {
-  features {}
+  features {
+    recovery_service {
+      vm_backup_stop_protection_and_retain_data_on_destroy = true
+      purge_protected_items_from_vault_on_destroy          = true
+    }
+    virtual_machine_scale_set {
+      force_delete                  = false
+      roll_instances_when_required  = true
+      scale_to_zero_before_deletion = true
+    }
+  }
 }
