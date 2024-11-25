@@ -8,11 +8,11 @@ resource "azurerm_resource_group" "rg" {
 }
 
 resource "random_string" "name" {
-  length      = 12
-  lower       = true
-  upper       = false
-  numeric     = false
-  special     = false
+  length  = 12
+  lower   = true
+  upper   = false
+  numeric = false
+  special = false
 }
 
 # Create virtual network
@@ -107,7 +107,7 @@ resource "azurerm_windows_virtual_machine" "main" {
   resource_group_name   = azurerm_resource_group.rg.name
   network_interface_ids = [azurerm_network_interface.my_terraform_nic.id]
   size                  = "Standard_DS1_v2"
-  
+
   os_disk {
     name                 = "myOsDisk"
     caching              = "ReadWrite"
@@ -151,6 +151,7 @@ resource "azurerm_recovery_services_vault" "example" {
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   sku                 = "Standard"
+  soft_delete_enabled = var.soft_delete_enabled
 }
 
 resource "azurerm_backup_policy_vm" "example" {
@@ -169,8 +170,8 @@ resource "azurerm_backup_policy_vm" "example" {
 }
 
 resource "azurerm_backup_protected_vm" "example" {
-  resource_group_name     = azurerm_resource_group.rg.name
-  recovery_vault_name     = azurerm_recovery_services_vault.example.name
-  source_vm_id            = azurerm_windows_virtual_machine.main.id
-  backup_policy_id        = azurerm_backup_policy_vm.example.id
+  resource_group_name = azurerm_resource_group.rg.name
+  recovery_vault_name = azurerm_recovery_services_vault.example.name
+  source_vm_id        = azurerm_windows_virtual_machine.main.id
+  backup_policy_id    = azurerm_backup_policy_vm.example.id
 }
