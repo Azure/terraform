@@ -100,13 +100,14 @@ resource "azurerm_storage_account" "my_storage_account" {
 
 # Create virtual machine
 resource "azurerm_windows_virtual_machine" "main" {
-  name                  = "${random_string.name.id}-vm"
-  admin_username        = "azureuser"
-  admin_password        = random_password.password.result
-  location              = azurerm_resource_group.rg.location
-  resource_group_name   = azurerm_resource_group.rg.name
-  network_interface_ids = [azurerm_network_interface.my_terraform_nic.id]
-  size                  = "Standard_DS1_v2"
+  name                              = "${random_string.name.id}-vm"
+  admin_username                    = "azureuser"
+  admin_password                    = random_password.password.result
+  location                          = azurerm_resource_group.rg.location
+  resource_group_name               = azurerm_resource_group.rg.name
+  network_interface_ids             = [azurerm_network_interface.my_terraform_nic.id]
+  size                              = "Standard_DS1_v2"
+  vm_agent_platform_updates_enabled = true
 
   os_disk {
     name                 = "myOsDisk"
