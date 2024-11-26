@@ -7,8 +7,15 @@ resource "azurerm_resource_group" "rg" {
   name     = random_pet.rg_name.id
 }
 
+resource "random_string" "name" {
+  length  = 12
+  lower   = true
+  upper   = false
+  numeric = false
+  special = false
+}
 resource "azurerm_template_deployment" "example" {
-  name                = "example-deployment"
+  name                = coalesce(var.template_name, random_string.name.id)
   resource_group_name = azurerm_resource_group.rg.name
   deployment_mode     = "Incremental"
 
