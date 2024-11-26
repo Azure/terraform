@@ -9,3 +9,9 @@ variable "resource_group_location" {
   default     = "eastus"
   description = "Location of the resource group."
 }
+
+variable "template_name" {
+  type        = string
+  default     = ""
+  description = "Name of the template deployment."
+}
