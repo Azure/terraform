@@ -302,7 +302,6 @@ Terraform will perform the following actions:
           + max_pods        = (known after apply)
           + name            = "default"
           + os_disk_size_gb = 30
-          + os_type         = "Linux"
           + type            = "AvailabilitySet"
           + vm_size         = "Standard_D1_v2"
           + vnet_subnet_id  = (known after apply)
