@@ -1,12 +1,14 @@
+# Resource Group
 resource "random_pet" "rg_name" {
-  prefix = var.resource_group_name_prefix
+  separator = "-"
 }
 
 resource "azurerm_resource_group" "rg" {
   location = var.resource_group_location
-  name     = random_pet.rg_name.id
+  name     = "${var.resource_group_name_prefix}-${random_pet.rg_name.id}"
 }
 
+# Random String for unique naming
 resource "random_string" "name" {
   length  = 8
   special = false
@@ -14,32 +16,38 @@ resource "random_string" "name" {
   lower   = true
   numeric = false
 }
+
+# Virtual Network
 resource "azurerm_virtual_network" "vnet" {
-  name                = "vnet-${random_string.name.id}"
+  name                = "vnet-${random_string.name.result}"
   address_space       = var.address_space
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
 }
 
+# Subnet
 resource "azurerm_subnet" "subnet" {
-  name                 = "subnet-${random_string.name.id}"
+  name                 = "subnet-${random_string.name.result}"
   resource_group_name  = azurerm_resource_group.rg.name
   virtual_network_name = azurerm_virtual_network.vnet.name
   address_prefixes     = var.address_prefixes
 }
 
+# Private DNS Zone
 resource "azurerm_private_dns_zone" "dns_zone" {
   name                = var.private_dns_zone_name
   resource_group_name = azurerm_resource_group.rg.name
 }
 
+# Private DNS Zone Virtual Network Link
 resource "azurerm_private_dns_zone_virtual_network_link" "dsn_vnet_link" {
-  name                  = "dns-vnet-link-${random_string.name.id}"
+  name                  = "dns-vnet-link-${random_string.name.result}"
   resource_group_name   = azurerm_resource_group.rg.name
   private_dns_zone_name = azurerm_private_dns_zone.dns_zone.name
   virtual_network_id    = azurerm_virtual_network.vnet.id
 }
 
+# Random Passwords for VMs
 resource "random_password" "vm1_admin_password" {
   length  = 16
   special = true
@@ -50,8 +58,9 @@ resource "random_password" "vm2_admin_password" {
   special = true
 }
 
+# Network Interfaces
 resource "azurerm_network_interface" "nic1" {
-  name                = "nic1-${random_string.name.id}"
+  name                = "nic1-${random_string.name.result}"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
 
@@ -63,7 +72,7 @@ resource "azurerm_network_interface" "nic1" {
 }
 
 resource "azurerm_network_interface" "nic2" {
-  name                = "nic2-${random_string.name.id}"
+  name                = "nic2-${random_string.name.result}"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
 
@@ -74,8 +83,9 @@ resource "azurerm_network_interface" "nic2" {
   }
 }
 
+# Windows Virtual Machines
 resource "azurerm_windows_virtual_machine" "vm1" {
-  name                = "vm1-${random_string.name.id}"
+  name                = "vm1-${random_string.name.result}"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   size                = "Standard_F2"
@@ -96,10 +106,13 @@ resource "azurerm_windows_virtual_machine" "vm1" {
     sku       = "2019-Datacenter"
     version   = "latest"
   }
+
+  # Make idempotent
+  vm_agent_platform_updates_enabled = true
 }
 
 resource "azurerm_windows_virtual_machine" "vm2" {
-  name                = "vm2-${random_string.name.id}"
+  name                = "vm2-${random_string.name.result}"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   size                = "Standard_F2"
@@ -125,6 +138,7 @@ resource "azurerm_windows_virtual_machine" "vm2" {
   vm_agent_platform_updates_enabled = true
 }
 
+# Private DNS A Record
 resource "azurerm_private_dns_a_record" "pdar" {
   name                = "test"
   zone_name           = azurerm_private_dns_zone.dns_zone.name
@@ -133,12 +147,14 @@ resource "azurerm_private_dns_a_record" "pdar" {
   records             = [azurerm_windows_virtual_machine.vm1.private_ip_address]
 }
 
+# Network Security Group
 resource "azurerm_network_security_group" "nsg" {
   name                = "nsg-${random_string.name.result}"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
 }
 
+# Network Security Rule
 resource "azurerm_network_security_rule" "nsr_icmp" {
   name                        = "Allow-ICMP"
   priority                    = 100
