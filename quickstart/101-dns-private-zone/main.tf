@@ -120,6 +120,9 @@ resource "azurerm_windows_virtual_machine" "vm2" {
     sku       = "2019-Datacenter"
     version   = "latest"
   }
+
+  # Make idempotent
+  vm_agent_platform_updates_enabled = true
 }
 
 resource "azurerm_private_dns_a_record" "pdar" {
