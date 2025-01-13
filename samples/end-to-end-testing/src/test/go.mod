@@ -4,5 +4,5 @@ go 1.13
 
 require (
 	github.com/gruntwork-io/terratest v0.28.5
-	golang.org/x/crypto v0.17.0
+	golang.org/x/crypto v0.31.0
 )
