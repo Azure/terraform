@@ -6,7 +6,7 @@ variable "prefix" {
 
 variable "location" {
   type        = string
-  default     = "eastus"
+  default     = "North Europe"
   description = "Resource group location"
 }
 
@@ -18,7 +18,7 @@ variable "cosmosdb_account_name" {
 
 variable "cosmosdb_account_location" {
   type        = string
-  default     = "eastus"
+  default     = "North Europe"
   description = "Cosmos db account location"
 }
 
