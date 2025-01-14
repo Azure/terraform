@@ -13,4 +13,5 @@ variable "resource_group_name_prefix" {
 variable "vaultName" {
   description = "Name of the Recovery Services Vault."
   type        = string
+  default     = "examplevault"
 }
