@@ -65,7 +65,7 @@ resource "azurerm_netapp_volume" "volume" {
   account_name        = azurerm_netapp_account.account.name
   pool_name           = azurerm_netapp_pool.pool.name
   location            = azurerm_resource_group.rg.location
-  volume_path         = "/volume-${random_string.name.result}"
+  volume_path         = "volume-${random_string.name.result}"
   service_level       = "Premium"
   subnet_id           = azurerm_subnet.subnet.id
   storage_quota_in_gb = 100
