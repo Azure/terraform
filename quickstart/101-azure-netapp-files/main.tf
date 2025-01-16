@@ -36,7 +36,10 @@ resource "azurerm_subnet" "subnet" {
 
     service_delegation {
       name    = "Microsoft.Netapp/volumes"
-      actions = ["Microsoft.Network/virtualNetworks/subnets/join/action"]
+      actions = [
+        "Microsoft.Network/networkinterfaces/*", 
+        "Microsoft.Network/virtualNetworks/subnets/join/action"
+      ]
     }
   }
 }
@@ -66,13 +69,15 @@ resource "azurerm_netapp_volume" "volume" {
   pool_name           = azurerm_netapp_pool.pool.name
   location            = azurerm_resource_group.rg.location
   volume_path         = "volume-${random_string.name.result}"
+  protocols           = ["NFSv4.1"]
   service_level       = "Premium"
   subnet_id           = azurerm_subnet.subnet.id
   storage_quota_in_gb = 100
   export_policy_rule {
     rule_index        = 1
     allowed_clients   = ["0.0.0.0/0"]
+    protocols_enabled = ["NFSv4.1"]
     unix_read_only    = false
-    unix_read_write   = true
+    unix_read_write   = true    
   }
 }
