@@ -6,7 +6,7 @@ variable "prefix" {
 
 variable "location" {
   type        = string
-  default     = "eastus"
+  default     = "Central US"
   description = "Resource group location"
 }
 
