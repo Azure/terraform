@@ -1,3 +1,21 @@
+## 23 Jan 25 10:27 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.10.2
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.0
++ provider registry.terraform.io/hashicorp/random v3.6.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+No error was found.
+
+---
+
 ## 19 Jan 25 00:59 UTC
 
 Success: true
