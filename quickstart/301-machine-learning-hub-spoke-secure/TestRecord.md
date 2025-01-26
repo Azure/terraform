@@ -1,3 +1,83 @@
+## 26 Jan 25 02:12 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.10.2
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.0
++ provider registry.terraform.io/hashicorp/random v3.6.3
++ provider registry.terraform.io/hashicorp/time v0.12.1
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mwaiting for Virtual Network Peering (Subscription: "f7a632a5-49db-4c5e-9828-cd62cb753971"
+	            	[31m│[0m [0mResource Group Name: "rg-301mlhss-dev-o372"
+	            	[31m│[0m [0mVirtual Network Name: "vnet-301mlhss-dev"
+	            	[31m│[0m [0mVirtual Network Peering Name: "rg-301mlhss-dev-o372-to-rg-hub-301mlhss-dev-o372") to be created: unexpected status 400 (400 Bad Request) with error: ReferencedResourceNotProvisioned: Cannot proceed with operation because resource /subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-301mlhss-dev-o372/providers/Microsoft.Network/virtualNetworks/vnet-301mlhss-dev used by resource /subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-301mlhss-dev-o372/providers/Microsoft.Network/virtualNetworks/vnet-301mlhss-dev/virtualNetworkPeerings/rg-301mlhss-dev-o372-to-rg-hub-301mlhss-dev-o372 is not in Succeeded state. Resource is in Updating state and the last operation that updated/is updating the resource is PutSubnetOperation.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_virtual_network_peering.direction2,
+	            	[31m│[0m [0m  on network-hub.tf line 52, in resource "azurerm_virtual_network_peering" "direction2":
+	            	[31m│[0m [0m  52: resource "azurerm_virtual_network_peering" "direction2" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Private Endpoint (Subscription: "f7a632a5-49db-4c5e-9828-cd62cb753971"
+	            	[31m│[0m [0mResource Group Name: "rg-301mlhss-dev-o372"
+	            	[31m│[0m [0mPrivate Endpoint Name: "ple-301mlhss-dev-st-blob"): polling after CreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "RetryableError"
+	            	[31m│[0m [0mCode: "ReferencedResourceNotProvisioned"
+	            	[31m│[0m [0mMessage: "A retryable error occurred.\nCannot proceed with operation because resource /subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-301mlhss-dev-o372/providers/Microsoft.Network/virtualNetworks/vnet-301mlhss-dev/subnets/snet-workspace used by resource /subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-301mlhss-dev-o372/providers/Microsoft.Network/networkInterfaces/ple-301mlhss-dev-st-blob.nic.1800985a-6155-445e-ab06-0c379ad37deb is not in Succeeded state. Resource is in Updating state and the last operation that updated/is updating the resource is PutSubnetOperation."
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{"status":"Failed","error":{"code":"RetryableError","message":"A retryable error occurred.","details":[{"code":"ReferencedResourceNotProvisioned","message":"Cannot proceed with operation because resource /subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-301mlhss-dev-o372/providers/Microsoft.Network/virtualNetworks/vnet-301mlhss-dev/subnets/snet-workspace used by resource /subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-301mlhss-dev-o372/providers/Microsoft.Network/networkInterfaces/ple-301mlhss-dev-st-blob.nic.1800985a-6155-445e-ab06-0c379ad37deb is not in Succeeded state. Resource is in Updating state and the last operation that updated/is updating the resource is PutSubnetOperation."}]}}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_private_endpoint.st_ple_blob,
+	            	[31m│[0m [0m  on workspace.tf line 109, in resource "azurerm_private_endpoint" "st_ple_blob":
+	            	[31m│[0m [0m 109: resource "azurerm_private_endpoint" "st_ple_blob" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/301-machine-learning-hub-spoke-secure
+
+FailNow
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:135
+	            				/usr/local/go/src/runtime/panic.go:629
+	            				/usr/local/go/src/testing/testing.go:1006
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/test_runner.go:53
+	            				/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	'terraform [destroy -auto-approve -input=false -lock=false]' unsuccessful after 5 retries
+	Test:       	Test_Quickstarts/quickstart/301-machine-learning-hub-spoke-secure
+
+FailNow
+
+---
+
 ## 23 Jan 25 09:27 UTC
 
 Success: true
