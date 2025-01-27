@@ -5,7 +5,7 @@ resource "azurerm_network_interface" "dsvm" {
 
   ip_configuration {
     name                          = "configuration"
-    subnet_id                     = azurerm_subnet.snet-jumphost.id
+    subnet_id                     = azurerm_subnet.snet_jumphost.id
     private_ip_address_allocation = "Dynamic"
   }
 }

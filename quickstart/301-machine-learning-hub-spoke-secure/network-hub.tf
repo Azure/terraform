@@ -7,7 +7,7 @@ resource "azurerm_virtual_network" "hub" {
   resource_group_name = azurerm_resource_group.hub_rg.name
 }
 
-resource "azurerm_subnet" "snet-jumphost" {
+resource "azurerm_subnet" "snet_jumphost" {
   name                 = "snet-jumphost"
   resource_group_name  = azurerm_resource_group.hub_rg.name
   virtual_network_name = azurerm_virtual_network.hub.name
@@ -60,9 +60,9 @@ resource "azurerm_virtual_network_peering" "direction2" {
   use_remote_gateways          = false
   depends_on = [
     azurerm_virtual_network.hub,
-    azurerm_virtual_network.default
+    azurerm_virtual_network.default,
+    azurerm_virtual_network_peering.direction1,
   ]
-
 }
 
 # Private DNS Zones
@@ -147,7 +147,7 @@ resource "azurerm_network_security_group" "jump_host" {
 }
 
 resource "azurerm_subnet_network_security_group_association" "jumphost_nsg_assoc" {
-  subnet_id                 = azurerm_subnet.snet-jumphost.id
+  subnet_id                 = azurerm_subnet.snet_jumphost.id
   network_security_group_id = azurerm_network_security_group.jump_host.id
   depends_on = [
     azurerm_network_interface.dsvm
@@ -171,6 +171,6 @@ resource "azurerm_route" "jumphost-fw-route" {
 }
 
 resource "azurerm_subnet_route_table_association" "rt-jumphost-link" {
-  subnet_id      = azurerm_subnet.snet-jumphost.id
+  subnet_id      = azurerm_subnet.snet_jumphost.id
   route_table_id = azurerm_route_table.jumphost_rt.id
 }
