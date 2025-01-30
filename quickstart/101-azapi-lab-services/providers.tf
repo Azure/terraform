@@ -1,20 +1,17 @@
 terraform {
   required_providers {
     azapi = {
-      source  = "azure/azapi"
-      version = "=0.1.0"
+      source = "Azure/azapi"
+      version = "~>2.0"
     }
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "=3.0.2"
+      version = "~>4.0"
     }
-  }
-}
-
-provider "azapi" {
-  default_location = "eastus"
-  default_tags = {
-    team = "Azure deployments"
+    random = {
+      source  = "hashicorp/random"
+      version = "~>3.0"
+    }
   }
 }
 
