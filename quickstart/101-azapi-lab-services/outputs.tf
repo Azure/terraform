@@ -1,10 +1,5 @@
-output "login_server" {
-  value = azapi_resource.example.output.properties.loginServer
-}
-
-# Outputs  "disabled"
-output "quarantine_policy" {
-  value = azapi_resource.example.output.properties.policies.quarantinePolicy.status
+output "resource_group_name" {
+  value = azurerm_resource_group.rg.name
 }
 
 output "azure_container_registry_name" {
