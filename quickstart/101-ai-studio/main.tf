@@ -42,7 +42,7 @@ resource "azapi_resource" "AIServicesResource"{
     type = "SystemAssigned"
   }
 
-  body = jsonencode({
+  body = {
     name = "AIServicesResource${random_string.suffix.result}"
     properties = {
       //restore = true
@@ -55,7 +55,7 @@ resource "azapi_resource" "AIServicesResource"{
     sku = {
         name = var.sku
     }
-    })
+    }
 
   response_export_values = ["*"]
 }
@@ -71,7 +71,7 @@ resource "azapi_resource" "hub" {
     type = "SystemAssigned"
   }
 
-  body = jsonencode({
+  body = {
     properties = {
       description = "This is my Azure AI hub"
       friendlyName = "My Hub"
@@ -95,7 +95,7 @@ resource "azapi_resource" "hub" {
       
     }
     kind = "hub"
-  })
+  }
 }
 
 // Azure AI Project
