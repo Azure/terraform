@@ -1,8 +1,8 @@
+// Resource group
 resource "random_pet" "rg_name" { 
   prefix = var.resource_group_name_prefix
 }
 
-// RESOURCE GROUP
 resource "azurerm_resource_group" "rg" {
   location = var.resource_group_location
   name     = random_pet.rg_name.id
@@ -11,7 +11,7 @@ resource "azurerm_resource_group" "rg" {
 data "azurerm_client_config" "current" {
 }
 
-// STORAGE ACCOUNT
+// Storage Account
 resource "azurerm_storage_account" "default" {
   name                            = "${var.prefix}storage${random_string.suffix.result}"
   location                        = azurerm_resource_group.rg.location
@@ -21,7 +21,7 @@ resource "azurerm_storage_account" "default" {
   allow_nested_items_to_be_public = false
 }
 
-// KEY VAULT
+// Key Vault
 resource "azurerm_key_vault" "default" {
   name                     = "${var.prefix}keyvault${random_string.suffix.result}"
   location                 = azurerm_resource_group.rg.location
@@ -33,7 +33,7 @@ resource "azurerm_key_vault" "default" {
 
 // AzAPI AIServices
 resource "azapi_resource" "AIServicesResource"{
-  type = "Microsoft.CognitiveServices/accounts@2023-10-01-preview"
+  type = "Microsoft.CognitiveServices/accounts@2024-10-01"
   name = "AIServicesResource${random_string.suffix.result}"
   location = azurerm_resource_group.rg.location
   parent_id = azurerm_resource_group.rg.id
@@ -62,7 +62,7 @@ resource "azapi_resource" "AIServicesResource"{
 
 // Azure AI Hub
 resource "azapi_resource" "hub" {
-  type = "Microsoft.MachineLearningServices/workspaces@2024-04-01-preview"
+  type = "Microsoft.MachineLearningServices/workspaces/connections@2024-10-01"
   name = "${random_pet.rg_name.id}-aih"
   location = azurerm_resource_group.rg.location
   parent_id = azurerm_resource_group.rg.id
