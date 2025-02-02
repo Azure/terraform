@@ -1,3 +1,96 @@
+## 02 Feb 25 02:04 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.10.2
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.0
++ provider registry.terraform.io/hashicorp/random v3.6.3
++ provider registry.terraform.io/hashicorp/time v0.12.1
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Private Endpoint (Subscription: "f7a632a5-49db-4c5e-9828-cd62cb753971"
+	            	[31m│[0m [0mResource Group Name: "rg-301mlhss-dev-kyco"
+	            	[31m│[0m [0mPrivate Endpoint Name: "ple-301mlhss-dev-kv"): polling after CreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "RetryableError"
+	            	[31m│[0m [0mCode: "ReferencedResourceNotProvisioned"
+	            	[31m│[0m [0mMessage: "A retryable error occurred.\nCannot proceed with operation because resource /subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-301mlhss-dev-kyco/providers/Microsoft.Network/virtualNetworks/vnet-301mlhss-dev/subnets/snet-workspace used by resource /subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-301mlhss-dev-kyco/providers/Microsoft.Network/networkInterfaces/ple-301mlhss-dev-kv.nic.0bc2bb01-a713-4feb-bae3-bf5c53e88112 is not in Succeeded state. Resource is in Updating state and the last operation that updated/is updating the resource is PutSubnetOperation."
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{"status":"Failed","error":{"code":"RetryableError","message":"A retryable error occurred.","details":[{"code":"ReferencedResourceNotProvisioned","message":"Cannot proceed with operation because resource /subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-301mlhss-dev-kyco/providers/Microsoft.Network/virtualNetworks/vnet-301mlhss-dev/subnets/snet-workspace used by resource /subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-301mlhss-dev-kyco/providers/Microsoft.Network/networkInterfaces/ple-301mlhss-dev-kv.nic.0bc2bb01-a713-4feb-bae3-bf5c53e88112 is not in Succeeded state. Resource is in Updating state and the last operation that updated/is updating the resource is PutSubnetOperation."}]}}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_private_endpoint.kv_ple,
+	            	[31m│[0m [0m  on workspace.tf line 87, in resource "azurerm_private_endpoint" "kv_ple":
+	            	[31m│[0m [0m  87: resource "azurerm_private_endpoint" "kv_ple" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Private Endpoint (Subscription: "f7a632a5-49db-4c5e-9828-cd62cb753971"
+	            	[31m│[0m [0mResource Group Name: "rg-301mlhss-dev-kyco"
+	            	[31m│[0m [0mPrivate Endpoint Name: "ple-301mlhss-dev-st-file"): polling after CreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "RetryableError"
+	            	[31m│[0m [0mCode: "ReferencedResourceNotProvisioned"
+	            	[31m│[0m [0mMessage: "A retryable error occurred.\nCannot proceed with operation because resource /subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-301mlhss-dev-kyco/providers/Microsoft.Network/virtualNetworks/vnet-301mlhss-dev/subnets/snet-workspace used by resource /subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-301mlhss-dev-kyco/providers/Microsoft.Network/networkInterfaces/ple-301mlhss-dev-st-file.nic.4dfecf42-49be-4459-94ba-ede66560c998 is not in Succeeded state. Resource is in Updating state and the last operation that updated/is updating the resource is PutSubnetOperation."
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{"status":"Failed","error":{"code":"RetryableError","message":"A retryable error occurred.","details":[{"code":"ReferencedResourceNotProvisioned","message":"Cannot proceed with operation because resource /subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-301mlhss-dev-kyco/providers/Microsoft.Network/virtualNetworks/vnet-301mlhss-dev/subnets/snet-workspace used by resource /subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-301mlhss-dev-kyco/providers/Microsoft.Network/networkInterfaces/ple-301mlhss-dev-st-file.nic.4dfecf42-49be-4459-94ba-ede66560c998 is not in Succeeded state. Resource is in Updating state and the last operation that updated/is updating the resource is PutSubnetOperation."}]}}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_private_endpoint.storage_ple_file,
+	            	[31m│[0m [0m  on workspace.tf line 131, in resource "azurerm_private_endpoint" "storage_ple_file":
+	            	[31m│[0m [0m 131: resource "azurerm_private_endpoint" "storage_ple_file" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/301-machine-learning-hub-spoke-secure
+
+FailNow
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:135
+	            				/usr/local/go/src/runtime/panic.go:629
+	            				/usr/local/go/src/testing/testing.go:1006
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/test_runner.go:53
+	            				/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	'terraform [destroy -auto-approve -input=false -lock=false]' unsuccessful after 5 retries
+	Test:       	Test_Quickstarts/quickstart/301-machine-learning-hub-spoke-secure
+
+FailNow
+
+---
+
 ## 26 Jan 25 02:12 UTC
 
 Success: false
