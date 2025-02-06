@@ -79,7 +79,8 @@ resource "azurerm_machine_learning_workspace" "default" {
 resource "time_sleep" "one_min" {
   create_duration = "1m"
   depends_on = [
-    azurerm_windows_virtual_machine.dsvm
+    azurerm_windows_virtual_machine.dsvm,
+    azurerm_virtual_network_peering.direction2,
   ]
 }
 
