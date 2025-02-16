@@ -1,3 +1,29 @@
+## 16 Feb 25 00:14 UTC
+
+Success: false
+
+### Versions
+
+
+
+### Error
+
+Initializing the backend...
+
+Warning: Quoted references are deprecated
+
+  on aks.tf line 6, in resource "azurerm_kubernetes_cluster" "default":
+   6:   depends_on          = ["azurerm_role_assignment.default"]
+
+In this context, references are expected literally rather than in quotes.
+Terraform 0.11 and earlier required quotes, but quoted references are now
+deprecated and will be removed in a future version of Terraform. Remove the
+quotes surrounding this reference to silence this warning.
+
+(and 5 more similar warnings elsewhere)
+
+---
+
 ## 09 Feb 25 01:31 UTC
 
 Success: false

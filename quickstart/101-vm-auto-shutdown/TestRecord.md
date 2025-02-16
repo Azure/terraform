@@ -1,3 +1,112 @@
+## 16 Feb 25 01:13 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.10.5
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.0
++ provider registry.terraform.io/hashicorp/random v3.6.3
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.prefix: Refreshing state... [id=demo-tahr][0m
+	            	[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-tahr-rg][0m
+	            	[0m[1mazurerm_automation_account.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-tahr-rg/providers/Microsoft.Automation/automationAccounts/demo-tahr-automation-account][0m
+	            	[0m[1mazurerm_virtual_network.my_terraform_network: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-tahr-rg/providers/Microsoft.Network/virtualNetworks/demo-tahr-vnet][0m
+	            	[0m[1mazurerm_public_ip.my_terraform_public_ip: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-tahr-rg/providers/Microsoft.Network/publicIPAddresses/demo-tahr-public-ip][0m
+	            	[0m[1mrandom_id.random_id: Refreshing state... [id=YfjjmvnGNuE][0m
+	            	[0m[1mazurerm_network_security_group.my_terraform_nsg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-tahr-rg/providers/Microsoft.Network/networkSecurityGroups/demo-tahr-nsg][0m
+	            	[0m[1mazurerm_storage_account.my_storage_account: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-tahr-rg/providers/Microsoft.Storage/storageAccounts/diag61f8e39af9c636e1][0m
+	            	[0m[1mazurerm_subnet.my_terraform_subnet: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-tahr-rg/providers/Microsoft.Network/virtualNetworks/demo-tahr-vnet/subnets/demo-tahr-subnet][0m
+	            	[0m[1mazurerm_network_interface.my_terraform_nic: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-tahr-rg/providers/Microsoft.Network/networkInterfaces/demo-tahr-nic][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-tahr-rg/providers/Microsoft.Network/networkInterfaces/demo-tahr-nic|/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-tahr-rg/providers/Microsoft.Network/networkSecurityGroups/demo-tahr-nsg][0m
+	            	[0m[1mazurerm_automation_schedule.one_time: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-tahr-rg/providers/Microsoft.Automation/automationAccounts/demo-tahr-automation-account/schedules/demo-tahr-one-time-schedule][0m
+	            	[0m[1mazurerm_automation_schedule.hourly: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-tahr-rg/providers/Microsoft.Automation/automationAccounts/demo-tahr-automation-account/schedules/demo-tahr-hourly-schedule][0m
+	            	[0m[1mazurerm_automation_runbook.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-tahr-rg/providers/Microsoft.Automation/automationAccounts/demo-tahr-automation-account/runbooks/demo-tahr-runbook][0m
+	            	[0m[1mazurerm_windows_virtual_machine.main: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-tahr-rg/providers/Microsoft.Compute/virtualMachines/demo-vm][0m
+	            	[0m[1mazurerm_automation_job_schedule.hourly: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-tahr-rg/providers/Microsoft.Automation/automationAccounts/demo-tahr-automation-account/schedules/demo-tahr-hourly-schedule|/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-tahr-rg/providers/Microsoft.Automation/automationAccounts/demo-tahr-automation-account/runbooks/demo-tahr-runbook][0m
+	            	[0m[1mazurerm_automation_job_schedule.one_time: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-tahr-rg/providers/Microsoft.Automation/automationAccounts/demo-tahr-automation-account/schedules/demo-tahr-one-time-schedule|/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-tahr-rg/providers/Microsoft.Automation/automationAccounts/demo-tahr-automation-account/runbooks/demo-tahr-runbook][0m
+	            	
+	            	[1m[36mNote:[0m[1m Objects have changed outside of Terraform
+	            	[0m
+	            	Terraform detected the following changes made outside of Terraform since the
+	            	last "terraform apply" which may have affected this plan:
+	            	
+	            	[1m  # azurerm_public_ip.my_terraform_public_ip[0m has changed
+	            	[0m  [33m~[0m[0m resource "azurerm_public_ip" "my_terraform_public_ip" {
+	            	        id                      = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-tahr-rg/providers/Microsoft.Network/publicIPAddresses/demo-tahr-public-ip"
+	            	      [32m+[0m[0m ip_address              = "172.191.32.196"
+	            	        name                    = "demo-tahr-public-ip"
+	            	        [90m# (9 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	
+	            	Unless you have made equivalent changes to your configuration, or ignored the
+	            	relevant attributes using ignore_changes, the following plan may include
+	            	actions to undo or respond to these changes.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_automation_schedule.hourly[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_automation_schedule" "hourly" {
+	            	        id                      = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-tahr-rg/providers/Microsoft.Automation/automationAccounts/demo-tahr-automation-account/schedules/demo-tahr-hourly-schedule"
+	            	        name                    = "demo-tahr-hourly-schedule"
+	            	      [33m~[0m[0m start_time              = "2025-02-16T01:25:00Z" -> (known after apply)
+	            	        [90m# (7 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_automation_schedule.one_time[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_automation_schedule" "one_time" {
+	            	        id                      = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-tahr-rg/providers/Microsoft.Automation/automationAccounts/demo-tahr-automation-account/schedules/demo-tahr-one-time-schedule"
+	            	        name                    = "demo-tahr-one-time-schedule"
+	            	      [33m~[0m[0m start_time              = "2025-02-16T01:20:00Z" -> (known after apply)
+	            	        [90m# (6 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.main[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "main" {
+	            	        id                                                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-tahr-rg/providers/Microsoft.Compute/virtualMachines/demo-vm"
+	            	        name                                                   = "demo-vm"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (3 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 0 to add, 3 to change, 0 to destroy.
+	            	[0m
+	            	Changes to Outputs:
+	            	  [33m~[0m[0m public_ip_address       = "" [33m->[0m[0m "172.191.32.196"
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-vm-auto-shutdown1174088196/src/quickstart/101-vm-auto-shutdown/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-vm-auto-shutdown1174088196/src/quickstart/101-vm-auto-shutdown/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-vm-auto-shutdown
+
+FailNow
+
+---
+
 ## 09 Feb 25 01:57 UTC
 
 Success: false
