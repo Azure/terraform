@@ -14,8 +14,6 @@ resource "azurerm_public_ip_prefix" "my_ipv4" {
   name                = "myIPv4"
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
-
-  prefix_length = 28
   ip_version    = "IPv4"
   zones         = ["1", "2", "3"]
 }
@@ -26,7 +24,6 @@ resource "azurerm_public_ip_prefix" "my_ipv4_zonal" {
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
 
-  prefix_length = 28
   ip_version    = "IPv4"
   zones         = ["2"]
 }
@@ -37,7 +34,6 @@ resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal" {
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
 
-  prefix_length = 28
   ip_version    = "IPv4"
 }
 
@@ -46,8 +42,6 @@ resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet" {
   name                = "myIPv4RPInternet"
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
-
-  prefix_length = 28
 
   tags = {
     RoutingPreference = "Internet"
@@ -60,7 +54,6 @@ resource "azurerm_public_ip_prefix" "my_ipv6" {
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
 
-  prefix_length = 124
   ip_version    = "IPv6"
   zones         = ["1", "2", "3"]
 }
@@ -71,7 +64,6 @@ resource "azurerm_public_ip_prefix" "my_ipv6_zonal" {
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
 
-  prefix_length = 124
   ip_version    = "IPv6"
   zones         = ["2"]
 }
@@ -82,7 +74,6 @@ resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal" {
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
 
-  prefix_length = 124
   ip_version    = "IPv6"
 }
 
@@ -92,7 +83,6 @@ resource "azurerm_public_ip" "my_public_ip_ipv4" {
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
   allocation_method   = "Static"
-  sku                 = "Standard"
   ip_version          = "IPv4"
   public_ip_prefix_id = azurerm_public_ip_prefix.my_public_ip_prefix_ipv4.id
 }
@@ -102,7 +92,6 @@ resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4" {
   name                = "myPublicIpPrefix1"
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
-  prefix_length       = 28
   ip_version          = "IPv4" # Default
 }
 
@@ -121,6 +110,5 @@ resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6" {
   name                = "myPublicIpPrefix2"
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
-  prefix_length       = 28
   ip_version          = "IPv6"
 }
