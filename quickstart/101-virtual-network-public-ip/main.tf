@@ -24,7 +24,6 @@ resource "azurerm_public_ip" "myBasicPublicIP" {
   allocation_method   = "Static"
   sku                 = "Basic"
   ip_version          = "IPv4"
-  zones               = ["1"]
 }
 
 resource "azurerm_public_ip" "myZonalStandardPublicIP" {
