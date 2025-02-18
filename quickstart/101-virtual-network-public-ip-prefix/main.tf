@@ -103,17 +103,17 @@ resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4" {
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
   prefix_length       = 28
+  ip_version          = "IPv4" # Default
 }
 
-# Create a public IP (IPv4) and specify the public IP prefix
+# Create a public IP (IPv6) and specify the public IP prefix
 resource "azurerm_public_ip" "my_public_ip_ipv6" {
   name                = "myPublicIPIPv6"
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
   allocation_method   = "Static"
-  public_ip_prefix_id = azurerm_public_ip_prefix.my_public_ip_prefix_ipv6.id
-  sku                 = "Standard"
   ip_version          = "IPv6"
+  public_ip_prefix_id = azurerm_public_ip_prefix.my_public_ip_prefix_ipv6.id
 }
 
 # Create a public IP prefix: IPv6
@@ -122,5 +122,5 @@ resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6" {
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
   prefix_length       = 28
-  sku                 = "Standard"
+  ip_version          = "IPv6"
 }
