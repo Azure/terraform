@@ -96,9 +96,11 @@ resource "azurerm_public_ip" "my_public_ip_ipv4" {
   name                = "myPublicIPIPv4"
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
+  sku                 = "Standard"
   allocation_method   = "Static"
 
-  ip_version          = "IPv4"
+  ip_version = "IPv4"
+
   public_ip_prefix_id = azurerm_public_ip_prefix.my_public_ip_prefix_ipv4.id
 }
 
@@ -117,9 +119,11 @@ resource "azurerm_public_ip" "my_public_ip_ipv6" {
   name                = "myPublicIPIPv6"
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
+  sku                 = "Standard"
   allocation_method   = "Static"
 
-  ip_version          = "IPv6"
+  ip_version = "IPv6"
+
   public_ip_prefix_id = azurerm_public_ip_prefix.my_public_ip_prefix_ipv6.id
 }
 
