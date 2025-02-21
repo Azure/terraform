@@ -77,7 +77,6 @@ resource "azurerm_application_gateway" "example" {
   sku {
     name     = "WAF_v2"
     tier     = "WAF_v2"
-    capacity = 2
   }
 
   # Enable autoscaling (optional)
