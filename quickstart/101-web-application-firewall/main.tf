@@ -83,6 +83,8 @@ resource "azurerm_application_gateway" "example" {
     backend_address_pool_name  = "example-backend-pool"
     backend_http_settings_name = "example-backend-http-settings"
   }
+
+  firewall_policy_id = azurerm_web_application_firewall_policy.example.id
 }
 
 resource "azurerm_web_application_firewall_policy" "example" {
