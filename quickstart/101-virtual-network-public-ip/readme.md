@@ -13,4 +13,8 @@ This template deploys several Azure public IP addresses with different settings.
 | Name | Description | Default |
 |-|-|-|
 | `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. | rg |
-| `resource_group_location` | Location of the resource group. | eastus |
+| `resource_group_location` | Location of the resource group. | "West Europe" |
+
+## Article
+
+[Quickstart: Create a public IP address using Terraform](https://learn.microsoft.com/azure/virtual-network/ip-services/create-public-ip-terraform)
