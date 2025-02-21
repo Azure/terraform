@@ -1,6 +1,6 @@
 # Random pet resource to generate a unique name for the resource group
 resource "random_pet" "rg_name" {
-  = var.resource_group_name_prefix
+  prefix = var.resource_group_name_prefix
 }
 
 # Create a resource group
