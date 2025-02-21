@@ -4,7 +4,7 @@ resource "random_pet" "rg_name" {
 }
 
 # Create resource group
-resource "azurerm_resource_group" "rg" {
+resource "azurerm_resource_group" "example" {
   location = var.resource_group_location
   name     = random_pet.rg_name.id
 }
@@ -81,7 +81,7 @@ resource "azurerm_application_gateway" "example" {
     rule_type                  = "Basic"
     http_listener_name         = "example-http-listener"
     backend_address_pool_name  = "example-backend-pool"
-    backend_http_settings_name  = "example-backend-http-settings"
+    backend_http_settings_name = "example-backend-http-settings"
   }
 }
 
@@ -106,7 +106,7 @@ resource "azurerm_web_application_firewall_policy" "example" {
 
       operator           = "IPMatch"
       negation_condition = false
-      match_values       = ["192.168.1.0/24"]  # Example IP range to block
+      match_values       = ["192.168.1.0/24"] # Example IP range to block
     }
 
     action = "Block"
@@ -118,7 +118,7 @@ resource "azurerm_web_application_firewall_policy" "example" {
       version = "3.2"
     }
   }
-  
+
   policy_settings {
     enabled = true
     mode    = "Prevention"
