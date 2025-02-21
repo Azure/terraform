@@ -18,5 +18,5 @@ This template deploys an Azure Application Gateway with a Web Application Firewa
 | Name | Description | Default value |
 |-|-|-|
 | `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. | rg |
-| `resource_group_location` | Location of the resource group. | eastus |
+| `resource_group_location` | Location of the resource group. | "West Europe" |
 | `blocked_ip_address` | The IP address to be blocked by the WAF custom rule. | "" |

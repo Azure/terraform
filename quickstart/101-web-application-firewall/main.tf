@@ -1,42 +1,39 @@
-# Create Resource Group
+# Create random pet name for resource group
 resource "random_pet" "rg_name" {
   prefix = var.resource_group_name_prefix
 }
 
+# Create resource group
 resource "azurerm_resource_group" "rg" {
   location = var.resource_group_location
   name     = random_pet.rg_name.id
 }
 
-# Create Public IP
-resource "azurerm_public_ip" "pip" {
-  name                = "pip-${random_pet.rg_name.id}"
-  location            = azurerm_resource_group.rg.location
-  resource_group_name = azurerm_resource_group.rg.name
-  allocation_method   = "Dynamic"
+resource "azurerm_public_ip" "example" {
+  name                = "example-public-ip"
+  resource_group_name = azurerm_resource_group.example.name
+  location            = azurerm_resource_group.example.location
+  allocation_method   = "Static"
 }
 
-# Create Virtual Network
-resource "azurerm_virtual_network" "vnet" {
-  name                = "vnet-${random_pet.rg_name.id}"
+resource "azurerm_virtual_network" "example" {
+  name                = "example-network"
+  resource_group_name = azurerm_resource_group.example.name
+  location            = azurerm_resource_group.example.location
   address_space       = ["10.0.0.0/16"]
-  location            = azurerm_resource_group.rg.location
-  resource_group_name = azurerm_resource_group.rg.name
 }
 
-# Create Subnet
-resource "azurerm_subnet" "subnet" {
-  name                 = "subnet-${random_pet.rg_name.id}"
-  resource_group_name  = azurerm_resource_group.rg.name
-  virtual_network_name = azurerm_virtual_network.vnet.name
+resource "azurerm_subnet" "example" {
+  name                 = "example-subnet"
+  resource_group_name  = azurerm_resource_group.example.name
+  virtual_network_name = azurerm_virtual_network.example.name
   address_prefixes     = ["10.0.1.0/24"]
 }
 
-# Create Application Gateway
-resource "azurerm_application_gateway" "appgw" {
-  name                = "appgw-${random_pet.rg_name.id}"
-  location            = azurerm_resource_group.rg.location
-  resource_group_name = azurerm_resource_group.rg.name
+resource "azurerm_application_gateway" "example" {
+  name                = "example-appgateway"
+  resource_group_name = azurerm_resource_group.example.name
+  location            = azurerm_resource_group.example.location
 
   sku {
     name     = "WAF_v2"
@@ -45,63 +42,60 @@ resource "azurerm_application_gateway" "appgw" {
   }
 
   gateway_ip_configuration {
-    name      = "appgw-ip-configuration"
-    subnet_id = azurerm_subnet.subnet.id
+    name      = "example-gateway-ip-configuration"
+    subnet_id = azurerm_subnet.example.id
   }
 
   frontend_ip_configuration {
-    name                 = "appgw-frontend-ip"
-    public_ip_address_id = azurerm_public_ip.pip.id
+    name                 = "example-frontend-ip-configuration"
+    public_ip_address_id = azurerm_public_ip.example.id
   }
 
   frontend_port {
-    name = "port-80"
+    name = "example-frontend-port"
     port = 80
   }
 
   backend_address_pool {
-    name = "appgw-backend-pool"
+    name = "example-backend-pool"
   }
 
   backend_http_settings {
-    name                  = "appgw-http-settings"
+    name                  = "example-backend-http-settings"
     cookie_based_affinity = "Disabled"
     port                  = 80
     protocol              = "Http"
-    request_timeout       = 20
+    request_timeout       = 30
   }
 
   http_listener {
-    name                           = "appgw-http-listener"
-    frontend_ip_configuration_name = "appgw-frontend-ip"
-    frontend_port_name             = "port-80"
+    name                           = "example-http-listener"
+    frontend_ip_configuration_name = "example-frontend-ip-configuration"
+    frontend_port_name             = "example-frontend-port"
     protocol                       = "Http"
   }
 
   request_routing_rule {
-    name                       = "appgw-routing-rule"
+    name                       = "example-request-routing-rule"
+    priority                   = 1
     rule_type                  = "Basic"
-    http_listener_name         = "appgw-http-listener"
-    backend_address_pool_name  = "appgw-backend-pool"
-    backend_http_settings_name = "appgw-http-settings"
-  }
-
-  waf_configuration {
-    enabled            = true
-    firewall_mode      = "Prevention"
-    rule_set_type      = "OWASP"
-    rule_set_version   = "3.2"
+    http_listener_name         = "example-http-listener"
+    backend_address_pool_name  = "example-backend-pool"
+    backend_http_settings_name  = "example-backend-http-settings"
   }
 }
 
-# Create Web Application Firewall Policy
-resource "azurerm_web_application_firewall_policy" "waf_policy" {
-  name                = "waf-policy-${random_pet.rg_name.id}"
-  resource_group_name = azurerm_resource_group.rg.name
-  location            = azurerm_resource_group.rg.location
+resource "azurerm_web_application_firewall_policy" "example" {
+  name                = "example-waf-policy"
+  resource_group_name = azurerm_resource_group.example.name
+  location            = azurerm_resource_group.example.location
+
+  managed_rule_set {
+    name = "DefaultRuleSet"
+  }
 
   custom_rules {
-    name      = "block-ip-rule"
+    name      = "BlockIPRule"
     priority  = 1
     rule_type = "MatchRule"
 
@@ -109,8 +103,10 @@ resource "azurerm_web_application_firewall_policy" "waf_policy" {
       match_variables {
         variable_name = "RemoteAddr"
       }
-      operator     = "IPMatch"
-      match_values = [var.blocked_ip_address]
+
+      operator           = "IPMatch"
+      negation_condition = false
+      match_values       = ["192.168.1.0/24"]  # Example IP range to block
     }
 
     action = "Block"
@@ -122,10 +118,9 @@ resource "azurerm_web_application_firewall_policy" "waf_policy" {
       version = "3.2"
     }
   }
-}
-
-# Associate WAF Policy with Application Gateway
-resource "azurerm_application_gateway_waf_policy_association" "waf_policy_association" {
-  application_gateway_id = azurerm_application_gateway.appgw.id
-  firewall_policy_id     = azurerm_web_application_firewall_policy.waf_policy.id
+  
+  policy_settings {
+    enabled = true
+    mode    = "Prevention"
+  }
 }
