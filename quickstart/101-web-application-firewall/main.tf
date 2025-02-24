@@ -40,6 +40,17 @@ resource "azurerm_web_application_firewall_policy" "example" {
   resource_group_name = azurerm_resource_group.example.name
   location            = azurerm_resource_group.example.location
 
+  # Configure the policy settings
+  policy_settings{
+    enabled = false
+    file_upload_limit_in_mb = 100
+    js_challenge_cookie_expiration_in_minutes = 0
+    max_request_body_size_in_kb = 128
+    mode = "Detection"
+    request_body_check = true
+    request_body_inspect_limit_in_kb = 128
+  }
+
   # Define managed rules for the WAF policy
   managed_rules {
     managed_rule_set {
