@@ -62,7 +62,7 @@ resource "azapi_resource" "AIServicesResource" {
 
 // Azure AI Hub
 resource "azapi_resource" "hub" {
-  type      = "Microsoft.MachineLearningServices/workspaces/connections@2024-10-01"
+  type      = "Microsoft.CognitiveServices/accounts@2024-10-01"
   name      = "${random_pet.rg_name.id}-aih"
   location  = azurerm_resource_group.rg.location
   parent_id = azurerm_resource_group.rg.id
@@ -100,7 +100,7 @@ resource "azapi_resource" "hub" {
 
 // Azure AI Project
 resource "azapi_resource" "project" {
-  type      = "Microsoft.MachineLearningServices/workspaces@2024-04-01-preview"
+  type      = "Microsoft.MachineLearningServices/workspaces/connections@2024-10-01"
   name      = "my-ai-project${random_string.suffix.result}"
   location  = azurerm_resource_group.rg.location
   parent_id = azurerm_resource_group.rg.id
