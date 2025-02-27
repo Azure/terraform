@@ -63,9 +63,11 @@ resource "azurerm_netapp_pool" "pool" {
 
 # Create NetApp Volume
 resource "azurerm_netapp_volume" "volume" {
+  # ALERT: To prevent accidental deletion of the volume, set prevent_destroy to true.
   lifecycle {
-    prevent_destroy = true
+    prevent_destroy = false
   }
+  
   name                = "volume-${random_string.name.result}"
   resource_group_name = azurerm_resource_group.rg.name
   account_name        = azurerm_netapp_account.account.name
