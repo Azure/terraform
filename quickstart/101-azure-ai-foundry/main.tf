@@ -129,7 +129,7 @@ resource "azapi_resource" "AIServicesConnection" {
   body = {
     properties = {
       category      = "AIServices",
-      target        = azapi_resource.AIServicesResource.endpoint,
+      target        = jsondecode(azapi_resource.AIServicesResource.output).properties.endpoint,
       authType      = "AAD",
       isSharedToAll = true,
       metadata = {
