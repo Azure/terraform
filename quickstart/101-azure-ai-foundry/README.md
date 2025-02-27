@@ -1,9 +1,8 @@
-# Azure AI Studio
+# Azure AI Foundry
 
-This deployment configuration specifies an [Azure AI hub](https://learn.microsoft.com/en-us/azure/ai-studio/concepts/ai-resources), 
-and its associated resources including Azure Key Vault, Azure Storage. You can optionally provision and attach Azure Application Insights and Azure Container Registry.
+This deployment configuration specifies an [Azure AI hub](https://learn.microsoft.com/en-us/azure/ai-studio/concepts/ai-resources), and its associated resources including Azure Key Vault, Azure Storage. You can optionally provision and attach Azure Application Insights and Azure Container Registry.
 
-This configuration describes the minimal set of resources you require to get started with Azure AI Studio.
+This configuration describes the minimal set of resources you require to get started with Azure AI Foundry.
 
 ## Resources
 

@@ -1,8 +1,9 @@
-resource "random_pet" "rg_name" { 
+# Random pet to be used in resource group name
+resource "random_pet" "rg_name" {
   prefix = var.resource_group_name_prefix
 }
 
-// RESOURCE GROUP
+# Create a resource group
 resource "azurerm_resource_group" "rg" {
   location = var.resource_group_location
   name     = random_pet.rg_name.id
@@ -11,7 +12,7 @@ resource "azurerm_resource_group" "rg" {
 data "azurerm_client_config" "current" {
 }
 
-// STORAGE ACCOUNT
+# Create a storage account
 resource "azurerm_storage_account" "default" {
   name                            = "${var.prefix}storage${random_string.suffix.result}"
   location                        = azurerm_resource_group.rg.location
@@ -21,7 +22,7 @@ resource "azurerm_storage_account" "default" {
   allow_nested_items_to_be_public = false
 }
 
-// KEY VAULT
+# Create a key vault
 resource "azurerm_key_vault" "default" {
   name                     = "${var.prefix}keyvault${random_string.suffix.result}"
   location                 = azurerm_resource_group.rg.location
@@ -32,10 +33,10 @@ resource "azurerm_key_vault" "default" {
 }
 
 // AzAPI AIServices
-resource "azapi_resource" "AIServicesResource"{
-  type = "Microsoft.CognitiveServices/accounts@2023-10-01-preview"
-  name = "AIServicesResource${random_string.suffix.result}"
-  location = azurerm_resource_group.rg.location
+resource "azapi_resource" "AIServicesResource" {
+  type      = "Microsoft.CognitiveServices/accounts@2024-10-01"
+  name      = "AIServicesResource${random_string.suffix.result}"
+  location  = azurerm_resource_group.rg.location
   parent_id = azurerm_resource_group.rg.id
 
   identity {
@@ -47,24 +48,24 @@ resource "azapi_resource" "AIServicesResource"{
     properties = {
       //restore = true
       customSubDomainName = "${random_string.suffix.result}domain"
-        apiProperties = {
-            statisticsEnabled = false
-        }
+      apiProperties = {
+        statisticsEnabled = false
+      }
     }
     kind = "AIServices"
     sku = {
-        name = var.sku
+      name = var.sku
     }
-    })
+  })
 
   response_export_values = ["*"]
 }
 
 // Azure AI Hub
 resource "azapi_resource" "hub" {
-  type = "Microsoft.MachineLearningServices/workspaces@2024-04-01-preview"
-  name = "${random_pet.rg_name.id}-aih"
-  location = azurerm_resource_group.rg.location
+  type      = "Microsoft.MachineLearningServices/workspaces@2024-04-01"
+  name      = "${random_pet.rg_name.id}-aih"
+  location  = azurerm_resource_group.rg.location
   parent_id = azurerm_resource_group.rg.id
 
   identity {
@@ -73,10 +74,10 @@ resource "azapi_resource" "hub" {
 
   body = jsonencode({
     properties = {
-      description = "This is my Azure AI hub"
-      friendlyName = "My Hub"
+      description    = "This is my Azure AI hub"
+      friendlyName   = "My Hub"
       storageAccount = azurerm_storage_account.default.id
-      keyVault = azurerm_key_vault.default.id
+      keyVault       = azurerm_key_vault.default.id
 
       /* Optional: To enable these field, the corresponding dependent resources need to be uncommented.
       applicationInsight = azurerm_application_insights.default.id
@@ -92,7 +93,7 @@ resource "azapi_resource" "hub" {
         }
       }
       */
-      
+
     }
     kind = "hub"
   })
@@ -100,9 +101,9 @@ resource "azapi_resource" "hub" {
 
 // Azure AI Project
 resource "azapi_resource" "project" {
-  type = "Microsoft.MachineLearningServices/workspaces@2024-04-01-preview"
-  name = "my-ai-project${random_string.suffix.result}"
-  location = azurerm_resource_group.rg.location
+  type      = "Microsoft.MachineLearningServices/workspaces@2024-04-01"
+  name      = "my-ai-project${random_string.suffix.result}"
+  location  = azurerm_resource_group.rg.location
   parent_id = azurerm_resource_group.rg.id
 
   identity {
@@ -111,8 +112,8 @@ resource "azapi_resource" "project" {
 
   body = jsonencode({
     properties = {
-      description = "This is my Azure AI PROJECT"
-      friendlyName = "My Project"
+      description   = "This is my Azure AI PROJECT"
+      friendlyName  = "My Project"
       hubResourceId = azapi_resource.hub.id
     }
     kind = "project"
@@ -121,22 +122,22 @@ resource "azapi_resource" "project" {
 
 // AzAPI AI Services Connection
 resource "azapi_resource" "AIServicesConnection" {
-  type = "Microsoft.MachineLearningServices/workspaces/connections@2024-04-01-preview"
-  name = "Default_AIServices${random_string.suffix.result}"
+  type      = "Microsoft.MachineLearningServices/workspaces/connections@2024-10-01"
+  name      = "Default_AIServices${random_string.suffix.result}"
   parent_id = azapi_resource.hub.id
 
   body = jsonencode({
-      properties = {
-        category = "AIServices",
-        target = jsondecode(azapi_resource.AIServicesResource.output).properties.endpoint,
-        authType = "AAD",
-        isSharedToAll = true,
-        metadata = {
-          ApiType = "Azure",
-          ResourceId = azapi_resource.AIServicesResource.id
-        }
+    properties = {
+      category      = "AIServices",
+      target        = jsondecode(azapi_resource.AIServicesResource.output).properties.endpoint,
+      authType      = "AAD",
+      isSharedToAll = true,
+      metadata = {
+        ApiType    = "Azure",
+        ResourceId = azapi_resource.AIServicesResource.id
       }
-    })
+    }
+  })
   response_export_values = ["*"]
 }
 
