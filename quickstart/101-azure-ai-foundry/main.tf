@@ -58,7 +58,7 @@ resource "azapi_resource" "AIServicesResource" {
     }
   }
 
-  response_export_values = ["*"]
+  response_export_values = ["properties.endpoint"]
 }
 
 // Azure AI Hub
@@ -129,7 +129,7 @@ resource "azapi_resource" "AIServicesConnection" {
   body = {
     properties = {
       category      = "AIServices",
-      target        = jsondecode(azapi_resource.AIServicesResource.output).properties.endpoint,
+      target        = azapi_resource.AIServicesResource.output,
       authType      = "AAD",
       isSharedToAll = true,
       metadata = {
