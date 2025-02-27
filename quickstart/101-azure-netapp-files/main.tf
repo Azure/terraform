@@ -63,6 +63,9 @@ resource "azurerm_netapp_pool" "pool" {
 
 # Create NetApp Volume
 resource "azurerm_netapp_volume" "volume" {
+  lifecycle {
+    prevent_destroy = true
+  }
   name                = "volume-${random_string.name.result}"
   resource_group_name = azurerm_resource_group.rg.name
   account_name        = azurerm_netapp_account.account.name
