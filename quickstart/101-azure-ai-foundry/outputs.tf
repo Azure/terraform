@@ -3,9 +3,9 @@ output "resource_group_name" {
 }
 
 output "workspace_name" {
-    value = azapi_resource.project.id
+  value = azapi_resource.project.id
 }
 
 output "endpoint" {
-  value = jsondecode(azapi_resource.AIServicesResource.output).properties.endpoint
+  value = azapi_resource.AIServicesResource.output
 }
