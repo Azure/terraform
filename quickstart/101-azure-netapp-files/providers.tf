@@ -12,9 +12,5 @@ terraform {
 }
 
 provider "azurerm" {
-  features {
-    netapp {
-      prevent_volume_destruction = false
-    }
-  }
+  features {}
 }
