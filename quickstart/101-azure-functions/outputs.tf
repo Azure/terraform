@@ -1,5 +1,5 @@
 output "resource_group_name" {
-  value = azurerm_resource_group.rg.name
+  value = azurerm_resource_group.example.name
 }
 
 output "sa_name" {
@@ -11,7 +11,7 @@ output "asp_name" {
 }
 
 output "fa_name" {
-  value = azurerm_function_app.example.name
+  value = azurerm_linux_function_app.example.name
 }
 
 output "sa_primary_access_key" {
@@ -39,13 +39,13 @@ output "asp_id" {
 }
 
 output "fa_id" {
-  value = azurerm_function_app.example.id
+  value = azurerm_linux_function_app.example.id
 }
 
 output "fa_default_hostname" {
-  value = azurerm_function_app.example.default_hostname
+  value = azurerm_linux_function_app.example.default_hostname
 }
 
 output "fa_outbound_ip_addresses" {
-  value = azurerm_function_app.example.outbound_ip_addresses
+  value = azurerm_linux_function_app.example.outbound_ip_addresses
 }
