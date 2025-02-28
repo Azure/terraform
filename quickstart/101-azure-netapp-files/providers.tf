@@ -13,6 +13,8 @@ terraform {
 
 provider "azurerm" {
   features {
+
+    # ALERT: To prevent accidental deletion of the volume, set prevent_destroy to true
     netapp {
       prevent_volume_destruction = false
     }
