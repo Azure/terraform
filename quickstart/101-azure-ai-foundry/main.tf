@@ -4,158 +4,73 @@ resource "random_pet" "rg_name" {
 }
 
 # Create a resource group
-resource "azurerm_resource_group" "rg" {
+resource "azurerm_resource_group" "example" {
   location = var.resource_group_location
   name     = random_pet.rg_name.id
 }
 
-data "azurerm_client_config" "current" {
+# Fetches the current Azure client configuration (tenant and object IDs)
+data "azurerm_client_config" "current" {}
+
+# Creates an Azure Key Vault with purge protection enabled
+resource "azurerm_key_vault" "example" {
+  name                = "examplekv"
+  location            = azurerm_resource_group.example.location
+  resource_group_name = azurerm_resource_group.example.name
+  tenant_id           = data.azurerm_client_config.current.tenant_id
+
+  sku_name                 = "standard" # Specifies the pricing tier of the Key Vault
+  purge_protection_enabled = true       # Enables protection against accidental deletion
 }
 
-# Create a storage account
-resource "azurerm_storage_account" "default" {
-  name                            = "${var.prefix}storage${random_string.suffix.result}"
-  location                        = azurerm_resource_group.rg.location
-  resource_group_name             = azurerm_resource_group.rg.name
-  account_tier                    = "Standard"
-  account_replication_type        = "GRS"
-  allow_nested_items_to_be_public = false
+# Assigns access policy to the current Azure client with key permissions
+resource "azurerm_key_vault_access_policy" "test" {
+  key_vault_id = azurerm_key_vault.example.id
+  tenant_id    = data.azurerm_client_config.current.tenant_id
+  object_id    = data.azurerm_client_config.current.object_id
+
+  key_permissions = [
+    "Create",            # Permission to create keys
+    "Get",               # Permission to get keys
+    "Delete",            # Permission to delete keys
+    "Purge",             # Permission to permanently delete keys
+    "GetRotationPolicy", # Permission to get key rotation policies
+  ]
 }
 
-# Create a key vault
-resource "azurerm_key_vault" "default" {
-  name                     = "${var.prefix}keyvault${random_string.suffix.result}"
-  location                 = azurerm_resource_group.rg.location
-  resource_group_name      = azurerm_resource_group.rg.name
-  tenant_id                = data.azurerm_client_config.current.tenant_id
-  sku_name                 = "standard"
-  purge_protection_enabled = false
+# Creates an Azure Storage Account with locally redundant storage
+resource "azurerm_storage_account" "example" {
+  name                     = "examplesa"
+  location                 = azurerm_resource_group.example.location
+  resource_group_name      = azurerm_resource_group.example.name
+  account_tier             = "Standard" # Storage performance tier
+  account_replication_type = "LRS"      # Locally redundant storage
 }
 
-// AzAPI AIServices
-resource "azapi_resource" "AIServicesResource" {
-  type      = "Microsoft.CognitiveServices/accounts@2024-10-01"
-  name      = "AIServicesResource${random_string.suffix.result}"
-  location  = azurerm_resource_group.rg.location
-  parent_id = azurerm_resource_group.rg.id
+# Deploys an Azure AI Services resource with the S0 SKU
+resource "azurerm_ai_services" "example" {
+  name                = "exampleaiservices"
+  location            = azurerm_resource_group.example.location
+  resource_group_name = azurerm_resource_group.example.name
+  sku_name            = "S0" # Service pricing tier
+}
+
+# Creates an Azure AI Foundry (AI Hub) with system-assigned identity
+resource "azurerm_ai_foundry" "example" {
+  name                = "exampleaihub"
+  location            = azurerm_ai_services.example.location
+  resource_group_name = azurerm_resource_group.example.name
+  storage_account_id  = azurerm_storage_account.example.id
+  key_vault_id        = azurerm_key_vault.example.id
 
   identity {
-    type = "SystemAssigned"
-  }
-
-  body = {
-    name = "AIServicesResource${random_string.suffix.result}"
-    properties = {
-      //restore = true
-      customSubDomainName = "${random_string.suffix.result}domain"
-      apiProperties = {
-        statisticsEnabled = false
-      }
-    }
-    kind = "AIServices"
-    sku = {
-      name = var.sku
-    }
-  }
-
-  response_export_values = ["properties.endpoint"]
-}
-
-// Azure AI Hub
-resource "azapi_resource" "hub" {
-  type      = "Microsoft.MachineLearningServices/workspaces@2024-04-01"
-  name      = "${random_pet.rg_name.id}-aih"
-  location  = azurerm_resource_group.rg.location
-  parent_id = azurerm_resource_group.rg.id
-
-  identity {
-    type = "SystemAssigned"
-  }
-
-  body = {
-    properties = {
-      description    = "This is my Azure AI hub"
-      friendlyName   = "My Hub"
-      storageAccount = azurerm_storage_account.default.id
-      keyVault       = azurerm_key_vault.default.id
-
-      /* Optional: To enable these field, the corresponding dependent resources need to be uncommented.
-      applicationInsight = azurerm_application_insights.default.id
-      containerRegistry = azurerm_container_registry.default.id
-      */
-
-      /*Optional: To enable Customer Managed Keys, the corresponding 
-      encryption = {
-        status = var.encryption_status
-        keyVaultProperties = {
-            keyVaultArmId = azurerm_key_vault.default.id
-            keyIdentifier = var.cmk_keyvault_key_uri
-        }
-      }
-      */
-
-    }
-    kind = "hub"
+    type = "SystemAssigned" # Automatically manages the service's identity
   }
 }
 
-// Azure AI Project
-resource "azapi_resource" "project" {
-  type      = "Microsoft.MachineLearningServices/workspaces@2024-04-01"
-  name      = "my-ai-project${random_string.suffix.result}"
-  location  = azurerm_resource_group.rg.location
-  parent_id = azurerm_resource_group.rg.id
-
-  identity {
-    type = "SystemAssigned"
-  }
-
-  body = {
-    properties = {
-      description   = "This is my Azure AI PROJECT"
-      friendlyName  = "My Project"
-      hubResourceId = azapi_resource.hub.id
-    }
-    kind = "project"
-  }
+# Deploys an AI Foundry project linked to the AI Services Hub
+resource "azurerm_ai_foundry_project" "example" {
+  name               = "example"
+  location           = azurerm_ai_services_hub.example.location
+  ai_services_hub_id = azurerm_ai_services_hub.example.id
 }
-
-// AzAPI AI Services Connection
-resource "azapi_resource" "AIServicesConnection" {
-  type      = "Microsoft.MachineLearningServices/workspaces/connections@2024-10-01"
-  name      = "Default_AIServices${random_string.suffix.result}"
-  parent_id = azapi_resource.hub.id
-
-  body = {
-    properties = {
-      category      = "AIServices",
-      target        = azapi_resource.AIServicesResource.output,
-      authType      = "AAD",
-      isSharedToAll = true,
-      metadata = {
-        ApiType    = "Azure",
-        ResourceId = azapi_resource.AIServicesResource.id
-      }
-    }
-  }
-  response_export_values = ["*"]
-}
-
-/* The following resources are OPTIONAL.
-// APPLICATION INSIGHTS
-resource "azurerm_application_insights" "default" {
-  name                = "${var.prefix}appinsights${random_string.suffix.result}"
-  location            = azurerm_resource_group.rg.location
-  resource_group_name = azurerm_resource_group.rg.name
-  application_type    = "web"
-}
-
-// CONTAINER REGISTRY
-resource "azurerm_container_registry" "default" {
-  name                     = "${var.prefix}contreg${random_string.suffix.result}"
-  resource_group_name      = azurerm_resource_group.rg.name
-  location                 = azurerm_resource_group.rg.location
-  sku                      = "premium"
-  admin_enabled            = true
-}
-*/
