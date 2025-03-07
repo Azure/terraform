@@ -9,7 +9,7 @@ resource "azurerm_resource_group" "example" {
   name     = random_pet.rg_name.id
 }
 
-// Retrieves information about the current Azure client configuration
+# Retrieves information about the current Azure client configuration
 data "azurerm_client_config" "current" {}
 
 # Generate random value for unique resource naming
@@ -82,4 +82,8 @@ resource "azurerm_ai_foundry_project" "example" {
   name               = "example"                           # Project name
   location           = azurerm_ai_foundry.example.location # Location from the AI Foundry service
   ai_services_hub_id = azurerm_ai_foundry.example.id       # Associated AI Foundry service
+
+  identity {
+    type = "SystemAssigned" # Enables system-assigned managed identity
+  }
 }
