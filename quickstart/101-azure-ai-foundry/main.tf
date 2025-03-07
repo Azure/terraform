@@ -9,7 +9,7 @@ resource "azurerm_resource_group" "example" {
   name     = random_pet.rg_name.id
 }
 
-# Retrieves information about the current Azure client configuration
+# Retrieve information about the current Azure client configuration
 data "azurerm_client_config" "current" {}
 
 # Generate random value for unique resource naming
@@ -21,7 +21,7 @@ resource "random_string" "example" {
   upper   = false
 }
 
-# Creates an Azure Key Vault resource
+# Create an Azure Key Vault resource
 resource "azurerm_key_vault" "example" {
   name                = random_string.example.result                 # Name of the Key Vault
   location            = azurerm_resource_group.example.location      # Location from the resource group
@@ -32,7 +32,7 @@ resource "azurerm_key_vault" "example" {
   purge_protection_enabled = true       # Enables purge protection to prevent accidental deletion
 }
 
-# Sets an access policy for the Key Vault to allow certain operations
+# Set an access policy for the Key Vault to allow certain operations
 resource "azurerm_key_vault_access_policy" "test" {
   key_vault_id = azurerm_key_vault.example.id                 # Key Vault reference
   tenant_id    = data.azurerm_client_config.current.tenant_id # Tenant ID
@@ -47,7 +47,7 @@ resource "azurerm_key_vault_access_policy" "test" {
   ]
 }
 
-# Creates an Azure Storage Account
+# Create an Azure Storage Account
 resource "azurerm_storage_account" "example" {
   name                     = random_string.example.result              # Storage account name
   location                 = azurerm_resource_group.example.location   # Location from the resource group
@@ -56,7 +56,7 @@ resource "azurerm_storage_account" "example" {
   account_replication_type = "LRS"                                     # Locally-redundant storage replication
 }
 
-# Deploys Azure AI Services resource
+# Deploy Azure AI Services resource
 resource "azurerm_ai_services" "example" {
   name                = "exampleaiservices"                     # AI Services resource name
   location            = azurerm_resource_group.example.location # Location from the resource group
@@ -64,7 +64,7 @@ resource "azurerm_ai_services" "example" {
   sku_name            = "S0"                                    # Pricing SKU tier
 }
 
-# Creates Azure AI Foundry service
+# Create Azure AI Foundry service
 resource "azurerm_ai_foundry" "example" {
   name                = "exampleaihub"                       # AI Foundry service name
   location            = azurerm_ai_services.example.location # Location from the AI Services resource
@@ -73,17 +73,17 @@ resource "azurerm_ai_foundry" "example" {
   key_vault_id        = azurerm_key_vault.example.id         # Associated Key Vault
 
   identity {
-    type = "SystemAssigned" # Enables system-assigned managed identity
+    type = "SystemAssigned" # Enable system-assigned managed identity
   }
 }
 
-# Creates an AI Foundry Project within the AI Foundry service
+# Create an AI Foundry Project within the AI Foundry service
 resource "azurerm_ai_foundry_project" "example" {
   name               = "example"                           # Project name
   location           = azurerm_ai_foundry.example.location # Location from the AI Foundry service
   ai_services_hub_id = azurerm_ai_foundry.example.id       # Associated AI Foundry service
 
   identity {
-    type = "SystemAssigned" # Enables system-assigned managed identity
+    type = "SystemAssigned" # Enable system-assigned managed identity
   }
 }
