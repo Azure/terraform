@@ -12,9 +12,18 @@ resource "azurerm_resource_group" "example" {
 // Retrieves information about the current Azure client configuration
 data "azurerm_client_config" "current" {}
 
+# Generate random value for unique resource naming
+resource "random_string" "example" {
+  length  = 8
+  lower   = true
+  numeric = false
+  special = false
+  upper   = false
+}
+
 # Creates an Azure Key Vault resource
 resource "azurerm_key_vault" "example" {
-  name                = "examplekv"                                  # Name of the Key Vault
+  name                = random_string.example.result                 # Name of the Key Vault
   location            = azurerm_resource_group.example.location      # Location from the resource group
   resource_group_name = azurerm_resource_group.example.name          # Resource group name
   tenant_id           = data.azurerm_client_config.current.tenant_id # Azure tenant ID
@@ -38,18 +47,9 @@ resource "azurerm_key_vault_access_policy" "test" {
   ]
 }
 
-# Generate random value for the storage account name
-resource "random_string" "storage_account_name" {
-  length  = 8
-  lower   = true
-  numeric = false
-  special = false
-  upper   = false
-}
-
 # Creates an Azure Storage Account
 resource "azurerm_storage_account" "example" {
-  name                     = random_string.storage_account_name.result # Storage account name
+  name                     = random_string.example.result              # Storage account name
   location                 = azurerm_resource_group.example.location   # Location from the resource group
   resource_group_name      = azurerm_resource_group.example.name       # Resource group name
   account_tier             = "Standard"                                # Performance tier
