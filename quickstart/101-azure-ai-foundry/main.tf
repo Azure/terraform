@@ -68,9 +68,9 @@ resource "azurerm_ai_foundry" "example" {
   }
 }
 
-# Deploys an AI Foundry project linked to the AI Services Hub
+# Deploys an AI Foundry project linked to the AI Foundry Hub
 resource "azurerm_ai_foundry_project" "example" {
   name               = "example"
-  location           = azurerm_ai_services_hub.example.location
-  ai_services_hub_id = azurerm_ai_services_hub.example.id
+  location           = azurerm_ai_foundry.example.location
+  ai_services_hub_id = azurerm_ai_foundry.example.id
 }
