@@ -1,9 +1,8 @@
-# Azure AI Studio
+# Azure AI Foundry
 
-This deployment configuration specifies an [Azure AI hub](https://learn.microsoft.com/en-us/azure/ai-studio/concepts/ai-resources), 
-and its associated resources including Azure Key Vault, Azure Storage. You can optionally provision and attach Azure Application Insights and Azure Container Registry.
+This deployment configuration specifies an [Azure AI hub](https://learn.microsoft.com/en-us/azure/ai-studio/concepts/ai-resources), and its associated resources including Azure Key Vault, Azure Storage. You can optionally provision and attach Azure Application Insights and Azure Container Registry.
 
-This configuration describes the minimal set of resources you require to get started with Azure AI Studio.
+This configuration describes the minimal set of resources you require to get started with Azure AI Foundry.
 
 ## Resources
 
@@ -23,20 +22,6 @@ This configuration describes the minimal set of resources you require to get sta
 | `resource_group_location` | Location of the resource group. | eastus |
 | `prefix` | This variable is used to name the hub, project, and dependent resources. | ai |
 | `sku` | The SKU for AI Services resources | S0
-
-## Usage
-
-After git cloning the repo, run the following commands after having docker running on your machine.
-
-```bash
-terraform init
-
-az login 
-
-terraform plan -out demo.tfplan
-
-terraform apply "demo.tfplan"
-```
 
 ## Common mistakes
 
