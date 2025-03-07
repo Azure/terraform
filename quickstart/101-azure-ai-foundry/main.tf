@@ -9,6 +9,9 @@ resource "azurerm_resource_group" "example" {
   name     = random_pet.rg_name.id
 }
 
+// Retrieves information about the current Azure client configuration
+data "azurerm_client_config" "current" {}
+
 # Creates an Azure Key Vault resource
 resource "azurerm_key_vault" "example" {
   name                = "examplekv"                                  # Name of the Key Vault
