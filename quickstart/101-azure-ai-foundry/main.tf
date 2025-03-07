@@ -49,11 +49,11 @@ resource "azurerm_key_vault_access_policy" "test" {
 
 # Create an Azure Storage Account
 resource "azurerm_storage_account" "example" {
-  name                     = random_string.example.result              # Storage account name
-  location                 = azurerm_resource_group.example.location   # Location from the resource group
-  resource_group_name      = azurerm_resource_group.example.name       # Resource group name
-  account_tier             = "Standard"                                # Performance tier
-  account_replication_type = "LRS"                                     # Locally-redundant storage replication
+  name                     = random_string.example.result            # Storage account name
+  location                 = azurerm_resource_group.example.location # Location from the resource group
+  resource_group_name      = azurerm_resource_group.example.name     # Resource group name
+  account_tier             = "Standard"                              # Performance tier
+  account_replication_type = "LRS"                                   # Locally-redundant storage replication
 }
 
 # Deploy Azure AI Services resource
