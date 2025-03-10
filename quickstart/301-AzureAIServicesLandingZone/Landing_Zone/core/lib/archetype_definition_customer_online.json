@@ -1,0 +1,41 @@
+
+{
+    "customer_online": {
+      "policy_assignments": [
+        "Deny-Resource-Locations",
+        "Deny-RSG-Locations",
+        "Deny-Subnet-Without-Nsg"
+      ],
+      "policy_definitions": [],
+      "policy_set_definitions": [],
+      "role_definitions": [],
+      "archetype_config": {
+        "parameters": {
+          "Deny-Subnet-Without-Nsg": {
+            "effect": "Audit"
+          },
+          "Deny-Resource-Locations": {
+            "listOfAllowedLocations": [
+              "eastus",
+              "eastus2",
+              "westus",
+              "northcentralus",
+              "southcentralus",
+              "canadaeast"
+            ]
+          },
+          "Deny-RSG-Locations": {
+            "listOfAllowedLocations": [
+              "eastus",
+              "eastus2",
+              "westus",
+              "northcentralus",
+              "southcentralus",
+              "canadaeast"
+            ]
+          }
+        },
+        "access_control": {}
+      }
+    }
+  }
