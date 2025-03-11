@@ -23,6 +23,7 @@ var speicalTests = map[string]func(*testing.T){
 	"quickstart/101-virtual-network-manager-create-management-group-scope": test101VirtualNetworkManagerCreateManagementGroupScope,
 	"quickstart/201-vmss-packer-jumpbox":                                   test201VmssPackerJumpbox,
 	"quickstart/202-machine-learning-moderately-secure-existing-VNet":      test202machineLearningModeratelySecureExistingVnet,
+	"quickstart/101-azure-netapp-files":                                    test101AzureNetappFiles,
 }
 
 func Test_Quickstarts(t *testing.T) {
@@ -91,6 +92,18 @@ func containsTerraformFile(f string) bool {
 		}
 	}
 	return false
+}
+
+func test101AzureNetappFiles(t *testing.T) {
+	rootPath := filepath.Join("..", "..")
+	examplePath := filepath.Join("quickstart", "101-azure-netapp-files")
+
+	helper.RunE2ETest(t, rootPath, examplePath, terraform.Options{
+		Upgrade: true,
+		Vars: map[string]interface{}{
+			"prevent_volume_destruction": false,
+		},
+	}, nil)
 }
 
 func test201VmssPackerJumpbox(t *testing.T) {
