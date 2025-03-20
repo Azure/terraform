@@ -41,7 +41,7 @@ resource "azurerm_service_plan" "example" {
   name                = coalesce(var.asp_name, random_string.name.result)
   resource_group_name = azurerm_resource_group.example.name
   location            = azurerm_resource_group.example.location
-  sku_name            = "P1v2"
+  sku_name            = "Y1"
   os_type             = "Linux"
 }
 
