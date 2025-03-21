@@ -1,4 +1,5 @@
-# This Terraform configuration creates an Azure Function App with a Storage Account and a Storage Container.
+# This Terraform configuration creates a Flex Consumption plan app in Azure Functions 
+# with the required Storage account and Blob Storage deployment container.
 
 # Create a random pet to generate a unique resource group name
 resource "random_pet" "rg_name" {
