@@ -1,3 +1,172 @@
+## 23 Mar 25 02:01 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.11.2
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.1
+
+### Error
+
+No error was found.
+
+---
+
+## 16 Mar 25 02:07 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.11.2
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.1
+
+### Error
+
+No error was found.
+
+---
+
+## 09 Mar 25 02:58 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.10.5
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.1
+
+### Error
+
+No error was found.
+
+---
+
+## 02 Mar 25 03:08 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.10.5
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.1
+
+### Error
+
+No error was found.
+
+---
+
+## 23 Feb 25 02:09 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.10.5
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.0
++ provider registry.terraform.io/hashicorp/random v3.6.3
+
+### Error
+
+No error was found.
+
+---
+
+## 16 Feb 25 02:01 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.10.5
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.0
++ provider registry.terraform.io/hashicorp/random v3.6.3
+
+### Error
+
+No error was found.
+
+---
+
+## 09 Feb 25 03:47 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.10.5
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.0
++ provider registry.terraform.io/hashicorp/random v3.6.3
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating/updating Service (Subscription: "f7a632a5-49db-4c5e-9828-cd62cb753971"
+	            	[31m│[0m [0mResource Group Name: "rg-cosmic-hawk"
+	            	[31m│[0m [0mService Name: "apiservicebxkqzgwoybjof"): polling after CreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "ActivationFailed"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "API Management service deployment into Virtual Network requires outbound connectivity to Azure Storage and Key Vault. Ensure outbound access to Microsoft.KeyVault and Microsoft.Storage service tags are allowed over port 443 in the NSG. Also ensure that Microsoft.KeyVault and Microsoft.Storage service endpoints are enabled on the subnet. For more details refer to https://aka.ms/apimvnet. VM has reported a failure when processing extension 'DSCConfiguration' (publisher 'Microsoft.Powershell' and type 'DSC'). Error message: 'DSC Configuration 'ApimDSC' completed with error(s). Following are the first few: PowerShell DSC resource ApimDsc  failed to execute Set functionality with error message: ApimBootstrapperService timed out starting after 6 retries  The SendConfigurationApply function did not succeed.'. More information on troubleshooting is available at https://aka.ms/VMExtensionDSCWindowsTroubleshoot. "
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{"status":"Failed","error":{"code":"ActivationFailed","message":"API Management service deployment into Virtual Network requires outbound connectivity to Azure Storage and Key Vault. Ensure outbound access to Microsoft.KeyVault and Microsoft.Storage service tags are allowed over port 443 in the NSG. Also ensure that Microsoft.KeyVault and Microsoft.Storage service endpoints are enabled on the subnet. For more details refer to https://aka.ms/apimvnet. VM has reported a failure when processing extension 'DSCConfiguration' (publisher 'Microsoft.Powershell' and type 'DSC'). Error message: 'DSC Configuration 'ApimDSC' completed with error(s). Following are the first few: PowerShell DSC resource ApimDsc  failed to execute Set functionality with error message: ApimBootstrapperService timed out starting after 6 retries  The SendConfigurationApply function did not succeed.'. More information on troubleshooting is available at https://aka.ms/VMExtensionDSCWindowsTroubleshoot. "}}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_api_management.api,
+	            	[31m│[0m [0m  on main.tf line 18, in resource "azurerm_api_management" "api":
+	            	[31m│[0m [0m  18: resource "azurerm_api_management" "api" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-api-management-create
+
+FailNow
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:135
+	            				/usr/local/go/src/runtime/panic.go:629
+	            				/usr/local/go/src/testing/testing.go:1006
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/test_runner.go:53
+	            				/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	'terraform [destroy -auto-approve -input=false -lock=false]' unsuccessful after 5 retries
+	Test:       	Test_Quickstarts/quickstart/101-azure-api-management-create
+
+FailNow
+
+---
+
 ## 02 Feb 25 02:03 UTC
 
 Success: true

@@ -1,3 +1,156 @@
+## 23 Mar 25 00:51 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.11.2
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.1
+
+### Error
+
+No error was found.
+
+---
+
+## 16 Mar 25 00:31 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.11.2
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.1
+
+### Error
+
+No error was found.
+
+---
+
+## 09 Mar 25 01:09 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.10.5
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "f7a632a5-49db-4c5e-9828-cd62cb753971"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-autoscale-koi-rg"
+	            	[31m│[0m [0mDatabase Account Name: "itrkxyxtnnwjkcfnegkb"): creating/updating CosmosDB Account "itrkxyxtnnwjkcfnegkb" (Resource Group "cosmos-db-autoscale-koi-rg"): polling after DatabaseAccountsCreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "InternalServerError"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "Database account creation failed. Operation Id: 94b582ad-8856-40b2-9856-67be4716adb6, Error : One or more errors occurred.\r\nActivityId: 1dfb2fab-2616-4459-ba87-d3fb42e158ef, Microsoft.Azure.Documents.Common/2.14.0"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{"status":"Failed","error":{"code":"InternalServerError","message":"Database account creation failed. Operation Id: 94b582ad-8856-40b2-9856-67be4716adb6, Error : One or more errors occurred.\r\nActivityId: 1dfb2fab-2616-4459-ba87-d3fb42e158ef, Microsoft.Azure.Documents.Common/2.14.0"}}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-autoscale
+
+FailNow
+
+---
+
+## 02 Mar 25 01:30 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.10.5
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.1
+
+### Error
+
+No error was found.
+
+---
+
+## 23 Feb 25 00:35 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.10.5
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.0
++ provider registry.terraform.io/hashicorp/random v3.6.3
+
+### Error
+
+No error was found.
+
+---
+
+## 16 Feb 25 01:55 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.10.5
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.0
++ provider registry.terraform.io/hashicorp/random v3.6.3
+
+### Error
+
+No error was found.
+
+---
+
+## 09 Feb 25 00:48 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.10.5
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.0
++ provider registry.terraform.io/hashicorp/random v3.6.3
+
+### Error
+
+No error was found.
+
+---
+
 ## 02 Feb 25 00:46 UTC
 
 Success: true

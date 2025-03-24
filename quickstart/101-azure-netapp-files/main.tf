@@ -1,14 +1,15 @@
-# Create Resource Group
+# Create random pet name to ensure unique resource name
 resource "random_pet" "rg_name" {
   prefix = var.resource_group_name_prefix
 }
 
+# Create Resource Group
 resource "azurerm_resource_group" "rg" {
   location = var.resource_group_location
   name     = random_pet.rg_name.id
 }
 
-# Random String for unique naming
+# Random String for unique naming of resources
 resource "random_string" "name" {
   length  = 8
   special = false
@@ -35,9 +36,9 @@ resource "azurerm_subnet" "subnet" {
     name = "delegation"
 
     service_delegation {
-      name    = "Microsoft.Netapp/volumes"
+      name = "Microsoft.Netapp/volumes"
       actions = [
-        "Microsoft.Network/networkinterfaces/*", 
+        "Microsoft.Network/networkinterfaces/*",
         "Microsoft.Network/virtualNetworks/subnets/join/action"
       ]
     }
@@ -78,6 +79,6 @@ resource "azurerm_netapp_volume" "volume" {
     allowed_clients   = ["0.0.0.0/0"]
     protocols_enabled = ["NFSv4.1"]
     unix_read_only    = false
-    unix_read_write   = true    
+    unix_read_write   = true
   }
 }

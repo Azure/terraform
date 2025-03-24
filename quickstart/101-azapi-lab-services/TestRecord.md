@@ -1,3 +1,129 @@
+## 23 Mar 25 01:34 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.11.2
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.3.0
++ provider registry.terraform.io/hashicorp/azurerm v4.24.0
++ provider registry.terraform.io/hashicorp/random v3.7.1
+
+### Error
+
+No error was found.
+
+---
+
+## 16 Mar 25 00:44 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.11.2
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.3.0
++ provider registry.terraform.io/hashicorp/azurerm v4.23.0
++ provider registry.terraform.io/hashicorp/random v3.7.1
+
+### Error
+
+No error was found.
+
+---
+
+## 09 Mar 25 01:41 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.10.5
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.3.0
++ provider registry.terraform.io/hashicorp/azurerm v4.22.0
++ provider registry.terraform.io/hashicorp/random v3.7.1
+
+### Error
+
+No error was found.
+
+---
+
+## 02 Mar 25 01:41 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.10.5
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.2.0
++ provider registry.terraform.io/hashicorp/azurerm v4.21.1
++ provider registry.terraform.io/hashicorp/random v3.7.1
+
+### Error
+
+No error was found.
+
+---
+
+## 23 Feb 25 01:22 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.10.5
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.2.0
++ provider registry.terraform.io/hashicorp/azurerm v4.20.0
++ provider registry.terraform.io/hashicorp/random v3.6.3
+
+### Error
+
+No error was found.
+
+---
+
+## 16 Feb 25 00:47 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.10.5
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.2.0
++ provider registry.terraform.io/hashicorp/azurerm v4.19.0
++ provider registry.terraform.io/hashicorp/random v3.6.3
+
+### Error
+
+No error was found.
+
+---
+
+## 09 Feb 25 01:00 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.10.5
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.2.0
++ provider registry.terraform.io/hashicorp/azurerm v4.18.0
++ provider registry.terraform.io/hashicorp/random v3.6.3
+
+### Error
+
+No error was found.
+
+---
+
 ## 02 Feb 25 00:57 UTC
 
 Success: true

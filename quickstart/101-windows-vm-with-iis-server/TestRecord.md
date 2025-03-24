@@ -1,3 +1,458 @@
+## 23 Mar 25 01:06 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.11.2
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:51
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.prefix: Refreshing state... [id=win-vm-iis-squid][0m
+	            	[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-squid-rg][0m
+	            	[0m[1mrandom_id.random_id: Refreshing state... [id=ySh8Py29fOE][0m
+	            	[0m[1mazurerm_public_ip.my_terraform_public_ip: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-squid-rg/providers/Microsoft.Network/publicIPAddresses/win-vm-iis-squid-public-ip][0m
+	            	[0m[1mazurerm_virtual_network.my_terraform_network: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-squid-rg/providers/Microsoft.Network/virtualNetworks/win-vm-iis-squid-vnet][0m
+	            	[0m[1mazurerm_network_security_group.my_terraform_nsg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-squid-rg/providers/Microsoft.Network/networkSecurityGroups/win-vm-iis-squid-nsg][0m
+	            	[0m[1mazurerm_storage_account.my_storage_account: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-squid-rg/providers/Microsoft.Storage/storageAccounts/diagc9287c3f2dbd7ce1][0m
+	            	[0m[1mazurerm_subnet.my_terraform_subnet: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-squid-rg/providers/Microsoft.Network/virtualNetworks/win-vm-iis-squid-vnet/subnets/win-vm-iis-squid-subnet][0m
+	            	[0m[1mazurerm_network_interface.my_terraform_nic: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-squid-rg/providers/Microsoft.Network/networkInterfaces/win-vm-iis-squid-nic][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-squid-rg/providers/Microsoft.Network/networkInterfaces/win-vm-iis-squid-nic|/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-squid-rg/providers/Microsoft.Network/networkSecurityGroups/win-vm-iis-squid-nsg][0m
+	            	[0m[1mazurerm_windows_virtual_machine.main: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-squid-rg/providers/Microsoft.Compute/virtualMachines/win-vm-iis-vm][0m
+	            	[0m[1mazurerm_virtual_machine_extension.web_server_install: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-squid-rg/providers/Microsoft.Compute/virtualMachines/win-vm-iis-vm/extensions/win-vm-iis-squid-wsi][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.main[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "main" {
+	            	        id                                                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-squid-rg/providers/Microsoft.Compute/virtualMachines/win-vm-iis-vm"
+	            	        name                                                   = "win-vm-iis-vm"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (3 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 0 to add, 1 to change, 0 to destroy.
+	            	[0m[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-windows-vm-with-iis-server211503285/src/quickstart/101-windows-vm-with-iis-server/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-windows-vm-with-iis-server211503285/src/quickstart/101-windows-vm-with-iis-server/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-windows-vm-with-iis-server
+
+FailNow
+
+---
+
+## 16 Mar 25 01:56 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.11.2
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:51
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.prefix: Refreshing state... [id=win-vm-iis-flea][0m
+	            	[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-flea-rg][0m
+	            	[0m[1mrandom_id.random_id: Refreshing state... [id=9hBYQZR9wN0][0m
+	            	[0m[1mazurerm_virtual_network.my_terraform_network: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-flea-rg/providers/Microsoft.Network/virtualNetworks/win-vm-iis-flea-vnet][0m
+	            	[0m[1mazurerm_public_ip.my_terraform_public_ip: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-flea-rg/providers/Microsoft.Network/publicIPAddresses/win-vm-iis-flea-public-ip][0m
+	            	[0m[1mazurerm_network_security_group.my_terraform_nsg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-flea-rg/providers/Microsoft.Network/networkSecurityGroups/win-vm-iis-flea-nsg][0m
+	            	[0m[1mazurerm_storage_account.my_storage_account: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-flea-rg/providers/Microsoft.Storage/storageAccounts/diagf6105841947dc0dd][0m
+	            	[0m[1mazurerm_subnet.my_terraform_subnet: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-flea-rg/providers/Microsoft.Network/virtualNetworks/win-vm-iis-flea-vnet/subnets/win-vm-iis-flea-subnet][0m
+	            	[0m[1mazurerm_network_interface.my_terraform_nic: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-flea-rg/providers/Microsoft.Network/networkInterfaces/win-vm-iis-flea-nic][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-flea-rg/providers/Microsoft.Network/networkInterfaces/win-vm-iis-flea-nic|/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-flea-rg/providers/Microsoft.Network/networkSecurityGroups/win-vm-iis-flea-nsg][0m
+	            	[0m[1mazurerm_windows_virtual_machine.main: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-flea-rg/providers/Microsoft.Compute/virtualMachines/win-vm-iis-vm][0m
+	            	[0m[1mazurerm_virtual_machine_extension.web_server_install: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-flea-rg/providers/Microsoft.Compute/virtualMachines/win-vm-iis-vm/extensions/win-vm-iis-flea-wsi][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.main[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "main" {
+	            	        id                                                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-flea-rg/providers/Microsoft.Compute/virtualMachines/win-vm-iis-vm"
+	            	        name                                                   = "win-vm-iis-vm"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (3 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 0 to add, 1 to change, 0 to destroy.
+	            	[0m[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-windows-vm-with-iis-server4106472442/src/quickstart/101-windows-vm-with-iis-server/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-windows-vm-with-iis-server4106472442/src/quickstart/101-windows-vm-with-iis-server/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-windows-vm-with-iis-server
+
+FailNow
+
+---
+
+## 09 Mar 25 00:24 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.10.5
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.prefix: Refreshing state... [id=win-vm-iis-seal][0m
+	            	[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-seal-rg][0m
+	            	[0m[1mrandom_id.random_id: Refreshing state... [id=73dBZY4M0ek][0m
+	            	[0m[1mazurerm_virtual_network.my_terraform_network: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-seal-rg/providers/Microsoft.Network/virtualNetworks/win-vm-iis-seal-vnet][0m
+	            	[0m[1mazurerm_public_ip.my_terraform_public_ip: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-seal-rg/providers/Microsoft.Network/publicIPAddresses/win-vm-iis-seal-public-ip][0m
+	            	[0m[1mazurerm_network_security_group.my_terraform_nsg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-seal-rg/providers/Microsoft.Network/networkSecurityGroups/win-vm-iis-seal-nsg][0m
+	            	[0m[1mazurerm_storage_account.my_storage_account: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-seal-rg/providers/Microsoft.Storage/storageAccounts/diagef7741658e0cd1e9][0m
+	            	[0m[1mazurerm_subnet.my_terraform_subnet: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-seal-rg/providers/Microsoft.Network/virtualNetworks/win-vm-iis-seal-vnet/subnets/win-vm-iis-seal-subnet][0m
+	            	[0m[1mazurerm_network_interface.my_terraform_nic: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-seal-rg/providers/Microsoft.Network/networkInterfaces/win-vm-iis-seal-nic][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-seal-rg/providers/Microsoft.Network/networkInterfaces/win-vm-iis-seal-nic|/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-seal-rg/providers/Microsoft.Network/networkSecurityGroups/win-vm-iis-seal-nsg][0m
+	            	[0m[1mazurerm_windows_virtual_machine.main: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-seal-rg/providers/Microsoft.Compute/virtualMachines/win-vm-iis-vm][0m
+	            	[0m[1mazurerm_virtual_machine_extension.web_server_install: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-seal-rg/providers/Microsoft.Compute/virtualMachines/win-vm-iis-vm/extensions/win-vm-iis-seal-wsi][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.main[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "main" {
+	            	        id                                                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-seal-rg/providers/Microsoft.Compute/virtualMachines/win-vm-iis-vm"
+	            	        name                                                   = "win-vm-iis-vm"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (3 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 0 to add, 1 to change, 0 to destroy.
+	            	[0m[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-windows-vm-with-iis-server1087359512/src/quickstart/101-windows-vm-with-iis-server/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-windows-vm-with-iis-server1087359512/src/quickstart/101-windows-vm-with-iis-server/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-windows-vm-with-iis-server
+
+FailNow
+
+---
+
+## 02 Mar 25 00:46 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.10.5
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.prefix: Refreshing state... [id=win-vm-iis-emu][0m
+	            	[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-emu-rg][0m
+	            	[0m[1mrandom_id.random_id: Refreshing state... [id=7Q1hdQ1cNKU][0m
+	            	[0m[1mazurerm_virtual_network.my_terraform_network: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-emu-rg/providers/Microsoft.Network/virtualNetworks/win-vm-iis-emu-vnet][0m
+	            	[0m[1mazurerm_public_ip.my_terraform_public_ip: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-emu-rg/providers/Microsoft.Network/publicIPAddresses/win-vm-iis-emu-public-ip][0m
+	            	[0m[1mazurerm_network_security_group.my_terraform_nsg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-emu-rg/providers/Microsoft.Network/networkSecurityGroups/win-vm-iis-emu-nsg][0m
+	            	[0m[1mazurerm_storage_account.my_storage_account: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-emu-rg/providers/Microsoft.Storage/storageAccounts/diaged0d61750d5c34a5][0m
+	            	[0m[1mazurerm_subnet.my_terraform_subnet: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-emu-rg/providers/Microsoft.Network/virtualNetworks/win-vm-iis-emu-vnet/subnets/win-vm-iis-emu-subnet][0m
+	            	[0m[1mazurerm_network_interface.my_terraform_nic: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-emu-rg/providers/Microsoft.Network/networkInterfaces/win-vm-iis-emu-nic][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-emu-rg/providers/Microsoft.Network/networkInterfaces/win-vm-iis-emu-nic|/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-emu-rg/providers/Microsoft.Network/networkSecurityGroups/win-vm-iis-emu-nsg][0m
+	            	[0m[1mazurerm_windows_virtual_machine.main: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-emu-rg/providers/Microsoft.Compute/virtualMachines/win-vm-iis-vm][0m
+	            	[0m[1mazurerm_virtual_machine_extension.web_server_install: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-emu-rg/providers/Microsoft.Compute/virtualMachines/win-vm-iis-vm/extensions/win-vm-iis-emu-wsi][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.main[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "main" {
+	            	        id                                                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-emu-rg/providers/Microsoft.Compute/virtualMachines/win-vm-iis-vm"
+	            	        name                                                   = "win-vm-iis-vm"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (3 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 0 to add, 1 to change, 0 to destroy.
+	            	[0m[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-windows-vm-with-iis-server2548402783/src/quickstart/101-windows-vm-with-iis-server/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-windows-vm-with-iis-server2548402783/src/quickstart/101-windows-vm-with-iis-server/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-windows-vm-with-iis-server
+
+FailNow
+
+---
+
+## 23 Feb 25 01:31 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.10.5
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.0
++ provider registry.terraform.io/hashicorp/random v3.6.3
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.prefix: Refreshing state... [id=win-vm-iis-sole][0m
+	            	[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-sole-rg][0m
+	            	[0m[1mrandom_id.random_id: Refreshing state... [id=yYk7pEE0t_g][0m
+	            	[0m[1mazurerm_virtual_network.my_terraform_network: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-sole-rg/providers/Microsoft.Network/virtualNetworks/win-vm-iis-sole-vnet][0m
+	            	[0m[1mazurerm_public_ip.my_terraform_public_ip: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-sole-rg/providers/Microsoft.Network/publicIPAddresses/win-vm-iis-sole-public-ip][0m
+	            	[0m[1mazurerm_network_security_group.my_terraform_nsg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-sole-rg/providers/Microsoft.Network/networkSecurityGroups/win-vm-iis-sole-nsg][0m
+	            	[0m[1mazurerm_storage_account.my_storage_account: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-sole-rg/providers/Microsoft.Storage/storageAccounts/diagc9893ba44134b7f8][0m
+	            	[0m[1mazurerm_subnet.my_terraform_subnet: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-sole-rg/providers/Microsoft.Network/virtualNetworks/win-vm-iis-sole-vnet/subnets/win-vm-iis-sole-subnet][0m
+	            	[0m[1mazurerm_network_interface.my_terraform_nic: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-sole-rg/providers/Microsoft.Network/networkInterfaces/win-vm-iis-sole-nic][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-sole-rg/providers/Microsoft.Network/networkInterfaces/win-vm-iis-sole-nic|/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-sole-rg/providers/Microsoft.Network/networkSecurityGroups/win-vm-iis-sole-nsg][0m
+	            	[0m[1mazurerm_windows_virtual_machine.main: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-sole-rg/providers/Microsoft.Compute/virtualMachines/win-vm-iis-vm][0m
+	            	[0m[1mazurerm_virtual_machine_extension.web_server_install: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-sole-rg/providers/Microsoft.Compute/virtualMachines/win-vm-iis-vm/extensions/win-vm-iis-sole-wsi][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.main[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "main" {
+	            	        id                                                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-sole-rg/providers/Microsoft.Compute/virtualMachines/win-vm-iis-vm"
+	            	        name                                                   = "win-vm-iis-vm"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (3 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 0 to add, 1 to change, 0 to destroy.
+	            	[0m[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-windows-vm-with-iis-server2016869843/src/quickstart/101-windows-vm-with-iis-server/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-windows-vm-with-iis-server2016869843/src/quickstart/101-windows-vm-with-iis-server/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-windows-vm-with-iis-server
+
+FailNow
+
+---
+
+## 16 Feb 25 01:19 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.10.5
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.0
++ provider registry.terraform.io/hashicorp/random v3.6.3
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.prefix: Refreshing state... [id=win-vm-iis-boxer][0m
+	            	[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-boxer-rg][0m
+	            	[0m[1mazurerm_virtual_network.my_terraform_network: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-boxer-rg/providers/Microsoft.Network/virtualNetworks/win-vm-iis-boxer-vnet][0m
+	            	[0m[1mrandom_id.random_id: Refreshing state... [id=MAXgTACqb7Y][0m
+	            	[0m[1mazurerm_public_ip.my_terraform_public_ip: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-boxer-rg/providers/Microsoft.Network/publicIPAddresses/win-vm-iis-boxer-public-ip][0m
+	            	[0m[1mazurerm_network_security_group.my_terraform_nsg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-boxer-rg/providers/Microsoft.Network/networkSecurityGroups/win-vm-iis-boxer-nsg][0m
+	            	[0m[1mazurerm_storage_account.my_storage_account: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-boxer-rg/providers/Microsoft.Storage/storageAccounts/diag3005e04c00aa6fb6][0m
+	            	[0m[1mazurerm_subnet.my_terraform_subnet: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-boxer-rg/providers/Microsoft.Network/virtualNetworks/win-vm-iis-boxer-vnet/subnets/win-vm-iis-boxer-subnet][0m
+	            	[0m[1mazurerm_network_interface.my_terraform_nic: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-boxer-rg/providers/Microsoft.Network/networkInterfaces/win-vm-iis-boxer-nic][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-boxer-rg/providers/Microsoft.Network/networkInterfaces/win-vm-iis-boxer-nic|/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-boxer-rg/providers/Microsoft.Network/networkSecurityGroups/win-vm-iis-boxer-nsg][0m
+	            	[0m[1mazurerm_windows_virtual_machine.main: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-boxer-rg/providers/Microsoft.Compute/virtualMachines/win-vm-iis-vm][0m
+	            	[0m[1mazurerm_virtual_machine_extension.web_server_install: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-boxer-rg/providers/Microsoft.Compute/virtualMachines/win-vm-iis-vm/extensions/win-vm-iis-boxer-wsi][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.main[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "main" {
+	            	        id                                                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-boxer-rg/providers/Microsoft.Compute/virtualMachines/win-vm-iis-vm"
+	            	        name                                                   = "win-vm-iis-vm"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (3 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 0 to add, 1 to change, 0 to destroy.
+	            	[0m[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-windows-vm-with-iis-server748666254/src/quickstart/101-windows-vm-with-iis-server/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-windows-vm-with-iis-server748666254/src/quickstart/101-windows-vm-with-iis-server/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-windows-vm-with-iis-server
+
+FailNow
+
+---
+
+## 09 Feb 25 01:50 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.10.5
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.0
++ provider registry.terraform.io/hashicorp/random v3.6.3
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.prefix: Refreshing state... [id=win-vm-iis-egret][0m
+	            	[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-egret-rg][0m
+	            	[0m[1mazurerm_virtual_network.my_terraform_network: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-egret-rg/providers/Microsoft.Network/virtualNetworks/win-vm-iis-egret-vnet][0m
+	            	[0m[1mazurerm_public_ip.my_terraform_public_ip: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-egret-rg/providers/Microsoft.Network/publicIPAddresses/win-vm-iis-egret-public-ip][0m
+	            	[0m[1mrandom_id.random_id: Refreshing state... [id=LGZOwV97_Fo][0m
+	            	[0m[1mazurerm_network_security_group.my_terraform_nsg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-egret-rg/providers/Microsoft.Network/networkSecurityGroups/win-vm-iis-egret-nsg][0m
+	            	[0m[1mazurerm_storage_account.my_storage_account: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-egret-rg/providers/Microsoft.Storage/storageAccounts/diag2c664ec15f7bfc5a][0m
+	            	[0m[1mazurerm_subnet.my_terraform_subnet: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-egret-rg/providers/Microsoft.Network/virtualNetworks/win-vm-iis-egret-vnet/subnets/win-vm-iis-egret-subnet][0m
+	            	[0m[1mazurerm_network_interface.my_terraform_nic: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-egret-rg/providers/Microsoft.Network/networkInterfaces/win-vm-iis-egret-nic][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-egret-rg/providers/Microsoft.Network/networkInterfaces/win-vm-iis-egret-nic|/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-egret-rg/providers/Microsoft.Network/networkSecurityGroups/win-vm-iis-egret-nsg][0m
+	            	[0m[1mazurerm_windows_virtual_machine.main: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-egret-rg/providers/Microsoft.Compute/virtualMachines/win-vm-iis-vm][0m
+	            	[0m[1mazurerm_virtual_machine_extension.web_server_install: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-egret-rg/providers/Microsoft.Compute/virtualMachines/win-vm-iis-vm/extensions/win-vm-iis-egret-wsi][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.main[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "main" {
+	            	        id                                                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/win-vm-iis-egret-rg/providers/Microsoft.Compute/virtualMachines/win-vm-iis-vm"
+	            	        name                                                   = "win-vm-iis-vm"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (3 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 0 to add, 1 to change, 0 to destroy.
+	            	[0m[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-windows-vm-with-iis-server2229585342/src/quickstart/101-windows-vm-with-iis-server/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-windows-vm-with-iis-server2229585342/src/quickstart/101-windows-vm-with-iis-server/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-windows-vm-with-iis-server
+
+FailNow
+
+---
+
 ## 02 Feb 25 01:43 UTC
 
 Success: false

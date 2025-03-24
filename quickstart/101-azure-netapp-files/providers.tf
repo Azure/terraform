@@ -2,7 +2,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "~>3.0"
+      version = "~>4.0"
     }
     random = {
       source  = "hashicorp/random"
@@ -12,5 +12,11 @@ terraform {
 }
 
 provider "azurerm" {
-  features {}
+  features {
+
+    # NOTICE: To prevent accidental deletion of the volume, set `var.prevent_volume_destruction`'s default value to to `true`
+    netapp {
+      prevent_volume_destruction = var.prevent_volume_destruction
+    }
+  }
 }
