@@ -2,7 +2,7 @@
 
 This template deploys an Azure Storage Actions storage task.
 
-**Notice**: The API used in this example `Microsoft.StorageActions/storageTasks@2023-01-01` could response HTTP 202 ACCEPTED with empty body sometime, if you encounter this error, just rerun the previous Terraform command.
+**Notice**: The API used in this example `Microsoft.StorageActions/storageTasks@2023-01-01` can result in a response of **HTTP 202 ACCEPTED** with an empty body. If you encounter this error, rerun the previous Terraform command.
 
 ## Terraform resource types
 
