@@ -3,5 +3,5 @@ output "resource_group_name" {
 }
 
 output "azapi_resource.storage_task_name" {
-  value = random_string.storage_task_name.result
+  value = azapi_resource.my_terraform_task.name
 }
