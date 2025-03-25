@@ -2,6 +2,8 @@
 
 This template deploys an Azure Storage Actions storage task.
 
+**Notice**: The API used in this example `Microsoft.StorageActions/storageTasks@2023-01-01` could response HTTP 202 ACCEPTED with empty body sometime, if you encounter this error, just rerun the previous Terraform command.
+
 ## Terraform resource types
 
 - [random_pet](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/pet)

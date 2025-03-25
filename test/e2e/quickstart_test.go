@@ -24,6 +24,7 @@ var speicalTests = map[string]func(*testing.T){
 	"quickstart/201-vmss-packer-jumpbox":                                   test201VmssPackerJumpbox,
 	"quickstart/202-machine-learning-moderately-secure-existing-VNet":      test202machineLearningModeratelySecureExistingVnet,
 	"quickstart/101-azure-netapp-files":                                    test101AzureNetappFiles,
+	"quickstart/101-azure-storage-actions-create-storage-task":             test101AzureStorageActionsCreateStorageTask,
 }
 
 func Test_Quickstarts(t *testing.T) {
@@ -223,6 +224,18 @@ func test202machineLearningModeratelySecureExistingVnet(t *testing.T) {
 			},
 		}, nil)
 	})
+}
+
+func test101AzureStorageActionsCreateStorageTask(t *testing.T) {
+	rootPath := filepath.Join("..", "..")
+	examplePath := filepath.Join("quickstart", "101-azure-storage-actions-create-storage-task")
+
+	helper.RunE2ETest(t, rootPath, examplePath, terraform.Options{
+		Upgrade: true,
+		RetryableTerraformErrors: map[string]string{
+			"the response did not contain a body": "This API would response 202 accepted with empty body sometimes, just retry",
+		},
+	}, nil)
 }
 
 func removeDuplicates(s []string) []string {
