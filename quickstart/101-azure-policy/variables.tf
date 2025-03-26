@@ -9,9 +9,3 @@ variable "resource_group_name_prefix" {
   default     = "rg"
   description = "Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription."
 }
-
-variable "cust_scope" {
-  type        = string
-  default     = ""
-  description = "The scope at which the policy assignment is created."
-}
