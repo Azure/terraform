@@ -3,7 +3,7 @@ resource "random_pet" "rg_name" {
   prefix = var.resource_group_name_prefix
 }
 
-# Create Resource Group
+# Create resource group
 resource "azurerm_resource_group" "example" {
   location = var.resource_group_location
   name     = random_pet.rg_name.id
@@ -12,10 +12,10 @@ resource "azurerm_resource_group" "example" {
 # Get current subscription
 data "azurerm_subscription" "current" {}
 
-# Create Subscription Policy Assignment
+# Create subscription policy assignment
 resource "azurerm_subscription_policy_assignment" "auditvms" {
   name                 = "audit-vm-manageddisks"
-  subscription_id      = "/subscriptions/${data.azurerm_subscription.current.subscription_id}"
+  subscription_id      = var.scope
   policy_definition_id = "/providers/Microsoft.Authorization/policyDefinitions/06a78e20-9358-41c9-923c-fb736d382a4d"
   description          = "Shows all virtual machines not using managed disks"
   display_name         = "Audit VMs without managed disks assignment"
