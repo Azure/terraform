@@ -7,5 +7,6 @@ output "public_ip_address" {
 }
 
 output "azurerm_linux_virtual_machine_password" {
-  value = azurerm_linux_virtual_machine.example[0].admin_password
+  value     = azurerm_linux_virtual_machine.example[0].admin_password
+  sensitive = true
 }
