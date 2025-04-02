@@ -30,7 +30,7 @@ This template deploys a standard load balancer for two virtual machines using Te
 | `username` | The username for the local account that will be created on the new VM. | "azureadmin" |
 | `vm_password` |  The password for the local account that will be created on the new VM. If left blank, a random password is generated. | "" |
 | `virtual_network_name` | Name of the Virtual Network. | "test-vnet" |
-| `subnet_name` Name of the subnet. | "test-subnet" |
+| `subnet_name` | Name of the subnet. | "test-subnet" |
 | `public_ip_name` | Name of the Public IP. | "test-public-ip" |
 | `network_security_group_name` | Name of the Network Security Group. | "test-nsg" |
 | `network_interface_name` | Name of the Network Interface. | "test-nic" |

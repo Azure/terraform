@@ -1,38 +1,37 @@
 # Create a random name for the resource group
-resource "random_pet" "example" {
+resource "random_pet" "rg" {
   prefix = var.resource_group_name_prefix
 }
 
 # Create a resource group using the generated random name
 resource "azurerm_resource_group" "example" {
   location = var.resource_group_location
-  name     = random_pet.rg_name.id
+  name     = random_pet.rg.id
 }
-
 
 # Create a Virtual Network to host the Virtual Machines 
 # in the Backend Pool of the Load Balancer
 resource "azurerm_virtual_network" "example" {
   name                = var.virtual_network_name
   address_space       = ["10.0.0.0/16"]
-  location            = azurerm_resource_group.my_resource_group.location
-  resource_group_name = azurerm_resource_group.my_resource_group.name
+  location            = azurerm_resource_group.example.location
+  resource_group_name = azurerm_resource_group.example.name
 }
 
 # Create a subnet in the Virtual Network to host the Virtual Machines
 # in the Backend Pool of the Load Balancer
 resource "azurerm_subnet" "example" {
   name                 = var.subnet_name
-  resource_group_name  = azurerm_resource_group.my_resource_group.name
+  resource_group_name  = azurerm_resource_group.example.name
   virtual_network_name = azurerm_virtual_network.my_virtual_network.name
   address_prefixes     = ["10.0.1.0/24"]
 }
 
 # Create a subnet in the Virtual Network for creating Azure Bastion
 # This subnet is required for Azure Bastion to work properly
-resource "azurerm_subnet" "example" {
+resource "azurerm_subnet" "bastion" {
   name                 = "AzureBastionSubnet"
-  resource_group_name  = azurerm_resource_group.my_resource_group.name
+  resource_group_name  = azurerm_resource_group.example.name
   virtual_network_name = azurerm_virtual_network.my_virtual_network.name
   address_prefixes     = ["10.0.2.0/24"]
 }
@@ -41,8 +40,8 @@ resource "azurerm_subnet" "example" {
 # to and from the Virtual Machines in the Backend Pool
 resource "azurerm_network_security_group" "example" {
   name                = var.network_security_group_name
-  location            = azurerm_resource_group.my_resource_group.location
-  resource_group_name = azurerm_resource_group.my_resource_group.name
+  location            = azurerm_resource_group.example.location
+  resource_group_name = azurerm_resource_group.example.name
 
   security_rule {
     name                       = "ssh"
@@ -72,8 +71,8 @@ resource "azurerm_network_security_group" "example" {
 # Associate the Network Security Group to the subnet to allow the
 # Network Security Group to control the traffic to and from the subnet
 resource "azurerm_subnet_network_security_group_association" "example" {
-  subnet_id                 = azurerm_subnet.my_subnet.id
-  network_security_group_id = azurerm_network_security_group.my_nsg.id
+  subnet_id                 = azurerm_subnet.example.id
+  network_security_group_id = azurerm_network_security_group.example.id
 }
 
 # Create Public IPs to route traffic from the Load Balancer
@@ -81,8 +80,8 @@ resource "azurerm_subnet_network_security_group_association" "example" {
 resource "azurerm_public_ip" "example" {
   count               = 2
   name                = "${var.public_ip_name}-${count.index}"
-  location            = azurerm_resource_group.my_resource_group.location
-  resource_group_name = azurerm_resource_group.my_resource_group.name
+  location            = azurerm_resource_group.example.location
+  resource_group_name = azurerm_resource_group.example.name
   allocation_method   = "Static"
   sku                 = "Standard"
 }
@@ -91,23 +90,23 @@ resource "azurerm_public_ip" "example" {
 # Virtual Machines in the Backend Pool of the Load Balancer
 resource "azurerm_nat_gateway" "example" {
   name                = var.nat_gateway
-  location            = azurerm_resource_group.my_resource_group.location
-  resource_group_name = azurerm_resource_group.my_resource_group.name
+  location            = azurerm_resource_group.example.location
+  resource_group_name = azurerm_resource_group.example.name
   sku_name            = "Standard"
 }
 
 # Associate one of the Public IPs to the NAT Gateway to route
 # traffic from the Virtual Machines to the internet
 resource "azurerm_nat_gateway_public_ip_association" "example" {
-  nat_gateway_id       = azurerm_nat_gateway.my_nat_gateway.id
-  public_ip_address_id = azurerm_public_ip.my_public_ip[0].id
+  nat_gateway_id       = azurerm_nat_gateway.example.id
+  public_ip_address_id = azurerm_public_ip.example[0].id
 }
 
 # Associate the NAT Gateway to subnet to route 
 # traffic from the Virtual Machines to the internet
 resource "azurerm_subnet_nat_gateway_association" "example" {
-  subnet_id      = azurerm_subnet.my_subnet.id
-  nat_gateway_id = azurerm_nat_gateway.my_nat_gateway.id
+  subnet_id      = azurerm_subnet.example.id
+  nat_gateway_id = azurerm_nat_gateway.example.id
 }
 
 # Create Network Interfaces
@@ -116,12 +115,12 @@ resource "azurerm_subnet_nat_gateway_association" "example" {
 resource "azurerm_network_interface" "example" {
   count               = 3
   name                = "${var.network_interface_name}-${count.index}"
-  location            = azurerm_resource_group.my_resource_group.location
-  resource_group_name = azurerm_resource_group.my_resource_group.name
+  location            = azurerm_resource_group.example.location
+  resource_group_name = azurerm_resource_group.example.name
 
   ip_configuration {
     name                          = "ipconfig-${count.index}"
-    subnet_id                     = azurerm_subnet.my_subnet.id
+    subnet_id                     = azurerm_subnet.example.id
     private_ip_address_allocation = "Dynamic"
     primary                       = true
   }
@@ -132,14 +131,14 @@ resource "azurerm_network_interface" "example" {
 # Machines in the Backend Pool of the Load Balancer
 resource "azurerm_bastion_host" "example" {
   name                = var.bastion_name
-  location            = azurerm_resource_group.my_resource_group.location
-  resource_group_name = azurerm_resource_group.my_resource_group.name
+  location            = azurerm_resource_group.example.location
+  resource_group_name = azurerm_resource_group.example.name
   sku                 = "Standard"
 
   ip_configuration {
     name                 = "ipconfig"
-    subnet_id            = azurerm_subnet.my_bastion_subnet.id
-    public_ip_address_id = azurerm_public_ip.my_public_ip[1].id
+    subnet_id            = azurerm_subnet.bastion_subnet.id
+    public_ip_address_id = azurerm_public_ip.example[1].id
   }
 }
 
@@ -148,9 +147,9 @@ resource "azurerm_bastion_host" "example" {
 # Machines in the Backend Pool
 resource "azurerm_network_interface_backend_address_pool_association" "example" {
   count                   = 2
-  network_interface_id    = azurerm_network_interface.my_nic[count.index].id
+  network_interface_id    = azurerm_network_interface.example[count.index].id
   ip_configuration_name   = "ipconfig-${count.index}"
-  backend_address_pool_id = azurerm_lb_backend_address_pool.my_lb_pool.id
+  backend_address_pool_id = azurerm_lb_backend_address_pool.example.id
 }
 
 # Generate a random password for the VM admin users
@@ -166,8 +165,8 @@ resource "random_password" "example" {
 resource "azurerm_linux_virtual_machine" "example" {
   count                 = 3
   name                  = "${var.virtual_machine_name}-${count.index}"
-  location              = azurerm_resource_group.my_resource_group.location
-  resource_group_name   = azurerm_resource_group.my_resource_group.name
+  location              = azurerm_resource_group.example.location
+  resource_group_name   = azurerm_resource_group.example.name
   network_interface_ids = [azurerm_network_interface.my_nic[count.index].id]
   size                  = var.virtual_machine_size
 
@@ -196,7 +195,7 @@ resource "azurerm_linux_virtual_machine" "example" {
 resource "azurerm_virtual_machine_extension" "example" {
   count                = 2
   name                 = "Nginx"
-  virtual_machine_id   = azurerm_linux_virtual_machine.my_vm[count.index].id
+  virtual_machine_id   = azurerm_linux_virtual_machine.example[count.index].id
   publisher            = "Microsoft.Azure.Extensions"
   type                 = "CustomScript"
   type_handler_version = "2.0"
@@ -213,8 +212,8 @@ SETTINGS
 # Virtual Machines in the Backend Pool
 resource "azurerm_lb" "example" {
   name                = var.load_balancer_name
-  location            = azurerm_resource_group.my_resource_group.location
-  resource_group_name = azurerm_resource_group.my_resource_group.name
+  location            = azurerm_resource_group.example.location
+  resource_group_name = azurerm_resource_group.example.name
   sku                 = "Standard"
 
   frontend_ip_configuration {
@@ -226,14 +225,14 @@ resource "azurerm_lb" "example" {
 
 # Create a Backend Address Pool for the Load Balancer
 resource "azurerm_lb_backend_address_pool" "example" {
-  loadbalancer_id = azurerm_lb.my_lb.id
+  loadbalancer_id = azurerm_lb.example.id
   name            = "test-pool"
 }
 
 # Create a Load Balancer Probe to check the health of the 
 # Virtual Machines in the Backend Pool
 resource "azurerm_lb_probe" "example" {
-  loadbalancer_id = azurerm_lb.my_lb.id
+  loadbalancer_id = azurerm_lb.example.id
   name            = "test-probe"
   port            = 80
 }
@@ -241,13 +240,13 @@ resource "azurerm_lb_probe" "example" {
 # Create a Load Balancer Rule to define how traffic will be
 # distributed to the Virtual Machines in the Backend Pool
 resource "azurerm_lb_rule" "example" {
-  loadbalancer_id                = azurerm_lb.my_lb.id
+  loadbalancer_id                = azurerm_lb.example.id
   name                           = "test-rule"
   protocol                       = "Tcp"
   frontend_port                  = 80
   backend_port                   = 80
   disable_outbound_snat          = true
   frontend_ip_configuration_name = "frontend-ip"
-  probe_id                       = azurerm_lb_probe.my_lb_probe.id
-  backend_address_pool_ids       = [azurerm_lb_backend_address_pool.my_lb_pool.id]
+  probe_id                       = azurerm_lb_probe.example_probe.id
+  backend_address_pool_ids       = [azurerm_lb_backend_address_pool.example_pool.id]
 }

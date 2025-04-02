@@ -40,6 +40,18 @@ variable "network_security_group_name" {
   description = "Name of the Network Security Group."
 }
 
+variable "network_interface_name" {
+  type = string
+  default = "test-nic"
+  description = "Name of the Network Interface."  
+}
+
+variable "public_ip_name" {
+  type        = string
+  default     = "test-pip"
+  description = "Name of the Public IP."
+}
+
 variable "nat_gateway" {
   type        = string
   default     = "test-nat"
