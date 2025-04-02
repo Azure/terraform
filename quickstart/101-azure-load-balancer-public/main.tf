@@ -148,17 +148,23 @@ resource "azurerm_lb" "example" {
   }
 }
 
+# Create Backend Address Pool for the Load Balancer
 resource "azurerm_lb_backend_address_pool" "example" {
   loadbalancer_id = azurerm_lb.example.id
   name            = "test-pool"
 }
 
+# Create Load Balancer Health Probe
 resource "azurerm_lb_probe" "example" {
   loadbalancer_id = azurerm_lb.example.id
   name            = "test-probe"
   port            = 80
 }
 
+# Create Load Balancer Rule
+# This rule will forward traffic from the frontend IP configuration to the backend address pool
+# on port 80 using TCP protocol. It also disables outbound SNAT for the backend pool.
+# The probe is used to check the health of the backend instances.
 resource "azurerm_lb_rule" "example_rule" {
   loadbalancer_id                = azurerm_lb.example.id
   name                           = "test-rule"
