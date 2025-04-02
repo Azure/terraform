@@ -23,7 +23,7 @@ resource "azurerm_virtual_network" "example" {
 resource "azurerm_subnet" "example" {
   name                 = var.subnet_name
   resource_group_name  = azurerm_resource_group.example.name
-  virtual_network_name = azurerm_virtual_network.my_virtual_network.name
+  virtual_network_name = azurerm_virtual_network.example.name
   address_prefixes     = ["10.0.1.0/24"]
 }
 
@@ -32,7 +32,7 @@ resource "azurerm_subnet" "example" {
 resource "azurerm_subnet" "bastion" {
   name                 = "AzureBastionSubnet"
   resource_group_name  = azurerm_resource_group.example.name
-  virtual_network_name = azurerm_virtual_network.my_virtual_network.name
+  virtual_network_name = azurerm_virtual_network.example.name
   address_prefixes     = ["10.0.2.0/24"]
 }
 
@@ -137,7 +137,7 @@ resource "azurerm_bastion_host" "example" {
 
   ip_configuration {
     name                 = "ipconfig"
-    subnet_id            = azurerm_subnet.bastion_subnet.id
+    subnet_id            = azurerm_subnet.bastion.id
     public_ip_address_id = azurerm_public_ip.example[1].id
   }
 }
@@ -167,7 +167,7 @@ resource "azurerm_linux_virtual_machine" "example" {
   name                  = "${var.virtual_machine_name}-${count.index}"
   location              = azurerm_resource_group.example.location
   resource_group_name   = azurerm_resource_group.example.name
-  network_interface_ids = [azurerm_network_interface.my_nic[count.index].id]
+  network_interface_ids = [azurerm_network_interface.example[count.index].id]
   size                  = var.virtual_machine_size
 
   os_disk {
@@ -218,7 +218,7 @@ resource "azurerm_lb" "example" {
 
   frontend_ip_configuration {
     name                          = "frontend-ip"
-    subnet_id                     = azurerm_subnet.my_subnet.id
+    subnet_id                     = azurerm_subnet.example.id
     private_ip_address_allocation = "Dynamic"
   }
 }
@@ -247,6 +247,6 @@ resource "azurerm_lb_rule" "example" {
   backend_port                   = 80
   disable_outbound_snat          = true
   frontend_ip_configuration_name = "frontend-ip"
-  probe_id                       = azurerm_lb_probe.example_probe.id
-  backend_address_pool_ids       = [azurerm_lb_backend_address_pool.example_pool.id]
+  probe_id                       = azurerm_lb_probe.example.id
+  backend_address_pool_ids       = [azurerm_lb_backend_address_pool.example.id]
 }

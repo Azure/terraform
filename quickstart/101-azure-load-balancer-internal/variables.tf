@@ -41,9 +41,9 @@ variable "network_security_group_name" {
 }
 
 variable "network_interface_name" {
-  type = string
-  default = "test-nic"
-  description = "Name of the Network Interface."  
+  type        = string
+  default     = "test-nic"
+  description = "Name of the Network Interface."
 }
 
 variable "public_ip_name" {
