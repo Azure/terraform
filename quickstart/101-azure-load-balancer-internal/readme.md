@@ -1,6 +1,6 @@
-# Azure public load balancer for two VMs
+# Azure standard internal load balancer for two VMs
 
-This template deploys a standard load balancer for two virtual machines using Terraform.
+This template deploys a standard internal load balancer and two virtual machines.
 
 ## Terraform resource types
 
@@ -31,9 +31,11 @@ This template deploys a standard load balancer for two virtual machines using Te
 | `vm_password` |  The password for the local account that will be created on the new VM. If left blank, a random password is generated. | "" |
 | `virtual_network_name` | Name of the Virtual Network. | "test-vnet" |
 | `subnet_name` | Name of the subnet. | "test-subnet" |
-| `public_ip_name` | Name of the Public IP. | "test-public-ip" |
 | `network_security_group_name` | Name of the Network Security Group. | "test-nsg" |
 | `network_interface_name` | Name of the Network Interface. | "test-nic" |
+| `public_ip_name` | Name of the Public IP. | "test-pip" |
+| `nat_gateway` | Name of the NAT gateway. | "test-nat" |
+| `bastion_name` | Name of the Bastion. | "test-bastion" |
 | `virtual_machine_name` | Name of the Virtual Machine. | "test-vm" |
 | `virtual_machine_size` | Size or SKU of the Virtual Machine. | "Standard_B2s" |
 | `disk_name` | Name of the OS disk of the Virtual Machine. "test-disk" |
