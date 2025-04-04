@@ -2,11 +2,6 @@ output "resource_group_name" {
   value = azurerm_resource_group.rg.name
 }
 
-output "kube_config" {
-  value     = azurerm_kubernetes_cluster.aks.kube_config_raw
-  sensitive = true
-}
-
 output "elastic_san_name" {
   value = azurerm_elastic_san.example.name
 }
