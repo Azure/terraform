@@ -1,12 +1,17 @@
+# Create a random pet name to use as a part of the resource group name 
+# for uniqueness
 resource "random_pet" "rg_name" {
   prefix = var.resource_group_name_prefix
 }
 
+# Create a resource group for organizing the App Service Environment resources
 resource "azurerm_resource_group" "rg" {
   location = var.resource_group_location
   name     = random_pet.rg_name.id
 }
 
+# A random value for the virtual network name is used if the 
+# virtual_network_name variable is not set
 resource "random_string" "azurerm_virtual_network_name" {
   length  = 13
   lower   = true
@@ -15,6 +20,7 @@ resource "random_string" "azurerm_virtual_network_name" {
   upper   = false
 }
 
+# Define the virtual network for the App Service Environment
 resource "azurerm_virtual_network" "example" {
   name                = coalesce(var.virtual_network_name, "vnet-${random_string.azurerm_virtual_network_name.result}")
   resource_group_name = azurerm_resource_group.rg.name
@@ -22,6 +28,7 @@ resource "azurerm_virtual_network" "example" {
   address_space       = ["10.0.0.0/16"]
 }
 
+# A random value for the subnet is used if the subnet_name variable is not set
 resource "random_string" "azurerm_subnet_name" {
   length  = 13
   lower   = true
@@ -30,6 +37,7 @@ resource "random_string" "azurerm_subnet_name" {
   upper   = false
 }
 
+# Define a subnet within the virtual network for the App Service Environment
 resource "azurerm_subnet" "ase" {
   name                 = coalesce(var.subnet_name, "subnet-${random_string.azurerm_subnet_name.result}")
   resource_group_name  = azurerm_resource_group.rg.name
@@ -46,6 +54,8 @@ resource "azurerm_subnet" "ase" {
   }
 }
 
+# A random value for the App Service Environment name is used if the
+# app_service_environment_v3_name variable is not set
 resource "random_string" "azurerm_app_service_environment_v3_name" {
   length  = 13
   lower   = true
@@ -54,6 +64,7 @@ resource "random_string" "azurerm_app_service_environment_v3_name" {
   upper   = false
 }
 
+# Define the App Service Environment v3 resource
 resource "azurerm_app_service_environment_v3" "example" {
   name                = coalesce(var.app_service_environment_v3_name, "asev3-${random_string.azurerm_app_service_environment_v3_name.result}")
   resource_group_name = azurerm_resource_group.rg.name
