@@ -1,3 +1,79 @@
+## 13 Apr 25 00:54 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.11.2
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.prefix: Refreshing state... [id=ml-fit-camel][0m
+	            	[0m[1mrandom_integer.suffix: Refreshing state... [id=43283616][0m
+	            	[0m[1mrandom_string.ci_prefix: Refreshing state... [id=uyqcieie][0m
+	            	[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/ml-fit-camel-rg][0m
+	            	[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD0wYThiOTgyNC05NWIzLTQ0OGMtYWJhOC05NjcwZTUxMTRhOTI7b2JqZWN0SWQ9YzRhZmRkNGMtNzU2NS00MmI3LWI5ODQtZTZhMjI0ZDEyMDQ3O3N1YnNjcmlwdGlvbklkPWY3YTYzMmE1LTQ5ZGItNGM1ZS05ODI4LWNkNjJjYjc1Mzk3MTt0ZW5hbnRJZD1mYzJiZjk2Ni1hOTg0LTQzOGMtOTNiNy1iYzVhMDZmZTdmMGQ=][0m
+	            	[0m[1mazurerm_application_insights.default: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/ml-fit-camel-rg/providers/Microsoft.Insights/components/ml-fit-camel-appi][0m
+	            	[0m[1mazurerm_container_registry.default: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/ml-fit-camel-rg/providers/Microsoft.ContainerRegistry/registries/mldev43283616cr][0m
+	            	[0m[1mazurerm_key_vault.default: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/ml-fit-camel-rg/providers/Microsoft.KeyVault/vaults/mldev43283616kv][0m
+	            	[0m[1mazurerm_storage_account.default: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/ml-fit-camel-rg/providers/Microsoft.Storage/storageAccounts/mldev43283616st][0m
+	            	[0m[1mazurerm_machine_learning_workspace.default: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/ml-fit-camel-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-fit-camel-mlw][0m
+	            	[0m[1mazurerm_machine_learning_compute_instance.main: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/ml-fit-camel-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-fit-camel-mlw/computes/uyqcieieinstance][0m
+	            	[0m[1mazurerm_machine_learning_compute_cluster.compute: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/ml-fit-camel-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-fit-camel-mlw/computes/cpu-cluster][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_application_insights.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_application_insights" "default" {
+	            	        id                                    = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/ml-fit-camel-rg/providers/Microsoft.Insights/components/ml-fit-camel-appi"
+	            	        name                                  = "ml-fit-camel-appi"
+	            	        tags                                  = {}
+	            	      [31m-[0m[0m workspace_id                          = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/ai_ml-fit-camel-appi_786508be-e68c-4c43-baf0-1c2911dd71dc_managed/providers/Microsoft.OperationalInsights/workspaces/managed-ml-fit-camel-appi-ws" [90m-> null[0m[0m
+	            	        [90m# (15 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 0 to add, 1 to change, 0 to destroy.
+	            	[0m[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_machine_learning_compute_instance.main,
+	            	[33m│[0m [0m  on compute.tf line 12, in resource "azurerm_machine_learning_compute_instance" "main":
+	            	[33m│[0m [0m  12:   location                      = [4mazurerm_resource_group.default.location[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe `azurerm_machine_learning_compute_instance` must be deployed to the
+	            	[33m│[0m [0msame location as the associated `azurerm_machine_learning_workspace`
+	            	[33m│[0m [0mresource, as the `location` fields must be the same the `location` field no
+	            	[33m│[0m [0mlonger has any effect and will be removed in version 4.0 of the AzureRM
+	            	[33m│[0m [0mProvider
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-machine-learning392785915/src/quickstart/101-machine-learning/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-machine-learning392785915/src/quickstart/101-machine-learning/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-machine-learning
+
+FailNow
+
+---
+
 ## 06 Apr 25 00:28 UTC
 
 Success: true

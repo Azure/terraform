@@ -1,3 +1,76 @@
+## 13 Apr 25 01:12 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.11.2
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.15.0
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.1
++ provider registry.terraform.io/hashicorp/time v0.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.azurerm_kubernetes_cluster_name: Refreshing state... [id=cluster-bursting-moray][0m
+	            	[0m[1mrandom_pet.ssh_key_name: Refreshing state... [id=sshvalidshad][0m
+	            	[0m[1mrandom_pet.azurerm_kubernetes_cluster_dns_prefix: Refreshing state... [id=dns-up-heron][0m
+	            	[0m[1mrandom_pet.rg_name: Refreshing state... [id=rg-growing-walrus][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-growing-walrus][0m
+	            	[0m[1mazapi_resource.ssh_public_key: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-growing-walrus/providers/Microsoft.Compute/sshPublicKeys/sshvalidshad][0m
+	            	[0m[1mazapi_resource_action.ssh_public_key_gen: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-growing-walrus/providers/Microsoft.Compute/sshPublicKeys/sshvalidshad/generateKeyPair][0m
+	            	[0m[1mazurerm_kubernetes_cluster.k8s: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-growing-walrus/providers/Microsoft.ContainerService/managedClusters/cluster-bursting-moray][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.k8s[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "k8s" {
+	            	        id                                  = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-growing-walrus/providers/Microsoft.ContainerService/managedClusters/cluster-bursting-moray"
+	            	        name                                = "cluster-bursting-moray"
+	            	        tags                                = {}
+	            	        [90m# (36 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "agentpool"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (4 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 0 to add, 1 to change, 0 to destroy.
+	            	[0m[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-k8s-cluster-with-tf-and-aks2721342077/src/quickstart/201-k8s-cluster-with-tf-and-aks/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-k8s-cluster-with-tf-and-aks2721342077/src/quickstart/201-k8s-cluster-with-tf-and-aks/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-k8s-cluster-with-tf-and-aks
+
+FailNow
+
+---
+
 ## 06 Apr 25 01:56 UTC
 
 Success: false
