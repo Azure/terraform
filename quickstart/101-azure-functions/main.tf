@@ -37,6 +37,24 @@ resource "azurerm_storage_container" "example" {
   container_access_type = "private"
 }
 
+# Create a Log Analytics workspace for Application Insights
+resource "azurerm_log_analytics_workspace" "example" {
+  name                = coalesce(var.ws_name, random_string.name.result)
+  location            = azurerm_resource_group.example.location
+  resource_group_name = azurerm_resource_group.example.name
+  sku                 = "PerGB2018"
+  retention_in_days   = 30
+}
+
+# Create an Application Insights instance for monitoring
+resource "azurerm_application_insights" "example" {
+  name                = coalesce(var.ai_name, random_string.name.result)
+  location            = azurerm_resource_group.example.location
+  resource_group_name = azurerm_resource_group.example.name
+  application_type    = "web"
+  workspace_id = azurerm_log_analytics_workspace.example.id
+}
+
 # Create a service plan
 resource "azurerm_service_plan" "example" {
   name                = coalesce(var.asp_name, random_string.name.result)
@@ -57,11 +75,11 @@ resource "azurerm_function_app_flex_consumption" "example" {
   storage_container_endpoint  = azurerm_storage_container.example.id
   storage_authentication_type = "StorageAccountConnectionString"
   storage_access_key          = azurerm_storage_account.example.primary_access_key
-  runtime_name                = "node"
-  runtime_version             = "20"
+  runtime_name                = var.runtime_name
+  runtime_version             = var.runtime_version
   maximum_instance_count      = 50
   instance_memory_in_mb       = 2048
-
+  
   site_config {
   }
 }
