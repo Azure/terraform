@@ -13,3 +13,7 @@ output "asp_name" {
 output "fa_name" {
   value = azurerm_function_app_flex_consumption.example.name
 }
+
+output "fa_url" {
+  value = "https://${azurerm_function_app_flex_consumption.example.name}.azurewebsites.net"
+}

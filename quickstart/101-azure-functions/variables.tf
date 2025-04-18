@@ -34,6 +34,18 @@ variable "sa_name" {
   default     = ""
 }
 
+variable "ws_name" {
+  description = "The name of the Log Analytics workspace. If blank, a random name will be generated."
+  type        = string
+  default     = ""
+}
+
+variable "ai_name" {
+  description = "The name of the Application Insights instance. If blank, a random name will be generated."
+  type        = string
+  default     = ""
+}
+
 variable "asp_name" {
   description = "The name of the App Service Plan. If blank, a random name will be generated."
   type        = string
@@ -44,4 +56,16 @@ variable "fa_name" {
   description = "The name of the Function App. If blank, a random name will be generated."
   type        = string
   default     = ""
+}
+
+variable "runtime_name" {
+  description = "The name of the language worker runtime."
+  type        = string
+  default     = "node" # Allowed: dotnet-isolated, java, node, powershell, python
+}
+
+variable "runtime_version" {
+  description = "The version of the language worker runtime."
+  type        = string
+  default     = "20" # Supported versions: see https://aka.ms/flexfxversions
 }
