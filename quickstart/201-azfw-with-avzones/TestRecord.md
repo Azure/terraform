@@ -1,3 +1,103 @@
+## 20 Apr 25 01:24 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.11.4
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.rg_name: Refreshing state... [id=rg-clear-crow][0m
+	            	[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mrandom_string.storage_account_name: Refreshing state... [id=yxxxggvk][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-crow][0m
+	            	[0m[1mazurerm_network_security_group.vm_server_nsg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-crow/providers/Microsoft.Network/networkSecurityGroups/nsg-server][0m
+	            	[0m[1mazurerm_firewall_policy.azfw_policy: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-crow/providers/Microsoft.Network/firewallPolicies/azfw-policy][0m
+	            	[0m[1mazurerm_public_ip.vm_jump_pip: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-crow/providers/Microsoft.Network/publicIPAddresses/pip-jump][0m
+	            	[0m[1mazurerm_virtual_network.azfw_vnet: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-crow/providers/Microsoft.Network/virtualNetworks/azfw-vnet][0m
+	            	[0m[1mazurerm_public_ip.pip_azfw: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-crow/providers/Microsoft.Network/publicIPAddresses/pip-azfw][0m
+	            	[0m[1mazurerm_network_security_group.vm_jump_nsg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-crow/providers/Microsoft.Network/networkSecurityGroups/nsg-jump][0m
+	            	[0m[1mazurerm_storage_account.sa: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-crow/providers/Microsoft.Storage/storageAccounts/yxxxggvk][0m
+	            	[0m[1mazurerm_subnet.azfw_subnet: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-crow/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/AzureFirewallSubnet][0m
+	            	[0m[1mazurerm_subnet.server_subnet: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-crow/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/subnet-server][0m
+	            	[0m[1mazurerm_subnet.jump_subnet: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-crow/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/subnet-jump][0m
+	            	[0m[1mazurerm_firewall_policy_rule_collection_group.prcg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-crow/providers/Microsoft.Network/firewallPolicies/azfw-policy/ruleCollectionGroups/prcg][0m
+	            	[0m[1mazurerm_network_interface.vm_jump_nic: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-crow/providers/Microsoft.Network/networkInterfaces/nic-jump][0m
+	            	[0m[1mazurerm_network_interface.vm_server_nic: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-crow/providers/Microsoft.Network/networkInterfaces/nic-server][0m
+	            	[0m[1mazurerm_firewall.fw: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-crow/providers/Microsoft.Network/azureFirewalls/azfw][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.vm_jump_nsg_association: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-crow/providers/Microsoft.Network/networkInterfaces/nic-jump|/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-crow/providers/Microsoft.Network/networkSecurityGroups/nsg-jump][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.vm_server_nsg_association: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-crow/providers/Microsoft.Network/networkInterfaces/nic-server|/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-crow/providers/Microsoft.Network/networkSecurityGroups/nsg-server][0m
+	            	[0m[1mazurerm_route_table.rt: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-crow/providers/Microsoft.Network/routeTables/rt-azfw-eus][0m
+	            	[0m[1mazurerm_subnet_route_table_association.jump_subnet_rt_association: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-crow/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/subnet-server][0m
+	            	[0m[1mazurerm_windows_virtual_machine.vm_jump: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-crow/providers/Microsoft.Compute/virtualMachines/jump-vm][0m
+	            	[0m[1mazurerm_windows_virtual_machine.vm_server: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-crow/providers/Microsoft.Compute/virtualMachines/server-vm][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.vm_jump[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "vm_jump" {
+	            	        id                                                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-crow/providers/Microsoft.Compute/virtualMachines/jump-vm"
+	            	        name                                                   = "jump-vm"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (3 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.vm_server[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "vm_server" {
+	            	        id                                                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-crow/providers/Microsoft.Compute/virtualMachines/server-vm"
+	            	        name                                                   = "server-vm"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (3 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 0 to add, 2 to change, 0 to destroy.
+	            	[0m[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_route_table.rt,
+	            	[33m│[0m [0m  on main.tf line 252, in resource "azurerm_route_table" "rt":
+	            	[33m│[0m [0m 252:   disable_bgp_route_propagation = [4mfalse[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe property `disable_bgp_route_propagation` has been superseded by the
+	            	[33m│[0m [0mproperty `bgp_route_propagation_enabled` and will be removed in v4.0 of the
+	            	[33m│[0m [0mAzureRM Provider.
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m(and one more similar warning elsewhere)
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-azfw-with-avzones1382669669/src/quickstart/201-azfw-with-avzones/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-azfw-with-avzones1382669669/src/quickstart/201-azfw-with-avzones/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-azfw-with-avzones
+
+FailNow
+
+---
+
 ## 13 Apr 25 01:09 UTC
 
 Success: false
