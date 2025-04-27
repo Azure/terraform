@@ -1,3 +1,55 @@
+## 27 Apr 25 00:23 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.11.4
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating App Service Plan (Subscription: "f7a632a5-49db-4c5e-9828-cd62cb753971"
+	            	[31m│[0m [0mResource Group Name: "function-app-boa-rg"
+	            	[31m│[0m [0mServer Farm Name: "function-app-boa-sap"): performing CreateOrUpdate: unexpected status 401 (401 Unauthorized) with response: {"Code":"Unauthorized","Message":"This region has quota of 0 instances for your subscription. Try selecting different region or SKU.","Target":null,"Details":[{"Message":"This region has quota of 0 instances for your subscription. Try selecting different region or SKU."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"52039","MessageTemplate":"{0}. Try selecting different region or SKU.","Parameters":["This region has quota of 0 instances for your subscription"],"Code":"Unauthorized","Message":"This region has quota of 0 instances for your subscription. Try selecting different region or SKU."}}],"Innererror":null}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_service_plan.default,
+	            	[31m│[0m [0m  on main.tf line 16, in resource "azurerm_service_plan" "default":
+	            	[31m│[0m [0m  16: resource "azurerm_service_plan" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating App Service Plan (Subscription:
+	            	[31m│[0m [0m"f7a632a5-49db-4c5e-9828-cd62cb753971"
+	            	[31m│[0m [0mResource Group Name: "function-app-boa-rg"
+	            	[31m│[0m [0mServer Farm Name: "function-app-boa-sap"): performing CreateOrUpdate:
+	            	[31m│[0m [0munexpected status 401 (401 Unauthorized) with response:
+	            	[31m│[0m [0m{"Code":"Unauthorized","Message":"This region has quota of 0 instances for
+	            	[31m│[0m [0myour subscription. Try selecting different region or
+	            	[31m│[0m [0mSKU.","Target":null,"Details":[{"Message":"This region has quota of 0
+	            	[31m│[0m [0minstances for your subscription. Try selecting different region or
+	            	[31m│[0m [0mSKU."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"52039","MessageTemplate":"{0}.
+	            	[31m│[0m [0mTry selecting different region or SKU.","Parameters":["This region has
+	            	[31m│[0m [0mquota of 0 instances for your
+	            	[31m│[0m [0msubscription"],"Code":"Unauthorized","Message":"This region has quota of 0
+	            	[31m│[0m [0minstances for your subscription. Try selecting different region or
+	            	[31m│[0m [0mSKU."}}],"Innererror":null}
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-function-app
+
+FailNow
+
+---
+
 ## 20 Apr 25 01:22 UTC
 
 Success: false
