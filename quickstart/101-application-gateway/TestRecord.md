@@ -1,3 +1,82 @@
+## 04 May 25 02:09 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.11.4
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mrandom_string.rg: Refreshing state... [id=fpspweyz][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-fpspweyz][0m
+	            	[0m[1mazurerm_virtual_network.vnet: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-fpspweyz/providers/Microsoft.Network/virtualNetworks/myVNet][0m
+	            	[0m[1mazurerm_public_ip.pip: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-fpspweyz/providers/Microsoft.Network/publicIPAddresses/myAGPublicIPAddress][0m
+	            	[0m[1mazurerm_subnet.frontend: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-fpspweyz/providers/Microsoft.Network/virtualNetworks/myVNet/subnets/myAGSubnet][0m
+	            	[0m[1mazurerm_subnet.backend: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-fpspweyz/providers/Microsoft.Network/virtualNetworks/myVNet/subnets/myBackendSubnet][0m
+	            	[0m[1mazurerm_network_interface.nic[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-fpspweyz/providers/Microsoft.Network/networkInterfaces/nic-1][0m
+	            	[0m[1mazurerm_network_interface.nic[1]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-fpspweyz/providers/Microsoft.Network/networkInterfaces/nic-2][0m
+	            	[0m[1mazurerm_application_gateway.main: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-fpspweyz/providers/Microsoft.Network/applicationGateways/myAppGateway][0m
+	            	[0m[1mazurerm_network_interface_application_gateway_backend_address_pool_association.nic-assoc[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-fpspweyz/providers/Microsoft.Network/networkInterfaces/nic-1/ipConfigurations/nic-ipconfig-1|/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-fpspweyz/providers/Microsoft.Network/applicationGateways/myAppGateway/backendAddressPools/myBackendPool][0m
+	            	[0m[1mazurerm_network_interface_application_gateway_backend_address_pool_association.nic-assoc[1]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-fpspweyz/providers/Microsoft.Network/networkInterfaces/nic-2/ipConfigurations/nic-ipconfig-2|/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-fpspweyz/providers/Microsoft.Network/applicationGateways/myAppGateway/backendAddressPools/myBackendPool][0m
+	            	[0m[1mazurerm_windows_virtual_machine.vm[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-fpspweyz/providers/Microsoft.Compute/virtualMachines/myVM1][0m
+	            	[0m[1mazurerm_windows_virtual_machine.vm[1]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-fpspweyz/providers/Microsoft.Compute/virtualMachines/myVM2][0m
+	            	[0m[1mazurerm_virtual_machine_extension.vm-extensions[1]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-fpspweyz/providers/Microsoft.Compute/virtualMachines/myVM2/extensions/vm2-ext][0m
+	            	[0m[1mazurerm_virtual_machine_extension.vm-extensions[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-fpspweyz/providers/Microsoft.Compute/virtualMachines/myVM1/extensions/vm1-ext][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.vm[0][0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "vm" {
+	            	        id                                                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-fpspweyz/providers/Microsoft.Compute/virtualMachines/myVM1"
+	            	        name                                                   = "myVM1"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.vm[1][0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "vm" {
+	            	        id                                                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-fpspweyz/providers/Microsoft.Compute/virtualMachines/myVM2"
+	            	        name                                                   = "myVM2"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 0 to add, 2 to change, 0 to destroy.
+	            	[0m[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-application-gateway3593205618/src/quickstart/101-application-gateway/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-application-gateway3593205618/src/quickstart/101-application-gateway/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-application-gateway
+
+FailNow
+
+---
+
 ## 27 Apr 25 02:04 UTC
 
 Success: false
