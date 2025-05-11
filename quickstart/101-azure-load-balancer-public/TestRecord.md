@@ -1,3 +1,75 @@
+## 11 May 25 01:17 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.11.4
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.28.0
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.rg_name: Refreshing state... [id=rg-guided-crawdad][0m
+	            	[0m[1mrandom_password.example: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-guided-crawdad][0m
+	            	[0m[1mazurerm_virtual_network.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-guided-crawdad/providers/Microsoft.Network/virtualNetworks/test-vnet][0m
+	            	[0m[1mazurerm_network_security_group.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-guided-crawdad/providers/Microsoft.Network/networkSecurityGroups/test-nsg][0m
+	            	[0m[1mazurerm_public_ip.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-guided-crawdad/providers/Microsoft.Network/publicIPAddresses/test-public-ip][0m
+	            	[0m[1mazurerm_lb.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-guided-crawdad/providers/Microsoft.Network/loadBalancers/test-lb][0m
+	            	[0m[1mazurerm_subnet.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-guided-crawdad/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/test-subnet][0m
+	            	[0m[1mazurerm_lb_probe.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-guided-crawdad/providers/Microsoft.Network/loadBalancers/test-lb/probes/test-probe][0m
+	            	[0m[1mazurerm_lb_backend_address_pool.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-guided-crawdad/providers/Microsoft.Network/loadBalancers/test-lb/backendAddressPools/test-pool][0m
+	            	[0m[1mazurerm_subnet_network_security_group_association.example_association: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-guided-crawdad/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/test-subnet][0m
+	            	[0m[1mazurerm_network_interface.example[1]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-guided-crawdad/providers/Microsoft.Network/networkInterfaces/test-nic1][0m
+	            	[0m[1mazurerm_network_interface.example[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-guided-crawdad/providers/Microsoft.Network/networkInterfaces/test-nic0][0m
+	            	[0m[1mazurerm_lb_outbound_rule.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-guided-crawdad/providers/Microsoft.Network/loadBalancers/test-lb/outboundRules/test-outbound][0m
+	            	[0m[1mazurerm_lb_rule.example_rule: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-guided-crawdad/providers/Microsoft.Network/loadBalancers/test-lb/loadBalancingRules/test-rule][0m
+	            	[0m[1mazurerm_network_interface_backend_address_pool_association.example[1]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-guided-crawdad/providers/Microsoft.Network/networkInterfaces/test-nic1/ipConfigurations/ipconfig1|/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-guided-crawdad/providers/Microsoft.Network/loadBalancers/test-lb/backendAddressPools/test-pool][0m
+	            	[0m[1mazurerm_network_interface_backend_address_pool_association.example[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-guided-crawdad/providers/Microsoft.Network/networkInterfaces/test-nic0/ipConfigurations/ipconfig0|/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-guided-crawdad/providers/Microsoft.Network/loadBalancers/test-lb/backendAddressPools/test-pool][0m
+	            	[0m[1mazurerm_linux_virtual_machine.example[1]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-guided-crawdad/providers/Microsoft.Compute/virtualMachines/test-vm1][0m
+	            	[0m[1mazurerm_linux_virtual_machine.example[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-guided-crawdad/providers/Microsoft.Compute/virtualMachines/test-vm0][0m
+	            	[0m[1mazurerm_virtual_machine_extension.example[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-guided-crawdad/providers/Microsoft.Compute/virtualMachines/test-vm0/extensions/Nginx][0m
+	            	[0m[1mazurerm_virtual_machine_extension.example[1]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-guided-crawdad/providers/Microsoft.Compute/virtualMachines/test-vm1/extensions/Nginx][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_resource_group.example[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_resource_group" "example" {
+	            	        id         = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-guided-crawdad"
+	            	        name       = "rg-guided-crawdad"
+	            	      [33m~[0m[0m tags       = {
+	            	          [31m-[0m[0m "mapotfdemo" = "yes" [90m-> null[0m[0m
+	            	        }
+	            	        [90m# (2 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 0 to add, 1 to change, 0 to destroy.
+	            	[0m[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-azure-load-balancer-public3393936695/src/quickstart/101-azure-load-balancer-public/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-azure-load-balancer-public3393936695/src/quickstart/101-azure-load-balancer-public/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-azure-load-balancer-public
+
+FailNow
+
+---
+
 ## 04 May 25 01:48 UTC
 
 Success: true

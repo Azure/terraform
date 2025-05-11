@@ -1,3 +1,80 @@
+## 11 May 25 00:52 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.11.4
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.azurerm_key_vault_name[0]: Refreshing state... [id=vault-climbing-hawk][0m
+	            	[0m[1mrandom_pet.rg_name: Refreshing state... [id=rg-dashing-shepherd][0m
+	            	[0m[1mrandom_pet.azurerm_key_vault_key_name[0]: Refreshing state... [id=key-upright-killdeer][0m
+	            	[0m[1mrandom_pet.azurerm_databricks_workspace_name[0]: Refreshing state... [id=db-suitable-oyster][0m
+	            	[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-dashing-shepherd][0m
+	            	[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD0wYThiOTgyNC05NWIzLTQ0OGMtYWJhOC05NjcwZTUxMTRhOTI7b2JqZWN0SWQ9YzRhZmRkNGMtNzU2NS00MmI3LWI5ODQtZTZhMjI0ZDEyMDQ3O3N1YnNjcmlwdGlvbklkPWY3YTYzMmE1LTQ5ZGItNGM1ZS05ODI4LWNkNjJjYjc1Mzk3MTt0ZW5hbnRJZD1mYzJiZjk2Ni1hOTg0LTQzOGMtOTNiNy1iYzVhMDZmZTdmMGQ=][0m
+	            	[0m[1mazurerm_key_vault.vault: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-dashing-shepherd/providers/Microsoft.KeyVault/vaults/vault-climbing-hawk][0m
+	            	[0m[1mazurerm_databricks_workspace.databricks: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-dashing-shepherd/providers/Microsoft.Databricks/workspaces/db-suitable-oyster][0m
+	            	[0m[1mazurerm_key_vault_access_policy.databricks: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-dashing-shepherd/providers/Microsoft.KeyVault/vaults/vault-climbing-hawk/objectId/454a8fcd-30d0-457d-9856-75d97a83a61e][0m
+	            	[0m[1mazurerm_key_vault_access_policy.current_user: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-dashing-shepherd/providers/Microsoft.KeyVault/vaults/vault-climbing-hawk/objectId/c4afdd4c-7565-42b7-b984-e6a224d12047][0m
+	            	[0m[1mazurerm_key_vault_key.key: Refreshing state... [id=https://vault-climbing-hawk.vault.azure.net/keys/key-upright-killdeer/ecefc468d5314a5cb42f33f7ff8d5ba1][0m
+	            	[0m[1mazurerm_databricks_workspace_customer_managed_key.cmk: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-dashing-shepherd/providers/Microsoft.Databricks/workspaces/db-suitable-oyster][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_resource_group.rg[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_resource_group" "rg" {
+	            	        id         = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-dashing-shepherd"
+	            	        name       = "rg-dashing-shepherd"
+	            	      [33m~[0m[0m tags       = {
+	            	          [31m-[0m[0m "mapotfdemo" = "yes" [90m-> null[0m[0m
+	            	        }
+	            	        [90m# (2 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 0 to add, 1 to change, 0 to destroy.
+	            	[0m[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mDeprecated Resource[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_databricks_workspace_customer_managed_key.cmk,
+	            	[33m│[0m [0m  on main.tf line 32, in resource "azurerm_databricks_workspace_customer_managed_key" "cmk":
+	            	[33m│[0m [0m  32: resource "azurerm_databricks_workspace_customer_managed_key" "cmk" [4m{[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe resource `azurerm_databricks_workspace_customer_managed_key` will be
+	            	[33m│[0m [0mremoved in v4.0 of the AzureRM Provider in favour of the
+	            	[33m│[0m [0m`azurerm_databricks_workspace_root_dbfs_customer_managed_key` resource.
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m(and one more similar warning elsewhere)
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-databricks-cmk-dbfs3899572804/src/quickstart/101-databricks-cmk-dbfs/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-databricks-cmk-dbfs3899572804/src/quickstart/101-databricks-cmk-dbfs/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-databricks-cmk-dbfs
+
+FailNow
+
+---
+
 ## 04 May 25 01:24 UTC
 
 Success: true

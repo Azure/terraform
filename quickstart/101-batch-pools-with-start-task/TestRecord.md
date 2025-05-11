@@ -1,3 +1,63 @@
+## 11 May 25 01:08 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.11.4
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.rg_name: Refreshing state... [id=rg-living-swift][0m
+	            	[0m[1mrandom_string.storage_account_name: Refreshing state... [id=xupyuapr][0m
+	            	[0m[1mrandom_string.batch_account_name: Refreshing state... [id=qlqjvdwf][0m
+	            	[0m[1mrandom_pet.azurerm_batch_pool_name: Refreshing state... [id=pool-improved-dog][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-living-swift][0m
+	            	[0m[1mazurerm_storage_account.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-living-swift/providers/Microsoft.Storage/storageAccounts/xupyuapr][0m
+	            	[0m[1mazurerm_batch_account.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-living-swift/providers/Microsoft.Batch/batchAccounts/qlqjvdwf][0m
+	            	[0m[1mazurerm_batch_pool.autopool: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-living-swift/providers/Microsoft.Batch/batchAccounts/qlqjvdwf/pools/pool-improved-dog-autoscale-pool][0m
+	            	[0m[1mazurerm_batch_pool.fixed: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-living-swift/providers/Microsoft.Batch/batchAccounts/qlqjvdwf/pools/pool-improved-dog-fixed-pool][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_resource_group.rg[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_resource_group" "rg" {
+	            	        id         = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-living-swift"
+	            	        name       = "rg-living-swift"
+	            	      [33m~[0m[0m tags       = {
+	            	          [31m-[0m[0m "mapotfdemo" = "yes" [90m-> null[0m[0m
+	            	        }
+	            	        [90m# (2 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 0 to add, 1 to change, 0 to destroy.
+	            	[0m[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-batch-pools-with-start-task379827422/src/quickstart/101-batch-pools-with-start-task/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-batch-pools-with-start-task379827422/src/quickstart/101-batch-pools-with-start-task/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-start-task
+
+FailNow
+
+---
+
 ## 04 May 25 01:41 UTC
 
 Success: true

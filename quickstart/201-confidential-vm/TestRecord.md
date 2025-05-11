@@ -1,3 +1,69 @@
+## 11 May 25 01:22 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.11.4
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
++ provider registry.terraform.io/hashicorp/tls v4.0.4
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.prefix: Refreshing state... [id=worthy-sponge][0m
+	            	[0m[1mtls_private_key.vm_key: Refreshing state... [id=6dcbbf06370ef97a2fa5e5c7e64d103c7160779f][0m
+	            	[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/worthy-sponge-rg][0m
+	            	[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD0wYThiOTgyNC05NWIzLTQ0OGMtYWJhOC05NjcwZTUxMTRhOTI7b2JqZWN0SWQ9YzRhZmRkNGMtNzU2NS00MmI3LWI5ODQtZTZhMjI0ZDEyMDQ3O3N1YnNjcmlwdGlvbklkPWY3YTYzMmE1LTQ5ZGItNGM1ZS05ODI4LWNkNjJjYjc1Mzk3MTt0ZW5hbnRJZD1mYzJiZjk2Ni1hOTg0LTQzOGMtOTNiNy1iYzVhMDZmZTdmMGQ=][0m
+	            	[0m[1mazurerm_virtual_network.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/worthy-sponge-rg/providers/Microsoft.Network/virtualNetworks/worthy-sponge-vnet][0m
+	            	[0m[1mazurerm_key_vault.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/worthy-sponge-rg/providers/Microsoft.KeyVault/vaults/worthy-sponge-kv][0m
+	            	[0m[1mazurerm_subnet.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/worthy-sponge-rg/providers/Microsoft.Network/virtualNetworks/worthy-sponge-vnet/subnets/worthy-sponge-subnet][0m
+	            	[0m[1mazurerm_network_interface.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/worthy-sponge-rg/providers/Microsoft.Network/networkInterfaces/worthy-sponge-nic][0m
+	            	[0m[1mazurerm_key_vault_access_policy.current_user: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/worthy-sponge-rg/providers/Microsoft.KeyVault/vaults/worthy-sponge-kv/objectId/c4afdd4c-7565-42b7-b984-e6a224d12047][0m
+	            	[0m[1mazurerm_key_vault_key.example: Refreshing state... [id=https://worthy-sponge-kv.vault.azure.net/keys/examplekey/b395d085caa34d84ae0cee58f4fbd5e7][0m
+	            	[0m[1mazurerm_disk_encryption_set.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/worthy-sponge-rg/providers/Microsoft.Compute/diskEncryptionSets/worthy-sponge-des][0m
+	            	[0m[1mazurerm_key_vault_access_policy.disk-encryption: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/worthy-sponge-rg/providers/Microsoft.KeyVault/vaults/worthy-sponge-kv/objectId/ded0b055-6a65-4798-aef5-26c6ff01aa83][0m
+	            	[0m[1mazurerm_linux_virtual_machine.test: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/worthy-sponge-rg/providers/Microsoft.Compute/virtualMachines/worthy-sponge-vm][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_resource_group.example[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_resource_group" "example" {
+	            	        id         = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/worthy-sponge-rg"
+	            	        name       = "worthy-sponge-rg"
+	            	      [33m~[0m[0m tags       = {
+	            	          [31m-[0m[0m "mapotfdemo" = "yes" [90m-> null[0m[0m
+	            	        }
+	            	        [90m# (2 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 0 to add, 1 to change, 0 to destroy.
+	            	[0m[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-confidential-vm1067184832/src/quickstart/201-confidential-vm/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-confidential-vm1067184832/src/quickstart/201-confidential-vm/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-confidential-vm
+
+FailNow
+
+---
+
 ## 04 May 25 00:35 UTC
 
 Success: true

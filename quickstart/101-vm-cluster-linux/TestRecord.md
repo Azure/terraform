@@ -1,3 +1,77 @@
+## 11 May 25 00:32 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.11.4
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.15.0
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.azurerm_linux_virtual_machine_name: Refreshing state... [id=vm-finer-octopus][0m
+	            	[0m[1mrandom_pet.azurerm_virtual_network_name: Refreshing state... [id=vnet-witty-gelding][0m
+	            	[0m[1mrandom_pet.azurerm_subnet_name: Refreshing state... [id=sub-fleet-griffon][0m
+	            	[0m[1mrandom_pet.ssh_key_name: Refreshing state... [id=sshpureemu][0m
+	            	[0m[1mrandom_pet.rg_name: Refreshing state... [id=rg-bright-wasp][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-bright-wasp][0m
+	            	[0m[1mazurerm_public_ip.test: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-bright-wasp/providers/Microsoft.Network/publicIPAddresses/publicIPForLB][0m
+	            	[0m[1mazurerm_availability_set.avset: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-bright-wasp/providers/Microsoft.Compute/availabilitySets/avset][0m
+	            	[0m[1mazapi_resource.ssh_public_key: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-bright-wasp/providers/Microsoft.Compute/sshPublicKeys/sshpureemu][0m
+	            	[0m[1mazurerm_virtual_network.test: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-bright-wasp/providers/Microsoft.Network/virtualNetworks/vnet-witty-gelding][0m
+	            	[0m[1mazurerm_managed_disk.test[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-bright-wasp/providers/Microsoft.Compute/disks/datadisk_existing_0][0m
+	            	[0m[1mazurerm_managed_disk.test[1]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-bright-wasp/providers/Microsoft.Compute/disks/datadisk_existing_1][0m
+	            	[0m[1mazurerm_lb.test: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-bright-wasp/providers/Microsoft.Network/loadBalancers/loadBalancer][0m
+	            	[0m[1mazurerm_subnet.test: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-bright-wasp/providers/Microsoft.Network/virtualNetworks/vnet-witty-gelding/subnets/sub-fleet-griffon][0m
+	            	[0m[1mazurerm_lb_backend_address_pool.test: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-bright-wasp/providers/Microsoft.Network/loadBalancers/loadBalancer/backendAddressPools/BackEndAddressPool][0m
+	            	[0m[1mazurerm_network_interface.test[1]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-bright-wasp/providers/Microsoft.Network/networkInterfaces/acctni1][0m
+	            	[0m[1mazurerm_network_interface.test[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-bright-wasp/providers/Microsoft.Network/networkInterfaces/acctni0][0m
+	            	[0m[1mazapi_resource_action.ssh_public_key_gen: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-bright-wasp/providers/Microsoft.Compute/sshPublicKeys/sshpureemu/generateKeyPair][0m
+	            	[0m[1mazurerm_linux_virtual_machine.test[1]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-bright-wasp/providers/Microsoft.Compute/virtualMachines/vm-finer-octopus1][0m
+	            	[0m[1mazurerm_linux_virtual_machine.test[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-bright-wasp/providers/Microsoft.Compute/virtualMachines/vm-finer-octopus0][0m
+	            	[0m[1mazurerm_virtual_machine_data_disk_attachment.test[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-bright-wasp/providers/Microsoft.Compute/virtualMachines/vm-finer-octopus0/dataDisks/datadisk_existing_0][0m
+	            	[0m[1mazurerm_virtual_machine_data_disk_attachment.test[1]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-bright-wasp/providers/Microsoft.Compute/virtualMachines/vm-finer-octopus1/dataDisks/datadisk_existing_1][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_resource_group.rg[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_resource_group" "rg" {
+	            	        id         = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-bright-wasp"
+	            	        name       = "rg-bright-wasp"
+	            	      [33m~[0m[0m tags       = {
+	            	          [31m-[0m[0m "mapotfdemo" = "yes" [90m-> null[0m[0m
+	            	        }
+	            	        [90m# (2 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 0 to add, 1 to change, 0 to destroy.
+	            	[0m[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-vm-cluster-linux3212209717/src/quickstart/101-vm-cluster-linux/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-vm-cluster-linux3212209717/src/quickstart/101-vm-cluster-linux/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-vm-cluster-linux
+
+FailNow
+
+---
+
 ## 04 May 25 00:49 UTC
 
 Success: true

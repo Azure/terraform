@@ -1,3 +1,76 @@
+## 11 May 25 01:16 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.11.4
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.prefix: Refreshing state... [id=101-cosmos-db-aad-rbac-charmed-dolphin][0m
+	            	[0m[1mrandom_string.db_account_name[0]: Refreshing state... [id=hicphmewiqkjqythqvrv][0m
+	            	[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-cosmos-db-aad-rbac-charmed-dolphin-rg][0m
+	            	[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD0wYThiOTgyNC05NWIzLTQ0OGMtYWJhOC05NjcwZTUxMTRhOTI7b2JqZWN0SWQ9YzRhZmRkNGMtNzU2NS00MmI3LWI5ODQtZTZhMjI0ZDEyMDQ3O3N1YnNjcmlwdGlvbklkPWY3YTYzMmE1LTQ5ZGItNGM1ZS05ODI4LWNkNjJjYjc1Mzk3MTt0ZW5hbnRJZD1mYzJiZjk2Ni1hOTg0LTQzOGMtOTNiNy1iYzVhMDZmZTdmMGQ=][0m
+	            	[0m[1mazurerm_cosmosdb_account.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-cosmos-db-aad-rbac-charmed-dolphin-rg/providers/Microsoft.DocumentDB/databaseAccounts/hicphmewiqkjqythqvrv][0m
+	            	[0m[1mazurerm_cosmosdb_sql_database.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-cosmos-db-aad-rbac-charmed-dolphin-rg/providers/Microsoft.DocumentDB/databaseAccounts/hicphmewiqkjqythqvrv/sqlDatabases/default-sqldb-name][0m
+	            	[0m[1mazurerm_cosmosdb_sql_role_definition.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-cosmos-db-aad-rbac-charmed-dolphin-rg/providers/Microsoft.DocumentDB/databaseAccounts/hicphmewiqkjqythqvrv/sqlRoleDefinitions/9abab4b4-c487-d264-5430-c5f87b698aaf][0m
+	            	[0m[1mazurerm_cosmosdb_sql_role_assignment.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-cosmos-db-aad-rbac-charmed-dolphin-rg/providers/Microsoft.DocumentDB/databaseAccounts/hicphmewiqkjqythqvrv/sqlRoleAssignments/8023a673-d006-eccd-ef79-368126505d62][0m
+	            	[0m[1mazurerm_cosmosdb_sql_container.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-cosmos-db-aad-rbac-charmed-dolphin-rg/providers/Microsoft.DocumentDB/databaseAccounts/hicphmewiqkjqythqvrv/sqlDatabases/default-sqldb-name/containers/default-sql-container-name][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_resource_group.example[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_resource_group" "example" {
+	            	        id         = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-cosmos-db-aad-rbac-charmed-dolphin-rg"
+	            	        name       = "101-cosmos-db-aad-rbac-charmed-dolphin-rg"
+	            	      [33m~[0m[0m tags       = {
+	            	          [31m-[0m[0m "mapotfdemo" = "yes" [90m-> null[0m[0m
+	            	        }
+	            	        [90m# (2 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 0 to add, 1 to change, 0 to destroy.
+	            	[0m[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[33m│[0m [0m  on main.tf line 31, in resource "azurerm_cosmosdb_account" "example":
+	            	[33m│[0m [0m  31:   enable_automatic_failover = [4mfalse[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThis property has been superseded by `automatic_failover_enabled` and will
+	            	[33m│[0m [0mbe removed in v4.0 of the AzureRM Provider
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m(and 3 more similar warnings elsewhere)
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-cosmos-db-aad-rbac3462759084/src/quickstart/101-cosmos-db-aad-rbac/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-cosmos-db-aad-rbac3462759084/src/quickstart/101-cosmos-db-aad-rbac/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-aad-rbac
+
+FailNow
+
+---
+
 ## 04 May 25 01:47 UTC
 
 Success: true

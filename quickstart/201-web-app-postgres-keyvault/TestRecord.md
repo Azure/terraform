@@ -1,3 +1,52 @@
+## 11 May 25 00:15 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.11.4
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mProvider produced inconsistent final plan[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0mWhen expanding the plan for azurerm_app_service_plan.web_app_frontend to
+	            	[31m│[0m [0minclude new values learned so far during apply, provider
+	            	[31m│[0m [0m"registry.terraform.io/hashicorp/azurerm" produced an invalid new value for
+	            	[31m│[0m [0m.tags: new element "mapotfdemo" has appeared.
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThis is a bug in the provider, which should be reported in the provider's
+	            	[31m│[0m [0mown issue tracker.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mProvider produced inconsistent final plan[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0mWhen expanding the plan for azurerm_mysql_server.web_app_backend to include
+	            	[31m│[0m [0mnew values learned so far during apply, provider
+	            	[31m│[0m [0m"registry.terraform.io/hashicorp/azurerm" produced an invalid new value for
+	            	[31m│[0m [0m.tags: new element "mapotfdemo" has appeared.
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThis is a bug in the provider, which should be reported in the provider's
+	            	[31m│[0m [0mown issue tracker.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-web-app-postgres-keyvault
+
+FailNow
+
+---
+
 ## 04 May 25 00:17 UTC
 
 Success: false

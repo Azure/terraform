@@ -1,3 +1,194 @@
+## 11 May 25 01:08 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.11.4
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.rg_name: Refreshing state... [id=rg-key-iguana][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-key-iguana][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-key-iguana/providers/Microsoft.ManagedIdentity/userAssignedIdentities/aks-aks-cluster][0m
+	            	[0m[1mazurerm_public_ip.pip: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-key-iguana/providers/Microsoft.Network/publicIPAddresses/appgw-pip][0m
+	            	[0m[1mazurerm_virtual_network.vnet: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-key-iguana/providers/Microsoft.Network/virtualNetworks/aksVirtualNetwork][0m
+	            	[0m[1mazurerm_application_gateway.appgw: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-key-iguana/providers/Microsoft.Network/applicationGateways/ApplicationGateway1][0m
+	            	[0m[1mazurerm_kubernetes_cluster.aks: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-key-iguana/providers/Microsoft.ContainerService/managedClusters/aks-cluster][0m
+	            	[0m[1mazurerm_role_assignment.ra2: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-key-iguana/providers/Microsoft.Network/virtualNetworks/aksVirtualNetwork/providers/Microsoft.Authorization/roleAssignments/54339b64-e6ee-199b-e8f5-83960b34afbf][0m
+	            	[0m[1mazurerm_role_assignment.ra1: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-key-iguana/providers/Microsoft.Authorization/roleAssignments/ef3b00fa-7f81-38a1-061c-19b8790088dd][0m
+	            	[0m[1mazurerm_role_assignment.ra3: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-key-iguana/providers/Microsoft.Network/applicationGateways/ApplicationGateway1/providers/Microsoft.Authorization/roleAssignments/7c103376-edea-1b12-5ab0-3a0aa1da3cd0][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	[31m-[0m/[32m+[0m destroy and then create replacement[0m
+	            	 [36m<=[0m read (data resources)[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # data.azurerm_subnet.appgwsubnet[0m will be read during apply
+	            	  # (depends on a resource or a module with changes pending)
+	            	[0m [36m<=[0m[0m data "azurerm_subnet" "appgwsubnet" {
+	            	      [32m+[0m[0m address_prefix                                 = (known after apply)
+	            	      [32m+[0m[0m address_prefixes                               = (known after apply)
+	            	      [32m+[0m[0m default_outbound_access_enabled                = (known after apply)
+	            	      [32m+[0m[0m enforce_private_link_endpoint_network_policies = (known after apply)
+	            	      [32m+[0m[0m enforce_private_link_service_network_policies  = (known after apply)
+	            	      [32m+[0m[0m id                                             = (known after apply)
+	            	      [32m+[0m[0m name                                           = "appgwsubnet"
+	            	      [32m+[0m[0m network_security_group_id                      = (known after apply)
+	            	      [32m+[0m[0m private_endpoint_network_policies              = (known after apply)
+	            	      [32m+[0m[0m private_endpoint_network_policies_enabled      = (known after apply)
+	            	      [32m+[0m[0m private_link_service_network_policies_enabled  = (known after apply)
+	            	      [32m+[0m[0m resource_group_name                            = "rg-key-iguana"
+	            	      [32m+[0m[0m route_table_id                                 = (known after apply)
+	            	      [32m+[0m[0m service_endpoints                              = (known after apply)
+	            	      [32m+[0m[0m virtual_network_name                           = "aksVirtualNetwork"
+	            	    }
+	            	
+	            	[1m  # data.azurerm_subnet.kubesubnet[0m will be read during apply
+	            	  # (depends on a resource or a module with changes pending)
+	            	[0m [36m<=[0m[0m data "azurerm_subnet" "kubesubnet" {
+	            	      [32m+[0m[0m address_prefix                                 = (known after apply)
+	            	      [32m+[0m[0m address_prefixes                               = (known after apply)
+	            	      [32m+[0m[0m default_outbound_access_enabled                = (known after apply)
+	            	      [32m+[0m[0m enforce_private_link_endpoint_network_policies = (known after apply)
+	            	      [32m+[0m[0m enforce_private_link_service_network_policies  = (known after apply)
+	            	      [32m+[0m[0m id                                             = (known after apply)
+	            	      [32m+[0m[0m name                                           = "akssubnet"
+	            	      [32m+[0m[0m network_security_group_id                      = (known after apply)
+	            	      [32m+[0m[0m private_endpoint_network_policies              = (known after apply)
+	            	      [32m+[0m[0m private_endpoint_network_policies_enabled      = (known after apply)
+	            	      [32m+[0m[0m private_link_service_network_policies_enabled  = (known after apply)
+	            	      [32m+[0m[0m resource_group_name                            = "rg-key-iguana"
+	            	      [32m+[0m[0m route_table_id                                 = (known after apply)
+	            	      [32m+[0m[0m service_endpoints                              = (known after apply)
+	            	      [32m+[0m[0m virtual_network_name                           = "aksVirtualNetwork"
+	            	    }
+	            	
+	            	[1m  # data.azurerm_user_assigned_identity.ingress[0m will be read during apply
+	            	  # (depends on a resource or a module with changes pending)
+	            	[0m [36m<=[0m[0m data "azurerm_user_assigned_identity" "ingress" {
+	            	      [32m+[0m[0m client_id           = (known after apply)
+	            	      [32m+[0m[0m id                  = (known after apply)
+	            	      [32m+[0m[0m location            = (known after apply)
+	            	      [32m+[0m[0m name                = "ingressapplicationgateway-aks-cluster"
+	            	      [32m+[0m[0m principal_id        = (known after apply)
+	            	      [32m+[0m[0m resource_group_name = "MC_rg-key-iguana_aks-cluster_eastus"
+	            	      [32m+[0m[0m tags                = (known after apply)
+	            	      [32m+[0m[0m tenant_id           = (known after apply)
+	            	    }
+	            	
+	            	[1m  # azurerm_application_gateway.appgw[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_application_gateway" "appgw" {
+	            	        id                                = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-key-iguana/providers/Microsoft.Network/applicationGateways/ApplicationGateway1"
+	            	        name                              = "ApplicationGateway1"
+	            	        tags                              = {
+	            	            "ingress-for-aks-cluster-id" = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourcegroups/rg-key-iguana/providers/Microsoft.ContainerService/managedClusters/aks-cluster"
+	            	            "managed-by-k8s-ingress"     = "1.8.1/05a0d9c7/2025-04-04-14:12T-0700"
+	            	        }
+	            	        [90m# (8 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m gateway_ip_configuration {
+	            	            id        = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-key-iguana/providers/Microsoft.Network/applicationGateways/ApplicationGateway1/gatewayIPConfigurations/appGatewayIpConfig"
+	            	            name      = "appGatewayIpConfig"
+	            	          [33m~[0m[0m subnet_id = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-key-iguana/providers/Microsoft.Network/virtualNetworks/aksVirtualNetwork/subnets/appgwsubnet" -> (known after apply)
+	            	        }
+	            	
+	            	        [90m# (9 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.aks[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "aks" {
+	            	        id                                  = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-key-iguana/providers/Microsoft.ContainerService/managedClusters/aks-cluster"
+	            	        name                                = "aks-cluster"
+	            	        tags                                = {}
+	            	        [90m# (40 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "agentpool"
+	            	            tags                          = {}
+	            	          [33m~[0m[0m vnet_subnet_id                = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-key-iguana/providers/Microsoft.Network/virtualNetworks/aksVirtualNetwork/subnets/akssubnet" -> (known after apply)
+	            	            [90m# (32 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (5 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_resource_group.rg[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_resource_group" "rg" {
+	            	        id         = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-key-iguana"
+	            	        name       = "rg-key-iguana"
+	            	      [33m~[0m[0m tags       = {
+	            	          [31m-[0m[0m "mapotfdemo" = "yes" [90m-> null[0m[0m
+	            	        }
+	            	        [90m# (2 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_role_assignment.ra1[0m must be [1m[31mreplaced[0m
+	            	[0m[31m-[0m/[32m+[0m[0m resource "azurerm_role_assignment" "ra1" {
+	            	      [33m~[0m[0m id                                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-key-iguana/providers/Microsoft.Authorization/roleAssignments/ef3b00fa-7f81-38a1-061c-19b8790088dd" -> (known after apply)
+	            	      [33m~[0m[0m name                                   = "ef3b00fa-7f81-38a1-061c-19b8790088dd" -> (known after apply)
+	            	      [33m~[0m[0m principal_id                           = "7c21a224-6c44-486f-9736-6459bf0d0b80" -> (known after apply) [31m# forces replacement[0m[0m
+	            	      [33m~[0m[0m principal_type                         = "ServicePrincipal" -> (known after apply)
+	            	      [33m~[0m[0m role_definition_id                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7" -> (known after apply)
+	            	      [32m+[0m[0m skip_service_principal_aad_check       = (known after apply)
+	            	        [90m# (6 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_role_assignment.ra2[0m must be [1m[31mreplaced[0m
+	            	[0m[31m-[0m/[32m+[0m[0m resource "azurerm_role_assignment" "ra2" {
+	            	      [33m~[0m[0m id                                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-key-iguana/providers/Microsoft.Network/virtualNetworks/aksVirtualNetwork/providers/Microsoft.Authorization/roleAssignments/54339b64-e6ee-199b-e8f5-83960b34afbf" -> (known after apply)
+	            	      [33m~[0m[0m name                                   = "54339b64-e6ee-199b-e8f5-83960b34afbf" -> (known after apply)
+	            	      [33m~[0m[0m principal_id                           = "7c21a224-6c44-486f-9736-6459bf0d0b80" -> (known after apply) [31m# forces replacement[0m[0m
+	            	      [33m~[0m[0m principal_type                         = "ServicePrincipal" -> (known after apply)
+	            	      [33m~[0m[0m role_definition_id                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/providers/Microsoft.Authorization/roleDefinitions/4d97b98b-1d4f-4787-a291-c67834d212e7" -> (known after apply)
+	            	      [32m+[0m[0m skip_service_principal_aad_check       = (known after apply)
+	            	        [90m# (6 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_role_assignment.ra3[0m must be [1m[31mreplaced[0m
+	            	[0m[31m-[0m/[32m+[0m[0m resource "azurerm_role_assignment" "ra3" {
+	            	      [33m~[0m[0m id                                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-key-iguana/providers/Microsoft.Network/applicationGateways/ApplicationGateway1/providers/Microsoft.Authorization/roleAssignments/7c103376-edea-1b12-5ab0-3a0aa1da3cd0" -> (known after apply)
+	            	      [33m~[0m[0m name                                   = "7c103376-edea-1b12-5ab0-3a0aa1da3cd0" -> (known after apply)
+	            	      [33m~[0m[0m principal_id                           = "7c21a224-6c44-486f-9736-6459bf0d0b80" -> (known after apply) [31m# forces replacement[0m[0m
+	            	      [33m~[0m[0m principal_type                         = "ServicePrincipal" -> (known after apply)
+	            	      [33m~[0m[0m role_definition_id                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/providers/Microsoft.Authorization/roleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c" -> (known after apply)
+	            	      [32m+[0m[0m skip_service_principal_aad_check       = (known after apply)
+	            	        [90m# (6 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 3 to add, 3 to change, 3 to destroy.
+	            	[0m[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-k8s-cluster-with-aks-applicationgateway-ingress3419647768/src/quickstart/201-k8s-cluster-with-aks-applicationgateway-ingress/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-k8s-cluster-with-aks-applicationgateway-ingress3419647768/src/quickstart/201-k8s-cluster-with-aks-applicationgateway-ingress/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-k8s-cluster-with-aks-applicationgateway-ingress
+
+FailNow
+
+---
+
 ## 04 May 25 00:42 UTC
 
 Success: false

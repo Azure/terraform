@@ -1,3 +1,77 @@
+## 11 May 25 01:33 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.11.4
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.prefix: Refreshing state... [id=mi-emu][0m
+	            	[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/mi-emu-rg][0m
+	            	[0m[1mazurerm_network_security_group.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/mi-emu-rg/providers/Microsoft.Network/networkSecurityGroups/mi-emu-nsg][0m
+	            	[0m[1mazurerm_route_table.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/mi-emu-rg/providers/Microsoft.Network/routeTables/mi-emu-rt][0m
+	            	[0m[1mazurerm_virtual_network.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/mi-emu-rg/providers/Microsoft.Network/virtualNetworks/mi-emu-vnet][0m
+	            	[0m[1mazurerm_subnet.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/mi-emu-rg/providers/Microsoft.Network/virtualNetworks/mi-emu-vnet/subnets/mi-emu-subnet][0m
+	            	[0m[1mazurerm_subnet_network_security_group_association.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/mi-emu-rg/providers/Microsoft.Network/virtualNetworks/mi-emu-vnet/subnets/mi-emu-subnet][0m
+	            	[0m[1mazurerm_subnet_route_table_association.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/mi-emu-rg/providers/Microsoft.Network/virtualNetworks/mi-emu-vnet/subnets/mi-emu-subnet][0m
+	            	[0m[1mazurerm_mssql_managed_instance.main: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/mi-emu-rg/providers/Microsoft.Sql/managedInstances/mi-emu-mssql][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_resource_group.example[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_resource_group" "example" {
+	            	        id         = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/mi-emu-rg"
+	            	        name       = "mi-emu-rg"
+	            	      [33m~[0m[0m tags       = {
+	            	          [31m-[0m[0m "mapotfdemo" = "yes" [90m-> null[0m[0m
+	            	        }
+	            	        [90m# (2 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 0 to add, 1 to change, 0 to destroy.
+	            	[0m[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_route_table.example,
+	            	[33m│[0m [0m  on main.tf line 57, in resource "azurerm_route_table" "example":
+	            	[33m│[0m [0m  57:   disable_bgp_route_propagation = [4mfalse[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe property `disable_bgp_route_propagation` has been superseded by the
+	            	[33m│[0m [0mproperty `bgp_route_propagation_enabled` and will be removed in v4.0 of the
+	            	[33m│[0m [0mAzureRM Provider.
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m(and one more similar warning elsewhere)
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-managed-instance3805002431/src/quickstart/101-managed-instance/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-managed-instance3805002431/src/quickstart/101-managed-instance/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-managed-instance
+
+FailNow
+
+---
+
 ## 04 May 25 01:57 UTC
 
 Success: true

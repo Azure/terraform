@@ -1,3 +1,109 @@
+## 11 May 25 00:30 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.11.4
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mrandom_pet.windows_server_public_ip_dns: Refreshing state... [id=dns-proper-flea][0m
+	            	[0m[1mrandom_string.windows_server_vm_hostname: Refreshing state... [id=peqjn5yj][0m
+	            	[0m[1mrandom_pet.rg_name: Refreshing state... [id=rg-sunny-chipmunk][0m
+	            	[0m[1mmodule.windows_server[1].random_id.vm_sa: Refreshing state... [id=_obiLvMd][0m
+	            	[0m[1mmodule.windows_server[0].random_id.vm_sa: Refreshing state... [id=1YBFEfrd][0m
+	            	[0m[1mmodule.windows_server[2].random_id.vm_sa: Refreshing state... [id=rbi43kuT][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk][0m
+	            	[0m[1mmodule.network.data.azurerm_resource_group.network[0]: Reading...[0m[0m
+	            	[0m[1mmodule.windows_server[2].data.azurerm_resource_group.vm[0]: Reading...[0m[0m
+	            	[0m[1mmodule.windows_server[0].data.azurerm_resource_group.vm[0]: Reading...[0m[0m
+	            	[0m[1mmodule.windows_server[1].data.azurerm_resource_group.vm[0]: Reading...[0m[0m
+	            	[0m[1mmodule.network.data.azurerm_resource_group.network[0]: Read complete after 0s [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk][0m
+	            	[0m[1mmodule.network.azurerm_virtual_network.vnet: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk/providers/Microsoft.Network/virtualNetworks/acctvnet][0m
+	            	[0m[1mmodule.windows_server[0].data.azurerm_resource_group.vm[0]: Read complete after 0s [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk][0m
+	            	[0m[1mmodule.windows_server[1].data.azurerm_resource_group.vm[0]: Read complete after 0s [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk][0m
+	            	[0m[1mmodule.windows_server[2].data.azurerm_resource_group.vm[0]: Read complete after 0s [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk][0m
+	            	[0m[1mmodule.windows_server[2].azurerm_availability_set.vm[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk/providers/Microsoft.Compute/availabilitySets/vm-peqjn5yj-2-avset][0m
+	            	[0m[1mmodule.windows_server[1].azurerm_availability_set.vm[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk/providers/Microsoft.Compute/availabilitySets/vm-peqjn5yj-1-avset][0m
+	            	[0m[1mmodule.windows_server[0].azurerm_availability_set.vm[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk/providers/Microsoft.Compute/availabilitySets/vm-peqjn5yj-0-avset][0m
+	            	[0m[1mmodule.windows_server[0].azurerm_network_security_group.vm[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk/providers/Microsoft.Network/networkSecurityGroups/vm-peqjn5yj-0-nsg][0m
+	            	[0m[1mmodule.windows_server[1].azurerm_network_security_group.vm[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk/providers/Microsoft.Network/networkSecurityGroups/vm-peqjn5yj-1-nsg][0m
+	            	[0m[1mmodule.windows_server[1].azurerm_public_ip.vm[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk/providers/Microsoft.Network/publicIPAddresses/vm-peqjn5yj-1-pip-0][0m
+	            	[0m[1mmodule.windows_server[2].azurerm_public_ip.vm[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk/providers/Microsoft.Network/publicIPAddresses/vm-peqjn5yj-2-pip-0][0m
+	            	[0m[1mmodule.windows_server[2].azurerm_network_security_group.vm[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk/providers/Microsoft.Network/networkSecurityGroups/vm-peqjn5yj-2-nsg][0m
+	            	[0m[1mmodule.windows_server[0].azurerm_public_ip.vm[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk/providers/Microsoft.Network/publicIPAddresses/vm-peqjn5yj-0-pip-0][0m
+	            	[0m[1mmodule.network.azurerm_subnet.subnet_for_each["subnet1"]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk/providers/Microsoft.Network/virtualNetworks/acctvnet/subnets/subnet1][0m
+	            	[0m[1mmodule.windows_server[2].azurerm_network_interface.vm[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk/providers/Microsoft.Network/networkInterfaces/vm-peqjn5yj-2-nic-0][0m
+	            	[0m[1mmodule.windows_server[1].azurerm_network_interface.vm[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk/providers/Microsoft.Network/networkInterfaces/vm-peqjn5yj-1-nic-0][0m
+	            	[0m[1mmodule.windows_server[0].azurerm_network_interface.vm[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk/providers/Microsoft.Network/networkInterfaces/vm-peqjn5yj-0-nic-0][0m
+	            	[0m[1mmodule.windows_server[0].azurerm_network_interface_security_group_association.test[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk/providers/Microsoft.Network/networkInterfaces/vm-peqjn5yj-0-nic-0|/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk/providers/Microsoft.Network/networkSecurityGroups/vm-peqjn5yj-0-nsg][0m
+	            	[0m[1mmodule.windows_server[2].azurerm_network_interface_security_group_association.test[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk/providers/Microsoft.Network/networkInterfaces/vm-peqjn5yj-2-nic-0|/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk/providers/Microsoft.Network/networkSecurityGroups/vm-peqjn5yj-2-nsg][0m
+	            	[0m[1mmodule.windows_server[1].azurerm_network_interface_security_group_association.test[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk/providers/Microsoft.Network/networkInterfaces/vm-peqjn5yj-1-nic-0|/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk/providers/Microsoft.Network/networkSecurityGroups/vm-peqjn5yj-1-nsg][0m
+	            	[0m[1mmodule.windows_server[0].azurerm_virtual_machine.vm_windows[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk/providers/Microsoft.Compute/virtualMachines/vm-peqjn5yj-0-vmWindows-0][0m
+	            	[0m[1mmodule.windows_server[1].azurerm_virtual_machine.vm_windows[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk/providers/Microsoft.Compute/virtualMachines/vm-peqjn5yj-1-vmWindows-0][0m
+	            	[0m[1mmodule.windows_server[2].azurerm_virtual_machine.vm_windows[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk/providers/Microsoft.Compute/virtualMachines/vm-peqjn5yj-2-vmWindows-0][0m
+	            	[0m[1mmodule.windows_server[0].data.azurerm_public_ip.vm[0]: Reading...[0m[0m
+	            	[0m[1mmodule.windows_server[2].data.azurerm_public_ip.vm[0]: Reading...[0m[0m
+	            	[0m[1mmodule.windows_server[1].data.azurerm_public_ip.vm[0]: Reading...[0m[0m
+	            	[0m[1mmodule.windows_server[0].data.azurerm_public_ip.vm[0]: Read complete after 0s [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk/providers/Microsoft.Network/publicIPAddresses/vm-peqjn5yj-0-pip-0][0m
+	            	[0m[1mmodule.windows_server[2].data.azurerm_public_ip.vm[0]: Read complete after 0s [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk/providers/Microsoft.Network/publicIPAddresses/vm-peqjn5yj-2-pip-0][0m
+	            	[0m[1mmodule.windows_server[1].data.azurerm_public_ip.vm[0]: Read complete after 0s [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk/providers/Microsoft.Network/publicIPAddresses/vm-peqjn5yj-1-pip-0][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_resource_group.rg[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_resource_group" "rg" {
+	            	        id         = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-sunny-chipmunk"
+	            	        name       = "rg-sunny-chipmunk"
+	            	      [33m~[0m[0m tags       = {
+	            	          [31m-[0m[0m "mapotfdemo" = "yes" [90m-> null[0m[0m
+	            	        }
+	            	        [90m# (2 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 0 to add, 1 to change, 0 to destroy.
+	            	[0m[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with module.network.azurerm_subnet.subnet_for_each["subnet1"],
+	            	[33m│[0m [0m  on .terraform/modules/network/main.tf line 57, in resource "azurerm_subnet" "subnet_for_each":
+	            	[33m│[0m [0m  57:   enforce_private_link_endpoint_network_policies = [4mlookup(var.subnet_enforce_private_link_endpoint_network_policies, each.value, false)[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m`enforce_private_link_endpoint_network_policies` will be removed in favour
+	            	[33m│[0m [0mof the property `private_endpoint_network_policies` in version 4.0 of the
+	            	[33m│[0m [0mAzureRM Provider
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m(and 6 more similar warnings elsewhere)
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-vm-cluster-windows1405774365/src/quickstart/101-vm-cluster-windows/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-vm-cluster-windows1405774365/src/quickstart/101-vm-cluster-windows/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-vm-cluster-windows
+
+FailNow
+
+---
+
 ## 04 May 25 00:48 UTC
 
 Success: true

@@ -1,3 +1,63 @@
+## 11 May 25 01:39 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.11.4
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.rg_name: Refreshing state... [id=rg-proper-colt][0m
+	            	[0m[1mrandom_string.name: Refreshing state... [id=wbdodqhx][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-proper-colt][0m
+	            	[0m[1mazurerm_public_ip.gateway_ip: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-proper-colt/providers/Microsoft.Network/publicIPAddresses/pip-wbdodqhx][0m
+	            	[0m[1mazurerm_express_route_circuit.circuit: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-proper-colt/providers/Microsoft.Network/expressRouteCircuits/erc-wbdodqhx][0m
+	            	[0m[1mazurerm_virtual_network.vnet: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-proper-colt/providers/Microsoft.Network/virtualNetworks/vnet-wbdodqhx][0m
+	            	[0m[1mazurerm_subnet.gateway_subnet: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-proper-colt/providers/Microsoft.Network/virtualNetworks/vnet-wbdodqhx/subnets/GatewaySubnet][0m
+	            	[0m[1mazurerm_virtual_network_gateway.gateway: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-proper-colt/providers/Microsoft.Network/virtualNetworkGateways/gateway-wbdodqhx][0m
+	            	[0m[1mazurerm_express_route_circuit_peering.private: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-proper-colt/providers/Microsoft.Network/expressRouteCircuits/erc-wbdodqhx/peerings/AzurePrivatePeering][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_resource_group.rg[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_resource_group" "rg" {
+	            	        id         = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-proper-colt"
+	            	        name       = "rg-proper-colt"
+	            	      [33m~[0m[0m tags       = {
+	            	          [31m-[0m[0m "mapotfdemo" = "yes" [90m-> null[0m[0m
+	            	        }
+	            	        [90m# (2 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 0 to add, 1 to change, 0 to destroy.
+	            	[0m[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-azure-expressroute2562552062/src/quickstart/101-azure-expressroute/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-azure-expressroute2562552062/src/quickstart/101-azure-expressroute/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-azure-expressroute
+
+FailNow
+
+---
+
 ## 04 May 25 01:38 UTC
 
 Success: true

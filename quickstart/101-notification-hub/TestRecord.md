@@ -1,3 +1,60 @@
+## 11 May 25 00:40 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.11.4
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.azurerm_notification_hub_namespace_name: Refreshing state... [id=uqbibuyhocbrivhyibqxnwrbw][0m
+	            	[0m[1mrandom_pet.rg_name: Refreshing state... [id=rg-credible-moth][0m
+	            	[0m[1mrandom_string.azurerm_notification_hub_name: Refreshing state... [id=kvyayedzyosmuqexkaynfbaua][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-credible-moth][0m
+	            	[0m[1mazurerm_notification_hub_namespace.namespace: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-credible-moth/providers/Microsoft.NotificationHubs/namespaces/hubns-uqbibuyhocbrivhyibqxnwrbw][0m
+	            	[0m[1mazurerm_notification_hub.hub: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-credible-moth/providers/Microsoft.NotificationHubs/namespaces/hubns-uqbibuyhocbrivhyibqxnwrbw/notificationHubs/hub-kvyayedzyosmuqexkaynfbaua][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_resource_group.rg[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_resource_group" "rg" {
+	            	        id         = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-credible-moth"
+	            	        name       = "rg-credible-moth"
+	            	      [33m~[0m[0m tags       = {
+	            	          [31m-[0m[0m "mapotfdemo" = "yes" [90m-> null[0m[0m
+	            	        }
+	            	        [90m# (2 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 0 to add, 1 to change, 0 to destroy.
+	            	[0m[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-notification-hub4075563287/src/quickstart/101-notification-hub/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-notification-hub4075563287/src/quickstart/101-notification-hub/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-notification-hub
+
+FailNow
+
+---
+
 ## 04 May 25 01:02 UTC
 
 Success: true
