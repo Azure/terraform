@@ -1,3 +1,52 @@
+## 18 May 25 00:28 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.11.4
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/local v2.3.0
++ provider registry.terraform.io/hashicorp/random v3.7.2
++ provider registry.terraform.io/hashicorp/tls v4.0.4
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1m
+	            	[31m│[0m [0mAn existing soft-deleted Key Vault exists with the Name "vm-disk-e-e-sailfish-kv" in the location "eastus", however
+	            	[31m│[0m [0mautomatically recovering this KeyVault has been disabled via the "features" block.
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mTerraform can automatically recover the soft-deleted Key Vault when this behaviour is
+	            	[31m│[0m [0menabled within the "features" block (located within the "provider" block) - more
+	            	[31m│[0m [0minformation can be found here:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mhttps://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/features-block
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAlternatively you can manually recover this (e.g. using the Azure CLI) and then import
+	            	[31m│[0m [0mthis into Terraform via "terraform import", or pick a different name/location.
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_key_vault.example,
+	            	[31m│[0m [0m  on main.tf line 13, in resource "azurerm_key_vault" "example":
+	            	[31m│[0m [0m  13: resource "azurerm_key_vault" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-vm-disk-encryption-extension
+
+FailNow
+
+---
+
 ## 11 May 25 01:21 UTC
 
 Success: false
