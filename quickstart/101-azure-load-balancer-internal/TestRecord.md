@@ -1,3 +1,64 @@
+## 01 Jun 25 01:33 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.12.1
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.31.0
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating/updating Extension (Subscription: "f7a632a5-49db-4c5e-9828-cd62cb753971"
+	            	[31m│[0m [0mResource Group Name: "rg-active-muskox"
+	            	[31m│[0m [0mVirtual Machine Name: "test-vm-1"
+	            	[31m│[0m [0mExtension Name: "Nginx"): polling after CreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "VMExtensionProvisioningError"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "VM has reported a failure when processing extension 'Nginx' (publisher 'Microsoft.Azure.Extensions' and type 'CustomScript'). Error message: 'Enable failed: failed to execute command: command terminated with exit status=100\n[stdout]\nHit:1 http://archive.ubuntu.com/ubuntu jammy InRelease\nGet:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]\nGet:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]\nGet:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]\nGet:5 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [14.1 MB]\nGet:6 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [2354 kB]\nGet:7 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [357 kB]\nGet:8 http://security.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [13.6 kB]\nGet:9 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [3466 kB]\nGet:10 http://archive.ubuntu.com/ubuntu jammy/universe Translation-en [5652 kB]\nGet:11 http://archive.ubuntu.com/ubuntu jammy/universe amd64 c-n-f Metadata [286 kB]\nGet:12 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [620 kB]\nGet:13 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [217 kB]\nGet:14 http://archive.ubuntu.com/ubuntu jammy/multiverse Translation-en [112 kB]\nGet:15 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 c-n-f Metadata [8372 B]\nGet:16 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [2598 kB]\nGet:17 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 c-n-f Metadata [624 B]\nGet:18 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [974 kB]\nGet:19 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [210 kB]\nGet:20 http://archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [421 kB]\nGet:21 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [21.7 kB]\nGet:22 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [39.6 kB]\nGet:23 http://security.ubuntu.com/ubuntu jammy-security/multiverse Translation-en [8716 B]\nGet:24 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [3585 kB]\nGet:25 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 c-n-f Metadata [368 B]\nGet:26 http://archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [640 kB]\nGet:27 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1208 kB]\nGet:28 http://archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [298 kB]\nGet:29 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [28.7 kB]\nGet:30 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [46.5 kB]\nGet:31 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse Translation-en [11.8 kB]\nGet:32 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 c-n-f Metadata [592 B]\nGet:33 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [68.8 kB]\nGet:34 http://archive.ubuntu.com/ubuntu jammy-backports/main Translation-en [11.4 kB]\nGet:35 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 c-n-f Metadata [392 B]\nGet:36 http://archive.ubuntu.com/ubuntu jammy-backports/restricted amd64 c-n-f Metadata [116 B]\nGet:37 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [30.0 kB]\nGet:38 http://archive.ubuntu.com/ubuntu jammy-backports/universe Translation-en [16.5 kB]\nGet:39 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 c-n-f Metadata [672 B]\nGet:40 http://archive.ubuntu.com/ubuntu jammy-backports/multiverse amd64 c-n-f Metadata [116 B]\nFetched 37.8 MB in 7s (5149 kB/s)\nReading package lists...\nReading package lists...\nBuilding dependency tree...\nReading state information...\n\n[stderr]\nE: Unable to locate package nginx\n'. More information on troubleshooting is available at https://aka.ms/VMExtensionCSELinuxTroubleshoot. "
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m  "startTime": "2025-06-01T01:18:12.9238665+00:00",
+	            	[31m│[0m [0m  "endTime": "2025-06-01T01:18:51.3766056+00:00",
+	            	[31m│[0m [0m  "status": "Failed",
+	            	[31m│[0m [0m  "error": {
+	            	[31m│[0m [0m    "code": "VMExtensionProvisioningError",
+	            	[31m│[0m [0m    "message": "VM has reported a failure when processing extension 'Nginx' (publisher 'Microsoft.Azure.Extensions' and type 'CustomScript'). Error message: 'Enable failed: failed to execute command: command terminated with exit status=100\n[stdout]\nHit:1 http://archive.ubuntu.com/ubuntu jammy InRelease\nGet:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]\nGet:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]\nGet:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]\nGet:5 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [14.1 MB]\nGet:6 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [2354 kB]\nGet:7 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [357 kB]\nGet:8 http://security.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [13.6 kB]\nGet:9 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [3466 kB]\nGet:10 http://archive.ubuntu.com/ubuntu jammy/universe Translation-en [5652 kB]\nGet:11 http://archive.ubuntu.com/ubuntu jammy/universe amd64 c-n-f Metadata [286 kB]\nGet:12 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [620 kB]\nGet:13 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [217 kB]\nGet:14 http://archive.ubuntu.com/ubuntu jammy/multiverse Translation-en [112 kB]\nGet:15 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 c-n-f Metadata [8372 B]\nGet:16 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [2598 kB]\nGet:17 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 c-n-f Metadata [624 B]\nGet:18 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [974 kB]\nGet:19 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [210 kB]\nGet:20 http://archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [421 kB]\nGet:21 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [21.7 kB]\nGet:22 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [39.6 kB]\nGet:23 http://security.ubuntu.com/ubuntu jammy-security/multiverse Translation-en [8716 B]\nGet:24 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [3585 kB]\nGet:25 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 c-n-f Metadata [368 B]\nGet:26 http://archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [640 kB]\nGet:27 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1208 kB]\nGet:28 http://archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [298 kB]\nGet:29 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [28.7 kB]\nGet:30 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [46.5 kB]\nGet:31 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse Translation-en [11.8 kB]\nGet:32 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 c-n-f Metadata [592 B]\nGet:33 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [68.8 kB]\nGet:34 http://archive.ubuntu.com/ubuntu jammy-backports/main Translation-en [11.4 kB]\nGet:35 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 c-n-f Metadata [392 B]\nGet:36 http://archive.ubuntu.com/ubuntu jammy-backports/restricted amd64 c-n-f Metadata [116 B]\nGet:37 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [30.0 kB]\nGet:38 http://archive.ubuntu.com/ubuntu jammy-backports/universe Translation-en [16.5 kB]\nGet:39 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 c-n-f Metadata [672 B]\nGet:40 http://archive.ubuntu.com/ubuntu jammy-backports/multiverse amd64 c-n-f Metadata [116 B]\nFetched 37.8 MB in 7s (5149 kB/s)\nReading package lists...\nReading package lists...\nBuilding dependency tree...\nReading state information...\n\n[stderr]\nE: Unable to locate package nginx\n'. More information on troubleshooting is available at https://aka.ms/VMExtensionCSELinuxTroubleshoot. "
+	            	[31m│[0m [0m  },
+	            	[31m│[0m [0m  "name": "bd7729af-c774-4869-a9d7-1850f5101c77"
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_virtual_machine_extension.example[1],
+	            	[31m│[0m [0m  on main.tf line 195, in resource "azurerm_virtual_machine_extension" "example":
+	            	[31m│[0m [0m 195: resource "azurerm_virtual_machine_extension" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-load-balancer-internal
+
+FailNow
+
+---
+
 ## 25 May 25 01:16 UTC
 
 Success: true

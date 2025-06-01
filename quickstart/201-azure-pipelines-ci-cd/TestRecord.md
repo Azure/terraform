@@ -1,3 +1,18 @@
+## 01 Jun 25 00:58 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.12.1
+on linux_amd64
+
+### Error
+
+No error was found.
+
+---
+
 ## 25 May 25 00:29 UTC
 
 Success: true

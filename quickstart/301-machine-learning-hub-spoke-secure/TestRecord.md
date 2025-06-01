@@ -1,3 +1,43 @@
+## 01 Jun 25 01:05 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.12.1
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
++ provider registry.terraform.io/hashicorp/time v0.13.1
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Route Table Association for Subnet (Subscription: "f7a632a5-49db-4c5e-9828-cd62cb753971"
+	            	[31m│[0m [0mResource Group Name: "rg-hub-301mlhss-dev-yg92"
+	            	[31m│[0m [0mVirtual Network Name: "vnet-hub-301mlhss-dev"
+	            	[31m│[0m [0mSubnet Name: "snet-jumphost"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: AnotherOperationInProgress: Another operation on this or dependent resource is in progress. To retrieve status of the operation use uri: https://eastus.network.azure.com/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/providers/Microsoft.Network/locations/eastus/operations/790742bf-4eaf-4da7-a307-99d6e1bbf8cf?api-version=2022-05-01.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_subnet_route_table_association.rt-jumphost-link,
+	            	[31m│[0m [0m  on network-hub.tf line 173, in resource "azurerm_subnet_route_table_association" "rt-jumphost-link":
+	            	[31m│[0m [0m 173: resource "azurerm_subnet_route_table_association" "rt-jumphost-link" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/301-machine-learning-hub-spoke-secure
+
+FailNow
+
+---
+
 ## 25 May 25 01:50 UTC
 
 Success: true
