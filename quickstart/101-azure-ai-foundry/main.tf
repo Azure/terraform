@@ -58,10 +58,11 @@ resource "azurerm_storage_account" "example" {
 
 # Deploy Azure AI Services resource
 resource "azurerm_ai_services" "example" {
-  name                = "exampleaiservices"                     # AI Services resource name
-  location            = azurerm_resource_group.example.location # Location from the resource group
-  resource_group_name = azurerm_resource_group.example.name     # Resource group name
-  sku_name            = "S0"                                    # Pricing SKU tier
+  name                  = "exampleaiservices"                     # AI Services resource name
+  location              = azurerm_resource_group.example.location # Location from the resource group
+  resource_group_name   = azurerm_resource_group.example.name     # Resource group name
+  sku_name              = "S0"                                    # Pricing SKU tier
+  custom_subdomain_name = "exampleaiservices"                     # Custom subdomain name
 }
 
 # Create Azure AI Foundry service
