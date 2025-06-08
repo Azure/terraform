@@ -1,3 +1,79 @@
+## 08 Jun 25 00:31 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.12.1
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_integer.suffix: Refreshing state... [id=63909606][0m
+	            	[0m[1mrandom_string.ci_prefix: Refreshing state... [id=qcxloepx][0m
+	            	[0m[1mrandom_pet.prefix: Refreshing state... [id=ml-united-jawfish][0m
+	            	[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/ml-united-jawfish-rg][0m
+	            	[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD0wYThiOTgyNC05NWIzLTQ0OGMtYWJhOC05NjcwZTUxMTRhOTI7b2JqZWN0SWQ9YzRhZmRkNGMtNzU2NS00MmI3LWI5ODQtZTZhMjI0ZDEyMDQ3O3N1YnNjcmlwdGlvbklkPWY3YTYzMmE1LTQ5ZGItNGM1ZS05ODI4LWNkNjJjYjc1Mzk3MTt0ZW5hbnRJZD1mYzJiZjk2Ni1hOTg0LTQzOGMtOTNiNy1iYzVhMDZmZTdmMGQ=][0m
+	            	[0m[1mazurerm_application_insights.default: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/ml-united-jawfish-rg/providers/Microsoft.Insights/components/ml-united-jawfish-appi][0m
+	            	[0m[1mazurerm_key_vault.default: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/ml-united-jawfish-rg/providers/Microsoft.KeyVault/vaults/mldev63909606kv][0m
+	            	[0m[1mazurerm_container_registry.default: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/ml-united-jawfish-rg/providers/Microsoft.ContainerRegistry/registries/mldev63909606cr][0m
+	            	[0m[1mazurerm_storage_account.default: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/ml-united-jawfish-rg/providers/Microsoft.Storage/storageAccounts/mldev63909606st][0m
+	            	[0m[1mazurerm_machine_learning_workspace.default: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/ml-united-jawfish-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-united-jawfish-mlw][0m
+	            	[0m[1mazurerm_machine_learning_compute_instance.main: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/ml-united-jawfish-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-united-jawfish-mlw/computes/qcxloepxinstance][0m
+	            	[0m[1mazurerm_machine_learning_compute_cluster.compute: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/ml-united-jawfish-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-united-jawfish-mlw/computes/cpu-cluster][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_application_insights.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_application_insights" "default" {
+	            	        id                                    = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/ml-united-jawfish-rg/providers/Microsoft.Insights/components/ml-united-jawfish-appi"
+	            	        name                                  = "ml-united-jawfish-appi"
+	            	        tags                                  = {}
+	            	      [31m-[0m[0m workspace_id                          = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/ai_ml-united-jawfish-appi_575adbbb-3171-4085-ad09-0e1f4bdb89b6_managed/providers/Microsoft.OperationalInsights/workspaces/managed-ml-united-jawfish-appi-ws" [90m-> null[0m[0m
+	            	        [90m# (15 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 0 to add, 1 to change, 0 to destroy.
+	            	[0m[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_machine_learning_compute_instance.main,
+	            	[33m│[0m [0m  on compute.tf line 12, in resource "azurerm_machine_learning_compute_instance" "main":
+	            	[33m│[0m [0m  12:   location                      = [4mazurerm_resource_group.default.location[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe `azurerm_machine_learning_compute_instance` must be deployed to the
+	            	[33m│[0m [0msame location as the associated `azurerm_machine_learning_workspace`
+	            	[33m│[0m [0mresource, as the `location` fields must be the same the `location` field no
+	            	[33m│[0m [0mlonger has any effect and will be removed in version 4.0 of the AzureRM
+	            	[33m│[0m [0mProvider
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-machine-learning3575544495/src/quickstart/101-machine-learning/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-machine-learning3575544495/src/quickstart/101-machine-learning/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-machine-learning
+
+FailNow
+
+---
+
 ## 01 Jun 25 00:31 UTC
 
 Success: false

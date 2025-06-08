@@ -1,3 +1,80 @@
+## 08 Jun 25 01:31 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.12.1
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating App Service Plan (Subscription: "f7a632a5-49db-4c5e-9828-cd62cb753971"
+	            	[31m│[0m [0mResource Group Name: "function-app-colt-rg"
+	            	[31m│[0m [0mServer Farm Name: "function-app-colt-sap"): performing CreateOrUpdate: unexpected status 401 (401 Unauthorized) with response: {"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details- Location:  \r\nCurrent Limit (Dynamic VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Dynamic VMs): 0 \r\n(Minimum) New Limit that you should request to enable this deployment: 0. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Target":null,"Details":[{"Message":"Operation cannot be completed without additional quota. \r\nAdditional details- Location:  \r\nCurrent Limit (Dynamic VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Dynamic VMs): 0 \r\n(Minimum) New Limit that you should request to enable this deployment: 0. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation cannot be completed without additional quota. \r\nAdditional details- Location: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount required for this deployment ({1}): {4} \r\n(Minimum) New Limit that you should request to enable this deployment: {5}. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Parameters":["","Dynamic VMs","0","0","0","0"],"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details- Location:  \r\nCurrent Limit (Dynamic VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Dynamic VMs): 0 \r\n(Minimum) New Limit that you should request to enable this deployment: 0. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."}}],"Innererror":null}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_service_plan.default,
+	            	[31m│[0m [0m  on main.tf line 16, in resource "azurerm_service_plan" "default":
+	            	[31m│[0m [0m  16: resource "azurerm_service_plan" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating App Service Plan (Subscription:
+	            	[31m│[0m [0m"f7a632a5-49db-4c5e-9828-cd62cb753971"
+	            	[31m│[0m [0mResource Group Name: "function-app-colt-rg"
+	            	[31m│[0m [0mServer Farm Name: "function-app-colt-sap"): performing CreateOrUpdate:
+	            	[31m│[0m [0munexpected status 401 (401 Unauthorized) with response:
+	            	[31m│[0m [0m{"Code":"Unauthorized","Message":"Operation cannot be completed without
+	            	[31m│[0m [0madditional quota. \r\nAdditional details- Location:  \r\nCurrent Limit
+	            	[31m│[0m [0m(Dynamic VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this
+	            	[31m│[0m [0mdeployment (Dynamic VMs): 0 \r\n(Minimum) New Limit that you should request
+	            	[31m│[0m [0mto enable this deployment: 0. \r\nNote that if you experience multiple
+	            	[31m│[0m [0mscaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed.","Target":null,"Details":[{"Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details- Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Dynamic VMs): 0 \r\nCurrent Usage: 0\r\nAmount required
+	            	[31m│[0m [0mfor this deployment (Dynamic VMs): 0 \r\n(Minimum) New Limit that you
+	            	[31m│[0m [0mshould request to enable this deployment: 0. \r\nNote that if you
+	            	[31m│[0m [0mexperience multiple scaling operations failing (in addition to this one)
+	            	[31m│[0m [0mand need to accommodate the aggregate quota requirements of these
+	            	[31m│[0m [0moperations, you will need to request a higher quota limit than the one
+	            	[31m│[0m [0mcurrently
+	            	[31m│[0m [0mdisplayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation
+	            	[31m│[0m [0mcannot be completed without additional quota. \r\nAdditional details-
+	            	[31m│[0m [0mLocation: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount
+	            	[31m│[0m [0mrequired for this deployment ({1}): {4} \r\n(Minimum) New Limit that you
+	            	[31m│[0m [0mshould request to enable this deployment: {5}. \r\nNote that if you
+	            	[31m│[0m [0mexperience multiple scaling operations failing (in addition to this one)
+	            	[31m│[0m [0mand need to accommodate the aggregate quota requirements of these
+	            	[31m│[0m [0moperations, you will need to request a higher quota limit than the one
+	            	[31m│[0m [0mcurrently displayed.","Parameters":["","Dynamic
+	            	[31m│[0m [0mVMs","0","0","0","0"],"Code":"Unauthorized","Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details- Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Dynamic VMs): 0 \r\nCurrent Usage: 0\r\nAmount required
+	            	[31m│[0m [0mfor this deployment (Dynamic VMs): 0 \r\n(Minimum) New Limit that you
+	            	[31m│[0m [0mshould request to enable this deployment: 0. \r\nNote that if you
+	            	[31m│[0m [0mexperience multiple scaling operations failing (in addition to this one)
+	            	[31m│[0m [0mand need to accommodate the aggregate quota requirements of these
+	            	[31m│[0m [0moperations, you will need to request a higher quota limit than the one
+	            	[31m│[0m [0mcurrently displayed."}}],"Innererror":null}
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-function-app
+
+FailNow
+
+---
+
 ## 01 Jun 25 00:55 UTC
 
 Success: false

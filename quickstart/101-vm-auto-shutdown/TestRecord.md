@@ -1,3 +1,112 @@
+## 08 Jun 25 00:35 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.12.1
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.prefix: Refreshing state... [id=demo-anemone][0m
+	            	[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-anemone-rg][0m
+	            	[0m[1mrandom_id.random_id: Refreshing state... [id=GsbNrgXMFtg][0m
+	            	[0m[1mazurerm_virtual_network.my_terraform_network: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-anemone-rg/providers/Microsoft.Network/virtualNetworks/demo-anemone-vnet][0m
+	            	[0m[1mazurerm_automation_account.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-anemone-rg/providers/Microsoft.Automation/automationAccounts/demo-anemone-automation-account][0m
+	            	[0m[1mazurerm_public_ip.my_terraform_public_ip: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-anemone-rg/providers/Microsoft.Network/publicIPAddresses/demo-anemone-public-ip][0m
+	            	[0m[1mazurerm_network_security_group.my_terraform_nsg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-anemone-rg/providers/Microsoft.Network/networkSecurityGroups/demo-anemone-nsg][0m
+	            	[0m[1mazurerm_storage_account.my_storage_account: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-anemone-rg/providers/Microsoft.Storage/storageAccounts/diag1ac6cdae05cc16d8][0m
+	            	[0m[1mazurerm_subnet.my_terraform_subnet: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-anemone-rg/providers/Microsoft.Network/virtualNetworks/demo-anemone-vnet/subnets/demo-anemone-subnet][0m
+	            	[0m[1mazurerm_network_interface.my_terraform_nic: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-anemone-rg/providers/Microsoft.Network/networkInterfaces/demo-anemone-nic][0m
+	            	[0m[1mazurerm_automation_schedule.one_time: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-anemone-rg/providers/Microsoft.Automation/automationAccounts/demo-anemone-automation-account/schedules/demo-anemone-one-time-schedule][0m
+	            	[0m[1mazurerm_automation_schedule.hourly: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-anemone-rg/providers/Microsoft.Automation/automationAccounts/demo-anemone-automation-account/schedules/demo-anemone-hourly-schedule][0m
+	            	[0m[1mazurerm_automation_runbook.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-anemone-rg/providers/Microsoft.Automation/automationAccounts/demo-anemone-automation-account/runbooks/demo-anemone-runbook][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.example: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-anemone-rg/providers/Microsoft.Network/networkInterfaces/demo-anemone-nic|/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-anemone-rg/providers/Microsoft.Network/networkSecurityGroups/demo-anemone-nsg][0m
+	            	[0m[1mazurerm_automation_job_schedule.hourly: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-anemone-rg/providers/Microsoft.Automation/automationAccounts/demo-anemone-automation-account/schedules/demo-anemone-hourly-schedule|/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-anemone-rg/providers/Microsoft.Automation/automationAccounts/demo-anemone-automation-account/runbooks/demo-anemone-runbook][0m
+	            	[0m[1mazurerm_automation_job_schedule.one_time: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-anemone-rg/providers/Microsoft.Automation/automationAccounts/demo-anemone-automation-account/schedules/demo-anemone-one-time-schedule|/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-anemone-rg/providers/Microsoft.Automation/automationAccounts/demo-anemone-automation-account/runbooks/demo-anemone-runbook][0m
+	            	[0m[1mazurerm_windows_virtual_machine.main: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-anemone-rg/providers/Microsoft.Compute/virtualMachines/demo-vm][0m
+	            	
+	            	[1m[36mNote:[0m[1m Objects have changed outside of Terraform
+	            	[0m
+	            	Terraform detected the following changes made outside of Terraform since the
+	            	last "terraform apply" which may have affected this plan:
+	            	
+	            	[1m  # azurerm_public_ip.my_terraform_public_ip[0m has changed
+	            	[0m  [33m~[0m[0m resource "azurerm_public_ip" "my_terraform_public_ip" {
+	            	        id                      = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-anemone-rg/providers/Microsoft.Network/publicIPAddresses/demo-anemone-public-ip"
+	            	      [32m+[0m[0m ip_address              = "20.185.51.88"
+	            	        name                    = "demo-anemone-public-ip"
+	            	        [90m# (9 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	
+	            	Unless you have made equivalent changes to your configuration, or ignored the
+	            	relevant attributes using ignore_changes, the following plan may include
+	            	actions to undo or respond to these changes.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_automation_schedule.hourly[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_automation_schedule" "hourly" {
+	            	        id                      = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-anemone-rg/providers/Microsoft.Automation/automationAccounts/demo-anemone-automation-account/schedules/demo-anemone-hourly-schedule"
+	            	        name                    = "demo-anemone-hourly-schedule"
+	            	      [33m~[0m[0m start_time              = "2025-06-08T00:46:00Z" -> (known after apply)
+	            	        [90m# (7 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_automation_schedule.one_time[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_automation_schedule" "one_time" {
+	            	        id                      = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-anemone-rg/providers/Microsoft.Automation/automationAccounts/demo-anemone-automation-account/schedules/demo-anemone-one-time-schedule"
+	            	        name                    = "demo-anemone-one-time-schedule"
+	            	      [33m~[0m[0m start_time              = "2025-06-08T00:41:00Z" -> (known after apply)
+	            	        [90m# (6 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.main[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "main" {
+	            	        id                                                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/demo-anemone-rg/providers/Microsoft.Compute/virtualMachines/demo-vm"
+	            	        name                                                   = "demo-vm"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (3 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 0 to add, 3 to change, 0 to destroy.
+	            	[0m
+	            	Changes to Outputs:
+	            	  [33m~[0m[0m public_ip_address       = "" [33m->[0m[0m "20.185.51.88"
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-vm-auto-shutdown141170003/src/quickstart/101-vm-auto-shutdown/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-vm-auto-shutdown141170003/src/quickstart/101-vm-auto-shutdown/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-vm-auto-shutdown
+
+FailNow
+
+---
+
 ## 01 Jun 25 01:17 UTC
 
 Success: false
