@@ -1,3 +1,38 @@
+## 15 Jun 25 00:15 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.12.1
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v2.56.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mError building AzureRM Client: obtain subscription(f7a632a5-49db-4c5e-9828-cd62cb753971) from Azure CLI: Error parsing json result from the Azure CLI: Error waiting for the Azure CLI: exit status 1: ERROR: Please run 'az login' to setup account.
+	            	[31m│[0m [0mWARNING: Azure CLI 2.74.0 is the final version available on Azure Linux (Mariner) 2.0 and will not receive further updates. We recommend migrating to Azure Linux 3.0 to access newer versions of Azure CLI and continue receiving updates. For more information: https://go.microsoft.com/fwlink/?linkid=2322402. To disable this warning message, set AZURE_CLI_DISABLE_AZURELINUX2_WARNING environment variable to any value.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on provider.tf line 33, in provider "azurerm":
+	            	[31m│[0m [0m  33: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/template
+
+FailNow
+
+---
+
 ## 08 Jun 25 00:16 UTC
 
 Success: false
