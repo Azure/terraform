@@ -1,6 +1,6 @@
-# Public Hubful Azure Kubernetes Fleet Manager (Fleet)
+# Hubless Azure Kubernetes Fleet Manager (Fleet)
 
-This template deploys a public fleet with a hubcluster.
+This template deploys a fleet without a hubcluster.
 
 ## Terraform resource types
  
