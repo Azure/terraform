@@ -1,3 +1,107 @@
+## 29 Jun 25 00:42 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.12.1
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.6.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:211
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:98
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:210
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.workspace_suffix: Refreshing state... [id=PRERPtocOF][0m
+	            	[0m[1mrandom_string.ci_prefix: Refreshing state... [id=jppmnggx][0m
+	            	[0m[1mdata.azurerm_subnet.ml: Reading...[0m[0m
+	            	[0m[1mdata.azurerm_subnet.training: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-202mlmsev-dev][0m
+	            	[0m[1mdata.azurerm_subnet.aks: Reading...[0m[0m
+	            	[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+	            	[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD0wYThiOTgyNC05NWIzLTQ0OGMtYWJhOC05NjcwZTUxMTRhOTI7b2JqZWN0SWQ9YzRhZmRkNGMtNzU2NS00MmI3LWI5ODQtZTZhMjI0ZDEyMDQ3O3N1YnNjcmlwdGlvbklkPWY3YTYzMmE1LTQ5ZGItNGM1ZS05ODI4LWNkNjJjYjc1Mzk3MTt0ZW5hbnRJZD1mYzJiZjk2Ni1hOTg0LTQzOGMtOTNiNy1iYzVhMDZmZTdmMGQ=][0m
+	            	[0m[1mdata.azurerm_subnet.aks: Read complete after 0s [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-202-mlmsev-network-la3ihq/providers/Microsoft.Network/virtualNetworks/202-mlmsev-vnet/subnets/aks][0m
+	            	[0m[1mdata.azurerm_subnet.training: Read complete after 0s [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-202-mlmsev-network-la3ihq/providers/Microsoft.Network/virtualNetworks/202-mlmsev-vnet/subnets/training][0m
+	            	[0m[1mazurerm_application_insights.default: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-202mlmsev-dev/providers/Microsoft.Insights/components/appi-202mlmsev-dev][0m
+	            	[0m[1mazurerm_key_vault.default: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-202mlmsev-dev/providers/Microsoft.KeyVault/vaults/kv-202mlmsev-dev][0m
+	            	[0m[1mazurerm_route_table.rt-aks: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-202mlmsev-dev/providers/Microsoft.Network/routeTables/rt-aks][0m
+	            	[0m[1mazurerm_route_table.rt-training: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-202mlmsev-dev/providers/Microsoft.Network/routeTables/rt-training][0m
+	            	[0m[1mazurerm_network_security_group.nsg-aks: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-202mlmsev-dev/providers/Microsoft.Network/networkSecurityGroups/nsg-aks][0m
+	            	[0m[1mazurerm_container_registry.default: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-202mlmsev-dev/providers/Microsoft.ContainerRegistry/registries/cr202mlmsevdev][0m
+	            	[0m[1mazurerm_network_security_group.nsg-training: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-202mlmsev-dev/providers/Microsoft.Network/networkSecurityGroups/nsg-training][0m
+	            	[0m[1mazurerm_storage_account.default: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-202mlmsev-dev/providers/Microsoft.Storage/storageAccounts/st202mlmsevdev][0m
+	            	[0m[1mdata.azurerm_subnet.ml: Read complete after 0s [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-202-mlmsev-network-la3ihq/providers/Microsoft.Network/virtualNetworks/202-mlmsev-vnet/subnets/ml][0m
+	            	[0m[1mazurerm_route.aks-Internet-Route: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-202mlmsev-dev/providers/Microsoft.Network/routeTables/rt-aks/routes/Internet][0m
+	            	[0m[1mazurerm_subnet_route_table_association.rt-aks-link: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-202-mlmsev-network-la3ihq/providers/Microsoft.Network/virtualNetworks/202-mlmsev-vnet/subnets/aks][0m
+	            	[0m[1mazurerm_subnet_network_security_group_association.nsg-aks-link: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-202-mlmsev-network-la3ihq/providers/Microsoft.Network/virtualNetworks/202-mlmsev-vnet/subnets/aks][0m
+	            	[0m[1mazurerm_subnet_network_security_group_association.nsg-training-link: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-202-mlmsev-network-la3ihq/providers/Microsoft.Network/virtualNetworks/202-mlmsev-vnet/subnets/training][0m
+	            	[0m[1mazurerm_subnet_route_table_association.rt-training-link: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-202-mlmsev-network-la3ihq/providers/Microsoft.Network/virtualNetworks/202-mlmsev-vnet/subnets/training][0m
+	            	[0m[1mazurerm_route.training-AzureMLRoute: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-202mlmsev-dev/providers/Microsoft.Network/routeTables/rt-training/routes/AzureMLRoute][0m
+	            	[0m[1mazurerm_route.training-BatchRoute: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-202mlmsev-dev/providers/Microsoft.Network/routeTables/rt-training/routes/BatchRoute][0m
+	            	[0m[1mazurerm_route.training-Internet-Route: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-202mlmsev-dev/providers/Microsoft.Network/routeTables/rt-training/routes/Internet][0m
+	            	[0m[1mazurerm_private_endpoint.kv_ple: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-202mlmsev-dev/providers/Microsoft.Network/privateEndpoints/ple-202mlmsev-dev-kv][0m
+	            	[0m[1mazurerm_private_endpoint.cr_ple: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-202mlmsev-dev/providers/Microsoft.Network/privateEndpoints/ple-202mlmsev-dev-cr][0m
+	            	[0m[1mazurerm_machine_learning_workspace.default: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-202mlmsev-dev/providers/Microsoft.MachineLearningServices/workspaces/mlw-202mlmsev-dev-PRERPtocOF][0m
+	            	[0m[1mazurerm_private_endpoint.storage_ple_file: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-202mlmsev-dev/providers/Microsoft.Network/privateEndpoints/ple-202mlmsev-dev-st-file][0m
+	            	[0m[1mazurerm_private_endpoint.st_ple_blob: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-202mlmsev-dev/providers/Microsoft.Network/privateEndpoints/ple-202mlmsev-dev-st-blob][0m
+	            	[0m[1mazurerm_machine_learning_compute_cluster.image-builder: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-202mlmsev-dev/providers/Microsoft.MachineLearningServices/workspaces/mlw-202mlmsev-dev-PRERPtocOF/computes/image-builder][0m
+	            	[0m[1mazurerm_machine_learning_compute_cluster.compute: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-202mlmsev-dev/providers/Microsoft.MachineLearningServices/workspaces/mlw-202mlmsev-dev-PRERPtocOF/computes/cpu-cluster][0m
+	            	[0m[1mazurerm_private_endpoint.mlw_ple: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-202mlmsev-dev/providers/Microsoft.Network/privateEndpoints/ple-202mlmsev-dev-mlw][0m
+	            	[0m[1mazurerm_machine_learning_compute_instance.compute_instance: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-202mlmsev-dev/providers/Microsoft.MachineLearningServices/workspaces/mlw-202mlmsev-dev-PRERPtocOF/computes/jppmnggxinstance][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_application_insights.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_application_insights" "default" {
+	            	        id                                    = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-202mlmsev-dev/providers/Microsoft.Insights/components/appi-202mlmsev-dev"
+	            	        name                                  = "appi-202mlmsev-dev"
+	            	        tags                                  = {}
+	            	      [31m-[0m[0m workspace_id                          = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/ai_appi-202mlmsev-dev_2b6be66c-f95b-4f8b-a409-1e3ca1751148_managed/providers/Microsoft.OperationalInsights/workspaces/managed-appi-202mlmsev-dev-ws" [90m-> null[0m[0m
+	            	        [90m# (15 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 0 to add, 1 to change, 0 to destroy.
+	            	[0m[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_machine_learning_compute_instance.compute_instance,
+	            	[33m│[0m [0m  on compute.tf line 12, in resource "azurerm_machine_learning_compute_instance" "compute_instance":
+	            	[33m│[0m [0m  12:   location                      = [4mazurerm_resource_group.default.location[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe `azurerm_machine_learning_compute_instance` must be deployed to the
+	            	[33m│[0m [0msame location as the associated `azurerm_machine_learning_workspace`
+	            	[33m│[0m [0mresource, as the `location` fields must be the same the `location` field no
+	            	[33m│[0m [0mlonger has any effect and will be removed in version 4.0 of the AzureRM
+	            	[33m│[0m [0mProvider
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/202-machine-learning-moderately-secure-existing-VNet1889782925/src/quickstart/202-machine-learning-moderately-secure-existing-VNet/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/202-machine-learning-moderately-secure-existing-VNet1889782925/src/quickstart/202-machine-learning-moderately-secure-existing-VNet/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/202-machine-learning-moderately-secure-existing-VNet
+
+FailNow
+
+---
+
 ## 15 Jun 25 00:35 UTC
 
 Success: false
