@@ -1,3 +1,43 @@
+## 06 Jul 25 00:46 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.12.1
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
++ provider registry.terraform.io/hashicorp/time v0.13.1
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Compute (Subscription: "f7a632a5-49db-4c5e-9828-cd62cb753971"
+	            	[31m│[0m [0mResource Group Name: "rg-301mlhss-dev-0wd2"
+	            	[31m│[0m [0mWorkspace Name: "mlw-301mlhss-dev-0wd2"
+	            	[31m│[0m [0mCompute Name: "cpu-cluster"): unexpected status 499 (499 ) with error: FailedIdentityOperation: Identity operation for resource '/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-301mlhss-dev-0wd2/providers/Microsoft.MachineLearningServices/workspaces/mlw-301mlhss-dev-0wd2/computes/cpu-cluster' failed with error 'Failed to perform resource identity operation. Status: '499'. Response: '{"error":{"code":"499","message":"Client Closed Request"}}'.'.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_machine_learning_compute_cluster.compute,
+	            	[31m│[0m [0m  on compute.tf line 23, in resource "azurerm_machine_learning_compute_cluster" "compute":
+	            	[31m│[0m [0m  23: resource "azurerm_machine_learning_compute_cluster" "compute" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/301-machine-learning-hub-spoke-secure
+
+FailNow
+
+---
+
 ## 29 Jun 25 00:49 UTC
 
 Success: true
