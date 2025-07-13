@@ -1,3 +1,243 @@
+## 13 Jul 25 02:00 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.12.2
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=ebg0jx0f][0m
+	            	[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f][0m
+	            	[0m[1mazurerm_virtual_network.vnet: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Network/virtualNetworks/myVNet][0m
+	            	[0m[1mazurerm_public_ip.pip: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Network/publicIPAddresses/myAGPublicIPAddress][0m
+	            	[0m[1mazurerm_subnet.frontend: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Network/virtualNetworks/myVNet/subnets/myAGSubnet][0m
+	            	[0m[1mazurerm_subnet.backend: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Network/virtualNetworks/myVNet/subnets/myBackendSubnet][0m
+	            	[0m[1mazurerm_network_interface.nic[1]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Network/networkInterfaces/nic-2][0m
+	            	[0m[1mazurerm_network_interface.nic[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Network/networkInterfaces/nic-1][0m
+	            	[0m[1mazurerm_application_gateway.main: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Network/applicationGateways/myAppGateway][0m
+	            	[0m[1mazurerm_network_interface_application_gateway_backend_address_pool_association.nic-assoc[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Network/networkInterfaces/nic-1/ipConfigurations/nic-ipconfig-1|/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Network/applicationGateways/myAppGateway/backendAddressPools/myBackendPool][0m
+	            	[0m[1mazurerm_network_interface_application_gateway_backend_address_pool_association.nic-assoc[1]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Network/networkInterfaces/nic-2/ipConfigurations/nic-ipconfig-2|/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Network/applicationGateways/myAppGateway/backendAddressPools/myBackendPool][0m
+	            	[0m[1mazurerm_windows_virtual_machine.vm[1]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Compute/virtualMachines/myVM2][0m
+	            	[0m[1mazurerm_windows_virtual_machine.vm[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Compute/virtualMachines/myVM1][0m
+	            	[0m[1mazurerm_virtual_machine_extension.vm-extensions[0]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Compute/virtualMachines/myVM1/extensions/vm1-ext][0m
+	            	[0m[1mazurerm_virtual_machine_extension.vm-extensions[1]: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Compute/virtualMachines/myVM2/extensions/vm2-ext][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	[31m-[0m/[32m+[0m destroy and then create replacement[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_application_gateway.main[0m must be [1m[31mreplaced[0m
+	            	[0m[31m-[0m/[32m+[0m[0m resource "azurerm_application_gateway" "main" {
+	            	      [31m-[0m[0m enable_http2                      = false [90m-> null[0m[0m
+	            	      [31m-[0m[0m fips_enabled                      = false [90m-> null[0m[0m
+	            	      [31m-[0m[0m force_firewall_policy_association = false [90m-> null[0m[0m
+	            	      [33m~[0m[0m id                                = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Network/applicationGateways/myAppGateway" -> (known after apply)
+	            	        name                              = "myAppGateway"
+	            	      [33m~[0m[0m private_endpoint_connection       = [] -> (known after apply)
+	            	      [31m-[0m[0m tags                              = {} [90m-> null[0m[0m
+	            	      [31m-[0m[0m zones                             = [ [31m# forces replacement[0m[0m
+	            	          [31m-[0m[0m "1",
+	            	          [31m-[0m[0m "2",
+	            	          [31m-[0m[0m "3",
+	            	        ] [90m-> null[0m[0m
+	            	        [90m# (3 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [31m-[0m[0m backend_address_pool {
+	            	          [31m-[0m[0m fqdns        = [] [90m-> null[0m[0m
+	            	          [31m-[0m[0m id           = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Network/applicationGateways/myAppGateway/backendAddressPools/myBackendPool" [90m-> null[0m[0m
+	            	          [31m-[0m[0m ip_addresses = [] [90m-> null[0m[0m
+	            	          [31m-[0m[0m name         = "myBackendPool" [90m-> null[0m[0m
+	            	        }
+	            	      [32m+[0m[0m backend_address_pool {
+	            	          [32m+[0m[0m fqdns        = []
+	            	          [32m+[0m[0m id           = (known after apply)
+	            	          [32m+[0m[0m ip_addresses = []
+	            	          [32m+[0m[0m name         = "myBackendPool"
+	            	        }
+	            	
+	            	      [31m-[0m[0m backend_http_settings {
+	            	          [31m-[0m[0m cookie_based_affinity               = "Disabled" [90m-> null[0m[0m
+	            	          [31m-[0m[0m id                                  = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Network/applicationGateways/myAppGateway/backendHttpSettingsCollection/myHTTPsetting" [90m-> null[0m[0m
+	            	          [31m-[0m[0m name                                = "myHTTPsetting" [90m-> null[0m[0m
+	            	          [31m-[0m[0m pick_host_name_from_backend_address = false [90m-> null[0m[0m
+	            	          [31m-[0m[0m port                                = 80 [90m-> null[0m[0m
+	            	          [31m-[0m[0m protocol                            = "Http" [90m-> null[0m[0m
+	            	          [31m-[0m[0m request_timeout                     = 60 [90m-> null[0m[0m
+	            	          [31m-[0m[0m trusted_root_certificate_names      = [] [90m-> null[0m[0m
+	            	            [90m# (5 unchanged attributes hidden)[0m[0m
+	            	        }
+	            	      [32m+[0m[0m backend_http_settings {
+	            	          [32m+[0m[0m cookie_based_affinity               = "Disabled"
+	            	          [32m+[0m[0m id                                  = (known after apply)
+	            	          [32m+[0m[0m name                                = "myHTTPsetting"
+	            	          [32m+[0m[0m pick_host_name_from_backend_address = false
+	            	          [32m+[0m[0m port                                = 80
+	            	          [32m+[0m[0m probe_id                            = (known after apply)
+	            	          [32m+[0m[0m protocol                            = "Http"
+	            	          [32m+[0m[0m request_timeout                     = 60
+	            	          [32m+[0m[0m trusted_root_certificate_names      = []
+	            	            [90m# (4 unchanged attributes hidden)[0m[0m
+	            	        }
+	            	
+	            	      [33m~[0m[0m frontend_ip_configuration {
+	            	          [33m~[0m[0m id                              = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Network/applicationGateways/myAppGateway/frontendIPConfigurations/myAGIPConfig" -> (known after apply)
+	            	            name                            = "myAGIPConfig"
+	            	          [32m+[0m[0m private_ip_address              = (known after apply)
+	            	          [32m+[0m[0m private_link_configuration_id   = (known after apply)
+	            	            [90m# (4 unchanged attributes hidden)[0m[0m
+	            	        }
+	            	
+	            	      [31m-[0m[0m frontend_port {
+	            	          [31m-[0m[0m id   = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Network/applicationGateways/myAppGateway/frontendPorts/myFrontendPort" [90m-> null[0m[0m
+	            	          [31m-[0m[0m name = "myFrontendPort" [90m-> null[0m[0m
+	            	          [31m-[0m[0m port = 80 [90m-> null[0m[0m
+	            	        }
+	            	      [32m+[0m[0m frontend_port {
+	            	          [32m+[0m[0m id   = (known after apply)
+	            	          [32m+[0m[0m name = "myFrontendPort"
+	            	          [32m+[0m[0m port = 80
+	            	        }
+	            	
+	            	      [33m~[0m[0m gateway_ip_configuration {
+	            	          [33m~[0m[0m id        = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Network/applicationGateways/myAppGateway/gatewayIPConfigurations/my-gateway-ip-configuration" -> (known after apply)
+	            	            name      = "my-gateway-ip-configuration"
+	            	            [90m# (1 unchanged attribute hidden)[0m[0m
+	            	        }
+	            	
+	            	      [31m-[0m[0m http_listener {
+	            	          [31m-[0m[0m frontend_ip_configuration_id   = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Network/applicationGateways/myAppGateway/frontendIPConfigurations/myAGIPConfig" [90m-> null[0m[0m
+	            	          [31m-[0m[0m frontend_ip_configuration_name = "myAGIPConfig" [90m-> null[0m[0m
+	            	          [31m-[0m[0m frontend_port_id               = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Network/applicationGateways/myAppGateway/frontendPorts/myFrontendPort" [90m-> null[0m[0m
+	            	          [31m-[0m[0m frontend_port_name             = "myFrontendPort" [90m-> null[0m[0m
+	            	          [31m-[0m[0m host_names                     = [] [90m-> null[0m[0m
+	            	          [31m-[0m[0m id                             = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Network/applicationGateways/myAppGateway/httpListeners/myListener" [90m-> null[0m[0m
+	            	          [31m-[0m[0m name                           = "myListener" [90m-> null[0m[0m
+	            	          [31m-[0m[0m protocol                       = "Http" [90m-> null[0m[0m
+	            	          [31m-[0m[0m require_sni                    = false [90m-> null[0m[0m
+	            	            [90m# (6 unchanged attributes hidden)[0m[0m
+	            	        }
+	            	      [32m+[0m[0m http_listener {
+	            	          [32m+[0m[0m frontend_ip_configuration_id   = (known after apply)
+	            	          [32m+[0m[0m frontend_ip_configuration_name = "myAGIPConfig"
+	            	          [32m+[0m[0m frontend_port_id               = (known after apply)
+	            	          [32m+[0m[0m frontend_port_name             = "myFrontendPort"
+	            	          [32m+[0m[0m host_names                     = []
+	            	          [32m+[0m[0m id                             = (known after apply)
+	            	          [32m+[0m[0m name                           = "myListener"
+	            	          [32m+[0m[0m protocol                       = "Http"
+	            	          [32m+[0m[0m ssl_certificate_id             = (known after apply)
+	            	          [32m+[0m[0m ssl_profile_id                 = (known after apply)
+	            	            [90m# (4 unchanged attributes hidden)[0m[0m
+	            	        }
+	            	
+	            	      [31m-[0m[0m request_routing_rule {
+	            	          [31m-[0m[0m backend_address_pool_id     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Network/applicationGateways/myAppGateway/backendAddressPools/myBackendPool" [90m-> null[0m[0m
+	            	          [31m-[0m[0m backend_address_pool_name   = "myBackendPool" [90m-> null[0m[0m
+	            	          [31m-[0m[0m backend_http_settings_id    = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Network/applicationGateways/myAppGateway/backendHttpSettingsCollection/myHTTPsetting" [90m-> null[0m[0m
+	            	          [31m-[0m[0m backend_http_settings_name  = "myHTTPsetting" [90m-> null[0m[0m
+	            	          [31m-[0m[0m http_listener_id            = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Network/applicationGateways/myAppGateway/httpListeners/myListener" [90m-> null[0m[0m
+	            	          [31m-[0m[0m http_listener_name          = "myListener" [90m-> null[0m[0m
+	            	          [31m-[0m[0m id                          = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Network/applicationGateways/myAppGateway/requestRoutingRules/myRoutingRule" [90m-> null[0m[0m
+	            	          [31m-[0m[0m name                        = "myRoutingRule" [90m-> null[0m[0m
+	            	          [31m-[0m[0m priority                    = 1 [90m-> null[0m[0m
+	            	          [31m-[0m[0m rule_type                   = "Basic" [90m-> null[0m[0m
+	            	            [90m# (6 unchanged attributes hidden)[0m[0m
+	            	        }
+	            	      [32m+[0m[0m request_routing_rule {
+	            	          [32m+[0m[0m backend_address_pool_id     = (known after apply)
+	            	          [32m+[0m[0m backend_address_pool_name   = "myBackendPool"
+	            	          [32m+[0m[0m backend_http_settings_id    = (known after apply)
+	            	          [32m+[0m[0m backend_http_settings_name  = "myHTTPsetting"
+	            	          [32m+[0m[0m http_listener_id            = (known after apply)
+	            	          [32m+[0m[0m http_listener_name          = "myListener"
+	            	          [32m+[0m[0m id                          = (known after apply)
+	            	          [32m+[0m[0m name                        = "myRoutingRule"
+	            	          [32m+[0m[0m priority                    = 1
+	            	          [32m+[0m[0m redirect_configuration_id   = (known after apply)
+	            	          [32m+[0m[0m rewrite_rule_set_id         = (known after apply)
+	            	          [32m+[0m[0m rule_type                   = "Basic"
+	            	          [32m+[0m[0m url_path_map_id             = (known after apply)
+	            	            [90m# (3 unchanged attributes hidden)[0m[0m
+	            	        }
+	            	
+	            	      [33m~[0m[0m ssl_policy (known after apply)
+	            	      [31m-[0m[0m ssl_policy {
+	            	          [31m-[0m[0m cipher_suites        = [] [90m-> null[0m[0m
+	            	          [31m-[0m[0m disabled_protocols   = [] [90m-> null[0m[0m
+	            	          [31m-[0m[0m policy_name          = "AppGwSslPolicy20150501" [90m-> null[0m[0m
+	            	          [31m-[0m[0m policy_type          = "Predefined" [90m-> null[0m[0m
+	            	            [90m# (1 unchanged attribute hidden)[0m[0m
+	            	        }
+	            	
+	            	        [90m# (1 unchanged block hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_network_interface_application_gateway_backend_address_pool_association.nic-assoc[0][0m must be [1m[31mreplaced[0m
+	            	[0m[31m-[0m/[32m+[0m[0m resource "azurerm_network_interface_application_gateway_backend_address_pool_association" "nic-assoc" {
+	            	      [33m~[0m[0m backend_address_pool_id = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Network/applicationGateways/myAppGateway/backendAddressPools/myBackendPool" -> (known after apply) [31m# forces replacement[0m[0m
+	            	      [33m~[0m[0m id                      = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Network/networkInterfaces/nic-1/ipConfigurations/nic-ipconfig-1|/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Network/applicationGateways/myAppGateway/backendAddressPools/myBackendPool" -> (known after apply)
+	            	        [90m# (2 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_network_interface_application_gateway_backend_address_pool_association.nic-assoc[1][0m must be [1m[31mreplaced[0m
+	            	[0m[31m-[0m/[32m+[0m[0m resource "azurerm_network_interface_application_gateway_backend_address_pool_association" "nic-assoc" {
+	            	      [33m~[0m[0m backend_address_pool_id = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Network/applicationGateways/myAppGateway/backendAddressPools/myBackendPool" -> (known after apply) [31m# forces replacement[0m[0m
+	            	      [33m~[0m[0m id                      = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Network/networkInterfaces/nic-2/ipConfigurations/nic-ipconfig-2|/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Network/applicationGateways/myAppGateway/backendAddressPools/myBackendPool" -> (known after apply)
+	            	        [90m# (2 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.vm[0][0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "vm" {
+	            	        id                                                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Compute/virtualMachines/myVM1"
+	            	        name                                                   = "myVM1"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.vm[1][0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "vm" {
+	            	        id                                                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/101-application-gateway-ebg0jx0f/providers/Microsoft.Compute/virtualMachines/myVM2"
+	            	        name                                                   = "myVM2"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 3 to add, 2 to change, 3 to destroy.
+	            	[0m[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-application-gateway3032632867/src/quickstart/101-application-gateway/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-application-gateway3032632867/src/quickstart/101-application-gateway/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-application-gateway
+
+FailNow
+
+---
+
 ## 06 Jul 25 01:57 UTC
 
 Success: false
