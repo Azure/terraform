@@ -67,11 +67,11 @@ location = "West US 2"
 
 # Use specific resource names
 resource_group_name = "my-fleet-rg"
-fleet_name         = "my-fleet"
+fleet_name          = "my-fleet"
 
 # Customize Kubernetes versions for upgrade scenarios
 kubernetes_versions = {
-  member1 = "1.31"  # Staging - same as hub
+  member1 = "1.31"   # Staging - same as hub
   member2 = "1.30.6" # Production - older version
   member3 = "1.30.6" # Production - older version  
 }
@@ -81,7 +81,7 @@ node_vm_size      = "Standard_D4s_v3"
 member_node_count = 2
 
 # Configure auto-upgrade behavior
-autoupgrade_channel = "stabe"  # Options: rapid, stable
+autoupgrade_channel = "stabe" # Options: rapid, stable
 ```
 
 ### Update Strategy
