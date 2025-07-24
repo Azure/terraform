@@ -7,7 +7,7 @@ resource "random_string" "suffix" {
 
 # Local values for resource naming
 locals {
-  resource_group_name = var.resource_group_name != "" ? var.resource_group_name : "rg-fleet-example-${random_string.suffix.result}"
+  resource_group_name = coalesce(var.resource_group_name, "rg-fleet-example-${random_string.suffix.result}")
 }
 
 # Resource Group
