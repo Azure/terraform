@@ -1,3 +1,306 @@
+## 20 Jul 25 01:11 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.12.2
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.rg_name: Refreshing state... [id=rg-enormous-bass][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass/providers/Microsoft.ManagedIdentity/userAssignedIdentities/aks-aks-cluster][0m
+	            	[0m[1mazurerm_public_ip.pip: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass/providers/Microsoft.Network/publicIPAddresses/appgw-pip][0m
+	            	[0m[1mazurerm_virtual_network.vnet: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass/providers/Microsoft.Network/virtualNetworks/aksVirtualNetwork][0m
+	            	[0m[1mdata.azurerm_subnet.kubesubnet: Reading...[0m[0m
+	            	[0m[1mdata.azurerm_subnet.appgwsubnet: Reading...[0m[0m
+	            	[0m[1mdata.azurerm_subnet.kubesubnet: Read complete after 0s [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass/providers/Microsoft.Network/virtualNetworks/aksVirtualNetwork/subnets/akssubnet][0m
+	            	[0m[1mdata.azurerm_subnet.appgwsubnet: Read complete after 1s [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass/providers/Microsoft.Network/virtualNetworks/aksVirtualNetwork/subnets/appgwsubnet][0m
+	            	[0m[1mazurerm_application_gateway.appgw: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass/providers/Microsoft.Network/applicationGateways/ApplicationGateway1][0m
+	            	[0m[1mazurerm_kubernetes_cluster.aks: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass/providers/Microsoft.ContainerService/managedClusters/aks-cluster][0m
+	            	[0m[1mazurerm_role_assignment.ra3: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass/providers/Microsoft.Network/applicationGateways/ApplicationGateway1/providers/Microsoft.Authorization/roleAssignments/e5ecb802-fe69-775c-f2e9-52e8b60d354d][0m
+	            	[0m[1mazurerm_role_assignment.ra2: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass/providers/Microsoft.Network/virtualNetworks/aksVirtualNetwork/providers/Microsoft.Authorization/roleAssignments/79a547ab-ccc0-ec53-a7c6-a8c4bccca54c][0m
+	            	[0m[1mazurerm_role_assignment.ra1: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass/providers/Microsoft.Authorization/roleAssignments/644406af-e914-c055-b524-937921bb8989][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	[31m-[0m/[32m+[0m destroy and then create replacement[0m
+	            	 [36m<=[0m read (data resources)[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # data.azurerm_user_assigned_identity.ingress[0m will be read during apply
+	            	  # (depends on a resource or a module with changes pending)
+	            	[0m [36m<=[0m[0m data "azurerm_user_assigned_identity" "ingress" {
+	            	      [32m+[0m[0m client_id           = (known after apply)
+	            	      [32m+[0m[0m id                  = (known after apply)
+	            	      [32m+[0m[0m location            = (known after apply)
+	            	      [32m+[0m[0m name                = "ingressapplicationgateway-aks-cluster"
+	            	      [32m+[0m[0m principal_id        = (known after apply)
+	            	      [32m+[0m[0m resource_group_name = "MC_rg-enormous-bass_aks-cluster_eastus"
+	            	      [32m+[0m[0m tags                = (known after apply)
+	            	      [32m+[0m[0m tenant_id           = (known after apply)
+	            	    }
+	            	
+	            	[1m  # azurerm_application_gateway.appgw[0m must be [1m[31mreplaced[0m
+	            	[0m[31m-[0m/[32m+[0m[0m resource "azurerm_application_gateway" "appgw" {
+	            	      [31m-[0m[0m enable_http2                      = false [90m-> null[0m[0m
+	            	      [31m-[0m[0m fips_enabled                      = false [90m-> null[0m[0m
+	            	      [31m-[0m[0m force_firewall_policy_association = false [90m-> null[0m[0m
+	            	      [33m~[0m[0m id                                = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass/providers/Microsoft.Network/applicationGateways/ApplicationGateway1" -> (known after apply)
+	            	        name                              = "ApplicationGateway1"
+	            	      [33m~[0m[0m private_endpoint_connection       = [] -> (known after apply)
+	            	      [31m-[0m[0m tags                              = {
+	            	          [31m-[0m[0m "ingress-for-aks-cluster-id" = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourcegroups/rg-enormous-bass/providers/Microsoft.ContainerService/managedClusters/aks-cluster"
+	            	          [31m-[0m[0m "managed-by-k8s-ingress"     = "1.8.1/05a0d9c7/2025-04-04-14:12T-0700"
+	            	        } [90m-> null[0m[0m
+	            	      [31m-[0m[0m zones                             = [ [31m# forces replacement[0m[0m
+	            	          [31m-[0m[0m "1",
+	            	          [31m-[0m[0m "2",
+	            	          [31m-[0m[0m "3",
+	            	        ] [90m-> null[0m[0m
+	            	        [90m# (3 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [31m-[0m[0m backend_address_pool {
+	            	          [31m-[0m[0m fqdns        = [] [90m-> null[0m[0m
+	            	          [31m-[0m[0m id           = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass/providers/Microsoft.Network/applicationGateways/ApplicationGateway1/backendAddressPools/defaultaddresspool" [90m-> null[0m[0m
+	            	          [31m-[0m[0m ip_addresses = [] [90m-> null[0m[0m
+	            	          [31m-[0m[0m name         = "defaultaddresspool" [90m-> null[0m[0m
+	            	        }
+	            	      [32m+[0m[0m backend_address_pool {
+	            	          [32m+[0m[0m fqdns        = []
+	            	          [32m+[0m[0m id           = (known after apply)
+	            	          [32m+[0m[0m ip_addresses = []
+	            	          [32m+[0m[0m name         = "aksVirtualNetwork-beap"
+	            	        }
+	            	
+	            	      [31m-[0m[0m backend_http_settings {
+	            	          [31m-[0m[0m cookie_based_affinity               = "Disabled" [90m-> null[0m[0m
+	            	          [31m-[0m[0m id                                  = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass/providers/Microsoft.Network/applicationGateways/ApplicationGateway1/backendHttpSettingsCollection/defaulthttpsetting" [90m-> null[0m[0m
+	            	          [31m-[0m[0m name                                = "defaulthttpsetting" [90m-> null[0m[0m
+	            	          [31m-[0m[0m pick_host_name_from_backend_address = false [90m-> null[0m[0m
+	            	          [31m-[0m[0m port                                = 80 [90m-> null[0m[0m
+	            	          [31m-[0m[0m probe_id                            = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass/providers/Microsoft.Network/applicationGateways/ApplicationGateway1/probes/defaultprobe-Http" [90m-> null[0m[0m
+	            	          [31m-[0m[0m probe_name                          = "defaultprobe-Http" [90m-> null[0m[0m
+	            	          [31m-[0m[0m protocol                            = "Http" [90m-> null[0m[0m
+	            	          [31m-[0m[0m request_timeout                     = 30 [90m-> null[0m[0m
+	            	          [31m-[0m[0m trusted_root_certificate_names      = [] [90m-> null[0m[0m
+	            	            [90m# (3 unchanged attributes hidden)[0m[0m
+	            	        }
+	            	      [32m+[0m[0m backend_http_settings {
+	            	          [32m+[0m[0m cookie_based_affinity               = "Disabled"
+	            	          [32m+[0m[0m id                                  = (known after apply)
+	            	          [32m+[0m[0m name                                = "aksVirtualNetwork-be-htst"
+	            	          [32m+[0m[0m pick_host_name_from_backend_address = false
+	            	          [32m+[0m[0m port                                = 80
+	            	          [32m+[0m[0m probe_id                            = (known after apply)
+	            	          [32m+[0m[0m protocol                            = "Http"
+	            	          [32m+[0m[0m request_timeout                     = 1
+	            	          [32m+[0m[0m trusted_root_certificate_names      = []
+	            	            [90m# (4 unchanged attributes hidden)[0m[0m
+	            	        }
+	            	
+	            	      [33m~[0m[0m frontend_ip_configuration {
+	            	          [33m~[0m[0m id                              = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass/providers/Microsoft.Network/applicationGateways/ApplicationGateway1/frontendIPConfigurations/aksVirtualNetwork-feip" -> (known after apply)
+	            	            name                            = "aksVirtualNetwork-feip"
+	            	          [32m+[0m[0m private_ip_address              = (known after apply)
+	            	          [32m+[0m[0m private_link_configuration_id   = (known after apply)
+	            	            [90m# (4 unchanged attributes hidden)[0m[0m
+	            	        }
+	            	
+	            	      [31m-[0m[0m frontend_port {
+	            	          [31m-[0m[0m id   = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass/providers/Microsoft.Network/applicationGateways/ApplicationGateway1/frontendPorts/aksVirtualNetwork-feport" [90m-> null[0m[0m
+	            	          [31m-[0m[0m name = "aksVirtualNetwork-feport" [90m-> null[0m[0m
+	            	          [31m-[0m[0m port = 80 [90m-> null[0m[0m
+	            	        }
+	            	      [32m+[0m[0m frontend_port {
+	            	          [32m+[0m[0m id   = (known after apply)
+	            	          [32m+[0m[0m name = "aksVirtualNetwork-feport"
+	            	          [32m+[0m[0m port = 80
+	            	        }
+	            	
+	            	      [33m~[0m[0m gateway_ip_configuration {
+	            	          [33m~[0m[0m id        = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass/providers/Microsoft.Network/applicationGateways/ApplicationGateway1/gatewayIPConfigurations/appGatewayIpConfig" -> (known after apply)
+	            	            name      = "appGatewayIpConfig"
+	            	            [90m# (1 unchanged attribute hidden)[0m[0m
+	            	        }
+	            	
+	            	      [31m-[0m[0m http_listener {
+	            	          [31m-[0m[0m frontend_ip_configuration_id   = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass/providers/Microsoft.Network/applicationGateways/ApplicationGateway1/frontendIPConfigurations/aksVirtualNetwork-feip" [90m-> null[0m[0m
+	            	          [31m-[0m[0m frontend_ip_configuration_name = "aksVirtualNetwork-feip" [90m-> null[0m[0m
+	            	          [31m-[0m[0m frontend_port_id               = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass/providers/Microsoft.Network/applicationGateways/ApplicationGateway1/frontendPorts/aksVirtualNetwork-feport" [90m-> null[0m[0m
+	            	          [31m-[0m[0m frontend_port_name             = "aksVirtualNetwork-feport" [90m-> null[0m[0m
+	            	          [31m-[0m[0m host_names                     = [] [90m-> null[0m[0m
+	            	          [31m-[0m[0m id                             = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass/providers/Microsoft.Network/applicationGateways/ApplicationGateway1/httpListeners/fl-452c578b4f742bd7a3927c3caf2b604e" [90m-> null[0m[0m
+	            	          [31m-[0m[0m name                           = "fl-452c578b4f742bd7a3927c3caf2b604e" [90m-> null[0m[0m
+	            	          [31m-[0m[0m protocol                       = "Http" [90m-> null[0m[0m
+	            	          [31m-[0m[0m require_sni                    = false [90m-> null[0m[0m
+	            	            [90m# (6 unchanged attributes hidden)[0m[0m
+	            	        }
+	            	      [32m+[0m[0m http_listener {
+	            	          [32m+[0m[0m frontend_ip_configuration_id   = (known after apply)
+	            	          [32m+[0m[0m frontend_ip_configuration_name = "aksVirtualNetwork-feip"
+	            	          [32m+[0m[0m frontend_port_id               = (known after apply)
+	            	          [32m+[0m[0m frontend_port_name             = "aksVirtualNetwork-feport"
+	            	          [32m+[0m[0m host_names                     = []
+	            	          [32m+[0m[0m id                             = (known after apply)
+	            	          [32m+[0m[0m name                           = "aksVirtualNetwork-httplstn"
+	            	          [32m+[0m[0m protocol                       = "Http"
+	            	          [32m+[0m[0m ssl_certificate_id             = (known after apply)
+	            	          [32m+[0m[0m ssl_profile_id                 = (known after apply)
+	            	            [90m# (4 unchanged attributes hidden)[0m[0m
+	            	        }
+	            	
+	            	      [31m-[0m[0m probe {
+	            	          [31m-[0m[0m host                                      = "localhost" [90m-> null[0m[0m
+	            	          [31m-[0m[0m id                                        = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass/providers/Microsoft.Network/applicationGateways/ApplicationGateway1/probes/defaultprobe-Http" [90m-> null[0m[0m
+	            	          [31m-[0m[0m interval                                  = 30 [90m-> null[0m[0m
+	            	          [31m-[0m[0m minimum_servers                           = 0 [90m-> null[0m[0m
+	            	          [31m-[0m[0m name                                      = "defaultprobe-Http" [90m-> null[0m[0m
+	            	          [31m-[0m[0m path                                      = "/" [90m-> null[0m[0m
+	            	          [31m-[0m[0m pick_host_name_from_backend_http_settings = false [90m-> null[0m[0m
+	            	          [31m-[0m[0m port                                      = 0 [90m-> null[0m[0m
+	            	          [31m-[0m[0m protocol                                  = "Http" [90m-> null[0m[0m
+	            	          [31m-[0m[0m timeout                                   = 30 [90m-> null[0m[0m
+	            	          [31m-[0m[0m unhealthy_threshold                       = 3 [90m-> null[0m[0m
+	            	
+	            	          [31m-[0m[0m match {
+	            	              [31m-[0m[0m status_code = [
+	            	                  [31m-[0m[0m "200-399",
+	            	                ] [90m-> null[0m[0m
+	            	                [90m# (1 unchanged attribute hidden)[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	      [31m-[0m[0m request_routing_rule {
+	            	          [31m-[0m[0m backend_address_pool_id     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass/providers/Microsoft.Network/applicationGateways/ApplicationGateway1/backendAddressPools/defaultaddresspool" [90m-> null[0m[0m
+	            	          [31m-[0m[0m backend_address_pool_name   = "defaultaddresspool" [90m-> null[0m[0m
+	            	          [31m-[0m[0m backend_http_settings_id    = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass/providers/Microsoft.Network/applicationGateways/ApplicationGateway1/backendHttpSettingsCollection/defaulthttpsetting" [90m-> null[0m[0m
+	            	          [31m-[0m[0m backend_http_settings_name  = "defaulthttpsetting" [90m-> null[0m[0m
+	            	          [31m-[0m[0m http_listener_id            = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass/providers/Microsoft.Network/applicationGateways/ApplicationGateway1/httpListeners/fl-452c578b4f742bd7a3927c3caf2b604e" [90m-> null[0m[0m
+	            	          [31m-[0m[0m http_listener_name          = "fl-452c578b4f742bd7a3927c3caf2b604e" [90m-> null[0m[0m
+	            	          [31m-[0m[0m id                          = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass/providers/Microsoft.Network/applicationGateways/ApplicationGateway1/requestRoutingRules/rr-452c578b4f742bd7a3927c3caf2b604e" [90m-> null[0m[0m
+	            	          [31m-[0m[0m name                        = "rr-452c578b4f742bd7a3927c3caf2b604e" [90m-> null[0m[0m
+	            	          [31m-[0m[0m priority                    = 19500 [90m-> null[0m[0m
+	            	          [31m-[0m[0m rule_type                   = "Basic" [90m-> null[0m[0m
+	            	            [90m# (6 unchanged attributes hidden)[0m[0m
+	            	        }
+	            	      [32m+[0m[0m request_routing_rule {
+	            	          [32m+[0m[0m backend_address_pool_id     = (known after apply)
+	            	          [32m+[0m[0m backend_address_pool_name   = "aksVirtualNetwork-beap"
+	            	          [32m+[0m[0m backend_http_settings_id    = (known after apply)
+	            	          [32m+[0m[0m backend_http_settings_name  = "aksVirtualNetwork-be-htst"
+	            	          [32m+[0m[0m http_listener_id            = (known after apply)
+	            	          [32m+[0m[0m http_listener_name          = "aksVirtualNetwork-httplstn"
+	            	          [32m+[0m[0m id                          = (known after apply)
+	            	          [32m+[0m[0m name                        = "aksVirtualNetwork-rqrt"
+	            	          [32m+[0m[0m priority                    = 1
+	            	          [32m+[0m[0m redirect_configuration_id   = (known after apply)
+	            	          [32m+[0m[0m rewrite_rule_set_id         = (known after apply)
+	            	          [32m+[0m[0m rule_type                   = "Basic"
+	            	          [32m+[0m[0m url_path_map_id             = (known after apply)
+	            	            [90m# (3 unchanged attributes hidden)[0m[0m
+	            	        }
+	            	
+	            	      [33m~[0m[0m ssl_policy (known after apply)
+	            	      [31m-[0m[0m ssl_policy {
+	            	          [31m-[0m[0m cipher_suites        = [] [90m-> null[0m[0m
+	            	          [31m-[0m[0m disabled_protocols   = [] [90m-> null[0m[0m
+	            	          [31m-[0m[0m policy_name          = "AppGwSslPolicy20150501" [90m-> null[0m[0m
+	            	          [31m-[0m[0m policy_type          = "Predefined" [90m-> null[0m[0m
+	            	            [90m# (1 unchanged attribute hidden)[0m[0m
+	            	        }
+	            	
+	            	        [90m# (1 unchanged block hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.aks[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "aks" {
+	            	        id                                  = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass/providers/Microsoft.ContainerService/managedClusters/aks-cluster"
+	            	        name                                = "aks-cluster"
+	            	        tags                                = {}
+	            	        [90m# (40 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "agentpool"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	      [33m~[0m[0m ingress_application_gateway {
+	            	          [33m~[0m[0m gateway_id                           = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass/providers/Microsoft.Network/applicationGateways/ApplicationGateway1" -> (known after apply)
+	            	            [90m# (5 unchanged attributes hidden)[0m[0m
+	            	        }
+	            	
+	            	        [90m# (4 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_role_assignment.ra1[0m must be [1m[31mreplaced[0m
+	            	[0m[31m-[0m/[32m+[0m[0m resource "azurerm_role_assignment" "ra1" {
+	            	      [33m~[0m[0m id                                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass/providers/Microsoft.Authorization/roleAssignments/644406af-e914-c055-b524-937921bb8989" -> (known after apply)
+	            	      [33m~[0m[0m name                                   = "644406af-e914-c055-b524-937921bb8989" -> (known after apply)
+	            	      [33m~[0m[0m principal_id                           = "ed8bfe3d-a5a4-476c-98e6-d8d02a449fac" -> (known after apply) [31m# forces replacement[0m[0m
+	            	      [33m~[0m[0m principal_type                         = "ServicePrincipal" -> (known after apply)
+	            	      [33m~[0m[0m role_definition_id                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7" -> (known after apply)
+	            	      [32m+[0m[0m skip_service_principal_aad_check       = (known after apply)
+	            	        [90m# (6 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_role_assignment.ra2[0m must be [1m[31mreplaced[0m
+	            	[0m[31m-[0m/[32m+[0m[0m resource "azurerm_role_assignment" "ra2" {
+	            	      [33m~[0m[0m id                                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass/providers/Microsoft.Network/virtualNetworks/aksVirtualNetwork/providers/Microsoft.Authorization/roleAssignments/79a547ab-ccc0-ec53-a7c6-a8c4bccca54c" -> (known after apply)
+	            	      [33m~[0m[0m name                                   = "79a547ab-ccc0-ec53-a7c6-a8c4bccca54c" -> (known after apply)
+	            	      [33m~[0m[0m principal_id                           = "ed8bfe3d-a5a4-476c-98e6-d8d02a449fac" -> (known after apply) [31m# forces replacement[0m[0m
+	            	      [33m~[0m[0m principal_type                         = "ServicePrincipal" -> (known after apply)
+	            	      [33m~[0m[0m role_definition_id                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/providers/Microsoft.Authorization/roleDefinitions/4d97b98b-1d4f-4787-a291-c67834d212e7" -> (known after apply)
+	            	      [32m+[0m[0m skip_service_principal_aad_check       = (known after apply)
+	            	        [90m# (6 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_role_assignment.ra3[0m must be [1m[31mreplaced[0m
+	            	[0m[31m-[0m/[32m+[0m[0m resource "azurerm_role_assignment" "ra3" {
+	            	      [33m~[0m[0m id                                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass/providers/Microsoft.Network/applicationGateways/ApplicationGateway1/providers/Microsoft.Authorization/roleAssignments/e5ecb802-fe69-775c-f2e9-52e8b60d354d" -> (known after apply)
+	            	      [33m~[0m[0m name                                   = "e5ecb802-fe69-775c-f2e9-52e8b60d354d" -> (known after apply)
+	            	      [33m~[0m[0m principal_id                           = "ed8bfe3d-a5a4-476c-98e6-d8d02a449fac" -> (known after apply) [31m# forces replacement[0m[0m
+	            	      [33m~[0m[0m principal_type                         = "ServicePrincipal" -> (known after apply)
+	            	      [33m~[0m[0m role_definition_id                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/providers/Microsoft.Authorization/roleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c" -> (known after apply)
+	            	      [33m~[0m[0m scope                                  = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-enormous-bass/providers/Microsoft.Network/applicationGateways/ApplicationGateway1" -> (known after apply) [31m# forces replacement[0m[0m
+	            	      [32m+[0m[0m skip_service_principal_aad_check       = (known after apply)
+	            	        [90m# (5 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 4 to add, 1 to change, 4 to destroy.
+	            	[0m[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-k8s-cluster-with-aks-applicationgateway-ingress620550270/src/quickstart/201-k8s-cluster-with-aks-applicationgateway-ingress/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-k8s-cluster-with-aks-applicationgateway-ingress620550270/src/quickstart/201-k8s-cluster-with-aks-applicationgateway-ingress/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-k8s-cluster-with-aks-applicationgateway-ingress
+
+FailNow
+
+---
+
 ## 13 Jul 25 00:42 UTC
 
 Success: false

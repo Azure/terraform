@@ -1,3 +1,40 @@
+## 20 Jul 25 00:47 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.12.2
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Flexible Server (Subscription: "f7a632a5-49db-4c5e-9828-cd62cb753971"
+	            	[31m│[0m [0mResource Group Name: "postgresqlfs-mallard"
+	            	[31m│[0m [0mFlexible Server Name: "postgresqlfs-mallard-server"): performing Create: unexpected status 400 (400 Bad Request) with error: ConflictingPublicNetworkAccessAndVirtualNetworkConfiguration: Conflicting configuration is detected between Public Network Access and Virtual Network arguments. Public Network Access is not supported along with Virtual Network feature.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_postgresql_flexible_server.default,
+	            	[31m│[0m [0m  on main.tf line 79, in resource "azurerm_postgresql_flexible_server" "default":
+	            	[31m│[0m [0m  79: resource "azurerm_postgresql_flexible_server" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-postgresql-fs-db
+
+FailNow
+
+---
+
 ## 13 Jul 25 00:26 UTC
 
 Success: false
