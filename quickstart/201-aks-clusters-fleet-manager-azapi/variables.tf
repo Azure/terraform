@@ -7,13 +7,13 @@ variable "location" {
 variable "resource_group_name" {
   description = "The name of the resource group"
   type        = string
-  default     = ""
+  default     = null
 }
 
 variable "fleet_name" {
   description = "The name of the Fleet"
   type        = string
-  default     = ""
+  default     = null
 }
 
 variable "member_cluster_names" {

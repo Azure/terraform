@@ -1,5 +1,5 @@
 locals {
-  fleet_name = var.fleet_name != "" ? var.fleet_name : "fleet-example-${random_string.suffix.result}"
+  fleet_name = coalesce(var.fleet_name, "fleet-example-${random_string.suffix.result}")
 }
 
 # Fleet Resource
