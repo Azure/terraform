@@ -8,6 +8,10 @@ This Terraform sample demonstrates how to use the AzAPI provider to manage Azure
 - [azurerm_resource_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group)
 - [azurerm_kubernetes_cluster](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/kubernetes_cluster)
 - [azapi_resource](https://registry.terraform.io/providers/Azure/azapi/latest/docs/resources/azapi_resource)
+   - Microsoft.ContainerService/fleets
+   - Microsoft.ContainerService/fleets/members
+   - Microsoft.ContainerService/fleets/updateStrategies
+   - Microsoft.ContainerService/fleets/autoUpgradeProfiles
 
 ## Variables
 
