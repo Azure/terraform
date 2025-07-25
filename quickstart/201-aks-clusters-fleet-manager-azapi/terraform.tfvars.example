@@ -1,0 +1,31 @@
+# Azure Region
+location = "Australia East"
+
+# Resource Names (leave empty to use auto-generated names)
+resource_group_name = ""
+fleet_name         = ""
+member_cluster_names = []
+
+# Kubernetes Versions
+kubernetes_versions = {
+  member1 = "1.33"  # Staging
+  member2 = "1.32" # Production
+  member3 = "1.32" # Production
+}
+
+# Node Configuration
+node_vm_size      = "Standard_D2s_v3"
+member_node_count = 1
+
+# Fleet Configuration
+update_strategy_name     = "example-update-strategy"
+autoupgrade_profile_name = "example-autoupgrade-profile"
+autoupgrade_channel      = "Stable"  # Options: Rapid, Stable, NodeImage
+
+# Tags
+tags = {
+  Environment = "Development"
+  Project     = "Fleet-Terraform-Sample"
+  ManagedBy   = "Terraform"
+  Owner       = "Fleet-Team"
+}
