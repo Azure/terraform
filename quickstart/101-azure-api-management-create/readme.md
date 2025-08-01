@@ -17,5 +17,5 @@ This template deploys an Azure API Management service.
 | `resource_group_location` | Location of the resource group. | eastus |
 | `publisher_email` | Email address of the owner of the service. | test@contoso.com |
 | `publisher_name` | Name of the owner of the service. | publisher |
-| `sku` | Pricing tier of this API Management service. Must be one of the following values: Consumption, Developer, Basic, BasicV2, Standard, StandardV2, Premium, PremiumV2. | Developer |
+| `sku` | Pricing tier of this API Management service. Must be one of the following values: Consumption, Developer, Basic, BasicV2, Standard, StandardV2, Premium, PremiumV2. | BasicV2 |
 | `sku_count` | Instance size of this API Management service. | 1 |
