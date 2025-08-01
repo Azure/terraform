@@ -47,13 +47,13 @@ variable "publisher_name" {
   }
 }
 
-variable "sku" {
+variable "sku_name" {
   description = "The pricing tier of this API Management service"
-  default     = "Developer"
+  default     = "BatchV2"
   type        = string
   validation {
-    condition     = contains(["Consumption", "Developer", "Basic", "BasicV2", "Standard", "StandardV2", "Premium", "PremiumV2"], var.sku)
-    error_message = "The sku must be one of the following: Consumption, Developer, Basic, BasicV2, Standard, StandardV2, Premium, PremiumV2."
+    condition     = contains(["Basic", "BasicV2", "Consumption", "Developer", "Premium", "PremiumV2", "Standard", "StandardV2"], var.sku_name)
+    error_message = "The sku must be one of the following: Basic, BasicV2, Consumption, Developer, Premium, PremiumV2, Standard, StandardV2."
   }
 }
 
