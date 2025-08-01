@@ -49,7 +49,7 @@ variable "publisher_name" {
 
 variable "sku_name" {
   description = "The pricing tier of this API Management service"
-  default     = "BatchV2"
+  default     = "BasicV2"
   type        = string
   validation {
     condition     = contains(["Basic", "BasicV2", "Consumption", "Developer", "Premium", "PremiumV2", "Standard", "StandardV2"], var.sku_name)

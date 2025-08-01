@@ -24,5 +24,5 @@ This template deploys an Azure API Management service, containing an API (based 
 | `open_api_spec_content_value` | The Content from which the API Definition should be imported. When a content_format of *-link-* is specified this must be a URL, otherwise this must be defined inline. | http://conferenceapi.azurewebsites.net/?format=json |
 | `publisher_email` | Email address of the owner of the service. | test@contoso.com |
 | `publisher_name` | Name of the owner of the service. | publisher |
-| `sku_name` | Pricing tier of this API Management service. Must be one of the following values: Basic, BasicV2, Consumption, Developer, Premium, PremiumV2, Standard, StandardV2 | BatchV2 |
+| `sku_name` | Pricing tier of this API Management service. Must be one of the following values: Basic, BasicV2, Consumption, Developer, Premium, PremiumV2, Standard, StandardV2 | BasicV2 |
 | `sku_count` | Instance size of this API Management service. | 1 |
