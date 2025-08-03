@@ -1,3 +1,128 @@
+## 03 Aug 25 01:05 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.12.2
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.rg_name: Refreshing state... [id=rg-fun-rat][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-fun-rat][0m
+	            	[0m[1mazurerm_public_ip.pip: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-fun-rat/providers/Microsoft.Network/publicIPAddresses/appgw-pip][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-fun-rat/providers/Microsoft.ManagedIdentity/userAssignedIdentities/aks-aks-cluster][0m
+	            	[0m[1mazurerm_virtual_network.vnet: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-fun-rat/providers/Microsoft.Network/virtualNetworks/aksVirtualNetwork][0m
+	            	[0m[1mdata.azurerm_subnet.kubesubnet: Reading...[0m[0m
+	            	[0m[1mdata.azurerm_subnet.appgwsubnet: Reading...[0m[0m
+	            	[0m[1mdata.azurerm_subnet.appgwsubnet: Read complete after 0s [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-fun-rat/providers/Microsoft.Network/virtualNetworks/aksVirtualNetwork/subnets/appgwsubnet][0m
+	            	[0m[1mazurerm_application_gateway.appgw: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-fun-rat/providers/Microsoft.Network/applicationGateways/ApplicationGateway1][0m
+	            	[0m[1mdata.azurerm_subnet.kubesubnet: Read complete after 0s [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-fun-rat/providers/Microsoft.Network/virtualNetworks/aksVirtualNetwork/subnets/akssubnet][0m
+	            	[0m[1mazurerm_kubernetes_cluster.aks: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-fun-rat/providers/Microsoft.ContainerService/managedClusters/aks-cluster][0m
+	            	[0m[1mazurerm_role_assignment.ra2: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-fun-rat/providers/Microsoft.Network/virtualNetworks/aksVirtualNetwork/providers/Microsoft.Authorization/roleAssignments/3a4d55ab-6ba7-217b-37e8-0bfdf3e49826][0m
+	            	[0m[1mazurerm_role_assignment.ra1: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-fun-rat/providers/Microsoft.Authorization/roleAssignments/4289c2f8-c99a-97a5-657b-34ec19d14ef5][0m
+	            	[0m[1mazurerm_role_assignment.ra3: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-fun-rat/providers/Microsoft.Network/applicationGateways/ApplicationGateway1/providers/Microsoft.Authorization/roleAssignments/836ba49c-78af-b1a9-9b93-93eb82557fb7][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	[31m-[0m/[32m+[0m destroy and then create replacement[0m
+	            	 [36m<=[0m read (data resources)[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # data.azurerm_user_assigned_identity.ingress[0m will be read during apply
+	            	  # (depends on a resource or a module with changes pending)
+	            	[0m [36m<=[0m[0m data "azurerm_user_assigned_identity" "ingress" {
+	            	      [32m+[0m[0m client_id           = (known after apply)
+	            	      [32m+[0m[0m id                  = (known after apply)
+	            	      [32m+[0m[0m location            = (known after apply)
+	            	      [32m+[0m[0m name                = "ingressapplicationgateway-aks-cluster"
+	            	      [32m+[0m[0m principal_id        = (known after apply)
+	            	      [32m+[0m[0m resource_group_name = "MC_rg-fun-rat_aks-cluster_eastus"
+	            	      [32m+[0m[0m tags                = (known after apply)
+	            	      [32m+[0m[0m tenant_id           = (known after apply)
+	            	    }
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.aks[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "aks" {
+	            	        id                                  = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-fun-rat/providers/Microsoft.ContainerService/managedClusters/aks-cluster"
+	            	        name                                = "aks-cluster"
+	            	        tags                                = {}
+	            	        [90m# (40 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "agentpool"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (5 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_role_assignment.ra1[0m must be [1m[31mreplaced[0m
+	            	[0m[31m-[0m/[32m+[0m[0m resource "azurerm_role_assignment" "ra1" {
+	            	      [33m~[0m[0m id                                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-fun-rat/providers/Microsoft.Authorization/roleAssignments/4289c2f8-c99a-97a5-657b-34ec19d14ef5" -> (known after apply)
+	            	      [33m~[0m[0m name                                   = "4289c2f8-c99a-97a5-657b-34ec19d14ef5" -> (known after apply)
+	            	      [33m~[0m[0m principal_id                           = "cbdbe82d-7696-408b-86e2-6e0dfac9a0c6" -> (known after apply) [31m# forces replacement[0m[0m
+	            	      [33m~[0m[0m principal_type                         = "ServicePrincipal" -> (known after apply)
+	            	      [33m~[0m[0m role_definition_id                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7" -> (known after apply)
+	            	      [32m+[0m[0m skip_service_principal_aad_check       = (known after apply)
+	            	        [90m# (6 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_role_assignment.ra2[0m must be [1m[31mreplaced[0m
+	            	[0m[31m-[0m/[32m+[0m[0m resource "azurerm_role_assignment" "ra2" {
+	            	      [33m~[0m[0m id                                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-fun-rat/providers/Microsoft.Network/virtualNetworks/aksVirtualNetwork/providers/Microsoft.Authorization/roleAssignments/3a4d55ab-6ba7-217b-37e8-0bfdf3e49826" -> (known after apply)
+	            	      [33m~[0m[0m name                                   = "3a4d55ab-6ba7-217b-37e8-0bfdf3e49826" -> (known after apply)
+	            	      [33m~[0m[0m principal_id                           = "cbdbe82d-7696-408b-86e2-6e0dfac9a0c6" -> (known after apply) [31m# forces replacement[0m[0m
+	            	      [33m~[0m[0m principal_type                         = "ServicePrincipal" -> (known after apply)
+	            	      [33m~[0m[0m role_definition_id                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/providers/Microsoft.Authorization/roleDefinitions/4d97b98b-1d4f-4787-a291-c67834d212e7" -> (known after apply)
+	            	      [32m+[0m[0m skip_service_principal_aad_check       = (known after apply)
+	            	        [90m# (6 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_role_assignment.ra3[0m must be [1m[31mreplaced[0m
+	            	[0m[31m-[0m/[32m+[0m[0m resource "azurerm_role_assignment" "ra3" {
+	            	      [33m~[0m[0m id                                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-fun-rat/providers/Microsoft.Network/applicationGateways/ApplicationGateway1/providers/Microsoft.Authorization/roleAssignments/836ba49c-78af-b1a9-9b93-93eb82557fb7" -> (known after apply)
+	            	      [33m~[0m[0m name                                   = "836ba49c-78af-b1a9-9b93-93eb82557fb7" -> (known after apply)
+	            	      [33m~[0m[0m principal_id                           = "cbdbe82d-7696-408b-86e2-6e0dfac9a0c6" -> (known after apply) [31m# forces replacement[0m[0m
+	            	      [33m~[0m[0m principal_type                         = "ServicePrincipal" -> (known after apply)
+	            	      [33m~[0m[0m role_definition_id                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/providers/Microsoft.Authorization/roleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c" -> (known after apply)
+	            	      [32m+[0m[0m skip_service_principal_aad_check       = (known after apply)
+	            	        [90m# (6 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 3 to add, 1 to change, 3 to destroy.
+	            	[0m[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-k8s-cluster-with-aks-applicationgateway-ingress2493082114/src/quickstart/201-k8s-cluster-with-aks-applicationgateway-ingress/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-k8s-cluster-with-aks-applicationgateway-ingress2493082114/src/quickstart/201-k8s-cluster-with-aks-applicationgateway-ingress/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-k8s-cluster-with-aks-applicationgateway-ingress
+
+FailNow
+
+---
+
 ## 27 Jul 25 01:09 UTC
 
 Success: false

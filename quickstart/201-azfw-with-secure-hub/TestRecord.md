@@ -1,3 +1,102 @@
+## 03 Aug 25 02:22 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.12.2
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.rg-name: Refreshing state... [id=rg-in-shrimp][0m
+	            	[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-in-shrimp][0m
+	            	[0m[1mazurerm_virtual_wan.azfw_vwan: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-in-shrimp/providers/Microsoft.Network/virtualWans/vwan-azfw-securehub-eus][0m
+	            	[0m[1mazurerm_firewall_policy.azfw_policy: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-in-shrimp/providers/Microsoft.Network/firewallPolicies/policy-azfw-securehub-eus][0m
+	            	[0m[1mazurerm_network_security_group.vm_jump_nsg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-in-shrimp/providers/Microsoft.Network/networkSecurityGroups/nsg-jump][0m
+	            	[0m[1mazurerm_public_ip.pip_azfw: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-in-shrimp/providers/Microsoft.Network/publicIPAddresses/pip-azfw-securehub-eus][0m
+	            	[0m[1mazurerm_network_security_group.vm_workload_nsg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-in-shrimp/providers/Microsoft.Network/networkSecurityGroups/nsg-workload][0m
+	            	[0m[1mazurerm_virtual_network.azfw_vnet: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-in-shrimp/providers/Microsoft.Network/virtualNetworks/vnet-azfw-securehub-eus][0m
+	            	[0m[1mazurerm_route_table.rt: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-in-shrimp/providers/Microsoft.Network/routeTables/rt-azfw-securehub-eus][0m
+	            	[0m[1mazurerm_public_ip.vm_jump_pip: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-in-shrimp/providers/Microsoft.Network/publicIPAddresses/pip-jump][0m
+	            	[0m[1mazurerm_subnet.workload_subnet: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-in-shrimp/providers/Microsoft.Network/virtualNetworks/vnet-azfw-securehub-eus/subnets/subnet-workload][0m
+	            	[0m[1mazurerm_subnet.jump_subnet: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-in-shrimp/providers/Microsoft.Network/virtualNetworks/vnet-azfw-securehub-eus/subnets/subnet-jump][0m
+	            	[0m[1mazurerm_firewall_policy_rule_collection_group.app_policy_rule_collection_group: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-in-shrimp/providers/Microsoft.Network/firewallPolicies/policy-azfw-securehub-eus/ruleCollectionGroups/DefaulApplicationtRuleCollectionGroup][0m
+	            	[0m[1mazurerm_network_interface.vm_workload_nic: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-in-shrimp/providers/Microsoft.Network/networkInterfaces/nic-workload][0m
+	            	[0m[1mazurerm_virtual_hub.azfw_vwan_hub: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-in-shrimp/providers/Microsoft.Network/virtualHubs/hub-azfw-securehub-eus][0m
+	            	[0m[1mazurerm_subnet_route_table_association.jump_subnet_rt_association: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-in-shrimp/providers/Microsoft.Network/virtualNetworks/vnet-azfw-securehub-eus/subnets/subnet-jump][0m
+	            	[0m[1mazurerm_network_interface.vm_jump_nic: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-in-shrimp/providers/Microsoft.Network/networkInterfaces/nic-jump][0m
+	            	[0m[1mazurerm_firewall.fw: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-in-shrimp/providers/Microsoft.Network/azureFirewalls/fw-azfw-securehub-eus][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.vm_jump_nsg_association: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-in-shrimp/providers/Microsoft.Network/networkInterfaces/nic-jump|/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-in-shrimp/providers/Microsoft.Network/networkSecurityGroups/nsg-jump][0m
+	            	[0m[1mazurerm_windows_virtual_machine.vm_jump: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-in-shrimp/providers/Microsoft.Compute/virtualMachines/jump-vm][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.vm_workload_nsg_association: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-in-shrimp/providers/Microsoft.Network/networkInterfaces/nic-workload|/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-in-shrimp/providers/Microsoft.Network/networkSecurityGroups/nsg-workload][0m
+	            	[0m[1mazurerm_windows_virtual_machine.vm_workload: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-in-shrimp/providers/Microsoft.Compute/virtualMachines/workload-vm][0m
+	            	[0m[1mazurerm_virtual_hub_route_table.vhub_rt: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-in-shrimp/providers/Microsoft.Network/virtualHubs/hub-azfw-securehub-eus/hubRouteTables/vhub-rt-azfw-securehub-eus][0m
+	            	[0m[1mazurerm_virtual_hub_connection.azfw_vwan_hub_connection: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-in-shrimp/providers/Microsoft.Network/virtualHubs/hub-azfw-securehub-eus/hubVirtualNetworkConnections/hub-to-spoke][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.vm_jump[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "vm_jump" {
+	            	        id                                                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-in-shrimp/providers/Microsoft.Compute/virtualMachines/jump-vm"
+	            	        name                                                   = "jump-vm"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.vm_workload[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "vm_workload" {
+	            	        id                                                     = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-in-shrimp/providers/Microsoft.Compute/virtualMachines/workload-vm"
+	            	        name                                                   = "workload-vm"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 0 to add, 2 to change, 0 to destroy.
+	            	[0m[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_route_table.rt,
+	            	[33m│[0m [0m  on main.tf line 226, in resource "azurerm_route_table" "rt":
+	            	[33m│[0m [0m 226:   disable_bgp_route_propagation = [4mfalse[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe property `disable_bgp_route_propagation` has been superseded by the
+	            	[33m│[0m [0mproperty `bgp_route_propagation_enabled` and will be removed in v4.0 of the
+	            	[33m│[0m [0mAzureRM Provider.
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-azfw-with-secure-hub2422173404/src/quickstart/201-azfw-with-secure-hub/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-azfw-with-secure-hub2422173404/src/quickstart/201-azfw-with-secure-hub/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-azfw-with-secure-hub
+
+FailNow
+
+---
+
 ## 27 Jul 25 01:57 UTC
 
 Success: false
