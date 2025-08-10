@@ -1,3 +1,75 @@
+## 10 Aug 25 00:53 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.12.2
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating/updating Virtual Machine (Subscription: "f7a632a5-49db-4c5e-9828-cd62cb753971"
+	            	[31m│[0m [0mResource Group Name: "rg-equal-grackle"
+	            	[31m│[0m [0mVirtual Machine Name: "vm-xv97cr40-1-vmWindows-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: InvalidParameter: The supplied password must be between 8-123 characters long and must satisfy at least 3 of password complexity requirements from the following:
+	            	[31m│[0m [0m1) Contains an uppercase character
+	            	[31m│[0m [0m2) Contains a lowercase character
+	            	[31m│[0m [0m3) Contains a numeric digit
+	            	[31m│[0m [0m4) Contains a special character
+	            	[31m│[0m [0m5) Control characters are not allowed[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[1].azurerm_virtual_machine.vm_windows[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 201, in resource "azurerm_virtual_machine" "vm_windows":
+	            	[31m│[0m [0m 201: resource "azurerm_virtual_machine" "vm_windows" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating/updating Virtual Machine (Subscription: "f7a632a5-49db-4c5e-9828-cd62cb753971"
+	            	[31m│[0m [0mResource Group Name: "rg-equal-grackle"
+	            	[31m│[0m [0mVirtual Machine Name: "vm-xv97cr40-2-vmWindows-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: InvalidParameter: The supplied password must be between 8-123 characters long and must satisfy at least 3 of password complexity requirements from the following:
+	            	[31m│[0m [0m1) Contains an uppercase character
+	            	[31m│[0m [0m2) Contains a lowercase character
+	            	[31m│[0m [0m3) Contains a numeric digit
+	            	[31m│[0m [0m4) Contains a special character
+	            	[31m│[0m [0m5) Control characters are not allowed[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[2].azurerm_virtual_machine.vm_windows[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 201, in resource "azurerm_virtual_machine" "vm_windows":
+	            	[31m│[0m [0m 201: resource "azurerm_virtual_machine" "vm_windows" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating/updating Virtual Machine (Subscription: "f7a632a5-49db-4c5e-9828-cd62cb753971"
+	            	[31m│[0m [0mResource Group Name: "rg-equal-grackle"
+	            	[31m│[0m [0mVirtual Machine Name: "vm-xv97cr40-0-vmWindows-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: InvalidParameter: The supplied password must be between 8-123 characters long and must satisfy at least 3 of password complexity requirements from the following:
+	            	[31m│[0m [0m1) Contains an uppercase character
+	            	[31m│[0m [0m2) Contains a lowercase character
+	            	[31m│[0m [0m3) Contains a numeric digit
+	            	[31m│[0m [0m4) Contains a special character
+	            	[31m│[0m [0m5) Control characters are not allowed[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[0].azurerm_virtual_machine.vm_windows[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 201, in resource "azurerm_virtual_machine" "vm_windows":
+	            	[31m│[0m [0m 201: resource "azurerm_virtual_machine" "vm_windows" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-cluster-windows
+
+FailNow
+
+---
+
 ## 03 Aug 25 00:36 UTC
 
 Success: true
