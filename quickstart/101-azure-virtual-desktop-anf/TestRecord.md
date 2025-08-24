@@ -1,3 +1,49 @@
+## 24 Aug 25 00:40 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.12.2
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.5.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 28, in output "storage_account":
+	            	[31m│[0m [0m  28:   value       = [4mazurerm_storage_account.storage[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_account" "storage" has not been
+	            	[31m│[0m [0mdeclared in the root module.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 33, in output "storage_account_share":
+	            	[31m│[0m [0m  33:   value       = [4mazurerm_storage_share.FSShare[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_share" "FSShare" has not been declared
+	            	[31m│[0m [0min the root module.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop-anf
+
+FailNow
+
+---
+
 ## 17 Aug 25 00:35 UTC
 
 Success: false
