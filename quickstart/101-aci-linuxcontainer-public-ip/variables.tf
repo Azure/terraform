@@ -55,3 +55,9 @@ variable "restart_policy" {
     error_message = "The restart_policy must be one of the following: Always, Never, OnFailure."
   }
 }
+
+variable "zone" {
+    type        = string
+    description = "The availability zone to deploy the container group into. If not specified, the container group is nonzonal and might be deployed into any zone."
+    default     = ""
+}
