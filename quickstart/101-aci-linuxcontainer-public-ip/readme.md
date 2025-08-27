@@ -20,6 +20,7 @@ This template deploys an Azure Container Instance with a public IP address.
 | `cpu_cores` | Quantity of CPU cores to allocate to the container. | 1 |
 | `memory_in_gb` | Amount of memory to allocate to the container in gigabytes. | 2 |
 | `restart_policy` | Behavior of Azure runtime if container has stopped. | Always |
+| `zone` | The availability zone to deploy the container group into. If not specified, the container group is nonzonal and might be deployed into any zone. | (empty) |
 
 ## Example
 
