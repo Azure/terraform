@@ -10,11 +10,6 @@ This template deploys an Azure firmware analysis workspace and its resource grou
 ## Variables
 
 | Name                  | Description                                               | Default                       |
-|-----------------------|-----------------------------------------------------------|------------------------------- run this example, follow these steps:
-
-1. **Register the resource provider (one-time per subscription):**
-   ```bash
-   az provider register --namespace Microsoft.IoTFirmwareDefense| Name                  | Description                                               | Default                       |
 |-----------------------|-----------------------------------------------------------|-------------------------------|
 | `location`            | Azure region for the resource group and workspace.        | eastus                        |
 | `resource_group_name` | Name of the resource group to create.                     | firmware-analysis-qs-rg       |
