@@ -9,11 +9,15 @@ This template deploys an Azure firmware analysis workspace and its resource grou
 
 ## Variables
 
-| Name                  | Description                                               | Default                       |
-|-----------------------|-----------------------------------------------------------|-------------------------------|
-| `location`            | Azure region for the resource group and workspace.        | eastus                        |
-| `resource_group_name` | (Optional) Name of the resource group. If omitted, a random name will be generated using `random_pet`.                     | n/a       |
+| Name | Description | Default |
+|-|-|-|
+| `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. | rg |
+| `resource_group_location` | Location of the resource group. | eastus |
 | `workspace_name`      | Name of the firmware analysis workspace to create.        | firmware-analysis-ws-demo     |
 
-> **Note:** If `resource_group_name` is not specified, the template uses the `random_pet` resource to generate a unique name for the resource group.
+## Variables
 
+| Name | Description | Default |
+|-|-|-|
+| `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. | rg |
+| `resource_group_location` | Location of the resource group. | eastus |
