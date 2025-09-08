@@ -1,17 +1,17 @@
-variable "resource_group_location" {
+variable "location" {
   type        = string
   default     = "eastus"
-  description = "Location of the resource group."
+  description = "Azure region for the resource group and the workspace."
 }
 
-variable "resource_group_name_prefix" {
+variable "resource_group_name" {
   type        = string
-  default     = "rg"
-  description = "Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription."
+  default     = "firmware-analysis-qs-rg"
+  description = "Name of the resource group to create."
 }
 
 variable "workspace_name" {
   type        = string
   default     = "firmware-analysis-ws-demo"
-  description = "Name of the firmware analysis workspace to create. If blank, a random name will be generated."
+  description = "Name of the firmware analysis workspace to create."
 } 
