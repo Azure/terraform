@@ -21,6 +21,7 @@ resource "azurerm_container_group" "container" {
   ip_address_type     = "Public"
   os_type             = "Linux"
   restart_policy      = var.restart_policy
+  zones               = var.zone != "" ? [ var.zone ] : null
 
   container {
     name   = "${var.container_name_prefix}-${random_string.container_name.result}"
