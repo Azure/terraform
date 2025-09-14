@@ -1,3 +1,70 @@
+## 14 Sep 25 01:05 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.12.2
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "f7a632a5-49db-4c5e-9828-cd62cb753971"
+	            	[31m│[0m [0mResource Group Name: "rg-cuddly-puma"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 100 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_zonal,
+	            	[31m│[0m [0m  on main.tf line 25, in resource "azurerm_public_ip_prefix" "my_ipv4_zonal":
+	            	[31m│[0m [0m  25: resource "azurerm_public_ip_prefix" "my_ipv4_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "f7a632a5-49db-4c5e-9828-cd62cb753971"
+	            	[31m│[0m [0mResource Group Name: "rg-cuddly-puma"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4RPInternet"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 100 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_rp_internet,
+	            	[31m│[0m [0m  on main.tf line 47, in resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet":
+	            	[31m│[0m [0m  47: resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "f7a632a5-49db-4c5e-9828-cd62cb753971"
+	            	[31m│[0m [0mResource Group Name: "rg-cuddly-puma"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 100 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6,
+	            	[31m│[0m [0m  on main.tf line 61, in resource "azurerm_public_ip_prefix" "my_ipv6":
+	            	[31m│[0m [0m  61: resource "azurerm_public_ip_prefix" "my_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "f7a632a5-49db-4c5e-9828-cd62cb753971"
+	            	[31m│[0m [0mResource Group Name: "rg-cuddly-puma"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix2"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 100 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv6,
+	            	[31m│[0m [0m  on main.tf line 131, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6":
+	            	[31m│[0m [0m 131: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-virtual-network-public-ip-prefix
+
+FailNow
+
+---
+
 ## 07 Sep 25 00:56 UTC
 
 Success: false
