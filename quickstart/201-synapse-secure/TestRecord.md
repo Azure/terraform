@@ -1,3 +1,90 @@
+## 21 Sep 25 00:32 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.12.2
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.32.0
++ provider registry.terraform.io/hashicorp/http v3.5.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mNo value for required variable[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on variables.tf line 1:
+	            	[31m│[0m [0m   1: [4mvariable "name"[0m {[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe root module input variable "name" is not set, and has no default value.
+	            	[31m│[0m [0mUse a -var or -var-file command line argument to provide a value for this
+	            	[31m│[0m [0mvariable.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mNo value for required variable[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on variables.tf line 18:
+	            	[31m│[0m [0m  18: [4mvariable "aad_login"[0m {[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe root module input variable "aad_login" is not set, and has no default
+	            	[31m│[0m [0mvalue. Use a -var or -var-file command line argument to provide a value for
+	            	[31m│[0m [0mthis variable.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mNo value for required variable[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on variables.tf line 27:
+	            	[31m│[0m [0m  27: [4mvariable "jumphost_username"[0m {[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe root module input variable "jumphost_username" is not set, and has no
+	            	[31m│[0m [0mdefault value. Use a -var or -var-file command line argument to provide a
+	            	[31m│[0m [0mvalue for this variable.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mNo value for required variable[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on variables.tf line 32:
+	            	[31m│[0m [0m  32: [4mvariable "jumphost_password"[0m {[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe root module input variable "jumphost_password" is not set, and has no
+	            	[31m│[0m [0mdefault value. Use a -var or -var-file command line argument to provide a
+	            	[31m│[0m [0mvalue for this variable.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mNo value for required variable[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on variables.tf line 37:
+	            	[31m│[0m [0m  37: [4mvariable "synadmin_username"[0m {[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe root module input variable "synadmin_username" is not set, and has no
+	            	[31m│[0m [0mdefault value. Use a -var or -var-file command line argument to provide a
+	            	[31m│[0m [0mvalue for this variable.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mNo value for required variable[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on variables.tf line 42:
+	            	[31m│[0m [0m  42: [4mvariable "synadmin_password"[0m {[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe root module input variable "synadmin_password" is not set, and has no
+	            	[31m│[0m [0mdefault value. Use a -var or -var-file command line argument to provide a
+	            	[31m│[0m [0mvalue for this variable.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-synapse-secure
+
+FailNow
+
+---
+
 ## 14 Sep 25 00:27 UTC
 
 Success: false
