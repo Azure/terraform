@@ -6,6 +6,7 @@ resource "random_pet" "rg_name" {
 resource "azurerm_resource_group" "rg" {
   location = var.resource_group_location
   name     = random_pet.rg_name.id
+  tags     = var.tags
 }
 
 # Random String for unique naming
@@ -20,67 +21,85 @@ resource "random_string" "name" {
 # Create Virtual Network
 resource "azurerm_virtual_network" "vnet" {
   name                = "vnet-${random_string.name.result}"
-  address_space       = ["10.0.0.0/16"]
+  address_space       = var.virtual_network_address_space
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
+  tags                = var.tags
 }
 
-# Create Subnet for Gateway
-resource "azurerm_subnet" "gateway_subnet" {
-  name                 = "GatewaySubnet"
-  resource_group_name  = azurerm_resource_group.rg.name
-  virtual_network_name = azurerm_virtual_network.vnet.name
-  address_prefixes     = ["10.0.0.0/24"]
+# Create ExpressRoute Gateway using Azure Verified Module with HOBO
+module "expressroute_gateway" {
+  source  = "Azure/avm-ptn-vnetgateway/azurerm"
+  version = "~> 0.10.0"
+
+  # Basic Configuration
+  location  = azurerm_resource_group.rg.location
+  name      = "vgw-${random_string.name.result}"
+  parent_id = azurerm_resource_group.rg.id
+
+  # ExpressRoute Gateway Configuration
+  type                                  = "ExpressRoute"
+  sku                                   = var.gateway_sku
+  hosted_on_behalf_of_public_ip_enabled = var.enable_hosted_on_behalf_of_public_ip # Enable Azure-managed public IP (HOBO)
+
+  # Virtual Network Configuration
+  virtual_network_id    = azurerm_virtual_network.vnet.id
+  subnet_address_prefix = var.gateway_subnet_address_prefix # GatewaySubnet CIDR
+
+  # Optional: Enable telemetry for Azure Verified Module
+  enable_telemetry = true
+
+  # Express Route Circuit Connection (if circuit is provided)
+  express_route_circuits = var.express_route_circuit_id != null ? {
+    "primary" = {
+      id = var.express_route_circuit_id
+      connection = {
+        authorization_key = var.express_route_authorization_key
+      }
+    }
+  } : {}
+
+  tags = merge(var.tags, {
+    environment  = "production"
+    project      = "expressroute-hobo"
+    gateway_type = "ExpressRoute"
+    deployment   = "azure-verified-module"
+  })
+
+  depends_on = [azurerm_virtual_network.vnet]
 }
 
-# Create Public IP for Gateway
-resource "azurerm_public_ip" "gateway_ip" {
-  name                 = "pip-${random_string.name.result}"
-  location            = azurerm_resource_group.rg.location
-  resource_group_name = azurerm_resource_group.rg.name
-  allocation_method   = "Static"
-  sku                 = "Standard"
-}
-
-# Create ExpressRoute Gateway
-resource "azurerm_virtual_network_gateway" "gateway" {
-  name                 = "gateway-${random_string.name.result}"
-  location            = azurerm_resource_group.rg.location
-  resource_group_name = azurerm_resource_group.rg.name
-  type                = "ExpressRoute"
-  vpn_type            = "RouteBased"
-  active_active       = false
-  enable_bgp          = false
-  sku                 = "HighPerformance"
-
-  ip_configuration {
-    name                 = "vnetGatewayConfig"
-    public_ip_address_id = azurerm_public_ip.gateway_ip.id
-    subnet_id            = azurerm_subnet.gateway_subnet.id
-  }
-}
-
-# Create ExpressRoute Circuit
+# Create ExpressRoute Circuit (if enabled)
 resource "azurerm_express_route_circuit" "circuit" {
-  name                 = "erc-${random_string.name.result}"
+  count = var.create_express_route_circuit ? 1 : 0
+
+  name                  = "erc-${random_string.name.result}"
   resource_group_name   = azurerm_resource_group.rg.name
   location              = azurerm_resource_group.rg.location
-  service_provider_name = "Equinix"
-  peering_location      = "Washington DC"
-  bandwidth_in_mbps     = 50
+  service_provider_name = var.service_provider_name
+  peering_location      = var.peering_location
+  bandwidth_in_mbps     = var.bandwidth_in_mbps
+
   sku {
-    tier   = "Standard"
-    family = "MeteredData"
+    tier   = var.circuit_sku_tier
+    family = var.circuit_sku_family
   }
+
+  tags = merge(var.tags, {
+    environment = "production"
+    project     = "expressroute-hobo"
+  })
 }
 
-# Create ExpressRoute Circuit Peering
+# Create ExpressRoute Circuit Peering (if circuit is created)
 resource "azurerm_express_route_circuit_peering" "private" {
+  count = var.create_express_route_circuit && var.create_private_peering ? 1 : 0
+
   peering_type                  = "AzurePrivatePeering"
-  express_route_circuit_name    = azurerm_express_route_circuit.circuit.name
+  express_route_circuit_name    = azurerm_express_route_circuit.circuit[0].name
   resource_group_name           = azurerm_resource_group.rg.name
-  primary_peer_address_prefix   = "192.168.10.16/30"
-  secondary_peer_address_prefix = "192.168.10.20/30"
-  vlan_id                       = 200
-  peer_asn                      = 65001 # Provide a valid private ASN here 
+  primary_peer_address_prefix   = var.primary_peer_address_prefix
+  secondary_peer_address_prefix = var.secondary_peer_address_prefix
+  vlan_id                       = var.vlan_id
+  peer_asn                      = var.peer_asn
 }
