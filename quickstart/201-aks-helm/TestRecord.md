@@ -1,3 +1,86 @@
+## 28 Sep 25 00:18 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.12.2
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/helm v2.9.0
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mRequest cancelled[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with helm_release.ghost,
+	            	[31m│[0m [0m  on helm.tf line 2, in resource "helm_release" "ghost":
+	            	[31m│[0m [0m   2: resource "helm_release" "ghost" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe plugin.(*GRPCProvider).PlanResourceChange request was cancelled.
+	            	[31m╵[0m[0m
+	            	
+	            	Stack trace from the terraform-provider-helm_v2.9.0_x5 plugin:
+	            	
+	            	panic: runtime error: invalid memory address or nil pointer dereference
+	            	[signal SIGSEGV: segmentation violation code=0x1 addr=0x38 pc=0x1af0e8b]
+	            	
+	            	goroutine 26 [running]:
+	            	helm.sh/helm/v3/pkg/registry.(*Client).Tags(0x0, {0xc00190e9b6?, 0xc0125f8488?})
+	            		helm.sh/helm/v3@v3.11.1/pkg/registry/client.go:602 +0x12b
+	            	helm.sh/helm/v3/pkg/downloader.(*ChartDownloader).getOciURI(0xc0125f8ad0, {0xc00190e9b0, 0x48}, {0x0, 0x0}, 0xc002975d40)
+	            		helm.sh/helm/v3@v3.11.1/pkg/downloader/chart_downloader.go:154 +0x129
+	            	helm.sh/helm/v3/pkg/downloader.(*ChartDownloader).ResolveChartVersion(0xc0125f8ad0, {0xc00190e9b0, 0x48}, {0x0, 0x0})
+	            		helm.sh/helm/v3@v3.11.1/pkg/downloader/chart_downloader.go:199 +0x1116
+	            	helm.sh/helm/v3/pkg/downloader.(*ChartDownloader).DownloadTo(0xc0125f8ad0, {0xc00190e9b0, 0x48}, {0x0?, 0x0?}, {0xc000145500, 0x28})
+	            		helm.sh/helm/v3@v3.11.1/pkg/downloader/chart_downloader.go:90 +0x5b
+	            	helm.sh/helm/v3/pkg/action.(*ChartPathOptions).LocateChart(0xc0125f8e88, {0xc0004cc588, 0x18}, 0xc000128200)
+	            		helm.sh/helm/v3@v3.11.1/pkg/action/install.go:760 +0xf2c
+	            	github.com/hashicorp/terraform-provider-helm/helm.getChart({0x2467fa0?, 0xc0005a5640?}, 0x6?, {0xc0004cc588?, 0xc0006b8520?}, 0x2141b60?)
+	            		github.com/hashicorp/terraform-provider-helm/helm/resource_release.go:1117 +0xf5
+	            	github.com/hashicorp/terraform-provider-helm/helm.resourceDiff({0x2484348?, 0xc0005dfe90?}, 0x2138a23?, {0x1fb0e20?, 0xc000121500})
+	            		github.com/hashicorp/terraform-provider-helm/helm/resource_release.go:817 +0x2b6
+	            	github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema.schemaMap.Diff(0xc000027050, {0x2484348, 0xc0005dfe90}, 0xc0004f1450, 0xc0005015c0, 0x22522d8, {0x1fb0e20, 0xc000121500}, 0x0)
+	            		github.com/hashicorp/terraform-plugin-sdk/v2@v2.22.0/helper/schema/schema.go:699 +0x4b4
+	            	github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema.(*Resource).SimpleDiff(0x2485ca8?, {0x2484348?, 0xc0005dfe90?}, 0xc0004f1450, 0x1e29fa0?, {0x1fb0e20?, 0xc000121500?})
+	            		github.com/hashicorp/terraform-plugin-sdk/v2@v2.22.0/helper/schema/resource.go:890 +0x6c
+	            	github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema.(*GRPCProviderServer).PlanResourceChange(0xc00000ccf0, {0x2484348?, 0xc0005dfd70?}, 0xc000515130)
+	            		github.com/hashicorp/terraform-plugin-sdk/v2@v2.22.0/helper/schema/grpc_provider.go:741 +0x98c
+	            	github.com/hashicorp/terraform-plugin-go/tfprotov5/tf5server.(*server).PlanResourceChange(0xc00050b680, {0x2484348?, 0xc0005deb40?}, 0xc0004eaf50)
+	            		github.com/hashicorp/terraform-plugin-go@v0.14.0/tfprotov5/tf5server/server.go:783 +0x574
+	            	github.com/hashicorp/terraform-plugin-go/tfprotov5/internal/tfplugin5._Provider_PlanResourceChange_Handler({0x203cd60?, 0xc00050b680}, {0x2484348, 0xc0005deb40}, 0xc0004eaee0, 0x0)
+	            		github.com/hashicorp/terraform-plugin-go@v0.14.0/tfprotov5/internal/tfplugin5/tfplugin5_grpc.pb.go:367 +0x170
+	            	google.golang.org/grpc.(*Server).processUnaryRPC(0xc0000005a0, {0x248b1c0, 0xc0000efba0}, 0xc000315680, 0xc000027980, 0x34c6a28, 0x0)
+	            		google.golang.org/grpc@v1.49.0/server.go:1301 +0xb0b
+	            	google.golang.org/grpc.(*Server).handleStream(0xc0000005a0, {0x248b1c0, 0xc0000efba0}, 0xc000315680, 0x0)
+	            		google.golang.org/grpc@v1.49.0/server.go:1642 +0xa1b
+	            	google.golang.org/grpc.(*Server).serveStreams.func1.2()
+	            		google.golang.org/grpc@v1.49.0/server.go:938 +0x98
+	            	created by google.golang.org/grpc.(*Server).serveStreams.func1
+	            		google.golang.org/grpc@v1.49.0/server.go:936 +0x28a
+	            	
+	            	Error: The terraform-provider-helm_v2.9.0_x5 plugin crashed!
+	            	
+	            	This is always indicative of a bug within the plugin. It would be immensely
+	            	helpful if you could report the crash with the plugin's maintainers so that it
+	            	can be fixed. The output above should help diagnose the issue.
+	            	}
+	Test:       	Test_Quickstarts/quickstart/201-aks-helm
+
+FailNow
+
+---
+
 ## 21 Sep 25 00:54 UTC
 
 Success: false
