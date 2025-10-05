@@ -1,3 +1,67 @@
+## 05 Oct 25 01:57 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.12.2
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.rg_name: Refreshing state... [id=rg-clear-lobster][0m
+	            	[0m[1mrandom_string.name: Refreshing state... [id=stjlprna][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-lobster][0m
+	            	[0m[1mazurerm_public_ip.gateway_ip: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-lobster/providers/Microsoft.Network/publicIPAddresses/pip-stjlprna][0m
+	            	[0m[1mazurerm_virtual_network.vnet: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-lobster/providers/Microsoft.Network/virtualNetworks/vnet-stjlprna][0m
+	            	[0m[1mazurerm_express_route_circuit.circuit: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-lobster/providers/Microsoft.Network/expressRouteCircuits/erc-stjlprna][0m
+	            	[0m[1mazurerm_subnet.gateway_subnet: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-lobster/providers/Microsoft.Network/virtualNetworks/vnet-stjlprna/subnets/GatewaySubnet][0m
+	            	[0m[1mazurerm_express_route_circuit_peering.private: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-lobster/providers/Microsoft.Network/expressRouteCircuits/erc-stjlprna/peerings/AzurePrivatePeering][0m
+	            	[0m[1mazurerm_virtual_network_gateway.gateway: Refreshing state... [id=/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-lobster/providers/Microsoft.Network/virtualNetworkGateways/gateway-stjlprna][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_virtual_network_gateway.gateway[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_virtual_network_gateway" "gateway" {
+	            	        id                                    = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-lobster/providers/Microsoft.Network/virtualNetworkGateways/gateway-stjlprna"
+	            	        name                                  = "gateway-stjlprna"
+	            	        tags                                  = {}
+	            	        [90m# (15 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m ip_configuration {
+	            	            name                          = "vnetGatewayConfig"
+	            	          [32m+[0m[0m public_ip_address_id          = "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-clear-lobster/providers/Microsoft.Network/publicIPAddresses/pip-stjlprna"
+	            	            [90m# (2 unchanged attributes hidden)[0m[0m
+	            	        }
+	            	    }
+	            	
+	            	[1mPlan:[0m 0 to add, 1 to change, 0 to destroy.
+	            	[0m[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-azure-expressroute3176971909/src/quickstart/101-azure-expressroute/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-azure-expressroute3176971909/src/quickstart/101-azure-expressroute/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-azure-expressroute
+
+FailNow
+
+---
+
 ## 28 Sep 25 01:54 UTC
 
 Success: false
