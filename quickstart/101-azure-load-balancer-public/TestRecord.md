@@ -1,3 +1,64 @@
+## 12 Oct 25 01:38 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.12.2
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.47.0
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating/updating Extension (Subscription: "f7a632a5-49db-4c5e-9828-cd62cb753971"
+	            	[31m│[0m [0mResource Group Name: "rg-actual-louse"
+	            	[31m│[0m [0mVirtual Machine Name: "test-vm1"
+	            	[31m│[0m [0mExtension Name: "Nginx"): polling after CreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "VMExtensionProvisioningError"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "VM has reported a failure when processing extension 'Nginx' (publisher 'Microsoft.Azure.Extensions' and type 'CustomScript'). Error message: 'Enable failed: failed to execute command: command terminated with exit status=100\n[stdout]\nGet:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]\nHit:2 http://archive.ubuntu.com/ubuntu jammy InRelease\nGet:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]\nErr:2 http://archive.ubuntu.com/ubuntu jammy InRelease\n  Splitting up /var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_jammy_InRelease into data and signature failed\nGet:4 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [2732 kB]\nGet:5 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [399 kB]\nGet:6 http://security.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [13.9 kB]\nGet:7 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [4507 kB]\nGet:8 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]\nGet:9 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [837 kB]\nGet:10 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 c-n-f Metadata [648 B]\nGet:11 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [998 kB]\nGet:12 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [219 kB]\nGet:13 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [22.1 kB]\nGet:14 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [56.9 kB]\nGet:15 http://security.ubuntu.com/ubuntu jammy-security/multiverse Translation-en [11.9 kB]\nGet:16 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 c-n-f Metadata [520 B]\nGet:17 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [2989 kB]\nGet:18 http://archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [465 kB]\nGet:19 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 c-n-f Metadata [18.9 kB]\nGet:20 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [4656 kB]\nGet:21 http://archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [863 kB]\nGet:22 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 c-n-f Metadata [672 B]\nGet:23 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1234 kB]\nGet:24 http://archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [307 kB]\nGet:25 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [29.6 kB]\nGet:26 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [57.6 kB]\nGet:27 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse Translation-en [13.2 kB]\nGet:28 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 c-n-f Metadata [600 B]\nGet:29 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [69.4 kB]\nGet:30 http://archive.ubuntu.com/ubuntu jammy-backports/main Translation-en [11.5 kB]\nGet:31 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 c-n-f Metadata [412 B]\nGet:32 http://archive.ubuntu.com/ubuntu jammy-backports/restricted amd64 c-n-f Metadata [116 B]\nGet:33 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [30.1 kB]\nGet:34 http://archive.ubuntu.com/ubuntu jammy-backports/universe Translation-en [16.6 kB]\nGet:35 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 c-n-f Metadata [672 B]\nGet:36 http://archive.ubuntu.com/ubuntu jammy-backports/multiverse amd64 c-n-f Metadata [116 B]\nReading package lists...\n\n[stderr]\nW: GPG error: http://archive.ubuntu.com/ubuntu jammy InRelease: Splitting up /var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_jammy_InRelease into data and signature failed\nE: The repository 'http://archive.ubuntu.com/ubuntu jammy InRelease' is not signed.\n'. More information on troubleshooting is available at https://aka.ms/VMExtensionCSELinuxTroubleshoot. "
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m  "startTime": "2025-10-12T01:34:20.6446745+00:00",
+	            	[31m│[0m [0m  "endTime": "2025-10-12T01:35:06.9723184+00:00",
+	            	[31m│[0m [0m  "status": "Failed",
+	            	[31m│[0m [0m  "error": {
+	            	[31m│[0m [0m    "code": "VMExtensionProvisioningError",
+	            	[31m│[0m [0m    "message": "VM has reported a failure when processing extension 'Nginx' (publisher 'Microsoft.Azure.Extensions' and type 'CustomScript'). Error message: 'Enable failed: failed to execute command: command terminated with exit status=100\n[stdout]\nGet:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]\nHit:2 http://archive.ubuntu.com/ubuntu jammy InRelease\nGet:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]\nErr:2 http://archive.ubuntu.com/ubuntu jammy InRelease\n  Splitting up /var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_jammy_InRelease into data and signature failed\nGet:4 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [2732 kB]\nGet:5 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [399 kB]\nGet:6 http://security.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [13.9 kB]\nGet:7 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [4507 kB]\nGet:8 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]\nGet:9 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [837 kB]\nGet:10 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 c-n-f Metadata [648 B]\nGet:11 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [998 kB]\nGet:12 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [219 kB]\nGet:13 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [22.1 kB]\nGet:14 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [56.9 kB]\nGet:15 http://security.ubuntu.com/ubuntu jammy-security/multiverse Translation-en [11.9 kB]\nGet:16 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 c-n-f Metadata [520 B]\nGet:17 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [2989 kB]\nGet:18 http://archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [465 kB]\nGet:19 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 c-n-f Metadata [18.9 kB]\nGet:20 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [4656 kB]\nGet:21 http://archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [863 kB]\nGet:22 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 c-n-f Metadata [672 B]\nGet:23 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1234 kB]\nGet:24 http://archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [307 kB]\nGet:25 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [29.6 kB]\nGet:26 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [57.6 kB]\nGet:27 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse Translation-en [13.2 kB]\nGet:28 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 c-n-f Metadata [600 B]\nGet:29 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [69.4 kB]\nGet:30 http://archive.ubuntu.com/ubuntu jammy-backports/main Translation-en [11.5 kB]\nGet:31 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 c-n-f Metadata [412 B]\nGet:32 http://archive.ubuntu.com/ubuntu jammy-backports/restricted amd64 c-n-f Metadata [116 B]\nGet:33 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [30.1 kB]\nGet:34 http://archive.ubuntu.com/ubuntu jammy-backports/universe Translation-en [16.6 kB]\nGet:35 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 c-n-f Metadata [672 B]\nGet:36 http://archive.ubuntu.com/ubuntu jammy-backports/multiverse amd64 c-n-f Metadata [116 B]\nReading package lists...\n\n[stderr]\nW: GPG error: http://archive.ubuntu.com/ubuntu jammy InRelease: Splitting up /var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_jammy_InRelease into data and signature failed\nE: The repository 'http://archive.ubuntu.com/ubuntu jammy InRelease' is not signed.\n'. More information on troubleshooting is available at https://aka.ms/VMExtensionCSELinuxTroubleshoot. "
+	            	[31m│[0m [0m  },
+	            	[31m│[0m [0m  "name": "31191af3-f869-4bf9-945c-cfa4fe7eba68"
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_virtual_machine_extension.example[1],
+	            	[31m│[0m [0m  on main.tf line 122, in resource "azurerm_virtual_machine_extension" "example":
+	            	[31m│[0m [0m 122: resource "azurerm_virtual_machine_extension" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-load-balancer-public
+
+FailNow
+
+---
+
 ## 05 Oct 25 01:26 UTC
 
 Success: true
