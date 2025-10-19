@@ -1,3 +1,41 @@
+## 19 Oct 25 01:25 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.13.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
++ provider registry.terraform.io/hashicorp/tls v4.0.4
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/plan.go:85
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/upgradetest.go:150
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:94
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mretrieving OpenEnclave Policy for Attestation Providers (Subscription: "f7a632a5-49db-4c5e-9828-cd62cb753971"
+	            	[31m│[0m [0mResource Group Name: "rg-measured-bull"
+	            	[31m│[0m [0mAttestation Provider Name: "attestationxtmgsuzv"): attestation.PolicyClient#Get: Failure responding to request: StatusCode=401 -- Original Error: autorest/azure: Service returned an error. Status=401 Code="Unauthorized" Message="Access to /policies/OpenEnclave requires a valid JWT bearer token"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_attestation_provider.corp_attestation,
+	            	[31m│[0m [0m  on main.tf line 38, in resource "azurerm_attestation_provider" "corp_attestation":
+	            	[31m│[0m [0m  38: resource "azurerm_attestation_provider" "corp_attestation" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-attestation-provider
+
+FailNow
+
+---
+
 ## 12 Oct 25 01:44 UTC
 
 Success: true

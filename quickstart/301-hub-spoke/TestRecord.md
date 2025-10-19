@@ -1,3 +1,50 @@
+## 19 Oct 25 00:21 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.13.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Virtual Network Gateway (Subscription: "f7a632a5-49db-4c5e-9828-cd62cb753971"
+	            	[31m│[0m [0mResource Group Name: "hub-vnet-rg-bwt3m"
+	            	[31m│[0m [0mVirtual Network Gateway Name: "hub-vpn-gateway1"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIpWithBasicSkuNotAllowedOnVPNGateways: Basic IP configuration for VPN Virtual Network Gateways is not supported. Follow the link for more details : https://go.microsoft.com/fwlink/p/?linkid=2241350 /subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/hub-vnet-rg-bwt3m/providers/Microsoft.Network/virtualNetworkGateways/hub-vpn-gateway1[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_virtual_network_gateway.hub-vnet-gateway,
+	            	[31m│[0m [0m  on hub-vnet.tf line 108, in resource "azurerm_virtual_network_gateway" "hub-vnet-gateway":
+	            	[31m│[0m [0m 108: resource "azurerm_virtual_network_gateway" "hub-vnet-gateway" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Virtual Network Gateway (Subscription: "f7a632a5-49db-4c5e-9828-cd62cb753971"
+	            	[31m│[0m [0mResource Group Name: "onprem-vnet-rg-bwt3m"
+	            	[31m│[0m [0mVirtual Network Gateway Name: "onprem-vpn-gateway1"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIpWithBasicSkuNotAllowedOnVPNGateways: Basic IP configuration for VPN Virtual Network Gateways is not supported. Follow the link for more details : https://go.microsoft.com/fwlink/p/?linkid=2241350 /subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/onprem-vnet-rg-bwt3m/providers/Microsoft.Network/virtualNetworkGateways/onprem-vpn-gateway1[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_virtual_network_gateway.onprem-vpn-gateway,
+	            	[31m│[0m [0m  on on-prem.tf line 134, in resource "azurerm_virtual_network_gateway" "onprem-vpn-gateway":
+	            	[31m│[0m [0m 134: resource "azurerm_virtual_network_gateway" "onprem-vpn-gateway" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/301-hub-spoke
+
+FailNow
+
+---
+
 ## 12 Oct 25 00:21 UTC
 
 Success: false
