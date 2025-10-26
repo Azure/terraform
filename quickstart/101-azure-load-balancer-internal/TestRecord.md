@@ -1,3 +1,64 @@
+## 26 Oct 25 01:27 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.13.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.50.0
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating/updating Extension (Subscription: "f7a632a5-49db-4c5e-9828-cd62cb753971"
+	            	[31m│[0m [0mResource Group Name: "rg-handy-gorilla"
+	            	[31m│[0m [0mVirtual Machine Name: "test-vm-0"
+	            	[31m│[0m [0mExtension Name: "Nginx"): polling after CreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "VMExtensionProvisioningError"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "VM has reported a failure when processing extension 'Nginx' (publisher 'Microsoft.Azure.Extensions' and type 'CustomScript'). Error message: 'Enable failed: failed to execute command: command terminated with exit status=100\n[stdout]\nGet:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]\nHit:2 http://archive.ubuntu.com/ubuntu jammy InRelease\nGet:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]\nGet:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]\nGet:5 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [2771 kB]\nGet:6 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [403 kB]\nGet:7 http://security.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [13.9 kB]\nGet:8 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1007 kB]\nGet:9 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [220 kB]\nGet:10 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [22.3 kB]\nGet:11 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [50.5 kB]\nGet:12 http://security.ubuntu.com/ubuntu jammy-security/multiverse Translation-en [10.2 kB]\nGet:13 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 c-n-f Metadata [376 B]\nGet:14 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [14.1 MB]\nGet:15 http://archive.ubuntu.com/ubuntu jammy/universe Translation-en [5652 kB]\nGet:16 http://archive.ubuntu.com/ubuntu jammy/universe amd64 c-n-f Metadata [286 kB]\nGet:17 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [217 kB]\nGet:18 http://archive.ubuntu.com/ubuntu jammy/multiverse Translation-en [112 kB]\nGet:19 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 c-n-f Metadata [8372 B]\nGet:20 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3027 kB]\nGet:21 http://archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [469 kB]\nGet:22 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 c-n-f Metadata [19.0 kB]\nGet:23 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1242 kB]\nGet:24 http://archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [307 kB]\nGet:25 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [29.8 kB]\nGet:26 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [57.6 kB]\nGet:27 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse Translation-en [13.2 kB]\nGet:28 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 c-n-f Metadata [600 B]\nGet:29 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [69.4 kB]\nGet:30 http://archive.ubuntu.com/ubuntu jammy-backports/main Translation-en [11.5 kB]\nGet:31 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 c-n-f Metadata [412 B]\nGet:32 http://archive.ubuntu.com/ubuntu jammy-backports/restricted amd64 c-n-f Metadata [116 B]\nGet:33 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [30.1 kB]\nGet:34 http://archive.ubuntu.com/ubuntu jammy-backports/universe Translation-en [16.6 kB]\nGet:35 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 c-n-f Metadata [672 B]\nGet:36 http://archive.ubuntu.com/ubuntu jammy-backports/multiverse amd64 c-n-f Metadata [116 B]\nFetched 30.5 MB in 5s (6431 kB/s)\nReading package lists...\n\n[stderr]\nE: Could not open file /var/lib/apt/lists/security.ubuntu.com_ubuntu_dists_jammy-security_multiverse_cnf_Commands-amd64 - open (2: No such file or directory)\nTraceback (most recent call last):\n  File \"/usr/lib/cnf-update-db\", line 32, in <module>\n    col.create(db)\n  File \"/usr/lib/python3/dist-packages/CommandNotFound/db/creator.py\", line 95, in create\n    self._fill_commands(con)\n  File \"/usr/lib/python3/dist-packages/CommandNotFound/db/creator.py\", line 144, in _fill_commands\n    raise subprocess.CalledProcessError(returncode=sub.returncode,\nsubprocess.CalledProcessError: Command '/usr/lib/apt/apt-helper cat-file /var/lib/apt/lists/security.ubuntu.com_ubuntu_dists_jammy-security_multiverse_cnf_Commands-amd64' returned non-zero exit status 100.\nE: Problem executing scripts APT::Update::Post-Invoke-Success 'if /usr/bin/test -w /var/lib/command-not-found/ -a -e /usr/lib/cnf-update-db; then /usr/lib/cnf-update-db > /dev/null; fi'\nE: Sub-process returned an error code\n'. More information on troubleshooting is available at https://aka.ms/VMExtensionCSELinuxTroubleshoot. "
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m  "startTime": "2025-10-26T01:11:07.0816393+00:00",
+	            	[31m│[0m [0m  "endTime": "2025-10-26T01:11:44.6286194+00:00",
+	            	[31m│[0m [0m  "status": "Failed",
+	            	[31m│[0m [0m  "error": {
+	            	[31m│[0m [0m    "code": "VMExtensionProvisioningError",
+	            	[31m│[0m [0m    "message": "VM has reported a failure when processing extension 'Nginx' (publisher 'Microsoft.Azure.Extensions' and type 'CustomScript'). Error message: 'Enable failed: failed to execute command: command terminated with exit status=100\n[stdout]\nGet:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]\nHit:2 http://archive.ubuntu.com/ubuntu jammy InRelease\nGet:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]\nGet:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]\nGet:5 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [2771 kB]\nGet:6 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [403 kB]\nGet:7 http://security.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [13.9 kB]\nGet:8 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1007 kB]\nGet:9 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [220 kB]\nGet:10 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [22.3 kB]\nGet:11 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [50.5 kB]\nGet:12 http://security.ubuntu.com/ubuntu jammy-security/multiverse Translation-en [10.2 kB]\nGet:13 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 c-n-f Metadata [376 B]\nGet:14 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [14.1 MB]\nGet:15 http://archive.ubuntu.com/ubuntu jammy/universe Translation-en [5652 kB]\nGet:16 http://archive.ubuntu.com/ubuntu jammy/universe amd64 c-n-f Metadata [286 kB]\nGet:17 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [217 kB]\nGet:18 http://archive.ubuntu.com/ubuntu jammy/multiverse Translation-en [112 kB]\nGet:19 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 c-n-f Metadata [8372 B]\nGet:20 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3027 kB]\nGet:21 http://archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [469 kB]\nGet:22 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 c-n-f Metadata [19.0 kB]\nGet:23 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1242 kB]\nGet:24 http://archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [307 kB]\nGet:25 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [29.8 kB]\nGet:26 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [57.6 kB]\nGet:27 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse Translation-en [13.2 kB]\nGet:28 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 c-n-f Metadata [600 B]\nGet:29 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [69.4 kB]\nGet:30 http://archive.ubuntu.com/ubuntu jammy-backports/main Translation-en [11.5 kB]\nGet:31 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 c-n-f Metadata [412 B]\nGet:32 http://archive.ubuntu.com/ubuntu jammy-backports/restricted amd64 c-n-f Metadata [116 B]\nGet:33 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [30.1 kB]\nGet:34 http://archive.ubuntu.com/ubuntu jammy-backports/universe Translation-en [16.6 kB]\nGet:35 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 c-n-f Metadata [672 B]\nGet:36 http://archive.ubuntu.com/ubuntu jammy-backports/multiverse amd64 c-n-f Metadata [116 B]\nFetched 30.5 MB in 5s (6431 kB/s)\nReading package lists...\n\n[stderr]\nE: Could not open file /var/lib/apt/lists/security.ubuntu.com_ubuntu_dists_jammy-security_multiverse_cnf_Commands-amd64 - open (2: No such file or directory)\nTraceback (most recent call last):\n  File \"/usr/lib/cnf-update-db\", line 32, in <module>\n    col.create(db)\n  File \"/usr/lib/python3/dist-packages/CommandNotFound/db/creator.py\", line 95, in create\n    self._fill_commands(con)\n  File \"/usr/lib/python3/dist-packages/CommandNotFound/db/creator.py\", line 144, in _fill_commands\n    raise subprocess.CalledProcessError(returncode=sub.returncode,\nsubprocess.CalledProcessError: Command '/usr/lib/apt/apt-helper cat-file /var/lib/apt/lists/security.ubuntu.com_ubuntu_dists_jammy-security_multiverse_cnf_Commands-amd64' returned non-zero exit status 100.\nE: Problem executing scripts APT::Update::Post-Invoke-Success 'if /usr/bin/test -w /var/lib/command-not-found/ -a -e /usr/lib/cnf-update-db; then /usr/lib/cnf-update-db > /dev/null; fi'\nE: Sub-process returned an error code\n'. More information on troubleshooting is available at https://aka.ms/VMExtensionCSELinuxTroubleshoot. "
+	            	[31m│[0m [0m  },
+	            	[31m│[0m [0m  "name": "1e013a98-eb7d-4f42-9af4-5a42131dea90"
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_virtual_machine_extension.example[0],
+	            	[31m│[0m [0m  on main.tf line 195, in resource "azurerm_virtual_machine_extension" "example":
+	            	[31m│[0m [0m 195: resource "azurerm_virtual_machine_extension" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-load-balancer-internal
+
+FailNow
+
+---
+
 ## 19 Oct 25 01:13 UTC
 
 Success: true

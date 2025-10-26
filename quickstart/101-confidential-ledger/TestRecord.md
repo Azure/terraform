@@ -1,3 +1,52 @@
+## 26 Oct 25 01:04 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.13.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1merror creating /subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-cool-macaw/providers/Microsoft.ConfidentialLedger/ledgers/ledger-kfsisapojgske: polling after LedgerCreate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "Unknown"
+	            	[31m│[0m [0mCode: "internal-error"
+	            	[31m│[0m [0mMessage: "Couldn't parse Azure API Response into a friendly error - please see the original HTTP Response for more details (and file a bug so we can fix this!)."
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{"id":"/providers/Microsoft.ConfidentialLedger/locations/EASTUS/operationStatuses/6f07adb3-4bb0-476b-8c85-045bc897a2da*4EC6AEDB58370D9282EF264ECC8C93CDE5D6860117B5C06381C571296120A680","name":"6f07adb3-4bb0-476b-8c85-045bc897a2da*4EC6AEDB58370D9282EF264ECC8C93CDE5D6860117B5C06381C571296120A680","resourceId":"/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/rg-cool-macaw/providers/Microsoft.ConfidentialLedger/ledgers/ledger-kfsisapojgske","status":"Failed","startTime":"2025-10-26T00:53:23.879437Z","endTime":"2025-10-26T01:03:18.1712792Z"}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_confidential_ledger.example,
+	            	[31m│[0m [0m  on main.tf line 21, in resource "azurerm_confidential_ledger" "example":
+	            	[31m│[0m [0m  21: resource "azurerm_confidential_ledger" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-confidential-ledger
+
+FailNow
+
+---
+
 ## 19 Oct 25 00:51 UTC
 
 Success: true
