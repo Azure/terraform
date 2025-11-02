@@ -1,3 +1,65 @@
+## 02 Nov 25 00:33 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.13.3
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.1.0
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:52
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Front Door Profile: (Profile Name "MyFrontDoor" / Resource Group "FrontDoor-sunny-rhino"): cdn.ProfilesClient#Create: Failure sending request: StatusCode=400 -- Original Error: Code="BadRequest" Message="All Changes to Azure Frondoor Configuration are blocked currently."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cdn_frontdoor_profile.my_front_door,
+	            	[31m│[0m [0m  on front-door.tf line 14, in resource "azurerm_cdn_frontdoor_profile" "my_front_door":
+	            	[31m│[0m [0m  14: resource "azurerm_cdn_frontdoor_profile" "my_front_door" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Front Door Firewall Policy: (Front Door Web Application Firewall Policy Name "MyWAFPolicy" / Resource Group "FrontDoor-sunny-rhino"): frontdoor.PoliciesClient#CreateOrUpdate: Failure sending request: StatusCode=400 -- Original Error: Code="BadRequest" Message="All Changes to Azure Frondoor Configuration are blocked currently."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cdn_frontdoor_firewall_policy.my_waf_policy,
+	            	[31m│[0m [0m  on front-door.tf line 93, in resource "azurerm_cdn_frontdoor_firewall_policy" "my_waf_policy":
+	            	[31m│[0m [0m  93: resource "azurerm_cdn_frontdoor_firewall_policy" "my_waf_policy" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mchecking for presence of existing Resource: (ResourceId "/subscriptions/f7a632a5-49db-4c5e-9828-cd62cb753971/resourceGroups/FrontDoor-sunny-rhino/providers/Microsoft.Storage/storageAccounts/stor42e7051982062ca1/blobServices/default/containers/mycontainer" / Api Version "2021-04-01"): DefaultAzureCredential authentication failed
+	            	[31m│[0m [0mGET http://169.254.169.254/metadata/identity/oauth2/token
+	            	[31m│[0m [0m--------------------------------------------------------------------------------
+	            	[31m│[0m [0mRESPONSE 400 Bad Request
+	            	[31m│[0m [0m--------------------------------------------------------------------------------
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m  "error": "invalid_request",
+	            	[31m│[0m [0m  "error_description": "Identity not found"
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m--------------------------------------------------------------------------------
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azapi_resource.my_storage_container,
+	            	[31m│[0m [0m  on storage-account.tf line 24, in resource "azapi_resource" "my_storage_container":
+	            	[31m│[0m [0m  24: resource "azapi_resource" "my_storage_container" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-front-door-premium-storage-blobs-private-link
+
+FailNow
+
+---
+
 ## 26 Oct 25 00:28 UTC
 
 Success: false
