@@ -34,9 +34,7 @@ func Test_Quickstarts(t *testing.T) {
 	if input == "" {
 		var err error
 		folders, err = allExamples()
-		if err != nil {
-			t.Fatalf(err.Error())
-		}
+		require.NoError(t, err)
 	}
 	folders = removeDuplicates(folders)
 	for _, f := range folders {
