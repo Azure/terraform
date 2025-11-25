@@ -12,6 +12,7 @@ resource "random_string" "container_name" {
   lower   = true
   upper   = false
   special = false
+  
 }
 
 resource "azurerm_container_group" "container" {
