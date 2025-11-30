@@ -1,3 +1,56 @@
+## 30 Nov 25 01:02 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.13.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "9209a73b-48eb-46da-bec6-0858b9eaaa35"
+	            	[31m│[0m [0mResource Group Name: "rg-promoted-rhino"
+	            	[31m│[0m [0mBatch Account Name: "srtemqii"
+	            	[31m│[0m [0mPool Name: "pool-helped-raccoon-fixed-pool"): unexpected status 400 (400 Bad Request) with error: InvalidPropertyValue: The value provided for one of the properties in the request body is invalid.
+	            	[31m│[0m [0mRequestId:e849a3d6-7db3-43e6-9eb5-67a7314b1fcb
+	            	[31m│[0m [0mTime:2025-11-30T01:01:26.4166686Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.fixed,
+	            	[31m│[0m [0m  on main.tf line 46, in resource "azurerm_batch_pool" "fixed":
+	            	[31m│[0m [0m  46: resource "azurerm_batch_pool" "fixed" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "9209a73b-48eb-46da-bec6-0858b9eaaa35"
+	            	[31m│[0m [0mResource Group Name: "rg-promoted-rhino"
+	            	[31m│[0m [0mBatch Account Name: "srtemqii"
+	            	[31m│[0m [0mPool Name: "pool-helped-raccoon-autoscale-pool"): unexpected status 400 (400 Bad Request) with error: InvalidPropertyValue: The value provided for one of the properties in the request body is invalid.
+	            	[31m│[0m [0mRequestId:61622a8e-bb8d-40f9-a64f-575085674ecc
+	            	[31m│[0m [0mTime:2025-11-30T01:01:26.3620447Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.autopool,
+	            	[31m│[0m [0m  on main.tf line 88, in resource "azurerm_batch_pool" "autopool":
+	            	[31m│[0m [0m  88: resource "azurerm_batch_pool" "autopool" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-job
+
+FailNow
+
+---
+
 ## 02 Nov 25 01:29 UTC
 
 Success: false
