@@ -1,0 +1,5 @@
+# Azure AI Foundry Account with Standard Agent
+
+This deployment configuration specifies an [Azure AI Foundry Account](https://learn.microsoft.com/en-us/azure/ai-foundry/what-is-azure-ai-foundry) and a deployment of the OpenAI 4.1 model. An AI Foundry Project is deployed within the AI Foundry Account. The AI Foundry Account and Project are configured to support the Agent Service with a [standard agent](https://learn.microsoft.com/en-us/azure/ai-foundry/agents/concepts/standard-agent-setup).
+
+This configuration describes the minimal set of resources you require to get started with Azure AI Foundry Accounts, Projects, and Agent Service configured in a Standard Agent configuration.
