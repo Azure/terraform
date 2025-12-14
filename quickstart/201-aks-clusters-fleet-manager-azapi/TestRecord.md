@@ -1,3 +1,89 @@
+## 14 Dec 25 01:50 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.13.3
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.8.0
++ provider registry.terraform.io/hashicorp/azurerm v4.56.0
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "9209a73b-48eb-46da-bec6-0858b9eaaa35"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-txce"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-2-txce"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-2-txce is on version 1.31.13, which is only available for Long-Term Support (LTS). If you intend to onboard to LTS, please ensure the cluster is in Premium tier and LTS support plan (see https://aka.ms/aks/enable-lts). Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, please check https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[1],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "9209a73b-48eb-46da-bec6-0858b9eaaa35"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-txce"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-3-txce"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-3-txce is on version 1.31.13, which is only available for Long-Term Support (LTS). If you intend to onboard to LTS, please ensure the cluster is in Premium tier and LTS support plan (see https://aka.ms/aks/enable-lts). Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, please check https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[2],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFailed to create/update resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azapi_resource.fleet,
+	            	[31m│[0m [0m  on fleet.tf line 6, in resource "azapi_resource" "fleet":
+	            	[31m│[0m [0m   6: resource "azapi_resource" "fleet" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating/updating Resource: (ResourceId
+	            	[31m│[0m [0m"/subscriptions/9209a73b-48eb-46da-bec6-0858b9eaaa35/resourceGroups/rg-fleet-example-txce/providers/Microsoft.ContainerService/fleets/fleet-example-txce"
+	            	[31m│[0m [0m/ Api Version "2025-03-01"): GET
+	            	[31m│[0m [0mhttps://management.azure.com/subscriptions/9209a73b-48eb-46da-bec6-0858b9eaaa35/providers/Microsoft.ContainerService/locations/australiaeast/operations/ea2851b1-66ea-4cea-a48e-22d25d48caf1
+	            	[31m│[0m [0m--------------------------------------------------------------------------------
+	            	[31m│[0m [0mRESPONSE 200: 200 OK
+	            	[31m│[0m [0mERROR CODE: HubClusterVMSizeNotAvailable
+	            	[31m│[0m [0m--------------------------------------------------------------------------------
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m  "name": "ea2851b1-66ea-4cea-a48e-22d25d48caf1",
+	            	[31m│[0m [0m  "status": "Failed",
+	            	[31m│[0m [0m  "startTime": "2025-12-14T01:42:10.2464538Z",
+	            	[31m│[0m [0m  "endTime": "2025-12-14T01:44:22.8885257Z",
+	            	[31m│[0m [0m  "error": {
+	            	[31m│[0m [0m    "code": "HubClusterVMSizeNotAvailable",
+	            	[31m│[0m [0m    "message": "The VM Size specified for hub cluster is not available, original error: \"All attempts fail:\\n#1: GET https://management.azure.com/subscriptions/9209a73b-48eb-46da-bec6-0858b9eaaa35/providers/Microsoft.ContainerService/locations/australiaeast/operations/345e5ed1-e2f4-4490-b6a6-92ab02b7fc9a\\n--------------------------------------------------------------------------------\\nRESPONSE 200: 200 OK\\nERROR CODE: QuotaExceeded\\n--------------------------------------------------------------------------------\\n{\\n  \\\"name\\\": \\\"345e5ed1-e2f4-4490-b6a6-92ab02b7fc9a\\\",\\n  \\\"status\\\": \\\"Failed\\\",\\n  \\\"startTime\\\": \\\"2025-12-14T01:42:26.1099961Z\\\",\\n  \\\"endTime\\\": \\\"2025-12-14T01:44:15.3839404Z\\\",\\n  \\\"error\\\": {\\n    \\\"code\\\": \\\"QuotaExceeded\\\",\\n    \\\"message\\\": \\\"Create or update VMSS /subscriptions/9209a73b-48eb-46da-bec6-0858b9eaaa35/resourceGroups/MC_FL_rg-fleet-example-txce_fleet-example-txce_australiaeast/providers/Microsoft.Compute/virtualMachineScaleSets/aks-agentpool-21096813-vmss failed. Operation could not be completed as it results in exceeding approved Total Regional Cores quota. Additional details - Deployment Model: Resource Manager, Location: australiaeast, Current Limit: 10, Current Usage: 8, Additional Required: 4, (Minimum) New Limit Required: 12. Setup Alerts when Quota reaches threshold. Learn more at https://aka.ms/quotamonitoringalerting . Submit a request for Quota increase at https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/%7B%22subscriptionId%22:%229209a73b-48eb-46da-bec6-0858b9eaaa35%22,%22command%22:%22openQuotaApprovalBlade%22,%22quotas%22:[%7B%22location%22:%22australiaeast%22,%22providerId%22:%22Microsoft.Compute%22,%22resourceName%22:%22cores%22,%22quotaRequest%22:%7B%22properties%22:%7B%22limit%22:12,%22unit%22:%22Count%22,%22name%22:%7B%22value%22:%22cores%22%7D%7D%7D%7D]%7D by specifying parameters listed in the ‘Details’ section for deployment to succeed. Please read more about quota limits at https://docs.microsoft.com/en-us/azure/azure-supportability/regional-quota-requests\\\",\\n    \\\"details\\\": [\\n      {\\n        \\\"code\\\": \\\"OperationNotAllowed\\\",\\n        \\\"message\\\": \\\"Operation could not be completed as it results in exceeding approved Total Regional Cores quota. Additional details - Deployment Model: Resource Manager, Location: australiaeast, Current Limit: 10, Current Usage: 8, Additional Required: 4, (Minimum) New Limit Required: 12. Setup Alerts when Quota reaches threshold. Learn more at https://aka.ms/quotamonitoringalerting . Submit a request for Quota increase at https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/%7B%22subscriptionId%22:%229209a73b-48eb-46da-bec6-0858b9eaaa35%22,%22command%22:%22openQuotaApprovalBlade%22,%22quotas%22:[%7B%22location%22:%22australiaeast%22,%22providerId%22:%22Microsoft.Compute%22,%22resourceName%22:%22cores%22,%22quotaRequest%22:%7B%22properties%22:%7B%22limit%22:12,%22unit%22:%22Count%22,%22name%22:%7B%22value%22:%22cores%22%7D%7D%7D%7D]%7D by specifying parameters listed in the ‘Details’ section for deployment to succeed. Please read more about quota limits at https://docs.microsoft.com/en-us/azure/azure-supportability/regional-quota-requests\\\"\\n      }\\n    ]\\n  }\\n}\\n--------------------------------------------------------------------------------\\n\\n#2: PUT https://management.azure.com/subscriptions/9209a73b-48eb-46da-bec6-0858b9eaaa35/resourceGroups/FL_rg-fleet-example-txce_fleet-example-txce_australiaeast/providers/Microsoft.ContainerService/managedClusters/hub\\n--------------------------------------------------------------------------------\\nRESPONSE 400: 400 Bad Request\\nERROR CODE: PropertyChangeNotAllowed\\n--------------------------------------------------------------------------------\\n{\\n  \\\"code\\\": \\\"PropertyChangeNotAllowed\\\",\\n  \\\"details\\\": null,\\n  \\\"message\\\": \\\"Changing property 'properties.vmSize' is not allowed.\\\",\\n  \\\"subcode\\\": \\\"\\\",\\n  \\\"target\\\": \\\"properties.vmSize\\\"\\n}\\n--------------------------------------------------------------------------------\\n\". See https://learn.microsoft.com/en-us/rest/api/compute/virtual-machines/list-available-sizes?tabs=HTTP for information on listing available VM sizes.. Resource ID: \"/subscriptions/9209a73b-48eb-46da-bec6-0858b9eaaa35/resourceGroups/rg-fleet-example-txce/providers/Microsoft.ContainerService/fleets/fleet-example-txce\". Correlation ID: \"d2afc7b8-2d72-a1a7-f895-464f1cb1d05c\". Operation ID: \"ea2851b1-66ea-4cea-a48e-22d25d48caf1\""
+	            	[31m│[0m [0m  }
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m--------------------------------------------------------------------------------
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-clusters-fleet-manager-azapi
+
+FailNow
+
+---
+
 ## 07 Dec 25 04:04 UTC
 
 Success: false

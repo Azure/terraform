@@ -1,3 +1,38 @@
+## 14 Dec 25 01:06 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.13.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1m"name" may only contain alphanumeric characters and dashes and must be between 3-24 chars[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_key_vault.example,
+	            	[31m│[0m [0m  on main.tf line 14, in resource "azurerm_key_vault" "example":
+	            	[31m│[0m [0m  14:   name                        = [4m"${random_pet.prefix.id}-kv"[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-vmss-disk-encryption-extension
+
+FailNow
+
+---
+
 ## 07 Dec 25 01:19 UTC
 
 Success: true

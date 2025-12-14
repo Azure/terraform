@@ -1,3 +1,58 @@
+## 14 Dec 25 01:57 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.13.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mwaiting for Virtual Hub (Subscription: "9209a73b-48eb-46da-bec6-0858b9eaaa35"
+	            	[31m│[0m [0mResource Group Name: "rg-still-sailfish"
+	            	[31m│[0m [0mVirtual Hub Name: "hub-azfw-securehub-eus") provisioning route: retrieving Virtual Hub (Subscription: "9209a73b-48eb-46da-bec6-0858b9eaaa35"
+	            	[31m│[0m [0mResource Group Name: "rg-still-sailfish"
+	            	[31m│[0m [0mVirtual Hub Name: "hub-azfw-securehub-eus"): Get "https://management.azure.com/subscriptions/9209a73b-48eb-46da-bec6-0858b9eaaa35/resourceGroups/rg-still-sailfish/providers/Microsoft.Network/virtualHubs/hub-azfw-securehub-eus?api-version=2023-11-01": dial tcp 4.150.240.10:443: connect: connection refused[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_virtual_hub.azfw_vwan_hub,
+	            	[31m│[0m [0m  on main.tf line 18, in resource "azurerm_virtual_hub" "azfw_vwan_hub":
+	            	[31m│[0m [0m  18: resource "azurerm_virtual_hub" "azfw_vwan_hub" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-azfw-with-secure-hub
+
+FailNow
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:135
+	            				/usr/local/go/src/runtime/panic.go:615
+	            				/usr/local/go/src/testing/testing.go:1013
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/test_runner.go:53
+	            				/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	'terraform [destroy -auto-approve -input=false -lock=false]' unsuccessful after 5 retries
+	Test:       	Test_Quickstarts/quickstart/201-azfw-with-secure-hub
+
+FailNow
+
+---
+
 ## 07 Dec 25 02:14 UTC
 
 Success: false

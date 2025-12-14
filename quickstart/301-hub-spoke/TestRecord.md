@@ -1,3 +1,100 @@
+## 14 Dec 25 01:24 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.13.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating/updating Virtual Machine (Subscription: "9209a73b-48eb-46da-bec6-0858b9eaaa35"
+	            	[31m│[0m [0mResource Group Name: "hub-nva-rg-vxasr"
+	            	[31m│[0m [0mVirtual Machine Name: "hub-nva-vm"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_virtual_machine.hub-nva-vm,
+	            	[31m│[0m [0m  on hub-nva.tf line 40, in resource "azurerm_virtual_machine" "hub-nva-vm":
+	            	[31m│[0m [0m  40: resource "azurerm_virtual_machine" "hub-nva-vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating/updating Virtual Machine (Subscription: "9209a73b-48eb-46da-bec6-0858b9eaaa35"
+	            	[31m│[0m [0mResource Group Name: "hub-vnet-rg-vxasr"
+	            	[31m│[0m [0mVirtual Machine Name: "hub-vm"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_virtual_machine.hub-vm,
+	            	[31m│[0m [0m  on hub-vnet.tf line 63, in resource "azurerm_virtual_machine" "hub-vm":
+	            	[31m│[0m [0m  63: resource "azurerm_virtual_machine" "hub-vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "9209a73b-48eb-46da-bec6-0858b9eaaa35"
+	            	[31m│[0m [0mResource Group Name: "hub-vnet-rg-vxasr"
+	            	[31m│[0m [0mPublic I P Addresses Name: "hub-vpn-gateway1-pip"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip.hub-vpn-gateway1-pip,
+	            	[31m│[0m [0m  on hub-vnet.tf line 100, in resource "azurerm_public_ip" "hub-vpn-gateway1-pip":
+	            	[31m│[0m [0m 100: resource "azurerm_public_ip" "hub-vpn-gateway1-pip" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "9209a73b-48eb-46da-bec6-0858b9eaaa35"
+	            	[31m│[0m [0mResource Group Name: "onprem-vnet-rg-vxasr"
+	            	[31m│[0m [0mPublic I P Addresses Name: "onprem-pip"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip.onprem-pip,
+	            	[31m│[0m [0m  on on-prem.tf line 37, in resource "azurerm_public_ip" "onprem-pip":
+	            	[31m│[0m [0m  37: resource "azurerm_public_ip" "onprem-pip" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "9209a73b-48eb-46da-bec6-0858b9eaaa35"
+	            	[31m│[0m [0mResource Group Name: "onprem-vnet-rg-vxasr"
+	            	[31m│[0m [0mPublic I P Addresses Name: "onprem-vpn-gateway1-pip"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip.onprem-vpn-gateway1-pip,
+	            	[31m│[0m [0m  on on-prem.tf line 126, in resource "azurerm_public_ip" "onprem-vpn-gateway1-pip":
+	            	[31m│[0m [0m 126: resource "azurerm_public_ip" "onprem-vpn-gateway1-pip" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating/updating Virtual Machine (Subscription: "9209a73b-48eb-46da-bec6-0858b9eaaa35"
+	            	[31m│[0m [0mResource Group Name: "spoke1-vnet-rg-vxasr"
+	            	[31m│[0m [0mVirtual Machine Name: "spoke1-vm"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_virtual_machine.spoke1-vm,
+	            	[31m│[0m [0m  on spoke1.tf line 63, in resource "azurerm_virtual_machine" "spoke1-vm":
+	            	[31m│[0m [0m  63: resource "azurerm_virtual_machine" "spoke1-vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating/updating Virtual Machine (Subscription: "9209a73b-48eb-46da-bec6-0858b9eaaa35"
+	            	[31m│[0m [0mResource Group Name: "spoke2-vnet-rg-vxasr"
+	            	[31m│[0m [0mVirtual Machine Name: "spoke2-vm"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_virtual_machine.spoke2-vm,
+	            	[31m│[0m [0m  on spoke2.tf line 67, in resource "azurerm_virtual_machine" "spoke2-vm":
+	            	[31m│[0m [0m  67: resource "azurerm_virtual_machine" "spoke2-vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/301-hub-spoke
+
+FailNow
+
+---
+
 ## 07 Dec 25 01:08 UTC
 
 Success: false

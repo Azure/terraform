@@ -1,3 +1,41 @@
+## 14 Dec 25 00:48 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.13.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
++ provider registry.terraform.io/hashicorp/tls v4.0.4
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Attestation Providers (Subscription: "9209a73b-48eb-46da-bec6-0858b9eaaa35"
+	            	[31m│[0m [0mResource Group Name: "rg-tops-hornet"
+	            	[31m│[0m [0mAttestation Provider Name: "attestationwhenvglz"): unexpected status 409 (409 Conflict) with error: MissingSubscriptionRegistration: The subscription is not registered to use namespace 'Microsoft.Attestation'. See https://aka.ms/rps-not-found for how to register subscriptions.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_attestation_provider.corp_attestation,
+	            	[31m│[0m [0m  on main.tf line 38, in resource "azurerm_attestation_provider" "corp_attestation":
+	            	[31m│[0m [0m  38: resource "azurerm_attestation_provider" "corp_attestation" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-attestation-provider
+
+FailNow
+
+---
+
 ## 07 Dec 25 00:31 UTC
 
 Success: false
