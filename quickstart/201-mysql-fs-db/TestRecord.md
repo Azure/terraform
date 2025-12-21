@@ -1,3 +1,70 @@
+## 21 Dec 25 00:31 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.13.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.rg_name: Refreshing state... [id=mysql-fs-db-rg-relevant-caiman][0m
+	            	[0m[1mrandom_string.name: Refreshing state... [id=gkryumtv][0m
+	            	[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/9209a73b-48eb-46da-bec6-0858b9eaaa35/resourceGroups/mysql-fs-db-rg-relevant-caiman][0m
+	            	[0m[1mazurerm_virtual_network.default: Refreshing state... [id=/subscriptions/9209a73b-48eb-46da-bec6-0858b9eaaa35/resourceGroups/mysql-fs-db-rg-relevant-caiman/providers/Microsoft.Network/virtualNetworks/vnet-gkryumtv][0m
+	            	[0m[1mazurerm_private_dns_zone.default: Refreshing state... [id=/subscriptions/9209a73b-48eb-46da-bec6-0858b9eaaa35/resourceGroups/mysql-fs-db-rg-relevant-caiman/providers/Microsoft.Network/privateDnsZones/gkryumtv.mysql.database.azure.com][0m
+	            	[0m[1mazurerm_subnet.default: Refreshing state... [id=/subscriptions/9209a73b-48eb-46da-bec6-0858b9eaaa35/resourceGroups/mysql-fs-db-rg-relevant-caiman/providers/Microsoft.Network/virtualNetworks/vnet-gkryumtv/subnets/subnet-gkryumtv][0m
+	            	[0m[1mazurerm_private_dns_zone_virtual_network_link.default: Refreshing state... [id=/subscriptions/9209a73b-48eb-46da-bec6-0858b9eaaa35/resourceGroups/mysql-fs-db-rg-relevant-caiman/providers/Microsoft.Network/privateDnsZones/gkryumtv.mysql.database.azure.com/virtualNetworkLinks/mysqlfsVnetZonegkryumtv.com][0m
+	            	[0m[1mazurerm_mysql_flexible_server.default: Refreshing state... [id=/subscriptions/9209a73b-48eb-46da-bec6-0858b9eaaa35/resourceGroups/mysql-fs-db-rg-relevant-caiman/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-gkryumtv][0m
+	            	[0m[1mazurerm_mysql_flexible_database.main: Refreshing state... [id=/subscriptions/9209a73b-48eb-46da-bec6-0858b9eaaa35/resourceGroups/mysql-fs-db-rg-relevant-caiman/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-gkryumtv/databases/mysqlfsdb_gkryumtv][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_mysql_flexible_server.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_mysql_flexible_server" "default" {
+	            	        id                            = "/subscriptions/9209a73b-48eb-46da-bec6-0858b9eaaa35/resourceGroups/mysql-fs-db-rg-relevant-caiman/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-gkryumtv"
+	            	        name                          = "mysqlfs-gkryumtv"
+	            	        tags                          = {}
+	            	      [31m-[0m[0m zone                          = "1" [90m-> null[0m[0m
+	            	        [90m# (14 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m high_availability {
+	            	          [31m-[0m[0m standby_availability_zone = "1" [90m-> null[0m[0m
+	            	            [90m# (1 unchanged attribute hidden)[0m[0m
+	            	        }
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 0 to add, 1 to change, 0 to destroy.
+	            	[0m[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-mysql-fs-db641610805/src/quickstart/201-mysql-fs-db/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-mysql-fs-db641610805/src/quickstart/201-mysql-fs-db/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-mysql-fs-db
+
+FailNow
+
+---
+
 ## 14 Dec 25 01:30 UTC
 
 Success: false

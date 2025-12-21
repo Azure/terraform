@@ -1,3 +1,46 @@
+## 21 Dec 25 00:42 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.13.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Managed Instance: (Name "mi-seahorse-mssql" / Resource Group "mi-seahorse-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending request: StatusCode=400 -- Original Error: Code="ProvisioningDisabled" Message="The deployment request failed because it would exceed total number of vCores (8) and/or subnets (0), which is above the allowance for your subscription: max vCores: 0, max number of subnets 0. Please send the support request to extend the quota using Azure portal: aka.ms/sql-mi-obtain-larger-quota"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_mssql_managed_instance.main,
+	            	[31m│[0m [0m  on main.tf line 69, in resource "azurerm_mssql_managed_instance" "main":
+	            	[31m│[0m [0m  69: resource "azurerm_mssql_managed_instance" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating Managed Instance: (Name "mi-seahorse-mssql" / Resource Group
+	            	[31m│[0m [0m"mi-seahorse-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure
+	            	[31m│[0m [0msending request: StatusCode=400 -- Original Error:
+	            	[31m│[0m [0mCode="ProvisioningDisabled" Message="The deployment request failed because
+	            	[31m│[0m [0mit would exceed total number of vCores (8) and/or subnets (0), which is
+	            	[31m│[0m [0mabove the allowance for your subscription: max vCores: 0, max number of
+	            	[31m│[0m [0msubnets 0. Please send the support request to extend the quota using Azure
+	            	[31m│[0m [0mportal: aka.ms/sql-mi-obtain-larger-quota"
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-managed-instance
+
+FailNow
+
+---
+
 ## 14 Dec 25 00:58 UTC
 
 Success: false
