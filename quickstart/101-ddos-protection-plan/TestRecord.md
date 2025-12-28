@@ -1,3 +1,40 @@
+## 28 Dec 25 00:24 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.13.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Ddos Protection Plan (Subscription: "9209a73b-48eb-46da-bec6-0858b9eaaa35"
+	            	[31m│[0m [0mResource Group Name: "rg-solid-bonefish"
+	            	[31m│[0m [0mDdos Protection Plan Name: "fbewztbevigni"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: DdosProtectionPlanCountLimitReached: It is not allowed to create more than 1 DDoS protection plan for a subscription in the region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_network_ddos_protection_plan.ddos,
+	            	[31m│[0m [0m  on main.tf line 17, in resource "azurerm_network_ddos_protection_plan" "ddos":
+	            	[31m│[0m [0m  17: resource "azurerm_network_ddos_protection_plan" "ddos" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-ddos-protection-plan
+
+FailNow
+
+---
+
 ## 21 Dec 25 00:51 UTC
 
 Success: false

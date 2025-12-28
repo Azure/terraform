@@ -1,3 +1,54 @@
+## 28 Dec 25 00:35 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.13.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "9209a73b-48eb-46da-bec6-0858b9eaaa35"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-ss-func-guinea-rg"
+	            	[31m│[0m [0mDatabase Account Name: "cosmos-db-ss-func-guinea-cosmosdb"): creating/updating CosmosDB Account "cosmos-db-ss-func-guinea-cosmosdb" (Resource Group "cosmos-db-ss-func-guinea-rg"): polling after DatabaseAccountsCreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "InternalServerError"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "Database account creation failed. Operation Id: 2254ab9f-2833-40b7-a071-1a3459291e67, Error : Retry failed after 4 tries. Retry settings can be adjusted in ClientOptions.Retry or by configuring a custom retry policy in ClientOptions.RetryPolicy.\r\nActivityId: 250e6df1-f93b-43b5-b765-49e6790a441e, Microsoft.Azure.Documents.Common/2.14.0"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{"status":"Failed","error":{"code":"InternalServerError","message":"Database account creation failed. Operation Id: 2254ab9f-2833-40b7-a071-1a3459291e67, Error : Retry failed after 4 tries. Retry settings can be adjusted in ClientOptions.Retry or by configuring a custom retry policy in ClientOptions.RetryPolicy.\r\nActivityId: 250e6df1-f93b-43b5-b765-49e6790a441e, Microsoft.Azure.Documents.Common/2.14.0"}}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 6, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m   6: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-serverside-functionality
+
+FailNow
+
+---
+
 ## 21 Dec 25 01:06 UTC
 
 Success: true

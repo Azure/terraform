@@ -1,3 +1,48 @@
+## 28 Dec 25 00:57 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.13.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.57.0
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Account (Subscription: "9209a73b-48eb-46da-bec6-0858b9eaaa35"
+	            	[31m│[0m [0mResource Group Name: "rg-warm-moccasin"
+	            	[31m│[0m [0mAccount Name: "exampleaiservices"): performing AccountsCreate: unexpected status 409 (409 Conflict) with error: CustomDomainInUse: Please pick a different name. The subdomain name 'exampleaiservices' is not available as it's already used by a resource. If the resource using the name was deleted in the last 48 hours, you may need to purge the deleted resource. Learn more at "https://go.microsoft.com/fwlink/?linkid=2215493"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_ai_services.example,
+	            	[31m│[0m [0m  on main.tf line 60, in resource "azurerm_ai_services" "example":
+	            	[31m│[0m [0m  60: resource "azurerm_ai_services" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating Account (Subscription: "9209a73b-48eb-46da-bec6-0858b9eaaa35"
+	            	[31m│[0m [0mResource Group Name: "rg-warm-moccasin"
+	            	[31m│[0m [0mAccount Name: "exampleaiservices"): performing AccountsCreate: unexpected
+	            	[31m│[0m [0mstatus 409 (409 Conflict) with error: CustomDomainInUse: Please pick a
+	            	[31m│[0m [0mdifferent name. The subdomain name 'exampleaiservices' is not available as
+	            	[31m│[0m [0mit's already used by a resource. If the resource using the name was deleted
+	            	[31m│[0m [0min the last 48 hours, you may need to purge the deleted resource. Learn
+	            	[31m│[0m [0mmore at "https://go.microsoft.com/fwlink/?linkid=2215493"
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-ai-foundry
+
+FailNow
+
+---
+
 ## 21 Dec 25 01:26 UTC
 
 Success: false
