@@ -1,3 +1,70 @@
+## 11 Jan 26 00:21 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.13.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/kubernetes v2.38.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "9209a73b-48eb-46da-bec6-0858b9eaaa35"
+	            	[31m│[0m [0mResource Group Name: "quickstart-aks-dev-nu1b0pmy-rg"
+	            	[31m│[0m [0mKubernetes Cluster Name: "quickstart-aks-aks"): polling after CreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "QuotaExceeded"
+	            	[31m│[0m [0mCode: "OperationNotAllowed"
+	            	[31m│[0m [0mMessage: "Create or update VMSS /subscriptions/9209a73b-48eb-46da-bec6-0858b9eaaa35/resourceGroups/MC_quickstart-aks-dev-nu1b0pmy-rg_quickstart-aks-aks_westus2/providers/Microsoft.Compute/virtualMachineScaleSets/aks-default-37162832-vmss failed. Operation could not be completed as it results in exceeding approved Total Regional Cores quota. Additional details - Deployment Model: Resource Manager, Location: westus2, Current Limit: 10, Current Usage: 6, Additional Required: 6, (Minimum) New Limit Required: 12. Setup Alerts when Quota reaches threshold. Learn more at https://aka.ms/quotamonitoringalerting . Submit a request for Quota increase at https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/%7B%22subscriptionId%22:%229209a73b-48eb-46da-bec6-0858b9eaaa35%22,%22command%22:%22openQuotaApprovalBlade%22,%22quotas%22:[%7B%22location%22:%22westus2%22,%22providerId%22:%22Microsoft.Compute%22,%22resourceName%22:%22cores%22,%22quotaRequest%22:%7B%22properties%22:%7B%22limit%22:12,%22unit%22:%22Count%22,%22name%22:%7B%22value%22:%22cores%22%7D%7D%7D%7D]%7D by specifying parameters listed in the ‘Details’ section for deployment to succeed. Please read more about quota limits at https://docs.microsoft.com/en-us/azure/azure-supportability/regional-quota-requests\nOperation could not be completed as it results in exceeding approved Total Regional Cores quota. Additional details - Deployment Model: Resource Manager, Location: westus2, Current Limit: 10, Current Usage: 6, Additional Required: 6, (Minimum) New Limit Required: 12. Setup Alerts when Quota reaches threshold. Learn more at https://aka.ms/quotamonitoringalerting . Submit a request for Quota increase at https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/%7B%22subscriptionId%22:%229209a73b-48eb-46da-bec6-0858b9eaaa35%22,%22command%22:%22openQuotaApprovalBlade%22,%22quotas%22:[%7B%22location%22:%22westus2%22,%22providerId%22:%22Microsoft.Compute%22,%22resourceName%22:%22cores%22,%22quotaRequest%22:%7B%22properties%22:%7B%22limit%22:12,%22unit%22:%22Count%22,%22name%22:%7B%22value%22:%22cores%22%7D%7D%7D%7D]%7D by specifying parameters listed in the ‘Details’ section for deployment to succeed. Please read more about quota limits at https://docs.microsoft.com/en-us/azure/azure-supportability/regional-quota-requests"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m "name": "fe88d20a-b5ed-4f0c-8a02-06826c1775fa",
+	            	[31m│[0m [0m "status": "Failed",
+	            	[31m│[0m [0m "startTime": "2026-01-11T00:15:24.6893389Z",
+	            	[31m│[0m [0m "endTime": "2026-01-11T00:17:21.3158979Z",
+	            	[31m│[0m [0m "error": {
+	            	[31m│[0m [0m  "code": "QuotaExceeded",
+	            	[31m│[0m [0m  "message": "Create or update VMSS /subscriptions/9209a73b-48eb-46da-bec6-0858b9eaaa35/resourceGroups/MC_quickstart-aks-dev-nu1b0pmy-rg_quickstart-aks-aks_westus2/providers/Microsoft.Compute/virtualMachineScaleSets/aks-default-37162832-vmss failed. Operation could not be completed as it results in exceeding approved Total Regional Cores quota. Additional details - Deployment Model: Resource Manager, Location: westus2, Current Limit: 10, Current Usage: 6, Additional Required: 6, (Minimum) New Limit Required: 12. Setup Alerts when Quota reaches threshold. Learn more at https://aka.ms/quotamonitoringalerting . Submit a request for Quota increase at https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/%7B%22subscriptionId%22:%229209a73b-48eb-46da-bec6-0858b9eaaa35%22,%22command%22:%22openQuotaApprovalBlade%22,%22quotas%22:[%7B%22location%22:%22westus2%22,%22providerId%22:%22Microsoft.Compute%22,%22resourceName%22:%22cores%22,%22quotaRequest%22:%7B%22properties%22:%7B%22limit%22:12,%22unit%22:%22Count%22,%22name%22:%7B%22value%22:%22cores%22%7D%7D%7D%7D]%7D by specifying parameters listed in the ‘Details’ section for deployment to succeed. Please read more about quota limits at https://docs.microsoft.com/en-us/azure/azure-supportability/regional-quota-requests",
+	            	[31m│[0m [0m  "details": [
+	            	[31m│[0m [0m   {
+	            	[31m│[0m [0m    "code": "OperationNotAllowed",
+	            	[31m│[0m [0m    "message": "Operation could not be completed as it results in exceeding approved Total Regional Cores quota. Additional details - Deployment Model: Resource Manager, Location: westus2, Current Limit: 10, Current Usage: 6, Additional Required: 6, (Minimum) New Limit Required: 12. Setup Alerts when Quota reaches threshold. Learn more at https://aka.ms/quotamonitoringalerting . Submit a request for Quota increase at https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/%7B%22subscriptionId%22:%229209a73b-48eb-46da-bec6-0858b9eaaa35%22,%22command%22:%22openQuotaApprovalBlade%22,%22quotas%22:[%7B%22location%22:%22westus2%22,%22providerId%22:%22Microsoft.Compute%22,%22resourceName%22:%22cores%22,%22quotaRequest%22:%7B%22properties%22:%7B%22limit%22:12,%22unit%22:%22Count%22,%22name%22:%7B%22value%22:%22cores%22%7D%7D%7D%7D]%7D by specifying parameters listed in the ‘Details’ section for deployment to succeed. Please read more about quota limits at https://docs.microsoft.com/en-us/azure/azure-supportability/regional-quota-requests"
+	            	[31m│[0m [0m   }
+	            	[31m│[0m [0m  ]
+	            	[31m│[0m [0m }
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.main,
+	            	[31m│[0m [0m  on aks.tf line 13, in resource "azurerm_kubernetes_cluster" "main":
+	            	[31m│[0m [0m  13: resource "azurerm_kubernetes_cluster" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-rbac-dashboard-admin
+
+FailNow
+
+---
+
 ## 04 Jan 26 01:14 UTC
 
 Success: false

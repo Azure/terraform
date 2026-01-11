@@ -1,3 +1,46 @@
+## 11 Jan 26 00:23 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.13.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.57.0
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Elastic San (Subscription: "9209a73b-48eb-46da-bec6-0858b9eaaa35"
+	            	[31m│[0m [0mResource Group Name: "rg-trusting-feline"
+	            	[31m│[0m [0mElastic San Name: "san-dxfluuwu"): performing Create: unexpected status 409 (409 Conflict) with error: MissingSubscriptionRegistration: The subscription is not registered to use namespace 'Microsoft.ElasticSan'. See https://aka.ms/rps-not-found for how to register subscriptions.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_elastic_san.example,
+	            	[31m│[0m [0m  on main.tf line 22, in resource "azurerm_elastic_san" "example":
+	            	[31m│[0m [0m  22: resource "azurerm_elastic_san" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating Elastic San (Subscription: "9209a73b-48eb-46da-bec6-0858b9eaaa35"
+	            	[31m│[0m [0mResource Group Name: "rg-trusting-feline"
+	            	[31m│[0m [0mElastic San Name: "san-dxfluuwu"): performing Create: unexpected status 409
+	            	[31m│[0m [0m(409 Conflict) with error: MissingSubscriptionRegistration: The
+	            	[31m│[0m [0msubscription is not registered to use namespace 'Microsoft.ElasticSan'. See
+	            	[31m│[0m [0mhttps://aka.ms/rps-not-found for how to register subscriptions.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-elastic-san-storage
+
+FailNow
+
+---
+
 ## 04 Jan 26 00:16 UTC
 
 Success: false
