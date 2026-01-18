@@ -1,3 +1,40 @@
+## 18 Jan 26 00:17 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.13.3
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.15.0
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.8.0
++ provider registry.terraform.io/hashicorp/time v0.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 401 with response: {"error":"invalid_client","error_description":"AADSTS700213: No matching federated identity record found for presented assertion subject 'repository_owner_id:6844498:repository_id:117169328:environment:crontests'. Check your federated identity credential Subject, Audience and Issuer against the presented assertion. https://learn.microsoft.com/entra/workload-id/workload-identity-federation Trace ID: 0b96aa95-4980-4fa3-8e0c-900564b02100 Correlation ID: 2c8f9a95-6fbb-40ef-81a6-6e0fe5f21dc4 Timestamp: 2026-01-18 00:17:42Z","error_codes":[700213],"timestamp":"2026-01-18 00:17:42Z","trace_id":"0b96aa95-4980-4fa3-8e0c-900564b02100","correlation_id":"2c8f9a95-6fbb-40ef-81a6-6e0fe5f21dc4","error_uri":"https://login.microsoftonline.com/error?code=700213"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 24, in provider "azurerm":
+	            	[31m│[0m [0m  24: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-k8s-cluster-with-tf-and-aks
+
+FailNow
+
+---
+
 ## 11 Jan 26 01:38 UTC
 
 Success: false

@@ -1,3 +1,39 @@
+## 18 Jan 26 00:17 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.13.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.0.2
++ provider registry.terraform.io/hashicorp/random v3.8.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding AzureRM Client: please ensure you have installed Azure CLI version 2.0.79 or newer. Error parsing json result from the Azure CLI: launching Azure CLI: exec: "az": executable file not found in $PATH.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on main.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-machine-learning-moderately-secure
+
+FailNow
+
+---
+
 ## 11 Jan 26 01:37 UTC
 
 Success: false
