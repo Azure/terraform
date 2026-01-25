@@ -1,3 +1,38 @@
+## 25 Jan 26 00:17 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.13.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.58.0
++ provider registry.terraform.io/hashicorp/random v3.8.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 401 with response: {"error":"invalid_client","error_description":"AADSTS700213: No matching federated identity record found for presented assertion subject 'repository_owner_id:6844498:repository_id:117169328:environment:crontests'. Check your federated identity credential Subject, Audience and Issuer against the presented assertion. https://learn.microsoft.com/entra/workload-id/workload-identity-federation Trace ID: a76eb5dc-1b38-4ba3-8dd2-4c533d730f00 Correlation ID: 314e938b-e3ac-49be-8d91-8482e56446c3 Timestamp: 2026-01-25 00:17:31Z","error_codes":[700213],"timestamp":"2026-01-25 00:17:31Z","trace_id":"a76eb5dc-1b38-4ba3-8dd2-4c533d730f00","correlation_id":"314e938b-e3ac-49be-8d91-8482e56446c3","error_uri":"https://login.microsoftonline.com/error?code=700213"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 14, in provider "azurerm":
+	            	[31m│[0m [0m  14: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-policy
+
+FailNow
+
+---
+
 ## 18 Jan 26 00:14 UTC
 
 Success: false
