@@ -1,3 +1,55 @@
+## 15 Feb 26 01:43 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.13.3
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.0.1
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFailed to create/update resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azapi_resource.aks,
+	            	[31m│[0m [0m  on main.tf line 18, in resource "azapi_resource" "aks":
+	            	[31m│[0m [0m  18: resource "azapi_resource" "aks" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating/updating Resource: (ResourceId
+	            	[31m│[0m [0m"/subscriptions/18ca8bf0-e7e9-4450-83da-2124ec1ce0cb/resourceGroups/rg-devoted-aphid/providers/Microsoft.ContainerService/ManagedClusters/cluster-liberal-moose"
+	            	[31m│[0m [0m/ Api Version "2024-05-01"): PUT
+	            	[31m│[0m [0mhttps://management.azure.com/subscriptions/18ca8bf0-e7e9-4450-83da-2124ec1ce0cb/resourceGroups/rg-devoted-aphid/providers/Microsoft.ContainerService/ManagedClusters/cluster-liberal-moose
+	            	[31m│[0m [0m--------------------------------------------------------------------------------
+	            	[31m│[0m [0mRESPONSE 400: 400 Bad Request
+	            	[31m│[0m [0mERROR CODE: UnsupportedEdgeZone
+	            	[31m│[0m [0m--------------------------------------------------------------------------------
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m  "error": {
+	            	[31m│[0m [0m    "code": "UnsupportedEdgeZone",
+	            	[31m│[0m [0m    "message": "Edge zone 'losangeles' not found. The available edge zones in location 'westus' are ''."
+	            	[31m│[0m [0m  }
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m--------------------------------------------------------------------------------
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-aks-extended-zones
+
+FailNow
+
+---
+
 ## 08 Feb 26 00:26 UTC
 
 Success: false

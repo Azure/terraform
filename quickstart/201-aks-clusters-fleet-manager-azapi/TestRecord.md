@@ -1,3 +1,89 @@
+## 15 Feb 26 01:10 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.13.3
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.8.0
++ provider registry.terraform.io/hashicorp/azurerm v4.60.0
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "18ca8bf0-e7e9-4450-83da-2124ec1ce0cb"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-p5i1"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-2-p5i1"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-2-p5i1 is on version 1.31.13, which is only available for Long-Term Support (LTS). If you intend to onboard to LTS, please ensure the cluster is in Premium tier and LTS support plan (see https://aka.ms/aks/enable-lts). Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, please check https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[1],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "18ca8bf0-e7e9-4450-83da-2124ec1ce0cb"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-p5i1"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-3-p5i1"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-3-p5i1 is on version 1.31.13, which is only available for Long-Term Support (LTS). If you intend to onboard to LTS, please ensure the cluster is in Premium tier and LTS support plan (see https://aka.ms/aks/enable-lts). Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, please check https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[2],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFailed to create/update resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azapi_resource.fleet,
+	            	[31m│[0m [0m  on fleet.tf line 6, in resource "azapi_resource" "fleet":
+	            	[31m│[0m [0m   6: resource "azapi_resource" "fleet" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating/updating Resource: (ResourceId
+	            	[31m│[0m [0m"/subscriptions/18ca8bf0-e7e9-4450-83da-2124ec1ce0cb/resourceGroups/rg-fleet-example-p5i1/providers/Microsoft.ContainerService/fleets/fleet-example-p5i1"
+	            	[31m│[0m [0m/ Api Version "2025-03-01"): GET
+	            	[31m│[0m [0mhttps://management.azure.com/subscriptions/18ca8bf0-e7e9-4450-83da-2124ec1ce0cb/providers/Microsoft.ContainerService/locations/australiaeast/operations/300fd166-a6d1-403c-9982-cbdfd48fa2f8
+	            	[31m│[0m [0m--------------------------------------------------------------------------------
+	            	[31m│[0m [0mRESPONSE 200: 200 OK
+	            	[31m│[0m [0mERROR CODE: ClientErrorFromDependency
+	            	[31m│[0m [0m--------------------------------------------------------------------------------
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m  "name": "300fd166-a6d1-403c-9982-cbdfd48fa2f8",
+	            	[31m│[0m [0m  "status": "Failed",
+	            	[31m│[0m [0m  "startTime": "2026-02-15T01:03:02.7451441Z",
+	            	[31m│[0m [0m  "endTime": "2026-02-15T01:03:15.3104904Z",
+	            	[31m│[0m [0m  "error": {
+	            	[31m│[0m [0m    "code": "ClientErrorFromDependency",
+	            	[31m│[0m [0m    "message": "A service we depend on returned a client error. Please resolve the issue before retrying this operation. Dependency resource: /subscriptions/18ca8bf0-e7e9-4450-83da-2124ec1ce0cb/resourceGroups/FL_rg-fleet-example-p5i1_fleet-example-p5i1_australiaeast/providers/Microsoft.ContainerService/managedClusters/hub. Error code: TooManyRequests. Error details: \"{\\n  \\\"code\\\": \\\"TooManyRequests\\\",\\n  \\\"details\\\": null,\\n  \\\"message\\\": \\\"Too soon to create another managed cluster. Please retry after 293 seconds\\\",\\n  \\\"subcode\\\": \\\"CreateClusterThrottled\\\"\\n }\". Resource ID: \"/subscriptions/18ca8bf0-e7e9-4450-83da-2124ec1ce0cb/resourceGroups/rg-fleet-example-p5i1/providers/Microsoft.ContainerService/fleets/fleet-example-p5i1\". Correlation ID: \"04bbd24d-0d5c-78d5-6715-611c75cdd56f\". Operation ID: \"300fd166-a6d1-403c-9982-cbdfd48fa2f8\""
+	            	[31m│[0m [0m  }
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m--------------------------------------------------------------------------------
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-clusters-fleet-manager-azapi
+
+FailNow
+
+---
+
 ## 08 Feb 26 00:19 UTC
 
 Success: false

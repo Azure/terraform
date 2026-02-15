@@ -1,3 +1,49 @@
+## 15 Feb 26 00:16 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.13.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.60.0
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Scoped Policy Assignment (Scope: "/subscriptions/18ca8bf0-e7e9-4450-83da-2124ec1ce0cb"
+	            	[31m│[0m [0mPolicy Assignment Name: "audit-vm-manageddisks"): unexpected status 403 (403 Forbidden) with error: AuthorizationFailed: The client '4035266d-b34b-4c95-b127-865ea8e89865' with object id '0d6e331f-af2e-4b30-b458-ee1cf5cbcd5e' does not have authorization to perform action 'Microsoft.Authorization/policyAssignments/write' over scope '/subscriptions/18ca8bf0-e7e9-4450-83da-2124ec1ce0cb/providers/Microsoft.Authorization/policyAssignments/audit-vm-manageddisks' or the scope is invalid. If access was recently granted, please refresh your credentials.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_subscription_policy_assignment.auditvms,
+	            	[31m│[0m [0m  on main.tf line 16, in resource "azurerm_subscription_policy_assignment" "auditvms":
+	            	[31m│[0m [0m  16: resource "azurerm_subscription_policy_assignment" "auditvms" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating Scoped Policy Assignment (Scope:
+	            	[31m│[0m [0m"/subscriptions/18ca8bf0-e7e9-4450-83da-2124ec1ce0cb"
+	            	[31m│[0m [0mPolicy Assignment Name: "audit-vm-manageddisks"): unexpected status 403
+	            	[31m│[0m [0m(403 Forbidden) with error: AuthorizationFailed: The client
+	            	[31m│[0m [0m'4035266d-b34b-4c95-b127-865ea8e89865' with object id
+	            	[31m│[0m [0m'0d6e331f-af2e-4b30-b458-ee1cf5cbcd5e' does not have authorization to
+	            	[31m│[0m [0mperform action 'Microsoft.Authorization/policyAssignments/write' over scope
+	            	[31m│[0m [0m'/subscriptions/18ca8bf0-e7e9-4450-83da-2124ec1ce0cb/providers/Microsoft.Authorization/policyAssignments/audit-vm-manageddisks'
+	            	[31m│[0m [0mor the scope is invalid. If access was recently granted, please refresh
+	            	[31m│[0m [0myour credentials.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-policy
+
+FailNow
+
+---
+
 ## 08 Feb 26 00:24 UTC
 
 Success: false
