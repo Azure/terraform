@@ -1,3 +1,38 @@
+## 22 Feb 26 01:32 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.13.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mauthorization.RoleAssignmentsClient#Create: Failure responding to request: StatusCode=403 -- Original Error: autorest/azure: Service returned an error. Status=403 Code="AuthorizationFailed" Message="The client '4035266d-b34b-4c95-b127-865ea8e89865' with object id '0d6e331f-af2e-4b30-b458-ee1cf5cbcd5e' does not have authorization to perform action 'Microsoft.Authorization/roleAssignments/write' over scope '/subscriptions/18ca8bf0-e7e9-4450-83da-2124ec1ce0cb/resourceGroups/rg-vast-magpie/providers/Microsoft.AppConfiguration/configurationStores/appconf-yhqahedmazmxw/providers/Microsoft.Authorization/roleAssignments/225d4e9d-4cf4-0080-f505-9441e87d0779' or the scope is invalid. If access was recently granted, please refresh your credentials."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_role_assignment.appconf_dataowner,
+	            	[31m│[0m [0m  on main.tf line 26, in resource "azurerm_role_assignment" "appconf_dataowner":
+	            	[31m│[0m [0m  26: resource "azurerm_role_assignment" "appconf_dataowner" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-app-configuration-store-kv
+
+FailNow
+
+---
+
 ## 15 Feb 26 01:44 UTC
 
 Success: false
