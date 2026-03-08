@@ -1,3 +1,76 @@
+## 08 Mar 26 01:17 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.13.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.name: Refreshing state... [id=exact-mammoth][0m
+	            	[0m[1mrandom_password.admin_password: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.main: Refreshing state... [id=/subscriptions/18ca8bf0-e7e9-4450-83da-2124ec1ce0cb/resourceGroups/fw-ddos-exact-mammoth-rg][0m
+	            	[0m[1mazurerm_network_ddos_protection_plan.main: Refreshing state... [id=/subscriptions/18ca8bf0-e7e9-4450-83da-2124ec1ce0cb/resourceGroups/fw-ddos-exact-mammoth-rg/providers/Microsoft.Network/ddosProtectionPlans/fw-ddos-exact-mammoth-ddos-plan][0m
+	            	[0m[1mazurerm_route_table.workload: Refreshing state... [id=/subscriptions/18ca8bf0-e7e9-4450-83da-2124ec1ce0cb/resourceGroups/fw-ddos-exact-mammoth-rg/providers/Microsoft.Network/routeTables/fw-ddos-exact-mammoth-rt-workload][0m
+	            	[0m[1mazurerm_firewall_policy.main: Refreshing state... [id=/subscriptions/18ca8bf0-e7e9-4450-83da-2124ec1ce0cb/resourceGroups/fw-ddos-exact-mammoth-rg/providers/Microsoft.Network/firewallPolicies/fw-ddos-exact-mammoth-fw-policy][0m
+	            	[0m[1mazurerm_public_ip.vm: Refreshing state... [id=/subscriptions/18ca8bf0-e7e9-4450-83da-2124ec1ce0cb/resourceGroups/fw-ddos-exact-mammoth-rg/providers/Microsoft.Network/publicIPAddresses/fw-ddos-exact-mammoth-vm-pip][0m
+	            	[0m[1mazurerm_virtual_network.main: Refreshing state... [id=/subscriptions/18ca8bf0-e7e9-4450-83da-2124ec1ce0cb/resourceGroups/fw-ddos-exact-mammoth-rg/providers/Microsoft.Network/virtualNetworks/fw-ddos-exact-mammoth-vnet][0m
+	            	[0m[1mazurerm_public_ip.firewall: Refreshing state... [id=/subscriptions/18ca8bf0-e7e9-4450-83da-2124ec1ce0cb/resourceGroups/fw-ddos-exact-mammoth-rg/providers/Microsoft.Network/publicIPAddresses/fw-ddos-exact-mammoth-fw-pip][0m
+	            	[0m[1mazurerm_subnet.firewall: Refreshing state... [id=/subscriptions/18ca8bf0-e7e9-4450-83da-2124ec1ce0cb/resourceGroups/fw-ddos-exact-mammoth-rg/providers/Microsoft.Network/virtualNetworks/fw-ddos-exact-mammoth-vnet/subnets/AzureFirewallSubnet][0m
+	            	[0m[1mazurerm_subnet.workload: Refreshing state... [id=/subscriptions/18ca8bf0-e7e9-4450-83da-2124ec1ce0cb/resourceGroups/fw-ddos-exact-mammoth-rg/providers/Microsoft.Network/virtualNetworks/fw-ddos-exact-mammoth-vnet/subnets/Workload-SN][0m
+	            	[0m[1mazurerm_firewall_policy_rule_collection_group.dnat: Refreshing state... [id=/subscriptions/18ca8bf0-e7e9-4450-83da-2124ec1ce0cb/resourceGroups/fw-ddos-exact-mammoth-rg/providers/Microsoft.Network/firewallPolicies/fw-ddos-exact-mammoth-fw-policy/ruleCollectionGroups/DefaultDnatRuleCollectionGroup][0m
+	            	[0m[1mazurerm_subnet_route_table_association.workload: Refreshing state... [id=/subscriptions/18ca8bf0-e7e9-4450-83da-2124ec1ce0cb/resourceGroups/fw-ddos-exact-mammoth-rg/providers/Microsoft.Network/virtualNetworks/fw-ddos-exact-mammoth-vnet/subnets/Workload-SN][0m
+	            	[0m[1mazurerm_network_interface.vm: Refreshing state... [id=/subscriptions/18ca8bf0-e7e9-4450-83da-2124ec1ce0cb/resourceGroups/fw-ddos-exact-mammoth-rg/providers/Microsoft.Network/networkInterfaces/fw-ddos-exact-mammoth-vm-nic][0m
+	            	[0m[1mazurerm_firewall_policy_rule_collection_group.network: Refreshing state... [id=/subscriptions/18ca8bf0-e7e9-4450-83da-2124ec1ce0cb/resourceGroups/fw-ddos-exact-mammoth-rg/providers/Microsoft.Network/firewallPolicies/fw-ddos-exact-mammoth-fw-policy/ruleCollectionGroups/DefaultNetworkRuleCollectionGroup][0m
+	            	[0m[1mazurerm_windows_virtual_machine.main: Refreshing state... [id=/subscriptions/18ca8bf0-e7e9-4450-83da-2124ec1ce0cb/resourceGroups/fw-ddos-exact-mammoth-rg/providers/Microsoft.Compute/virtualMachines/fw-ddos-exact--vm][0m
+	            	[0m[1mazurerm_firewall_policy_rule_collection_group.application: Refreshing state... [id=/subscriptions/18ca8bf0-e7e9-4450-83da-2124ec1ce0cb/resourceGroups/fw-ddos-exact-mammoth-rg/providers/Microsoft.Network/firewallPolicies/fw-ddos-exact-mammoth-fw-policy/ruleCollectionGroups/DefaultApplicationRuleCollectionGroup][0m
+	            	[0m[1mazurerm_firewall.main: Refreshing state... [id=/subscriptions/18ca8bf0-e7e9-4450-83da-2124ec1ce0cb/resourceGroups/fw-ddos-exact-mammoth-rg/providers/Microsoft.Network/azureFirewalls/fw-ddos-exact-mammoth-fw][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.main[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "main" {
+	            	        id                                                     = "/subscriptions/18ca8bf0-e7e9-4450-83da-2124ec1ce0cb/resourceGroups/fw-ddos-exact-mammoth-rg/providers/Microsoft.Compute/virtualMachines/fw-ddos-exact--vm"
+	            	        name                                                   = "fw-ddos-exact--vm"
+	            	        tags                                                   = {
+	            	            "environment" = "tutorial"
+	            	            "purpose"     = "Test Virtual Machine"
+	            	        }
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (4 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m 0 to add, 1 to change, 0 to destroy.
+	            	[0m[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-ddos-protection-azfw3085553461/src/quickstart/201-ddos-protection-azfw/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-ddos-protection-azfw3085553461/src/quickstart/201-ddos-protection-azfw/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-ddos-protection-azfw
+
+FailNow
+
+---
+
 ## 01 Mar 26 01:08 UTC
 
 Success: false
