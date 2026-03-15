@@ -1,3 +1,48 @@
+## 15 Mar 26 00:45 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.13.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Aml Filesystem (Subscription: "18ca8bf0-e7e9-4450-83da-2124ec1ce0cb"
+	            	[31m│[0m [0mResource Group Name: "rg-divine-fox"
+	            	[31m│[0m [0mAml Filesystem Name: "amlfs-jqgvgrqjplsww"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: MissingSubscriptionRegistration: The subscription is not registered to use namespace 'Microsoft.StorageCache'. See https://aka.ms/rps-not-found for how to register subscriptions.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_managed_lustre_file_system.example,
+	            	[31m│[0m [0m  on main.tf line 48, in resource "azurerm_managed_lustre_file_system" "example":
+	            	[31m│[0m [0m  48: resource "azurerm_managed_lustre_file_system" "example" [4m{[0m [0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating Aml Filesystem (Subscription:
+	            	[31m│[0m [0m"18ca8bf0-e7e9-4450-83da-2124ec1ce0cb"
+	            	[31m│[0m [0mResource Group Name: "rg-divine-fox"
+	            	[31m│[0m [0mAml Filesystem Name: "amlfs-jqgvgrqjplsww"): performing CreateOrUpdate:
+	            	[31m│[0m [0munexpected status 409 (409 Conflict) with error:
+	            	[31m│[0m [0mMissingSubscriptionRegistration: The subscription is not registered to use
+	            	[31m│[0m [0mnamespace 'Microsoft.StorageCache'. See https://aka.ms/rps-not-found for
+	            	[31m│[0m [0mhow to register subscriptions.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-managed-lustre-create-filesystem
+
+FailNow
+
+---
+
 ## 08 Mar 26 01:42 UTC
 
 Success: false

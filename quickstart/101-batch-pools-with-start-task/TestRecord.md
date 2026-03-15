@@ -1,3 +1,56 @@
+## 15 Mar 26 01:17 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.13.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "18ca8bf0-e7e9-4450-83da-2124ec1ce0cb"
+	            	[31m│[0m [0mResource Group Name: "rg-rare-pangolin"
+	            	[31m│[0m [0mBatch Account Name: "hhgeomup"
+	            	[31m│[0m [0mPool Name: "pool-adequate-kitten-fixed-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:76fb1a99-b56b-4f40-b3e9-878a23c426b4
+	            	[31m│[0m [0mTime:2026-03-15T01:16:46.3778966Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.fixed,
+	            	[31m│[0m [0m  on main.tf line 46, in resource "azurerm_batch_pool" "fixed":
+	            	[31m│[0m [0m  46: resource "azurerm_batch_pool" "fixed" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "18ca8bf0-e7e9-4450-83da-2124ec1ce0cb"
+	            	[31m│[0m [0mResource Group Name: "rg-rare-pangolin"
+	            	[31m│[0m [0mBatch Account Name: "hhgeomup"
+	            	[31m│[0m [0mPool Name: "pool-adequate-kitten-autoscale-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:d95d906d-177d-4af6-9d0c-f22450b64ce7
+	            	[31m│[0m [0mTime:2026-03-15T01:16:46.3385635Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.autopool,
+	            	[31m│[0m [0m  on main.tf line 88, in resource "azurerm_batch_pool" "autopool":
+	            	[31m│[0m [0m  88: resource "azurerm_batch_pool" "autopool" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-start-task
+
+FailNow
+
+---
+
 ## 08 Mar 26 00:40 UTC
 
 Success: false

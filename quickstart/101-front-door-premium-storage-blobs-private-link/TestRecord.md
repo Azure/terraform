@@ -1,3 +1,49 @@
+## 15 Mar 26 01:19 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.13.3
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.1.0
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mchecking for presence of existing Resource: (ResourceId "/subscriptions/18ca8bf0-e7e9-4450-83da-2124ec1ce0cb/resourceGroups/FrontDoor-lenient-reptile/providers/Microsoft.Storage/storageAccounts/storad0edf872b433bfb/blobServices/default/containers/mycontainer" / Api Version "2021-04-01"): DefaultAzureCredential authentication failed
+	            	[31m│[0m [0mGET http://169.254.169.254/metadata/identity/oauth2/token
+	            	[31m│[0m [0m--------------------------------------------------------------------------------
+	            	[31m│[0m [0mRESPONSE 400 Bad Request
+	            	[31m│[0m [0m--------------------------------------------------------------------------------
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m  "error": "invalid_request",
+	            	[31m│[0m [0m  "error_description": "Identity not found"
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m--------------------------------------------------------------------------------
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azapi_resource.my_storage_container,
+	            	[31m│[0m [0m  on storage-account.tf line 24, in resource "azapi_resource" "my_storage_container":
+	            	[31m│[0m [0m  24: resource "azapi_resource" "my_storage_container" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-front-door-premium-storage-blobs-private-link
+
+FailNow
+
+---
+
 ## 08 Mar 26 00:43 UTC
 
 Success: false

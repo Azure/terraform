@@ -1,3 +1,49 @@
+## 15 Mar 26 01:32 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.13.3
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Managed Environment (Subscription: "18ca8bf0-e7e9-4450-83da-2124ec1ce0cb"
+	            	[31m│[0m [0mResource Group Name: "rg-promoted-piranha"
+	            	[31m│[0m [0mManaged Environment Name: "chuyzluk"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: MaxNumberOfGlobalEnvironmentsInSubExceeded: The subscription '18ca8bf0-e7e9-4450-83da-2124ec1ce0cb' cannot have more than 1 Container App Environments. For more information, visit: https://go.microsoft.com/fwlink/?linkid=2208872[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_container_app_environment.container_app_environment,
+	            	[31m│[0m [0m  on main.tf line 41, in resource "azurerm_container_app_environment" "container_app_environment":
+	            	[31m│[0m [0m  41: resource "azurerm_container_app_environment" "container_app_environment" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating Managed Environment (Subscription:
+	            	[31m│[0m [0m"18ca8bf0-e7e9-4450-83da-2124ec1ce0cb"
+	            	[31m│[0m [0mResource Group Name: "rg-promoted-piranha"
+	            	[31m│[0m [0mManaged Environment Name: "chuyzluk"): performing CreateOrUpdate:
+	            	[31m│[0m [0munexpected status 409 (409 Conflict) with error:
+	            	[31m│[0m [0mMaxNumberOfGlobalEnvironmentsInSubExceeded: The subscription
+	            	[31m│[0m [0m'18ca8bf0-e7e9-4450-83da-2124ec1ce0cb' cannot have more than 1 Container
+	            	[31m│[0m [0mApp Environments. For more information, visit:
+	            	[31m│[0m [0mhttps://go.microsoft.com/fwlink/?linkid=2208872
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-container-app
+
+FailNow
+
+---
+
 ## 08 Mar 26 01:16 UTC
 
 Success: true
