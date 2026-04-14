@@ -19,6 +19,9 @@ This template deploys an Azure Standard V2 NAT Gateway, a virtual network, a sub
 - [azurerm_bastion_host](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/bastion_host)
 - [tls_private_key](https://registry.terraform.io/providers/hashicorp/tls/latest/docs/resources/private_key)
 
+> [!NOTE]
+> This template deploys Azure Bastion with the Developer SKU for cost savings, which doesn't require a dedicated `AzureBastionSubnet` subnet. For multiple connections and more features, change the SKU to Basic or Standard and add the `AzureBastionSubnet` to the configuration. For more information, see [What is Azure Bastion?](https://learn.microsoft.com/azure/bastion/bastion-overview).
+
 ## Variables
 
 | Name | Description | Default |
