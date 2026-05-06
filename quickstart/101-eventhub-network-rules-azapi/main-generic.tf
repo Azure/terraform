@@ -4,7 +4,7 @@ resource "azapi_update_resource" "qs101" {
   name      = "default"
   parent_id = azurerm_eventhub_namespace.qs101.id
 
-  body = jsonencode({
+  body = {
     properties = {
       defaultAction       = "Deny"
       publicNetworkAccess = "Enabled"
@@ -12,7 +12,7 @@ resource "azapi_update_resource" "qs101" {
         {
           ignoreMissingVnetServiceEndpoint = false
           subnet = {
-            # API bug, returned id replaced `resourceGroups` with `resourcegroups`
+            # API bug: returned id replaces `resourceGroups` with `resourcegroups`
             id = replace(azurerm_subnet.qs101.id, "resourceGroups", "resourcegroups")
           }
         }
@@ -24,5 +24,5 @@ resource "azapi_update_resource" "qs101" {
         }
       ]
     }
-  })
+  }
 }
