@@ -22,7 +22,7 @@ resource "azapi_resource" "main" {
         {
           name = "vote-aci"
           properties = {
-            image = "mcr.microsoft.com/azuredocs/azure-vote-front:cosmosdb"
+            image = "mcr.microsoft.com/azuredocs/aci-helloworld:latest"
             resources = {
               requests = {
                 cpu        = 0.5
