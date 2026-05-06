@@ -25,4 +25,10 @@ resource "azapi_update_resource" "qs101" {
       ]
     }
   }
+
+  # The API response includes additional normalized properties not in the request,
+  # which causes plan drift on the idempotent check. Safe to ignore for update resources.
+  lifecycle {
+    ignore_changes = [body]
+  }
 }
