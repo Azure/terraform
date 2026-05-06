@@ -53,8 +53,7 @@ variable "ad_vnet" {
 
 variable "rfc3339" {
   type        = string
-  default     = "2022-03-30T12:43:13Z"
-  description = "Registration token expiration"
+  description = "Registration token expiration. Must be set to a future RFC 3339 date at apply time."
 }
 
 variable "dns_servers" {

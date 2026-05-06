@@ -38,11 +38,11 @@ resource "azapi_resource" "main" {
             environmentVariables = [
               {
                 name        = "COSMOS_DB_ENDPOINT"
-                secureValue = jsondecode(azapi_resource.vote_cosmos_db.output).properties.documentEndpoint
+                secureValue = azapi_resource.vote_cosmos_db.output.properties.documentEndpoint
               },
               {
                 name        = "COSMOS_DB_MASTERKEY"
-                secureValue = jsondecode(azapi_resource.vote_cosmos_db.output).properties.primaryMasterKey
+                secureValue = azapi_resource_action.cosmos_keys.output.primaryMasterKey
               },
               {
                 name  = "TITLE"

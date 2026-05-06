@@ -7,5 +7,5 @@ output "cosmosdb_account_name" {
 }
 
 output "dns" {
-  value = jsondecode(azapi_resource.main.output).properties.ipAddress.fqdn
+  value = azapi_resource.main.output.properties.ipAddress.fqdn
 }

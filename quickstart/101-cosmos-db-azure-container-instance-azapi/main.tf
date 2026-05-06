@@ -28,7 +28,14 @@ resource "azapi_resource" "vote_cosmos_db" {
     }
   }
 
-  response_export_values = ["properties.documentEndpoint", "properties.primaryMasterKey"]
+  response_export_values = ["properties.documentEndpoint"]
+}
+
+resource "azapi_resource_action" "cosmos_keys" {
+  type                   = "Microsoft.DocumentDB/databaseAccounts@2024-05-15"
+  resource_id            = azapi_resource.vote_cosmos_db.id
+  action                 = "listKeys"
+  response_export_values = ["primaryMasterKey"]
 }
 
 resource "random_integer" "ri" {

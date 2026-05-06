@@ -31,7 +31,7 @@ resource "azapi_resource" "avd_vm_nic" {
           properties = {
             privateIPAllocationMethod = "Dynamic"
             subnet = {
-              id = jsondecode(azapi_resource.vnet.output).properties.subnets[0].id
+              id = azapi_resource.vnet.output.properties.subnets[0].id
             }
           }
         }
