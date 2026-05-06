@@ -1,5 +1,9 @@
+resource "random_pet" "rg_name" {
+  prefix = "rg-qs101-eh-rules"
+}
+
 resource "azurerm_resource_group" "qs101" {
-  name     = "rg-qs101-eh-rules"
+  name     = random_pet.rg_name.id
   location = "westus2"
 }
 
