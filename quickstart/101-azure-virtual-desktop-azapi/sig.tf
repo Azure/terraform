@@ -15,6 +15,13 @@ resource "azapi_resource" "sig" {
     Environment = "Demo"
     Tech        = "Terraform"
   }
+
+  # Retry on transient delete errors (gallery may still have image definitions being removed)
+  retry = {
+    error_message_regex = ["CannotDeleteResource", "ConflictingUserInput"]
+    interval_seconds     = 30
+    max_interval_seconds = 180
+  }
 }
 
 # Creates image definition using AzAPI
