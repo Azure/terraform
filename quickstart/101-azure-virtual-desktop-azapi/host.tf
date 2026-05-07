@@ -88,7 +88,7 @@ resource "azapi_resource" "avd_vm" {
         imageReference = {
           publisher = "MicrosoftWindowsDesktop"
           offer     = "Windows-10"
-          sku       = "20h2-evd"
+          sku       = "win10-22h2-avd"
           version   = "latest"
         }
       }

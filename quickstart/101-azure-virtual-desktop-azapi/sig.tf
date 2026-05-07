@@ -38,7 +38,7 @@ resource "azapi_resource" "sig_image" {
       identifier = {
         publisher = "MicrosoftWindowsDesktop"
         offer     = "office-365"
-        sku       = "20h2-evd-o365pp"
+        sku       = "win10-22h2-avd-m365"
       }
     }
   }
