@@ -43,6 +43,9 @@ resource "azapi_resource" "avd_vm_nic" {
   lifecycle {
     ignore_changes = [body]
   }
+
+  # NICs must be destroyed before NSG association is removed
+  depends_on = [azapi_update_resource.nsg_assoc]
 }
 
 # Create Windows Virtual Machines using AzAPI
