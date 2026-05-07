@@ -131,7 +131,9 @@ resource "azapi_resource" "domain_join" {
   lifecycle {
     ignore_changes = [body]
   }
-}for AVD agent using AzAPI
+}
+
+# DSC Extension for AVD agent using AzAPI
 resource "azapi_resource" "vmext_dsc" {
   count     = var.rdsh_count
   type      = "Microsoft.Compute/virtualMachines/extensions@2024-03-01"
