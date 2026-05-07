@@ -27,7 +27,9 @@ resource "azapi_resource" "vnet" {
   response_export_values = ["properties.subnets"]
 
   # Subnet mutation by nsg_assoc causes drift on the parent VNet
-  ignore_body_changes = ["properties.subnets"]
+  lifecycle {
+    ignore_changes = [body]
+  }
 }
 
 # Create Network Security Group using AzAPI

@@ -29,7 +29,9 @@ resource "azapi_resource" "storage" {
   response_export_values = ["properties", "id"]
 
   # Storage API returns many defaulted properties
-  ignore_body_changes = ["properties"]
+  lifecycle {
+    ignore_changes = [body]
+  }
 }
 
 # Create File Share using AzAPI
