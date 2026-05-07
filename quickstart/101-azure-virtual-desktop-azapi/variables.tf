@@ -103,7 +103,7 @@ variable "aad_group_name" {
 
 variable "rdsh_count" {
   description = "Number of AVD machines to deploy"
-  default     = 2
+  default     = 1
 }
 
 variable "prefix" {
