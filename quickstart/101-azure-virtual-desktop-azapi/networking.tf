@@ -70,17 +70,24 @@ resource "azapi_update_resource" "nsg_assoc" {
     }
   }
 
+  # API response includes normalized properties causing plan drift
+  lifecycle {
+    ignore_changes = [body]
+  }
+
   depends_on = [azapi_resource.vnet, azapi_resource.nsg]
 }
 
-# Data source to get existing AD VNet
+# Data source to get existing AD VNet (only when AD integration is enabled)
 data "azurerm_virtual_network" "ad_vnet_data" {
+  count               = var.enable_ad_integration ? 1 : 0
   name                = var.ad_vnet
   resource_group_name = var.ad_rg
 }
 
 # VNet peering: AVD spoke -> AD
 resource "azapi_resource" "peer1" {
+  count     = var.enable_ad_integration ? 1 : 0
   type      = "Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2024-01-01"
   name      = "peer_avdspoke_ad"
   parent_id = azapi_resource.vnet.id
@@ -88,7 +95,7 @@ resource "azapi_resource" "peer1" {
   body = {
     properties = {
       remoteVirtualNetwork = {
-        id = data.azurerm_virtual_network.ad_vnet_data.id
+        id = data.azurerm_virtual_network.ad_vnet_data[0].id
       }
     }
   }
@@ -96,9 +103,10 @@ resource "azapi_resource" "peer1" {
 
 # VNet peering: AD -> AVD spoke
 resource "azapi_resource" "peer2" {
+  count     = var.enable_ad_integration ? 1 : 0
   type      = "Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2024-01-01"
   name      = "peer_ad_avdspoke"
-  parent_id = "${data.azurerm_virtual_network.ad_vnet_data.id}"
+  parent_id = data.azurerm_virtual_network.ad_vnet_data[0].id
 
   body = {
     properties = {

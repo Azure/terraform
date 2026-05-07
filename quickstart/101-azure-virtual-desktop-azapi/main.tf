@@ -69,5 +69,9 @@ resource "azapi_update_resource" "ws_dag_association" {
     }
   }
 
+  lifecycle {
+    ignore_changes = [body]
+  }
+
   depends_on = [azapi_resource.workspace, azapi_resource.dag]
 }

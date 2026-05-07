@@ -45,6 +45,12 @@ variable "hostpool" {
   default     = "AVD-TF-HP"
 }
 
+variable "enable_ad_integration" {
+  type        = bool
+  default     = false
+  description = "Enable AD integration (VNet peering and RBAC). Requires pre-existing AD infrastructure."
+}
+
 variable "ad_vnet" {
   type        = string
   default     = "infra-network"

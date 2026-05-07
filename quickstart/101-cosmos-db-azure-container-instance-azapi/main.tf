@@ -29,6 +29,9 @@ resource "azapi_resource" "vote_cosmos_db" {
   }
 
   response_export_values = ["properties.documentEndpoint"]
+
+  # Cosmos DB API returns many additional properties not in the request
+  ignore_body_changes = ["properties.locations", "properties.consistencyPolicy"]
 }
 
 resource "azapi_resource_action" "cosmos_keys" {
