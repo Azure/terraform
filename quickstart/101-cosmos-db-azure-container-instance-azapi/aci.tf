@@ -65,6 +65,6 @@ resource "azapi_resource" "main" {
 
   response_export_values = ["properties.ipAddress.fqdn"]
 
-  # ACI API returns additional container properties not in the request
-  ignore_body_changes = ["properties.containers"]
+  # ACI API returns additional container and ipAddress properties
+  ignore_body_changes = ["properties.containers", "properties.ipAddress"]
 }

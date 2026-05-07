@@ -50,5 +50,5 @@ output "vnetrange" {
 
 output "AVD_user_groupname" {
   description = "Azure Active Directory Group for AVD users"
-  value       = azuread_group.aad_group.display_name
+  value       = var.enable_ad_integration ? azuread_group.aad_group[0].display_name : ""
 }

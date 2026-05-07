@@ -38,6 +38,9 @@ resource "azapi_resource" "avd_vm_nic" {
       ]
     }
   }
+
+  # Azure returns allocated IP and additional defaulted fields
+  ignore_body_changes = ["properties.ipConfigurations"]
 }
 
 # Create Windows Virtual Machines using AzAPI
@@ -88,11 +91,18 @@ resource "azapi_resource" "avd_vm" {
   }
 
   depends_on = [azapi_resource.avd_vm_nic]
+
+  # Write-only adminPassword and Azure-defaulted VM properties
+  ignore_body_changes = [
+    "properties.osProfile.adminPassword",
+    "properties.storageProfile.osDisk",
+    "properties.networkProfile"
+  ]
 }
 
 # Domain Join Extension using AzAPI
 resource "azapi_resource" "domain_join" {
-  count     = var.rdsh_count
+  count     = var.enable_ad_integration ? var.rdsh_count : 0
   type      = "Microsoft.Compute/virtualMachines/extensions@2024-03-01"
   name      = "${var.prefix}-${count.index + 1}-domainJoin"
   location  = azurerm_resource_group.rg.location
@@ -117,10 +127,8 @@ resource "azapi_resource" "domain_join" {
     }
   }
 
-  depends_on = [
-    azapi_resource.peer1,
-    azapi_resource.peer2
-  ]
+  # Write-only protectedSettings not returned by GET
+  ignore_body_changes = ["properties.protectedSettings"]
 }
 
 # DSC Extension for AVD agent using AzAPI
@@ -152,8 +160,11 @@ resource "azapi_resource" "vmext_dsc" {
     }
   }
 
+  # Write-only protectedSettings not returned by GET
+  ignore_body_changes = ["properties.protectedSettings"]
+
   depends_on = [
-    azapi_resource.domain_join,
+    azapi_resource.avd_vm,
     azurerm_virtual_desktop_host_pool.hostpool
   ]
 }

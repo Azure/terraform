@@ -27,6 +27,9 @@ resource "azapi_resource" "storage" {
   }
 
   response_export_values = ["properties", "id"]
+
+  # Storage API returns many defaulted properties
+  ignore_body_changes = ["properties"]
 }
 
 # Create File Share using AzAPI
@@ -46,7 +49,8 @@ data "azurerm_role_definition" "storage_role" {
 }
 
 resource "azurerm_role_assignment" "af_role" {
+  count              = var.enable_ad_integration ? 1 : 0
   scope              = azapi_resource.storage.id
   role_definition_id = data.azurerm_role_definition.storage_role.id
-  principal_id       = azuread_group.aad_group.id
+  principal_id       = azuread_group.aad_group[0].id
 }
