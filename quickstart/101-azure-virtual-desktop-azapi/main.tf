@@ -35,7 +35,7 @@ resource "azurerm_virtual_desktop_host_pool" "hostpool" {
 
 resource "azurerm_virtual_desktop_host_pool_registration_info" "registrationinfo" {
   hostpool_id     = azurerm_virtual_desktop_host_pool.hostpool.id
-  expiration_date = var.rfc3339
+  expiration_date = coalesce(var.rfc3339, timeadd(timestamp(), "23h"))
 }
 
 # Create AVD Application Group using AzAPI

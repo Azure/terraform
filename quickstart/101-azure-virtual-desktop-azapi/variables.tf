@@ -59,8 +59,8 @@ variable "ad_vnet" {
 
 variable "rfc3339" {
   type        = string
-  default     = "2099-12-31T23:59:59Z"
-  description = "Registration token expiration. Set to a future RFC 3339 date at apply time."
+  default     = null
+  description = "Registration token expiration (RFC 3339). Defaults to 23 hours from apply time."
 }
 
 variable "dns_servers" {
@@ -133,7 +133,7 @@ variable "domain_password" {
 
 variable "vm_size" {
   description = "Size of the machine to deploy"
-  default     = "Standard_DS2_v2"
+  default     = "Standard_D2s_v5"
 }
 
 variable "ou_path" {
