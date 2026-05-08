@@ -104,6 +104,12 @@ resource "azapi_resource" "avd_vm" {
 
   depends_on = [azapi_resource.avd_vm_nic]
 
+  retry = {
+    error_message_regex = ["SkuNotAvailable", "OperationNotAllowed", "AllocationFailed"]
+    interval_seconds    = 60
+    max_interval_seconds = 300
+  }
+
   # Write-only adminPassword and Azure-defaulted VM properties
   lifecycle {
     ignore_changes = [body]
