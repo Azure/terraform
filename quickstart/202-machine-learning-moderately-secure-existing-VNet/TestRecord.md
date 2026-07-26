@@ -1,3 +1,66 @@
+## 26 Jul 26 01:05 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.6.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:209
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:98
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:208
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mwaiting for creation of Compute (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mWorkspace Name: "mlw-202mlmsev-dev-FEph5Kp3EM"
+	            	[31m│[0m [0mCompute Name: "image-builder"): polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "BadRequest"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "{\"id\":\"https://resourceprovider.batchai-eastus.svc/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/providers/Microsoft.BatchAI/locations/eastus/operationresults/1cb05adf-e7a3-4e39-9bfb-f3bea1faf820\",\"name\":\"1cb05adf-e7a3-4e39-9bfb-f3bea1faf820\",\"status\":\"Failed\",\"startTime\":\"2026-07-26T00:54:21.41Z\",\"endTime\":\"2026-07-26T00:54:26.91Z\",\"error\":{\"code\":\"ClusterMinNodesExceedCoreQuota\",\"message\":\"The specified subscription has a total vCPU quota of 0 and cannot accomodate for at least 1 requested managed compute node which maps to 2 vCPUs. Talk to your Subscription Admin or refer to https://docs.microsoft.com/azure/machine-learning/how-to-manage-quotas#request-quota-increases to increase the total quota\"}}"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m  "status": "Failed",
+	            	[31m│[0m [0m  "error": {
+	            	[31m│[0m [0m    "code": "BadRequest",
+	            	[31m│[0m [0m    "message": "{\"id\":\"https://resourceprovider.batchai-eastus.svc/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/providers/Microsoft.BatchAI/locations/eastus/operationresults/1cb05adf-e7a3-4e39-9bfb-f3bea1faf820\",\"name\":\"1cb05adf-e7a3-4e39-9bfb-f3bea1faf820\",\"status\":\"Failed\",\"startTime\":\"2026-07-26T00:54:21.41Z\",\"endTime\":\"2026-07-26T00:54:26.91Z\",\"error\":{\"code\":\"ClusterMinNodesExceedCoreQuota\",\"message\":\"The specified subscription has a total vCPU quota of 0 and cannot accomodate for at least 1 requested managed compute node which maps to 2 vCPUs. Talk to your Subscription Admin or refer to https://docs.microsoft.com/azure/machine-learning/how-to-manage-quotas#request-quota-increases to increase the total quota\"}}"
+	            	[31m│[0m [0m  }
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_machine_learning_compute_cluster.image-builder,
+	            	[31m│[0m [0m  on workspace.tf line 175, in resource "azurerm_machine_learning_compute_cluster" "image-builder":
+	            	[31m│[0m [0m 175: resource "azurerm_machine_learning_compute_cluster" "image-builder" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/202-machine-learning-moderately-secure-existing-VNet
+
+FailNow
+
+---
+
 ## 12 Jul 26 00:43 UTC
 
 Success: false

@@ -1,3 +1,53 @@
+## 26 Jul 26 01:08 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
++ provider registry.terraform.io/hashicorp/time v0.14.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-301mlhss-dev-wqmq"
+	            	[31m│[0m [0mVirtual Machine Name: "vmdsvm01"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS3_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.dsvm,
+	            	[31m│[0m [0m  on dsvm.tf line 22, in resource "azurerm_windows_virtual_machine" "dsvm":
+	            	[31m│[0m [0m  22: resource "azurerm_windows_virtual_machine" "dsvm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Subnet (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-hub-301mlhss-dev-wqmq"
+	            	[31m│[0m [0mVirtual Network Name: "vnet-hub-301mlhss-dev"
+	            	[31m│[0m [0mSubnet Name: "AzureFirewallSubnet"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: AnotherOperationInProgress: Another operation on this or dependent resource is in progress. To retrieve status of the operation use uri: https://eastus.network.azure.com/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/providers/Microsoft.Network/locations/eastus/operations/153dc177-477c-4480-b191-1e1ed91240f5?api-version=2022-11-01.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_subnet.azure_firewall,
+	            	[31m│[0m [0m  on network-hub.tf line 26, in resource "azurerm_subnet" "azure_firewall":
+	            	[31m│[0m [0m  26: resource "azurerm_subnet" "azure_firewall" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/301-machine-learning-hub-spoke-secure
+
+FailNow
+
+---
+
 ## 12 Jul 26 00:52 UTC
 
 Success: false
