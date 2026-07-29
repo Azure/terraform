@@ -14,25 +14,13 @@ resource "random_pet" "cluster_name" {
   prefix = var.cluster_name_prefix
 }
 
-# Create the AKS Automatic cluster.
-# The AzAPI provider is used because the AzureRM provider's azurerm_kubernetes_cluster
-# resource always sets the managed cluster SKU name to "Base" and can't create the
-# "Automatic" SKU.
-resource "azapi_resource" "aks_automatic" {
-  type      = "Microsoft.ContainerService/managedClusters@2026-02-01"
-  name      = random_pet.cluster_name.id
-  parent_id = azurerm_resource_group.rg.id
-  location  = azurerm_resource_group.rg.location
+# Create the AKS Automatic cluster
+resource "azurerm_kubernetes_automatic_cluster" "aks_automatic" {
+  name                = random_pet.cluster_name.id
+  location            = azurerm_resource_group.rg.location
+  resource_group_name = azurerm_resource_group.rg.name
 
   identity {
     type = "SystemAssigned"
   }
-
-  body = {
-    sku = {
-      name = var.cluster_sku_name
-    }
-  }
-
-  response_export_values = ["properties.nodeResourceGroup", "properties.fqdn"]
 }

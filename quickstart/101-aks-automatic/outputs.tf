@@ -3,13 +3,17 @@ output "resource_group_name" {
 }
 
 output "cluster_name" {
-  value = azapi_resource.aks_automatic.name
+  value = azurerm_kubernetes_automatic_cluster.aks_automatic.name
 }
 
 output "cluster_id" {
-  value = azapi_resource.aks_automatic.id
+  value = azurerm_kubernetes_automatic_cluster.aks_automatic.id
 }
 
-output "node_resource_group" {
-  value = azapi_resource.aks_automatic.output.properties.nodeResourceGroup
+output "node_resource_group_id" {
+  value = azurerm_kubernetes_automatic_cluster.aks_automatic.node_resource_group_id
+}
+
+output "fully_qualified_domain_name" {
+  value = azurerm_kubernetes_automatic_cluster.aks_automatic.fully_qualified_domain_name
 }
