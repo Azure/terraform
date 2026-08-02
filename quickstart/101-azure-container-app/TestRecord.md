@@ -1,3 +1,133 @@
+## 02 Aug 26 03:38 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Managed Environment (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-integral-marlin"
+	            	[31m│[0m [0mManaged Environment Name: "bllqdcfp"): polling after CreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "Failed"
+	            	[31m│[0m [0mCode: "ManagedEnvironmentCapacityHeavyUsageError"
+	            	[31m│[0m [0mMessage: "AKS is experiencing heavy usage in region eastus. We are working on adding new capacity. In the meantime, please consider creating new AKS clusters in a different region. For a list of all the Azure regions, visit https://aka.ms/aks/regions. For more details on this error, visit https://aka.ms/akscapacityheavyusage.\r\nStatus: 400 (Bad Request)\r\nErrorCode: AKSCapacityHeavyUsage\r\n\r\nContent:\r\n{\n  \"code\": \"AKSCapacityHeavyUsage\",\n  \"details\": null,\n  \"message\": \"AKS is experiencing heavy usage in region eastus. We are working on adding new capacity. In the meantime, please consider creating new AKS clusters in a different region. For a list of all the Azure regions, visit https://aka.ms/aks/regions. For more details on this error, visit https://aka.ms/akscapacityheavyusage.\",\n  \"subcode\": \"\"\n }\r\n\r\nHeaders:\r\nCache-Control: no-cache\r\nPragma: no-cache\r\nx-ms-operation-identifier: REDACTED\r\nx-ms-correlation-request-id: REDACTED\r\nx-ms-request-id: 3005f8d8-59e4-4023-9288-b592eb40244c\r\nStrict-Transport-Security: REDACTED\r\nx-ms-throttling-version: REDACTED\r\nx-ms-ratelimit-remaining-subscription-writes: REDACTED\r\nx-ms-routing-request-id: REDACTED\r\nX-Content-Type-Options: REDACTED\r\nX-Cache: REDACTED\r\nX-MSEdge-Ref: REDACTED\r\nDate: Sun, 02 Aug 2026 01:21:52 GMT\r\nContent-Length: 408\r\nContent-Type: application/json\r\nExpires: -1\r\n"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{"id":"/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/providers/Microsoft.App/locations/eastus/managedEnvironmentOperationStatuses/3bcc4ee5-8548-4e2e-9f39-3eb29238685e","name":"3bcc4ee5-8548-4e2e-9f39-3eb29238685e","status":"Failed","error":{"code":"ManagedEnvironmentCapacityHeavyUsageError","message":"AKS is experiencing heavy usage in region eastus. We are working on adding new capacity. In the meantime, please consider creating new AKS clusters in a different region. For a list of all the Azure regions, visit https://aka.ms/aks/regions. For more details on this error, visit https://aka.ms/akscapacityheavyusage.\r\nStatus: 400 (Bad Request)\r\nErrorCode: AKSCapacityHeavyUsage\r\n\r\nContent:\r\n{\n  \"code\": \"AKSCapacityHeavyUsage\",\n  \"details\": null,\n  \"message\": \"AKS is experiencing heavy usage in region eastus. We are working on adding new capacity. In the meantime, please consider creating new AKS clusters in a different region. For a list of all the Azure regions, visit https://aka.ms/aks/regions. For more details on this error, visit https://aka.ms/akscapacityheavyusage.\",\n  \"subcode\": \"\"\n }\r\n\r\nHeaders:\r\nCache-Control: no-cache\r\nPragma: no-cache\r\nx-ms-operation-identifier: REDACTED\r\nx-ms-correlation-request-id: REDACTED\r\nx-ms-request-id: 3005f8d8-59e4-4023-9288-b592eb40244c\r\nStrict-Transport-Security: REDACTED\r\nx-ms-throttling-version: REDACTED\r\nx-ms-ratelimit-remaining-subscription-writes: REDACTED\r\nx-ms-routing-request-id: REDACTED\r\nX-Content-Type-Options: REDACTED\r\nX-Cache: REDACTED\r\nX-MSEdge-Ref: REDACTED\r\nDate: Sun, 02 Aug 2026 01:21:52 GMT\r\nContent-Length: 408\r\nContent-Type: application/json\r\nExpires: -1\r\n"},"startTime":"2026-08-02T01:21:59.7038328"}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_container_app_environment.container_app_environment,
+	            	[31m│[0m [0m  on main.tf line 41, in resource "azurerm_container_app_environment" "container_app_environment":
+	            	[31m│[0m [0m  41: resource "azurerm_container_app_environment" "container_app_environment" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating Managed Environment (Subscription:
+	            	[31m│[0m [0m"e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-integral-marlin"
+	            	[31m│[0m [0mManaged Environment Name: "bllqdcfp"): polling after CreateOrUpdate:
+	            	[31m│[0m [0mpolling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "Failed"
+	            	[31m│[0m [0mCode: "ManagedEnvironmentCapacityHeavyUsageError"
+	            	[31m│[0m [0mMessage: "AKS is experiencing heavy usage in region eastus. We are working
+	            	[31m│[0m [0mon adding new capacity. In the meantime, please consider creating new AKS
+	            	[31m│[0m [0mclusters in a different region. For a list of all the Azure regions, visit
+	            	[31m│[0m [0mhttps://aka.ms/aks/regions. For more details on this error, visit
+	            	[31m│[0m [0mhttps://aka.ms/akscapacityheavyusage.\r\nStatus: 400 (Bad
+	            	[31m│[0m [0mRequest)\r\nErrorCode: AKSCapacityHeavyUsage\r\n\r\nContent:\r\n{\n
+	            	[31m│[0m [0m\"code\": \"AKSCapacityHeavyUsage\",\n  \"details\": null,\n  \"message\":
+	            	[31m│[0m [0m\"AKS is experiencing heavy usage in region eastus. We are working on
+	            	[31m│[0m [0madding new capacity. In the meantime, please consider creating new AKS
+	            	[31m│[0m [0mclusters in a different region. For a list of all the Azure regions, visit
+	            	[31m│[0m [0mhttps://aka.ms/aks/regions. For more details on this error, visit
+	            	[31m│[0m [0mhttps://aka.ms/akscapacityheavyusage.\",\n  \"subcode\": \"\"\n
+	            	[31m│[0m [0m}\r\n\r\nHeaders:\r\nCache-Control: no-cache\r\nPragma:
+	            	[31m│[0m [0mno-cache\r\nx-ms-operation-identifier:
+	            	[31m│[0m [0mREDACTED\r\nx-ms-correlation-request-id: REDACTED\r\nx-ms-request-id:
+	            	[31m│[0m [0m3005f8d8-59e4-4023-9288-b592eb40244c\r\nStrict-Transport-Security:
+	            	[31m│[0m [0mREDACTED\r\nx-ms-throttling-version:
+	            	[31m│[0m [0mREDACTED\r\nx-ms-ratelimit-remaining-subscription-writes:
+	            	[31m│[0m [0mREDACTED\r\nx-ms-routing-request-id: REDACTED\r\nX-Content-Type-Options:
+	            	[31m│[0m [0mREDACTED\r\nX-Cache: REDACTED\r\nX-MSEdge-Ref: REDACTED\r\nDate: Sun, 02
+	            	[31m│[0m [0mAug 2026 01:21:52 GMT\r\nContent-Length: 408\r\nContent-Type:
+	            	[31m│[0m [0mapplication/json\r\nExpires: -1\r\n"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{"id":"/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/providers/Microsoft.App/locations/eastus/managedEnvironmentOperationStatuses/3bcc4ee5-8548-4e2e-9f39-3eb29238685e","name":"3bcc4ee5-8548-4e2e-9f39-3eb29238685e","status":"Failed","error":{"code":"ManagedEnvironmentCapacityHeavyUsageError","message":"AKS
+	            	[31m│[0m [0mis experiencing heavy usage in region eastus. We are working on adding new
+	            	[31m│[0m [0mcapacity. In the meantime, please consider creating new AKS clusters in a
+	            	[31m│[0m [0mdifferent region. For a list of all the Azure regions, visit
+	            	[31m│[0m [0mhttps://aka.ms/aks/regions. For more details on this error, visit
+	            	[31m│[0m [0mhttps://aka.ms/akscapacityheavyusage.\r\nStatus: 400 (Bad
+	            	[31m│[0m [0mRequest)\r\nErrorCode: AKSCapacityHeavyUsage\r\n\r\nContent:\r\n{\n
+	            	[31m│[0m [0m\"code\": \"AKSCapacityHeavyUsage\",\n  \"details\": null,\n  \"message\":
+	            	[31m│[0m [0m\"AKS is experiencing heavy usage in region eastus. We are working on
+	            	[31m│[0m [0madding new capacity. In the meantime, please consider creating new AKS
+	            	[31m│[0m [0mclusters in a different region. For a list of all the Azure regions, visit
+	            	[31m│[0m [0mhttps://aka.ms/aks/regions. For more details on this error, visit
+	            	[31m│[0m [0mhttps://aka.ms/akscapacityheavyusage.\",\n  \"subcode\": \"\"\n
+	            	[31m│[0m [0m}\r\n\r\nHeaders:\r\nCache-Control: no-cache\r\nPragma:
+	            	[31m│[0m [0mno-cache\r\nx-ms-operation-identifier:
+	            	[31m│[0m [0mREDACTED\r\nx-ms-correlation-request-id: REDACTED\r\nx-ms-request-id:
+	            	[31m│[0m [0m3005f8d8-59e4-4023-9288-b592eb40244c\r\nStrict-Transport-Security:
+	            	[31m│[0m [0mREDACTED\r\nx-ms-throttling-version:
+	            	[31m│[0m [0mREDACTED\r\nx-ms-ratelimit-remaining-subscription-writes:
+	            	[31m│[0m [0mREDACTED\r\nx-ms-routing-request-id: REDACTED\r\nX-Content-Type-Options:
+	            	[31m│[0m [0mREDACTED\r\nX-Cache: REDACTED\r\nX-MSEdge-Ref: REDACTED\r\nDate: Sun, 02
+	            	[31m│[0m [0mAug 2026 01:21:52 GMT\r\nContent-Length: 408\r\nContent-Type:
+	            	[31m│[0m [0mapplication/json\r\nExpires:
+	            	[31m│[0m [0m-1\r\n"},"startTime":"2026-08-02T01:21:59.7038328"}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-container-app
+
+FailNow
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:135
+	            				/usr/local/go/src/runtime/panic.go:615
+	            				/usr/local/go/src/testing/testing.go:1013
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/test_runner.go:53
+	            				/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	'terraform [destroy -auto-approve -input=false -lock=false]' unsuccessful after 5 retries
+	Test:       	Test_Quickstarts/quickstart/101-azure-container-app
+
+FailNow
+
+---
+
 ## 26 Jul 26 01:54 UTC
 
 Success: true
