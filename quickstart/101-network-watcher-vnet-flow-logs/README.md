@@ -1,6 +1,6 @@
 # Enable virtual network flow logs
 
-This template creates a virtual network flow log for an existing virtual network. It uses the regional Network Watcher instance and creates a dedicated storage account in the Network Watcher resource group.
+This template creates a virtual network flow log for an existing virtual network. It uses the regional Network Watcher instance and creates a dedicated storage account in the Network Watcher resource group. The storage account is dedicated to the flow log because the flow-log resource manages and might overwrite its lifecycle management rules.
 
 ## Prerequisites
 
@@ -28,6 +28,8 @@ This template creates a virtual network flow log for an existing virtual network
 | `retention_days` | Number of days to retain flow log data. Use `0` to retain data indefinitely. | `0` |
 | `storage_account_replication_type` | Replication type for the flow log storage account. | `LRS` |
 
+When `retention_days` is `0`, retention is disabled and logs accumulate in the storage account until they're manually deleted or the storage account is deleted. Set a value from `1` through `365` to enable automatic retention.
+
 ## Example
 
 Create a `terraform.tfvars` file with values for your existing resources:
@@ -38,6 +40,8 @@ network_watcher_resource_group_name = "NetworkWatcherRG"
 virtual_network_id                  = "/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.Network/virtualNetworks/<virtual-network-name>"
 ```
 
+The default Network Watcher name is for East US. To use another region, set `network_watcher_name` to the existing Network Watcher instance for the virtual network's region. For example, use `NetworkWatcher_westus2` for West US 2. If the instance is in a custom resource group, also set `network_watcher_resource_group_name`. The storage account and flow log use the selected Network Watcher instance's region.
+
 Run the following commands:
 
 ```bash
@@ -45,3 +49,7 @@ terraform init
 terraform plan
 terraform apply
 ```
+
+## Clean up resources
+
+Run `terraform destroy` to delete the flow log and its dedicated storage account. Deleting the storage account permanently deletes all flow logs stored in it. Terraform doesn't delete the existing virtual network or Network Watcher instance.

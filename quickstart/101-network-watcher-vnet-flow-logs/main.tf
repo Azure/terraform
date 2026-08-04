@@ -32,7 +32,7 @@ resource "azurerm_network_watcher_flow_log" "vnet_flow_log" {
   version            = var.flow_log_version
 
   retention_policy {
-    enabled = true
+    enabled = var.retention_days > 0
     days    = var.retention_days
   }
 }
