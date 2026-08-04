@@ -19,22 +19,9 @@ resource "azurerm_api_management" "apim_service" {
   name                = "${random_string.apim_service_name.result}-apim-service"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
-  publisher_name      = "Example Publisher"
-  publisher_email     = "publisher@example.com"
-  sku_name            = "Developer_1"
-  tags = {
-    Environment = "Example"
-  }
-  policy {
-    xml_content = <<XML
-    <policies>
-      <inbound />
-      <backend />
-      <outbound />
-      <on-error />
-    </policies>
-XML
-  }
+  publisher_email     = var.publisher_email
+  publisher_name      = var.publisher_name
+  sku_name            = "${var.sku_name}_${var.sku_count}"
 }
 
 resource "random_string" "api_name" {
