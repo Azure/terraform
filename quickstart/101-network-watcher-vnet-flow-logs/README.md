@@ -19,7 +19,7 @@ This template creates a virtual network flow log for an existing virtual network
 ## Variables
 
 | Name | Description | Default |
-|---|---|---|
+| --- | --- | --- |
 | `network_watcher_name` | Name of the existing regional Network Watcher instance. | `NetworkWatcher_eastus` |
 | `network_watcher_resource_group_name` | Name of the resource group that contains the Network Watcher instance. | `NetworkWatcherRG` |
 | `virtual_network_id` | Resource ID of the existing virtual network to monitor. | n/a |
