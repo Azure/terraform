@@ -28,7 +28,7 @@ This template creates a virtual network flow log for an existing virtual network
 | `retention_days` | Number of days to retain flow log data. Use `0` to retain data indefinitely. | `0` |
 | `storage_account_replication_type` | Replication type for the flow log storage account. | `LRS` |
 
-When `retention_days` is `0`, retention is disabled and logs accumulate in the storage account until they're manually deleted or the storage account is deleted. Set a value from `1` through `365` to enable automatic retention.
+When `retention_days` is `0`, automatic deletion based on age is disabled. Flow logs continue to be stored and accumulate in the storage account until you manually delete them or delete the storage account. Set a value from `1` through `365` to automatically delete logs after that number of days.
 
 ## Example
 
