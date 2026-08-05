@@ -96,8 +96,10 @@ resource "azurerm_kubernetes_automatic_cluster" "aks_automatic" {
     system_node_subnet_id = azurerm_subnet.system_nodes.id
   }
 
-  # The private_cluster block makes the cluster API server private, so it's
-  # only reachable from inside the virtual network.
+  # The private_cluster block gives the API server a private IP address in the
+  # virtual network. Reaching it requires private connectivity and DNS
+  # resolution of the private FQDN, which peering, a VPN, or ExpressRoute can
+  # provide from outside this virtual network.
   private_cluster {
     public_fully_qualified_domain_name_enabled = var.public_fully_qualified_domain_name_enabled
   }

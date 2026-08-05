@@ -92,7 +92,7 @@ resource "azapi_resource" "aks_automatic" {
 
   body = {
     sku = {
-      name = var.cluster_sku_name
+      name = "Automatic"
     }
 
     properties = {

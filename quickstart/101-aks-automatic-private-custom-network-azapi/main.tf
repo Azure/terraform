@@ -92,13 +92,15 @@ resource "azapi_resource" "aks_automatic" {
 
   body = {
     sku = {
-      name = var.cluster_sku_name
+      name = "Automatic"
     }
 
     properties = {
       apiServerAccessProfile = {
-        # A private cluster API server is only reachable from inside the
-        # virtual network.
+        # A private cluster API server is assigned a private IP address in the
+        # virtual network. Reaching it requires private connectivity and DNS
+        # resolution of the private FQDN, which peering, a VPN, or ExpressRoute
+        # can provide from outside this virtual network.
         enablePrivateCluster = true
         subnetId             = azurerm_subnet.api_server.id
       }
