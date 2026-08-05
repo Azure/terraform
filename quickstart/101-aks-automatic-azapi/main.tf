@@ -15,9 +15,10 @@ resource "random_pet" "cluster_name" {
 }
 
 # Create the AKS Automatic cluster.
-# The AzAPI provider is used because the AzureRM provider's azurerm_kubernetes_cluster
-# resource always sets the managed cluster SKU name to "Base" and can't create the
-# "Automatic" SKU.
+# The AzAPI provider is used here to get direct control over the managed cluster
+# API payload and API version. Reach for this pattern when you need a property
+# or an API version that the AzureRM provider hasn't surfaced yet. For the
+# provider-native equivalent, see the 101-aks-automatic sample.
 resource "azapi_resource" "aks_automatic" {
   type      = "Microsoft.ContainerService/managedClusters@2026-02-01"
   name      = random_pet.cluster_name.id
@@ -30,7 +31,7 @@ resource "azapi_resource" "aks_automatic" {
 
   body = {
     sku = {
-      name = var.cluster_sku_name
+      name = "Automatic"
     }
   }
 

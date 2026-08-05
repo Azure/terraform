@@ -17,8 +17,11 @@ For an equivalent sample that declares the same cluster with the AzAPI provider,
 | Name | Description | Default |
 |-|-|-|
 | `resource_group_name_prefix` | Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription. | rg |
-| `resource_group_location` | Location of the resource group. | eastus |
+| `resource_group_location` | Location of the resource group. | westus2 |
 | `cluster_name_prefix` | Prefix of the AKS Automatic cluster name that's combined with a random ID so the name is unique in your Azure subscription. | aks-automatic |
+
+> [!NOTE]
+> The default location is `westus2` because that's the region this sample was validated in. At the time of testing, `eastus` returned `AKSCapacityHeavyUsage` for API Server VNet Integration. Set `resource_group_location` to deploy elsewhere.
 
 ## Example
 
