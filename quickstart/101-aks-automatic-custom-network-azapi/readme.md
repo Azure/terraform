@@ -33,9 +33,6 @@ For the equivalent sample that uses the AzureRM provider's `azurerm_kubernetes_a
 | `system_node_subnet_address_prefixes` | Address prefixes of the subnet that hosts the managed system node pool. | ["172.19.0.64/26"] | |
 
 
-> [!NOTE]
-> The default location is `westus2` because that's the region these samples were validated in. At the time of testing, `eastus` returned `AKSCapacityHeavyUsage` for API Server VNet Integration. Set `resource_group_location` to deploy elsewhere.
-
 ## Network guardrails
 
 This sample creates its own virtual network, so the defaults are safe as written. Read these before pointing the variables at an existing network:
@@ -52,5 +49,6 @@ terraform init -upgrade
 terraform plan -out main.tfplan
 terraform apply main.tfplan
 ```
+
 
 

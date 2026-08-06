@@ -4,7 +4,7 @@ This template deploys an AKS Automatic cluster into a custom virtual network, in
 
 The virtual network contains a subnet delegated to the cluster API server, a subnet for the user node pools, and a subnet for the managed system node pool. The cluster uses a user-assigned managed identity that's granted the Network Contributor role on the virtual network, which is required when you bring your own network.
 
-The cluster is created with the AzureRM provider's [`azurerm_kubernetes_automatic_cluster`](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/kubernetes_automatic_cluster) resource, which is the recommended way to declare an AKS Automatic cluster. This resource requires AzureRM provider `5.0` or later.
+The cluster is created with the AzureRM provider's [`azurerm_kubernetes_automatic_cluster`](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/kubernetes_automatic_cluster) resource, which is the recommended way to declare an AKS Automatic cluster. This resource requires AzureRM provider `v4.81` or later.
 
 For an equivalent sample that declares the same cluster with the AzAPI provider, see [101-aks-automatic-custom-network-azapi](../101-aks-automatic-custom-network-azapi/). For a private cluster in a custom virtual network, see [101-aks-automatic-private-custom-network](../101-aks-automatic-private-custom-network/).
 
@@ -33,9 +33,6 @@ For an equivalent sample that declares the same cluster with the AzAPI provider,
 | `system_node_subnet_address_prefixes` | Address prefixes of the subnet that hosts the managed system node pool. | ["172.19.0.64/26"] |
 
 
-> [!NOTE]
-> The default location is `westus2` because that's the region these samples were validated in. At the time of testing, `eastus` returned `AKSCapacityHeavyUsage` for API Server VNet Integration. Set `resource_group_location` to deploy elsewhere.
-
 ## Network guardrails
 
 This sample creates its own virtual network, so the defaults are safe as written. Read these before pointing the variables at an existing network:
@@ -52,4 +49,5 @@ terraform init -upgrade
 terraform plan -out main.tfplan
 terraform apply main.tfplan
 ```
+
 
