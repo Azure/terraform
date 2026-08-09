@@ -1,3 +1,40 @@
+## 09 Aug 26 01:12 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Application Gateway (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-easy-ringtail"
+	            	[31m│[0m [0mApplication Gateway Name: "ApplicationGateway1"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: ApplicationGatewayDeprecatedTlsVersionUsedInSslPolicy: The TLS policy AppGwSslPolicy20150501 for Application Gateway /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-easy-ringtail/providers/Microsoft.Network/applicationGateways/ApplicationGateway1 is using a deprecated TLS version. Update it to a supported version. Learn more https://aka.ms/appgw-oldtlsversions[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_application_gateway.appgw,
+	            	[31m│[0m [0m  on main.tf line 110, in resource "azurerm_application_gateway" "appgw":
+	            	[31m│[0m [0m 110: resource "azurerm_application_gateway" "appgw" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-k8s-cluster-with-aks-applicationgateway-ingress
+
+FailNow
+
+---
+
 ## 02 Aug 26 01:04 UTC
 
 Success: false

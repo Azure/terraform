@@ -1,3 +1,56 @@
+## 09 Aug 26 00:48 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-patient-gazelle"
+	            	[31m│[0m [0mBatch Account Name: "tmgovbea"
+	            	[31m│[0m [0mPool Name: "pool-pretty-koala-fixed-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:77f4c635-93d3-4459-9c1e-8dba5c3efe6f
+	            	[31m│[0m [0mTime:2026-08-09T00:47:27.0271347Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.fixed,
+	            	[31m│[0m [0m  on main.tf line 46, in resource "azurerm_batch_pool" "fixed":
+	            	[31m│[0m [0m  46: resource "azurerm_batch_pool" "fixed" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-patient-gazelle"
+	            	[31m│[0m [0mBatch Account Name: "tmgovbea"
+	            	[31m│[0m [0mPool Name: "pool-pretty-koala-autoscale-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:527d8037-833f-4a9f-88b5-fdac357e654e
+	            	[31m│[0m [0mTime:2026-08-09T00:47:26.7198660Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.autopool,
+	            	[31m│[0m [0m  on main.tf line 88, in resource "azurerm_batch_pool" "autopool":
+	            	[31m│[0m [0m  88: resource "azurerm_batch_pool" "autopool" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-start-task
+
+FailNow
+
+---
+
 ## 02 Aug 26 00:51 UTC
 
 Success: false
