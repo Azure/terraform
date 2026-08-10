@@ -8,9 +8,9 @@ member_cluster_names = []
 
 # Kubernetes Versions
 kubernetes_versions = {
-  member1 = "1.33"  # Staging
-  member2 = "1.32" # Production
-  member3 = "1.32" # Production
+  member1 = "1.36"  # Staging
+  member2 = "1.35" # Production
+  member3 = "1.35" # Production
 }
 
 # Node Configuration

@@ -30,9 +30,9 @@ variable "kubernetes_versions" {
     member3 = string
   })
   default = {
-    member1 = "1.32"
-    member2 = "1.31"
-    member3 = "1.31"
+    member1 = "1.36"
+    member2 = "1.35"
+    member3 = "1.35"
   }
 }
 

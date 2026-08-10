@@ -2,6 +2,8 @@
 
 This Terraform sample demonstrates how to use the AzAPI provider to manage Azure Kubernetes Fleet Manager resources, including Fleet, member clusters, update strategies, and auto-upgrade profiles.
 
+> Note: Kubernetes versions provided in the variables and examples files will periodically expire as they are no longer supported by AKS. If you find errors due to Kubernetes version returned in the TestRecord, update the contents to supported Kubernetes versions based on the [AKS documentation](https://learn.microsoft.com/azure/aks/supported-kubernetes-versions?tabs=azure-cli#aks-kubernetes-release-calendar).
+
 ## Terraform resource types
 
 - [random_string](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string)
