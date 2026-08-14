@@ -2,6 +2,6 @@
 
 | Deployment | Result |
 |-|-|
-| Terraform Validate | Not tested |
+| Terraform Validate | Passed |
 | Terraform Plan | Not tested |
 | Terraform Apply | Not tested |
