@@ -1,3 +1,40 @@
+## 16 Aug 26 00:20 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine Scale Set (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "201-confidential-vmss-adapted-panda-rg"
+	            	[31m│[0m [0mVirtual Machine Scale Set Name: "201-confidential-vmss-adapted-panda-vmss"): performing CreateOrUpdate: unexpected status 404 (404 Not Found) with error: PlatformImageNotFound: The platform image 'MicrosoftWindowsServer:windows-cvm:2022-datacenter-cvm:latest' is not available. Verify that all fields in the storage profile are correct. For more details about storage profile information, please refer to https://aka.ms/storageprofile[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine_scale_set.main,
+	            	[31m│[0m [0m  on main.tf line 20, in resource "azurerm_windows_virtual_machine_scale_set" "main":
+	            	[31m│[0m [0m  20: resource "azurerm_windows_virtual_machine_scale_set" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-confidential-vmss
+
+FailNow
+
+---
+
 ## 09 Aug 26 01:16 UTC
 
 Success: false
