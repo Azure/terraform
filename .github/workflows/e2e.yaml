@@ -1,56 +1,331 @@
-name: E2E Test Check
+name: Validate Terraform Deployment
+
 on:
-  pull_request:
-    types: ['opened', 'synchronize']
-    paths:
-      - '.github/**'
-      - '.github/workflows/**'
-      - 'quickstart/**'
-      - 'test/**'
-      - 'test/e2e/**'
-permissions:
-  actions: write
-  contents: read
-  id-token: write
+  issue_comment:
+    types: [created]
 
 jobs:
-  e2e-check:
+  gate:
+    name: Authorize validation command
+    if: >-
+      github.event.issue.pull_request &&
+      startsWith(github.event.comment.body, '/validate')
     runs-on: ubuntu-latest
-    environment:
-      name: test
+    timeout-minutes: 12
+    permissions:
+      actions: read
+      checks: write
+      contents: read
+      issues: write
+      pull-requests: read
+
+    outputs:
+      check_id: ${{ steps.check.outputs.check_id }}
+      head_sha: ${{ steps.pr.outputs.head_sha }}
+      head_repo: ${{ steps.pr.outputs.head_repo }}
+      sample_path: ${{ steps.pr.outputs.sample_path }}
+
     steps:
-      - name: Checking for Fork
-        shell: pwsh
-        run: |
-          $isFork = "${{ github.event.pull_request.head.repo.fork }}"
-          if($isFork -eq "true") {
-            echo "### WARNING: This workflow is disabled for forked repositories. Please follow the [release branch process](https://azure.github.io/Azure-Verified-Modules/contributing/terraform/terraform-contribution-flow/#5-create-a-pull-request-to-the-upstream-repository) if end to end tests are required." >> $env:GITHUB_STEP_SUMMARY
-          }
-      - name: checkout
-        if: github.event.pull_request.head.repo.fork == false
-        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 #v3.6.0
-      - name: Get changed files
-        if: github.event.pull_request.head.repo.fork == false
-        id: changed-files
-        uses: step-security/changed-files@3dbe17c78367e7d60f00d78ae6781a35be47b4a1 #v45.0.1
+      - name: Authorize command and resolve pull request
+        id: pr
+        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
         with:
-          dir_names: true
-          separator: ","
-          dir_names_include_files: "quickstart/*"
-          files: "quickstart/**"
-          files_ignore: "**/TestRecord.md"
-          dir_names_max_depth: 2
-      - name: test pr
-        if: github.event.pull_request.head.repo.fork == false
+          script: |
+            if (context.payload.comment.body.trim() !== '/validate') {
+              core.setFailed('The supported command is exactly /validate.');
+              return;
+            }
+
+            const allowedCommenters = new Set(['MEMBER', 'OWNER', 'COLLABORATOR']);
+            const commenterAssociation = context.payload.comment.author_association;
+            if (!allowedCommenters.has(commenterAssociation)) {
+              core.setFailed(
+                `Not authorized to run /validate: ${commenterAssociation}. ` +
+                'Only MEMBER, OWNER, or COLLABORATOR may run this command.'
+              );
+              return;
+            }
+
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const pull_number = context.payload.issue.number;
+            const [{ data: pr }, files] = await Promise.all([
+              github.rest.pulls.get({ owner, repo, pull_number }),
+              github.paginate(
+                github.rest.pulls.listFiles,
+                { owner, repo, pull_number, per_page: 100 }
+              )
+            ]);
+
+            const protectedPrefixes = ['.github/workflows/', '.github/scripts/'];
+            const protectedFiles = [
+              '.github/schemas/quickstart-metadata.schema.json',
+              'GNUmakefile',
+              'scripts/terraform-validate.sh'
+            ];
+            const touchedProtected = files
+              .map(file => file.filename)
+              .filter(name =>
+                protectedPrefixes.some(prefix => name.startsWith(prefix)) ||
+                protectedFiles.includes(name)
+              );
+            const allowedProtectedAuthors = new Set(['MEMBER', 'OWNER']);
+            if (touchedProtected.length > 0 && !allowedProtectedAuthors.has(pr.author_association)) {
+              core.setFailed(
+                `Protected validation files were changed by a PR author with ` +
+                `association '${pr.author_association}': ${touchedProtected.join(', ')}`
+              );
+              return;
+            }
+
+            const deployFiles = files
+              .map(file => file.filename)
+              .filter(name =>
+                name.startsWith('quickstart/') &&
+                /\.(tf|tf\.json|tfvars|tfvars\.json|tftpl|pkr\.hcl)$/.test(name)
+              );
+            const samplePaths = new Set(
+              deployFiles.map(name => name.split('/').slice(0, 2).join('/'))
+            );
+            if (samplePaths.size !== 1) {
+              core.setFailed(
+                `/validate requires exactly one changed deployable quickstart; found ` +
+                `${samplePaths.size}: ${[...samplePaths].join(', ') || '<none>'}`
+              );
+              return;
+            }
+
+            core.setOutput('head_sha', pr.head.sha);
+            core.setOutput('head_repo', pr.head.repo.full_name);
+            core.setOutput('sample_path', [...samplePaths][0]);
+
+      - name: React to command
+        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
+        with:
+          script: |
+            await github.rest.reactions.createForIssueComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              comment_id: context.payload.comment.id,
+              content: 'eyes'
+            });
+
+      - name: Start pull request check
+        id: check
+        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
         env:
-          ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+          HEAD_SHA: ${{ steps.pr.outputs.head_sha }}
+        with:
+          script: |
+            const { data } = await github.rest.checks.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: 'terraform-deployment-validation',
+              head_sha: process.env.HEAD_SHA,
+              status: 'in_progress',
+              details_url: `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+              output: {
+                title: 'Validating Terraform deployment',
+                summary: 'A maintainer ran `/validate`; waiting for static checks, then querying ARM telemetry.'
+              }
+            });
+            core.setOutput('check_id', data.id);
+
+      - name: Wait for pre-pull-request checks
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HEAD_SHA: ${{ steps.pr.outputs.head_sha }}
+          REPOSITORY: ${{ github.repository }}
+        shell: bash
         run: |
-          echo "change files" $ALL_CHANGED_FILES
-          export ARM_OIDC_REQUEST_TOKEN=$ACTIONS_ID_TOKEN_REQUEST_TOKEN
-          export ARM_OIDC_REQUEST_URL=$ACTIONS_ID_TOKEN_REQUEST_URL
-          export ARM_SUBSCRIPTION_ID=${{ secrets.ARM_SUBSCRIPTION_ID }}
-          export ARM_TENANT_ID=${{ secrets.ARM_TENANT_ID }}
-          export ARM_CLIENT_ID=${{ secrets.ARM_CLIENT_ID }}
-          export PACKER_VERSION=${{ vars.PACKER_VERSION }}
-          export CHANGED_FOLDERS="${{ steps.changed-files.outputs.all_changed_files }}"
-          docker run --rm -v $(pwd):/src -w /src/test --network=host -e ARM_SUBSCRIPTION_ID -e ARM_TENANT_ID -e ARM_CLIENT_ID -e ARM_OIDC_REQUEST_TOKEN -e ARM_OIDC_REQUEST_URL -e ARM_USE_OIDC=true -e CHANGED_FOLDERS mcr.microsoft.com/azterraform:latest sh -c "pkenv install $PACKER_VERSION && go mod tidy && go test -timeout=360m -v ./e2e"
+          set -euo pipefail
+          deadline=$(( $(date +%s) + 600 ))
+
+          while (( $(date +%s) < deadline )); do
+            run_json=$(gh api \
+              "/repos/${REPOSITORY}/actions/workflows/pr-check.yaml/runs?head_sha=${HEAD_SHA}&per_page=1" \
+              --jq '.workflow_runs[0] // {}')
+            status=$(jq -r '.status // empty' <<< "${run_json}")
+            conclusion=$(jq -r '.conclusion // empty' <<< "${run_json}")
+
+            if [[ "${status}" == "completed" ]]; then
+              if [[ "${conclusion}" == "success" ]]; then
+                echo "Pre-pull-request checks passed for ${HEAD_SHA}."
+                exit 0
+              fi
+              echo "Pre-pull-request checks concluded '${conclusion}' for ${HEAD_SHA}." >&2
+              exit 1
+            fi
+
+            echo "Waiting for pre-pull-request checks (status=${status:-not-started})..."
+            sleep 30
+          done
+
+          echo "Timed out waiting for pre-pull-request checks." >&2
+          exit 1
+
+  validate:
+    name: Validate contributor deployment
+    needs: gate
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    environment:
+      name: adx-readonly
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout trusted validator
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          repository: ${{ github.repository }}
+          ref: ${{ github.event.repository.default_branch }}
+          path: trusted
+          sparse-checkout: .github/scripts/validate-quickstart-metadata.py
+          sparse-checkout-cone-mode: false
+
+      - name: Checkout pull request sample
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          repository: ${{ needs.gate.outputs.head_repo }}
+          ref: ${{ needs.gate.outputs.head_sha }}
+          path: pull-request
+          sparse-checkout: ${{ needs.gate.outputs.sample_path }}
+
+      - name: Validate metadata
+        env:
+          SAMPLE_PATH: ${{ needs.gate.outputs.sample_path }}
+        run: >-
+          python trusted/.github/scripts/validate-quickstart-metadata.py
+          --require-metadata
+          "pull-request/${SAMPLE_PATH}"
+
+      - name: Sign in to Azure with OIDC
+        uses: azure/login@8216e11d8cd9b42fe925c852af8e76311ff067ac # v2
+        with:
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          client-id: ${{ secrets.AZURE_UAMI_CLIENT_ID }}
+
+      - name: Validate correlated Terraform operations
+        env:
+          SAMPLE_PATH: ${{ needs.gate.outputs.sample_path }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          metadata="pull-request/${SAMPLE_PATH}/metadata.json"
+          correlation_id=$(jq -r '.testResult.correlationId' "${metadata}")
+          started_at=$(jq -r '.testResult.timestamp' "${metadata}")
+
+          query='declare query_parameters(cid:string, started:datetime);
+          ARM_Deployments_Terraform_v2
+          | where correlationId == cid
+          | where PreciseTimeStamp between ((started - 1h) .. (started + 24h))
+          | where client == "Terraform"
+          | summarize
+              firstSeen=min(PreciseTimeStamp),
+              lastSeen=max(PreciseTimeStamp),
+              totalRequests=sum(requestCount),
+              successfulWrites=sumif(requestCount, httpMethod in ("PUT", "PATCH", "POST", "DELETE") and executionStatus == "Succeeded"),
+              failedRequests=sumif(requestCount, executionStatus in ("Failed", "Canceled")),
+              providers=dcount(providerNamespace)'
+
+          properties=$(jq -cn \
+            --arg cid "${correlation_id}" \
+            --arg started "${started_at}" \
+            '{ Parameters: { cid: $cid, started: $started } }')
+          body=$(jq -n \
+            --arg db "APAProd" \
+            --arg csl "${query}" \
+            --arg properties "${properties}" \
+            '{
+              db: $db,
+              csl: $csl,
+              properties: $properties
+            }')
+
+          response=$(az rest \
+            --method POST \
+            --url "https://apadata.westus.kusto.windows.net/v1/rest/query" \
+            --resource "https://kusto.kusto.windows.net" \
+            --headers "Content-Type=application/json" \
+            --body "${body}")
+
+          value() {
+            local column="$1"
+            jq -r --arg column "${column}" \
+              '.Tables[0] as $table
+               | ($table.Columns | map(.ColumnName) | index($column)) as $index
+               | if $index == null then empty else $table.Rows[0][$index] end' \
+              <<< "${response}"
+          }
+
+          total_requests=$(value totalRequests)
+          successful_writes=$(value successfulWrites)
+          failed_requests=$(value failedRequests)
+          first_seen=$(value firstSeen)
+          last_seen=$(value lastSeen)
+          providers=$(value providers)
+
+          echo "Correlation ID: ${correlation_id}"
+          echo "Observed: ${first_seen} through ${last_seen}"
+          echo "Requests: ${total_requests:-0}; successful writes: ${successful_writes:-0}; failed/canceled: ${failed_requests:-0}; providers: ${providers:-0}"
+
+          if (( ${total_requests:-0} == 0 )); then
+            echo "No Terraform operations were found for this correlation ID." >&2
+            exit 1
+          fi
+          if (( ${successful_writes:-0} == 0 )); then
+            echo "The correlation ID has no successful Terraform write operations." >&2
+            exit 1
+          fi
+          if (( ${failed_requests:-0} != 0 )); then
+            echo "The correlated Terraform workflow contains failed or canceled operations." >&2
+            exit 1
+          fi
+
+          {
+            echo "## Terraform deployment validation"
+            echo
+            echo "- Sample: \`${SAMPLE_PATH}\`"
+            echo "- Correlation ID: \`${correlation_id}\`"
+            echo "- Successful writes: ${successful_writes}"
+            echo "- Failed or canceled operations: ${failed_requests}"
+            echo "- Resource providers: ${providers}"
+          } >> "${GITHUB_STEP_SUMMARY}"
+
+  report:
+    name: Report deployment validation
+    needs: [gate, validate]
+    if: always() && needs.gate.outputs.check_id != ''
+    runs-on: ubuntu-latest
+    permissions:
+      checks: write
+      contents: read
+    steps:
+      - name: Complete pull request check
+        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
+        env:
+          CHECK_ID: ${{ needs.gate.outputs.check_id }}
+          RESULT: ${{ needs.validate.result }}
+          SAMPLE_PATH: ${{ needs.gate.outputs.sample_path }}
+        with:
+          script: |
+            const passed = process.env.RESULT === 'success';
+            await github.rest.checks.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              check_run_id: Number(process.env.CHECK_ID),
+              status: 'completed',
+              conclusion: passed ? 'success' : 'failure',
+              output: {
+                title: passed
+                  ? 'Terraform deployment validation passed'
+                  : 'Terraform deployment validation failed',
+                summary: passed
+                  ? `ARM telemetry confirmed successful Terraform writes for \`${process.env.SAMPLE_PATH}\` with no failed or canceled operations.`
+                  : `Deployment validation failed. Open the workflow run for details, correct the metadata or deployment, then run \`/validate\` again.`
+              }
+            });
