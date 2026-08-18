@@ -23,14 +23,34 @@ jobs:
           dir_names_include_files: "quickstart/*"
           files: "quickstart/**"
           dir_names_max_depth: 2
+      - name: Normalize changed quickstart folders
+        id: changed-folders
+        env:
+          CANDIDATES: ${{ steps.changed-files.outputs.all_changed_files }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          folders=$(
+            tr ',' '\n' <<< "${CANDIDATES}" |
+              while IFS= read -r candidate; do
+                candidate=$(xargs <<< "${candidate}")
+                if [[ -d "${candidate}" && "${candidate}" =~ ^quickstart/[^/]+$ ]]; then
+                  echo "${candidate}"
+                fi
+              done |
+              sort -u |
+              paste -sd, -
+          )
+          echo "folders=${folders}" >> "$GITHUB_OUTPUT"
+          echo "Changed quickstart folders: ${folders:-<none>}"
       - name: Validate quickstart deployment metadata
         env:
-          CHANGED_FOLDERS: ${{ steps.changed-files.outputs.all_changed_files }}
+          CHANGED_FOLDERS: ${{ steps.changed-folders.outputs.folders }}
         run: |
           python .github/scripts/validate-quickstart-metadata.py \
             --base "origin/${{ github.base_ref }}" \
             "${CHANGED_FOLDERS}"
       - name: pr-check
         run: |
-          export CHANGED_FOLDERS="${{ steps.changed-files.outputs.all_changed_files }}"
+          export CHANGED_FOLDERS="${{ steps.changed-folders.outputs.folders }}"
           docker run --rm -v "$(pwd):/src" -w /src -e CHANGED_FOLDERS mcr.microsoft.com/azterraform:latest make pr-check
