@@ -204,9 +204,9 @@ jobs:
       - name: Sign in to Azure with OIDC
         uses: azure/login@8216e11d8cd9b42fe925c852af8e76311ff067ac # v2
         with:
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-          client-id: ${{ secrets.AZURE_UAMI_CLIENT_ID }}
+          tenant-id: ${{ vars.AZURE_TENANT_ID }}
+          client-id: ${{ vars.AZURE_UAMI_CLIENT_ID }}
+          allow-no-subscriptions: true
 
       - name: Validate correlated Terraform operations
         env:

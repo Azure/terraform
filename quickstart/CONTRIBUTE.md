@@ -99,10 +99,9 @@ This is deployment evidence, not source attestation: unlike an ARM template depl
 
 ## Maintainer configuration
 
-The `adx-readonly` GitHub environment must provide federated OIDC credentials through:
+The `adx-readonly` GitHub environment must provide these variables for its federated OIDC application:
 
 - `AZURE_TENANT_ID`
-- `AZURE_SUBSCRIPTION_ID`
 - `AZURE_UAMI_CLIENT_ID`
 
-The identity needs read-only query access to the `APAProd` database on `https://apadata.westus.kusto.windows.net`. It does not need permissions to deploy or modify Azure resources.
+The identity uses subscriptionless OIDC and needs read-only query access to the `APAProd` database on `https://apadata.westus.kusto.windows.net`. It does not need an Azure subscription role or permissions to deploy or modify resources.
