@@ -1,0 +1,11 @@
+formatter: "markdown table"
+
+content: |-
+  {{ .Resources }}
+  {{ .Inputs }}
+  {{ .Providers }}
+  {{ .Requirements }}
+
+output:
+  file: readme.html.markdown
+  mode: inject
