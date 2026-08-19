@@ -91,6 +91,12 @@ def test_result_value(data: dict | None, field: str) -> object:
     return test_result.get(field)
 
 
+def should_require_metadata(
+    explicit: bool, configuration_changed: bool, metadata_changed: bool
+) -> bool:
+    return explicit or configuration_changed or metadata_changed
+
+
 def parse_timestamp(value: object) -> datetime.datetime | None:
     if not isinstance(value, str) or not value.endswith("Z"):
         return None
@@ -103,7 +109,9 @@ def parse_timestamp(value: object) -> datetime.datetime | None:
     return parsed
 
 
-def validate_metadata(path: pathlib.Path) -> list[str]:
+def validate_metadata(
+    path: pathlib.Path, *, enforce_freshness: bool = True
+) -> list[str]:
     errors: list[str] = []
     try:
         data = json.loads(path.read_text(encoding="utf-8"))
@@ -145,7 +153,7 @@ def validate_metadata(path: pathlib.Path) -> list[str]:
         errors.append(
             f"{path}: testResult.timestamp must be an RFC 3339 UTC timestamp ending in Z"
         )
-    else:
+    elif enforce_freshness:
         now = datetime.datetime.now(datetime.timezone.utc)
         if timestamp < now - MAX_METADATA_AGE:
             errors.append(
@@ -182,6 +190,7 @@ def main() -> int:
     for folder in folders:
         metadata_path = folder / "metadata.json"
         require_metadata = args.require_metadata
+        metadata_changed = False
 
         if args.base:
             changed = changed_files(args.base, folder)
@@ -189,7 +198,9 @@ def main() -> int:
                 file_name.endswith(CONFIGURATION_SUFFIXES) for file_name in changed
             )
             metadata_changed = metadata_path.as_posix() in changed
-            require_metadata = require_metadata or configuration_changed
+            require_metadata = should_require_metadata(
+                require_metadata, configuration_changed, metadata_changed
+            )
             if configuration_changed and not metadata_changed:
                 errors.append(
                     f"{folder}: Terraform configuration changed but metadata.json "
@@ -224,7 +235,12 @@ def main() -> int:
             continue
 
         if metadata_path.is_file():
-            errors.extend(validate_metadata(metadata_path))
+            errors.extend(
+                validate_metadata(
+                    metadata_path,
+                    enforce_freshness=require_metadata or metadata_changed,
+                )
+            )
 
     if errors:
         for error in errors:

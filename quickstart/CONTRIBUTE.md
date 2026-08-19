@@ -83,6 +83,8 @@ The **Pre Pull Request Check** workflow runs automatically. It:
 - Validates the metadata format.
 - Runs the existing repository `pr-check` target.
 
+Changes to the E2E test harness under `test/**` run separately in the **E2E Test Code Check** workflow. That workflow retains repository-owned Azure execution for internal branches and does not run privileged pull-request code from forks.
+
 After that workflow passes, a repository maintainer comments:
 
 ```text

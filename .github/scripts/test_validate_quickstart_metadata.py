@@ -100,10 +100,31 @@ class ValidateMetadataTests(unittest.TestCase):
             any("days old" in error for error in VALIDATOR.validate_metadata(path))
         )
 
+    def test_allows_stale_timestamp_when_freshness_is_not_required(self) -> None:
+        path = self.write_metadata(
+            {
+                "$schema": "../../.github/schemas/quickstart-metadata.schema.json",
+                "testResult": {
+                    "correlationId": "12345678-1234-1234-1234-1234567890ab",
+                    "timestamp": "2000-01-01T00:00:00Z",
+                },
+            }
+        )
+
+        self.assertEqual(
+            [],
+            VALIDATOR.validate_metadata(path, enforce_freshness=False),
+        )
+
     def test_recognizes_terraform_json_configuration(self) -> None:
         self.assertTrue("main.tf.json".endswith(VALIDATOR.CONFIGURATION_SUFFIXES))
         self.assertTrue(
             "testing.auto.tfvars.json".endswith(VALIDATOR.CONFIGURATION_SUFFIXES)
+        )
+
+    def test_metadata_change_requires_metadata(self) -> None:
+        self.assertTrue(
+            VALIDATOR.should_require_metadata(False, False, True)
         )
 
 
