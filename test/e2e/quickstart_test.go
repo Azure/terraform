@@ -25,7 +25,6 @@ var speicalTests = map[string]func(*testing.T){
 	"quickstart/202-machine-learning-moderately-secure-existing-VNet":      test202machineLearningModeratelySecureExistingVnet,
 	"quickstart/101-azure-netapp-files":                                    test101AzureNetappFiles,
 	"quickstart/101-azure-storage-actions-create-storage-task":             test101AzureStorageActionsCreateStorageTask,
-	"quickstart/101-aks-entra-k8s-rbac":                                    test101AKSEntraKubernetesRBAC,
 }
 
 func Test_Quickstarts(t *testing.T) {
@@ -235,10 +234,6 @@ func test101AzureStorageActionsCreateStorageTask(t *testing.T) {
 			"the response did not contain a body": "This API would response 202 accepted with empty body sometimes, just retry",
 		},
 	}, nil)
-}
-
-func test101AKSEntraKubernetesRBAC(t *testing.T) {
-	t.Skip("requires a pre-existing AKS cluster and Microsoft Entra user credentials")
 }
 
 func removeDuplicates(s []string) []string {
