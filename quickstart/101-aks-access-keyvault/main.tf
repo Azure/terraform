@@ -58,7 +58,7 @@ resource "azurerm_kubernetes_cluster" "this" {
   default_node_pool {
     name       = "system"
     node_count = 1
-    vm_size    = "Standard_B4ms"
+    vm_size    = "Standard_D2s_v3"
   }
 
   identity {
