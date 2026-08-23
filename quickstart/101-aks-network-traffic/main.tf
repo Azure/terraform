@@ -255,6 +255,7 @@ resource "azurerm_kubernetes_cluster" "this" {
   }
 
   depends_on = [
+    azurerm_route.default_to_firewall,
     azurerm_subnet_route_table_association.aks,
     azurerm_firewall_policy_rule_collection_group.aks_rules
   ]
