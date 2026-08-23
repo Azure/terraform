@@ -1,3 +1,79 @@
+## 23 Aug 26 01:15 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_integer.suffix: Refreshing state... [id=67180231][0m
+	            	[0m[1mrandom_string.ci_prefix: Refreshing state... [id=tzoiijtf][0m
+	            	[0m[1mrandom_pet.prefix: Refreshing state... [id=ml-electric-lamprey][0m
+	            	[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-electric-lamprey-rg][0m
+	            	[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD02MmQ3ZjU4ZC01ZWJjLTQ4ZGYtYTUwOS0xZmQzZGU2ZWVmODc7b2JqZWN0SWQ9N2ZmNDJiMDgtNDZkZC00NmE3LThjZWYtYTNiZDlmNmE4NmY2O3N1YnNjcmlwdGlvbklkPWU0YjYyYjNiLTc2MzQtNDk3Mi04YmJlLTVkNzE5NzE1OWYyNjt0ZW5hbnRJZD00ZjAwYjNiNi0yOTQwLTRmMmMtYjAzNy05NDYzN2MxODBkMzA=][0m
+	            	[0m[1mazurerm_key_vault.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-electric-lamprey-rg/providers/Microsoft.KeyVault/vaults/mldev67180231kv][0m
+	            	[0m[1mazurerm_container_registry.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-electric-lamprey-rg/providers/Microsoft.ContainerRegistry/registries/mldev67180231cr][0m
+	            	[0m[1mazurerm_application_insights.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-electric-lamprey-rg/providers/Microsoft.Insights/components/ml-electric-lamprey-appi][0m
+	            	[0m[1mazurerm_storage_account.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-electric-lamprey-rg/providers/Microsoft.Storage/storageAccounts/mldev67180231st][0m
+	            	[0m[1mazurerm_machine_learning_workspace.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-electric-lamprey-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-electric-lamprey-mlw][0m
+	            	[0m[1mazurerm_machine_learning_compute_instance.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-electric-lamprey-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-electric-lamprey-mlw/computes/tzoiijtfinstance][0m
+	            	[0m[1mazurerm_machine_learning_compute_cluster.compute: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-electric-lamprey-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-electric-lamprey-mlw/computes/cpu-cluster][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_application_insights.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_application_insights" "default" {
+	            	        id                                    = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-electric-lamprey-rg/providers/Microsoft.Insights/components/ml-electric-lamprey-appi"
+	            	        name                                  = "ml-electric-lamprey-appi"
+	            	        tags                                  = {}
+	            	      [31m-[0m[0m workspace_id                          = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ai_ml-electric-lamprey-appi_b5def858-8070-402a-9b13-cb79269e6b23_managed/providers/Microsoft.OperationalInsights/workspaces/managed-ml-electric-lamprey-appi-ws" [90m-> null[0m[0m
+	            	        [90m# (15 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_machine_learning_compute_instance.main,
+	            	[33m│[0m [0m  on compute.tf line 12, in resource "azurerm_machine_learning_compute_instance" "main":
+	            	[33m│[0m [0m  12:   location                      = [4mazurerm_resource_group.default.location[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe `azurerm_machine_learning_compute_instance` must be deployed to the
+	            	[33m│[0m [0msame location as the associated `azurerm_machine_learning_workspace`
+	            	[33m│[0m [0mresource, as the `location` fields must be the same the `location` field no
+	            	[33m│[0m [0mlonger has any effect and will be removed in version 4.0 of the AzureRM
+	            	[33m│[0m [0mProvider
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-machine-learning1274869337/src/quickstart/101-machine-learning/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-machine-learning1274869337/src/quickstart/101-machine-learning/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-machine-learning
+
+FailNow
+
+---
+
 ## 16 Aug 26 00:54 UTC
 
 Success: false

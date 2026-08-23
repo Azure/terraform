@@ -1,3 +1,40 @@
+## 23 Aug 26 00:34 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-cosmos-db-analyticalstore-still-impala-rg"
+	            	[31m│[0m [0mDatabase Account Name: "ozwgwppsynowxmtzyygn"): creating/updating CosmosDB Account "ozwgwppsynowxmtzyygn" (Resource Group "101-cosmos-db-analyticalstore-still-impala-rg"): performing DatabaseAccountsCreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {"code":"BadRequest","message":"Enabling Analytical Storage during account creation is no longer supported.\r\nActivityId: 2a302709-cb67-4b01-8572-85aeda5c7541, Microsoft.Azure.Documents.Common/2.14.0"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-analyticalstore
+
+FailNow
+
+---
+
 ## 16 Aug 26 01:05 UTC
 
 Success: false

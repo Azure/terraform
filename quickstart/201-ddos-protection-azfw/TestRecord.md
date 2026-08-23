@@ -1,3 +1,40 @@
+## 23 Aug 26 01:31 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Ddos Protection Plan (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "fw-ddos-neat-shiner-rg"
+	            	[31m│[0m [0mDdos Protection Plan Name: "fw-ddos-neat-shiner-ddos-plan"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: DdosProtectionPlanCountLimitReached: It is not allowed to create more than 1 DDoS protection plan for a subscription in the region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_network_ddos_protection_plan.main,
+	            	[31m│[0m [0m  on main.tf line 27, in resource "azurerm_network_ddos_protection_plan" "main":
+	            	[31m│[0m [0m  27: resource "azurerm_network_ddos_protection_plan" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-ddos-protection-azfw
+
+FailNow
+
+---
+
 ## 16 Aug 26 00:35 UTC
 
 Success: false

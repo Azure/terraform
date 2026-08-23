@@ -1,3 +1,40 @@
+## 23 Aug 26 01:43 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Server (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-ample-bull"
+	            	[31m│[0m [0mServer Name: "ncsaajgwsjvsrrkxnvfahqtwj"): performing Create: unexpected status 400 (400 Bad Request) with error: BadRequest: Firewall settings to enable Power BI Service can be  specified only if firewall rules are specified and vice versa.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_analysis_services_server.server,
+	            	[31m│[0m [0m  on main.tf line 17, in resource "azurerm_analysis_services_server" "server":
+	            	[31m│[0m [0m  17: resource "azurerm_analysis_services_server" "server" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-analysis-services-create
+
+FailNow
+
+---
+
 ## 16 Aug 26 01:28 UTC
 
 Success: false
