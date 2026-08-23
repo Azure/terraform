@@ -53,6 +53,12 @@ resource "azurerm_kubernetes_cluster" "example" {
     name       = "system"
     node_count = 2
     vm_size    = "Standard_D4s_v4"
+
+    upgrade_settings {
+      drain_timeout_in_minutes      = 0
+      max_surge                     = "10%"
+      node_soak_duration_in_minutes = 0
+    }
   }
 
   identity {
