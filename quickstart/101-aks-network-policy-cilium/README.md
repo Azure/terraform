@@ -31,7 +31,7 @@ az account show
 
 ## Terraform configuration
 
-This sample includes [main.tf](main.tf) with the AKS configuration for Azure CNI Overlay and Cilium policy enforcement.
+This sample includes [providers.tf](providers.tf) with the Terraform and provider requirements, and [main.tf](main.tf) with the AKS configuration for Azure CNI Overlay and Cilium policy enforcement.
 
 ## Initialize and deploy the configuration
 
