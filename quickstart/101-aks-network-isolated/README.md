@@ -44,7 +44,7 @@ terraform plan
 terraform apply
 ```
 
-The configuration creates a system-assigned private AKS cluster with Azure networking, `outboundType` set to `none`, and bootstrap artifact caching enabled with `artifactSource` set to `Cache`.
+The configuration creates a system-assigned private AKS cluster with Azure networking, `outboundType` set to `none`, and bootstrap artifact caching enabled with `artifactSource` set to `Cache`. The cluster is created with the default supported Kubernetes version for the selected region. To pin a specific version, add `kubernetesVersion` to the cluster `properties` block and confirm the version is available in the region with `az aks get-versions --location <region>`.
 
 ## Verify the deployment
 

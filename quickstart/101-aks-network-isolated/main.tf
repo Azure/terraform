@@ -46,8 +46,7 @@ resource "azapi_resource" "aks_cluster" {
 
   body = {
     properties = {
-      dnsPrefix         = local.dns_prefix
-      kubernetesVersion = "1.30.3"
+      dnsPrefix = local.dns_prefix
       agentPoolProfiles = [
         {
           name              = "systempool"
