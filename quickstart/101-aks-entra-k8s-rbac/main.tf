@@ -1,77 +1,64 @@
-# Generate a random name for the resource group
-resource "random_pet" "rg_name" {
-  prefix = var.resource_group_name_prefix
-}
+terraform {
+  required_version = ">= 1.6.0"
 
-resource "azurerm_resource_group" "rg" {
-  location = var.resource_group_location
-  name     = random_pet.rg_name.id
-}
-
-# Generate random names so the cluster and the Microsoft Entra groups are unique
-resource "random_pet" "cluster_name" {
-  prefix = var.cluster_name_prefix
-}
-
-resource "random_pet" "appdev_group_name" {
-  prefix = var.appdev_group_name_prefix
-}
-
-resource "random_pet" "opssre_group_name" {
-  prefix = var.opssre_group_name_prefix
-}
-
-data "azurerm_client_config" "current" {}
-
-# Microsoft Entra group whose members can manage the dev namespace
-resource "azuread_group" "appdev" {
-  display_name     = random_pet.appdev_group_name.id
-  security_enabled = true
-}
-
-# Microsoft Entra group whose members can manage the sre namespace
-resource "azuread_group" "opssre" {
-  display_name     = random_pet.opssre_group_name.id
-  security_enabled = true
-}
-
-# AKS cluster with Microsoft Entra integration and Kubernetes RBAC enabled
-resource "azurerm_kubernetes_cluster" "aks" {
-  name                              = random_pet.cluster_name.id
-  location                          = azurerm_resource_group.rg.location
-  resource_group_name               = azurerm_resource_group.rg.name
-  dns_prefix                        = random_pet.cluster_name.id
-  role_based_access_control_enabled = true
-
-  identity {
-    type = "SystemAssigned"
-  }
-
-  default_node_pool {
-    name       = "agentpool"
-    vm_size    = "Standard_D2_v2"
-    node_count = var.node_count
-  }
-
-  # Azure RBAC for Kubernetes Authorization stays disabled so that Kubernetes
-  # Roles and RoleBindings control namespace access
-  azure_active_directory_role_based_access_control {
-    tenant_id          = data.azurerm_client_config.current.tenant_id
-    azure_rbac_enabled = false
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~> 4.0"
+    }
+    kubernetes = {
+      source  = "hashicorp/kubernetes"
+      version = "~> 2.30"
+    }
   }
 }
 
-# Allow both groups to download the cluster user credentials
+provider "azurerm" {
+  features {}
+}
+
+variable "resource_group_name" {
+  type        = string
+  description = "Name of the resource group that contains the existing AKS cluster."
+}
+
+variable "aks_cluster_name" {
+  type        = string
+  description = "Name of the existing AKS cluster with Microsoft Entra integration and Kubernetes RBAC enabled."
+}
+
+variable "appdev_group_object_id" {
+  type        = string
+  description = "Object ID of an existing Microsoft Entra group used for developer access to the dev namespace."
+}
+
+variable "opssre_group_object_id" {
+  type        = string
+  description = "Object ID of an existing Microsoft Entra group used for SRE access to the sre namespace."
+}
+
+data "azurerm_kubernetes_cluster" "aks" {
+  name                = var.aks_cluster_name
+  resource_group_name = var.resource_group_name
+}
+
+provider "kubernetes" {
+  host                   = data.azurerm_kubernetes_cluster.aks.kube_admin_config[0].host
+  client_certificate     = base64decode(data.azurerm_kubernetes_cluster.aks.kube_admin_config[0].client_certificate)
+  client_key             = base64decode(data.azurerm_kubernetes_cluster.aks.kube_admin_config[0].client_key)
+  cluster_ca_certificate = base64decode(data.azurerm_kubernetes_cluster.aks.kube_admin_config[0].cluster_ca_certificate)
+}
+
 resource "azurerm_role_assignment" "appdev_cluster_user" {
-  scope                = azurerm_kubernetes_cluster.aks.id
+  scope                = data.azurerm_kubernetes_cluster.aks.id
   role_definition_name = "Azure Kubernetes Service Cluster User Role"
-  principal_id         = azuread_group.appdev.object_id
+  principal_id         = var.appdev_group_object_id
 }
 
 resource "azurerm_role_assignment" "opssre_cluster_user" {
-  scope                = azurerm_kubernetes_cluster.aks.id
+  scope                = data.azurerm_kubernetes_cluster.aks.id
   role_definition_name = "Azure Kubernetes Service Cluster User Role"
-  principal_id         = azuread_group.opssre.object_id
+  principal_id         = var.opssre_group_object_id
 }
 
 resource "kubernetes_namespace" "dev" {
@@ -138,7 +125,7 @@ resource "kubernetes_role_binding" "dev_user_access" {
 
   subject {
     kind      = "Group"
-    name      = azuread_group.appdev.object_id
+    name      = var.appdev_group_object_id
     api_group = "rbac.authorization.k8s.io"
   }
 }
@@ -157,7 +144,7 @@ resource "kubernetes_role_binding" "sre_user_access" {
 
   subject {
     kind      = "Group"
-    name      = azuread_group.opssre.object_id
+    name      = var.opssre_group_object_id
     api_group = "rbac.authorization.k8s.io"
   }
 }
