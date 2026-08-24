@@ -38,7 +38,7 @@ resource_group_name_prefix = "rg"
 node_count                 = 1
 ```
 
-The Microsoft Entra group names, user principal names, and the temporary password for the example users are generated, so the configuration can be applied repeatedly in the same tenant without name collisions. The generated password is never written to an output.
+The Microsoft Entra group names, user principal names, and the temporary password for the example users are generated, so the configuration can be applied repeatedly in the same tenant without name collisions. The `appdev` and `opssre` group names and the example user principal names each carry the same generated suffix, and the `appdev_group_object_id` and `opssre_group_object_id` outputs report the object IDs of the two groups. The generated password is never written to an output.
 
 ## Example
 
