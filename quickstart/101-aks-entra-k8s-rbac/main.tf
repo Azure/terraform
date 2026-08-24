@@ -14,6 +14,10 @@ terraform {
       source  = "hashicorp/kubernetes"
       version = "~> 2.30"
     }
+    random = {
+      source  = "hashicorp/random"
+      version = "~> 3.6"
+    }
   }
 }
 
@@ -23,66 +27,106 @@ provider "azurerm" {
 
 provider "azuread" {}
 
-variable "resource_group_name" {
+variable "resource_group_location" {
   type        = string
-  description = "Name of the resource group that contains the existing AKS cluster."
+  default     = "eastus"
+  description = "Location of the resource group."
 }
 
-variable "aks_cluster_name" {
+variable "resource_group_name_prefix" {
   type        = string
-  description = "Name of the existing AKS cluster with Microsoft Entra integration and Kubernetes RBAC enabled."
+  default     = "rg"
+  description = "Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription."
 }
 
-variable "appdev_user_principal_name" {
-  type        = string
-  description = "User principal name for the application developer test user."
+variable "node_count" {
+  type        = number
+  default     = 1
+  description = "Number of nodes in the AKS default node pool."
 }
 
-variable "opssre_user_principal_name" {
-  type        = string
-  description = "User principal name for the SRE test user."
+resource "random_pet" "rg_name" {
+  prefix = var.resource_group_name_prefix
 }
 
-variable "temporary_password" {
-  type        = string
-  description = "Temporary password used for the example Microsoft Entra users."
-  sensitive   = true
+resource "random_string" "suffix" {
+  length  = 8
+  numeric = false
+  special = false
+  upper   = false
 }
 
-data "azurerm_kubernetes_cluster" "aks" {
-  name                = var.aks_cluster_name
-  resource_group_name = var.resource_group_name
+resource "random_password" "temporary_password" {
+  length      = 24
+  min_lower   = 2
+  min_upper   = 2
+  min_numeric = 2
+  min_special = 2
+}
+
+data "azurerm_client_config" "current" {}
+
+data "azuread_domains" "default" {
+  only_initial = true
+}
+
+resource "azurerm_resource_group" "rg" {
+  name     = random_pet.rg_name.id
+  location = var.resource_group_location
+}
+
+resource "azurerm_kubernetes_cluster" "aks" {
+  name                              = "aks-${random_string.suffix.result}"
+  location                          = azurerm_resource_group.rg.location
+  resource_group_name               = azurerm_resource_group.rg.name
+  dns_prefix                        = "aks-${random_string.suffix.result}"
+  role_based_access_control_enabled = true
+
+  default_node_pool {
+    name       = "default"
+    node_count = var.node_count
+    vm_size    = "Standard_DS2_v2"
+  }
+
+  identity {
+    type = "SystemAssigned"
+  }
+
+  azure_active_directory_role_based_access_control {
+    tenant_id          = data.azurerm_client_config.current.tenant_id
+    azure_rbac_enabled = false
+  }
 }
 
 provider "kubernetes" {
-  host                   = data.azurerm_kubernetes_cluster.aks.kube_admin_config[0].host
-  client_certificate     = base64decode(data.azurerm_kubernetes_cluster.aks.kube_admin_config[0].client_certificate)
-  client_key             = base64decode(data.azurerm_kubernetes_cluster.aks.kube_admin_config[0].client_key)
-  cluster_ca_certificate = base64decode(data.azurerm_kubernetes_cluster.aks.kube_admin_config[0].cluster_ca_certificate)
+  host                   = azurerm_kubernetes_cluster.aks.kube_admin_config[0].host
+  client_certificate     = base64decode(azurerm_kubernetes_cluster.aks.kube_admin_config[0].client_certificate)
+  client_key             = base64decode(azurerm_kubernetes_cluster.aks.kube_admin_config[0].client_key)
+  cluster_ca_certificate = base64decode(azurerm_kubernetes_cluster.aks.kube_admin_config[0].cluster_ca_certificate)
 }
 
 resource "azuread_group" "appdev" {
-  display_name     = "appdev"
+  display_name     = "appdev-${random_string.suffix.result}"
   security_enabled = true
 }
 
 resource "azuread_group" "opssre" {
-  display_name     = "opssre"
+  display_name     = "opssre-${random_string.suffix.result}"
   security_enabled = true
 }
 
 resource "azuread_user" "aksdev" {
-  user_principal_name = var.appdev_user_principal_name
+  user_principal_name = "aksdev-${random_string.suffix.result}@${data.azuread_domains.default.domains[0].domain_name}"
   display_name        = "AKS Dev"
-  mail_nickname       = "aksdev"
-  password            = var.temporary_password
+  mail_nickname       = "aksdev-${random_string.suffix.result}"
+  password            = random_password.temporary_password.result
 }
 
 resource "azuread_user" "akssre" {
-  user_principal_name = var.opssre_user_principal_name
+  user_principal_name = "akssre-${random_string.suffix.result}@${data.azuread_domains.default.domains[0].domain_name}"
   display_name        = "AKS SRE"
-  mail_nickname       = "akssre"
-  password            = var.temporary_password
+  mail_nickname       = "akssre-${random_string.suffix.result}"
+  password            = random_password.temporary_password.result
 }
 
 resource "azuread_group_member" "appdev_member" {
@@ -96,13 +140,13 @@ resource "azuread_group_member" "opssre_member" {
 }
 
 resource "azurerm_role_assignment" "appdev_cluster_user" {
-  scope                = data.azurerm_kubernetes_cluster.aks.id
+  scope                = azurerm_kubernetes_cluster.aks.id
   role_definition_name = "Azure Kubernetes Service Cluster User Role"
   principal_id         = azuread_group.appdev.object_id
 }
 
 resource "azurerm_role_assignment" "opssre_cluster_user" {
-  scope                = data.azurerm_kubernetes_cluster.aks.id
+  scope                = azurerm_kubernetes_cluster.aks.id
   role_definition_name = "Azure Kubernetes Service Cluster User Role"
   principal_id         = azuread_group.opssre.object_id
 }
@@ -201,4 +245,12 @@ output "appdev_group_object_id" {
 
 output "opssre_group_object_id" {
   value = azuread_group.opssre.object_id
+}
+
+output "resource_group_name" {
+  value = azurerm_resource_group.rg.name
+}
+
+output "aks_cluster_name" {
+  value = azurerm_kubernetes_cluster.aks.name
 }

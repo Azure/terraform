@@ -1,19 +1,18 @@
 # Use Microsoft Entra ID Groups with Kubernetes RBAC in AKS
 
-This template uses Microsoft Entra ID groups with Kubernetes role-based access control (Kubernetes RBAC) in an existing Azure Kubernetes Service (AKS) cluster.
+This template uses Microsoft Entra ID groups with Kubernetes role-based access control (Kubernetes RBAC) in an Azure Kubernetes Service (AKS) cluster that the configuration creates.
 
 The example creates two Microsoft Entra groups and scopes each group to a namespace:
 
 - The `appdev` group can manage resources in the `dev` namespace.
 - The `opssre` group can manage resources in the `sre` namespace.
 
-The AKS cluster must already have Microsoft Entra integration and Kubernetes RBAC enabled. Azure RBAC for Kubernetes Authorization must be disabled for this example.
+The AKS cluster is created with Microsoft Entra integration and Kubernetes RBAC enabled, and with Azure RBAC for Kubernetes Authorization disabled, which this example requires.
 
 ## Prerequisites
 
 - An Azure subscription
-- An existing AKS cluster with Microsoft Entra integration and Kubernetes RBAC enabled
-- Azure RBAC for Kubernetes Authorization disabled on the cluster
+- Permission to create resource groups and AKS clusters in the subscription
 - Terraform `>= 1.6.0` installed
 - Azure CLI and `kubectl` installed
 - Permission to create Microsoft Entra users and groups
@@ -29,23 +28,21 @@ az account set --subscription <subscription-id>
 
 ## Terraform providers and variables
 
-This sample uses the AzureRM provider to reference the existing AKS cluster and assign Azure permissions, the AzureAD provider to create Microsoft Entra users and groups, and the Kubernetes provider to create namespaces, Roles, and RoleBindings.
+This sample uses the AzureRM provider to create the resource group and the AKS cluster and to assign Azure permissions, the AzureAD provider to create Microsoft Entra users and groups, and the Kubernetes provider to create namespaces, Roles, and RoleBindings.
 
-The Terraform variables require values for the existing cluster and the example users:
+All Terraform variables have defaults, so the configuration runs without any input. Override them if you need a different location, resource group name prefix, or node count:
 
 ```hcl
-resource_group_name        = "<resource-group-name>"
-aks_cluster_name           = "<aks-cluster-name>"
-appdev_user_principal_name = "<appdev-user-principal-name>"
-opssre_user_principal_name = "<opssre-user-principal-name>"
-temporary_password         = "<temporary-password>"
+resource_group_location    = "eastus"
+resource_group_name_prefix = "rg"
+node_count                 = 1
 ```
 
-`temporary_password` is a sensitive Terraform variable. Replace `<temporary-password>` with a strong temporary password supplied through a secure `terraform.tfvars` file or another protected input method. Do not commit that value.
+The Microsoft Entra group names, user principal names, and the temporary password for the example users are generated, so the configuration can be applied repeatedly in the same tenant without name collisions. The generated password is never written to an output.
 
 ## Example
 
-Create a `terraform.tfvars` file with values for the existing cluster and test users, then initialize, format, and validate the configuration:
+Initialize, format, and validate the configuration:
 
 ```console
 terraform init
@@ -60,8 +57,9 @@ terraform plan
 terraform apply
 ```
 
-The configuration creates the following Microsoft Entra and Kubernetes resources:
+The configuration creates the following Azure, Microsoft Entra, and Kubernetes resources:
 
+- A resource group and an AKS cluster with Microsoft Entra integration and Kubernetes RBAC
 - `appdev` and `opssre` Microsoft Entra security groups
 - One example Microsoft Entra user in each group
 - Cluster User Role assignments for both groups
@@ -74,8 +72,8 @@ Get credentials for the AKS cluster:
 
 ```console
 az aks get-credentials \
-  --resource-group <resource-group-name> \
-  --name <aks-cluster-name>
+  --resource-group $(terraform output -raw resource_group_name) \
+  --name $(terraform output -raw aks_cluster_name)
 ```
 
 Verify that both namespaces exist:
@@ -116,7 +114,7 @@ Creating a pod in the `dev` namespace should return a `Forbidden` error because 
 
 ## Clean up
 
-Remove the namespaces, RoleBindings, Roles, groups, users, and role assignments created by this configuration:
+Remove the resource group, AKS cluster, namespaces, RoleBindings, Roles, groups, users, and role assignments created by this configuration:
 
 ```console
 terraform destroy
