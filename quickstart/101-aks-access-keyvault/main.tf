@@ -31,7 +31,7 @@ resource "random_string" "suffix" {
 
 locals {
   location            = "eastus"
-  resource_group_name = "rg-aks-kv-csi-demo"
+  resource_group_name = "rg-aks-kv-csi-demo-${random_string.suffix.result}"
   aks_name            = "aks-kv-csi-demo"
   key_vault_name      = "kvcsidemo${random_string.suffix.result}"
   secret_name         = "ExampleSecret"
