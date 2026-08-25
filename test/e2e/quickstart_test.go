@@ -240,7 +240,7 @@ func test101AzureStorageActionsCreateStorageTask(t *testing.T) {
 func test201AksFleetManagedNamespaces(t *testing.T) {
 	rootPath := filepath.Join("..", "..")
 	examplePath := filepath.Join("quickstart", "201-aks-fleet-managed-namespaces")
-	prequistePath := filepath.Join("quickstart", "101-aks-fleet-hubless")
+	prequistePath := filepath.Join("quickstart", "101-aks-fleet-with-hub")
 
 	helper.RunE2ETest(t, rootPath, prequistePath, terraform.Options{
 		Upgrade: true,
