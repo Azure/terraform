@@ -51,7 +51,7 @@ resource "azapi_resource" "aks_cluster" {
         {
           name              = "systempool"
           count             = 1
-          vmSize            = "Standard_DS2_v2"
+          vmSize            = "Standard_DS2_v3"
           mode              = "System"
           osType            = "Linux"
           type              = "VirtualMachineScaleSets"
