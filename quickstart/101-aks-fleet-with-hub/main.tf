@@ -8,7 +8,7 @@ resource "azurerm_resource_group" "fleet_rg" {
 }
 
 resource "random_string" "fleet_name" {
-  length  = 63
+  length  = 54
   lower   = true
   numeric = false
   special = false
