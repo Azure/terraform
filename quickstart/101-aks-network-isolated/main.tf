@@ -22,7 +22,7 @@ resource "random_string" "suffix" {
 }
 
 locals {
-  location            = "eastus"
+  location            = "westus2"
   resource_group_name = "rg-aks-network-isolated-${random_string.suffix.result}"
   aks_name            = "aks-netisolated-${random_string.suffix.result}"
   dns_prefix          = "aksnetiso${random_string.suffix.result}"
