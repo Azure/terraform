@@ -35,4 +35,7 @@ resource "azurerm_resource_group_policy_assignment" "aks_pod_security_baseline" 
     }
   })
 }
- 
+output "aks_cluster_name" {
+  description = "Name of the AKS cluster targeted by this policy assignment."
+  value = var.aks_cluster_name
+}

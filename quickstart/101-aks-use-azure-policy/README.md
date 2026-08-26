@@ -107,6 +107,16 @@ resource "azurerm_resource_group_policy_assignment" "aks_pod_security_baseline" 
 }
 ```
 
+## Output the AKS cluster name
+The following output surfaces the name of the AKS cluster that the policy assignment targets, for reference.
+
+```hcl
+output "aks_cluster_name" {
+ description = "Name of the AKS cluster targeted by this policy assignment."
+ value       = var.aks_cluster_name
+}
+```
+
 ## Initialize the Terraform configuration
 Run `terraform init` to initialize the Terraform working directory and download the required provider plugins.
 
