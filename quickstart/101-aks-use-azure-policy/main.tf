@@ -21,10 +21,6 @@ variable "aks_cluster_name" {
 data "azurerm_resource_group" "aks" {
   name = var.resource_group_name
 }
-data "azurerm_kubernetes_cluster" "aks" {
-  name = var.aks_cluster_name
-  resource_group_name = data.azurerm_resource_group.aks.name
-}
 data "azurerm_policy_set_definition" "aks_pod_security_baseline" {
   display_name = "Kubernetes cluster pod security baseline standards for Linux-based workloads"
 }

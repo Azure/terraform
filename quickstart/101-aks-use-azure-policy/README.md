@@ -68,18 +68,14 @@ variable "aks_cluster_name" {
 }
 ```
 
-## Reference the existing AKS cluster
-The following data sources retrieve information about the existing resource group and AKS cluster.
+## Reference the existing resource group
+The following data source retrieves information about the existing resource group that contains the AKS cluster.
 
-Terraform uses these resources to reference infrastructure that already exists in Azure instead of creating new resources.
+Terraform uses this data source to reference infrastructure that already exists in Azure instead of creating new resources. The policy assignment is scoped to the resource group, so the AKS cluster itself doesn't need to be looked up.
 
 ```hcl
 data "azurerm_resource_group" "aks" {
  name = var.resource_group_name
-}
-data "azurerm_kubernetes_cluster" "aks" {
- name                = var.aks_cluster_name
- resource_group_name = data.azurerm_resource_group.aks.name
 }
 ```
 
