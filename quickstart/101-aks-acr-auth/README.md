@@ -27,6 +27,10 @@ This ensures your Azure Container Registry name doesn’t conflict with existing
 terraform {
  required_version = ">= 1.6.0"
  required_providers {
+   azapi = {
+     source  = "azure/azapi"
+     version = "~> 2.0"
+   }
    azurerm = {
      source  = "hashicorp/azurerm"
      version = "~> 4.0"
@@ -142,6 +146,27 @@ To remove access, delete the role assignment that grants the cluster permission 
 #   role_definition_name = "AcrPull"
 #   principal_id         = data.azurerm_kubernetes_cluster.existing_aks.kubelet_identity[0].object_id
 # }
+```
+---
+## Import an image into ACR
+
+To make an image available to the cluster, import it into the registry.
+The `azapi` provider calls the registry's `importImage` operation directly, so no Azure CLI is required during `terraform apply`.
+```hcl
+resource "azapi_resource_action" "import_nginx_to_acr" {
+ type        = "Microsoft.ContainerRegistry/registries@2023-07-01"
+ resource_id = azurerm_container_registry.acr.id
+ action      = "importImage"
+ method      = "POST"
+ body = {
+   source = {
+     registryUri = "docker.io"
+     sourceImage = "library/nginx:latest"
+   }
+   targetTags = ["nginx:v1"]
+   mode       = "Force"
+ }
+}
 ```
 ---
 ## Initialize and deploy the configuration
