@@ -39,10 +39,19 @@ resource "azurerm_security_center_subscription_pricing" "containers" {
 
   extension {
     name = "AgentlessVmScanning"
+    additional_extension_properties = {
+      ExclusionTags = jsonencode([])
+    }
   }
 
   extension {
     name = "ContainerSensor"
+    additional_extension_properties = {
+      AntiMalwareEnabled    = "True"
+      AutoProvisioning      = "True"
+      InstallationMethod    = "AKSAddon"
+      SecurityGatingEnabled = "True"
+    }
   }
 
   extension {
