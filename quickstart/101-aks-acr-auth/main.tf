@@ -52,11 +52,15 @@ resource "azurerm_kubernetes_cluster" "aks" {
   identity {
     type = "SystemAssigned"
   }
-  default_node_pool {
-    name       = "systempool"
-    node_count = 2
-    vm_size    = "Standard_D2s_v3"
-  }
+ default_node_pool {
+ name       = "systempool"
+ node_count = 2
+ vm_size    = "Standard_D2s_v3"
+ upgrade_settings {
+   drain_timeout_in_minutes      = 0
+   max_surge                     = "10%"
+   node_soak_duration_in_minutes = 0
+ }
 }
 resource "azurerm_role_assignment" "aks_acr_pull" {
   scope                = azurerm_container_registry.acr.id
