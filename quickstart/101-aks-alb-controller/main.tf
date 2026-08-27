@@ -30,7 +30,7 @@ resource "random_pet" "suffix" {
 locals {
   resource_group_name = "rg-agfc-alb-${random_pet.suffix.id}"
   aks_name            = "aks-alb-${random_pet.suffix.id}"
-  location            = "northeurope"
+  location            = "eastus"
 }
 
 resource "azurerm_resource_group" "rg" {
@@ -49,7 +49,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
   default_node_pool {
     name       = "systempool"
     node_count = 1
-    vm_size    = "Standard_B2ls_v2"
+    vm_size    = "Standard_D2_v2"
   }
 
   identity {
