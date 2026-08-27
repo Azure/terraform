@@ -62,6 +62,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
    node_soak_duration_in_minutes = 0
  }
 }
+}
 resource "azurerm_role_assignment" "aks_acr_pull" {
   scope                = azurerm_container_registry.acr.id
   role_definition_name = "AcrPull"
