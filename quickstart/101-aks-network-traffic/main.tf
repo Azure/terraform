@@ -237,6 +237,12 @@ resource "azurerm_kubernetes_cluster" "this" {
     vm_size        = "Standard_D2s_v3"
     node_count     = var.node_count
     vnet_subnet_id = azurerm_subnet.aks.id
+
+    upgrade_settings {
+      max_surge                     = "10%"
+      drain_timeout_in_minutes      = 0
+      node_soak_duration_in_minutes = 0
+    }
   }
 
   identity {
