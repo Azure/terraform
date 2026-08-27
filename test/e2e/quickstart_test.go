@@ -22,6 +22,7 @@ import (
 var speicalTests = map[string]func(*testing.T){
 	"quickstart/101-virtual-network-manager-create-management-group-scope": test101VirtualNetworkManagerCreateManagementGroupScope,
 	"quickstart/201-vmss-packer-jumpbox":                                   test201VmssPackerJumpbox,
+	"quickstart/201-aks-fleet-managed-namespaces":                          test201AksFleetManagedNamespaces,
 	"quickstart/202-machine-learning-moderately-secure-existing-VNet":      test202machineLearningModeratelySecureExistingVnet,
 	"quickstart/101-azure-netapp-files":                                    test101AzureNetappFiles,
 	"quickstart/101-azure-storage-actions-create-storage-task":             test101AzureStorageActionsCreateStorageTask,
@@ -234,6 +235,24 @@ func test101AzureStorageActionsCreateStorageTask(t *testing.T) {
 			"the response did not contain a body": "This API would response 202 accepted with empty body sometimes, just retry",
 		},
 	}, nil)
+}
+
+func test201AksFleetManagedNamespaces(t *testing.T) {
+	rootPath := filepath.Join("..", "..")
+	examplePath := filepath.Join("quickstart", "201-aks-fleet-managed-namespaces")
+	prequistePath := filepath.Join("quickstart", "101-aks-fleet-with-hub")
+
+	helper.RunE2ETest(t, rootPath, prequistePath, terraform.Options{
+		Upgrade: true,
+	}, func(t *testing.T, output helper.TerraformOutput) {
+		helper.RunE2ETest(t, rootPath, examplePath, terraform.Options{
+			Upgrade: true,
+			Vars: map[string]interface{}{
+				"resource_group_name": output["resource_group_name"],
+				"fleet_name":          output["fleet_name"],
+			},
+		}, nil)
+	})
 }
 
 func removeDuplicates(s []string) []string {
