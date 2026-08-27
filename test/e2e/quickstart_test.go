@@ -26,6 +26,7 @@ var speicalTests = map[string]func(*testing.T){
 	"quickstart/202-machine-learning-moderately-secure-existing-VNet":      test202machineLearningModeratelySecureExistingVnet,
 	"quickstart/101-azure-netapp-files":                                    test101AzureNetappFiles,
 	"quickstart/101-azure-storage-actions-create-storage-task":             test101AzureStorageActionsCreateStorageTask,
+	"quickstart/101-aks-use-azure-policy":                                  test101AksUseAzurePolicy,
 }
 
 func Test_Quickstarts(t *testing.T) {
@@ -220,6 +221,24 @@ func test202machineLearningModeratelySecureExistingVnet(t *testing.T) {
 				"privatelink_blob_core_windows_net_resource_id": output["privatelink_blob_core_windows_net_resource_id"],
 				"privatelink_file_core_windows_net_resource_id": output["privatelink_file_core_windows_net_resource_id"],
 				"privatelink_vaultcore_azure_net_resource_id":   output["privatelink_vaultcore_azure_net_resource_id"],
+			},
+		}, nil)
+	})
+}
+
+func test101AksUseAzurePolicy(t *testing.T) {
+	rootPath := filepath.Join("..", "..")
+	prequisitePath := filepath.Join("quickstart", "101-aks-automatic")
+	examplePath := filepath.Join("quickstart", "101-aks-use-azure-policy")
+
+	helper.RunE2ETest(t, rootPath, prequisitePath, terraform.Options{
+		Upgrade: true,
+	}, func(t *testing.T, output helper.TerraformOutput) {
+		helper.RunE2ETest(t, rootPath, examplePath, terraform.Options{
+			Upgrade: true,
+			Vars: map[string]interface{}{
+				"resource_group_name": output["resource_group_name"],
+				"aks_cluster_name":    output["cluster_name"],
 			},
 		}, nil)
 	})
