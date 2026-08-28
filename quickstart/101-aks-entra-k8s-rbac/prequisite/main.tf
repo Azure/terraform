@@ -11,16 +11,6 @@ resource "azurerm_resource_group" "rg" {
   name     = "rg-101-aks-entra-k8s-rbac-${random_string.suffix.result}"
 }
 
-resource "azuread_group" "appdev" {
-  display_name     = "appdev-${random_string.suffix.result}"
-  security_enabled = true
-}
-
-resource "azuread_group" "opssre" {
-  display_name     = "opssre-${random_string.suffix.result}"
-  security_enabled = true
-}
-
 resource "azurerm_kubernetes_cluster" "aks" {
   location            = azurerm_resource_group.rg.location
   name                = "aks-101-entra-k8s-rbac-${random_string.suffix.result}"
