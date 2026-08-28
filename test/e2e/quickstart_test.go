@@ -26,6 +26,7 @@ var speicalTests = map[string]func(*testing.T){
 	"quickstart/202-machine-learning-moderately-secure-existing-VNet":      test202machineLearningModeratelySecureExistingVnet,
 	"quickstart/101-azure-netapp-files":                                    test101AzureNetappFiles,
 	"quickstart/101-azure-storage-actions-create-storage-task":             test101AzureStorageActionsCreateStorageTask,
+	"quickstart/101-aks-entra-k8s-rbac":                                    test101AksEntraK8sRbac,
 	"quickstart/101-aks-use-azure-policy":                                  test101AksUseAzurePolicy,
 }
 
@@ -254,6 +255,26 @@ func test101AzureStorageActionsCreateStorageTask(t *testing.T) {
 			"the response did not contain a body": "This API would response 202 accepted with empty body sometimes, just retry",
 		},
 	}, nil)
+}
+
+func test101AksEntraK8sRbac(t *testing.T) {
+	rootPath := filepath.Join("..", "..")
+	examplePath := filepath.Join("quickstart", "101-aks-entra-k8s-rbac")
+	prequistePath := filepath.Join(examplePath, "prequisite")
+	helper.RunE2ETestWithOption(t, rootPath, prequistePath, helper.TestOptions{
+		SkipIdempotentCheck: true,
+		Assertion: func(t *testing.T, output helper.TerraformOutput) {
+			helper.RunE2ETest(t, rootPath, examplePath, terraform.Options{
+				Upgrade: true,
+				Vars: map[string]interface{}{
+					"resource_group_name":    output["resource_group_name"],
+					"aks_cluster_name":       output["aks_cluster_name"],
+					"appdev_group_object_id": output["appdev_group_object_id"],
+					"opssre_group_object_id": output["opssre_group_object_id"],
+				},
+			}, nil)
+		},
+	})
 }
 
 func test201AksFleetManagedNamespaces(t *testing.T) {
