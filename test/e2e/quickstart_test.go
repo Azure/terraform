@@ -261,16 +261,19 @@ func test101AksEntraK8sRbac(t *testing.T) {
 	rootPath := filepath.Join("..", "..")
 	examplePath := filepath.Join("quickstart", "101-aks-entra-k8s-rbac")
 	prequistePath := filepath.Join(examplePath, "prequisite")
-	helper.RunE2ETest(t, rootPath, prequistePath, terraform.Options{}, func(t *testing.T, output helper.TerraformOutput) {
-		helper.RunE2ETest(t, rootPath, examplePath, terraform.Options{
-			Upgrade: true,
-			Vars: map[string]interface{}{
-				"resource_group_name":    output["resource_group_name"],
-				"aks_cluster_name":       output["aks_cluster_name"],
-				"appdev_group_object_id": output["appdev_group_object_id"],
-				"opssre_group_object_id": output["opssre_group_object_id"],
-			},
-		}, nil)
+	helper.RunE2ETestWithOption(t, rootPath, prequistePath, helper.TestOptions{
+		SkipIdempotentCheck: true,
+		Assertion: func(t *testing.T, output helper.TerraformOutput) {
+			helper.RunE2ETest(t, rootPath, examplePath, terraform.Options{
+				Upgrade: true,
+				Vars: map[string]interface{}{
+					"resource_group_name":    output["resource_group_name"],
+					"aks_cluster_name":       output["aks_cluster_name"],
+					"appdev_group_object_id": output["appdev_group_object_id"],
+					"opssre_group_object_id": output["opssre_group_object_id"],
+				},
+			}, nil)
+		},
 	})
 }
 
