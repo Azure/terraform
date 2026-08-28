@@ -21,7 +21,7 @@ The AKS cluster must already have Microsoft Entra integration and Kubernetes RBA
 - Two existing Microsoft Entra security groups
 - Test users already assigned to those groups
 
-> **Note**: The `prequisite` folder contains a Terraform configuration that creates these prerequisites (resource group, AKS cluster with Microsoft Entra integration and Kubernetes RBAC, and the two Microsoft Entra groups). It is used by the end to end test of this repository and can also be applied first if you do not have an existing environment.
+> **Note**: The `prequisite` folder contains the Terraform configuration used by this repository's end-to-end test. It creates a resource group and an AKS cluster with Microsoft Entra integration and Kubernetes RBAC, then supplies existing test principal IDs to the example.
 
 Sign in to Azure and select the subscription to use:
 
