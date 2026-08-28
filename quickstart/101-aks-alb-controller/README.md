@@ -12,6 +12,14 @@ The AzureRM provider does not currently expose the AKS `ingressProfile` configur
 - `kubectl` installed.
 - Permission to create AKS resources and assign the required roles.
 - The `Microsoft.ContainerService` and `Microsoft.ServiceNetworking` resource providers registered in the subscription.
+- The `Microsoft.ContainerService/ApplicationLoadBalancerPreview` and `Microsoft.ContainerService/ManagedGatewayAPIPreview` preview features registered in the subscription. This sample registers them for you, but registration is subscription wide and can take several minutes to propagate. You can also register them up front with the Azure CLI:
+
+  ```console
+  az feature register --namespace Microsoft.ContainerService --name ApplicationLoadBalancerPreview
+  az feature register --namespace Microsoft.ContainerService --name ManagedGatewayAPIPreview
+  az provider register --namespace Microsoft.ContainerService
+  ```
+
 - A supported Azure region for Application Gateway for Containers.
 - An AKS cluster using Azure CNI or Azure CNI Overlay. AKS Automatic clusters are not supported for this scenario.
 
@@ -20,7 +28,9 @@ The AzureRM provider does not currently expose the AKS `ingressProfile` configur
 - [random_pet](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/pet)
 - [azurerm_resource_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group)
 - [azurerm_kubernetes_cluster](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/kubernetes_cluster)
+- [azapi_resource_action](https://registry.terraform.io/providers/Azure/azapi/latest/docs/resources/resource_action)
 - [azapi_update_resource](https://registry.terraform.io/providers/Azure/azapi/latest/docs/resources/update_resource)
+- [time_sleep](https://registry.terraform.io/providers/hashicorp/time/latest/docs/resources/sleep)
 
 ## Example
 
@@ -53,6 +63,8 @@ ingressProfile = {
   }
 }
 ```
+
+Because the preview features are registered as part of the same apply, the sample waits for the registration to propagate and retries the add-on enablement while the resource provider still reports `PreviewFeatureNotRegistered`. The first apply can therefore take longer than a regular AKS deployment.
 
 ## Update an existing cluster
 
