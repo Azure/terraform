@@ -22,10 +22,12 @@ import (
 var speicalTests = map[string]func(*testing.T){
 	"quickstart/101-virtual-network-manager-create-management-group-scope": test101VirtualNetworkManagerCreateManagementGroupScope,
 	"quickstart/201-vmss-packer-jumpbox":                                   test201VmssPackerJumpbox,
+	"quickstart/201-aks-fleet-managed-namespaces":                          test201AksFleetManagedNamespaces,
 	"quickstart/202-machine-learning-moderately-secure-existing-VNet":      test202machineLearningModeratelySecureExistingVnet,
 	"quickstart/101-azure-netapp-files":                                    test101AzureNetappFiles,
 	"quickstart/101-azure-storage-actions-create-storage-task":             test101AzureStorageActionsCreateStorageTask,
 	"quickstart/101-aks-entra-k8s-rbac":                                    test101AksEntraK8sRbac,
+	"quickstart/101-aks-use-azure-policy":                                  test101AksUseAzurePolicy,
 }
 
 func Test_Quickstarts(t *testing.T) {
@@ -225,6 +227,24 @@ func test202machineLearningModeratelySecureExistingVnet(t *testing.T) {
 	})
 }
 
+func test101AksUseAzurePolicy(t *testing.T) {
+	rootPath := filepath.Join("..", "..")
+	prequisitePath := filepath.Join("quickstart", "101-aks-automatic")
+	examplePath := filepath.Join("quickstart", "101-aks-use-azure-policy")
+
+	helper.RunE2ETest(t, rootPath, prequisitePath, terraform.Options{
+		Upgrade: true,
+	}, func(t *testing.T, output helper.TerraformOutput) {
+		helper.RunE2ETest(t, rootPath, examplePath, terraform.Options{
+			Upgrade: true,
+			Vars: map[string]interface{}{
+				"resource_group_name": output["resource_group_name"],
+				"aks_cluster_name":    output["cluster_name"],
+			},
+		}, nil)
+	})
+}
+
 func test101AzureStorageActionsCreateStorageTask(t *testing.T) {
 	rootPath := filepath.Join("..", "..")
 	examplePath := filepath.Join("quickstart", "101-azure-storage-actions-create-storage-task")
@@ -249,6 +269,19 @@ func test101AksEntraK8sRbac(t *testing.T) {
 				"aks_cluster_name":       output["aks_cluster_name"],
 				"appdev_group_object_id": output["appdev_group_object_id"],
 				"opssre_group_object_id": output["opssre_group_object_id"],
+func test201AksFleetManagedNamespaces(t *testing.T) {
+	rootPath := filepath.Join("..", "..")
+	examplePath := filepath.Join("quickstart", "201-aks-fleet-managed-namespaces")
+	prequistePath := filepath.Join("quickstart", "101-aks-fleet-with-hub")
+
+	helper.RunE2ETest(t, rootPath, prequistePath, terraform.Options{
+		Upgrade: true,
+	}, func(t *testing.T, output helper.TerraformOutput) {
+		helper.RunE2ETest(t, rootPath, examplePath, terraform.Options{
+			Upgrade: true,
+			Vars: map[string]interface{}{
+				"resource_group_name": output["resource_group_name"],
+				"fleet_name":          output["fleet_name"],
 			},
 		}, nil)
 	})

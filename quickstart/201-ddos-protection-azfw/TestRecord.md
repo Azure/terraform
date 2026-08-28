@@ -1,3 +1,113 @@
+## 23 Aug 26 01:31 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Ddos Protection Plan (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "fw-ddos-neat-shiner-rg"
+	            	[31m│[0m [0mDdos Protection Plan Name: "fw-ddos-neat-shiner-ddos-plan"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: DdosProtectionPlanCountLimitReached: It is not allowed to create more than 1 DDoS protection plan for a subscription in the region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_network_ddos_protection_plan.main,
+	            	[31m│[0m [0m  on main.tf line 27, in resource "azurerm_network_ddos_protection_plan" "main":
+	            	[31m│[0m [0m  27: resource "azurerm_network_ddos_protection_plan" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-ddos-protection-azfw
+
+FailNow
+
+---
+
+## 16 Aug 26 00:35 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.name: Refreshing state... [id=just-crab][0m
+	            	[0m[1mrandom_password.admin_password: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/fw-ddos-just-crab-rg][0m
+	            	[0m[1mazurerm_network_ddos_protection_plan.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/fw-ddos-just-crab-rg/providers/Microsoft.Network/ddosProtectionPlans/fw-ddos-just-crab-ddos-plan][0m
+	            	[0m[1mazurerm_route_table.workload: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/fw-ddos-just-crab-rg/providers/Microsoft.Network/routeTables/fw-ddos-just-crab-rt-workload][0m
+	            	[0m[1mazurerm_firewall_policy.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/fw-ddos-just-crab-rg/providers/Microsoft.Network/firewallPolicies/fw-ddos-just-crab-fw-policy][0m
+	            	[0m[1mazurerm_virtual_network.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/fw-ddos-just-crab-rg/providers/Microsoft.Network/virtualNetworks/fw-ddos-just-crab-vnet][0m
+	            	[0m[1mazurerm_public_ip.vm: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/fw-ddos-just-crab-rg/providers/Microsoft.Network/publicIPAddresses/fw-ddos-just-crab-vm-pip][0m
+	            	[0m[1mazurerm_public_ip.firewall: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/fw-ddos-just-crab-rg/providers/Microsoft.Network/publicIPAddresses/fw-ddos-just-crab-fw-pip][0m
+	            	[0m[1mazurerm_firewall_policy_rule_collection_group.dnat: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/fw-ddos-just-crab-rg/providers/Microsoft.Network/firewallPolicies/fw-ddos-just-crab-fw-policy/ruleCollectionGroups/DefaultDnatRuleCollectionGroup][0m
+	            	[0m[1mazurerm_subnet.workload: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/fw-ddos-just-crab-rg/providers/Microsoft.Network/virtualNetworks/fw-ddos-just-crab-vnet/subnets/Workload-SN][0m
+	            	[0m[1mazurerm_subnet.firewall: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/fw-ddos-just-crab-rg/providers/Microsoft.Network/virtualNetworks/fw-ddos-just-crab-vnet/subnets/AzureFirewallSubnet][0m
+	            	[0m[1mazurerm_subnet_route_table_association.workload: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/fw-ddos-just-crab-rg/providers/Microsoft.Network/virtualNetworks/fw-ddos-just-crab-vnet/subnets/Workload-SN][0m
+	            	[0m[1mazurerm_network_interface.vm: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/fw-ddos-just-crab-rg/providers/Microsoft.Network/networkInterfaces/fw-ddos-just-crab-vm-nic][0m
+	            	[0m[1mazurerm_firewall_policy_rule_collection_group.network: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/fw-ddos-just-crab-rg/providers/Microsoft.Network/firewallPolicies/fw-ddos-just-crab-fw-policy/ruleCollectionGroups/DefaultNetworkRuleCollectionGroup][0m
+	            	[0m[1mazurerm_firewall_policy_rule_collection_group.application: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/fw-ddos-just-crab-rg/providers/Microsoft.Network/firewallPolicies/fw-ddos-just-crab-fw-policy/ruleCollectionGroups/DefaultApplicationRuleCollectionGroup][0m
+	            	[0m[1mazurerm_windows_virtual_machine.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/fw-ddos-just-crab-rg/providers/Microsoft.Compute/virtualMachines/fw-ddos-just-c-vm][0m
+	            	[0m[1mazurerm_firewall.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/fw-ddos-just-crab-rg/providers/Microsoft.Network/azureFirewalls/fw-ddos-just-crab-fw][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.main[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "main" {
+	            	        id                                                     = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/fw-ddos-just-crab-rg/providers/Microsoft.Compute/virtualMachines/fw-ddos-just-c-vm"
+	            	        name                                                   = "fw-ddos-just-c-vm"
+	            	        tags                                                   = {
+	            	            "environment" = "tutorial"
+	            	            "purpose"     = "Test Virtual Machine"
+	            	        }
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (4 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-ddos-protection-azfw2907420254/src/quickstart/201-ddos-protection-azfw/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-ddos-protection-azfw2907420254/src/quickstart/201-ddos-protection-azfw/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-ddos-protection-azfw
+
+FailNow
+
+---
+
 ## 09 Aug 26 01:29 UTC
 
 Success: false

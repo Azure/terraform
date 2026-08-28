@@ -1,0 +1,22 @@
+location = "eastus"
+
+# Leave null to use auto-generated unique names.
+resource_group_name       = null
+fleet_name                = null
+auto_upgrade_profile_name = null
+
+# Auto-upgrade profile configuration.
+auto_upgrade_channel  = "Stable" # Rapid, Stable, NodeImage, TargetKubernetesVersion
+node_image_selection  = "Latest" # Latest or Consistent
+auto_upgrade_disabled = false
+
+# Required only when auto_upgrade_channel = "TargetKubernetesVersion"; leave null otherwise.
+target_kubernetes_version = null # For example, "1.31"
+
+# Only supported on the TargetKubernetesVersion channel.
+long_term_support = false
+
+tags = {
+  environment = "demo"
+  managed_by  = "terraform"
+}
