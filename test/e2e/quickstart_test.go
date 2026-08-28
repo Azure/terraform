@@ -269,6 +269,11 @@ func test101AksEntraK8sRbac(t *testing.T) {
 				"aks_cluster_name":       output["aks_cluster_name"],
 				"appdev_group_object_id": output["appdev_group_object_id"],
 				"opssre_group_object_id": output["opssre_group_object_id"],
+			},
+		}, nil)
+	})
+}
+
 func test201AksFleetManagedNamespaces(t *testing.T) {
 	rootPath := filepath.Join("..", "..")
 	examplePath := filepath.Join("quickstart", "201-aks-fleet-managed-namespaces")
