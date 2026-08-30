@@ -1,3 +1,56 @@
+## 30 Aug 26 01:02 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-absolute-arachnid"
+	            	[31m│[0m [0mBatch Account Name: "pucjvnoq"
+	            	[31m│[0m [0mPool Name: "pool-known-moose-fixed-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:47a44ff3-d8bf-4439-88c6-ee24c5459e19
+	            	[31m│[0m [0mTime:2026-08-30T01:01:00.7731288Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.fixed,
+	            	[31m│[0m [0m  on main.tf line 46, in resource "azurerm_batch_pool" "fixed":
+	            	[31m│[0m [0m  46: resource "azurerm_batch_pool" "fixed" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-absolute-arachnid"
+	            	[31m│[0m [0mBatch Account Name: "pucjvnoq"
+	            	[31m│[0m [0mPool Name: "pool-known-moose-autoscale-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:5d71b552-e0fd-4753-88c0-cf4453f2f87f
+	            	[31m│[0m [0mTime:2026-08-30T01:01:00.8408794Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.autopool,
+	            	[31m│[0m [0m  on main.tf line 88, in resource "azurerm_batch_pool" "autopool":
+	            	[31m│[0m [0m  88: resource "azurerm_batch_pool" "autopool" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-start-task
+
+FailNow
+
+---
+
 ## 23 Aug 26 00:39 UTC
 
 Success: false
