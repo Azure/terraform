@@ -22,5 +22,7 @@ This template deploys an Azure API Management service, containing an API (based 
 | `resource_group_location` | Location of the resource group. | eastus |
 | `open_api_spec_content_format` | The format of the content from which the API Definition should be imported. Possible values are: openapi, openapi+json, openapi+json-link, openapi-link, swagger-json, swagger-link-json, wadl-link-json, wadl-xml, wsdl and wsdl-link. | swagger-link-json |
 | `open_api_spec_content_value` | The Content from which the API Definition should be imported. When a content_format of *-link-* is specified this must be a URL, otherwise this must be defined inline. | http://conferenceapi.azurewebsites.net/?format=json |
-
-## Example
+| `publisher_email` | Email address of the owner of the service. | test@contoso.com |
+| `publisher_name` | Name of the owner of the service. | publisher |
+| `sku_name` | Pricing tier of this API Management service. Must be one of the following values: Basic, BasicV2, Consumption, Developer, Premium, PremiumV2, Standard, StandardV2 | BasicV2 |
+| `sku_count` | Instance size of this API Management service. | 1 |
