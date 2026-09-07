@@ -17,3 +17,13 @@ output "health_model_location" {
   description = "Azure region where the health model is deployed."
   value       = azapi_resource.health_model.location
 }
+
+output "storage_account_name" {
+  description = "Name of the storage account represented in the health model."
+  value       = azurerm_storage_account.example.name
+}
+
+output "key_vault_name" {
+  description = "Name of the Key Vault represented in the health model."
+  value       = azurerm_key_vault.example.name
+}

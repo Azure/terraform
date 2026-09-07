@@ -1,6 +1,6 @@
 # Azure Monitor health model (AzAPI provider)
 
-This template demonstrates how to deploy an Azure Monitor health model with a system-assigned managed identity into a resource group with a random name beginning with `rg-health-model`.
+This template demonstrates how to deploy an Azure Monitor health model with a system-assigned managed identity into a resource group with a random name beginning with `rg-health-model`. The model represents a Storage account and Key Vault as resource entities beneath an abstract application entity. Availability signals report the health of both resources.
 
 The health model is declared with the AzAPI provider's [`azapi_resource`](https://registry.terraform.io/providers/Azure/azapi/latest/docs/resources/resource) and the `Microsoft.CloudHealth/healthmodels@2026-05-01-preview` API. The AzureRM provider doesn't currently expose a native Health Models resource.
 
@@ -8,6 +8,9 @@ The health model is declared with the AzAPI provider's [`azapi_resource`](https:
 
 - [random_pet](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/pet)
 - [azurerm_resource_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group)
+- [azurerm_storage_account](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account)
+- [azurerm_key_vault](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/key_vault)
+- [azurerm_role_assignment](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment)
 - [azapi_resource](https://registry.terraform.io/providers/Azure/azapi/latest/docs/resources/resource)
 
 ## Variables
