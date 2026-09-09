@@ -44,16 +44,12 @@ resource "azapi_resource" "health_model" {
   body = {
     properties = {}
   }
-
-  tags = {
-    environment = "example"
-  }
 }
 
 # Allow the health model to read metrics from resources in the resource group.
-resource "azurerm_role_assignment" "monitoring_reader" {
+resource "azurerm_role_assignment" "reader" {
   scope                = azurerm_resource_group.example.id
-  role_definition_name = "Monitoring Reader"
+  role_definition_name = "Reader"
   principal_id         = azapi_resource.health_model.identity[0].principal_id
   principal_type       = "ServicePrincipal"
 }
@@ -132,8 +128,6 @@ resource "azapi_resource" "storage_entity" {
       }
     }
   }
-
-  depends_on = [azurerm_role_assignment.monitoring_reader]
 }
 
 resource "azapi_resource" "key_vault_entity" {
@@ -181,8 +175,19 @@ resource "azapi_resource" "key_vault_entity" {
       }
     }
   }
+}
 
-  depends_on = [azurerm_role_assignment.monitoring_reader]
+resource "azapi_resource" "root_to_application" {
+  type      = "Microsoft.CloudHealth/healthmodels/relationships@2026-05-01-preview"
+  name      = "root-to-application"
+  parent_id = azapi_resource.health_model.id
+
+  body = {
+    properties = {
+      parentEntityName = azapi_resource.health_model.name
+      childEntityName  = azapi_resource.application_entity.name
+    }
+  }
 }
 
 resource "azapi_resource" "application_to_storage" {
