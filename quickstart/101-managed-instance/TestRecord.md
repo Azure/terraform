@@ -1,3 +1,46 @@
+## 13 Sep 26 02:02 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Managed Instance: (Name "mi-mosquito-mssql" / Resource Group "mi-mosquito-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending request: StatusCode=400 -- Original Error: Code="ProvisioningDisabled" Message="The deployment request failed because it would bring the total number of vCores to 8, which exceeds the limit of 0 allowed for the requested hardware family in your subscription. Please submit a support request to extend the quota using the Azure portal: aka.ms/sql-mi-obtain-larger-quota"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_mssql_managed_instance.main,
+	            	[31m│[0m [0m  on main.tf line 69, in resource "azurerm_mssql_managed_instance" "main":
+	            	[31m│[0m [0m  69: resource "azurerm_mssql_managed_instance" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating Managed Instance: (Name "mi-mosquito-mssql" / Resource Group
+	            	[31m│[0m [0m"mi-mosquito-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure
+	            	[31m│[0m [0msending request: StatusCode=400 -- Original Error:
+	            	[31m│[0m [0mCode="ProvisioningDisabled" Message="The deployment request failed because
+	            	[31m│[0m [0mit would bring the total number of vCores to 8, which exceeds the limit of
+	            	[31m│[0m [0m0 allowed for the requested hardware family in your subscription. Please
+	            	[31m│[0m [0msubmit a support request to extend the quota using the Azure portal:
+	            	[31m│[0m [0maka.ms/sql-mi-obtain-larger-quota"
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-managed-instance
+
+FailNow
+
+---
+
 ## 06 Sep 26 00:48 UTC
 
 Success: false

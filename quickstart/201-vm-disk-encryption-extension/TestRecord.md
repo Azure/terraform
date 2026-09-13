@@ -1,3 +1,71 @@
+## 13 Sep 26 00:28 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/local v2.3.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
++ provider registry.terraform.io/hashicorp/tls v4.0.4
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.prefix: Refreshing state... [id=vm-disk-e-e-mantis][0m
+	            	[0m[1mtls_private_key.vm_key: Refreshing state... [id=f039507a2b54fee4e1875d8a04adee22d8d3bc89][0m
+	            	[0m[1mlocal_sensitive_file.lsf: Refreshing state... [id=8d1e1c2c5e0ae65ee85ff43f373d3499f255db45][0m
+	            	[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.example: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/vm-disk-e-e-mantis-rg][0m
+	            	[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD02MmQ3ZjU4ZC01ZWJjLTQ4ZGYtYTUwOS0xZmQzZGU2ZWVmODc7b2JqZWN0SWQ9N2ZmNDJiMDgtNDZkZC00NmE3LThjZWYtYTNiZDlmNmE4NmY2O3N1YnNjcmlwdGlvbklkPWU0YjYyYjNiLTc2MzQtNDk3Mi04YmJlLTVkNzE5NzE1OWYyNjt0ZW5hbnRJZD00ZjAwYjNiNi0yOTQwLTRmMmMtYjAzNy05NDYzN2MxODBkMzA=][0m
+	            	[0m[1mazurerm_virtual_network.example: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/vm-disk-e-e-mantis-rg/providers/Microsoft.Network/virtualNetworks/vm-disk-e-e-mantis-vnet][0m
+	            	[0m[1mazurerm_key_vault.example: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/vm-disk-e-e-mantis-rg/providers/Microsoft.KeyVault/vaults/vm-disk-e-e-mantis-kv][0m
+	            	[0m[1mazurerm_subnet.example: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/vm-disk-e-e-mantis-rg/providers/Microsoft.Network/virtualNetworks/vm-disk-e-e-mantis-vnet/subnets/vm-disk-e-e-mantis-subnet][0m
+	            	[0m[1mazurerm_network_interface.example: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/vm-disk-e-e-mantis-rg/providers/Microsoft.Network/networkInterfaces/vm-disk-e-e-mantis-nic][0m
+	            	[0m[1mazurerm_linux_virtual_machine.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/vm-disk-e-e-mantis-rg/providers/Microsoft.Compute/virtualMachines/vm-disk-e-e-mantis-vm][0m
+	            	[0m[1mazurerm_key_vault_access_policy.current_user: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/vm-disk-e-e-mantis-rg/providers/Microsoft.KeyVault/vaults/vm-disk-e-e-mantis-kv/objectId/7ff42b08-46dd-46a7-8cef-a3bd9f6a86f6][0m
+	            	[0m[1mazurerm_key_vault_key.example: Refreshing state... [id=https://vm-disk-e-e-mantis-kv.vault.azure.net/keys/examplekey/c3357353ae6d4809a032a2ea89f10f1e][0m
+	            	[0m[1mazurerm_virtual_machine_extension.example: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/vm-disk-e-e-mantis-rg/providers/Microsoft.Compute/virtualMachines/vm-disk-e-e-mantis-vm/extensions/AzureDiskEncryptionForLinux][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_linux_virtual_machine.main[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_linux_virtual_machine" "main" {
+	            	        id                                                     = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/vm-disk-e-e-mantis-rg/providers/Microsoft.Compute/virtualMachines/vm-disk-e-e-mantis-vm"
+	            	        name                                                   = "vm-disk-e-e-mantis-vm"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (38 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (3 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-vm-disk-encryption-extension662316131/src/quickstart/201-vm-disk-encryption-extension/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-vm-disk-encryption-extension662316131/src/quickstart/201-vm-disk-encryption-extension/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-vm-disk-encryption-extension
+
+FailNow
+
+---
+
 ## 06 Sep 26 00:30 UTC
 
 Success: true
