@@ -20,8 +20,8 @@ terraform {
       version = "~> 3.0"
     }
     time = {
-      # Used solely for the RBAC-propagation wait between fixResourcePermissions
-      # and execute (see permission_propagation_wait in variables.tf).
+      # Backs the control-plane consistency waits between discover/evaluate/
+      # validate and the RBAC-propagation wait before execute.
       source  = "hashicorp/time"
       version = "~> 0.9"
     }
