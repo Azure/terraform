@@ -1,3 +1,65 @@
+## 20 Sep 26 02:22 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.log_analytics_workspace_name: Refreshing state... [id=xqeftwoi][0m
+	            	[0m[1mrandom_pet.rg_name: Refreshing state... [id=rg-aware-chimp][0m
+	            	[0m[1mrandom_string.container_app_environment_name: Refreshing state... [id=dtmkwjte][0m
+	            	[0m[1mrandom_string.container_app_name: Refreshing state... [id=gwjfbpgz][0m
+	            	[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-aware-chimp][0m
+	            	[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD02MmQ3ZjU4ZC01ZWJjLTQ4ZGYtYTUwOS0xZmQzZGU2ZWVmODc7b2JqZWN0SWQ9N2ZmNDJiMDgtNDZkZC00NmE3LThjZWYtYTNiZDlmNmE4NmY2O3N1YnNjcmlwdGlvbklkPWU0YjYyYjNiLTc2MzQtNDk3Mi04YmJlLTVkNzE5NzE1OWYyNjt0ZW5hbnRJZD00ZjAwYjNiNi0yOTQwLTRmMmMtYjAzNy05NDYzN2MxODBkMzA=][0m
+	            	[0m[1mazurerm_log_analytics_workspace.log_analytics_workspace: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-aware-chimp/providers/Microsoft.OperationalInsights/workspaces/xqeftwoi][0m
+	            	[0m[1mazurerm_container_app_environment.container_app_environment: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-aware-chimp/providers/Microsoft.App/managedEnvironments/dtmkwjte][0m
+	            	[0m[1mazurerm_container_app.container_app: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-aware-chimp/providers/Microsoft.App/containerApps/gwjfbpgz][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_container_app.container_app[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_container_app" "container_app" {
+	            	        id                            = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-aware-chimp/providers/Microsoft.App/containerApps/gwjfbpgz"
+	            	        name                          = "gwjfbpgz"
+	            	        tags                          = {}
+	            	      [31m-[0m[0m workload_profile_name         = "Consumption" [90m-> null[0m[0m
+	            	        [90m# (8 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-azure-container-app3473932968/src/quickstart/101-azure-container-app/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-azure-container-app3473932968/src/quickstart/101-azure-container-app/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-azure-container-app
+
+FailNow
+
+---
+
 ## 13 Sep 26 02:50 UTC
 
 Success: true
