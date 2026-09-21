@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Azure/terraform/blob/master/.github/schemas/quickstart-metadata.schema.json",
+  "title": "Azure Terraform quickstart deployment metadata",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "testResult"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "const": "../../.github/schemas/quickstart-metadata.schema.json"
+    },
+    "testResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "correlationId",
+        "timestamp"
+      ],
+      "properties": {
+        "correlationId": {
+          "type": "string",
+          "format": "uuid",
+          "description": "Value supplied to ARM_CORRELATION_REQUEST_ID for the validated Terraform apply."
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "UTC time immediately before the validated Terraform apply started."
+        },
+        "terraformVersion": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+(?:[-+][0-9A-Za-z.-]+)?$",
+          "description": "Terraform CLI version used for the apply."
+        }
+      }
+    }
+  }
+}
