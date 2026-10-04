@@ -1,3 +1,121 @@
+## 04 Oct 26 01:20 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.6.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:212
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:98
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:211
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mwaiting for creation of Compute (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mWorkspace Name: "mlw-202mlmsev-dev-w82jl5zMgK"
+	            	[31m│[0m [0mCompute Name: "cpu-cluster"): polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "BadRequest"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "The network configuration for the storage account does not allow access from the compute's subnet to the storage. Please allow access to the storage from the compute's subnet. Storage account: /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-202mlmsev-dev/providers/Microsoft.Storage/storageAccounts/st202mlmsevdev"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m  "status": "Failed",
+	            	[31m│[0m [0m  "error": {
+	            	[31m│[0m [0m    "code": "BadRequest",
+	            	[31m│[0m [0m    "message": "The network configuration for the storage account does not allow access from the compute's subnet to the storage. Please allow access to the storage from the compute's subnet. Storage account: /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-202mlmsev-dev/providers/Microsoft.Storage/storageAccounts/st202mlmsevdev"
+	            	[31m│[0m [0m  }
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_machine_learning_compute_cluster.compute,
+	            	[31m│[0m [0m  on compute.tf line 23, in resource "azurerm_machine_learning_compute_cluster" "compute":
+	            	[31m│[0m [0m  23: resource "azurerm_machine_learning_compute_cluster" "compute" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Private Endpoint (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mPrivate Endpoint Name: "ple-202mlmsev-dev-st-blob"): polling after CreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "StorageAccountOperationInProgress"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "Call to Microsoft.Storage/storageAccounts failed. Error message: An operation is currently performing on this storage account that requires exclusive access."
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{"status":"Failed","error":{"code":"StorageAccountOperationInProgress","message":"Call to Microsoft.Storage/storageAccounts failed. Error message: An operation is currently performing on this storage account that requires exclusive access.","details":[]}}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_private_endpoint.st_ple_blob,
+	            	[31m│[0m [0m  on workspace.tf line 94, in resource "azurerm_private_endpoint" "st_ple_blob":
+	            	[31m│[0m [0m  94: resource "azurerm_private_endpoint" "st_ple_blob" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mwaiting for creation of Compute (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mWorkspace Name: "mlw-202mlmsev-dev-w82jl5zMgK"
+	            	[31m│[0m [0mCompute Name: "image-builder"): polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "BadRequest"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "The network configuration for the storage account does not allow access from the compute's subnet to the storage. Please allow access to the storage from the compute's subnet. Storage account: /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-202mlmsev-dev/providers/Microsoft.Storage/storageAccounts/st202mlmsevdev"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m  "status": "Failed",
+	            	[31m│[0m [0m  "error": {
+	            	[31m│[0m [0m    "code": "BadRequest",
+	            	[31m│[0m [0m    "message": "The network configuration for the storage account does not allow access from the compute's subnet to the storage. Please allow access to the storage from the compute's subnet. Storage account: /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-202mlmsev-dev/providers/Microsoft.Storage/storageAccounts/st202mlmsevdev"
+	            	[31m│[0m [0m  }
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_machine_learning_compute_cluster.image-builder,
+	            	[31m│[0m [0m  on workspace.tf line 175, in resource "azurerm_machine_learning_compute_cluster" "image-builder":
+	            	[31m│[0m [0m 175: resource "azurerm_machine_learning_compute_cluster" "image-builder" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/202-machine-learning-moderately-secure-existing-VNet
+
+FailNow
+
+---
+
 ## 27 Sep 26 00:45 UTC
 
 Success: false
