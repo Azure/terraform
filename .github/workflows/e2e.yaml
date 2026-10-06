@@ -182,7 +182,9 @@ jobs:
           repository: ${{ github.repository }}
           ref: ${{ github.event.repository.default_branch }}
           path: trusted
-          sparse-checkout: .github/scripts/validate-quickstart-metadata.py
+          sparse-checkout: |
+            .github/scripts/validate-quickstart-metadata.py
+            .github/scripts/validate-arm-correlation.py
           sparse-checkout-cone-mode: false
 
       - name: Checkout pull request sample
@@ -205,7 +207,7 @@ jobs:
         uses: azure/login@8216e11d8cd9b42fe925c852af8e76311ff067ac # v2
         with:
           tenant-id: ${{ vars.AZURE_TENANT_ID }}
-          client-id: ${{ vars.AZURE_UAMI_CLIENT_ID }}
+          client-id: ${{ vars.AZURE_CLIENT_ID }}
           allow-no-subscriptions: true
 
       - name: Validate correlated Terraform operations
@@ -219,81 +221,27 @@ jobs:
           correlation_id=$(jq -r '.testResult.correlationId' "${metadata}")
           started_at=$(jq -r '.testResult.timestamp' "${metadata}")
 
-          query='declare query_parameters(cid:string, started:datetime);
-          ARM_Deployments_Terraform_v2
-          | where correlationId == cid
-          | where PreciseTimeStamp between ((started - 1h) .. (started + 24h))
-          | where client == "Terraform"
-          | summarize
-              firstSeen=min(PreciseTimeStamp),
-              lastSeen=max(PreciseTimeStamp),
-              totalRequests=sum(requestCount),
-              successfulWrites=sumif(requestCount, httpMethod in ("PUT", "PATCH", "POST", "DELETE") and executionStatus == "Succeeded"),
-              failedRequests=sumif(requestCount, executionStatus in ("Failed", "Canceled")),
-              providers=dcount(providerNamespace)'
-
-          properties=$(jq -cn \
-            --arg cid "${correlation_id}" \
-            --arg started "${started_at}" \
-            '{ Parameters: { cid: $cid, started: $started } }')
-          body=$(jq -n \
-            --arg db "APAProd" \
-            --arg csl "${query}" \
-            --arg properties "${properties}" \
-            '{
-              db: $db,
-              csl: $csl,
-              properties: $properties
-            }')
-
-          response=$(az rest \
-            --method POST \
-            --url "https://apadata.westus.kusto.windows.net/v1/rest/query" \
-            --resource "https://kusto.kusto.windows.net" \
-            --headers "Content-Type=application/json" \
-            --body "${body}")
-
-          value() {
-            local column="$1"
-            jq -r --arg column "${column}" \
-              '.Tables[0] as $table
-               | ($table.Columns | map(.ColumnName) | index($column)) as $index
-               | if $index == null then empty else $table.Rows[0][$index] end' \
-              <<< "${response}"
-          }
-
-          total_requests=$(value totalRequests)
-          successful_writes=$(value successfulWrites)
-          failed_requests=$(value failedRequests)
-          first_seen=$(value firstSeen)
-          last_seen=$(value lastSeen)
-          providers=$(value providers)
+          summary=$(
+            python trusted/.github/scripts/validate-arm-correlation.py \
+              --correlation-id "${correlation_id}" \
+              --started-at "${started_at}"
+          )
 
           echo "Correlation ID: ${correlation_id}"
-          echo "Observed: ${first_seen} through ${last_seen}"
-          echo "Requests: ${total_requests:-0}; successful writes: ${successful_writes:-0}; failed/canceled: ${failed_requests:-0}; providers: ${providers:-0}"
-
-          if (( ${total_requests:-0} == 0 )); then
-            echo "No Terraform operations were found for this correlation ID." >&2
-            exit 1
-          fi
-          if (( ${successful_writes:-0} == 0 )); then
-            echo "The correlation ID has no successful Terraform write operations." >&2
-            exit 1
-          fi
-          if (( ${failed_requests:-0} != 0 )); then
-            echo "The correlated Terraform workflow contains failed or canceled operations." >&2
-            exit 1
-          fi
+          echo "Observed: $(jq -r '.firstSeen' <<< "${summary}") through $(jq -r '.lastSeen' <<< "${summary}")"
+          echo "Clusters: $(jq -r '.clusters | join(\", \")' <<< "${summary}")"
+          echo "Writes: $(jq -r '.totalWrites' <<< "${summary}"); completed: $(jq -r '.completedWrites' <<< "${summary}"); async accepted: $(jq -r '.acceptedAsyncWrites' <<< "${summary}"); failed: $(jq -r '.failedWrites' <<< "${summary}")"
 
           {
-            echo "## Terraform deployment validation"
+            echo "## Terraform ARM activity validation"
             echo
             echo "- Sample: \`${SAMPLE_PATH}\`"
             echo "- Correlation ID: \`${correlation_id}\`"
-            echo "- Successful writes: ${successful_writes}"
-            echo "- Failed or canceled operations: ${failed_requests}"
-            echo "- Resource providers: ${providers}"
+            echo "- ARM regions: $(jq -r '.clusters | join(\", \")' <<< "${summary}")"
+            echo "- Synchronous completed writes: $(jq -r '.completedWrites' <<< "${summary}")"
+            echo "- Asynchronous writes accepted by ARM: $(jq -r '.acceptedAsyncWrites' <<< "${summary}")"
+            echo "- Final HTTP write failures: $(jq -r '.failedWrites' <<< "${summary}")"
+            echo "- Resource providers: $(jq -r '.providers' <<< "${summary}")"
           } >> "${GITHUB_STEP_SUMMARY}"
 
   report:
@@ -322,10 +270,10 @@ jobs:
               conclusion: passed ? 'success' : 'failure',
               output: {
                 title: passed
-                  ? 'Terraform deployment validation passed'
-                  : 'Terraform deployment validation failed',
+                  ? 'Terraform ARM activity validation passed'
+                  : 'Terraform ARM activity validation failed',
                 summary: passed
-                  ? `ARM telemetry confirmed successful Terraform writes for \`${process.env.SAMPLE_PATH}\` with no failed or canceled operations.`
-                  : `Deployment validation failed. Open the workflow run for details, correct the metadata or deployment, then run \`/validate\` again.`
+                  ? `ARM telemetry confirmed completed or accepted Terraform writes for \`${process.env.SAMPLE_PATH}\` with no observed final HTTP write failures.`
+                  : `ARM activity validation failed. Open the workflow run for details, correct the metadata or deployment, then run \`/validate\` again.`
               }
             });

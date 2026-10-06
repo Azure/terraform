@@ -91,9 +91,9 @@ After that workflow passes, a repository maintainer comments:
 /validate
 ```
 
-The command is restricted to repository members, owners, and collaborators. It checks out only the changed quickstart, validates its metadata with trusted code from the default branch, signs in to Azure with the `adx-readonly` environment's federated identity, and queries `ARM_Deployments_Terraform_v2` by the supplied correlation ID.
+The command is restricted to repository members, owners, and collaborators. It checks out only the changed quickstart, validates its metadata with trusted code from the default branch, signs in to Azure with the `adx-readonly` environment's federated identity, and queries the approved regional ARMProd `Requests.HttpIncomingRequests` datasets by the supplied correlation ID.
 
-Validation passes only when telemetry contains at least one successful Terraform write and no failed or canceled operation for that correlated workflow. The workflow publishes the result as the `terraform-deployment-validation` check on the pull request head.
+Validation passes only when telemetry contains at least one synchronously completed or asynchronously accepted Terraform ARM write and no observed final HTTP write failures for that correlated workflow. Preliminary records and failures that were successfully retried are not treated as final failures. A `202 Accepted` result proves that ARM accepted the asynchronous operation; the approved dataset does not expose the response body needed to prove its eventual provisioning state. The workflow publishes the result as the `terraform-deployment-validation` check on the pull request head.
 
 This is deployment evidence, not source attestation: unlike an ARM template deployment, Terraform does not emit a template hash that ARM can compare with the pull request. Reviewers must still inspect the code and the static checks.
 
@@ -102,6 +102,6 @@ This is deployment evidence, not source attestation: unlike an ARM template depl
 The `adx-readonly` GitHub environment must provide these variables for its federated OIDC application:
 
 - `AZURE_TENANT_ID`
-- `AZURE_UAMI_CLIENT_ID`
+- `AZURE_CLIENT_ID`
 
-The identity uses subscriptionless OIDC and needs read-only query access to the `APAProd` database on `https://apadata.westus.kusto.windows.net`. It does not need an Azure subscription role or permissions to deploy or modify resources.
+The identity uses subscriptionless OIDC and needs read-only query access to the `Requests` databases on the approved `armprodeus`, `armprodweu`, and `armprodsea` clusters. It does not need an Azure subscription role or permissions to deploy or modify resources.
