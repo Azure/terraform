@@ -3,9 +3,9 @@
 The repository validates two different claims:
 
 1. **Static quality:** the pull request passes formatting, linting, and repository checks.
-2. **Deployment evidence:** a maintainer confirms that the exact correlation ID recorded by the contributor maps to a successful Terraform workflow in Azure Resource Manager telemetry.
+2. **ARM activity evidence:** a maintainer confirms that the contributor-supplied correlation ID maps to qualifying Terraform ARM write activity with no observed final HTTP write failures.
 
-The repository does not deploy pull-request code with privileged credentials. Contributors deploy the quickstart first; maintainers validate the resulting telemetry with `/validate`.
+The quickstart validation workflow does not deploy pull-request quickstart code with repository-owned Azure credentials. Contributors deploy the quickstart first; maintainers validate the resulting telemetry with `/validate`. The separate internal E2E test-harness workflow continues to execute same-repository `test/**` pull-request code using the protected `test` environment.
 
 ## Contribution requirements
 
@@ -18,7 +18,7 @@ A pull request that changes deployable files in `quickstart/<sample>/` must:
 - Add or update `metadata.json` in the quickstart folder with the UUID and apply start time.
 - Remove the deployed resources after validation unless the sample documents a reason to retain them.
 
-The AzureRM and AzAPI providers use `ARM_CORRELATION_REQUEST_ID` as the `x-ms-correlation-request-id` for the provider workflow. Do not reuse an ID from an earlier plan or apply.
+The AzureRM and AzAPI providers use `ARM_CORRELATION_REQUEST_ID` as the `x-ms-correlation-request-id` for the provider workflow. Do not reuse an ID from an earlier plan or apply. This is a good-faith contributor assertion: validation does not prevent deliberate reuse or independently bind the ID to the pull request, sample, actor, or applied source.
 
 ## Deploy and capture validation evidence
 
@@ -93,9 +93,11 @@ After that workflow passes, a repository maintainer comments:
 
 The command is restricted to repository members, owners, and collaborators. It checks out only the changed quickstart, validates its metadata with trusted code from the default branch, signs in to Azure with the `adx-readonly` environment's federated identity, and queries the approved regional ARMProd `Requests.HttpIncomingRequests` datasets by the supplied correlation ID.
 
-Validation passes only when telemetry contains at least one synchronously completed or asynchronously accepted Terraform ARM write and no observed final HTTP write failures for that correlated workflow. Preliminary records and failures that were successfully retried are not treated as final failures. A `202 Accepted` result proves that ARM accepted the asynchronous operation; the approved dataset does not expose the response body needed to prove its eventual provisioning state. The workflow publishes the result as the `terraform-deployment-validation` check on the pull request head.
+Validation passes only when telemetry for the contributor-supplied correlation ID contains at least one synchronously completed or asynchronously accepted Terraform ARM write and no observed final HTTP write failures. Preliminary records and failures that were successfully retried are not treated as final failures. A `202 Accepted` result proves that ARM accepted the asynchronous operation; the approved dataset does not expose the response body needed to prove its eventual provisioning state. The workflow publishes the result as the `terraform-deployment-validation` check on the pull request head.
 
-This is deployment evidence, not source attestation: unlike an ARM template deployment, Terraform does not emit a template hash that ARM can compare with the pull request. Reviewers must still inspect the code and the static checks.
+This is contributor-asserted ARM activity evidence, not proof that Terraform exited successfully and not source attestation. Unlike an ARM template deployment, Terraform does not emit a template hash that ARM can compare with the pull request. Reviewers must still inspect the code and static checks.
+
+Pull requests that modify the validation workflows, validators, metadata schema, or their transitive static-check implementation cannot use `/validate`. Merge validation-contract changes separately, canary them from the default branch, then validate quickstart changes under the deployed contract.
 
 ## Maintainer configuration
 

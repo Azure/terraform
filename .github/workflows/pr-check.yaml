@@ -14,6 +14,10 @@ jobs:
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           fetch-depth: 0
+      - name: Test quickstart validation scripts
+        run: |
+          python .github/scripts/test_validate_arm_correlation.py
+          python .github/scripts/test_validate_quickstart_metadata.py
       - name: Get changed files
         id: changed-files
         uses: step-security/changed-files@3dbe17c78367e7d60f00d78ae6781a35be47b4a1 #v45.0.1

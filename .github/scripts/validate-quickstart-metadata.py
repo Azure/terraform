@@ -22,6 +22,9 @@ EXPECTED_SCHEMA = "../../.github/schemas/quickstart-metadata.schema.json"
 MAX_METADATA_AGE = datetime.timedelta(days=30)
 MAX_FUTURE_SKEW = datetime.timedelta(minutes=15)
 TERRAFORM_VERSION_RE = re.compile(r"^\d+\.\d+\.\d+(?:[-+][0-9A-Za-z.-]+)?$")
+TIMESTAMP_RE = re.compile(
+    r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?Z$"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -98,7 +101,7 @@ def should_require_metadata(
 
 
 def parse_timestamp(value: object) -> datetime.datetime | None:
-    if not isinstance(value, str) or not value.endswith("Z"):
+    if not isinstance(value, str) or not TIMESTAMP_RE.fullmatch(value):
         return None
     try:
         parsed = datetime.datetime.fromisoformat(value.replace("Z", "+00:00"))

@@ -64,16 +64,18 @@ jobs:
               'scripts/terraform-validate.sh'
             ];
             const touchedProtected = files
-              .map(file => file.filename)
+              .flatMap(file => [file.filename, file.previous_filename])
+              .filter(Boolean)
               .filter(name =>
                 protectedPrefixes.some(prefix => name.startsWith(prefix)) ||
                 protectedFiles.includes(name)
-              );
-            const allowedProtectedAuthors = new Set(['MEMBER', 'OWNER']);
-            if (touchedProtected.length > 0 && !allowedProtectedAuthors.has(pr.author_association)) {
+              )
+              .filter((name, index, names) => names.indexOf(name) === index);
+            if (touchedProtected.length > 0) {
               core.setFailed(
-                `Protected validation files were changed by a PR author with ` +
-                `association '${pr.author_association}': ${touchedProtected.join(', ')}`
+                `/validate cannot run while validation-contract files are changing: ` +
+                `${touchedProtected.join(', ')}. Merge validation changes separately, ` +
+                `canary them from the default branch, then validate quickstart changes.`
               );
               return;
             }
@@ -125,8 +127,8 @@ jobs:
               status: 'in_progress',
               details_url: `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
               output: {
-                title: 'Validating Terraform deployment',
-                summary: 'A maintainer ran `/validate`; waiting for static checks, then querying ARM telemetry.'
+                title: 'Validating contributor-supplied ARM activity evidence',
+                summary: 'A maintainer ran `/validate`; waiting for static checks, then querying ARM telemetry for the contributor-supplied correlation ID.'
               }
             });
             core.setOutput('check_id', data.id);
@@ -273,7 +275,7 @@ jobs:
                   ? 'Terraform ARM activity validation passed'
                   : 'Terraform ARM activity validation failed',
                 summary: passed
-                  ? `ARM telemetry confirmed completed or accepted Terraform writes for \`${process.env.SAMPLE_PATH}\` with no observed final HTTP write failures.`
+                  ? `The contributor-supplied correlation ID recorded by \`${process.env.SAMPLE_PATH}\` maps to completed or accepted Terraform ARM writes with no observed final HTTP write failures. This does not independently bind the telemetry to the pull request or applied source.`
                   : `ARM activity validation failed. Open the workflow run for details, correct the metadata or deployment, then run \`/validate\` again.`
               }
             });

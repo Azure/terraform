@@ -29,7 +29,8 @@
         "timestamp": {
           "type": "string",
           "format": "date-time",
-          "description": "UTC time immediately before the validated Terraform apply started."
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?Z$",
+          "description": "RFC 3339 UTC time ending in Z, captured immediately before the validated Terraform apply started."
         },
         "terraformVersion": {
           "type": "string",

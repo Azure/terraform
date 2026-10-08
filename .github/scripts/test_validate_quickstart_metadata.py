@@ -2,11 +2,13 @@ import importlib.util
 import datetime
 import json
 import pathlib
+import re
 import tempfile
 import unittest
 
 
 SCRIPT = pathlib.Path(__file__).with_name("validate-quickstart-metadata.py")
+SCHEMA = SCRIPT.parent.parent / "schemas" / "quickstart-metadata.schema.json"
 SPEC = importlib.util.spec_from_file_location("metadata_validator", SCRIPT)
 VALIDATOR = importlib.util.module_from_spec(SPEC)
 assert SPEC.loader is not None
@@ -75,6 +77,25 @@ class ValidateMetadataTests(unittest.TestCase):
                 for error in VALIDATOR.validate_metadata(path)
             )
         )
+
+    def test_schema_matches_python_utc_timestamp_contract(self) -> None:
+        schema = json.loads(SCHEMA.read_text(encoding="utf-8"))
+        pattern = schema["properties"]["testResult"]["properties"]["timestamp"][
+            "pattern"
+        ]
+
+        self.assertEqual(VALIDATOR.TIMESTAMP_RE.pattern, pattern)
+        self.assertIsNotNone(re.fullmatch(pattern, "2026-08-18T17:00:00Z"))
+        self.assertIsNotNone(re.fullmatch(pattern, "2026-08-18T17:00:00.123Z"))
+        for invalid in (
+            "2026-08-18T17:00:00-07:00",
+            "2026-08-18 17:00:00Z",
+            "20260818T170000Z",
+            "2026-08-18T17:00Z",
+            "2026-08-18T17:00:00,123Z",
+        ):
+            self.assertIsNone(re.fullmatch(pattern, invalid))
+            self.assertIsNone(VALIDATOR.parse_timestamp(invalid))
 
     def test_reads_test_result_value(self) -> None:
         data = {"testResult": {"correlationId": "example"}}
