@@ -1,4 +1,4 @@
-name: Validate Terraform Deployment
+name: Validate Quickstart ARM Activity
 
 on:
   issue_comment:
@@ -167,7 +167,7 @@ jobs:
           exit 1
 
   validate:
-    name: Validate contributor deployment
+    name: Validate contributor ARM activity
     needs: gate
     runs-on: ubuntu-latest
     timeout-minutes: 5
@@ -212,7 +212,7 @@ jobs:
           client-id: ${{ vars.AZURE_CLIENT_ID }}
           allow-no-subscriptions: true
 
-      - name: Validate correlated Terraform operations
+      - name: Query correlated ARM activity
         env:
           SAMPLE_PATH: ${{ needs.gate.outputs.sample_path }}
         shell: bash
@@ -247,7 +247,7 @@ jobs:
           } >> "${GITHUB_STEP_SUMMARY}"
 
   report:
-    name: Report deployment validation
+    name: Report ARM activity validation
     needs: [gate, validate]
     if: always() && needs.gate.outputs.check_id != ''
     runs-on: ubuntu-latest
