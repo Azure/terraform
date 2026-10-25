@@ -1,3 +1,55 @@
+## 25 Oct 26 00:19 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.10.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mInvalid provider configuration[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0mProvider "registry.terraform.io/hashicorp/azuread" requires explicit
+	            	[31m│[0m [0mconfiguration. Add a provider block to the root module and configure the
+	            	[31m│[0m [0mprovider's required arguments as described in the provider documentation.
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding client: unable to obtain access token: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: cebe9d43-ad81-4989-a943-951674836900 Correlation ID: db670167-e56a-4971-9986-1aabc4bcbbbe Timestamp: 2026-10-25 00:19:32Z","error_codes":[5000229],"timestamp":"2026-10-25 00:19:32Z","trace_id":"cebe9d43-ad81-4989-a943-951674836900","correlation_id":"db670167-e56a-4971-9986-1aabc4bcbbbe"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azuread"],
+	            	[31m│[0m [0m  on <empty> line 0:
+	            	[31m│[0m [0m  (source code not available)
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding AzureRM Client: please ensure you have installed Azure CLI version 2.0.79 or newer. Error parsing json result from the Azure CLI: launching Azure CLI: exec: "az": executable file not found in $PATH.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on provider.tf line 13, in provider "azurerm":
+	            	[31m│[0m [0m  13: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop
+
+FailNow
+
+---
+
 ## 18 Oct 26 01:19 UTC
 
 Success: false
