@@ -36,12 +36,19 @@ jobs:
               return;
             }
 
-            const allowedCommenters = new Set(['MEMBER', 'OWNER', 'COLLABORATOR']);
-            const commenterAssociation = context.payload.comment.author_association;
-            if (!allowedCommenters.has(commenterAssociation)) {
+            const commenter = context.payload.comment.user.login;
+            const { data: permission } =
+              await github.rest.repos.getCollaboratorPermissionLevel({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                username: commenter
+              });
+            const allowedPermissions = new Set(['admin', 'maintain', 'write']);
+            if (!allowedPermissions.has(permission.permission)) {
               core.setFailed(
-                `Not authorized to run /validate: ${commenterAssociation}. ` +
-                'Only MEMBER, OWNER, or COLLABORATOR may run this command.'
+                `Not authorized to run /validate: ${commenter} has ` +
+                `'${permission.permission}' repository permission; write, maintain, ` +
+                `or admin permission is required.`
               );
               return;
             }

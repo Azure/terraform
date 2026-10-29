@@ -52,7 +52,10 @@ def parse_args() -> argparse.Namespace:
 
 def build_body(correlation_id: str, started_at: str) -> str:
     properties = json.dumps(
-        {"Parameters": {"cid": correlation_id, "started": started_at}},
+        {
+            "Options": {"deferpartialqueryfailures": True},
+            "Parameters": {"cid": correlation_id, "started": started_at},
+        },
         separators=(",", ":"),
     )
     return json.dumps(
@@ -61,7 +64,31 @@ def build_body(correlation_id: str, started_at: str) -> str:
     )
 
 
+def partial_query_failures(response: dict) -> list[dict]:
+    failures = []
+    for table in response.get("Tables", []):
+        columns = [
+            column.get("ColumnName") for column in table.get("Columns", [])
+        ]
+        if "Severity" not in columns or "StatusCode" not in columns:
+            continue
+        for values in table.get("Rows", []):
+            row = dict(zip(columns, values))
+            severity = row.get("Severity")
+            if isinstance(severity, int) and severity <= 2:
+                failures.append(row)
+    return failures
+
+
 def primary_row(response: dict) -> dict | None:
+    failures = partial_query_failures(response)
+    if failures:
+        details = "; ".join(
+            str(failure.get("StatusDescription") or failure.get("StatusCode"))
+            for failure in failures
+        )
+        raise RuntimeError(f"Kusto reported a partial query failure: {details}")
+
     tables = response.get("Tables", [])
     if not tables:
         return None
@@ -142,7 +169,11 @@ def main() -> int:
             print(f"Querying {cluster} (attempt {attempt})...", file=sys.stderr)
             try:
                 row = query_cluster(cluster, body)
-            except (json.JSONDecodeError, subprocess.CalledProcessError) as error:
+            except (
+                json.JSONDecodeError,
+                RuntimeError,
+                subprocess.CalledProcessError,
+            ) as error:
                 cluster_errors.append(cluster)
                 print(f"WARNING: {cluster} query failed: {error}", file=sys.stderr)
                 continue

@@ -30,7 +30,7 @@ jobs:
       - name: Normalize changed quickstart folders
         id: changed-folders
         env:
-          CANDIDATES: ${{ steps.changed-files.outputs.all_changed_files }}
+          CANDIDATES: ${{ steps.changed-files.outputs.all_modified_files }}
         shell: bash
         run: |
           set -euo pipefail

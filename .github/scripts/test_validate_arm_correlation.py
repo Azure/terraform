@@ -23,10 +23,12 @@ class ValidateArmCorrelationTests(unittest.TestCase):
 
         self.assertEqual("Requests", body["db"])
         self.assertIsInstance(body["properties"], str)
+        properties = json.loads(body["properties"])
         self.assertEqual(
             "12345678-1234-1234-1234-1234567890ab",
-            json.loads(body["properties"])["Parameters"]["cid"],
+            properties["Parameters"]["cid"],
         )
+        self.assertTrue(properties["Options"]["deferpartialqueryfailures"])
 
     def test_primary_row_maps_columns(self) -> None:
         response = {
@@ -45,6 +47,47 @@ class ValidateArmCorrelationTests(unittest.TestCase):
             {"totalWrites": 3, "failedWrites": 0},
             VALIDATOR.primary_row(response),
         )
+
+    def test_partial_query_failure_is_rejected(self) -> None:
+        response = {
+            "Tables": [
+                {
+                    "Columns": [{"ColumnName": "totalWrites"}],
+                    "Rows": [[3]],
+                },
+                {
+                    "Columns": [
+                        {"ColumnName": "Severity"},
+                        {"ColumnName": "StatusCode"},
+                        {"ColumnName": "StatusDescription"},
+                    ],
+                    "Rows": [[2, 1234, "Result truncation"]],
+                },
+            ]
+        }
+
+        with self.assertRaisesRegex(RuntimeError, "partial query failure"):
+            VALIDATOR.primary_row(response)
+
+    def test_informational_query_status_is_allowed(self) -> None:
+        response = {
+            "Tables": [
+                {
+                    "Columns": [{"ColumnName": "totalWrites"}],
+                    "Rows": [[3]],
+                },
+                {
+                    "Columns": [
+                        {"ColumnName": "Severity"},
+                        {"ColumnName": "StatusCode"},
+                        {"ColumnName": "StatusDescription"},
+                    ],
+                    "Rows": [[4, 0, "Query completed successfully"]],
+                },
+            ]
+        }
+
+        self.assertEqual({"totalWrites": 3}, VALIDATOR.primary_row(response))
 
     @unittest.mock.patch.object(VALIDATOR.shutil, "which")
     def test_azure_cli_finds_command(self, which: unittest.mock.Mock) -> None:
