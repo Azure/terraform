@@ -1,3 +1,67 @@
+## 01 Nov 26 00:21 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.13.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFailed to retrieve resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azapi_resource.resource_group,
+	            	[31m│[0m [0m  on main.tf line 31, in resource "azapi_resource" "resource_group":
+	            	[31m│[0m [0m  31: resource "azapi_resource" "resource_group" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mchecking for presence of existing Resource: (ResourceId
+	            	[31m│[0m [0m"/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-aks-network-isolated-2g446t"
+	            	[31m│[0m [0m/ Api Version "2024-03-01"): ChainedTokenCredential: failed to acquire a
+	            	[31m│[0m [0mtoken.
+	            	[31m│[0m [0mAttempted credentials:
+	            	[31m│[0m [0m	ClientAssertionCredential authentication failed. 
+	            	[31m│[0m [0m		POST
+	            	[31m│[0m [0mhttps://login.microsoftonline.com/4f00b3b6-2940-4f2c-b037-94637c180d30/oauth2/v2.0/token
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m--------------------------------------------------------------------------------
+	            	[31m│[0m [0m		RESPONSE 400: 400 Bad Request
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m--------------------------------------------------------------------------------
+	            	[31m│[0m [0m		{
+	            	[31m│[0m [0m		  "error": "invalid_grant",
+	            	[31m│[0m [0m		  "error_description": "AADSTS5000229: The tenant 'Azure Client Tools
+	            	[31m│[0m [0m2026-07-20' is not available due to expiration. To learn more about tenant
+	            	[31m│[0m [0mexpiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID:
+	            	[31m│[0m [0m468d0ef0-c128-4723-ba08-bf1f6c685700 Correlation ID:
+	            	[31m│[0m [0mb642156d-2e34-4ccb-aacf-10a05983ecf2 Timestamp: 2026-11-01 00:21:03Z",
+	            	[31m│[0m [0m		  "error_codes": [
+	            	[31m│[0m [0m		    5000229
+	            	[31m│[0m [0m		  ],
+	            	[31m│[0m [0m		  "timestamp": "2026-11-01 00:21:03Z",
+	            	[31m│[0m [0m		  "trace_id": "468d0ef0-c128-4723-ba08-bf1f6c685700",
+	            	[31m│[0m [0m		  "correlation_id": "b642156d-2e34-4ccb-aacf-10a05983ecf2"
+	            	[31m│[0m [0m		}
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m--------------------------------------------------------------------------------
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-aks-network-isolated
+
+FailNow
+
+---
+
 ## 25 Oct 26 00:23 UTC
 
 Success: false
