@@ -18,7 +18,7 @@ resource "azapi_resource" "sig" {
 
   # Retry on transient delete errors (gallery may still have image definitions being removed)
   retry = {
-    error_message_regex = ["CannotDeleteResource", "ConflictingUserInput"]
+    error_message_regex  = ["CannotDeleteResource", "ConflictingUserInput"]
     interval_seconds     = 30
     max_interval_seconds = 180
   }

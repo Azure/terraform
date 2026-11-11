@@ -41,7 +41,7 @@ resource "azapi_resource" "avd_vm_nic" {
 
   # Retry on transient delete errors (Azure holds NIC for 180s after VM deletion)
   retry = {
-    error_message_regex = ["NicReservedForAnotherVm", "InUseSubnetCannotBeDeleted", "OperationNotAllowed"]
+    error_message_regex  = ["NicReservedForAnotherVm", "InUseSubnetCannotBeDeleted", "OperationNotAllowed"]
     interval_seconds     = 30
     max_interval_seconds = 180
   }
@@ -105,8 +105,8 @@ resource "azapi_resource" "avd_vm" {
   depends_on = [azapi_resource.avd_vm_nic]
 
   retry = {
-    error_message_regex = ["SkuNotAvailable", "OperationNotAllowed", "AllocationFailed"]
-    interval_seconds    = 60
+    error_message_regex  = ["SkuNotAvailable", "OperationNotAllowed", "AllocationFailed"]
+    interval_seconds     = 60
     max_interval_seconds = 300
   }
 

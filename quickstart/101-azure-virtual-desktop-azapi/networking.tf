@@ -61,7 +61,7 @@ resource "azapi_resource" "nsg" {
 
   # Retry on transient delete errors (NSG still in use while NICs are being released)
   retry = {
-    error_message_regex = ["InUseNetworkSecurityGroupCannotBeDeleted", "InUseSubnetCannotBeDeleted"]
+    error_message_regex  = ["InUseNetworkSecurityGroupCannotBeDeleted", "InUseSubnetCannotBeDeleted"]
     interval_seconds     = 30
     max_interval_seconds = 180
   }
