@@ -1,0 +1,3 @@
+resource_group_name    = "<resource-group-name>"
+fleet_name             = "<fleet-manager-name>"
+managed_namespace_name = "platform-ns"

@@ -1,3 +1,11471 @@
+## 08 Nov 26 00:16 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/http v3.6.3
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 6a4c013d-9896-414a-92fd-224805160200 Correlation ID: e275c5d6-a363-40de-9413-874433c37044 Timestamp: 2026-11-08 00:16:57Z","error_codes":[5000229],"timestamp":"2026-11-08 00:16:57Z","trace_id":"6a4c013d-9896-414a-92fd-224805160200","correlation_id":"e275c5d6-a363-40de-9413-874433c37044"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 13, in provider "azurerm":
+	            	[31m│[0m [0m  13: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-synapse
+
+FailNow
+
+---
+
+## 01 Nov 26 00:12 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/http v3.6.3
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 74e0f569-b678-4f22-b200-00d87e98d701 Correlation ID: 8b91abf2-e6ff-428e-a83b-572880423f0f Timestamp: 2026-11-01 00:12:53Z","error_codes":[5000229],"timestamp":"2026-11-01 00:12:53Z","trace_id":"74e0f569-b678-4f22-b200-00d87e98d701","correlation_id":"8b91abf2-e6ff-428e-a83b-572880423f0f"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 13, in provider "azurerm":
+	            	[31m│[0m [0m  13: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-synapse
+
+FailNow
+
+---
+
+## 25 Oct 26 00:20 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/http v3.6.3
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: af610702-2728-4e40-866e-467a28daf201 Correlation ID: 8e3fc5be-841f-4be9-bcc0-c2cc81c86b02 Timestamp: 2026-10-25 00:20:38Z","error_codes":[5000229],"timestamp":"2026-10-25 00:20:38Z","trace_id":"af610702-2728-4e40-866e-467a28daf201","correlation_id":"8e3fc5be-841f-4be9-bcc0-c2cc81c86b02"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 13, in provider "azurerm":
+	            	[31m│[0m [0m  13: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-synapse
+
+FailNow
+
+---
+
+## 18 Oct 26 00:47 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/http v3.6.2
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected start_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            65.52.39.17
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        65.52.39.17,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        65.52.39.17
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        65.52.39.17
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        65.52.39.17,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 65.52.39.17
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 46666
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 65.52.39.17,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;65.52.39.17&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;46666&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;65.52.39.17,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 44, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  44:   start_ip_address     = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected end_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            65.52.39.17
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        65.52.39.17,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        65.52.39.17
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        65.52.39.17
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        65.52.39.17,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 65.52.39.17
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 46666
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 65.52.39.17,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;65.52.39.17&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;46666&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;65.52.39.17,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 45, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  45:   end_ip_address       = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-synapse
+
+FailNow
+
+---
+
+## 11 Oct 26 00:50 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/http v3.6.2
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected start_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            4.149.244.224
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        4.149.244.224,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        4.149.244.224
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        4.149.244.224
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        4.149.244.224,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 4.149.244.224
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 38044
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 4.149.244.224,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;4.149.244.224&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;38044&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;4.149.244.224,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 44, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  44:   start_ip_address     = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected end_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            4.149.244.224
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        4.149.244.224,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        4.149.244.224
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        4.149.244.224
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        4.149.244.224,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 4.149.244.224
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 38044
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 4.149.244.224,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;4.149.244.224&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;38044&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;4.149.244.224,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 45, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  45:   end_ip_address       = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-synapse
+
+FailNow
+
+---
+
+## 04 Oct 26 01:09 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/http v3.6.2
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected start_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            52.154.140.86
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        52.154.140.86,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        52.154.140.86
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        52.154.140.86
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        52.154.140.86,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 52.154.140.86
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 40750
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 52.154.140.86,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;52.154.140.86&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;40750&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;52.154.140.86,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 44, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  44:   start_ip_address     = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected end_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            52.154.140.86
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        52.154.140.86,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        52.154.140.86
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        52.154.140.86
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        52.154.140.86,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 52.154.140.86
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 40750
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 52.154.140.86,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;52.154.140.86&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;40750&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;52.154.140.86,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 45, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  45:   end_ip_address       = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-synapse
+
+FailNow
+
+---
+
+## 27 Sep 26 01:53 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/http v3.6.2
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected start_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            20.168.106.240
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.168.106.240,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.168.106.240
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.168.106.240
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.168.106.240,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 20.168.106.240
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 46354
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 20.168.106.240,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;20.168.106.240&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;46354&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;20.168.106.240,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 44, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  44:   start_ip_address     = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected end_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            20.168.106.240
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.168.106.240,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.168.106.240
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.168.106.240
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.168.106.240,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 20.168.106.240
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 46354
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 20.168.106.240,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;20.168.106.240&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;46354&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;20.168.106.240,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 45, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  45:   end_ip_address       = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-synapse
+
+FailNow
+
+---
+
+## 20 Sep 26 00:53 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/http v3.6.2
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected start_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            135.119.239.49
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        135.119.239.49,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        135.119.239.49
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        135.119.239.49
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        135.119.239.49,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 135.119.239.49
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 51956
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 135.119.239.49,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;135.119.239.49&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;51956&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;135.119.239.49,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 44, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  44:   start_ip_address     = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected end_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            135.119.239.49
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        135.119.239.49,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        135.119.239.49
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        135.119.239.49
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        135.119.239.49,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 135.119.239.49
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 51956
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 135.119.239.49,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;135.119.239.49&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;51956&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;135.119.239.49,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 45, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  45:   end_ip_address       = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-synapse
+
+FailNow
+
+---
+
+## 13 Sep 26 01:47 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/http v3.6.2
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected start_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            68.220.62.180
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        68.220.62.180,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        68.220.62.180
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        68.220.62.180
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        68.220.62.180,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 68.220.62.180
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 54940
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 68.220.62.180,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;68.220.62.180&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;54940&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;68.220.62.180,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 44, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  44:   start_ip_address     = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected end_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            68.220.62.180
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        68.220.62.180,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        68.220.62.180
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        68.220.62.180
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        68.220.62.180,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 68.220.62.180
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 54940
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 68.220.62.180,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;68.220.62.180&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;54940&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;68.220.62.180,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 45, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  45:   end_ip_address       = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-synapse
+
+FailNow
+
+---
+
+## 06 Sep 26 00:40 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/http v3.6.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected start_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            20.118.214.103
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.118.214.103,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.118.214.103
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.118.214.103
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.118.214.103,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 20.118.214.103
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 45142
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 20.118.214.103,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;20.118.214.103&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;45142&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;20.118.214.103,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 44, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  44:   start_ip_address     = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected end_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            20.118.214.103
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.118.214.103,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.118.214.103
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.118.214.103
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.118.214.103,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 20.118.214.103
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 45142
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 20.118.214.103,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;20.118.214.103&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;45142&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;20.118.214.103,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 45, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  45:   end_ip_address       = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-synapse
+
+FailNow
+
+---
+
+## 30 Aug 26 02:20 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/http v3.6.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected start_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            52.250.243.34
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        52.250.243.34,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        52.250.243.34
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        52.250.243.34
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        52.250.243.34,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 52.250.243.34
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 39366
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 52.250.243.34,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;52.250.243.34&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;39366&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;52.250.243.34,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 44, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  44:   start_ip_address     = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected end_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            52.250.243.34
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        52.250.243.34,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        52.250.243.34
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        52.250.243.34
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        52.250.243.34,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 52.250.243.34
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 39366
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 52.250.243.34,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;52.250.243.34&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;39366&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;52.250.243.34,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 45, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  45:   end_ip_address       = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-synapse
+
+FailNow
+
+---
+
+## 23 Aug 26 00:48 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/http v3.6.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected start_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            20.161.47.116
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.161.47.116,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.161.47.116
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.161.47.116
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.161.47.116,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 20.161.47.116
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 48974
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 20.161.47.116,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;20.161.47.116&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;48974&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;20.161.47.116,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 44, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  44:   start_ip_address     = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected end_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            20.161.47.116
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.161.47.116,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.161.47.116
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.161.47.116
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.161.47.116,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 20.161.47.116
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 48974
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 20.161.47.116,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;20.161.47.116&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;48974&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;20.161.47.116,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 45, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  45:   end_ip_address       = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-synapse
+
+FailNow
+
+---
+
+## 16 Aug 26 00:37 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/http v3.6.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected start_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            20.55.163.181
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.55.163.181,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.55.163.181
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.55.163.181
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.55.163.181,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 20.55.163.181
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 59630
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 20.55.163.181,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;20.55.163.181&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;59630&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;20.55.163.181,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 44, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  44:   start_ip_address     = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected end_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            20.55.163.181
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.55.163.181,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.55.163.181
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.55.163.181
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.55.163.181,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 20.55.163.181
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 59630
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 20.55.163.181,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;20.55.163.181&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;59630&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;20.55.163.181,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 45, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  45:   end_ip_address       = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-synapse
+
+FailNow
+
+---
+
+## 09 Aug 26 01:01 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/http v3.6.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected start_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            134.33.76.1
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        134.33.76.1,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        134.33.76.1
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        134.33.76.1
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        134.33.76.1,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 134.33.76.1
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 45376
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 134.33.76.1,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;134.33.76.1&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;45376&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;134.33.76.1,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 44, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  44:   start_ip_address     = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected end_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            134.33.76.1
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        134.33.76.1,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        134.33.76.1
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        134.33.76.1
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        134.33.76.1,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 134.33.76.1
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 45376
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 134.33.76.1,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;134.33.76.1&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;45376&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;134.33.76.1,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 45, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  45:   end_ip_address       = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-synapse
+
+FailNow
+
+---
+
+## 02 Aug 26 01:49 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/http v3.6.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected start_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            64.236.177.112
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        64.236.177.112,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        64.236.177.112
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        64.236.177.112
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        64.236.177.112,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 64.236.177.112
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 33518
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 64.236.177.112,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;64.236.177.112&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;33518&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;64.236.177.112,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 44, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  44:   start_ip_address     = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected end_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            64.236.177.112
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        64.236.177.112,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        64.236.177.112
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        64.236.177.112
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        64.236.177.112,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 64.236.177.112
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 33518
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 64.236.177.112,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;64.236.177.112&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;33518&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;64.236.177.112,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 45, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  45:   end_ip_address       = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-synapse
+
+FailNow
+
+---
+
+## 26 Jul 26 00:41 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/http v3.6.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected start_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            52.159.227.196
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        52.159.227.196,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        52.159.227.196
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        52.159.227.196
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        52.159.227.196,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 52.159.227.196
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 34742
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 52.159.227.196,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;52.159.227.196&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;34742&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;52.159.227.196,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 44, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  44:   start_ip_address     = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected end_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            52.159.227.196
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        52.159.227.196,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        52.159.227.196
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        52.159.227.196
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        52.159.227.196,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 52.159.227.196
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 34742
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 52.159.227.196,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;52.159.227.196&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;34742&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;52.159.227.196,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 45, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  45:   end_ip_address       = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-synapse
+
+FailNow
+
+---
+
+## 12 Jul 26 01:36 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/http v3.6.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected start_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            20.161.68.240
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.161.68.240,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.161.68.240
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.161.68.240
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.161.68.240,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 20.161.68.240
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 45404
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 20.161.68.240,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;20.161.68.240&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;45404&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;20.161.68.240,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 44, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  44:   start_ip_address     = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected end_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            20.161.68.240
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.161.68.240,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.161.68.240
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.161.68.240
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.161.68.240,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 20.161.68.240
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 45404
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 20.161.68.240,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;20.161.68.240&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;45404&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;20.161.68.240,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 45, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  45:   end_ip_address       = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-synapse
+
+FailNow
+
+---
+
+## 05 Jul 26 01:06 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/http v3.6.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected start_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            20.168.157.147
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.168.157.147,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.168.157.147
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.168.157.147
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.168.157.147,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 20.168.157.147
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 44674
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 20.168.157.147,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;20.168.157.147&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;44674&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;20.168.157.147,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 44, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  44:   start_ip_address     = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected end_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            20.168.157.147
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.168.157.147,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.168.157.147
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.168.157.147
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.168.157.147,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 20.168.157.147
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 44674
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 20.168.157.147,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;20.168.157.147&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;44674&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;20.168.157.147,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 45, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  45:   end_ip_address       = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-synapse
+
+FailNow
+
+---
+
+## 28 Jun 26 01:49 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/http v3.6.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected start_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            172.208.154.19
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        172.208.154.19,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        172.208.154.19
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        172.208.154.19
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        172.208.154.19,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 172.208.154.19
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 42972
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 172.208.154.19,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;172.208.154.19&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;42972&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;172.208.154.19,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 44, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  44:   start_ip_address     = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected end_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            172.208.154.19
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        172.208.154.19,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        172.208.154.19
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        172.208.154.19
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        172.208.154.19,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 172.208.154.19
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 42972
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 172.208.154.19,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;172.208.154.19&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;42972&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;172.208.154.19,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 45, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  45:   end_ip_address       = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-synapse
+
+FailNow
+
+---
+
+## 14 Jun 26 01:26 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/http v3.6.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected start_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            135.232.176.162
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        135.232.176.162,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        135.232.176.162
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        135.232.176.162
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        135.232.176.162,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 135.232.176.162
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 53146
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 135.232.176.162,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;135.232.176.162&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;53146&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;135.232.176.162,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 44, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  44:   start_ip_address     = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected end_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            135.232.176.162
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        135.232.176.162,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        135.232.176.162
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        135.232.176.162
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        135.232.176.162,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 135.232.176.162
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 53146
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 135.232.176.162,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;135.232.176.162&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;53146&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;135.232.176.162,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2026 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 45, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  45:   end_ip_address       = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-synapse
+
+FailNow
+
+---
+
+## 31 May 26 02:11 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/http v3.6.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected start_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            172.183.135.149
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        172.183.135.149,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        172.183.135.149
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        172.183.135.149
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        172.183.135.149,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 172.183.135.149
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 33150
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 172.183.135.149,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;172.183.135.149&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;33150&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;172.183.135.149,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2024 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 44, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  44:   start_ip_address     = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected end_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            172.183.135.149
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        172.183.135.149,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        172.183.135.149
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        172.183.135.149
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        172.183.135.149,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 172.183.135.149
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 33150
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 172.183.135.149,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;172.183.135.149&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;33150&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;172.183.135.149,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2024 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 45, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  45:   end_ip_address       = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-synapse
+
+FailNow
+
+---
+
+## 24 May 26 01:02 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/http v3.6.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected start_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            20.115.103.81
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.115.103.81,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.115.103.81
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.115.103.81
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.115.103.81,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 20.115.103.81
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 49044
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 20.115.103.81,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;20.115.103.81&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;49044&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;20.115.103.81,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2024 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 44, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  44:   start_ip_address     = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected end_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            20.115.103.81
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.115.103.81,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.115.103.81
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.115.103.81
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        20.115.103.81,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 20.115.103.81
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 49044
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 20.115.103.81,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;20.115.103.81&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;49044&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;20.115.103.81,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2024 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 45, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  45:   end_ip_address       = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-synapse
+
+FailNow
+
+---
+
+## 10 May 26 00:54 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/http v3.5.0
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected start_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            40.76.117.243
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        40.76.117.243,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        40.76.117.243
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        40.76.117.243
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        40.76.117.243,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 40.76.117.243
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 41518
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 40.76.117.243,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;40.76.117.243&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;41518&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;40.76.117.243,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2024 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 44, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  44:   start_ip_address     = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mexpected end_ip_address to contain a valid IPv4 address, got: <!DOCTYPE html>
+	            	[31m│[0m [0m<html lang="en">
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<head>
+	            	[31m│[0m [0m    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	            	[31m│[0m [0m    <meta http-equiv="content-style-type" content="text/css" />
+	            	[31m│[0m [0m    <meta http-equiv="content-script-type" content="text/javascript" />
+	            	[31m│[0m [0m    <meta http-equiv="content-language" content="en" />
+	            	[31m│[0m [0m    <meta http-equiv="pragma" content="no-cache" />
+	            	[31m│[0m [0m    <meta http-equiv="cache-control" content="no-cache" />
+	            	[31m│[0m [0m    <meta name="description" content="Get my IP Address" />
+	            	[31m│[0m [0m    <meta name="keywords" content="ip address ifconfig ifconfig.me" />
+	            	[31m│[0m [0m    <meta name="author" content="" />
+	            	[31m│[0m [0m    <link rel="shortcut icon" href="favicon.ico" />
+	            	[31m│[0m [0m    <link rel="canonical" href="https://ifconfig.me/" />
+	            	[31m│[0m [0m    <title>What Is My IP Address? - ifconfig.me</title>
+	            	[31m│[0m [0m    <meta name="viewport" content="width=device-width, initial-scale=1">
+	            	[31m│[0m [0m    <link href="./static/styles/style.css" rel="stylesheet" type="text/css">
+	            	[31m│[0m [0m    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	            	[31m│[0m [0m</head>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m<body>
+	            	[31m│[0m [0m    <div id="ad_container">
+	            	[31m│[0m [0m        <div class="ad">
+	            	[31m│[0m [0m            Need a robust API to Geolocate IPs and fetch other crucial information? Try
+	            	[31m│[0m [0m            <a
+	            	[31m│[0m [0m                href="https://ipinfo.io/?utm_source=ifconfig.me&utm_medium=referral&utm_campaign=upsell_sister_sites">IPinfo.io</a>.
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m    <div id="container" class="clearfix">
+	            	[31m│[0m [0m        <div id="header">
+	            	[31m│[0m [0m            <table>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <h1><a href="http://ifconfig.me">What Is My IP Address? - ifconfig.me</a></h1>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td></td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        <div id="plungins">
+	            	[31m│[0m [0m                            <div class="plungin" id="button_facebook">
+	            	[31m│[0m [0m                                <div id="fb-root"></div>
+	            	[31m│[0m [0m                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	            	[31m│[0m [0m                                <fb:like href="http://ifconfig.me/" send="false" layout="button_count" width="100"
+	            	[31m│[0m [0m                                    show_faces="true" font=""></fb:like>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_twitter">
+	            	[31m│[0m [0m                                <a href="http://twitter.com/share" class="twitter-share-button"
+	            	[31m│[0m [0m                                    data-url="http://ifconfig.me/" data-text="What Is My IP Address? - ifconfig.me"
+	            	[31m│[0m [0m                                    data-count="horizontal"></a>
+	            	[31m│[0m [0m                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m                            <div class="plungin" id="button_plusone">
+	            	[31m│[0m [0m                                <!-- Place this tag where you want the +1 button to render -->
+	            	[31m│[0m [0m                                <g:plusone size="medium" href="http://ifconfig.me/"></g:plusone>
+	            	[31m│[0m [0m                                <!-- Place this render call where appropriate -->
+	            	[31m│[0m [0m                                <script type="text/javascript">
+	            	[31m│[0m [0m                                    (function () {
+	            	[31m│[0m [0m                                        var po = document.createElement('script');
+	            	[31m│[0m [0m                                        po.type = 'text/javascript';
+	            	[31m│[0m [0m                                        po.async = true;
+	            	[31m│[0m [0m                                        po.src = 'https://apis.google.com/js/plusone.js';
+	            	[31m│[0m [0m                                        var s = document.getElementsByTagName('script')[0];
+	            	[31m│[0m [0m                                        s.parentNode.insertBefore(po, s);
+	            	[31m│[0m [0m                                    })();
+	            	[31m│[0m [0m                                </script>
+	            	[31m│[0m [0m                            </div>
+	            	[31m│[0m [0m                        </div>
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="info_area">
+	            	[31m│[0m [0m            <h2>Your Connection</h2>
+	            	[31m│[0m [0m            <table id="info_table" summary="info">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">IP Address</td>
+	            	[31m│[0m [0m                    <td id="ip_address_cell"><strong id="ip_address">
+	            	[31m│[0m [0m                            40.76.117.243
+	            	[31m│[0m [0m                        </strong></td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">User Agent</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Language</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Referer</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Method</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        GET
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Encoding</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">MIME Type</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">Charset</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="info_table_label">X-Forwarded-For</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        40.76.117.243,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <!--<div id="middle"></div>-->
+	            	[31m│[0m [0m        <div id="cli_wrap">
+	            	[31m│[0m [0m            <h2>Command Line Interface</h2>
+	            	[31m│[0m [0m            <table id="cli_table" summary="cli">
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        40.76.117.243
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ip</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        40.76.117.243
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/ua</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        Go-http-client/2.0
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/lang</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/encoding</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        gzip
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/mime</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/charset</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/forwarded</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        40.76.117.243,34.160.111.145
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            ip_addr: 40.76.117.243
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            remote_host: unavailable
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            user_agent: Go-http-client/2.0
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            port: 41518
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            language: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            referer: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            connection: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            keep_alive: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            method: GET
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            encoding: gzip
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            mime: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            charset: 
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            via: 1.1 google
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            forwarded: 40.76.117.243,34.160.111.145
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                            
+	            	[31m│[0m [0m                            <br>
+	            	[31m│[0m [0m                        
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m                <tr>
+	            	[31m│[0m [0m                    <td class="cli_command">$ curl ifconfig.me/all.json</td>
+	            	[31m│[0m [0m                    <td class="cli_arrow">&rArr;</td>
+	            	[31m│[0m [0m                    <td>
+	            	[31m│[0m [0m                        {&quot;ip_addr&quot;:&quot;40.76.117.243&quot;,&quot;user_agent&quot;:&quot;Go-http-client/2.0&quot;,&quot;port&quot;:&quot;41518&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;encoding&quot;:&quot;gzip&quot;,&quot;via&quot;:&quot;1.1 google&quot;,&quot;forwarded&quot;:&quot;40.76.117.243,34.160.111.145&quot;}
+	            	[31m│[0m [0m                    </td>
+	            	[31m│[0m [0m                </tr>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m            </table>
+	            	[31m│[0m [0m        </div>
+	            	[31m│[0m [0m        <div id="footer">&copy; 2024 ifconfig.me</div>
+	            	[31m│[0m [0m    </div>
+	            	[31m│[0m [0m</body>
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m</html>[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_synapse_firewall_rule.allow_my_ip,
+	            	[31m│[0m [0m  on synapse_workspace.tf line 45, in resource "azurerm_synapse_firewall_rule" "allow_my_ip":
+	            	[31m│[0m [0m  45:   end_ip_address       = [4mdata.http.ip.response_body[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-synapse
+
+FailNow
+
+---
+
 ## 26 Apr 26 00:52 UTC
 
 Success: false

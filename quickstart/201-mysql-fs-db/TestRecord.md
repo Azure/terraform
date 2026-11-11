@@ -1,3 +1,1468 @@
+## 08 Nov 26 00:11 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 46a129c4-e8be-47b8-8f3b-e33635c4d700 Correlation ID: 0fe110c0-d1e3-488c-bef3-7f88ec537b52 Timestamp: 2026-11-08 00:11:17Z","error_codes":[5000229],"timestamp":"2026-11-08 00:11:17Z","trace_id":"46a129c4-e8be-47b8-8f3b-e33635c4d700","correlation_id":"0fe110c0-d1e3-488c-bef3-7f88ec537b52"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 17, in provider "azurerm":
+	            	[31m│[0m [0m  17: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-mysql-fs-db
+
+FailNow
+
+---
+
+## 01 Nov 26 00:13 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: f6cf2f50-b842-49b1-9094-6a5c706d5500 Correlation ID: 1996088b-09dd-4ae0-9aa1-85a34ce23e82 Timestamp: 2026-11-01 00:13:49Z","error_codes":[5000229],"timestamp":"2026-11-01 00:13:49Z","trace_id":"f6cf2f50-b842-49b1-9094-6a5c706d5500","correlation_id":"1996088b-09dd-4ae0-9aa1-85a34ce23e82"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 17, in provider "azurerm":
+	            	[31m│[0m [0m  17: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-mysql-fs-db
+
+FailNow
+
+---
+
+## 25 Oct 26 00:15 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant '4f00b3b6-2940-4f2c-b037-94637c180d30' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 12524669-87a8-4a78-9e4b-51ebdaa6fa01 Correlation ID: 5a826beb-cad8-49c6-b55f-b0eeaaffd4ba Timestamp: 2026-10-25 00:15:24Z","error_codes":[5000229],"timestamp":"2026-10-25 00:15:24Z","trace_id":"12524669-87a8-4a78-9e4b-51ebdaa6fa01","correlation_id":"5a826beb-cad8-49c6-b55f-b0eeaaffd4ba"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 17, in provider "azurerm":
+	            	[31m│[0m [0m  17: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-mysql-fs-db
+
+FailNow
+
+---
+
+## 18 Oct 26 00:34 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.name: Refreshing state... [id=rlhdkfjz][0m
+	            	[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mrandom_pet.rg_name: Refreshing state... [id=mysql-fs-db-rg-ace-moccasin][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-ace-moccasin][0m
+	            	[0m[1mazurerm_virtual_network.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-ace-moccasin/providers/Microsoft.Network/virtualNetworks/vnet-rlhdkfjz][0m
+	            	[0m[1mazurerm_private_dns_zone.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-ace-moccasin/providers/Microsoft.Network/privateDnsZones/rlhdkfjz.mysql.database.azure.com][0m
+	            	[0m[1mazurerm_subnet.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-ace-moccasin/providers/Microsoft.Network/virtualNetworks/vnet-rlhdkfjz/subnets/subnet-rlhdkfjz][0m
+	            	[0m[1mazurerm_private_dns_zone_virtual_network_link.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-ace-moccasin/providers/Microsoft.Network/privateDnsZones/rlhdkfjz.mysql.database.azure.com/virtualNetworkLinks/mysqlfsVnetZonerlhdkfjz.com][0m
+	            	[0m[1mazurerm_mysql_flexible_server.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-ace-moccasin/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-rlhdkfjz][0m
+	            	[0m[1mazurerm_mysql_flexible_database.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-ace-moccasin/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-rlhdkfjz/databases/mysqlfsdb_rlhdkfjz][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_mysql_flexible_server.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_mysql_flexible_server" "default" {
+	            	        id                            = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-ace-moccasin/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-rlhdkfjz"
+	            	        name                          = "mysqlfs-rlhdkfjz"
+	            	        tags                          = {}
+	            	      [31m-[0m[0m zone                          = "2" [90m-> null[0m[0m
+	            	        [90m# (14 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m high_availability {
+	            	          [31m-[0m[0m standby_availability_zone = "2" [90m-> null[0m[0m
+	            	            [90m# (1 unchanged attribute hidden)[0m[0m
+	            	        }
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-mysql-fs-db3467982074/src/quickstart/201-mysql-fs-db/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-mysql-fs-db3467982074/src/quickstart/201-mysql-fs-db/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-mysql-fs-db
+
+FailNow
+
+---
+
+## 11 Oct 26 00:37 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.rg_name: Refreshing state... [id=mysql-fs-db-rg-thankful-doberman][0m
+	            	[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mrandom_string.name: Refreshing state... [id=iqofrpyj][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-thankful-doberman][0m
+	            	[0m[1mazurerm_virtual_network.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-thankful-doberman/providers/Microsoft.Network/virtualNetworks/vnet-iqofrpyj][0m
+	            	[0m[1mazurerm_private_dns_zone.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-thankful-doberman/providers/Microsoft.Network/privateDnsZones/iqofrpyj.mysql.database.azure.com][0m
+	            	[0m[1mazurerm_subnet.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-thankful-doberman/providers/Microsoft.Network/virtualNetworks/vnet-iqofrpyj/subnets/subnet-iqofrpyj][0m
+	            	[0m[1mazurerm_private_dns_zone_virtual_network_link.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-thankful-doberman/providers/Microsoft.Network/privateDnsZones/iqofrpyj.mysql.database.azure.com/virtualNetworkLinks/mysqlfsVnetZoneiqofrpyj.com][0m
+	            	[0m[1mazurerm_mysql_flexible_server.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-thankful-doberman/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-iqofrpyj][0m
+	            	[0m[1mazurerm_mysql_flexible_database.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-thankful-doberman/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-iqofrpyj/databases/mysqlfsdb_iqofrpyj][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_mysql_flexible_server.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_mysql_flexible_server" "default" {
+	            	        id                            = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-thankful-doberman/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-iqofrpyj"
+	            	        name                          = "mysqlfs-iqofrpyj"
+	            	        tags                          = {}
+	            	      [31m-[0m[0m zone                          = "1" [90m-> null[0m[0m
+	            	        [90m# (14 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m high_availability {
+	            	          [31m-[0m[0m standby_availability_zone = "1" [90m-> null[0m[0m
+	            	            [90m# (1 unchanged attribute hidden)[0m[0m
+	            	        }
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-mysql-fs-db1372538218/src/quickstart/201-mysql-fs-db/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-mysql-fs-db1372538218/src/quickstart/201-mysql-fs-db/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-mysql-fs-db
+
+FailNow
+
+---
+
+## 04 Oct 26 01:45 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.name: Refreshing state... [id=mythhrtw][0m
+	            	[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mrandom_pet.rg_name: Refreshing state... [id=mysql-fs-db-rg-pretty-koala][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-pretty-koala][0m
+	            	[0m[1mazurerm_virtual_network.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-pretty-koala/providers/Microsoft.Network/virtualNetworks/vnet-mythhrtw][0m
+	            	[0m[1mazurerm_private_dns_zone.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-pretty-koala/providers/Microsoft.Network/privateDnsZones/mythhrtw.mysql.database.azure.com][0m
+	            	[0m[1mazurerm_subnet.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-pretty-koala/providers/Microsoft.Network/virtualNetworks/vnet-mythhrtw/subnets/subnet-mythhrtw][0m
+	            	[0m[1mazurerm_private_dns_zone_virtual_network_link.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-pretty-koala/providers/Microsoft.Network/privateDnsZones/mythhrtw.mysql.database.azure.com/virtualNetworkLinks/mysqlfsVnetZonemythhrtw.com][0m
+	            	[0m[1mazurerm_mysql_flexible_server.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-pretty-koala/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-mythhrtw][0m
+	            	[0m[1mazurerm_mysql_flexible_database.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-pretty-koala/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-mythhrtw/databases/mysqlfsdb_mythhrtw][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_mysql_flexible_server.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_mysql_flexible_server" "default" {
+	            	        id                            = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-pretty-koala/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-mythhrtw"
+	            	        name                          = "mysqlfs-mythhrtw"
+	            	        tags                          = {}
+	            	      [31m-[0m[0m zone                          = "2" [90m-> null[0m[0m
+	            	        [90m# (14 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m high_availability {
+	            	          [31m-[0m[0m standby_availability_zone = "2" [90m-> null[0m[0m
+	            	            [90m# (1 unchanged attribute hidden)[0m[0m
+	            	        }
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-mysql-fs-db2083340645/src/quickstart/201-mysql-fs-db/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-mysql-fs-db2083340645/src/quickstart/201-mysql-fs-db/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-mysql-fs-db
+
+FailNow
+
+---
+
+## 27 Sep 26 02:41 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mrandom_string.name: Refreshing state... [id=sehnnvko][0m
+	            	[0m[1mrandom_pet.rg_name: Refreshing state... [id=mysql-fs-db-rg-fit-lionfish][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-fit-lionfish][0m
+	            	[0m[1mazurerm_virtual_network.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-fit-lionfish/providers/Microsoft.Network/virtualNetworks/vnet-sehnnvko][0m
+	            	[0m[1mazurerm_private_dns_zone.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-fit-lionfish/providers/Microsoft.Network/privateDnsZones/sehnnvko.mysql.database.azure.com][0m
+	            	[0m[1mazurerm_subnet.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-fit-lionfish/providers/Microsoft.Network/virtualNetworks/vnet-sehnnvko/subnets/subnet-sehnnvko][0m
+	            	[0m[1mazurerm_private_dns_zone_virtual_network_link.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-fit-lionfish/providers/Microsoft.Network/privateDnsZones/sehnnvko.mysql.database.azure.com/virtualNetworkLinks/mysqlfsVnetZonesehnnvko.com][0m
+	            	[0m[1mazurerm_mysql_flexible_server.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-fit-lionfish/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-sehnnvko][0m
+	            	[0m[1mazurerm_mysql_flexible_database.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-fit-lionfish/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-sehnnvko/databases/mysqlfsdb_sehnnvko][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_mysql_flexible_server.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_mysql_flexible_server" "default" {
+	            	        id                            = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-fit-lionfish/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-sehnnvko"
+	            	        name                          = "mysqlfs-sehnnvko"
+	            	        tags                          = {}
+	            	      [31m-[0m[0m zone                          = "2" [90m-> null[0m[0m
+	            	        [90m# (14 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m high_availability {
+	            	          [31m-[0m[0m standby_availability_zone = "2" [90m-> null[0m[0m
+	            	            [90m# (1 unchanged attribute hidden)[0m[0m
+	            	        }
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-mysql-fs-db2165250025/src/quickstart/201-mysql-fs-db/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-mysql-fs-db2165250025/src/quickstart/201-mysql-fs-db/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-mysql-fs-db
+
+FailNow
+
+---
+
+## 20 Sep 26 00:38 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.rg_name: Refreshing state... [id=mysql-fs-db-rg-vocal-insect][0m
+	            	[0m[1mrandom_string.name: Refreshing state... [id=soucquky][0m
+	            	[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-vocal-insect][0m
+	            	[0m[1mazurerm_virtual_network.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-vocal-insect/providers/Microsoft.Network/virtualNetworks/vnet-soucquky][0m
+	            	[0m[1mazurerm_private_dns_zone.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-vocal-insect/providers/Microsoft.Network/privateDnsZones/soucquky.mysql.database.azure.com][0m
+	            	[0m[1mazurerm_subnet.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-vocal-insect/providers/Microsoft.Network/virtualNetworks/vnet-soucquky/subnets/subnet-soucquky][0m
+	            	[0m[1mazurerm_private_dns_zone_virtual_network_link.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-vocal-insect/providers/Microsoft.Network/privateDnsZones/soucquky.mysql.database.azure.com/virtualNetworkLinks/mysqlfsVnetZonesoucquky.com][0m
+	            	[0m[1mazurerm_mysql_flexible_server.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-vocal-insect/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-soucquky][0m
+	            	[0m[1mazurerm_mysql_flexible_database.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-vocal-insect/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-soucquky/databases/mysqlfsdb_soucquky][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_mysql_flexible_server.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_mysql_flexible_server" "default" {
+	            	        id                            = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-vocal-insect/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-soucquky"
+	            	        name                          = "mysqlfs-soucquky"
+	            	        tags                          = {}
+	            	      [31m-[0m[0m zone                          = "1" [90m-> null[0m[0m
+	            	        [90m# (14 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m high_availability {
+	            	          [31m-[0m[0m standby_availability_zone = "1" [90m-> null[0m[0m
+	            	            [90m# (1 unchanged attribute hidden)[0m[0m
+	            	        }
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-mysql-fs-db2249675703/src/quickstart/201-mysql-fs-db/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-mysql-fs-db2249675703/src/quickstart/201-mysql-fs-db/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-mysql-fs-db
+
+FailNow
+
+---
+
+## 13 Sep 26 00:37 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.rg_name: Refreshing state... [id=mysql-fs-db-rg-upright-sponge][0m
+	            	[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mrandom_string.name: Refreshing state... [id=sofqubar][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-upright-sponge][0m
+	            	[0m[1mazurerm_virtual_network.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-upright-sponge/providers/Microsoft.Network/virtualNetworks/vnet-sofqubar][0m
+	            	[0m[1mazurerm_private_dns_zone.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-upright-sponge/providers/Microsoft.Network/privateDnsZones/sofqubar.mysql.database.azure.com][0m
+	            	[0m[1mazurerm_subnet.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-upright-sponge/providers/Microsoft.Network/virtualNetworks/vnet-sofqubar/subnets/subnet-sofqubar][0m
+	            	[0m[1mazurerm_private_dns_zone_virtual_network_link.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-upright-sponge/providers/Microsoft.Network/privateDnsZones/sofqubar.mysql.database.azure.com/virtualNetworkLinks/mysqlfsVnetZonesofqubar.com][0m
+	            	[0m[1mazurerm_mysql_flexible_server.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-upright-sponge/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-sofqubar][0m
+	            	[0m[1mazurerm_mysql_flexible_database.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-upright-sponge/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-sofqubar/databases/mysqlfsdb_sofqubar][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_mysql_flexible_server.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_mysql_flexible_server" "default" {
+	            	        id                            = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-upright-sponge/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-sofqubar"
+	            	        name                          = "mysqlfs-sofqubar"
+	            	        tags                          = {}
+	            	      [31m-[0m[0m zone                          = "3" [90m-> null[0m[0m
+	            	        [90m# (14 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m high_availability {
+	            	          [31m-[0m[0m standby_availability_zone = "3" [90m-> null[0m[0m
+	            	            [90m# (1 unchanged attribute hidden)[0m[0m
+	            	        }
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-mysql-fs-db4050657068/src/quickstart/201-mysql-fs-db/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-mysql-fs-db4050657068/src/quickstart/201-mysql-fs-db/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-mysql-fs-db
+
+FailNow
+
+---
+
+## 06 Sep 26 02:12 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mrandom_string.name: Refreshing state... [id=fqeajjhh][0m
+	            	[0m[1mrandom_pet.rg_name: Refreshing state... [id=mysql-fs-db-rg-fast-yeti][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-fast-yeti][0m
+	            	[0m[1mazurerm_virtual_network.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-fast-yeti/providers/Microsoft.Network/virtualNetworks/vnet-fqeajjhh][0m
+	            	[0m[1mazurerm_private_dns_zone.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-fast-yeti/providers/Microsoft.Network/privateDnsZones/fqeajjhh.mysql.database.azure.com][0m
+	            	[0m[1mazurerm_subnet.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-fast-yeti/providers/Microsoft.Network/virtualNetworks/vnet-fqeajjhh/subnets/subnet-fqeajjhh][0m
+	            	[0m[1mazurerm_private_dns_zone_virtual_network_link.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-fast-yeti/providers/Microsoft.Network/privateDnsZones/fqeajjhh.mysql.database.azure.com/virtualNetworkLinks/mysqlfsVnetZonefqeajjhh.com][0m
+	            	[0m[1mazurerm_mysql_flexible_server.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-fast-yeti/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-fqeajjhh][0m
+	            	[0m[1mazurerm_mysql_flexible_database.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-fast-yeti/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-fqeajjhh/databases/mysqlfsdb_fqeajjhh][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_mysql_flexible_server.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_mysql_flexible_server" "default" {
+	            	        id                            = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-fast-yeti/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-fqeajjhh"
+	            	        name                          = "mysqlfs-fqeajjhh"
+	            	        tags                          = {}
+	            	      [31m-[0m[0m zone                          = "2" [90m-> null[0m[0m
+	            	        [90m# (14 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m high_availability {
+	            	          [31m-[0m[0m standby_availability_zone = "2" [90m-> null[0m[0m
+	            	            [90m# (1 unchanged attribute hidden)[0m[0m
+	            	        }
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-mysql-fs-db685158981/src/quickstart/201-mysql-fs-db/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-mysql-fs-db685158981/src/quickstart/201-mysql-fs-db/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-mysql-fs-db
+
+FailNow
+
+---
+
+## 30 Aug 26 00:38 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.rg_name: Refreshing state... [id=mysql-fs-db-rg-wanted-wren][0m
+	            	[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mrandom_string.name: Refreshing state... [id=rqtoqekz][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-wanted-wren][0m
+	            	[0m[1mazurerm_virtual_network.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-wanted-wren/providers/Microsoft.Network/virtualNetworks/vnet-rqtoqekz][0m
+	            	[0m[1mazurerm_private_dns_zone.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-wanted-wren/providers/Microsoft.Network/privateDnsZones/rqtoqekz.mysql.database.azure.com][0m
+	            	[0m[1mazurerm_subnet.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-wanted-wren/providers/Microsoft.Network/virtualNetworks/vnet-rqtoqekz/subnets/subnet-rqtoqekz][0m
+	            	[0m[1mazurerm_private_dns_zone_virtual_network_link.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-wanted-wren/providers/Microsoft.Network/privateDnsZones/rqtoqekz.mysql.database.azure.com/virtualNetworkLinks/mysqlfsVnetZonerqtoqekz.com][0m
+	            	[0m[1mazurerm_mysql_flexible_server.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-wanted-wren/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-rqtoqekz][0m
+	            	[0m[1mazurerm_mysql_flexible_database.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-wanted-wren/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-rqtoqekz/databases/mysqlfsdb_rqtoqekz][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_mysql_flexible_server.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_mysql_flexible_server" "default" {
+	            	        id                            = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-wanted-wren/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-rqtoqekz"
+	            	        name                          = "mysqlfs-rqtoqekz"
+	            	        tags                          = {}
+	            	      [31m-[0m[0m zone                          = "2" [90m-> null[0m[0m
+	            	        [90m# (14 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m high_availability {
+	            	          [31m-[0m[0m standby_availability_zone = "2" [90m-> null[0m[0m
+	            	            [90m# (1 unchanged attribute hidden)[0m[0m
+	            	        }
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-mysql-fs-db859972642/src/quickstart/201-mysql-fs-db/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-mysql-fs-db859972642/src/quickstart/201-mysql-fs-db/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-mysql-fs-db
+
+FailNow
+
+---
+
+## 23 Aug 26 00:33 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.rg_name: Refreshing state... [id=mysql-fs-db-rg-big-bat][0m
+	            	[0m[1mrandom_string.name: Refreshing state... [id=krcojfea][0m
+	            	[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-big-bat][0m
+	            	[0m[1mazurerm_virtual_network.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-big-bat/providers/Microsoft.Network/virtualNetworks/vnet-krcojfea][0m
+	            	[0m[1mazurerm_private_dns_zone.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-big-bat/providers/Microsoft.Network/privateDnsZones/krcojfea.mysql.database.azure.com][0m
+	            	[0m[1mazurerm_subnet.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-big-bat/providers/Microsoft.Network/virtualNetworks/vnet-krcojfea/subnets/subnet-krcojfea][0m
+	            	[0m[1mazurerm_private_dns_zone_virtual_network_link.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-big-bat/providers/Microsoft.Network/privateDnsZones/krcojfea.mysql.database.azure.com/virtualNetworkLinks/mysqlfsVnetZonekrcojfea.com][0m
+	            	[0m[1mazurerm_mysql_flexible_server.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-big-bat/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-krcojfea][0m
+	            	[0m[1mazurerm_mysql_flexible_database.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-big-bat/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-krcojfea/databases/mysqlfsdb_krcojfea][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_mysql_flexible_server.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_mysql_flexible_server" "default" {
+	            	        id                            = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-big-bat/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-krcojfea"
+	            	        name                          = "mysqlfs-krcojfea"
+	            	        tags                          = {}
+	            	      [31m-[0m[0m zone                          = "2" [90m-> null[0m[0m
+	            	        [90m# (14 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m high_availability {
+	            	          [31m-[0m[0m standby_availability_zone = "2" [90m-> null[0m[0m
+	            	            [90m# (1 unchanged attribute hidden)[0m[0m
+	            	        }
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-mysql-fs-db3359738796/src/quickstart/201-mysql-fs-db/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-mysql-fs-db3359738796/src/quickstart/201-mysql-fs-db/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-mysql-fs-db
+
+FailNow
+
+---
+
+## 16 Aug 26 00:30 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.rg_name: Refreshing state... [id=mysql-fs-db-rg-evident-warthog][0m
+	            	[0m[1mrandom_string.name: Refreshing state... [id=ftgefvpq][0m
+	            	[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-evident-warthog][0m
+	            	[0m[1mazurerm_virtual_network.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-evident-warthog/providers/Microsoft.Network/virtualNetworks/vnet-ftgefvpq][0m
+	            	[0m[1mazurerm_private_dns_zone.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-evident-warthog/providers/Microsoft.Network/privateDnsZones/ftgefvpq.mysql.database.azure.com][0m
+	            	[0m[1mazurerm_subnet.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-evident-warthog/providers/Microsoft.Network/virtualNetworks/vnet-ftgefvpq/subnets/subnet-ftgefvpq][0m
+	            	[0m[1mazurerm_private_dns_zone_virtual_network_link.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-evident-warthog/providers/Microsoft.Network/privateDnsZones/ftgefvpq.mysql.database.azure.com/virtualNetworkLinks/mysqlfsVnetZoneftgefvpq.com][0m
+	            	[0m[1mazurerm_mysql_flexible_server.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-evident-warthog/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-ftgefvpq][0m
+	            	[0m[1mazurerm_mysql_flexible_database.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-evident-warthog/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-ftgefvpq/databases/mysqlfsdb_ftgefvpq][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_mysql_flexible_server.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_mysql_flexible_server" "default" {
+	            	        id                            = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-evident-warthog/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-ftgefvpq"
+	            	        name                          = "mysqlfs-ftgefvpq"
+	            	        tags                          = {}
+	            	      [31m-[0m[0m zone                          = "2" [90m-> null[0m[0m
+	            	        [90m# (14 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m high_availability {
+	            	          [31m-[0m[0m standby_availability_zone = "2" [90m-> null[0m[0m
+	            	            [90m# (1 unchanged attribute hidden)[0m[0m
+	            	        }
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-mysql-fs-db1998515306/src/quickstart/201-mysql-fs-db/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-mysql-fs-db1998515306/src/quickstart/201-mysql-fs-db/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-mysql-fs-db
+
+FailNow
+
+---
+
+## 09 Aug 26 01:26 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.rg_name: Refreshing state... [id=mysql-fs-db-rg-cosmic-monkey][0m
+	            	[0m[1mrandom_string.name: Refreshing state... [id=kxqpzvac][0m
+	            	[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-cosmic-monkey][0m
+	            	[0m[1mazurerm_virtual_network.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-cosmic-monkey/providers/Microsoft.Network/virtualNetworks/vnet-kxqpzvac][0m
+	            	[0m[1mazurerm_private_dns_zone.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-cosmic-monkey/providers/Microsoft.Network/privateDnsZones/kxqpzvac.mysql.database.azure.com][0m
+	            	[0m[1mazurerm_subnet.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-cosmic-monkey/providers/Microsoft.Network/virtualNetworks/vnet-kxqpzvac/subnets/subnet-kxqpzvac][0m
+	            	[0m[1mazurerm_private_dns_zone_virtual_network_link.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-cosmic-monkey/providers/Microsoft.Network/privateDnsZones/kxqpzvac.mysql.database.azure.com/virtualNetworkLinks/mysqlfsVnetZonekxqpzvac.com][0m
+	            	[0m[1mazurerm_mysql_flexible_server.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-cosmic-monkey/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-kxqpzvac][0m
+	            	[0m[1mazurerm_mysql_flexible_database.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-cosmic-monkey/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-kxqpzvac/databases/mysqlfsdb_kxqpzvac][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_mysql_flexible_server.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_mysql_flexible_server" "default" {
+	            	        id                            = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-cosmic-monkey/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-kxqpzvac"
+	            	        name                          = "mysqlfs-kxqpzvac"
+	            	        tags                          = {}
+	            	      [31m-[0m[0m zone                          = "2" [90m-> null[0m[0m
+	            	        [90m# (14 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m high_availability {
+	            	          [31m-[0m[0m standby_availability_zone = "2" [90m-> null[0m[0m
+	            	            [90m# (1 unchanged attribute hidden)[0m[0m
+	            	        }
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-mysql-fs-db514955578/src/quickstart/201-mysql-fs-db/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-mysql-fs-db514955578/src/quickstart/201-mysql-fs-db/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-mysql-fs-db
+
+FailNow
+
+---
+
+## 02 Aug 26 01:19 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mrandom_pet.rg_name: Refreshing state... [id=mysql-fs-db-rg-neutral-platypus][0m
+	            	[0m[1mrandom_string.name: Refreshing state... [id=wnygejkl][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-neutral-platypus][0m
+	            	[0m[1mazurerm_virtual_network.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-neutral-platypus/providers/Microsoft.Network/virtualNetworks/vnet-wnygejkl][0m
+	            	[0m[1mazurerm_private_dns_zone.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-neutral-platypus/providers/Microsoft.Network/privateDnsZones/wnygejkl.mysql.database.azure.com][0m
+	            	[0m[1mazurerm_subnet.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-neutral-platypus/providers/Microsoft.Network/virtualNetworks/vnet-wnygejkl/subnets/subnet-wnygejkl][0m
+	            	[0m[1mazurerm_private_dns_zone_virtual_network_link.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-neutral-platypus/providers/Microsoft.Network/privateDnsZones/wnygejkl.mysql.database.azure.com/virtualNetworkLinks/mysqlfsVnetZonewnygejkl.com][0m
+	            	[0m[1mazurerm_mysql_flexible_server.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-neutral-platypus/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-wnygejkl][0m
+	            	[0m[1mazurerm_mysql_flexible_database.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-neutral-platypus/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-wnygejkl/databases/mysqlfsdb_wnygejkl][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_mysql_flexible_server.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_mysql_flexible_server" "default" {
+	            	        id                            = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/mysql-fs-db-rg-neutral-platypus/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-wnygejkl"
+	            	        name                          = "mysqlfs-wnygejkl"
+	            	        tags                          = {}
+	            	      [31m-[0m[0m zone                          = "2" [90m-> null[0m[0m
+	            	        [90m# (14 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m high_availability {
+	            	          [31m-[0m[0m standby_availability_zone = "2" [90m-> null[0m[0m
+	            	            [90m# (1 unchanged attribute hidden)[0m[0m
+	            	        }
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-mysql-fs-db2687696920/src/quickstart/201-mysql-fs-db/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-mysql-fs-db2687696920/src/quickstart/201-mysql-fs-db/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-mysql-fs-db
+
+FailNow
+
+---
+
+## 26 Jul 26 01:04 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.rg_name: Refreshing state... [id=mysql-fs-db-rg-rich-mullet][0m
+	            	[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mrandom_string.name: Refreshing state... [id=ywzqcjlk][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-rich-mullet][0m
+	            	[0m[1mazurerm_virtual_network.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-rich-mullet/providers/Microsoft.Network/virtualNetworks/vnet-ywzqcjlk][0m
+	            	[0m[1mazurerm_private_dns_zone.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-rich-mullet/providers/Microsoft.Network/privateDnsZones/ywzqcjlk.mysql.database.azure.com][0m
+	            	[0m[1mazurerm_subnet.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-rich-mullet/providers/Microsoft.Network/virtualNetworks/vnet-ywzqcjlk/subnets/subnet-ywzqcjlk][0m
+	            	[0m[1mazurerm_private_dns_zone_virtual_network_link.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-rich-mullet/providers/Microsoft.Network/privateDnsZones/ywzqcjlk.mysql.database.azure.com/virtualNetworkLinks/mysqlfsVnetZoneywzqcjlk.com][0m
+	            	[0m[1mazurerm_mysql_flexible_server.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-rich-mullet/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-ywzqcjlk][0m
+	            	[0m[1mazurerm_mysql_flexible_database.main: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-rich-mullet/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-ywzqcjlk/databases/mysqlfsdb_ywzqcjlk][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	[31m-[0m/[32m+[0m destroy and then create replacement[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_mysql_flexible_server.default[0m must be [1m[31mreplaced[0m
+	            	[0m[31m-[0m/[32m+[0m[0m resource "azurerm_mysql_flexible_server" "default" {
+	            	      [33m~[0m[0m fqdn                          = "mysqlfs-ywzqcjlk.mysql.database.azure.com" -> (known after apply)
+	            	      [33m~[0m[0m id                            = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-rich-mullet/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-ywzqcjlk" -> (known after apply)
+	            	        name                          = "mysqlfs-ywzqcjlk"
+	            	      [33m~[0m[0m public_network_access_enabled = false -> (known after apply)
+	            	      [33m~[0m[0m replica_capacity              = 10 -> (known after apply)
+	            	      [33m~[0m[0m replication_role              = "None" -> (known after apply)
+	            	      [31m-[0m[0m tags                          = {} [90m-> null[0m[0m
+	            	      [31m-[0m[0m zone                          = "3" [90m-> null[0m[0m
+	            	        [90m# (10 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m high_availability {
+	            	          [31m-[0m[0m standby_availability_zone = "3" [90m-> null[0m[0m
+	            	            [90m# (1 unchanged attribute hidden)[0m[0m
+	            	        }
+	            	
+	            	      [33m~[0m[0m storage {
+	            	          [33m~[0m[0m iops               = 396 [33m->[0m[0m 360
+	            	          [33m~[0m[0m size_gb            = 32 [33m->[0m[0m 20 [31m# forces replacement[0m[0m
+	            	            [90m# (2 unchanged attributes hidden)[0m[0m
+	            	        }
+	            	
+	            	        [90m# (1 unchanged block hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m1 to add, 0 to change, 1 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-mysql-fs-db1746967131/src/quickstart/201-mysql-fs-db/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-mysql-fs-db1746967131/src/quickstart/201-mysql-fs-db/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-mysql-fs-db
+
+FailNow
+
+---
+
+## 12 Jul 26 00:51 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.rg_name: Refreshing state... [id=mysql-fs-db-rg-patient-macaque][0m
+	            	[0m[1mrandom_string.name: Refreshing state... [id=nljatotk][0m
+	            	[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-patient-macaque][0m
+	            	[0m[1mazurerm_virtual_network.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-patient-macaque/providers/Microsoft.Network/virtualNetworks/vnet-nljatotk][0m
+	            	[0m[1mazurerm_private_dns_zone.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-patient-macaque/providers/Microsoft.Network/privateDnsZones/nljatotk.mysql.database.azure.com][0m
+	            	[0m[1mazurerm_subnet.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-patient-macaque/providers/Microsoft.Network/virtualNetworks/vnet-nljatotk/subnets/subnet-nljatotk][0m
+	            	[0m[1mazurerm_private_dns_zone_virtual_network_link.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-patient-macaque/providers/Microsoft.Network/privateDnsZones/nljatotk.mysql.database.azure.com/virtualNetworkLinks/mysqlfsVnetZonenljatotk.com][0m
+	            	[0m[1mazurerm_mysql_flexible_server.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-patient-macaque/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-nljatotk][0m
+	            	[0m[1mazurerm_mysql_flexible_database.main: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-patient-macaque/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-nljatotk/databases/mysqlfsdb_nljatotk][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_mysql_flexible_server.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_mysql_flexible_server" "default" {
+	            	        id                            = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-patient-macaque/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-nljatotk"
+	            	        name                          = "mysqlfs-nljatotk"
+	            	        tags                          = {}
+	            	      [31m-[0m[0m zone                          = "3" [90m-> null[0m[0m
+	            	        [90m# (14 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m high_availability {
+	            	          [31m-[0m[0m standby_availability_zone = "3" [90m-> null[0m[0m
+	            	            [90m# (1 unchanged attribute hidden)[0m[0m
+	            	        }
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-mysql-fs-db979432959/src/quickstart/201-mysql-fs-db/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-mysql-fs-db979432959/src/quickstart/201-mysql-fs-db/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-mysql-fs-db
+
+FailNow
+
+---
+
+## 05 Jul 26 01:44 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.rg_name: Refreshing state... [id=mysql-fs-db-rg-simple-peacock][0m
+	            	[0m[1mrandom_string.name: Refreshing state... [id=qdpkjmfx][0m
+	            	[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-simple-peacock][0m
+	            	[0m[1mazurerm_virtual_network.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-simple-peacock/providers/Microsoft.Network/virtualNetworks/vnet-qdpkjmfx][0m
+	            	[0m[1mazurerm_private_dns_zone.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-simple-peacock/providers/Microsoft.Network/privateDnsZones/qdpkjmfx.mysql.database.azure.com][0m
+	            	[0m[1mazurerm_subnet.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-simple-peacock/providers/Microsoft.Network/virtualNetworks/vnet-qdpkjmfx/subnets/subnet-qdpkjmfx][0m
+	            	[0m[1mazurerm_private_dns_zone_virtual_network_link.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-simple-peacock/providers/Microsoft.Network/privateDnsZones/qdpkjmfx.mysql.database.azure.com/virtualNetworkLinks/mysqlfsVnetZoneqdpkjmfx.com][0m
+	            	[0m[1mazurerm_mysql_flexible_server.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-simple-peacock/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-qdpkjmfx][0m
+	            	[0m[1mazurerm_mysql_flexible_database.main: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-simple-peacock/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-qdpkjmfx/databases/mysqlfsdb_qdpkjmfx][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_mysql_flexible_server.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_mysql_flexible_server" "default" {
+	            	        id                            = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-simple-peacock/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-qdpkjmfx"
+	            	        name                          = "mysqlfs-qdpkjmfx"
+	            	        tags                          = {}
+	            	      [31m-[0m[0m zone                          = "3" [90m-> null[0m[0m
+	            	        [90m# (14 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m high_availability {
+	            	          [31m-[0m[0m standby_availability_zone = "3" [90m-> null[0m[0m
+	            	            [90m# (1 unchanged attribute hidden)[0m[0m
+	            	        }
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-mysql-fs-db2547382847/src/quickstart/201-mysql-fs-db/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-mysql-fs-db2547382847/src/quickstart/201-mysql-fs-db/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-mysql-fs-db
+
+FailNow
+
+---
+
+## 28 Jun 26 01:30 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.rg_name: Refreshing state... [id=mysql-fs-db-rg-definite-bunny][0m
+	            	[0m[1mrandom_string.name: Refreshing state... [id=aqkmxwgc][0m
+	            	[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-definite-bunny][0m
+	            	[0m[1mazurerm_virtual_network.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-definite-bunny/providers/Microsoft.Network/virtualNetworks/vnet-aqkmxwgc][0m
+	            	[0m[1mazurerm_private_dns_zone.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-definite-bunny/providers/Microsoft.Network/privateDnsZones/aqkmxwgc.mysql.database.azure.com][0m
+	            	[0m[1mazurerm_subnet.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-definite-bunny/providers/Microsoft.Network/virtualNetworks/vnet-aqkmxwgc/subnets/subnet-aqkmxwgc][0m
+	            	[0m[1mazurerm_private_dns_zone_virtual_network_link.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-definite-bunny/providers/Microsoft.Network/privateDnsZones/aqkmxwgc.mysql.database.azure.com/virtualNetworkLinks/mysqlfsVnetZoneaqkmxwgc.com][0m
+	            	[0m[1mazurerm_mysql_flexible_server.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-definite-bunny/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-aqkmxwgc][0m
+	            	[0m[1mazurerm_mysql_flexible_database.main: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-definite-bunny/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-aqkmxwgc/databases/mysqlfsdb_aqkmxwgc][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_mysql_flexible_server.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_mysql_flexible_server" "default" {
+	            	        id                            = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-definite-bunny/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-aqkmxwgc"
+	            	        name                          = "mysqlfs-aqkmxwgc"
+	            	        tags                          = {}
+	            	      [31m-[0m[0m zone                          = "3" [90m-> null[0m[0m
+	            	        [90m# (14 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m high_availability {
+	            	          [31m-[0m[0m standby_availability_zone = "3" [90m-> null[0m[0m
+	            	            [90m# (1 unchanged attribute hidden)[0m[0m
+	            	        }
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-mysql-fs-db2320433509/src/quickstart/201-mysql-fs-db/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-mysql-fs-db2320433509/src/quickstart/201-mysql-fs-db/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-mysql-fs-db
+
+FailNow
+
+---
+
+## 14 Jun 26 00:58 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mrandom_pet.rg_name: Refreshing state... [id=mysql-fs-db-rg-trusting-kit][0m
+	            	[0m[1mrandom_string.name: Refreshing state... [id=cbahamxb][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-trusting-kit][0m
+	            	[0m[1mazurerm_virtual_network.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-trusting-kit/providers/Microsoft.Network/virtualNetworks/vnet-cbahamxb][0m
+	            	[0m[1mazurerm_private_dns_zone.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-trusting-kit/providers/Microsoft.Network/privateDnsZones/cbahamxb.mysql.database.azure.com][0m
+	            	[0m[1mazurerm_subnet.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-trusting-kit/providers/Microsoft.Network/virtualNetworks/vnet-cbahamxb/subnets/subnet-cbahamxb][0m
+	            	[0m[1mazurerm_private_dns_zone_virtual_network_link.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-trusting-kit/providers/Microsoft.Network/privateDnsZones/cbahamxb.mysql.database.azure.com/virtualNetworkLinks/mysqlfsVnetZonecbahamxb.com][0m
+	            	[0m[1mazurerm_mysql_flexible_server.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-trusting-kit/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-cbahamxb][0m
+	            	[0m[1mazurerm_mysql_flexible_database.main: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-trusting-kit/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-cbahamxb/databases/mysqlfsdb_cbahamxb][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_mysql_flexible_server.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_mysql_flexible_server" "default" {
+	            	        id                            = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-trusting-kit/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-cbahamxb"
+	            	        name                          = "mysqlfs-cbahamxb"
+	            	        tags                          = {}
+	            	      [31m-[0m[0m zone                          = "3" [90m-> null[0m[0m
+	            	        [90m# (14 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m high_availability {
+	            	          [31m-[0m[0m standby_availability_zone = "3" [90m-> null[0m[0m
+	            	            [90m# (1 unchanged attribute hidden)[0m[0m
+	            	        }
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-mysql-fs-db3108718364/src/quickstart/201-mysql-fs-db/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-mysql-fs-db3108718364/src/quickstart/201-mysql-fs-db/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-mysql-fs-db
+
+FailNow
+
+---
+
+## 31 May 26 01:59 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.rg_name: Refreshing state... [id=mysql-fs-db-rg-driving-cobra][0m
+	            	[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mrandom_string.name: Refreshing state... [id=vxtrlskt][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-driving-cobra][0m
+	            	[0m[1mazurerm_virtual_network.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-driving-cobra/providers/Microsoft.Network/virtualNetworks/vnet-vxtrlskt][0m
+	            	[0m[1mazurerm_private_dns_zone.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-driving-cobra/providers/Microsoft.Network/privateDnsZones/vxtrlskt.mysql.database.azure.com][0m
+	            	[0m[1mazurerm_subnet.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-driving-cobra/providers/Microsoft.Network/virtualNetworks/vnet-vxtrlskt/subnets/subnet-vxtrlskt][0m
+	            	[0m[1mazurerm_private_dns_zone_virtual_network_link.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-driving-cobra/providers/Microsoft.Network/privateDnsZones/vxtrlskt.mysql.database.azure.com/virtualNetworkLinks/mysqlfsVnetZonevxtrlskt.com][0m
+	            	[0m[1mazurerm_mysql_flexible_server.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-driving-cobra/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-vxtrlskt][0m
+	            	[0m[1mazurerm_mysql_flexible_database.main: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-driving-cobra/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-vxtrlskt/databases/mysqlfsdb_vxtrlskt][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_mysql_flexible_server.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_mysql_flexible_server" "default" {
+	            	        id                            = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-driving-cobra/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-vxtrlskt"
+	            	        name                          = "mysqlfs-vxtrlskt"
+	            	        tags                          = {}
+	            	      [31m-[0m[0m zone                          = "3" [90m-> null[0m[0m
+	            	        [90m# (14 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m high_availability {
+	            	          [31m-[0m[0m standby_availability_zone = "3" [90m-> null[0m[0m
+	            	            [90m# (1 unchanged attribute hidden)[0m[0m
+	            	        }
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-mysql-fs-db2780208059/src/quickstart/201-mysql-fs-db/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-mysql-fs-db2780208059/src/quickstart/201-mysql-fs-db/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-mysql-fs-db
+
+FailNow
+
+---
+
+## 24 May 26 00:56 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mrandom_string.name: Refreshing state... [id=yxsiykbf][0m
+	            	[0m[1mrandom_pet.rg_name: Refreshing state... [id=mysql-fs-db-rg-famous-jaybird][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-famous-jaybird][0m
+	            	[0m[1mazurerm_virtual_network.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-famous-jaybird/providers/Microsoft.Network/virtualNetworks/vnet-yxsiykbf][0m
+	            	[0m[1mazurerm_private_dns_zone.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-famous-jaybird/providers/Microsoft.Network/privateDnsZones/yxsiykbf.mysql.database.azure.com][0m
+	            	[0m[1mazurerm_subnet.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-famous-jaybird/providers/Microsoft.Network/virtualNetworks/vnet-yxsiykbf/subnets/subnet-yxsiykbf][0m
+	            	[0m[1mazurerm_private_dns_zone_virtual_network_link.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-famous-jaybird/providers/Microsoft.Network/privateDnsZones/yxsiykbf.mysql.database.azure.com/virtualNetworkLinks/mysqlfsVnetZoneyxsiykbf.com][0m
+	            	[0m[1mazurerm_mysql_flexible_server.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-famous-jaybird/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-yxsiykbf][0m
+	            	[0m[1mazurerm_mysql_flexible_database.main: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-famous-jaybird/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-yxsiykbf/databases/mysqlfsdb_yxsiykbf][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_mysql_flexible_server.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_mysql_flexible_server" "default" {
+	            	        id                            = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-famous-jaybird/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-yxsiykbf"
+	            	        name                          = "mysqlfs-yxsiykbf"
+	            	        tags                          = {}
+	            	      [31m-[0m[0m zone                          = "3" [90m-> null[0m[0m
+	            	        [90m# (14 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m high_availability {
+	            	          [31m-[0m[0m standby_availability_zone = "3" [90m-> null[0m[0m
+	            	            [90m# (1 unchanged attribute hidden)[0m[0m
+	            	        }
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-mysql-fs-db4281615558/src/quickstart/201-mysql-fs-db/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-mysql-fs-db4281615558/src/quickstart/201-mysql-fs-db/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-mysql-fs-db
+
+FailNow
+
+---
+
+## 10 May 26 00:54 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.rg_name: Refreshing state... [id=mysql-fs-db-rg-crisp-weevil][0m
+	            	[0m[1mrandom_string.name: Refreshing state... [id=lojispxv][0m
+	            	[0m[1mrandom_password.password: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-crisp-weevil][0m
+	            	[0m[1mazurerm_virtual_network.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-crisp-weevil/providers/Microsoft.Network/virtualNetworks/vnet-lojispxv][0m
+	            	[0m[1mazurerm_private_dns_zone.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-crisp-weevil/providers/Microsoft.Network/privateDnsZones/lojispxv.mysql.database.azure.com][0m
+	            	[0m[1mazurerm_subnet.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-crisp-weevil/providers/Microsoft.Network/virtualNetworks/vnet-lojispxv/subnets/subnet-lojispxv][0m
+	            	[0m[1mazurerm_private_dns_zone_virtual_network_link.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-crisp-weevil/providers/Microsoft.Network/privateDnsZones/lojispxv.mysql.database.azure.com/virtualNetworkLinks/mysqlfsVnetZonelojispxv.com][0m
+	            	[0m[1mazurerm_mysql_flexible_server.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-crisp-weevil/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-lojispxv][0m
+	            	[0m[1mazurerm_mysql_flexible_database.main: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-crisp-weevil/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-lojispxv/databases/mysqlfsdb_lojispxv][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	[31m-[0m/[32m+[0m destroy and then create replacement[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_mysql_flexible_server.default[0m must be [1m[31mreplaced[0m
+	            	[0m[31m-[0m/[32m+[0m[0m resource "azurerm_mysql_flexible_server" "default" {
+	            	      [33m~[0m[0m fqdn                          = "mysqlfs-lojispxv.mysql.database.azure.com" -> (known after apply)
+	            	      [33m~[0m[0m id                            = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/mysql-fs-db-rg-crisp-weevil/providers/Microsoft.DBforMySQL/flexibleServers/mysqlfs-lojispxv" -> (known after apply)
+	            	        name                          = "mysqlfs-lojispxv"
+	            	      [33m~[0m[0m public_network_access_enabled = false -> (known after apply)
+	            	      [33m~[0m[0m replica_capacity              = 10 -> (known after apply)
+	            	      [33m~[0m[0m replication_role              = "None" -> (known after apply)
+	            	      [31m-[0m[0m tags                          = {} [90m-> null[0m[0m
+	            	      [31m-[0m[0m zone                          = "3" [90m-> null[0m[0m
+	            	        [90m# (10 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m high_availability {
+	            	          [31m-[0m[0m standby_availability_zone = "3" [90m-> null[0m[0m
+	            	            [90m# (1 unchanged attribute hidden)[0m[0m
+	            	        }
+	            	
+	            	      [33m~[0m[0m storage {
+	            	          [33m~[0m[0m iops               = 396 [33m->[0m[0m 360
+	            	          [33m~[0m[0m size_gb            = 32 [33m->[0m[0m 20 [31m# forces replacement[0m[0m
+	            	            [90m# (2 unchanged attributes hidden)[0m[0m
+	            	        }
+	            	
+	            	        [90m# (1 unchanged block hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m1 to add, 0 to change, 1 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-mysql-fs-db354461523/src/quickstart/201-mysql-fs-db/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-mysql-fs-db354461523/src/quickstart/201-mysql-fs-db/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-mysql-fs-db
+
+FailNow
+
+---
+
 ## 26 Apr 26 00:45 UTC
 
 Success: false

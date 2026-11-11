@@ -1,3 +1,968 @@
+## 08 Nov 26 00:17 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant '4f00b3b6-2940-4f2c-b037-94637c180d30' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 2af961d8-095e-475d-8283-de1ec5e82401 Correlation ID: eca72c4d-d122-42ba-80b9-562fcee9595d Timestamp: 2026-11-08 00:17:44Z","error_codes":[5000229],"timestamp":"2026-11-08 00:17:44Z","trace_id":"2af961d8-095e-475d-8283-de1ec5e82401","correlation_id":"eca72c4d-d122-42ba-80b9-562fcee9595d"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-managed-instance
+
+FailNow
+
+---
+
+## 01 Nov 26 00:15 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 3069d7de-0812-4325-8c1b-4949a1712f00 Correlation ID: 6319e116-aa30-4cf4-99c2-2085bd27d721 Timestamp: 2026-11-01 00:15:23Z","error_codes":[5000229],"timestamp":"2026-11-01 00:15:23Z","trace_id":"3069d7de-0812-4325-8c1b-4949a1712f00","correlation_id":"6319e116-aa30-4cf4-99c2-2085bd27d721"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-managed-instance
+
+FailNow
+
+---
+
+## 25 Oct 26 00:14 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 3ac34391-1a27-41f1-921b-3c8e1a263202 Correlation ID: 88e0070e-27ac-447f-bea3-6795a3c0258a Timestamp: 2026-10-25 00:14:21Z","error_codes":[5000229],"timestamp":"2026-10-25 00:14:21Z","trace_id":"3ac34391-1a27-41f1-921b-3c8e1a263202","correlation_id":"88e0070e-27ac-447f-bea3-6795a3c0258a"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-managed-instance
+
+FailNow
+
+---
+
+## 18 Oct 26 00:54 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Managed Instance: (Name "mi-burro-mssql" / Resource Group "mi-burro-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending request: StatusCode=400 -- Original Error: Code="ProvisioningDisabled" Message="The deployment request failed because it would bring the total number of vCores to 8, which exceeds the limit of 0 allowed for the requested hardware family in your subscription. Please submit a support request to extend the quota using the Azure portal: aka.ms/sql-mi-obtain-larger-quota"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_mssql_managed_instance.main,
+	            	[31m│[0m [0m  on main.tf line 69, in resource "azurerm_mssql_managed_instance" "main":
+	            	[31m│[0m [0m  69: resource "azurerm_mssql_managed_instance" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating Managed Instance: (Name "mi-burro-mssql" / Resource Group
+	            	[31m│[0m [0m"mi-burro-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending
+	            	[31m│[0m [0mrequest: StatusCode=400 -- Original Error: Code="ProvisioningDisabled"
+	            	[31m│[0m [0mMessage="The deployment request failed because it would bring the total
+	            	[31m│[0m [0mnumber of vCores to 8, which exceeds the limit of 0 allowed for the
+	            	[31m│[0m [0mrequested hardware family in your subscription. Please submit a support
+	            	[31m│[0m [0mrequest to extend the quota using the Azure portal:
+	            	[31m│[0m [0maka.ms/sql-mi-obtain-larger-quota"
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-managed-instance
+
+FailNow
+
+---
+
+## 11 Oct 26 00:57 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Managed Instance: (Name "mi-moccasin-mssql" / Resource Group "mi-moccasin-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending request: StatusCode=400 -- Original Error: Code="ProvisioningDisabled" Message="The deployment request failed because it would bring the total number of vCores to 8, which exceeds the limit of 0 allowed for the requested hardware family in your subscription. Please submit a support request to extend the quota using the Azure portal: aka.ms/sql-mi-obtain-larger-quota"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_mssql_managed_instance.main,
+	            	[31m│[0m [0m  on main.tf line 69, in resource "azurerm_mssql_managed_instance" "main":
+	            	[31m│[0m [0m  69: resource "azurerm_mssql_managed_instance" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating Managed Instance: (Name "mi-moccasin-mssql" / Resource Group
+	            	[31m│[0m [0m"mi-moccasin-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure
+	            	[31m│[0m [0msending request: StatusCode=400 -- Original Error:
+	            	[31m│[0m [0mCode="ProvisioningDisabled" Message="The deployment request failed because
+	            	[31m│[0m [0mit would bring the total number of vCores to 8, which exceeds the limit of
+	            	[31m│[0m [0m0 allowed for the requested hardware family in your subscription. Please
+	            	[31m│[0m [0msubmit a support request to extend the quota using the Azure portal:
+	            	[31m│[0m [0maka.ms/sql-mi-obtain-larger-quota"
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-managed-instance
+
+FailNow
+
+---
+
+## 04 Oct 26 01:16 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Managed Instance: (Name "mi-mule-mssql" / Resource Group "mi-mule-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending request: StatusCode=400 -- Original Error: Code="ProvisioningDisabled" Message="The deployment request failed because it would bring the total number of vCores to 8, which exceeds the limit of 0 allowed for the requested hardware family in your subscription. Please submit a support request to extend the quota using the Azure portal: aka.ms/sql-mi-obtain-larger-quota"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_mssql_managed_instance.main,
+	            	[31m│[0m [0m  on main.tf line 69, in resource "azurerm_mssql_managed_instance" "main":
+	            	[31m│[0m [0m  69: resource "azurerm_mssql_managed_instance" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating Managed Instance: (Name "mi-mule-mssql" / Resource Group
+	            	[31m│[0m [0m"mi-mule-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending
+	            	[31m│[0m [0mrequest: StatusCode=400 -- Original Error: Code="ProvisioningDisabled"
+	            	[31m│[0m [0mMessage="The deployment request failed because it would bring the total
+	            	[31m│[0m [0mnumber of vCores to 8, which exceeds the limit of 0 allowed for the
+	            	[31m│[0m [0mrequested hardware family in your subscription. Please submit a support
+	            	[31m│[0m [0mrequest to extend the quota using the Azure portal:
+	            	[31m│[0m [0maka.ms/sql-mi-obtain-larger-quota"
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-managed-instance
+
+FailNow
+
+---
+
+## 27 Sep 26 02:40 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Managed Instance: (Name "mi-ghoul-mssql" / Resource Group "mi-ghoul-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending request: StatusCode=400 -- Original Error: Code="ProvisioningDisabled" Message="The deployment request failed because it would bring the total number of vCores to 8, which exceeds the limit of 0 allowed for the requested hardware family in your subscription. Please submit a support request to extend the quota using the Azure portal: aka.ms/sql-mi-obtain-larger-quota"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_mssql_managed_instance.main,
+	            	[31m│[0m [0m  on main.tf line 69, in resource "azurerm_mssql_managed_instance" "main":
+	            	[31m│[0m [0m  69: resource "azurerm_mssql_managed_instance" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating Managed Instance: (Name "mi-ghoul-mssql" / Resource Group
+	            	[31m│[0m [0m"mi-ghoul-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending
+	            	[31m│[0m [0mrequest: StatusCode=400 -- Original Error: Code="ProvisioningDisabled"
+	            	[31m│[0m [0mMessage="The deployment request failed because it would bring the total
+	            	[31m│[0m [0mnumber of vCores to 8, which exceeds the limit of 0 allowed for the
+	            	[31m│[0m [0mrequested hardware family in your subscription. Please submit a support
+	            	[31m│[0m [0mrequest to extend the quota using the Azure portal:
+	            	[31m│[0m [0maka.ms/sql-mi-obtain-larger-quota"
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-managed-instance
+
+FailNow
+
+---
+
+## 20 Sep 26 00:59 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Managed Instance: (Name "mi-grizzly-mssql" / Resource Group "mi-grizzly-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending request: StatusCode=400 -- Original Error: Code="ProvisioningDisabled" Message="The deployment request failed because it would bring the total number of vCores to 8, which exceeds the limit of 0 allowed for the requested hardware family in your subscription. Please submit a support request to extend the quota using the Azure portal: aka.ms/sql-mi-obtain-larger-quota"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_mssql_managed_instance.main,
+	            	[31m│[0m [0m  on main.tf line 69, in resource "azurerm_mssql_managed_instance" "main":
+	            	[31m│[0m [0m  69: resource "azurerm_mssql_managed_instance" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating Managed Instance: (Name "mi-grizzly-mssql" / Resource Group
+	            	[31m│[0m [0m"mi-grizzly-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure
+	            	[31m│[0m [0msending request: StatusCode=400 -- Original Error:
+	            	[31m│[0m [0mCode="ProvisioningDisabled" Message="The deployment request failed because
+	            	[31m│[0m [0mit would bring the total number of vCores to 8, which exceeds the limit of
+	            	[31m│[0m [0m0 allowed for the requested hardware family in your subscription. Please
+	            	[31m│[0m [0msubmit a support request to extend the quota using the Azure portal:
+	            	[31m│[0m [0maka.ms/sql-mi-obtain-larger-quota"
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-managed-instance
+
+FailNow
+
+---
+
+## 13 Sep 26 02:02 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Managed Instance: (Name "mi-mosquito-mssql" / Resource Group "mi-mosquito-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending request: StatusCode=400 -- Original Error: Code="ProvisioningDisabled" Message="The deployment request failed because it would bring the total number of vCores to 8, which exceeds the limit of 0 allowed for the requested hardware family in your subscription. Please submit a support request to extend the quota using the Azure portal: aka.ms/sql-mi-obtain-larger-quota"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_mssql_managed_instance.main,
+	            	[31m│[0m [0m  on main.tf line 69, in resource "azurerm_mssql_managed_instance" "main":
+	            	[31m│[0m [0m  69: resource "azurerm_mssql_managed_instance" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating Managed Instance: (Name "mi-mosquito-mssql" / Resource Group
+	            	[31m│[0m [0m"mi-mosquito-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure
+	            	[31m│[0m [0msending request: StatusCode=400 -- Original Error:
+	            	[31m│[0m [0mCode="ProvisioningDisabled" Message="The deployment request failed because
+	            	[31m│[0m [0mit would bring the total number of vCores to 8, which exceeds the limit of
+	            	[31m│[0m [0m0 allowed for the requested hardware family in your subscription. Please
+	            	[31m│[0m [0msubmit a support request to extend the quota using the Azure portal:
+	            	[31m│[0m [0maka.ms/sql-mi-obtain-larger-quota"
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-managed-instance
+
+FailNow
+
+---
+
+## 06 Sep 26 00:48 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Managed Instance: (Name "mi-mantis-mssql" / Resource Group "mi-mantis-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending request: StatusCode=400 -- Original Error: Code="ProvisioningDisabled" Message="The deployment request failed because it would bring the total number of vCores to 8, which exceeds the limit of 0 allowed for the requested hardware family in your subscription. Please submit a support request to extend the quota using the Azure portal: aka.ms/sql-mi-obtain-larger-quota"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_mssql_managed_instance.main,
+	            	[31m│[0m [0m  on main.tf line 69, in resource "azurerm_mssql_managed_instance" "main":
+	            	[31m│[0m [0m  69: resource "azurerm_mssql_managed_instance" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating Managed Instance: (Name "mi-mantis-mssql" / Resource Group
+	            	[31m│[0m [0m"mi-mantis-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending
+	            	[31m│[0m [0mrequest: StatusCode=400 -- Original Error: Code="ProvisioningDisabled"
+	            	[31m│[0m [0mMessage="The deployment request failed because it would bring the total
+	            	[31m│[0m [0mnumber of vCores to 8, which exceeds the limit of 0 allowed for the
+	            	[31m│[0m [0mrequested hardware family in your subscription. Please submit a support
+	            	[31m│[0m [0mrequest to extend the quota using the Azure portal:
+	            	[31m│[0m [0maka.ms/sql-mi-obtain-larger-quota"
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-managed-instance
+
+FailNow
+
+---
+
+## 30 Aug 26 02:26 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Managed Instance: (Name "mi-walrus-mssql" / Resource Group "mi-walrus-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending request: StatusCode=400 -- Original Error: Code="ProvisioningDisabled" Message="The deployment request failed because it would bring the total number of vCores to 8, which exceeds the limit of 0 allowed for the requested hardware family in your subscription. Please submit a support request to extend the quota using the Azure portal: aka.ms/sql-mi-obtain-larger-quota"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_mssql_managed_instance.main,
+	            	[31m│[0m [0m  on main.tf line 69, in resource "azurerm_mssql_managed_instance" "main":
+	            	[31m│[0m [0m  69: resource "azurerm_mssql_managed_instance" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating Managed Instance: (Name "mi-walrus-mssql" / Resource Group
+	            	[31m│[0m [0m"mi-walrus-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending
+	            	[31m│[0m [0mrequest: StatusCode=400 -- Original Error: Code="ProvisioningDisabled"
+	            	[31m│[0m [0mMessage="The deployment request failed because it would bring the total
+	            	[31m│[0m [0mnumber of vCores to 8, which exceeds the limit of 0 allowed for the
+	            	[31m│[0m [0mrequested hardware family in your subscription. Please submit a support
+	            	[31m│[0m [0mrequest to extend the quota using the Azure portal:
+	            	[31m│[0m [0maka.ms/sql-mi-obtain-larger-quota"
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-managed-instance
+
+FailNow
+
+---
+
+## 23 Aug 26 01:02 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Managed Instance: (Name "mi-panther-mssql" / Resource Group "mi-panther-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending request: StatusCode=400 -- Original Error: Code="ProvisioningDisabled" Message="The deployment request failed because it would exceed total number of vCores (8) and/or subnets (0), which is above the allowance for your subscription: max vCores: 0, max number of subnets 0. Please send the support request to extend the quota using Azure portal: aka.ms/sql-mi-obtain-larger-quota"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_mssql_managed_instance.main,
+	            	[31m│[0m [0m  on main.tf line 69, in resource "azurerm_mssql_managed_instance" "main":
+	            	[31m│[0m [0m  69: resource "azurerm_mssql_managed_instance" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating Managed Instance: (Name "mi-panther-mssql" / Resource Group
+	            	[31m│[0m [0m"mi-panther-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure
+	            	[31m│[0m [0msending request: StatusCode=400 -- Original Error:
+	            	[31m│[0m [0mCode="ProvisioningDisabled" Message="The deployment request failed because
+	            	[31m│[0m [0mit would exceed total number of vCores (8) and/or subnets (0), which is
+	            	[31m│[0m [0mabove the allowance for your subscription: max vCores: 0, max number of
+	            	[31m│[0m [0msubnets 0. Please send the support request to extend the quota using Azure
+	            	[31m│[0m [0mportal: aka.ms/sql-mi-obtain-larger-quota"
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-managed-instance
+
+FailNow
+
+---
+
+## 16 Aug 26 00:43 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Managed Instance: (Name "mi-poodle-mssql" / Resource Group "mi-poodle-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending request: StatusCode=400 -- Original Error: Code="ProvisioningDisabled" Message="The deployment request failed because it would exceed total number of vCores (8) and/or subnets (0), which is above the allowance for your subscription: max vCores: 0, max number of subnets 0. Please send the support request to extend the quota using Azure portal: aka.ms/sql-mi-obtain-larger-quota"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_mssql_managed_instance.main,
+	            	[31m│[0m [0m  on main.tf line 69, in resource "azurerm_mssql_managed_instance" "main":
+	            	[31m│[0m [0m  69: resource "azurerm_mssql_managed_instance" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating Managed Instance: (Name "mi-poodle-mssql" / Resource Group
+	            	[31m│[0m [0m"mi-poodle-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending
+	            	[31m│[0m [0mrequest: StatusCode=400 -- Original Error: Code="ProvisioningDisabled"
+	            	[31m│[0m [0mMessage="The deployment request failed because it would exceed total number
+	            	[31m│[0m [0mof vCores (8) and/or subnets (0), which is above the allowance for your
+	            	[31m│[0m [0msubscription: max vCores: 0, max number of subnets 0. Please send the
+	            	[31m│[0m [0msupport request to extend the quota using Azure portal:
+	            	[31m│[0m [0maka.ms/sql-mi-obtain-larger-quota"
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-managed-instance
+
+FailNow
+
+---
+
+## 09 Aug 26 01:23 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Managed Instance: (Name "mi-sheepdog-mssql" / Resource Group "mi-sheepdog-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending request: StatusCode=400 -- Original Error: Code="ProvisioningDisabled" Message="The deployment request failed because it would exceed total number of vCores (8) and/or subnets (0), which is above the allowance for your subscription: max vCores: 0, max number of subnets 0. Please send the support request to extend the quota using Azure portal: aka.ms/sql-mi-obtain-larger-quota"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_mssql_managed_instance.main,
+	            	[31m│[0m [0m  on main.tf line 69, in resource "azurerm_mssql_managed_instance" "main":
+	            	[31m│[0m [0m  69: resource "azurerm_mssql_managed_instance" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating Managed Instance: (Name "mi-sheepdog-mssql" / Resource Group
+	            	[31m│[0m [0m"mi-sheepdog-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure
+	            	[31m│[0m [0msending request: StatusCode=400 -- Original Error:
+	            	[31m│[0m [0mCode="ProvisioningDisabled" Message="The deployment request failed because
+	            	[31m│[0m [0mit would exceed total number of vCores (8) and/or subnets (0), which is
+	            	[31m│[0m [0mabove the allowance for your subscription: max vCores: 0, max number of
+	            	[31m│[0m [0msubnets 0. Please send the support request to extend the quota using Azure
+	            	[31m│[0m [0mportal: aka.ms/sql-mi-obtain-larger-quota"
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-managed-instance
+
+FailNow
+
+---
+
+## 02 Aug 26 00:30 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Managed Instance: (Name "mi-ibex-mssql" / Resource Group "mi-ibex-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending request: StatusCode=400 -- Original Error: Code="ProvisioningDisabled" Message="The deployment request failed because it would exceed total number of vCores (8) and/or subnets (0), which is above the allowance for your subscription: max vCores: 0, max number of subnets 0. Please send the support request to extend the quota using Azure portal: aka.ms/sql-mi-obtain-larger-quota"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_mssql_managed_instance.main,
+	            	[31m│[0m [0m  on main.tf line 69, in resource "azurerm_mssql_managed_instance" "main":
+	            	[31m│[0m [0m  69: resource "azurerm_mssql_managed_instance" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating Managed Instance: (Name "mi-ibex-mssql" / Resource Group
+	            	[31m│[0m [0m"mi-ibex-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending
+	            	[31m│[0m [0mrequest: StatusCode=400 -- Original Error: Code="ProvisioningDisabled"
+	            	[31m│[0m [0mMessage="The deployment request failed because it would exceed total number
+	            	[31m│[0m [0mof vCores (8) and/or subnets (0), which is above the allowance for your
+	            	[31m│[0m [0msubscription: max vCores: 0, max number of subnets 0. Please send the
+	            	[31m│[0m [0msupport request to extend the quota using Azure portal:
+	            	[31m│[0m [0maka.ms/sql-mi-obtain-larger-quota"
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-managed-instance
+
+FailNow
+
+---
+
+## 26 Jul 26 00:31 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Managed Instance: (Name "mi-bluebird-mssql" / Resource Group "mi-bluebird-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending request: StatusCode=400 -- Original Error: Code="ProvisioningDisabled" Message="The deployment request failed because it would exceed total number of vCores (8) and/or subnets (0), which is above the allowance for your subscription: max vCores: 0, max number of subnets 0. Please send the support request to extend the quota using Azure portal: aka.ms/sql-mi-obtain-larger-quota"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_mssql_managed_instance.main,
+	            	[31m│[0m [0m  on main.tf line 69, in resource "azurerm_mssql_managed_instance" "main":
+	            	[31m│[0m [0m  69: resource "azurerm_mssql_managed_instance" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating Managed Instance: (Name "mi-bluebird-mssql" / Resource Group
+	            	[31m│[0m [0m"mi-bluebird-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure
+	            	[31m│[0m [0msending request: StatusCode=400 -- Original Error:
+	            	[31m│[0m [0mCode="ProvisioningDisabled" Message="The deployment request failed because
+	            	[31m│[0m [0mit would exceed total number of vCores (8) and/or subnets (0), which is
+	            	[31m│[0m [0mabove the allowance for your subscription: max vCores: 0, max number of
+	            	[31m│[0m [0msubnets 0. Please send the support request to extend the quota using Azure
+	            	[31m│[0m [0mportal: aka.ms/sql-mi-obtain-larger-quota"
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-managed-instance
+
+FailNow
+
+---
+
+## 12 Jul 26 01:42 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Managed Instance: (Name "mi-tahr-mssql" / Resource Group "mi-tahr-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending request: StatusCode=400 -- Original Error: Code="ProvisioningDisabled" Message="The deployment request failed because it would exceed total number of vCores (8) and/or subnets (0), which is above the allowance for your subscription: max vCores: 0, max number of subnets 0. Please send the support request to extend the quota using Azure portal: aka.ms/sql-mi-obtain-larger-quota"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_mssql_managed_instance.main,
+	            	[31m│[0m [0m  on main.tf line 69, in resource "azurerm_mssql_managed_instance" "main":
+	            	[31m│[0m [0m  69: resource "azurerm_mssql_managed_instance" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating Managed Instance: (Name "mi-tahr-mssql" / Resource Group
+	            	[31m│[0m [0m"mi-tahr-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending
+	            	[31m│[0m [0mrequest: StatusCode=400 -- Original Error: Code="ProvisioningDisabled"
+	            	[31m│[0m [0mMessage="The deployment request failed because it would exceed total number
+	            	[31m│[0m [0mof vCores (8) and/or subnets (0), which is above the allowance for your
+	            	[31m│[0m [0msubscription: max vCores: 0, max number of subnets 0. Please send the
+	            	[31m│[0m [0msupport request to extend the quota using Azure portal:
+	            	[31m│[0m [0maka.ms/sql-mi-obtain-larger-quota"
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-managed-instance
+
+FailNow
+
+---
+
+## 05 Jul 26 00:32 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Managed Instance: (Name "mi-cheetah-mssql" / Resource Group "mi-cheetah-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending request: StatusCode=400 -- Original Error: Code="ProvisioningDisabled" Message="The deployment request failed because it would exceed total number of vCores (8) and/or subnets (0), which is above the allowance for your subscription: max vCores: 0, max number of subnets 0. Please send the support request to extend the quota using Azure portal: aka.ms/sql-mi-obtain-larger-quota"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_mssql_managed_instance.main,
+	            	[31m│[0m [0m  on main.tf line 69, in resource "azurerm_mssql_managed_instance" "main":
+	            	[31m│[0m [0m  69: resource "azurerm_mssql_managed_instance" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating Managed Instance: (Name "mi-cheetah-mssql" / Resource Group
+	            	[31m│[0m [0m"mi-cheetah-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure
+	            	[31m│[0m [0msending request: StatusCode=400 -- Original Error:
+	            	[31m│[0m [0mCode="ProvisioningDisabled" Message="The deployment request failed because
+	            	[31m│[0m [0mit would exceed total number of vCores (8) and/or subnets (0), which is
+	            	[31m│[0m [0mabove the allowance for your subscription: max vCores: 0, max number of
+	            	[31m│[0m [0msubnets 0. Please send the support request to extend the quota using Azure
+	            	[31m│[0m [0mportal: aka.ms/sql-mi-obtain-larger-quota"
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-managed-instance
+
+FailNow
+
+---
+
+## 28 Jun 26 02:20 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Managed Instance: (Name "mi-civet-mssql" / Resource Group "mi-civet-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending request: StatusCode=400 -- Original Error: Code="ProvisioningDisabled" Message="The deployment request failed because it would exceed total number of vCores (8) and/or subnets (0), which is above the allowance for your subscription: max vCores: 0, max number of subnets 0. Please send the support request to extend the quota using Azure portal: aka.ms/sql-mi-obtain-larger-quota"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_mssql_managed_instance.main,
+	            	[31m│[0m [0m  on main.tf line 69, in resource "azurerm_mssql_managed_instance" "main":
+	            	[31m│[0m [0m  69: resource "azurerm_mssql_managed_instance" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating Managed Instance: (Name "mi-civet-mssql" / Resource Group
+	            	[31m│[0m [0m"mi-civet-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending
+	            	[31m│[0m [0mrequest: StatusCode=400 -- Original Error: Code="ProvisioningDisabled"
+	            	[31m│[0m [0mMessage="The deployment request failed because it would exceed total number
+	            	[31m│[0m [0mof vCores (8) and/or subnets (0), which is above the allowance for your
+	            	[31m│[0m [0msubscription: max vCores: 0, max number of subnets 0. Please send the
+	            	[31m│[0m [0msupport request to extend the quota using Azure portal:
+	            	[31m│[0m [0maka.ms/sql-mi-obtain-larger-quota"
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-managed-instance
+
+FailNow
+
+---
+
+## 14 Jun 26 00:39 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Managed Instance: (Name "mi-cockatoo-mssql" / Resource Group "mi-cockatoo-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending request: StatusCode=400 -- Original Error: Code="ProvisioningDisabled" Message="The deployment request failed because it would exceed total number of vCores (8) and/or subnets (0), which is above the allowance for your subscription: max vCores: 0, max number of subnets 0. Please send the support request to extend the quota using Azure portal: aka.ms/sql-mi-obtain-larger-quota"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_mssql_managed_instance.main,
+	            	[31m│[0m [0m  on main.tf line 69, in resource "azurerm_mssql_managed_instance" "main":
+	            	[31m│[0m [0m  69: resource "azurerm_mssql_managed_instance" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating Managed Instance: (Name "mi-cockatoo-mssql" / Resource Group
+	            	[31m│[0m [0m"mi-cockatoo-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure
+	            	[31m│[0m [0msending request: StatusCode=400 -- Original Error:
+	            	[31m│[0m [0mCode="ProvisioningDisabled" Message="The deployment request failed because
+	            	[31m│[0m [0mit would exceed total number of vCores (8) and/or subnets (0), which is
+	            	[31m│[0m [0mabove the allowance for your subscription: max vCores: 0, max number of
+	            	[31m│[0m [0msubnets 0. Please send the support request to extend the quota using Azure
+	            	[31m│[0m [0mportal: aka.ms/sql-mi-obtain-larger-quota"
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-managed-instance
+
+FailNow
+
+---
+
+## 31 May 26 00:36 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Managed Instance: (Name "mi-akita-mssql" / Resource Group "mi-akita-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending request: StatusCode=400 -- Original Error: Code="ProvisioningDisabled" Message="The deployment request failed because it would exceed total number of vCores (8) and/or subnets (0), which is above the allowance for your subscription: max vCores: 0, max number of subnets 0. Please send the support request to extend the quota using Azure portal: aka.ms/sql-mi-obtain-larger-quota"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_mssql_managed_instance.main,
+	            	[31m│[0m [0m  on main.tf line 69, in resource "azurerm_mssql_managed_instance" "main":
+	            	[31m│[0m [0m  69: resource "azurerm_mssql_managed_instance" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating Managed Instance: (Name "mi-akita-mssql" / Resource Group
+	            	[31m│[0m [0m"mi-akita-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending
+	            	[31m│[0m [0mrequest: StatusCode=400 -- Original Error: Code="ProvisioningDisabled"
+	            	[31m│[0m [0mMessage="The deployment request failed because it would exceed total number
+	            	[31m│[0m [0mof vCores (8) and/or subnets (0), which is above the allowance for your
+	            	[31m│[0m [0msubscription: max vCores: 0, max number of subnets 0. Please send the
+	            	[31m│[0m [0msupport request to extend the quota using Azure portal:
+	            	[31m│[0m [0maka.ms/sql-mi-obtain-larger-quota"
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-managed-instance
+
+FailNow
+
+---
+
+## 24 May 26 01:09 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Managed Instance: (Name "mi-cobra-mssql" / Resource Group "mi-cobra-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending request: StatusCode=400 -- Original Error: Code="ProvisioningDisabled" Message="The deployment request failed because it would exceed total number of vCores (8) and/or subnets (0), which is above the allowance for your subscription: max vCores: 0, max number of subnets 0. Please send the support request to extend the quota using Azure portal: aka.ms/sql-mi-obtain-larger-quota"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_mssql_managed_instance.main,
+	            	[31m│[0m [0m  on main.tf line 69, in resource "azurerm_mssql_managed_instance" "main":
+	            	[31m│[0m [0m  69: resource "azurerm_mssql_managed_instance" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating Managed Instance: (Name "mi-cobra-mssql" / Resource Group
+	            	[31m│[0m [0m"mi-cobra-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending
+	            	[31m│[0m [0mrequest: StatusCode=400 -- Original Error: Code="ProvisioningDisabled"
+	            	[31m│[0m [0mMessage="The deployment request failed because it would exceed total number
+	            	[31m│[0m [0mof vCores (8) and/or subnets (0), which is above the allowance for your
+	            	[31m│[0m [0msubscription: max vCores: 0, max number of subnets 0. Please send the
+	            	[31m│[0m [0msupport request to extend the quota using Azure portal:
+	            	[31m│[0m [0maka.ms/sql-mi-obtain-larger-quota"
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-managed-instance
+
+FailNow
+
+---
+
+## 10 May 26 01:01 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Managed Instance: (Name "mi-filly-mssql" / Resource Group "mi-filly-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending request: StatusCode=400 -- Original Error: Code="ProvisioningDisabled" Message="The deployment request failed because it would exceed total number of vCores (8) and/or subnets (0), which is above the allowance for your subscription: max vCores: 0, max number of subnets 0. Please send the support request to extend the quota using Azure portal: aka.ms/sql-mi-obtain-larger-quota"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_mssql_managed_instance.main,
+	            	[31m│[0m [0m  on main.tf line 69, in resource "azurerm_mssql_managed_instance" "main":
+	            	[31m│[0m [0m  69: resource "azurerm_mssql_managed_instance" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating Managed Instance: (Name "mi-filly-mssql" / Resource Group
+	            	[31m│[0m [0m"mi-filly-rg"): sql.ManagedInstancesClient#CreateOrUpdate: Failure sending
+	            	[31m│[0m [0mrequest: StatusCode=400 -- Original Error: Code="ProvisioningDisabled"
+	            	[31m│[0m [0mMessage="The deployment request failed because it would exceed total number
+	            	[31m│[0m [0mof vCores (8) and/or subnets (0), which is above the allowance for your
+	            	[31m│[0m [0msubscription: max vCores: 0, max number of subnets 0. Please send the
+	            	[31m│[0m [0msupport request to extend the quota using Azure portal:
+	            	[31m│[0m [0maka.ms/sql-mi-obtain-larger-quota"
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-managed-instance
+
+FailNow
+
+---
+
 ## 26 Apr 26 00:57 UTC
 
 Success: false

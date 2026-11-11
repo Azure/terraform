@@ -1,3 +1,1144 @@
+## 08 Nov 26 00:11 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v5.13.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mMissing required argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 25, in resource "azurerm_storage_container" "my_terraform_container":
+	            	[31m│[0m [0m  25: resource "azurerm_storage_container" "my_terraform_container" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe argument "storage_account_id" is required, but no definition was found.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 27, in resource "azurerm_storage_container" "my_terraform_container":
+	            	[31m│[0m [0m  27:   [4mstorage_account_name[0m  = azurerm_storage_account.sa.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "storage_account_name" is not expected here.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mMissing required argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 44, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  44: resource "azurerm_eventhub" "my_terraform_eventhub" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe argument "namespace_id" is required, but no definition was found.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 46, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  46:   [4mresource_group_name[0m = azurerm_resource_group.rg.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "resource_group_name" is not expected here.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 47, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  47:   [4mnamespace_name[0m      = azurerm_eventhub_namespace.namespace.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "namespace_name" is not expected here.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-iot-hub-with-device-provisioning-service
+
+FailNow
+
+---
+
+## 01 Nov 26 00:14 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v5.12.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mMissing required argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 25, in resource "azurerm_storage_container" "my_terraform_container":
+	            	[31m│[0m [0m  25: resource "azurerm_storage_container" "my_terraform_container" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe argument "storage_account_id" is required, but no definition was found.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 27, in resource "azurerm_storage_container" "my_terraform_container":
+	            	[31m│[0m [0m  27:   [4mstorage_account_name[0m  = azurerm_storage_account.sa.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "storage_account_name" is not expected here.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mMissing required argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 44, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  44: resource "azurerm_eventhub" "my_terraform_eventhub" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe argument "namespace_id" is required, but no definition was found.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 46, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  46:   [4mresource_group_name[0m = azurerm_resource_group.rg.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "resource_group_name" is not expected here.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 47, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  47:   [4mnamespace_name[0m      = azurerm_eventhub_namespace.namespace.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "namespace_name" is not expected here.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-iot-hub-with-device-provisioning-service
+
+FailNow
+
+---
+
+## 25 Oct 26 00:16 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v5.11.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mMissing required argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 25, in resource "azurerm_storage_container" "my_terraform_container":
+	            	[31m│[0m [0m  25: resource "azurerm_storage_container" "my_terraform_container" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe argument "storage_account_id" is required, but no definition was found.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 27, in resource "azurerm_storage_container" "my_terraform_container":
+	            	[31m│[0m [0m  27:   [4mstorage_account_name[0m  = azurerm_storage_account.sa.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "storage_account_name" is not expected here.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mMissing required argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 44, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  44: resource "azurerm_eventhub" "my_terraform_eventhub" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe argument "namespace_id" is required, but no definition was found.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 46, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  46:   [4mresource_group_name[0m = azurerm_resource_group.rg.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "resource_group_name" is not expected here.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 47, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  47:   [4mnamespace_name[0m      = azurerm_eventhub_namespace.namespace.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "namespace_name" is not expected here.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-iot-hub-with-device-provisioning-service
+
+FailNow
+
+---
+
+## 18 Oct 26 00:18 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v5.10.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mMissing required argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 25, in resource "azurerm_storage_container" "my_terraform_container":
+	            	[31m│[0m [0m  25: resource "azurerm_storage_container" "my_terraform_container" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe argument "storage_account_id" is required, but no definition was found.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 27, in resource "azurerm_storage_container" "my_terraform_container":
+	            	[31m│[0m [0m  27:   [4mstorage_account_name[0m  = azurerm_storage_account.sa.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "storage_account_name" is not expected here.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mMissing required argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 44, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  44: resource "azurerm_eventhub" "my_terraform_eventhub" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe argument "namespace_id" is required, but no definition was found.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 46, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  46:   [4mresource_group_name[0m = azurerm_resource_group.rg.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "resource_group_name" is not expected here.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 47, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  47:   [4mnamespace_name[0m      = azurerm_eventhub_namespace.namespace.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "namespace_name" is not expected here.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-iot-hub-with-device-provisioning-service
+
+FailNow
+
+---
+
+## 11 Oct 26 00:21 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v5.9.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mMissing required argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 25, in resource "azurerm_storage_container" "my_terraform_container":
+	            	[31m│[0m [0m  25: resource "azurerm_storage_container" "my_terraform_container" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe argument "storage_account_id" is required, but no definition was found.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 27, in resource "azurerm_storage_container" "my_terraform_container":
+	            	[31m│[0m [0m  27:   [4mstorage_account_name[0m  = azurerm_storage_account.sa.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "storage_account_name" is not expected here.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mMissing required argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 44, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  44: resource "azurerm_eventhub" "my_terraform_eventhub" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe argument "namespace_id" is required, but no definition was found.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 46, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  46:   [4mresource_group_name[0m = azurerm_resource_group.rg.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "resource_group_name" is not expected here.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 47, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  47:   [4mnamespace_name[0m      = azurerm_eventhub_namespace.namespace.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "namespace_name" is not expected here.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-iot-hub-with-device-provisioning-service
+
+FailNow
+
+---
+
+## 04 Oct 26 01:29 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v5.8.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mMissing required argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 25, in resource "azurerm_storage_container" "my_terraform_container":
+	            	[31m│[0m [0m  25: resource "azurerm_storage_container" "my_terraform_container" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe argument "storage_account_id" is required, but no definition was found.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 27, in resource "azurerm_storage_container" "my_terraform_container":
+	            	[31m│[0m [0m  27:   [4mstorage_account_name[0m  = azurerm_storage_account.sa.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "storage_account_name" is not expected here.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mMissing required argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 44, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  44: resource "azurerm_eventhub" "my_terraform_eventhub" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe argument "namespace_id" is required, but no definition was found.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 46, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  46:   [4mresource_group_name[0m = azurerm_resource_group.rg.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "resource_group_name" is not expected here.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 47, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  47:   [4mnamespace_name[0m      = azurerm_eventhub_namespace.namespace.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "namespace_name" is not expected here.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-iot-hub-with-device-provisioning-service
+
+FailNow
+
+---
+
+## 27 Sep 26 00:18 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v5.7.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mMissing required argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 25, in resource "azurerm_storage_container" "my_terraform_container":
+	            	[31m│[0m [0m  25: resource "azurerm_storage_container" "my_terraform_container" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe argument "storage_account_id" is required, but no definition was found.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 27, in resource "azurerm_storage_container" "my_terraform_container":
+	            	[31m│[0m [0m  27:   [4mstorage_account_name[0m  = azurerm_storage_account.sa.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "storage_account_name" is not expected here.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mMissing required argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 44, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  44: resource "azurerm_eventhub" "my_terraform_eventhub" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe argument "namespace_id" is required, but no definition was found.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 46, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  46:   [4mresource_group_name[0m = azurerm_resource_group.rg.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "resource_group_name" is not expected here.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 47, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  47:   [4mnamespace_name[0m      = azurerm_eventhub_namespace.namespace.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "namespace_name" is not expected here.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-iot-hub-with-device-provisioning-service
+
+FailNow
+
+---
+
+## 20 Sep 26 00:22 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v5.6.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mMissing required argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 25, in resource "azurerm_storage_container" "my_terraform_container":
+	            	[31m│[0m [0m  25: resource "azurerm_storage_container" "my_terraform_container" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe argument "storage_account_id" is required, but no definition was found.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 27, in resource "azurerm_storage_container" "my_terraform_container":
+	            	[31m│[0m [0m  27:   [4mstorage_account_name[0m  = azurerm_storage_account.sa.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "storage_account_name" is not expected here.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mMissing required argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 44, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  44: resource "azurerm_eventhub" "my_terraform_eventhub" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe argument "namespace_id" is required, but no definition was found.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 46, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  46:   [4mresource_group_name[0m = azurerm_resource_group.rg.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "resource_group_name" is not expected here.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 47, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  47:   [4mnamespace_name[0m      = azurerm_eventhub_namespace.namespace.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "namespace_name" is not expected here.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-iot-hub-with-device-provisioning-service
+
+FailNow
+
+---
+
+## 13 Sep 26 00:22 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v5.5.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mMissing required argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 25, in resource "azurerm_storage_container" "my_terraform_container":
+	            	[31m│[0m [0m  25: resource "azurerm_storage_container" "my_terraform_container" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe argument "storage_account_id" is required, but no definition was found.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 27, in resource "azurerm_storage_container" "my_terraform_container":
+	            	[31m│[0m [0m  27:   [4mstorage_account_name[0m  = azurerm_storage_account.sa.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "storage_account_name" is not expected here.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mMissing required argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 44, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  44: resource "azurerm_eventhub" "my_terraform_eventhub" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe argument "namespace_id" is required, but no definition was found.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 46, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  46:   [4mresource_group_name[0m = azurerm_resource_group.rg.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "resource_group_name" is not expected here.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 47, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  47:   [4mnamespace_name[0m      = azurerm_eventhub_namespace.namespace.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "namespace_name" is not expected here.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-iot-hub-with-device-provisioning-service
+
+FailNow
+
+---
+
+## 06 Sep 26 00:17 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v5.4.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mMissing required argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 25, in resource "azurerm_storage_container" "my_terraform_container":
+	            	[31m│[0m [0m  25: resource "azurerm_storage_container" "my_terraform_container" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe argument "storage_account_id" is required, but no definition was found.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 27, in resource "azurerm_storage_container" "my_terraform_container":
+	            	[31m│[0m [0m  27:   [4mstorage_account_name[0m  = azurerm_storage_account.sa.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "storage_account_name" is not expected here.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mMissing required argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 44, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  44: resource "azurerm_eventhub" "my_terraform_eventhub" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe argument "namespace_id" is required, but no definition was found.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 46, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  46:   [4mresource_group_name[0m = azurerm_resource_group.rg.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "resource_group_name" is not expected here.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 47, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  47:   [4mnamespace_name[0m      = azurerm_eventhub_namespace.namespace.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "namespace_name" is not expected here.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-iot-hub-with-device-provisioning-service
+
+FailNow
+
+---
+
+## 30 Aug 26 00:25 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v5.3.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mMissing required argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 25, in resource "azurerm_storage_container" "my_terraform_container":
+	            	[31m│[0m [0m  25: resource "azurerm_storage_container" "my_terraform_container" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe argument "storage_account_id" is required, but no definition was found.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 27, in resource "azurerm_storage_container" "my_terraform_container":
+	            	[31m│[0m [0m  27:   [4mstorage_account_name[0m  = azurerm_storage_account.sa.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "storage_account_name" is not expected here.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mMissing required argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 44, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  44: resource "azurerm_eventhub" "my_terraform_eventhub" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe argument "namespace_id" is required, but no definition was found.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 46, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  46:   [4mresource_group_name[0m = azurerm_resource_group.rg.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "resource_group_name" is not expected here.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 47, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  47:   [4mnamespace_name[0m      = azurerm_eventhub_namespace.namespace.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "namespace_name" is not expected here.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-iot-hub-with-device-provisioning-service
+
+FailNow
+
+---
+
+## 23 Aug 26 00:11 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v5.2.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mMissing required argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 25, in resource "azurerm_storage_container" "my_terraform_container":
+	            	[31m│[0m [0m  25: resource "azurerm_storage_container" "my_terraform_container" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe argument "storage_account_id" is required, but no definition was found.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 27, in resource "azurerm_storage_container" "my_terraform_container":
+	            	[31m│[0m [0m  27:   [4mstorage_account_name[0m  = azurerm_storage_account.sa.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "storage_account_name" is not expected here.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mMissing required argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 44, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  44: resource "azurerm_eventhub" "my_terraform_eventhub" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe argument "namespace_id" is required, but no definition was found.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 46, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  46:   [4mresource_group_name[0m = azurerm_resource_group.rg.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "resource_group_name" is not expected here.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 47, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  47:   [4mnamespace_name[0m      = azurerm_eventhub_namespace.namespace.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "namespace_name" is not expected here.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-iot-hub-with-device-provisioning-service
+
+FailNow
+
+---
+
+## 16 Aug 26 00:16 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v5.1.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mMissing required argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 25, in resource "azurerm_storage_container" "my_terraform_container":
+	            	[31m│[0m [0m  25: resource "azurerm_storage_container" "my_terraform_container" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe argument "storage_account_id" is required, but no definition was found.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 27, in resource "azurerm_storage_container" "my_terraform_container":
+	            	[31m│[0m [0m  27:   [4mstorage_account_name[0m  = azurerm_storage_account.sa.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "storage_account_name" is not expected here.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mMissing required argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 44, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  44: resource "azurerm_eventhub" "my_terraform_eventhub" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe argument "namespace_id" is required, but no definition was found.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 46, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  46:   [4mresource_group_name[0m = azurerm_resource_group.rg.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "resource_group_name" is not expected here.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 47, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  47:   [4mnamespace_name[0m      = azurerm_eventhub_namespace.namespace.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "namespace_name" is not expected here.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-iot-hub-with-device-provisioning-service
+
+FailNow
+
+---
+
+## 09 Aug 26 01:08 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v5.0.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mMissing required argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 25, in resource "azurerm_storage_container" "my_terraform_container":
+	            	[31m│[0m [0m  25: resource "azurerm_storage_container" "my_terraform_container" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe argument "storage_account_id" is required, but no definition was found.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 27, in resource "azurerm_storage_container" "my_terraform_container":
+	            	[31m│[0m [0m  27:   [4mstorage_account_name[0m  = azurerm_storage_account.sa.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "storage_account_name" is not expected here.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mMissing required argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 44, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  44: resource "azurerm_eventhub" "my_terraform_eventhub" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe argument "namespace_id" is required, but no definition was found.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 46, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  46:   [4mresource_group_name[0m = azurerm_resource_group.rg.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "resource_group_name" is not expected here.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 47, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  47:   [4mnamespace_name[0m      = azurerm_eventhub_namespace.namespace.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "namespace_name" is not expected here.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-iot-hub-with-device-provisioning-service
+
+FailNow
+
+---
+
+## 02 Aug 26 01:03 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v5.0.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mMissing required argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 25, in resource "azurerm_storage_container" "my_terraform_container":
+	            	[31m│[0m [0m  25: resource "azurerm_storage_container" "my_terraform_container" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe argument "storage_account_id" is required, but no definition was found.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 27, in resource "azurerm_storage_container" "my_terraform_container":
+	            	[31m│[0m [0m  27:   [4mstorage_account_name[0m  = azurerm_storage_account.sa.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "storage_account_name" is not expected here.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mMissing required argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 44, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  44: resource "azurerm_eventhub" "my_terraform_eventhub" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mThe argument "namespace_id" is required, but no definition was found.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 46, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  46:   [4mresource_group_name[0m = azurerm_resource_group.rg.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "resource_group_name" is not expected here.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mUnsupported argument[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on main.tf line 47, in resource "azurerm_eventhub" "my_terraform_eventhub":
+	            	[31m│[0m [0m  47:   [4mnamespace_name[0m      = azurerm_eventhub_namespace.namespace.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAn argument named "namespace_name" is not expected here.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-iot-hub-with-device-provisioning-service
+
+FailNow
+
+---
+
+## 26 Jul 26 01:05 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 12 Jul 26 00:44 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.80.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 05 Jul 26 01:37 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.80.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 28 Jun 26 02:05 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.79.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 14 Jun 26 00:55 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.77.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 31 May 26 01:52 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.74.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 24 May 26 00:44 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.74.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 10 May 26 00:46 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.72.0
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+No error was found.
+
+---
+
 ## 26 Apr 26 00:37 UTC
 
 Success: true

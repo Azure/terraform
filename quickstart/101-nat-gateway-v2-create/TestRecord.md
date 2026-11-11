@@ -1,3 +1,791 @@
+## 08 Nov 26 00:17 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
++ provider registry.terraform.io/hashicorp/tls v4.4.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant '4f00b3b6-2940-4f2c-b037-94637c180d30' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 3da57e51-e148-47d9-a3df-11d7cbd2cb00 Correlation ID: 154e4d1a-7def-456d-a376-472fd7c5ec10 Timestamp: 2026-11-08 00:17:47Z","error_codes":[5000229],"timestamp":"2026-11-08 00:17:47Z","trace_id":"3da57e51-e148-47d9-a3df-11d7cbd2cb00","correlation_id":"154e4d1a-7def-456d-a376-472fd7c5ec10"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 18, in provider "azurerm":
+	            	[31m│[0m [0m  18: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-nat-gateway-v2-create
+
+FailNow
+
+---
+
+## 01 Nov 26 00:14 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
++ provider registry.terraform.io/hashicorp/tls v4.4.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 7a67adcd-86c2-4e64-b371-52dd6eb8c701 Correlation ID: b41fe9d7-27dc-4ad7-8efb-ea5b05bfa59e Timestamp: 2026-11-01 00:14:41Z","error_codes":[5000229],"timestamp":"2026-11-01 00:14:41Z","trace_id":"7a67adcd-86c2-4e64-b371-52dd6eb8c701","correlation_id":"b41fe9d7-27dc-4ad7-8efb-ea5b05bfa59e"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 18, in provider "azurerm":
+	            	[31m│[0m [0m  18: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-nat-gateway-v2-create
+
+FailNow
+
+---
+
+## 25 Oct 26 00:21 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
++ provider registry.terraform.io/hashicorp/tls v4.4.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 99b8c72c-3e8f-40b3-b1ad-2e51b387d600 Correlation ID: 0d86bc9b-dc1f-45b9-b004-7a45cfebc4f2 Timestamp: 2026-10-25 00:21:39Z","error_codes":[5000229],"timestamp":"2026-10-25 00:21:39Z","trace_id":"99b8c72c-3e8f-40b3-b1ad-2e51b387d600","correlation_id":"0d86bc9b-dc1f-45b9-b004-7a45cfebc4f2"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 18, in provider "azurerm":
+	            	[31m│[0m [0m  18: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-nat-gateway-v2-create
+
+FailNow
+
+---
+
+## 18 Oct 26 00:54 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
++ provider registry.terraform.io/hashicorp/tls v4.4.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Bastion Host (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-snail-rg"
+	            	[31m│[0m [0mBastion Host Name: "bastion-host"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: BastionHostVirtualNetworkNotFound: The virtual network /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-snail-rg/providers/Microsoft.Network/virtualNetworks/vnet-1 was not found in region centralus or is not in a Succeeded state[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_bastion_host.bastion,
+	            	[31m│[0m [0m  on main.tf line 113, in resource "azurerm_bastion_host" "bastion":
+	            	[31m│[0m [0m 113: resource "azurerm_bastion_host" "bastion" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-nat-gateway-v2-create
+
+FailNow
+
+---
+
+## 11 Oct 26 00:58 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
++ provider registry.terraform.io/hashicorp/tls v4.4.1
+
+### Error
+
+No error was found.
+
+---
+
+## 04 Oct 26 01:16 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
++ provider registry.terraform.io/hashicorp/tls v4.4.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Bastion Host (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-asp-rg"
+	            	[31m│[0m [0mBastion Host Name: "bastion-host"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: BastionHostVirtualNetworkNotFound: The virtual network /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-asp-rg/providers/Microsoft.Network/virtualNetworks/vnet-1 was not found in region centralus or is not in a Succeeded state[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_bastion_host.bastion,
+	            	[31m│[0m [0m  on main.tf line 113, in resource "azurerm_bastion_host" "bastion":
+	            	[31m│[0m [0m 113: resource "azurerm_bastion_host" "bastion" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-nat-gateway-v2-create
+
+FailNow
+
+---
+
+## 27 Sep 26 02:34 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
++ provider registry.terraform.io/hashicorp/tls v4.4.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Bastion Host (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-treefrog-rg"
+	            	[31m│[0m [0mBastion Host Name: "bastion-host"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: BastionHostVirtualNetworkNotFound: The virtual network /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-treefrog-rg/providers/Microsoft.Network/virtualNetworks/vnet-1 was not found in region centralus or is not in a Succeeded state[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_bastion_host.bastion,
+	            	[31m│[0m [0m  on main.tf line 113, in resource "azurerm_bastion_host" "bastion":
+	            	[31m│[0m [0m 113: resource "azurerm_bastion_host" "bastion" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-nat-gateway-v2-create
+
+FailNow
+
+---
+
+## 20 Sep 26 00:59 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
++ provider registry.terraform.io/hashicorp/tls v4.4.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Bastion Host (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-shiner-rg"
+	            	[31m│[0m [0mBastion Host Name: "bastion-host"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: BastionHostVirtualNetworkNotFound: The virtual network /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-shiner-rg/providers/Microsoft.Network/virtualNetworks/vnet-1 was not found in region centralus or is not in a Succeeded state[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_bastion_host.bastion,
+	            	[31m│[0m [0m  on main.tf line 113, in resource "azurerm_bastion_host" "bastion":
+	            	[31m│[0m [0m 113: resource "azurerm_bastion_host" "bastion" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-nat-gateway-v2-create
+
+FailNow
+
+---
+
+## 13 Sep 26 01:56 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
++ provider registry.terraform.io/hashicorp/tls v4.4.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Bastion Host (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-katydid-rg"
+	            	[31m│[0m [0mBastion Host Name: "bastion-host"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: BastionHostVirtualNetworkNotFound: The virtual network /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-katydid-rg/providers/Microsoft.Network/virtualNetworks/vnet-1 was not found in region centralus or is not in a Succeeded state[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_bastion_host.bastion,
+	            	[31m│[0m [0m  on main.tf line 113, in resource "azurerm_bastion_host" "bastion":
+	            	[31m│[0m [0m 113: resource "azurerm_bastion_host" "bastion" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-nat-gateway-v2-create
+
+FailNow
+
+---
+
+## 06 Sep 26 00:49 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
++ provider registry.terraform.io/hashicorp/tls v4.4.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Bastion Host (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-ray-rg"
+	            	[31m│[0m [0mBastion Host Name: "bastion-host"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: BastionHostVirtualNetworkNotFound: The virtual network /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-ray-rg/providers/Microsoft.Network/virtualNetworks/vnet-1 was not found in region centralus or is not in a Succeeded state[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_bastion_host.bastion,
+	            	[31m│[0m [0m  on main.tf line 113, in resource "azurerm_bastion_host" "bastion":
+	            	[31m│[0m [0m 113: resource "azurerm_bastion_host" "bastion" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-nat-gateway-v2-create
+
+FailNow
+
+---
+
+## 30 Aug 26 02:23 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
++ provider registry.terraform.io/hashicorp/tls v4.3.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Bastion Host (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-cattle-rg"
+	            	[31m│[0m [0mBastion Host Name: "bastion-host"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: BastionHostVirtualNetworkNotFound: The virtual network /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-cattle-rg/providers/Microsoft.Network/virtualNetworks/vnet-1 was not found in region centralus or is not in a Succeeded state[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_bastion_host.bastion,
+	            	[31m│[0m [0m  on main.tf line 113, in resource "azurerm_bastion_host" "bastion":
+	            	[31m│[0m [0m 113: resource "azurerm_bastion_host" "bastion" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-nat-gateway-v2-create
+
+FailNow
+
+---
+
+## 23 Aug 26 00:59 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
++ provider registry.terraform.io/hashicorp/tls v4.3.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Bastion Host (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-coyote-rg"
+	            	[31m│[0m [0mBastion Host Name: "bastion-host"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: BastionHostVirtualNetworkNotFound: The virtual network /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-coyote-rg/providers/Microsoft.Network/virtualNetworks/vnet-1 was not found in region centralus or is not in a Succeeded state[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_bastion_host.bastion,
+	            	[31m│[0m [0m  on main.tf line 113, in resource "azurerm_bastion_host" "bastion":
+	            	[31m│[0m [0m 113: resource "azurerm_bastion_host" "bastion" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-nat-gateway-v2-create
+
+FailNow
+
+---
+
+## 16 Aug 26 00:44 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
++ provider registry.terraform.io/hashicorp/tls v4.3.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Bastion Host (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-cricket-rg"
+	            	[31m│[0m [0mBastion Host Name: "bastion-host"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: BastionHostVirtualNetworkNotFound: The virtual network /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-cricket-rg/providers/Microsoft.Network/virtualNetworks/vnet-1 was not found in region centralus or is not in a Succeeded state[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_bastion_host.bastion,
+	            	[31m│[0m [0m  on main.tf line 113, in resource "azurerm_bastion_host" "bastion":
+	            	[31m│[0m [0m 113: resource "azurerm_bastion_host" "bastion" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-nat-gateway-v2-create
+
+FailNow
+
+---
+
+## 09 Aug 26 01:24 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
++ provider registry.terraform.io/hashicorp/tls v4.3.0
+
+### Error
+
+No error was found.
+
+---
+
+## 02 Aug 26 01:58 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
++ provider registry.terraform.io/hashicorp/tls v4.3.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Bastion Host (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-wasp-rg"
+	            	[31m│[0m [0mBastion Host Name: "bastion-host"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: BastionHostVirtualNetworkNotFound: The virtual network /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-wasp-rg/providers/Microsoft.Network/virtualNetworks/vnet-1 was not found in region centralus or is not in a Succeeded state[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_bastion_host.bastion,
+	            	[31m│[0m [0m  on main.tf line 113, in resource "azurerm_bastion_host" "bastion":
+	            	[31m│[0m [0m 113: resource "azurerm_bastion_host" "bastion" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-nat-gateway-v2-create
+
+FailNow
+
+---
+
+## 26 Jul 26 00:49 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
++ provider registry.terraform.io/hashicorp/tls v4.3.0
+
+### Error
+
+No error was found.
+
+---
+
+## 12 Jul 26 01:43 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.80.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
++ provider registry.terraform.io/hashicorp/tls v4.3.0
+
+### Error
+
+No error was found.
+
+---
+
+## 05 Jul 26 01:13 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.80.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
++ provider registry.terraform.io/hashicorp/tls v4.3.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Bastion Host (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-shark-rg"
+	            	[31m│[0m [0mBastion Host Name: "bastion-host"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: BastionHostVirtualNetworkNotFound: The virtual network /subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-shark-rg/providers/Microsoft.Network/virtualNetworks/vnet-1 was not found in region centralus or is not in a Succeeded state[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_bastion_host.bastion,
+	            	[31m│[0m [0m  on main.tf line 113, in resource "azurerm_bastion_host" "bastion":
+	            	[31m│[0m [0m 113: resource "azurerm_bastion_host" "bastion" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-nat-gateway-v2-create
+
+FailNow
+
+---
+
+## 28 Jun 26 01:55 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.79.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
++ provider registry.terraform.io/hashicorp/tls v4.3.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Bastion Host (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-yeti-rg"
+	            	[31m│[0m [0mBastion Host Name: "bastion-host"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: BastionHostVirtualNetworkNotFound: The virtual network /subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-yeti-rg/providers/Microsoft.Network/virtualNetworks/vnet-1 was not found in region centralus or is not in a Succeeded state[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_bastion_host.bastion,
+	            	[31m│[0m [0m  on main.tf line 113, in resource "azurerm_bastion_host" "bastion":
+	            	[31m│[0m [0m 113: resource "azurerm_bastion_host" "bastion" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-nat-gateway-v2-create
+
+FailNow
+
+---
+
+## 14 Jun 26 01:34 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.77.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
++ provider registry.terraform.io/hashicorp/tls v4.3.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Bastion Host (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-mink-rg"
+	            	[31m│[0m [0mBastion Host Name: "bastion-host"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: BastionHostVirtualNetworkNotFound: The virtual network /subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-mink-rg/providers/Microsoft.Network/virtualNetworks/vnet-1 was not found in region centralus or is not in a Succeeded state[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_bastion_host.bastion,
+	            	[31m│[0m [0m  on main.tf line 113, in resource "azurerm_bastion_host" "bastion":
+	            	[31m│[0m [0m 113: resource "azurerm_bastion_host" "bastion" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-nat-gateway-v2-create
+
+FailNow
+
+---
+
+## 31 May 26 02:20 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.74.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
++ provider registry.terraform.io/hashicorp/tls v4.3.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Bastion Host (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-cicada-rg"
+	            	[31m│[0m [0mBastion Host Name: "bastion-host"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: BastionHostVirtualNetworkNotFound: The virtual network /subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-cicada-rg/providers/Microsoft.Network/virtualNetworks/vnet-1 was not found in region centralus or is not in a Succeeded state[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_bastion_host.bastion,
+	            	[31m│[0m [0m  on main.tf line 113, in resource "azurerm_bastion_host" "bastion":
+	            	[31m│[0m [0m 113: resource "azurerm_bastion_host" "bastion" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-nat-gateway-v2-create
+
+FailNow
+
+---
+
+## 24 May 26 01:08 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.74.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
++ provider registry.terraform.io/hashicorp/tls v4.3.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Bastion Host (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-wasp-rg"
+	            	[31m│[0m [0mBastion Host Name: "bastion-host"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: BastionHostVirtualNetworkNotFound: The virtual network /subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-wasp-rg/providers/Microsoft.Network/virtualNetworks/vnet-1 was not found in region centralus or is not in a Succeeded state[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_bastion_host.bastion,
+	            	[31m│[0m [0m  on main.tf line 113, in resource "azurerm_bastion_host" "bastion":
+	            	[31m│[0m [0m 113: resource "azurerm_bastion_host" "bastion" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-nat-gateway-v2-create
+
+FailNow
+
+---
+
+## 10 May 26 01:01 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.72.0
++ provider registry.terraform.io/hashicorp/random v3.8.1
++ provider registry.terraform.io/hashicorp/tls v4.2.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Bastion Host (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-deer-rg"
+	            	[31m│[0m [0mBastion Host Name: "bastion-host"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: BastionHostVirtualNetworkNotFound: The virtual network /subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-deer-rg/providers/Microsoft.Network/virtualNetworks/vnet-1 was not found in region centralus or is not in a Succeeded state[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_bastion_host.bastion,
+	            	[31m│[0m [0m  on main.tf line 113, in resource "azurerm_bastion_host" "bastion":
+	            	[31m│[0m [0m 113: resource "azurerm_bastion_host" "bastion" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-nat-gateway-v2-create
+
+FailNow
+
+---
+
 ## 26 Apr 26 00:59 UTC
 
 Success: true

@@ -1,3 +1,1629 @@
+## 08 Nov 26 00:11 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 2eca321d-72be-4871-8e04-46c4c886ca00 Correlation ID: 8a9a9f02-449c-4ee7-9ac2-1ecfa5dc7dfe Timestamp: 2026-11-08 00:11:52Z","error_codes":[5000229],"timestamp":"2026-11-08 00:11:52Z","trace_id":"2eca321d-72be-4871-8e04-46c4c886ca00","correlation_id":"8a9a9f02-449c-4ee7-9ac2-1ecfa5dc7dfe"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 15, in provider "azurerm":
+	            	[31m│[0m [0m  15: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-function-app-key-vault-ref
+
+FailNow
+
+---
+
+## 01 Nov 26 00:14 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant '4f00b3b6-2940-4f2c-b037-94637c180d30' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 87d6dc5a-18d8-4dab-a151-f8cf041a0300 Correlation ID: 49bda5d2-6485-49f2-a40c-9a9327984bd1 Timestamp: 2026-11-01 00:14:47Z","error_codes":[5000229],"timestamp":"2026-11-01 00:14:47Z","trace_id":"87d6dc5a-18d8-4dab-a151-f8cf041a0300","correlation_id":"49bda5d2-6485-49f2-a40c-9a9327984bd1"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 15, in provider "azurerm":
+	            	[31m│[0m [0m  15: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-function-app-key-vault-ref
+
+FailNow
+
+---
+
+## 25 Oct 26 00:16 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 182de8d7-d934-4dea-b1e2-eb835ddf6c01 Correlation ID: c9cd2bb4-3793-4cb8-9a41-6e6e03252a14 Timestamp: 2026-10-25 00:16:10Z","error_codes":[5000229],"timestamp":"2026-10-25 00:16:10Z","trace_id":"182de8d7-d934-4dea-b1e2-eb835ddf6c01","correlation_id":"c9cd2bb4-3793-4cb8-9a41-6e6e03252a14"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 15, in provider "azurerm":
+	            	[31m│[0m [0m  15: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-function-app-key-vault-ref
+
+FailNow
+
+---
+
+## 18 Oct 26 00:23 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating App Service Plan (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-doberman-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-doberman-sp"): performing CreateOrUpdate: unexpected status 401 (401 Unauthorized) with response: {"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Target":null,"Details":[{"Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation cannot be completed without additional quota. \r\nAdditional details - Location: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount required for this deployment ({1}): {4} \r\n(Minimum) New Limit that you should request to enable this deployment: {5}. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Parameters":["","Y1 VMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."}}],"Innererror":null}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_service_plan.default,
+	            	[31m│[0m [0m  on main.tf line 22, in resource "azurerm_service_plan" "default":
+	            	[31m│[0m [0m  22: resource "azurerm_service_plan" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating App Service Plan (Subscription:
+	            	[31m│[0m [0m"e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-doberman-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-doberman-sp"): performing CreateOrUpdate:
+	            	[31m│[0m [0munexpected status 401 (401 Unauthorized) with response:
+	            	[31m│[0m [0m{"Code":"Unauthorized","Message":"Operation cannot be completed without
+	            	[31m│[0m [0madditional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Y1
+	            	[31m│[0m [0mVMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Y1
+	            	[31m│[0m [0mVMs): 1 \r\n(Minimum) New Limit that you should request to enable this
+	            	[31m│[0m [0mdeployment: 1. \r\nNote that if you experience multiple scaling operations
+	            	[31m│[0m [0mfailing (in addition to this one) and need to accommodate the aggregate
+	            	[31m│[0m [0mquota requirements of these operations, you will need to request a higher
+	            	[31m│[0m [0mquota limit than the one currently
+	            	[31m│[0m [0mdisplayed.","Target":null,"Details":[{"Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for
+	            	[31m│[0m [0mthis deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request
+	            	[31m│[0m [0mto enable this deployment: 1. \r\nNote that if you experience multiple
+	            	[31m│[0m [0mscaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation
+	            	[31m│[0m [0mcannot be completed without additional quota. \r\nAdditional details -
+	            	[31m│[0m [0mLocation: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount
+	            	[31m│[0m [0mrequired for this deployment ({1}): {4} \r\n(Minimum) New Limit that you
+	            	[31m│[0m [0mshould request to enable this deployment: {5}. \r\nNote that if you
+	            	[31m│[0m [0mexperience multiple scaling operations failing (in addition to this one)
+	            	[31m│[0m [0mand need to accommodate the aggregate quota requirements of these
+	            	[31m│[0m [0moperations, you will need to request a higher quota limit than the one
+	            	[31m│[0m [0mcurrently displayed.","Parameters":["","Y1
+	            	[31m│[0m [0mVMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for
+	            	[31m│[0m [0mthis deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request
+	            	[31m│[0m [0mto enable this deployment: 1. \r\nNote that if you experience multiple
+	            	[31m│[0m [0mscaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."}}],"Innererror":null}
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-function-app-key-vault-ref
+
+FailNow
+
+---
+
+## 11 Oct 26 00:26 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating App Service Plan (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-krill-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-krill-sp"): performing CreateOrUpdate: unexpected status 401 (401 Unauthorized) with response: {"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Target":null,"Details":[{"Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation cannot be completed without additional quota. \r\nAdditional details - Location: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount required for this deployment ({1}): {4} \r\n(Minimum) New Limit that you should request to enable this deployment: {5}. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Parameters":["","Y1 VMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."}}],"Innererror":null}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_service_plan.default,
+	            	[31m│[0m [0m  on main.tf line 22, in resource "azurerm_service_plan" "default":
+	            	[31m│[0m [0m  22: resource "azurerm_service_plan" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating App Service Plan (Subscription:
+	            	[31m│[0m [0m"e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-krill-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-krill-sp"): performing CreateOrUpdate:
+	            	[31m│[0m [0munexpected status 401 (401 Unauthorized) with response:
+	            	[31m│[0m [0m{"Code":"Unauthorized","Message":"Operation cannot be completed without
+	            	[31m│[0m [0madditional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Y1
+	            	[31m│[0m [0mVMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Y1
+	            	[31m│[0m [0mVMs): 1 \r\n(Minimum) New Limit that you should request to enable this
+	            	[31m│[0m [0mdeployment: 1. \r\nNote that if you experience multiple scaling operations
+	            	[31m│[0m [0mfailing (in addition to this one) and need to accommodate the aggregate
+	            	[31m│[0m [0mquota requirements of these operations, you will need to request a higher
+	            	[31m│[0m [0mquota limit than the one currently
+	            	[31m│[0m [0mdisplayed.","Target":null,"Details":[{"Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for
+	            	[31m│[0m [0mthis deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request
+	            	[31m│[0m [0mto enable this deployment: 1. \r\nNote that if you experience multiple
+	            	[31m│[0m [0mscaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation
+	            	[31m│[0m [0mcannot be completed without additional quota. \r\nAdditional details -
+	            	[31m│[0m [0mLocation: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount
+	            	[31m│[0m [0mrequired for this deployment ({1}): {4} \r\n(Minimum) New Limit that you
+	            	[31m│[0m [0mshould request to enable this deployment: {5}. \r\nNote that if you
+	            	[31m│[0m [0mexperience multiple scaling operations failing (in addition to this one)
+	            	[31m│[0m [0mand need to accommodate the aggregate quota requirements of these
+	            	[31m│[0m [0moperations, you will need to request a higher quota limit than the one
+	            	[31m│[0m [0mcurrently displayed.","Parameters":["","Y1
+	            	[31m│[0m [0mVMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for
+	            	[31m│[0m [0mthis deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request
+	            	[31m│[0m [0mto enable this deployment: 1. \r\nNote that if you experience multiple
+	            	[31m│[0m [0mscaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."}}],"Innererror":null}
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-function-app-key-vault-ref
+
+FailNow
+
+---
+
+## 04 Oct 26 01:34 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating App Service Plan (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-chow-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-chow-sp"): performing CreateOrUpdate: unexpected status 401 (401 Unauthorized) with response: {"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Target":null,"Details":[{"Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation cannot be completed without additional quota. \r\nAdditional details - Location: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount required for this deployment ({1}): {4} \r\n(Minimum) New Limit that you should request to enable this deployment: {5}. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Parameters":["","Y1 VMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."}}],"Innererror":null}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_service_plan.default,
+	            	[31m│[0m [0m  on main.tf line 22, in resource "azurerm_service_plan" "default":
+	            	[31m│[0m [0m  22: resource "azurerm_service_plan" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating App Service Plan (Subscription:
+	            	[31m│[0m [0m"e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-chow-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-chow-sp"): performing CreateOrUpdate:
+	            	[31m│[0m [0munexpected status 401 (401 Unauthorized) with response:
+	            	[31m│[0m [0m{"Code":"Unauthorized","Message":"Operation cannot be completed without
+	            	[31m│[0m [0madditional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Y1
+	            	[31m│[0m [0mVMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Y1
+	            	[31m│[0m [0mVMs): 1 \r\n(Minimum) New Limit that you should request to enable this
+	            	[31m│[0m [0mdeployment: 1. \r\nNote that if you experience multiple scaling operations
+	            	[31m│[0m [0mfailing (in addition to this one) and need to accommodate the aggregate
+	            	[31m│[0m [0mquota requirements of these operations, you will need to request a higher
+	            	[31m│[0m [0mquota limit than the one currently
+	            	[31m│[0m [0mdisplayed.","Target":null,"Details":[{"Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for
+	            	[31m│[0m [0mthis deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request
+	            	[31m│[0m [0mto enable this deployment: 1. \r\nNote that if you experience multiple
+	            	[31m│[0m [0mscaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation
+	            	[31m│[0m [0mcannot be completed without additional quota. \r\nAdditional details -
+	            	[31m│[0m [0mLocation: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount
+	            	[31m│[0m [0mrequired for this deployment ({1}): {4} \r\n(Minimum) New Limit that you
+	            	[31m│[0m [0mshould request to enable this deployment: {5}. \r\nNote that if you
+	            	[31m│[0m [0mexperience multiple scaling operations failing (in addition to this one)
+	            	[31m│[0m [0mand need to accommodate the aggregate quota requirements of these
+	            	[31m│[0m [0moperations, you will need to request a higher quota limit than the one
+	            	[31m│[0m [0mcurrently displayed.","Parameters":["","Y1
+	            	[31m│[0m [0mVMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for
+	            	[31m│[0m [0mthis deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request
+	            	[31m│[0m [0mto enable this deployment: 1. \r\nNote that if you experience multiple
+	            	[31m│[0m [0mscaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."}}],"Innererror":null}
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-function-app-key-vault-ref
+
+FailNow
+
+---
+
+## 27 Sep 26 00:23 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating App Service Plan (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-mite-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-mite-sp"): performing CreateOrUpdate: unexpected status 401 (401 Unauthorized) with response: {"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Target":null,"Details":[{"Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation cannot be completed without additional quota. \r\nAdditional details - Location: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount required for this deployment ({1}): {4} \r\n(Minimum) New Limit that you should request to enable this deployment: {5}. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Parameters":["","Y1 VMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."}}],"Innererror":null}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_service_plan.default,
+	            	[31m│[0m [0m  on main.tf line 22, in resource "azurerm_service_plan" "default":
+	            	[31m│[0m [0m  22: resource "azurerm_service_plan" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating App Service Plan (Subscription:
+	            	[31m│[0m [0m"e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-mite-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-mite-sp"): performing CreateOrUpdate:
+	            	[31m│[0m [0munexpected status 401 (401 Unauthorized) with response:
+	            	[31m│[0m [0m{"Code":"Unauthorized","Message":"Operation cannot be completed without
+	            	[31m│[0m [0madditional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Y1
+	            	[31m│[0m [0mVMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Y1
+	            	[31m│[0m [0mVMs): 1 \r\n(Minimum) New Limit that you should request to enable this
+	            	[31m│[0m [0mdeployment: 1. \r\nNote that if you experience multiple scaling operations
+	            	[31m│[0m [0mfailing (in addition to this one) and need to accommodate the aggregate
+	            	[31m│[0m [0mquota requirements of these operations, you will need to request a higher
+	            	[31m│[0m [0mquota limit than the one currently
+	            	[31m│[0m [0mdisplayed.","Target":null,"Details":[{"Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for
+	            	[31m│[0m [0mthis deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request
+	            	[31m│[0m [0mto enable this deployment: 1. \r\nNote that if you experience multiple
+	            	[31m│[0m [0mscaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation
+	            	[31m│[0m [0mcannot be completed without additional quota. \r\nAdditional details -
+	            	[31m│[0m [0mLocation: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount
+	            	[31m│[0m [0mrequired for this deployment ({1}): {4} \r\n(Minimum) New Limit that you
+	            	[31m│[0m [0mshould request to enable this deployment: {5}. \r\nNote that if you
+	            	[31m│[0m [0mexperience multiple scaling operations failing (in addition to this one)
+	            	[31m│[0m [0mand need to accommodate the aggregate quota requirements of these
+	            	[31m│[0m [0moperations, you will need to request a higher quota limit than the one
+	            	[31m│[0m [0mcurrently displayed.","Parameters":["","Y1
+	            	[31m│[0m [0mVMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for
+	            	[31m│[0m [0mthis deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request
+	            	[31m│[0m [0mto enable this deployment: 1. \r\nNote that if you experience multiple
+	            	[31m│[0m [0mscaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."}}],"Innererror":null}
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-function-app-key-vault-ref
+
+FailNow
+
+---
+
+## 20 Sep 26 00:27 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating App Service Plan (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-bream-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-bream-sp"): performing CreateOrUpdate: unexpected status 401 (401 Unauthorized) with response: {"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Target":null,"Details":[{"Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation cannot be completed without additional quota. \r\nAdditional details - Location: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount required for this deployment ({1}): {4} \r\n(Minimum) New Limit that you should request to enable this deployment: {5}. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Parameters":["","Y1 VMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."}}],"Innererror":null}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_service_plan.default,
+	            	[31m│[0m [0m  on main.tf line 22, in resource "azurerm_service_plan" "default":
+	            	[31m│[0m [0m  22: resource "azurerm_service_plan" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating App Service Plan (Subscription:
+	            	[31m│[0m [0m"e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-bream-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-bream-sp"): performing CreateOrUpdate:
+	            	[31m│[0m [0munexpected status 401 (401 Unauthorized) with response:
+	            	[31m│[0m [0m{"Code":"Unauthorized","Message":"Operation cannot be completed without
+	            	[31m│[0m [0madditional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Y1
+	            	[31m│[0m [0mVMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Y1
+	            	[31m│[0m [0mVMs): 1 \r\n(Minimum) New Limit that you should request to enable this
+	            	[31m│[0m [0mdeployment: 1. \r\nNote that if you experience multiple scaling operations
+	            	[31m│[0m [0mfailing (in addition to this one) and need to accommodate the aggregate
+	            	[31m│[0m [0mquota requirements of these operations, you will need to request a higher
+	            	[31m│[0m [0mquota limit than the one currently
+	            	[31m│[0m [0mdisplayed.","Target":null,"Details":[{"Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for
+	            	[31m│[0m [0mthis deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request
+	            	[31m│[0m [0mto enable this deployment: 1. \r\nNote that if you experience multiple
+	            	[31m│[0m [0mscaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation
+	            	[31m│[0m [0mcannot be completed without additional quota. \r\nAdditional details -
+	            	[31m│[0m [0mLocation: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount
+	            	[31m│[0m [0mrequired for this deployment ({1}): {4} \r\n(Minimum) New Limit that you
+	            	[31m│[0m [0mshould request to enable this deployment: {5}. \r\nNote that if you
+	            	[31m│[0m [0mexperience multiple scaling operations failing (in addition to this one)
+	            	[31m│[0m [0mand need to accommodate the aggregate quota requirements of these
+	            	[31m│[0m [0moperations, you will need to request a higher quota limit than the one
+	            	[31m│[0m [0mcurrently displayed.","Parameters":["","Y1
+	            	[31m│[0m [0mVMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for
+	            	[31m│[0m [0mthis deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request
+	            	[31m│[0m [0mto enable this deployment: 1. \r\nNote that if you experience multiple
+	            	[31m│[0m [0mscaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."}}],"Innererror":null}
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-function-app-key-vault-ref
+
+FailNow
+
+---
+
+## 13 Sep 26 00:27 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating App Service Plan (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-mutt-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-mutt-sp"): performing CreateOrUpdate: unexpected status 401 (401 Unauthorized) with response: {"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Target":null,"Details":[{"Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation cannot be completed without additional quota. \r\nAdditional details - Location: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount required for this deployment ({1}): {4} \r\n(Minimum) New Limit that you should request to enable this deployment: {5}. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Parameters":["","Y1 VMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."}}],"Innererror":null}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_service_plan.default,
+	            	[31m│[0m [0m  on main.tf line 22, in resource "azurerm_service_plan" "default":
+	            	[31m│[0m [0m  22: resource "azurerm_service_plan" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating App Service Plan (Subscription:
+	            	[31m│[0m [0m"e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-mutt-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-mutt-sp"): performing CreateOrUpdate:
+	            	[31m│[0m [0munexpected status 401 (401 Unauthorized) with response:
+	            	[31m│[0m [0m{"Code":"Unauthorized","Message":"Operation cannot be completed without
+	            	[31m│[0m [0madditional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Y1
+	            	[31m│[0m [0mVMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Y1
+	            	[31m│[0m [0mVMs): 1 \r\n(Minimum) New Limit that you should request to enable this
+	            	[31m│[0m [0mdeployment: 1. \r\nNote that if you experience multiple scaling operations
+	            	[31m│[0m [0mfailing (in addition to this one) and need to accommodate the aggregate
+	            	[31m│[0m [0mquota requirements of these operations, you will need to request a higher
+	            	[31m│[0m [0mquota limit than the one currently
+	            	[31m│[0m [0mdisplayed.","Target":null,"Details":[{"Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for
+	            	[31m│[0m [0mthis deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request
+	            	[31m│[0m [0mto enable this deployment: 1. \r\nNote that if you experience multiple
+	            	[31m│[0m [0mscaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation
+	            	[31m│[0m [0mcannot be completed without additional quota. \r\nAdditional details -
+	            	[31m│[0m [0mLocation: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount
+	            	[31m│[0m [0mrequired for this deployment ({1}): {4} \r\n(Minimum) New Limit that you
+	            	[31m│[0m [0mshould request to enable this deployment: {5}. \r\nNote that if you
+	            	[31m│[0m [0mexperience multiple scaling operations failing (in addition to this one)
+	            	[31m│[0m [0mand need to accommodate the aggregate quota requirements of these
+	            	[31m│[0m [0moperations, you will need to request a higher quota limit than the one
+	            	[31m│[0m [0mcurrently displayed.","Parameters":["","Y1
+	            	[31m│[0m [0mVMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for
+	            	[31m│[0m [0mthis deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request
+	            	[31m│[0m [0mto enable this deployment: 1. \r\nNote that if you experience multiple
+	            	[31m│[0m [0mscaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."}}],"Innererror":null}
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-function-app-key-vault-ref
+
+FailNow
+
+---
+
+## 06 Sep 26 00:23 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating App Service Plan (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-fawn-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-fawn-sp"): performing CreateOrUpdate: unexpected status 401 (401 Unauthorized) with response: {"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Target":null,"Details":[{"Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation cannot be completed without additional quota. \r\nAdditional details - Location: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount required for this deployment ({1}): {4} \r\n(Minimum) New Limit that you should request to enable this deployment: {5}. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Parameters":["","Y1 VMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."}}],"Innererror":null}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_service_plan.default,
+	            	[31m│[0m [0m  on main.tf line 22, in resource "azurerm_service_plan" "default":
+	            	[31m│[0m [0m  22: resource "azurerm_service_plan" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating App Service Plan (Subscription:
+	            	[31m│[0m [0m"e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-fawn-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-fawn-sp"): performing CreateOrUpdate:
+	            	[31m│[0m [0munexpected status 401 (401 Unauthorized) with response:
+	            	[31m│[0m [0m{"Code":"Unauthorized","Message":"Operation cannot be completed without
+	            	[31m│[0m [0madditional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Y1
+	            	[31m│[0m [0mVMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Y1
+	            	[31m│[0m [0mVMs): 1 \r\n(Minimum) New Limit that you should request to enable this
+	            	[31m│[0m [0mdeployment: 1. \r\nNote that if you experience multiple scaling operations
+	            	[31m│[0m [0mfailing (in addition to this one) and need to accommodate the aggregate
+	            	[31m│[0m [0mquota requirements of these operations, you will need to request a higher
+	            	[31m│[0m [0mquota limit than the one currently
+	            	[31m│[0m [0mdisplayed.","Target":null,"Details":[{"Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for
+	            	[31m│[0m [0mthis deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request
+	            	[31m│[0m [0mto enable this deployment: 1. \r\nNote that if you experience multiple
+	            	[31m│[0m [0mscaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation
+	            	[31m│[0m [0mcannot be completed without additional quota. \r\nAdditional details -
+	            	[31m│[0m [0mLocation: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount
+	            	[31m│[0m [0mrequired for this deployment ({1}): {4} \r\n(Minimum) New Limit that you
+	            	[31m│[0m [0mshould request to enable this deployment: {5}. \r\nNote that if you
+	            	[31m│[0m [0mexperience multiple scaling operations failing (in addition to this one)
+	            	[31m│[0m [0mand need to accommodate the aggregate quota requirements of these
+	            	[31m│[0m [0moperations, you will need to request a higher quota limit than the one
+	            	[31m│[0m [0mcurrently displayed.","Parameters":["","Y1
+	            	[31m│[0m [0mVMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Y1 VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for
+	            	[31m│[0m [0mthis deployment (Y1 VMs): 1 \r\n(Minimum) New Limit that you should request
+	            	[31m│[0m [0mto enable this deployment: 1. \r\nNote that if you experience multiple
+	            	[31m│[0m [0mscaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."}}],"Innererror":null}
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-function-app-key-vault-ref
+
+FailNow
+
+---
+
+## 30 Aug 26 00:31 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating App Service Plan (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-ape-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-ape-sp"): performing CreateOrUpdate: unexpected status 401 (401 Unauthorized) with response: {"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Target":null,"Details":[{"Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation cannot be completed without additional quota. \r\nAdditional details - Location: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount required for this deployment ({1}): {4} \r\n(Minimum) New Limit that you should request to enable this deployment: {5}. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Parameters":["","Total VMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."}}],"Innererror":null}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_service_plan.default,
+	            	[31m│[0m [0m  on main.tf line 22, in resource "azurerm_service_plan" "default":
+	            	[31m│[0m [0m  22: resource "azurerm_service_plan" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating App Service Plan (Subscription:
+	            	[31m│[0m [0m"e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-ape-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-ape-sp"): performing CreateOrUpdate:
+	            	[31m│[0m [0munexpected status 401 (401 Unauthorized) with response:
+	            	[31m│[0m [0m{"Code":"Unauthorized","Message":"Operation cannot be completed without
+	            	[31m│[0m [0madditional quota. \r\nAdditional details - Location:  \r\nCurrent Limit
+	            	[31m│[0m [0m(Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment
+	            	[31m│[0m [0m(Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable
+	            	[31m│[0m [0mthis deployment: 1. \r\nNote that if you experience multiple scaling
+	            	[31m│[0m [0moperations failing (in addition to this one) and need to accommodate the
+	            	[31m│[0m [0maggregate quota requirements of these operations, you will need to request
+	            	[31m│[0m [0ma higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed.","Target":null,"Details":[{"Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required
+	            	[31m│[0m [0mfor this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should
+	            	[31m│[0m [0mrequest to enable this deployment: 1. \r\nNote that if you experience
+	            	[31m│[0m [0mmultiple scaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation
+	            	[31m│[0m [0mcannot be completed without additional quota. \r\nAdditional details -
+	            	[31m│[0m [0mLocation: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount
+	            	[31m│[0m [0mrequired for this deployment ({1}): {4} \r\n(Minimum) New Limit that you
+	            	[31m│[0m [0mshould request to enable this deployment: {5}. \r\nNote that if you
+	            	[31m│[0m [0mexperience multiple scaling operations failing (in addition to this one)
+	            	[31m│[0m [0mand need to accommodate the aggregate quota requirements of these
+	            	[31m│[0m [0moperations, you will need to request a higher quota limit than the one
+	            	[31m│[0m [0mcurrently displayed.","Parameters":["","Total
+	            	[31m│[0m [0mVMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required
+	            	[31m│[0m [0mfor this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should
+	            	[31m│[0m [0mrequest to enable this deployment: 1. \r\nNote that if you experience
+	            	[31m│[0m [0mmultiple scaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."}}],"Innererror":null}
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-function-app-key-vault-ref
+
+FailNow
+
+---
+
+## 23 Aug 26 01:29 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating App Service Plan (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-dolphin-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-dolphin-sp"): performing CreateOrUpdate: unexpected status 401 (401 Unauthorized) with response: {"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Target":null,"Details":[{"Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation cannot be completed without additional quota. \r\nAdditional details - Location: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount required for this deployment ({1}): {4} \r\n(Minimum) New Limit that you should request to enable this deployment: {5}. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Parameters":["","Total VMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."}}],"Innererror":null}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_service_plan.default,
+	            	[31m│[0m [0m  on main.tf line 22, in resource "azurerm_service_plan" "default":
+	            	[31m│[0m [0m  22: resource "azurerm_service_plan" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating App Service Plan (Subscription:
+	            	[31m│[0m [0m"e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-dolphin-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-dolphin-sp"): performing CreateOrUpdate:
+	            	[31m│[0m [0munexpected status 401 (401 Unauthorized) with response:
+	            	[31m│[0m [0m{"Code":"Unauthorized","Message":"Operation cannot be completed without
+	            	[31m│[0m [0madditional quota. \r\nAdditional details - Location:  \r\nCurrent Limit
+	            	[31m│[0m [0m(Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment
+	            	[31m│[0m [0m(Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable
+	            	[31m│[0m [0mthis deployment: 1. \r\nNote that if you experience multiple scaling
+	            	[31m│[0m [0moperations failing (in addition to this one) and need to accommodate the
+	            	[31m│[0m [0maggregate quota requirements of these operations, you will need to request
+	            	[31m│[0m [0ma higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed.","Target":null,"Details":[{"Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required
+	            	[31m│[0m [0mfor this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should
+	            	[31m│[0m [0mrequest to enable this deployment: 1. \r\nNote that if you experience
+	            	[31m│[0m [0mmultiple scaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation
+	            	[31m│[0m [0mcannot be completed without additional quota. \r\nAdditional details -
+	            	[31m│[0m [0mLocation: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount
+	            	[31m│[0m [0mrequired for this deployment ({1}): {4} \r\n(Minimum) New Limit that you
+	            	[31m│[0m [0mshould request to enable this deployment: {5}. \r\nNote that if you
+	            	[31m│[0m [0mexperience multiple scaling operations failing (in addition to this one)
+	            	[31m│[0m [0mand need to accommodate the aggregate quota requirements of these
+	            	[31m│[0m [0moperations, you will need to request a higher quota limit than the one
+	            	[31m│[0m [0mcurrently displayed.","Parameters":["","Total
+	            	[31m│[0m [0mVMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required
+	            	[31m│[0m [0mfor this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should
+	            	[31m│[0m [0mrequest to enable this deployment: 1. \r\nNote that if you experience
+	            	[31m│[0m [0mmultiple scaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."}}],"Innererror":null}
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-function-app-key-vault-ref
+
+FailNow
+
+---
+
+## 16 Aug 26 00:20 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating App Service Plan (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-doe-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-doe-sp"): performing CreateOrUpdate: unexpected status 401 (401 Unauthorized) with response: {"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Target":null,"Details":[{"Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation cannot be completed without additional quota. \r\nAdditional details - Location: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount required for this deployment ({1}): {4} \r\n(Minimum) New Limit that you should request to enable this deployment: {5}. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Parameters":["","Total VMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."}}],"Innererror":null}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_service_plan.default,
+	            	[31m│[0m [0m  on main.tf line 22, in resource "azurerm_service_plan" "default":
+	            	[31m│[0m [0m  22: resource "azurerm_service_plan" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating App Service Plan (Subscription:
+	            	[31m│[0m [0m"e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-doe-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-doe-sp"): performing CreateOrUpdate:
+	            	[31m│[0m [0munexpected status 401 (401 Unauthorized) with response:
+	            	[31m│[0m [0m{"Code":"Unauthorized","Message":"Operation cannot be completed without
+	            	[31m│[0m [0madditional quota. \r\nAdditional details - Location:  \r\nCurrent Limit
+	            	[31m│[0m [0m(Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment
+	            	[31m│[0m [0m(Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable
+	            	[31m│[0m [0mthis deployment: 1. \r\nNote that if you experience multiple scaling
+	            	[31m│[0m [0moperations failing (in addition to this one) and need to accommodate the
+	            	[31m│[0m [0maggregate quota requirements of these operations, you will need to request
+	            	[31m│[0m [0ma higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed.","Target":null,"Details":[{"Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required
+	            	[31m│[0m [0mfor this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should
+	            	[31m│[0m [0mrequest to enable this deployment: 1. \r\nNote that if you experience
+	            	[31m│[0m [0mmultiple scaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation
+	            	[31m│[0m [0mcannot be completed without additional quota. \r\nAdditional details -
+	            	[31m│[0m [0mLocation: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount
+	            	[31m│[0m [0mrequired for this deployment ({1}): {4} \r\n(Minimum) New Limit that you
+	            	[31m│[0m [0mshould request to enable this deployment: {5}. \r\nNote that if you
+	            	[31m│[0m [0mexperience multiple scaling operations failing (in addition to this one)
+	            	[31m│[0m [0mand need to accommodate the aggregate quota requirements of these
+	            	[31m│[0m [0moperations, you will need to request a higher quota limit than the one
+	            	[31m│[0m [0mcurrently displayed.","Parameters":["","Total
+	            	[31m│[0m [0mVMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required
+	            	[31m│[0m [0mfor this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should
+	            	[31m│[0m [0mrequest to enable this deployment: 1. \r\nNote that if you experience
+	            	[31m│[0m [0mmultiple scaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."}}],"Innererror":null}
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-function-app-key-vault-ref
+
+FailNow
+
+---
+
+## 09 Aug 26 01:17 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating App Service Plan (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-killdeer-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-killdeer-sp"): performing CreateOrUpdate: unexpected status 401 (401 Unauthorized) with response: {"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Target":null,"Details":[{"Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation cannot be completed without additional quota. \r\nAdditional details - Location: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount required for this deployment ({1}): {4} \r\n(Minimum) New Limit that you should request to enable this deployment: {5}. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Parameters":["","Total VMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."}}],"Innererror":null}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_service_plan.default,
+	            	[31m│[0m [0m  on main.tf line 22, in resource "azurerm_service_plan" "default":
+	            	[31m│[0m [0m  22: resource "azurerm_service_plan" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating App Service Plan (Subscription:
+	            	[31m│[0m [0m"e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-killdeer-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-killdeer-sp"): performing CreateOrUpdate:
+	            	[31m│[0m [0munexpected status 401 (401 Unauthorized) with response:
+	            	[31m│[0m [0m{"Code":"Unauthorized","Message":"Operation cannot be completed without
+	            	[31m│[0m [0madditional quota. \r\nAdditional details - Location:  \r\nCurrent Limit
+	            	[31m│[0m [0m(Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment
+	            	[31m│[0m [0m(Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable
+	            	[31m│[0m [0mthis deployment: 1. \r\nNote that if you experience multiple scaling
+	            	[31m│[0m [0moperations failing (in addition to this one) and need to accommodate the
+	            	[31m│[0m [0maggregate quota requirements of these operations, you will need to request
+	            	[31m│[0m [0ma higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed.","Target":null,"Details":[{"Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required
+	            	[31m│[0m [0mfor this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should
+	            	[31m│[0m [0mrequest to enable this deployment: 1. \r\nNote that if you experience
+	            	[31m│[0m [0mmultiple scaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation
+	            	[31m│[0m [0mcannot be completed without additional quota. \r\nAdditional details -
+	            	[31m│[0m [0mLocation: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount
+	            	[31m│[0m [0mrequired for this deployment ({1}): {4} \r\n(Minimum) New Limit that you
+	            	[31m│[0m [0mshould request to enable this deployment: {5}. \r\nNote that if you
+	            	[31m│[0m [0mexperience multiple scaling operations failing (in addition to this one)
+	            	[31m│[0m [0mand need to accommodate the aggregate quota requirements of these
+	            	[31m│[0m [0moperations, you will need to request a higher quota limit than the one
+	            	[31m│[0m [0mcurrently displayed.","Parameters":["","Total
+	            	[31m│[0m [0mVMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required
+	            	[31m│[0m [0mfor this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should
+	            	[31m│[0m [0mrequest to enable this deployment: 1. \r\nNote that if you experience
+	            	[31m│[0m [0mmultiple scaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."}}],"Innererror":null}
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-function-app-key-vault-ref
+
+FailNow
+
+---
+
+## 02 Aug 26 01:08 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating App Service Plan (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-amoeba-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-amoeba-sp"): performing CreateOrUpdate: unexpected status 401 (401 Unauthorized) with response: {"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Target":null,"Details":[{"Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation cannot be completed without additional quota. \r\nAdditional details - Location: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount required for this deployment ({1}): {4} \r\n(Minimum) New Limit that you should request to enable this deployment: {5}. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Parameters":["","Total VMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."}}],"Innererror":null}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_service_plan.default,
+	            	[31m│[0m [0m  on main.tf line 22, in resource "azurerm_service_plan" "default":
+	            	[31m│[0m [0m  22: resource "azurerm_service_plan" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating App Service Plan (Subscription:
+	            	[31m│[0m [0m"e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-amoeba-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-amoeba-sp"): performing CreateOrUpdate:
+	            	[31m│[0m [0munexpected status 401 (401 Unauthorized) with response:
+	            	[31m│[0m [0m{"Code":"Unauthorized","Message":"Operation cannot be completed without
+	            	[31m│[0m [0madditional quota. \r\nAdditional details - Location:  \r\nCurrent Limit
+	            	[31m│[0m [0m(Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment
+	            	[31m│[0m [0m(Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable
+	            	[31m│[0m [0mthis deployment: 1. \r\nNote that if you experience multiple scaling
+	            	[31m│[0m [0moperations failing (in addition to this one) and need to accommodate the
+	            	[31m│[0m [0maggregate quota requirements of these operations, you will need to request
+	            	[31m│[0m [0ma higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed.","Target":null,"Details":[{"Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required
+	            	[31m│[0m [0mfor this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should
+	            	[31m│[0m [0mrequest to enable this deployment: 1. \r\nNote that if you experience
+	            	[31m│[0m [0mmultiple scaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation
+	            	[31m│[0m [0mcannot be completed without additional quota. \r\nAdditional details -
+	            	[31m│[0m [0mLocation: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount
+	            	[31m│[0m [0mrequired for this deployment ({1}): {4} \r\n(Minimum) New Limit that you
+	            	[31m│[0m [0mshould request to enable this deployment: {5}. \r\nNote that if you
+	            	[31m│[0m [0mexperience multiple scaling operations failing (in addition to this one)
+	            	[31m│[0m [0mand need to accommodate the aggregate quota requirements of these
+	            	[31m│[0m [0moperations, you will need to request a higher quota limit than the one
+	            	[31m│[0m [0mcurrently displayed.","Parameters":["","Total
+	            	[31m│[0m [0mVMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required
+	            	[31m│[0m [0mfor this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should
+	            	[31m│[0m [0mrequest to enable this deployment: 1. \r\nNote that if you experience
+	            	[31m│[0m [0mmultiple scaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."}}],"Innererror":null}
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-function-app-key-vault-ref
+
+FailNow
+
+---
+
+## 26 Jul 26 01:03 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating App Service Plan (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-gull-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-gull-sp"): performing CreateOrUpdate: unexpected status 401 (401 Unauthorized) with response: {"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Target":null,"Details":[{"Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation cannot be completed without additional quota. \r\nAdditional details - Location: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount required for this deployment ({1}): {4} \r\n(Minimum) New Limit that you should request to enable this deployment: {5}. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Parameters":["","Total VMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."}}],"Innererror":null}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_service_plan.default,
+	            	[31m│[0m [0m  on main.tf line 22, in resource "azurerm_service_plan" "default":
+	            	[31m│[0m [0m  22: resource "azurerm_service_plan" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating App Service Plan (Subscription:
+	            	[31m│[0m [0m"cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-gull-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-gull-sp"): performing CreateOrUpdate:
+	            	[31m│[0m [0munexpected status 401 (401 Unauthorized) with response:
+	            	[31m│[0m [0m{"Code":"Unauthorized","Message":"Operation cannot be completed without
+	            	[31m│[0m [0madditional quota. \r\nAdditional details - Location:  \r\nCurrent Limit
+	            	[31m│[0m [0m(Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment
+	            	[31m│[0m [0m(Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable
+	            	[31m│[0m [0mthis deployment: 1. \r\nNote that if you experience multiple scaling
+	            	[31m│[0m [0moperations failing (in addition to this one) and need to accommodate the
+	            	[31m│[0m [0maggregate quota requirements of these operations, you will need to request
+	            	[31m│[0m [0ma higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed.","Target":null,"Details":[{"Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required
+	            	[31m│[0m [0mfor this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should
+	            	[31m│[0m [0mrequest to enable this deployment: 1. \r\nNote that if you experience
+	            	[31m│[0m [0mmultiple scaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation
+	            	[31m│[0m [0mcannot be completed without additional quota. \r\nAdditional details -
+	            	[31m│[0m [0mLocation: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount
+	            	[31m│[0m [0mrequired for this deployment ({1}): {4} \r\n(Minimum) New Limit that you
+	            	[31m│[0m [0mshould request to enable this deployment: {5}. \r\nNote that if you
+	            	[31m│[0m [0mexperience multiple scaling operations failing (in addition to this one)
+	            	[31m│[0m [0mand need to accommodate the aggregate quota requirements of these
+	            	[31m│[0m [0moperations, you will need to request a higher quota limit than the one
+	            	[31m│[0m [0mcurrently displayed.","Parameters":["","Total
+	            	[31m│[0m [0mVMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required
+	            	[31m│[0m [0mfor this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should
+	            	[31m│[0m [0mrequest to enable this deployment: 1. \r\nNote that if you experience
+	            	[31m│[0m [0mmultiple scaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."}}],"Innererror":null}
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-function-app-key-vault-ref
+
+FailNow
+
+---
+
+## 12 Jul 26 00:40 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating App Service Plan (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-adder-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-adder-sp"): performing CreateOrUpdate: unexpected status 401 (401 Unauthorized) with response: {"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Target":null,"Details":[{"Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation cannot be completed without additional quota. \r\nAdditional details - Location: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount required for this deployment ({1}): {4} \r\n(Minimum) New Limit that you should request to enable this deployment: {5}. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Parameters":["","Total VMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."}}],"Innererror":null}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_service_plan.default,
+	            	[31m│[0m [0m  on main.tf line 22, in resource "azurerm_service_plan" "default":
+	            	[31m│[0m [0m  22: resource "azurerm_service_plan" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating App Service Plan (Subscription:
+	            	[31m│[0m [0m"cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-adder-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-adder-sp"): performing CreateOrUpdate:
+	            	[31m│[0m [0munexpected status 401 (401 Unauthorized) with response:
+	            	[31m│[0m [0m{"Code":"Unauthorized","Message":"Operation cannot be completed without
+	            	[31m│[0m [0madditional quota. \r\nAdditional details - Location:  \r\nCurrent Limit
+	            	[31m│[0m [0m(Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment
+	            	[31m│[0m [0m(Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable
+	            	[31m│[0m [0mthis deployment: 1. \r\nNote that if you experience multiple scaling
+	            	[31m│[0m [0moperations failing (in addition to this one) and need to accommodate the
+	            	[31m│[0m [0maggregate quota requirements of these operations, you will need to request
+	            	[31m│[0m [0ma higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed.","Target":null,"Details":[{"Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required
+	            	[31m│[0m [0mfor this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should
+	            	[31m│[0m [0mrequest to enable this deployment: 1. \r\nNote that if you experience
+	            	[31m│[0m [0mmultiple scaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation
+	            	[31m│[0m [0mcannot be completed without additional quota. \r\nAdditional details -
+	            	[31m│[0m [0mLocation: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount
+	            	[31m│[0m [0mrequired for this deployment ({1}): {4} \r\n(Minimum) New Limit that you
+	            	[31m│[0m [0mshould request to enable this deployment: {5}. \r\nNote that if you
+	            	[31m│[0m [0mexperience multiple scaling operations failing (in addition to this one)
+	            	[31m│[0m [0mand need to accommodate the aggregate quota requirements of these
+	            	[31m│[0m [0moperations, you will need to request a higher quota limit than the one
+	            	[31m│[0m [0mcurrently displayed.","Parameters":["","Total
+	            	[31m│[0m [0mVMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required
+	            	[31m│[0m [0mfor this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should
+	            	[31m│[0m [0mrequest to enable this deployment: 1. \r\nNote that if you experience
+	            	[31m│[0m [0mmultiple scaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."}}],"Innererror":null}
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-function-app-key-vault-ref
+
+FailNow
+
+---
+
+## 05 Jul 26 01:26 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating App Service Plan (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-raptor-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-raptor-sp"): performing CreateOrUpdate: unexpected status 401 (401 Unauthorized) with response: {"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Target":null,"Details":[{"Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation cannot be completed without additional quota. \r\nAdditional details - Location: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount required for this deployment ({1}): {4} \r\n(Minimum) New Limit that you should request to enable this deployment: {5}. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Parameters":["","Total VMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."}}],"Innererror":null}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_service_plan.default,
+	            	[31m│[0m [0m  on main.tf line 22, in resource "azurerm_service_plan" "default":
+	            	[31m│[0m [0m  22: resource "azurerm_service_plan" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating App Service Plan (Subscription:
+	            	[31m│[0m [0m"cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-raptor-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-raptor-sp"): performing CreateOrUpdate:
+	            	[31m│[0m [0munexpected status 401 (401 Unauthorized) with response:
+	            	[31m│[0m [0m{"Code":"Unauthorized","Message":"Operation cannot be completed without
+	            	[31m│[0m [0madditional quota. \r\nAdditional details - Location:  \r\nCurrent Limit
+	            	[31m│[0m [0m(Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment
+	            	[31m│[0m [0m(Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable
+	            	[31m│[0m [0mthis deployment: 1. \r\nNote that if you experience multiple scaling
+	            	[31m│[0m [0moperations failing (in addition to this one) and need to accommodate the
+	            	[31m│[0m [0maggregate quota requirements of these operations, you will need to request
+	            	[31m│[0m [0ma higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed.","Target":null,"Details":[{"Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required
+	            	[31m│[0m [0mfor this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should
+	            	[31m│[0m [0mrequest to enable this deployment: 1. \r\nNote that if you experience
+	            	[31m│[0m [0mmultiple scaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation
+	            	[31m│[0m [0mcannot be completed without additional quota. \r\nAdditional details -
+	            	[31m│[0m [0mLocation: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount
+	            	[31m│[0m [0mrequired for this deployment ({1}): {4} \r\n(Minimum) New Limit that you
+	            	[31m│[0m [0mshould request to enable this deployment: {5}. \r\nNote that if you
+	            	[31m│[0m [0mexperience multiple scaling operations failing (in addition to this one)
+	            	[31m│[0m [0mand need to accommodate the aggregate quota requirements of these
+	            	[31m│[0m [0moperations, you will need to request a higher quota limit than the one
+	            	[31m│[0m [0mcurrently displayed.","Parameters":["","Total
+	            	[31m│[0m [0mVMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required
+	            	[31m│[0m [0mfor this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should
+	            	[31m│[0m [0mrequest to enable this deployment: 1. \r\nNote that if you experience
+	            	[31m│[0m [0mmultiple scaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."}}],"Innererror":null}
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-function-app-key-vault-ref
+
+FailNow
+
+---
+
+## 28 Jun 26 02:00 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating App Service Plan (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-wombat-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-wombat-sp"): performing CreateOrUpdate: unexpected status 401 (401 Unauthorized) with response: {"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Target":null,"Details":[{"Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation cannot be completed without additional quota. \r\nAdditional details - Location: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount required for this deployment ({1}): {4} \r\n(Minimum) New Limit that you should request to enable this deployment: {5}. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Parameters":["","Total VMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."}}],"Innererror":null}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_service_plan.default,
+	            	[31m│[0m [0m  on main.tf line 22, in resource "azurerm_service_plan" "default":
+	            	[31m│[0m [0m  22: resource "azurerm_service_plan" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating App Service Plan (Subscription:
+	            	[31m│[0m [0m"cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-wombat-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-wombat-sp"): performing CreateOrUpdate:
+	            	[31m│[0m [0munexpected status 401 (401 Unauthorized) with response:
+	            	[31m│[0m [0m{"Code":"Unauthorized","Message":"Operation cannot be completed without
+	            	[31m│[0m [0madditional quota. \r\nAdditional details - Location:  \r\nCurrent Limit
+	            	[31m│[0m [0m(Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment
+	            	[31m│[0m [0m(Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable
+	            	[31m│[0m [0mthis deployment: 1. \r\nNote that if you experience multiple scaling
+	            	[31m│[0m [0moperations failing (in addition to this one) and need to accommodate the
+	            	[31m│[0m [0maggregate quota requirements of these operations, you will need to request
+	            	[31m│[0m [0ma higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed.","Target":null,"Details":[{"Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required
+	            	[31m│[0m [0mfor this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should
+	            	[31m│[0m [0mrequest to enable this deployment: 1. \r\nNote that if you experience
+	            	[31m│[0m [0mmultiple scaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation
+	            	[31m│[0m [0mcannot be completed without additional quota. \r\nAdditional details -
+	            	[31m│[0m [0mLocation: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount
+	            	[31m│[0m [0mrequired for this deployment ({1}): {4} \r\n(Minimum) New Limit that you
+	            	[31m│[0m [0mshould request to enable this deployment: {5}. \r\nNote that if you
+	            	[31m│[0m [0mexperience multiple scaling operations failing (in addition to this one)
+	            	[31m│[0m [0mand need to accommodate the aggregate quota requirements of these
+	            	[31m│[0m [0moperations, you will need to request a higher quota limit than the one
+	            	[31m│[0m [0mcurrently displayed.","Parameters":["","Total
+	            	[31m│[0m [0mVMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required
+	            	[31m│[0m [0mfor this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should
+	            	[31m│[0m [0mrequest to enable this deployment: 1. \r\nNote that if you experience
+	            	[31m│[0m [0mmultiple scaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."}}],"Innererror":null}
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-function-app-key-vault-ref
+
+FailNow
+
+---
+
+## 14 Jun 26 00:51 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating App Service Plan (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-dory-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-dory-sp"): performing CreateOrUpdate: unexpected status 401 (401 Unauthorized) with response: {"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Target":null,"Details":[{"Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation cannot be completed without additional quota. \r\nAdditional details - Location: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount required for this deployment ({1}): {4} \r\n(Minimum) New Limit that you should request to enable this deployment: {5}. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Parameters":["","Total VMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."}}],"Innererror":null}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_service_plan.default,
+	            	[31m│[0m [0m  on main.tf line 22, in resource "azurerm_service_plan" "default":
+	            	[31m│[0m [0m  22: resource "azurerm_service_plan" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating App Service Plan (Subscription:
+	            	[31m│[0m [0m"cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-dory-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-dory-sp"): performing CreateOrUpdate:
+	            	[31m│[0m [0munexpected status 401 (401 Unauthorized) with response:
+	            	[31m│[0m [0m{"Code":"Unauthorized","Message":"Operation cannot be completed without
+	            	[31m│[0m [0madditional quota. \r\nAdditional details - Location:  \r\nCurrent Limit
+	            	[31m│[0m [0m(Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment
+	            	[31m│[0m [0m(Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable
+	            	[31m│[0m [0mthis deployment: 1. \r\nNote that if you experience multiple scaling
+	            	[31m│[0m [0moperations failing (in addition to this one) and need to accommodate the
+	            	[31m│[0m [0maggregate quota requirements of these operations, you will need to request
+	            	[31m│[0m [0ma higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed.","Target":null,"Details":[{"Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required
+	            	[31m│[0m [0mfor this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should
+	            	[31m│[0m [0mrequest to enable this deployment: 1. \r\nNote that if you experience
+	            	[31m│[0m [0mmultiple scaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation
+	            	[31m│[0m [0mcannot be completed without additional quota. \r\nAdditional details -
+	            	[31m│[0m [0mLocation: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount
+	            	[31m│[0m [0mrequired for this deployment ({1}): {4} \r\n(Minimum) New Limit that you
+	            	[31m│[0m [0mshould request to enable this deployment: {5}. \r\nNote that if you
+	            	[31m│[0m [0mexperience multiple scaling operations failing (in addition to this one)
+	            	[31m│[0m [0mand need to accommodate the aggregate quota requirements of these
+	            	[31m│[0m [0moperations, you will need to request a higher quota limit than the one
+	            	[31m│[0m [0mcurrently displayed.","Parameters":["","Total
+	            	[31m│[0m [0mVMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required
+	            	[31m│[0m [0mfor this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should
+	            	[31m│[0m [0mrequest to enable this deployment: 1. \r\nNote that if you experience
+	            	[31m│[0m [0mmultiple scaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."}}],"Innererror":null}
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-function-app-key-vault-ref
+
+FailNow
+
+---
+
+## 31 May 26 01:50 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating App Service Plan (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-fly-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-fly-sp"): performing CreateOrUpdate: unexpected status 401 (401 Unauthorized) with response: {"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Target":null,"Details":[{"Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation cannot be completed without additional quota. \r\nAdditional details - Location: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount required for this deployment ({1}): {4} \r\n(Minimum) New Limit that you should request to enable this deployment: {5}. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Parameters":["","Total VMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."}}],"Innererror":null}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_service_plan.default,
+	            	[31m│[0m [0m  on main.tf line 22, in resource "azurerm_service_plan" "default":
+	            	[31m│[0m [0m  22: resource "azurerm_service_plan" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating App Service Plan (Subscription:
+	            	[31m│[0m [0m"cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-fly-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-fly-sp"): performing CreateOrUpdate:
+	            	[31m│[0m [0munexpected status 401 (401 Unauthorized) with response:
+	            	[31m│[0m [0m{"Code":"Unauthorized","Message":"Operation cannot be completed without
+	            	[31m│[0m [0madditional quota. \r\nAdditional details - Location:  \r\nCurrent Limit
+	            	[31m│[0m [0m(Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment
+	            	[31m│[0m [0m(Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable
+	            	[31m│[0m [0mthis deployment: 1. \r\nNote that if you experience multiple scaling
+	            	[31m│[0m [0moperations failing (in addition to this one) and need to accommodate the
+	            	[31m│[0m [0maggregate quota requirements of these operations, you will need to request
+	            	[31m│[0m [0ma higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed.","Target":null,"Details":[{"Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required
+	            	[31m│[0m [0mfor this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should
+	            	[31m│[0m [0mrequest to enable this deployment: 1. \r\nNote that if you experience
+	            	[31m│[0m [0mmultiple scaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation
+	            	[31m│[0m [0mcannot be completed without additional quota. \r\nAdditional details -
+	            	[31m│[0m [0mLocation: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount
+	            	[31m│[0m [0mrequired for this deployment ({1}): {4} \r\n(Minimum) New Limit that you
+	            	[31m│[0m [0mshould request to enable this deployment: {5}. \r\nNote that if you
+	            	[31m│[0m [0mexperience multiple scaling operations failing (in addition to this one)
+	            	[31m│[0m [0mand need to accommodate the aggregate quota requirements of these
+	            	[31m│[0m [0moperations, you will need to request a higher quota limit than the one
+	            	[31m│[0m [0mcurrently displayed.","Parameters":["","Total
+	            	[31m│[0m [0mVMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required
+	            	[31m│[0m [0mfor this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should
+	            	[31m│[0m [0mrequest to enable this deployment: 1. \r\nNote that if you experience
+	            	[31m│[0m [0mmultiple scaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."}}],"Innererror":null}
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-function-app-key-vault-ref
+
+FailNow
+
+---
+
+## 24 May 26 00:42 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating App Service Plan (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-seasnail-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-seasnail-sp"): performing CreateOrUpdate: unexpected status 401 (401 Unauthorized) with response: {"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Target":null,"Details":[{"Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation cannot be completed without additional quota. \r\nAdditional details - Location: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount required for this deployment ({1}): {4} \r\n(Minimum) New Limit that you should request to enable this deployment: {5}. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Parameters":["","Total VMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable this deployment: 1. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."}}],"Innererror":null}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_service_plan.default,
+	            	[31m│[0m [0m  on main.tf line 22, in resource "azurerm_service_plan" "default":
+	            	[31m│[0m [0m  22: resource "azurerm_service_plan" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating App Service Plan (Subscription:
+	            	[31m│[0m [0m"cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-seasnail-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-seasnail-sp"): performing CreateOrUpdate:
+	            	[31m│[0m [0munexpected status 401 (401 Unauthorized) with response:
+	            	[31m│[0m [0m{"Code":"Unauthorized","Message":"Operation cannot be completed without
+	            	[31m│[0m [0madditional quota. \r\nAdditional details - Location:  \r\nCurrent Limit
+	            	[31m│[0m [0m(Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment
+	            	[31m│[0m [0m(Total VMs): 1 \r\n(Minimum) New Limit that you should request to enable
+	            	[31m│[0m [0mthis deployment: 1. \r\nNote that if you experience multiple scaling
+	            	[31m│[0m [0moperations failing (in addition to this one) and need to accommodate the
+	            	[31m│[0m [0maggregate quota requirements of these operations, you will need to request
+	            	[31m│[0m [0ma higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed.","Target":null,"Details":[{"Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required
+	            	[31m│[0m [0mfor this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should
+	            	[31m│[0m [0mrequest to enable this deployment: 1. \r\nNote that if you experience
+	            	[31m│[0m [0mmultiple scaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation
+	            	[31m│[0m [0mcannot be completed without additional quota. \r\nAdditional details -
+	            	[31m│[0m [0mLocation: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount
+	            	[31m│[0m [0mrequired for this deployment ({1}): {4} \r\n(Minimum) New Limit that you
+	            	[31m│[0m [0mshould request to enable this deployment: {5}. \r\nNote that if you
+	            	[31m│[0m [0mexperience multiple scaling operations failing (in addition to this one)
+	            	[31m│[0m [0mand need to accommodate the aggregate quota requirements of these
+	            	[31m│[0m [0moperations, you will need to request a higher quota limit than the one
+	            	[31m│[0m [0mcurrently displayed.","Parameters":["","Total
+	            	[31m│[0m [0mVMs","0","0","1","1"],"Code":"Unauthorized","Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Total VMs): 0 \r\nCurrent Usage: 0\r\nAmount required
+	            	[31m│[0m [0mfor this deployment (Total VMs): 1 \r\n(Minimum) New Limit that you should
+	            	[31m│[0m [0mrequest to enable this deployment: 1. \r\nNote that if you experience
+	            	[31m│[0m [0mmultiple scaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed."}}],"Innererror":null}
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-function-app-key-vault-ref
+
+FailNow
+
+---
+
+## 10 May 26 00:32 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating App Service Plan (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-barnacle-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-barnacle-sp"): performing CreateOrUpdate: unexpected status 401 (401 Unauthorized) with response: {"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Dynamic VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Dynamic VMs): 0 \r\n(Minimum) New Limit that you should request to enable this deployment: 0. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Target":null,"Details":[{"Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Dynamic VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Dynamic VMs): 0 \r\n(Minimum) New Limit that you should request to enable this deployment: 0. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation cannot be completed without additional quota. \r\nAdditional details - Location: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount required for this deployment ({1}): {4} \r\n(Minimum) New Limit that you should request to enable this deployment: {5}. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed.","Parameters":["","Dynamic VMs","0","0","0","0"],"Code":"Unauthorized","Message":"Operation cannot be completed without additional quota. \r\nAdditional details - Location:  \r\nCurrent Limit (Dynamic VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this deployment (Dynamic VMs): 0 \r\n(Minimum) New Limit that you should request to enable this deployment: 0. \r\nNote that if you experience multiple scaling operations failing (in addition to this one) and need to accommodate the aggregate quota requirements of these operations, you will need to request a higher quota limit than the one currently displayed."}}],"Innererror":null}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_service_plan.default,
+	            	[31m│[0m [0m  on main.tf line 22, in resource "azurerm_service_plan" "default":
+	            	[31m│[0m [0m  22: resource "azurerm_service_plan" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating App Service Plan (Subscription:
+	            	[31m│[0m [0m"cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "funcappkvref-barnacle-rg"
+	            	[31m│[0m [0mServer Farm Name: "funcappkvref-barnacle-sp"): performing CreateOrUpdate:
+	            	[31m│[0m [0munexpected status 401 (401 Unauthorized) with response:
+	            	[31m│[0m [0m{"Code":"Unauthorized","Message":"Operation cannot be completed without
+	            	[31m│[0m [0madditional quota. \r\nAdditional details - Location:  \r\nCurrent Limit
+	            	[31m│[0m [0m(Dynamic VMs): 0 \r\nCurrent Usage: 0\r\nAmount required for this
+	            	[31m│[0m [0mdeployment (Dynamic VMs): 0 \r\n(Minimum) New Limit that you should request
+	            	[31m│[0m [0mto enable this deployment: 0. \r\nNote that if you experience multiple
+	            	[31m│[0m [0mscaling operations failing (in addition to this one) and need to
+	            	[31m│[0m [0maccommodate the aggregate quota requirements of these operations, you will
+	            	[31m│[0m [0mneed to request a higher quota limit than the one currently
+	            	[31m│[0m [0mdisplayed.","Target":null,"Details":[{"Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Dynamic VMs): 0 \r\nCurrent Usage: 0\r\nAmount required
+	            	[31m│[0m [0mfor this deployment (Dynamic VMs): 0 \r\n(Minimum) New Limit that you
+	            	[31m│[0m [0mshould request to enable this deployment: 0. \r\nNote that if you
+	            	[31m│[0m [0mexperience multiple scaling operations failing (in addition to this one)
+	            	[31m│[0m [0mand need to accommodate the aggregate quota requirements of these
+	            	[31m│[0m [0moperations, you will need to request a higher quota limit than the one
+	            	[31m│[0m [0mcurrently
+	            	[31m│[0m [0mdisplayed."},{"Code":"Unauthorized"},{"ErrorEntity":{"ExtendedCode":"70007","MessageTemplate":"Operation
+	            	[31m│[0m [0mcannot be completed without additional quota. \r\nAdditional details -
+	            	[31m│[0m [0mLocation: {0} \r\nCurrent Limit ({1}): {2} \r\nCurrent Usage: {3}\r\nAmount
+	            	[31m│[0m [0mrequired for this deployment ({1}): {4} \r\n(Minimum) New Limit that you
+	            	[31m│[0m [0mshould request to enable this deployment: {5}. \r\nNote that if you
+	            	[31m│[0m [0mexperience multiple scaling operations failing (in addition to this one)
+	            	[31m│[0m [0mand need to accommodate the aggregate quota requirements of these
+	            	[31m│[0m [0moperations, you will need to request a higher quota limit than the one
+	            	[31m│[0m [0mcurrently displayed.","Parameters":["","Dynamic
+	            	[31m│[0m [0mVMs","0","0","0","0"],"Code":"Unauthorized","Message":"Operation cannot be
+	            	[31m│[0m [0mcompleted without additional quota. \r\nAdditional details - Location:
+	            	[31m│[0m [0m\r\nCurrent Limit (Dynamic VMs): 0 \r\nCurrent Usage: 0\r\nAmount required
+	            	[31m│[0m [0mfor this deployment (Dynamic VMs): 0 \r\n(Minimum) New Limit that you
+	            	[31m│[0m [0mshould request to enable this deployment: 0. \r\nNote that if you
+	            	[31m│[0m [0mexperience multiple scaling operations failing (in addition to this one)
+	            	[31m│[0m [0mand need to accommodate the aggregate quota requirements of these
+	            	[31m│[0m [0moperations, you will need to request a higher quota limit than the one
+	            	[31m│[0m [0mcurrently displayed."}}],"Innererror":null}
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-function-app-key-vault-ref
+
+FailNow
+
+---
+
 ## 26 Apr 26 00:35 UTC
 
 Success: false

@@ -1,3 +1,1388 @@
+## 08 Nov 26 00:13 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: f1e974fc-9873-4609-b08e-4c2685bf8700 Correlation ID: 79d211f2-f824-4a97-adef-cc8509ef48db Timestamp: 2026-11-08 00:13:19Z","error_codes":[5000229],"timestamp":"2026-11-08 00:13:19Z","trace_id":"f1e974fc-9873-4609-b08e-4c2685bf8700","correlation_id":"79d211f2-f824-4a97-adef-cc8509ef48db"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on versions.tf line 15, in provider "azurerm":
+	            	[31m│[0m [0m  15: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-log-analytics
+
+FailNow
+
+---
+
+## 01 Nov 26 00:17 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant '4f00b3b6-2940-4f2c-b037-94637c180d30' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: e899d3ea-8c68-4338-8017-1ba81833ff01 Correlation ID: 20318760-4528-4f07-afeb-648376fbbe85 Timestamp: 2026-11-01 00:17:05Z","error_codes":[5000229],"timestamp":"2026-11-01 00:17:05Z","trace_id":"e899d3ea-8c68-4338-8017-1ba81833ff01","correlation_id":"20318760-4528-4f07-afeb-648376fbbe85"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on versions.tf line 15, in provider "azurerm":
+	            	[31m│[0m [0m  15: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-log-analytics
+
+FailNow
+
+---
+
+## 25 Oct 26 00:17 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant '4f00b3b6-2940-4f2c-b037-94637c180d30' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: df42945b-2e25-4102-9b8c-84f337470702 Correlation ID: f7fa27d2-f3a0-4547-b6c0-4200431b2ec8 Timestamp: 2026-10-25 00:17:29Z","error_codes":[5000229],"timestamp":"2026-10-25 00:17:29Z","trace_id":"df42945b-2e25-4102-9b8c-84f337470702","correlation_id":"f7fa27d2-f3a0-4547-b6c0-4200431b2ec8"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on versions.tf line 15, in provider "azurerm":
+	            	[31m│[0m [0m  15: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-log-analytics
+
+FailNow
+
+---
+
+## 18 Oct 26 00:47 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=t6dz9kbk][0m
+	            	[0m[1mdata.azurerm_subscription.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-t6dz9kbk-rg][0m
+	            	[0m[1mdata.azurerm_subscription.current: Read complete after 0s [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks_identity: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-t6dz9kbk-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickstart-aks-aks-identity][0m
+	            	[0m[1mazurerm_log_analytics_workspace.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-t6dz9kbk-rg/providers/Microsoft.OperationalInsights/workspaces/quickstart-aks-dev-law][0m
+	            	[0m[1mazurerm_role_assignment.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-t6dz9kbk-rg/providers/Microsoft.Authorization/roleAssignments/f2e45fcb-268b-f589-62be-26edcc1b01b1][0m
+	            	[0m[1mazurerm_log_analytics_solution.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-t6dz9kbk-rg/providers/Microsoft.OperationsManagement/solutions/ContainerInsights(quickstart-aks-dev-law)][0m
+	            	[0m[1mazurerm_kubernetes_cluster.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-t6dz9kbk-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "default" {
+	            	        id                                  = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-t6dz9kbk-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks"
+	            	        name                                = "quickstart-aks-aks"
+	            	      [31m-[0m[0m oidc_issuer_enabled                 = true [90m-> null[0m[0m
+	            	      [33m~[0m[0m oidc_issuer_url                     = "https://westus2.oic.prod-aks.azure.com/4f00b3b6-2940-4f2c-b037-94637c180d30/242f84ea-57e8-460a-9ffe-8c1a61259815/" -> (known after apply)
+	            	        tags                                = {}
+	            	        [90m# (38 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "default"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (4 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-aks-log-analytics3913100745/src/quickstart/201-aks-log-analytics/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-aks-log-analytics3913100745/src/quickstart/201-aks-log-analytics/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-aks-log-analytics
+
+FailNow
+
+---
+
+## 11 Oct 26 00:46 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=ipb5v262][0m
+	            	[0m[1mdata.azurerm_subscription.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-ipb5v262-rg][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks_identity: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-ipb5v262-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickstart-aks-aks-identity][0m
+	            	[0m[1mazurerm_log_analytics_workspace.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-ipb5v262-rg/providers/Microsoft.OperationalInsights/workspaces/quickstart-aks-dev-law][0m
+	            	[0m[1mazurerm_role_assignment.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-ipb5v262-rg/providers/Microsoft.Authorization/roleAssignments/06f8fbdf-5eb1-c30f-dec4-a2d8bc885130][0m
+	            	[0m[1mdata.azurerm_subscription.current: Read complete after 1s [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26][0m
+	            	[0m[1mazurerm_log_analytics_solution.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-ipb5v262-rg/providers/Microsoft.OperationsManagement/solutions/ContainerInsights(quickstart-aks-dev-law)][0m
+	            	[0m[1mazurerm_kubernetes_cluster.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-ipb5v262-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "default" {
+	            	        id                                  = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-ipb5v262-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks"
+	            	        name                                = "quickstart-aks-aks"
+	            	      [31m-[0m[0m oidc_issuer_enabled                 = true [90m-> null[0m[0m
+	            	      [33m~[0m[0m oidc_issuer_url                     = "https://westus2.oic.prod-aks.azure.com/4f00b3b6-2940-4f2c-b037-94637c180d30/add17c92-4a10-409e-986f-10edeb921cd1/" -> (known after apply)
+	            	        tags                                = {}
+	            	        [90m# (38 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "default"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (4 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-aks-log-analytics2991406106/src/quickstart/201-aks-log-analytics/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-aks-log-analytics2991406106/src/quickstart/201-aks-log-analytics/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-aks-log-analytics
+
+FailNow
+
+---
+
+## 04 Oct 26 01:56 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=n9nfzjj2][0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-n9nfzjj2-rg][0m
+	            	[0m[1mdata.azurerm_subscription.current: Reading...[0m[0m
+	            	[0m[1mazurerm_log_analytics_workspace.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-n9nfzjj2-rg/providers/Microsoft.OperationalInsights/workspaces/quickstart-aks-dev-law][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks_identity: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-n9nfzjj2-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickstart-aks-aks-identity][0m
+	            	[0m[1mdata.azurerm_subscription.current: Read complete after 0s [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26][0m
+	            	[0m[1mazurerm_role_assignment.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-n9nfzjj2-rg/providers/Microsoft.Authorization/roleAssignments/210c23f7-69b2-b7b9-22ae-cc665c29a07b][0m
+	            	[0m[1mazurerm_log_analytics_solution.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-n9nfzjj2-rg/providers/Microsoft.OperationsManagement/solutions/ContainerInsights(quickstart-aks-dev-law)][0m
+	            	[0m[1mazurerm_kubernetes_cluster.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-n9nfzjj2-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "default" {
+	            	        id                                  = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-n9nfzjj2-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks"
+	            	        name                                = "quickstart-aks-aks"
+	            	      [31m-[0m[0m oidc_issuer_enabled                 = true [90m-> null[0m[0m
+	            	      [33m~[0m[0m oidc_issuer_url                     = "https://westus2.oic.prod-aks.azure.com/4f00b3b6-2940-4f2c-b037-94637c180d30/3949df07-8e90-4f5f-b3ad-0383af1ea1ee/" -> (known after apply)
+	            	        tags                                = {}
+	            	        [90m# (38 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "default"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (4 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-aks-log-analytics1346385536/src/quickstart/201-aks-log-analytics/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-aks-log-analytics1346385536/src/quickstart/201-aks-log-analytics/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-aks-log-analytics
+
+FailNow
+
+---
+
+## 27 Sep 26 00:40 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=0zr4pgsk][0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-0zr4pgsk-rg][0m
+	            	[0m[1mdata.azurerm_subscription.current: Reading...[0m[0m
+	            	[0m[1mdata.azurerm_subscription.current: Read complete after 1s [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks_identity: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-0zr4pgsk-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickstart-aks-aks-identity][0m
+	            	[0m[1mazurerm_log_analytics_workspace.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-0zr4pgsk-rg/providers/Microsoft.OperationalInsights/workspaces/quickstart-aks-dev-law][0m
+	            	[0m[1mazurerm_role_assignment.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-0zr4pgsk-rg/providers/Microsoft.Authorization/roleAssignments/8c79df6f-3d94-68d8-7ad3-1900b9d2b76a][0m
+	            	[0m[1mazurerm_log_analytics_solution.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-0zr4pgsk-rg/providers/Microsoft.OperationsManagement/solutions/ContainerInsights(quickstart-aks-dev-law)][0m
+	            	[0m[1mazurerm_kubernetes_cluster.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-0zr4pgsk-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "default" {
+	            	        id                                  = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-0zr4pgsk-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks"
+	            	        name                                = "quickstart-aks-aks"
+	            	      [31m-[0m[0m oidc_issuer_enabled                 = true [90m-> null[0m[0m
+	            	      [33m~[0m[0m oidc_issuer_url                     = "https://westus2.oic.prod-aks.azure.com/4f00b3b6-2940-4f2c-b037-94637c180d30/1761f52b-2c98-49f4-af74-5f277740a6c6/" -> (known after apply)
+	            	        tags                                = {}
+	            	        [90m# (38 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "default"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (4 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-aks-log-analytics1104554424/src/quickstart/201-aks-log-analytics/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-aks-log-analytics1104554424/src/quickstart/201-aks-log-analytics/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-aks-log-analytics
+
+FailNow
+
+---
+
+## 20 Sep 26 00:42 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "quickstart-aks-dev-dtf4kwzb-rg"
+	            	[31m│[0m [0mKubernetes Cluster Name: "quickstart-aks-aks"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "ErrCode_InsufficientVCPUQuota",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Insufficient regional vcpu quota left for location westus2. left regional vcpu quota 4, requested quota 6. If you want to increase the quota, please follow this instruction: https://learn.microsoft.com/en-us/azure/quotas/view-quotas. Surge nodes would also consume vcpu quota, please consider use smaller maxSurge or use maxUnavailable to proceed upgrade without surge nodes, details: aka.ms/aks/maxUnavailable.",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.default,
+	            	[31m│[0m [0m  on aks.tf line 13, in resource "azurerm_kubernetes_cluster" "default":
+	            	[31m│[0m [0m  13: resource "azurerm_kubernetes_cluster" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-log-analytics
+
+FailNow
+
+---
+
+## 13 Sep 26 00:40 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "quickstart-aks-dev-20hlos94-rg"
+	            	[31m│[0m [0mKubernetes Cluster Name: "quickstart-aks-aks"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "ErrCode_InsufficientVCPUQuota",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Insufficient regional vcpu quota left for location westus2. left regional vcpu quota 4, requested quota 6. If you want to increase the quota, please follow this instruction: https://learn.microsoft.com/en-us/azure/quotas/view-quotas. Surge nodes would also consume vcpu quota, please consider use smaller maxSurge or use maxUnavailable to proceed upgrade without surge nodes, details: aka.ms/aks/maxUnavailable.",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.default,
+	            	[31m│[0m [0m  on aks.tf line 13, in resource "azurerm_kubernetes_cluster" "default":
+	            	[31m│[0m [0m  13: resource "azurerm_kubernetes_cluster" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-log-analytics
+
+FailNow
+
+---
+
+## 06 Sep 26 00:40 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=v5r6rx7n][0m
+	            	[0m[1mdata.azurerm_subscription.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-v5r6rx7n-rg][0m
+	            	[0m[1mdata.azurerm_subscription.current: Read complete after 0s [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks_identity: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-v5r6rx7n-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickstart-aks-aks-identity][0m
+	            	[0m[1mazurerm_log_analytics_workspace.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-v5r6rx7n-rg/providers/Microsoft.OperationalInsights/workspaces/quickstart-aks-dev-law][0m
+	            	[0m[1mazurerm_role_assignment.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-v5r6rx7n-rg/providers/Microsoft.Authorization/roleAssignments/33789662-5711-5b52-3a3f-8ad020051a31][0m
+	            	[0m[1mazurerm_log_analytics_solution.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-v5r6rx7n-rg/providers/Microsoft.OperationsManagement/solutions/ContainerInsights(quickstart-aks-dev-law)][0m
+	            	[0m[1mazurerm_kubernetes_cluster.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-v5r6rx7n-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "default" {
+	            	        id                                  = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-v5r6rx7n-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks"
+	            	        name                                = "quickstart-aks-aks"
+	            	      [31m-[0m[0m oidc_issuer_enabled                 = true [90m-> null[0m[0m
+	            	      [33m~[0m[0m oidc_issuer_url                     = "https://westus2.oic.prod-aks.azure.com/4f00b3b6-2940-4f2c-b037-94637c180d30/7cf15b78-e74e-44d6-a1c8-d805c915fa12/" -> (known after apply)
+	            	        tags                                = {}
+	            	        [90m# (38 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "default"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (4 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-aks-log-analytics1153556038/src/quickstart/201-aks-log-analytics/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-aks-log-analytics1153556038/src/quickstart/201-aks-log-analytics/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-aks-log-analytics
+
+FailNow
+
+---
+
+## 30 Aug 26 00:53 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=dugbc00a][0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-dugbc00a-rg][0m
+	            	[0m[1mdata.azurerm_subscription.current: Reading...[0m[0m
+	            	[0m[1mdata.azurerm_subscription.current: Read complete after 1s [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks_identity: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-dugbc00a-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickstart-aks-aks-identity][0m
+	            	[0m[1mazurerm_log_analytics_workspace.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-dugbc00a-rg/providers/Microsoft.OperationalInsights/workspaces/quickstart-aks-dev-law][0m
+	            	[0m[1mazurerm_role_assignment.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-dugbc00a-rg/providers/Microsoft.Authorization/roleAssignments/ec0eebe4-0637-b493-f57b-759affaab079][0m
+	            	[0m[1mazurerm_log_analytics_solution.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-dugbc00a-rg/providers/Microsoft.OperationsManagement/solutions/ContainerInsights(quickstart-aks-dev-law)][0m
+	            	[0m[1mazurerm_kubernetes_cluster.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-dugbc00a-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "default" {
+	            	        id                                  = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-dugbc00a-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks"
+	            	        name                                = "quickstart-aks-aks"
+	            	      [31m-[0m[0m oidc_issuer_enabled                 = true [90m-> null[0m[0m
+	            	      [33m~[0m[0m oidc_issuer_url                     = "https://westus2.oic.prod-aks.azure.com/4f00b3b6-2940-4f2c-b037-94637c180d30/412da4fb-86af-4aca-8bd1-99ff6cabd2e6/" -> (known after apply)
+	            	        tags                                = {}
+	            	        [90m# (38 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "default"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (4 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-aks-log-analytics1075707014/src/quickstart/201-aks-log-analytics/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-aks-log-analytics1075707014/src/quickstart/201-aks-log-analytics/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-aks-log-analytics
+
+FailNow
+
+---
+
+## 23 Aug 26 00:24 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "quickstart-aks-dev-t2b20c2q-rg"
+	            	[31m│[0m [0mKubernetes Cluster Name: "quickstart-aks-aks"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "ErrCode_InsufficientVCPUQuota",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Insufficient regional vcpu quota left for location westus2. left regional vcpu quota 4, requested quota 6. If you want to increase the quota, please follow this instruction: https://learn.microsoft.com/en-us/azure/quotas/view-quotas. Surge nodes would also consume vcpu quota, please consider use smaller maxSurge or use maxUnavailable to proceed upgrade without surge nodes, details: aka.ms/aks/maxUnavailable.",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.default,
+	            	[31m│[0m [0m  on aks.tf line 13, in resource "azurerm_kubernetes_cluster" "default":
+	            	[31m│[0m [0m  13: resource "azurerm_kubernetes_cluster" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-log-analytics
+
+FailNow
+
+---
+
+## 16 Aug 26 00:40 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=eey61yh1][0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-eey61yh1-rg][0m
+	            	[0m[1mdata.azurerm_subscription.current: Reading...[0m[0m
+	            	[0m[1mazurerm_user_assigned_identity.aks_identity: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-eey61yh1-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickstart-aks-aks-identity][0m
+	            	[0m[1mazurerm_log_analytics_workspace.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-eey61yh1-rg/providers/Microsoft.OperationalInsights/workspaces/quickstart-aks-dev-law][0m
+	            	[0m[1mdata.azurerm_subscription.current: Read complete after 0s [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26][0m
+	            	[0m[1mazurerm_role_assignment.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-eey61yh1-rg/providers/Microsoft.Authorization/roleAssignments/bbbf7e8d-85e6-a9e4-9784-a2c96c0fa3c0][0m
+	            	[0m[1mazurerm_log_analytics_solution.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-eey61yh1-rg/providers/Microsoft.OperationsManagement/solutions/ContainerInsights(quickstart-aks-dev-law)][0m
+	            	[0m[1mazurerm_kubernetes_cluster.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-eey61yh1-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "default" {
+	            	        id                                  = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-eey61yh1-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks"
+	            	        name                                = "quickstart-aks-aks"
+	            	      [31m-[0m[0m oidc_issuer_enabled                 = true [90m-> null[0m[0m
+	            	      [33m~[0m[0m oidc_issuer_url                     = "https://westus2.oic.prod-aks.azure.com/4f00b3b6-2940-4f2c-b037-94637c180d30/b4d9dfe3-a0aa-4547-ac49-777646360ff6/" -> (known after apply)
+	            	        tags                                = {}
+	            	        [90m# (38 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "default"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (4 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-aks-log-analytics1986952789/src/quickstart/201-aks-log-analytics/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-aks-log-analytics1986952789/src/quickstart/201-aks-log-analytics/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-aks-log-analytics
+
+FailNow
+
+---
+
+## 09 Aug 26 01:06 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=jor6ebsy][0m
+	            	[0m[1mdata.azurerm_subscription.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-jor6ebsy-rg][0m
+	            	[0m[1mdata.azurerm_subscription.current: Read complete after 0s [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks_identity: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-jor6ebsy-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickstart-aks-aks-identity][0m
+	            	[0m[1mazurerm_log_analytics_workspace.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-jor6ebsy-rg/providers/Microsoft.OperationalInsights/workspaces/quickstart-aks-dev-law][0m
+	            	[0m[1mazurerm_role_assignment.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-jor6ebsy-rg/providers/Microsoft.Authorization/roleAssignments/4ea5f0e0-5296-0578-a36c-2ca025cd8dda][0m
+	            	[0m[1mazurerm_log_analytics_solution.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-jor6ebsy-rg/providers/Microsoft.OperationsManagement/solutions/ContainerInsights(quickstart-aks-dev-law)][0m
+	            	[0m[1mazurerm_kubernetes_cluster.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-jor6ebsy-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "default" {
+	            	        id                                  = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-jor6ebsy-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks"
+	            	        name                                = "quickstart-aks-aks"
+	            	      [31m-[0m[0m oidc_issuer_enabled                 = true [90m-> null[0m[0m
+	            	      [33m~[0m[0m oidc_issuer_url                     = "https://westus2.oic.prod-aks.azure.com/4f00b3b6-2940-4f2c-b037-94637c180d30/422756dd-0831-44da-876d-9db190eb588f/" -> (known after apply)
+	            	        tags                                = {}
+	            	        [90m# (38 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "default"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (4 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-aks-log-analytics417608554/src/quickstart/201-aks-log-analytics/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-aks-log-analytics417608554/src/quickstart/201-aks-log-analytics/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-aks-log-analytics
+
+FailNow
+
+---
+
+## 02 Aug 26 01:34 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "quickstart-aks-dev-lx0dadhd-rg"
+	            	[31m│[0m [0mKubernetes Cluster Name: "quickstart-aks-aks"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "ErrCode_InsufficientVCPUQuota",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Insufficient regional vcpu quota left for location westus2. left regional vcpu quota 4, requested quota 6. If you want to increase the quota, please follow this instruction: https://learn.microsoft.com/en-us/azure/quotas/view-quotas. Surge nodes would also consume vcpu quota, please consider use smaller maxSurge or use maxUnavailable to proceed upgrade without surge nodes, details: aka.ms/aks/maxUnavailable.",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.default,
+	            	[31m│[0m [0m  on aks.tf line 13, in resource "azurerm_kubernetes_cluster" "default":
+	            	[31m│[0m [0m  13: resource "azurerm_kubernetes_cluster" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-log-analytics
+
+FailNow
+
+---
+
+## 26 Jul 26 00:49 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=5uxjvuep][0m
+	            	[0m[1mdata.azurerm_subscription.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-5uxjvuep-rg][0m
+	            	[0m[1mdata.azurerm_subscription.current: Read complete after 0s [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks_identity: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-5uxjvuep-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickstart-aks-aks-identity][0m
+	            	[0m[1mazurerm_log_analytics_workspace.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-5uxjvuep-rg/providers/Microsoft.OperationalInsights/workspaces/quickstart-aks-dev-law][0m
+	            	[0m[1mazurerm_role_assignment.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-5uxjvuep-rg/providers/Microsoft.Authorization/roleAssignments/8206c1f3-63bc-cc2c-b071-0e1a841ca4de][0m
+	            	[0m[1mazurerm_log_analytics_solution.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-5uxjvuep-rg/providers/Microsoft.OperationsManagement/solutions/ContainerInsights(quickstart-aks-dev-law)][0m
+	            	[0m[1mazurerm_kubernetes_cluster.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-5uxjvuep-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "default" {
+	            	        id                                  = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-5uxjvuep-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks"
+	            	        name                                = "quickstart-aks-aks"
+	            	      [31m-[0m[0m oidc_issuer_enabled                 = true [90m-> null[0m[0m
+	            	      [33m~[0m[0m oidc_issuer_url                     = "https://westus2.oic.prod-aks.azure.com/544a7a2e-697f-487c-b2b0-a13df7f346b6/1fa66b59-20f8-4ea3-875d-63e46ab49cd7/" -> (known after apply)
+	            	        tags                                = {}
+	            	        [90m# (38 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "default"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (4 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-aks-log-analytics4185019572/src/quickstart/201-aks-log-analytics/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-aks-log-analytics4185019572/src/quickstart/201-aks-log-analytics/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-aks-log-analytics
+
+FailNow
+
+---
+
+## 12 Jul 26 01:20 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=ita9ntvz][0m
+	            	[0m[1mdata.azurerm_subscription.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-ita9ntvz-rg][0m
+	            	[0m[1mdata.azurerm_subscription.current: Read complete after 0s [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks_identity: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-ita9ntvz-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickstart-aks-aks-identity][0m
+	            	[0m[1mazurerm_log_analytics_workspace.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-ita9ntvz-rg/providers/Microsoft.OperationalInsights/workspaces/quickstart-aks-dev-law][0m
+	            	[0m[1mazurerm_role_assignment.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-ita9ntvz-rg/providers/Microsoft.Authorization/roleAssignments/47f3f2a4-d78c-af72-8c6a-7e5666b373f3][0m
+	            	[0m[1mazurerm_log_analytics_solution.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-ita9ntvz-rg/providers/Microsoft.OperationsManagement/solutions/ContainerInsights(quickstart-aks-dev-law)][0m
+	            	[0m[1mazurerm_kubernetes_cluster.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-ita9ntvz-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "default" {
+	            	        id                                  = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-ita9ntvz-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks"
+	            	        name                                = "quickstart-aks-aks"
+	            	      [31m-[0m[0m oidc_issuer_enabled                 = true [90m-> null[0m[0m
+	            	      [33m~[0m[0m oidc_issuer_url                     = "https://westus2.oic.prod-aks.azure.com/544a7a2e-697f-487c-b2b0-a13df7f346b6/708542d3-a287-4218-8344-549916cda7d3/" -> (known after apply)
+	            	        tags                                = {}
+	            	        [90m# (38 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "default"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (4 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-aks-log-analytics35620964/src/quickstart/201-aks-log-analytics/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-aks-log-analytics35620964/src/quickstart/201-aks-log-analytics/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-aks-log-analytics
+
+FailNow
+
+---
+
+## 05 Jul 26 01:12 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=rbuigqcc][0m
+	            	[0m[1mdata.azurerm_subscription.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-rbuigqcc-rg][0m
+	            	[0m[1mdata.azurerm_subscription.current: Read complete after 0s [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks_identity: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-rbuigqcc-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickstart-aks-aks-identity][0m
+	            	[0m[1mazurerm_log_analytics_workspace.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-rbuigqcc-rg/providers/Microsoft.OperationalInsights/workspaces/quickstart-aks-dev-law][0m
+	            	[0m[1mazurerm_role_assignment.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-rbuigqcc-rg/providers/Microsoft.Authorization/roleAssignments/72059eab-8b84-6cc4-bfe7-858e1fff68d4][0m
+	            	[0m[1mazurerm_log_analytics_solution.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-rbuigqcc-rg/providers/Microsoft.OperationsManagement/solutions/ContainerInsights(quickstart-aks-dev-law)][0m
+	            	[0m[1mazurerm_kubernetes_cluster.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-rbuigqcc-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "default" {
+	            	        id                                  = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-rbuigqcc-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks"
+	            	        name                                = "quickstart-aks-aks"
+	            	      [31m-[0m[0m oidc_issuer_enabled                 = true [90m-> null[0m[0m
+	            	      [33m~[0m[0m oidc_issuer_url                     = "https://westus2.oic.prod-aks.azure.com/544a7a2e-697f-487c-b2b0-a13df7f346b6/db5cf9e6-4460-4a40-a53b-8039fa4719b6/" -> (known after apply)
+	            	        tags                                = {}
+	            	        [90m# (38 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "default"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (4 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-aks-log-analytics3133538052/src/quickstart/201-aks-log-analytics/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-aks-log-analytics3133538052/src/quickstart/201-aks-log-analytics/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-aks-log-analytics
+
+FailNow
+
+---
+
+## 28 Jun 26 01:16 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=0z3y26ht][0m
+	            	[0m[1mdata.azurerm_subscription.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-0z3y26ht-rg][0m
+	            	[0m[1mdata.azurerm_subscription.current: Read complete after 0s [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks_identity: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-0z3y26ht-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickstart-aks-aks-identity][0m
+	            	[0m[1mazurerm_log_analytics_workspace.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-0z3y26ht-rg/providers/Microsoft.OperationalInsights/workspaces/quickstart-aks-dev-law][0m
+	            	[0m[1mazurerm_role_assignment.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-0z3y26ht-rg/providers/Microsoft.Authorization/roleAssignments/ab0fcdf7-07cb-cb1b-24c3-9ade1426ffeb][0m
+	            	[0m[1mazurerm_log_analytics_solution.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-0z3y26ht-rg/providers/Microsoft.OperationsManagement/solutions/ContainerInsights(quickstart-aks-dev-law)][0m
+	            	[0m[1mazurerm_kubernetes_cluster.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-0z3y26ht-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "default" {
+	            	        id                                  = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-0z3y26ht-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks"
+	            	        name                                = "quickstart-aks-aks"
+	            	      [31m-[0m[0m oidc_issuer_enabled                 = true [90m-> null[0m[0m
+	            	      [33m~[0m[0m oidc_issuer_url                     = "https://westus2.oic.prod-aks.azure.com/544a7a2e-697f-487c-b2b0-a13df7f346b6/c0c4f802-6d81-4c4d-aa01-c491fea0918a/" -> (known after apply)
+	            	        tags                                = {}
+	            	        [90m# (38 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "default"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (4 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-aks-log-analytics3999254629/src/quickstart/201-aks-log-analytics/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-aks-log-analytics3999254629/src/quickstart/201-aks-log-analytics/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-aks-log-analytics
+
+FailNow
+
+---
+
+## 14 Jun 26 01:06 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "quickstart-aks-dev-0pheb3p8-rg"
+	            	[31m│[0m [0mKubernetes Cluster Name: "quickstart-aks-aks"): polling after CreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "QuotaExceeded"
+	            	[31m│[0m [0mCode: "OperationNotAllowed"
+	            	[31m│[0m [0mMessage: "Create or update VMSS /subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/MC_quickstart-aks-dev-0pheb3p8-rg_quickstart-aks-aks_westus2/providers/Microsoft.Compute/virtualMachineScaleSets/aks-default-37674096-vmss failed. Operation could not be completed as it results in exceeding approved Total Regional Cores quota. Additional details - Deployment Model: Resource Manager, Location: westus2, Current Limit: 10, Current Usage: 6, Additional Required: 6, (Minimum) New Limit Required: 12. Setup Alerts when Quota reaches threshold. Learn more at https://aka.ms/quotamonitoringalerting . Submit a request for Quota increase at https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/%7B%22subscriptionId%22:%22cb563ee9-7df0-468e-81d5-166968d1f89a%22,%22command%22:%22openQuotaApprovalBlade%22,%22quotas%22:[%7B%22location%22:%22westus2%22,%22providerId%22:%22Microsoft.Compute%22,%22resourceName%22:%22cores%22,%22quotaRequest%22:%7B%22properties%22:%7B%22limit%22:12,%22unit%22:%22Count%22,%22name%22:%7B%22value%22:%22cores%22%7D%7D%7D%7D]%7D by specifying parameters listed in the ‘Details’ section for deployment to succeed. Please read more about quota limits at https://docs.microsoft.com/en-us/azure/azure-supportability/regional-quota-requests\nOperation could not be completed as it results in exceeding approved Total Regional Cores quota. Additional details - Deployment Model: Resource Manager, Location: westus2, Current Limit: 10, Current Usage: 6, Additional Required: 6, (Minimum) New Limit Required: 12. Setup Alerts when Quota reaches threshold. Learn more at https://aka.ms/quotamonitoringalerting . Submit a request for Quota increase at https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/%7B%22subscriptionId%22:%22cb563ee9-7df0-468e-81d5-166968d1f89a%22,%22command%22:%22openQuotaApprovalBlade%22,%22quotas%22:[%7B%22location%22:%22westus2%22,%22providerId%22:%22Microsoft.Compute%22,%22resourceName%22:%22cores%22,%22quotaRequest%22:%7B%22properties%22:%7B%22limit%22:12,%22unit%22:%22Count%22,%22name%22:%7B%22value%22:%22cores%22%7D%7D%7D%7D]%7D by specifying parameters listed in the ‘Details’ section for deployment to succeed. Please read more about quota limits at https://docs.microsoft.com/en-us/azure/azure-supportability/regional-quota-requests"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m "name": "3c235401-2dcf-4bcd-9264-8a61d8503844",
+	            	[31m│[0m [0m "status": "Failed",
+	            	[31m│[0m [0m "startTime": "2026-06-14T00:57:53.3328211Z",
+	            	[31m│[0m [0m "endTime": "2026-06-14T00:59:34.147286Z",
+	            	[31m│[0m [0m "error": {
+	            	[31m│[0m [0m  "code": "QuotaExceeded",
+	            	[31m│[0m [0m  "message": "Create or update VMSS /subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/MC_quickstart-aks-dev-0pheb3p8-rg_quickstart-aks-aks_westus2/providers/Microsoft.Compute/virtualMachineScaleSets/aks-default-37674096-vmss failed. Operation could not be completed as it results in exceeding approved Total Regional Cores quota. Additional details - Deployment Model: Resource Manager, Location: westus2, Current Limit: 10, Current Usage: 6, Additional Required: 6, (Minimum) New Limit Required: 12. Setup Alerts when Quota reaches threshold. Learn more at https://aka.ms/quotamonitoringalerting . Submit a request for Quota increase at https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/%7B%22subscriptionId%22:%22cb563ee9-7df0-468e-81d5-166968d1f89a%22,%22command%22:%22openQuotaApprovalBlade%22,%22quotas%22:[%7B%22location%22:%22westus2%22,%22providerId%22:%22Microsoft.Compute%22,%22resourceName%22:%22cores%22,%22quotaRequest%22:%7B%22properties%22:%7B%22limit%22:12,%22unit%22:%22Count%22,%22name%22:%7B%22value%22:%22cores%22%7D%7D%7D%7D]%7D by specifying parameters listed in the ‘Details’ section for deployment to succeed. Please read more about quota limits at https://docs.microsoft.com/en-us/azure/azure-supportability/regional-quota-requests",
+	            	[31m│[0m [0m  "details": [
+	            	[31m│[0m [0m   {
+	            	[31m│[0m [0m    "code": "OperationNotAllowed",
+	            	[31m│[0m [0m    "message": "Operation could not be completed as it results in exceeding approved Total Regional Cores quota. Additional details - Deployment Model: Resource Manager, Location: westus2, Current Limit: 10, Current Usage: 6, Additional Required: 6, (Minimum) New Limit Required: 12. Setup Alerts when Quota reaches threshold. Learn more at https://aka.ms/quotamonitoringalerting . Submit a request for Quota increase at https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/%7B%22subscriptionId%22:%22cb563ee9-7df0-468e-81d5-166968d1f89a%22,%22command%22:%22openQuotaApprovalBlade%22,%22quotas%22:[%7B%22location%22:%22westus2%22,%22providerId%22:%22Microsoft.Compute%22,%22resourceName%22:%22cores%22,%22quotaRequest%22:%7B%22properties%22:%7B%22limit%22:12,%22unit%22:%22Count%22,%22name%22:%7B%22value%22:%22cores%22%7D%7D%7D%7D]%7D by specifying parameters listed in the ‘Details’ section for deployment to succeed. Please read more about quota limits at https://docs.microsoft.com/en-us/azure/azure-supportability/regional-quota-requests"
+	            	[31m│[0m [0m   }
+	            	[31m│[0m [0m  ]
+	            	[31m│[0m [0m }
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.default,
+	            	[31m│[0m [0m  on aks.tf line 13, in resource "azurerm_kubernetes_cluster" "default":
+	            	[31m│[0m [0m  13: resource "azurerm_kubernetes_cluster" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-log-analytics
+
+FailNow
+
+---
+
+## 31 May 26 02:00 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "quickstart-aks-dev-r4ykloot-rg"
+	            	[31m│[0m [0mKubernetes Cluster Name: "quickstart-aks-aks"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "ErrCode_InsufficientVCPUQuota",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Insufficient regional vcpu quota left for location westus2. left regional vcpu quota 4, requested quota 6. If you want to increase the quota, please follow this instruction: https://learn.microsoft.com/en-us/azure/quotas/view-quotas. Surge nodes would also consume vcpu quota, please consider use smaller maxSurge or use maxUnavailable to proceed upgrade without surge nodes, details: aka.ms/aks/maxUnavailable.",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.default,
+	            	[31m│[0m [0m  on aks.tf line 13, in resource "azurerm_kubernetes_cluster" "default":
+	            	[31m│[0m [0m  13: resource "azurerm_kubernetes_cluster" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-log-analytics
+
+FailNow
+
+---
+
+## 24 May 26 00:51 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "quickstart-aks-dev-bwduvamm-rg"
+	            	[31m│[0m [0mKubernetes Cluster Name: "quickstart-aks-aks"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "ErrCode_InsufficientVCPUQuota",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Insufficient regional vcpu quota left for location westus2. left regional vcpu quota 4, requested quota 6. If you want to increase the quota, please follow this instruction: https://learn.microsoft.com/en-us/azure/quotas/view-quotas. Surge nodes would also consume vcpu quota, please consider use smaller maxSurge or use maxUnavailable to proceed upgrade without surge nodes, details: aka.ms/aks/maxUnavailable.",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.default,
+	            	[31m│[0m [0m  on aks.tf line 13, in resource "azurerm_kubernetes_cluster" "default":
+	            	[31m│[0m [0m  13: resource "azurerm_kubernetes_cluster" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-log-analytics
+
+FailNow
+
+---
+
+## 10 May 26 00:58 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.4.3
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=45yuhpjd][0m
+	            	[0m[1mdata.azurerm_subscription.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-45yuhpjd-rg][0m
+	            	[0m[1mdata.azurerm_subscription.current: Read complete after 0s [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks_identity: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-45yuhpjd-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickstart-aks-aks-identity][0m
+	            	[0m[1mazurerm_log_analytics_workspace.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-45yuhpjd-rg/providers/Microsoft.OperationalInsights/workspaces/quickstart-aks-dev-law][0m
+	            	[0m[1mazurerm_role_assignment.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-45yuhpjd-rg/providers/Microsoft.Authorization/roleAssignments/2ca04772-4c67-3510-fb07-7c8039616b72][0m
+	            	[0m[1mazurerm_log_analytics_solution.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-45yuhpjd-rg/providers/Microsoft.OperationsManagement/solutions/ContainerInsights(quickstart-aks-dev-law)][0m
+	            	[0m[1mazurerm_kubernetes_cluster.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-45yuhpjd-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "default" {
+	            	        id                                  = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-45yuhpjd-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks"
+	            	        name                                = "quickstart-aks-aks"
+	            	      [31m-[0m[0m oidc_issuer_enabled                 = true [90m-> null[0m[0m
+	            	      [33m~[0m[0m oidc_issuer_url                     = "https://westus2.oic.prod-aks.azure.com/544a7a2e-697f-487c-b2b0-a13df7f346b6/e1bd49bb-ff2c-4573-ab65-92b4cf9fcfb0/" -> (known after apply)
+	            	        tags                                = {}
+	            	        [90m# (38 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "default"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (4 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-aks-log-analytics3059725433/src/quickstart/201-aks-log-analytics/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-aks-log-analytics3059725433/src/quickstart/201-aks-log-analytics/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-aks-log-analytics
+
+FailNow
+
+---
+
 ## 26 Apr 26 00:46 UTC
 
 Success: false

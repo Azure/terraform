@@ -1,3 +1,2338 @@
+## 08 Nov 26 00:16 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant '4f00b3b6-2940-4f2c-b037-94637c180d30' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 3d7fb78d-5b05-493c-ad08-ba4d8a2bcc00 Correlation ID: 9253cd3c-4ca6-4532-b3e1-00dbd6588e59 Timestamp: 2026-11-08 00:16:33Z","error_codes":[5000229],"timestamp":"2026-11-08 00:16:33Z","trace_id":"3d7fb78d-5b05-493c-ad08-ba4d8a2bcc00","correlation_id":"9253cd3c-4ca6-4532-b3e1-00dbd6588e59"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 14, in provider "azurerm":
+	            	[31m│[0m [0m  14: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-virtual-network-public-ip-prefix
+
+FailNow
+
+---
+
+## 01 Nov 26 00:12 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant '4f00b3b6-2940-4f2c-b037-94637c180d30' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: bda10b43-7cbc-45f8-93fc-d7a20f54b501 Correlation ID: 95214087-f7c2-432e-bf44-0a93c4510ec0 Timestamp: 2026-11-01 00:12:11Z","error_codes":[5000229],"timestamp":"2026-11-01 00:12:11Z","trace_id":"bda10b43-7cbc-45f8-93fc-d7a20f54b501","correlation_id":"95214087-f7c2-432e-bf44-0a93c4510ec0"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 14, in provider "azurerm":
+	            	[31m│[0m [0m  14: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-virtual-network-public-ip-prefix
+
+FailNow
+
+---
+
+## 25 Oct 26 00:19 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 3ac34391-1a27-41f1-921b-3c8efe733202 Correlation ID: 4ba23cd4-9c02-41d6-a952-df3e59e90aa6 Timestamp: 2026-10-25 00:19:38Z","error_codes":[5000229],"timestamp":"2026-10-25 00:19:38Z","trace_id":"3ac34391-1a27-41f1-921b-3c8efe733202","correlation_id":"4ba23cd4-9c02-41d6-a952-df3e59e90aa6"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 14, in provider "azurerm":
+	            	[31m│[0m [0m  14: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-virtual-network-public-ip-prefix
+
+FailNow
+
+---
+
+## 18 Oct 26 00:46 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-capable-beagle"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4,
+	            	[31m│[0m [0m  on main.tf line 13, in resource "azurerm_public_ip_prefix" "my_ipv4":
+	            	[31m│[0m [0m  13: resource "azurerm_public_ip_prefix" "my_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-capable-beagle"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_zonal,
+	            	[31m│[0m [0m  on main.tf line 25, in resource "azurerm_public_ip_prefix" "my_ipv4_zonal":
+	            	[31m│[0m [0m  25: resource "azurerm_public_ip_prefix" "my_ipv4_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-capable-beagle"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 37, in resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal":
+	            	[31m│[0m [0m  37: resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-capable-beagle"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4RPInternet"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_rp_internet,
+	            	[31m│[0m [0m  on main.tf line 47, in resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet":
+	            	[31m│[0m [0m  47: resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-capable-beagle"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv6StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv6 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6,
+	            	[31m│[0m [0m  on main.tf line 61, in resource "azurerm_public_ip_prefix" "my_ipv6":
+	            	[31m│[0m [0m  61: resource "azurerm_public_ip_prefix" "my_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-capable-beagle"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv6StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv6 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_zonal,
+	            	[31m│[0m [0m  on main.tf line 73, in resource "azurerm_public_ip_prefix" "my_ipv6_zonal":
+	            	[31m│[0m [0m  73: resource "azurerm_public_ip_prefix" "my_ipv6_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-capable-beagle"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix1"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv4,
+	            	[31m│[0m [0m  on main.tf line 108, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4":
+	            	[31m│[0m [0m 108: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-capable-beagle"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix2"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv6StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv6 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv6,
+	            	[31m│[0m [0m  on main.tf line 131, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6":
+	            	[31m│[0m [0m 131: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-virtual-network-public-ip-prefix
+
+FailNow
+
+---
+
+## 11 Oct 26 00:49 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-beloved-bluejay"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4,
+	            	[31m│[0m [0m  on main.tf line 13, in resource "azurerm_public_ip_prefix" "my_ipv4":
+	            	[31m│[0m [0m  13: resource "azurerm_public_ip_prefix" "my_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-beloved-bluejay"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_zonal,
+	            	[31m│[0m [0m  on main.tf line 25, in resource "azurerm_public_ip_prefix" "my_ipv4_zonal":
+	            	[31m│[0m [0m  25: resource "azurerm_public_ip_prefix" "my_ipv4_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-beloved-bluejay"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 37, in resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal":
+	            	[31m│[0m [0m  37: resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-beloved-bluejay"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4RPInternet"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_rp_internet,
+	            	[31m│[0m [0m  on main.tf line 47, in resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet":
+	            	[31m│[0m [0m  47: resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-beloved-bluejay"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv6StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv6 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6,
+	            	[31m│[0m [0m  on main.tf line 61, in resource "azurerm_public_ip_prefix" "my_ipv6":
+	            	[31m│[0m [0m  61: resource "azurerm_public_ip_prefix" "my_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-beloved-bluejay"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv6StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv6 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 85, in resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal":
+	            	[31m│[0m [0m  85: resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-beloved-bluejay"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix1"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv4,
+	            	[31m│[0m [0m  on main.tf line 108, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4":
+	            	[31m│[0m [0m 108: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-beloved-bluejay"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix2"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv6StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv6 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv6,
+	            	[31m│[0m [0m  on main.tf line 131, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6":
+	            	[31m│[0m [0m 131: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-virtual-network-public-ip-prefix
+
+FailNow
+
+---
+
+## 04 Oct 26 01:07 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-civil-glider"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4,
+	            	[31m│[0m [0m  on main.tf line 13, in resource "azurerm_public_ip_prefix" "my_ipv4":
+	            	[31m│[0m [0m  13: resource "azurerm_public_ip_prefix" "my_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-civil-glider"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_zonal,
+	            	[31m│[0m [0m  on main.tf line 25, in resource "azurerm_public_ip_prefix" "my_ipv4_zonal":
+	            	[31m│[0m [0m  25: resource "azurerm_public_ip_prefix" "my_ipv4_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-civil-glider"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 37, in resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal":
+	            	[31m│[0m [0m  37: resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-civil-glider"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4RPInternet"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_rp_internet,
+	            	[31m│[0m [0m  on main.tf line 47, in resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet":
+	            	[31m│[0m [0m  47: resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-civil-glider"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6,
+	            	[31m│[0m [0m  on main.tf line 61, in resource "azurerm_public_ip_prefix" "my_ipv6":
+	            	[31m│[0m [0m  61: resource "azurerm_public_ip_prefix" "my_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-civil-glider"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_zonal,
+	            	[31m│[0m [0m  on main.tf line 73, in resource "azurerm_public_ip_prefix" "my_ipv6_zonal":
+	            	[31m│[0m [0m  73: resource "azurerm_public_ip_prefix" "my_ipv6_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-civil-glider"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 85, in resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal":
+	            	[31m│[0m [0m  85: resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-civil-glider"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix1"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv4,
+	            	[31m│[0m [0m  on main.tf line 108, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4":
+	            	[31m│[0m [0m 108: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-civil-glider"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix2"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv6,
+	            	[31m│[0m [0m  on main.tf line 131, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6":
+	            	[31m│[0m [0m 131: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-virtual-network-public-ip-prefix
+
+FailNow
+
+---
+
+## 27 Sep 26 01:54 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-coherent-midge"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4,
+	            	[31m│[0m [0m  on main.tf line 13, in resource "azurerm_public_ip_prefix" "my_ipv4":
+	            	[31m│[0m [0m  13: resource "azurerm_public_ip_prefix" "my_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-coherent-midge"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_zonal,
+	            	[31m│[0m [0m  on main.tf line 25, in resource "azurerm_public_ip_prefix" "my_ipv4_zonal":
+	            	[31m│[0m [0m  25: resource "azurerm_public_ip_prefix" "my_ipv4_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-coherent-midge"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 37, in resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal":
+	            	[31m│[0m [0m  37: resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-coherent-midge"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4RPInternet"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_rp_internet,
+	            	[31m│[0m [0m  on main.tf line 47, in resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet":
+	            	[31m│[0m [0m  47: resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-coherent-midge"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv6StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv6 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6,
+	            	[31m│[0m [0m  on main.tf line 61, in resource "azurerm_public_ip_prefix" "my_ipv6":
+	            	[31m│[0m [0m  61: resource "azurerm_public_ip_prefix" "my_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-coherent-midge"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv6StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv6 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_zonal,
+	            	[31m│[0m [0m  on main.tf line 73, in resource "azurerm_public_ip_prefix" "my_ipv6_zonal":
+	            	[31m│[0m [0m  73: resource "azurerm_public_ip_prefix" "my_ipv6_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-coherent-midge"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv6StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv6 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 85, in resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal":
+	            	[31m│[0m [0m  85: resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-coherent-midge"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix1"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv4,
+	            	[31m│[0m [0m  on main.tf line 108, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4":
+	            	[31m│[0m [0m 108: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-virtual-network-public-ip-prefix
+
+FailNow
+
+---
+
+## 20 Sep 26 00:52 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-clear-firefly"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4,
+	            	[31m│[0m [0m  on main.tf line 13, in resource "azurerm_public_ip_prefix" "my_ipv4":
+	            	[31m│[0m [0m  13: resource "azurerm_public_ip_prefix" "my_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-clear-firefly"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_zonal,
+	            	[31m│[0m [0m  on main.tf line 25, in resource "azurerm_public_ip_prefix" "my_ipv4_zonal":
+	            	[31m│[0m [0m  25: resource "azurerm_public_ip_prefix" "my_ipv4_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-clear-firefly"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 37, in resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal":
+	            	[31m│[0m [0m  37: resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-clear-firefly"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4RPInternet"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_rp_internet,
+	            	[31m│[0m [0m  on main.tf line 47, in resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet":
+	            	[31m│[0m [0m  47: resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-clear-firefly"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6,
+	            	[31m│[0m [0m  on main.tf line 61, in resource "azurerm_public_ip_prefix" "my_ipv6":
+	            	[31m│[0m [0m  61: resource "azurerm_public_ip_prefix" "my_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-clear-firefly"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_zonal,
+	            	[31m│[0m [0m  on main.tf line 73, in resource "azurerm_public_ip_prefix" "my_ipv6_zonal":
+	            	[31m│[0m [0m  73: resource "azurerm_public_ip_prefix" "my_ipv6_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-clear-firefly"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 85, in resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal":
+	            	[31m│[0m [0m  85: resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-clear-firefly"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix1"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv4,
+	            	[31m│[0m [0m  on main.tf line 108, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4":
+	            	[31m│[0m [0m 108: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-clear-firefly"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix2"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv6,
+	            	[31m│[0m [0m  on main.tf line 131, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6":
+	            	[31m│[0m [0m 131: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-virtual-network-public-ip-prefix
+
+FailNow
+
+---
+
+## 13 Sep 26 01:46 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-settling-crane"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4,
+	            	[31m│[0m [0m  on main.tf line 13, in resource "azurerm_public_ip_prefix" "my_ipv4":
+	            	[31m│[0m [0m  13: resource "azurerm_public_ip_prefix" "my_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-settling-crane"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_zonal,
+	            	[31m│[0m [0m  on main.tf line 25, in resource "azurerm_public_ip_prefix" "my_ipv4_zonal":
+	            	[31m│[0m [0m  25: resource "azurerm_public_ip_prefix" "my_ipv4_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-settling-crane"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 37, in resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal":
+	            	[31m│[0m [0m  37: resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-settling-crane"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4RPInternet"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_rp_internet,
+	            	[31m│[0m [0m  on main.tf line 47, in resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet":
+	            	[31m│[0m [0m  47: resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-settling-crane"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv6StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv6 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6,
+	            	[31m│[0m [0m  on main.tf line 61, in resource "azurerm_public_ip_prefix" "my_ipv6":
+	            	[31m│[0m [0m  61: resource "azurerm_public_ip_prefix" "my_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-settling-crane"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv6StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv6 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_zonal,
+	            	[31m│[0m [0m  on main.tf line 73, in resource "azurerm_public_ip_prefix" "my_ipv6_zonal":
+	            	[31m│[0m [0m  73: resource "azurerm_public_ip_prefix" "my_ipv6_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-settling-crane"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv6StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv6 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 85, in resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal":
+	            	[31m│[0m [0m  85: resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-settling-crane"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix1"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv4,
+	            	[31m│[0m [0m  on main.tf line 108, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4":
+	            	[31m│[0m [0m 108: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-virtual-network-public-ip-prefix
+
+FailNow
+
+---
+
+## 06 Sep 26 00:38 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-true-moray"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4,
+	            	[31m│[0m [0m  on main.tf line 13, in resource "azurerm_public_ip_prefix" "my_ipv4":
+	            	[31m│[0m [0m  13: resource "azurerm_public_ip_prefix" "my_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-true-moray"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_zonal,
+	            	[31m│[0m [0m  on main.tf line 25, in resource "azurerm_public_ip_prefix" "my_ipv4_zonal":
+	            	[31m│[0m [0m  25: resource "azurerm_public_ip_prefix" "my_ipv4_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-true-moray"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 37, in resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal":
+	            	[31m│[0m [0m  37: resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-true-moray"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4RPInternet"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_rp_internet,
+	            	[31m│[0m [0m  on main.tf line 47, in resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet":
+	            	[31m│[0m [0m  47: resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-true-moray"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6,
+	            	[31m│[0m [0m  on main.tf line 61, in resource "azurerm_public_ip_prefix" "my_ipv6":
+	            	[31m│[0m [0m  61: resource "azurerm_public_ip_prefix" "my_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-true-moray"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_zonal,
+	            	[31m│[0m [0m  on main.tf line 73, in resource "azurerm_public_ip_prefix" "my_ipv6_zonal":
+	            	[31m│[0m [0m  73: resource "azurerm_public_ip_prefix" "my_ipv6_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-true-moray"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 85, in resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal":
+	            	[31m│[0m [0m  85: resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-true-moray"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix1"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv4,
+	            	[31m│[0m [0m  on main.tf line 108, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4":
+	            	[31m│[0m [0m 108: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-true-moray"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix2"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv6,
+	            	[31m│[0m [0m  on main.tf line 131, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6":
+	            	[31m│[0m [0m 131: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-virtual-network-public-ip-prefix
+
+FailNow
+
+---
+
+## 30 Aug 26 02:20 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-becoming-lacewing"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4,
+	            	[31m│[0m [0m  on main.tf line 13, in resource "azurerm_public_ip_prefix" "my_ipv4":
+	            	[31m│[0m [0m  13: resource "azurerm_public_ip_prefix" "my_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-becoming-lacewing"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_zonal,
+	            	[31m│[0m [0m  on main.tf line 25, in resource "azurerm_public_ip_prefix" "my_ipv4_zonal":
+	            	[31m│[0m [0m  25: resource "azurerm_public_ip_prefix" "my_ipv4_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-becoming-lacewing"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 37, in resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal":
+	            	[31m│[0m [0m  37: resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-becoming-lacewing"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4RPInternet"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_rp_internet,
+	            	[31m│[0m [0m  on main.tf line 47, in resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet":
+	            	[31m│[0m [0m  47: resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-becoming-lacewing"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv6StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv6 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6,
+	            	[31m│[0m [0m  on main.tf line 61, in resource "azurerm_public_ip_prefix" "my_ipv6":
+	            	[31m│[0m [0m  61: resource "azurerm_public_ip_prefix" "my_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-becoming-lacewing"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv6StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv6 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_zonal,
+	            	[31m│[0m [0m  on main.tf line 73, in resource "azurerm_public_ip_prefix" "my_ipv6_zonal":
+	            	[31m│[0m [0m  73: resource "azurerm_public_ip_prefix" "my_ipv6_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-becoming-lacewing"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix1"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv4,
+	            	[31m│[0m [0m  on main.tf line 108, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4":
+	            	[31m│[0m [0m 108: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-becoming-lacewing"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix2"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv6StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv6 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv6,
+	            	[31m│[0m [0m  on main.tf line 131, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6":
+	            	[31m│[0m [0m 131: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-virtual-network-public-ip-prefix
+
+FailNow
+
+---
+
+## 23 Aug 26 00:46 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-sure-sheep"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4,
+	            	[31m│[0m [0m  on main.tf line 13, in resource "azurerm_public_ip_prefix" "my_ipv4":
+	            	[31m│[0m [0m  13: resource "azurerm_public_ip_prefix" "my_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-sure-sheep"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_zonal,
+	            	[31m│[0m [0m  on main.tf line 25, in resource "azurerm_public_ip_prefix" "my_ipv4_zonal":
+	            	[31m│[0m [0m  25: resource "azurerm_public_ip_prefix" "my_ipv4_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-sure-sheep"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 37, in resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal":
+	            	[31m│[0m [0m  37: resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-sure-sheep"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4RPInternet"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_rp_internet,
+	            	[31m│[0m [0m  on main.tf line 47, in resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet":
+	            	[31m│[0m [0m  47: resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-sure-sheep"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv6StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv6 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_zonal,
+	            	[31m│[0m [0m  on main.tf line 73, in resource "azurerm_public_ip_prefix" "my_ipv6_zonal":
+	            	[31m│[0m [0m  73: resource "azurerm_public_ip_prefix" "my_ipv6_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-sure-sheep"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv6StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv6 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 85, in resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal":
+	            	[31m│[0m [0m  85: resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-sure-sheep"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix1"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv4,
+	            	[31m│[0m [0m  on main.tf line 108, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4":
+	            	[31m│[0m [0m 108: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-sure-sheep"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix2"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv6StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv6 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv6,
+	            	[31m│[0m [0m  on main.tf line 131, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6":
+	            	[31m│[0m [0m 131: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-virtual-network-public-ip-prefix
+
+FailNow
+
+---
+
+## 16 Aug 26 01:40 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-moral-heron"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4,
+	            	[31m│[0m [0m  on main.tf line 13, in resource "azurerm_public_ip_prefix" "my_ipv4":
+	            	[31m│[0m [0m  13: resource "azurerm_public_ip_prefix" "my_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-moral-heron"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_zonal,
+	            	[31m│[0m [0m  on main.tf line 25, in resource "azurerm_public_ip_prefix" "my_ipv4_zonal":
+	            	[31m│[0m [0m  25: resource "azurerm_public_ip_prefix" "my_ipv4_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-moral-heron"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 37, in resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal":
+	            	[31m│[0m [0m  37: resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-moral-heron"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4RPInternet"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_rp_internet,
+	            	[31m│[0m [0m  on main.tf line 47, in resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet":
+	            	[31m│[0m [0m  47: resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-moral-heron"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6,
+	            	[31m│[0m [0m  on main.tf line 61, in resource "azurerm_public_ip_prefix" "my_ipv6":
+	            	[31m│[0m [0m  61: resource "azurerm_public_ip_prefix" "my_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-moral-heron"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_zonal,
+	            	[31m│[0m [0m  on main.tf line 73, in resource "azurerm_public_ip_prefix" "my_ipv6_zonal":
+	            	[31m│[0m [0m  73: resource "azurerm_public_ip_prefix" "my_ipv6_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-moral-heron"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 85, in resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal":
+	            	[31m│[0m [0m  85: resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-moral-heron"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix2"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv6,
+	            	[31m│[0m [0m  on main.tf line 131, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6":
+	            	[31m│[0m [0m 131: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-virtual-network-public-ip-prefix
+
+FailNow
+
+---
+
+## 09 Aug 26 00:59 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-dynamic-gopher"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4,
+	            	[31m│[0m [0m  on main.tf line 13, in resource "azurerm_public_ip_prefix" "my_ipv4":
+	            	[31m│[0m [0m  13: resource "azurerm_public_ip_prefix" "my_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-dynamic-gopher"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 37, in resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal":
+	            	[31m│[0m [0m  37: resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-dynamic-gopher"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4RPInternet"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_rp_internet,
+	            	[31m│[0m [0m  on main.tf line 47, in resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet":
+	            	[31m│[0m [0m  47: resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-dynamic-gopher"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6,
+	            	[31m│[0m [0m  on main.tf line 61, in resource "azurerm_public_ip_prefix" "my_ipv6":
+	            	[31m│[0m [0m  61: resource "azurerm_public_ip_prefix" "my_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-dynamic-gopher"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_zonal,
+	            	[31m│[0m [0m  on main.tf line 73, in resource "azurerm_public_ip_prefix" "my_ipv6_zonal":
+	            	[31m│[0m [0m  73: resource "azurerm_public_ip_prefix" "my_ipv6_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-dynamic-gopher"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 85, in resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal":
+	            	[31m│[0m [0m  85: resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-dynamic-gopher"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix1"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv4,
+	            	[31m│[0m [0m  on main.tf line 108, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4":
+	            	[31m│[0m [0m 108: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-dynamic-gopher"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix2"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv6,
+	            	[31m│[0m [0m  on main.tf line 131, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6":
+	            	[31m│[0m [0m 131: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-virtual-network-public-ip-prefix
+
+FailNow
+
+---
+
+## 02 Aug 26 01:25 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-major-guinea"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4,
+	            	[31m│[0m [0m  on main.tf line 13, in resource "azurerm_public_ip_prefix" "my_ipv4":
+	            	[31m│[0m [0m  13: resource "azurerm_public_ip_prefix" "my_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-major-guinea"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_zonal,
+	            	[31m│[0m [0m  on main.tf line 25, in resource "azurerm_public_ip_prefix" "my_ipv4_zonal":
+	            	[31m│[0m [0m  25: resource "azurerm_public_ip_prefix" "my_ipv4_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-major-guinea"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 37, in resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal":
+	            	[31m│[0m [0m  37: resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-major-guinea"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4RPInternet"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_rp_internet,
+	            	[31m│[0m [0m  on main.tf line 47, in resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet":
+	            	[31m│[0m [0m  47: resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-major-guinea"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6,
+	            	[31m│[0m [0m  on main.tf line 61, in resource "azurerm_public_ip_prefix" "my_ipv6":
+	            	[31m│[0m [0m  61: resource "azurerm_public_ip_prefix" "my_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-major-guinea"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_zonal,
+	            	[31m│[0m [0m  on main.tf line 73, in resource "azurerm_public_ip_prefix" "my_ipv6_zonal":
+	            	[31m│[0m [0m  73: resource "azurerm_public_ip_prefix" "my_ipv6_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-major-guinea"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 85, in resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal":
+	            	[31m│[0m [0m  85: resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-major-guinea"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix1"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv4,
+	            	[31m│[0m [0m  on main.tf line 108, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4":
+	            	[31m│[0m [0m 108: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-major-guinea"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix2"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv6,
+	            	[31m│[0m [0m  on main.tf line 131, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6":
+	            	[31m│[0m [0m 131: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-virtual-network-public-ip-prefix
+
+FailNow
+
+---
+
+## 26 Jul 26 00:40 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-musical-muskox"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4,
+	            	[31m│[0m [0m  on main.tf line 13, in resource "azurerm_public_ip_prefix" "my_ipv4":
+	            	[31m│[0m [0m  13: resource "azurerm_public_ip_prefix" "my_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-musical-muskox"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_zonal,
+	            	[31m│[0m [0m  on main.tf line 25, in resource "azurerm_public_ip_prefix" "my_ipv4_zonal":
+	            	[31m│[0m [0m  25: resource "azurerm_public_ip_prefix" "my_ipv4_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-musical-muskox"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 37, in resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal":
+	            	[31m│[0m [0m  37: resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-musical-muskox"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4RPInternet"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_rp_internet,
+	            	[31m│[0m [0m  on main.tf line 47, in resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet":
+	            	[31m│[0m [0m  47: resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-musical-muskox"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv6StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv6 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6,
+	            	[31m│[0m [0m  on main.tf line 61, in resource "azurerm_public_ip_prefix" "my_ipv6":
+	            	[31m│[0m [0m  61: resource "azurerm_public_ip_prefix" "my_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-musical-muskox"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv6StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv6 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 85, in resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal":
+	            	[31m│[0m [0m  85: resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-musical-muskox"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix1"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv4,
+	            	[31m│[0m [0m  on main.tf line 108, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4":
+	            	[31m│[0m [0m 108: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-musical-muskox"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix2"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv6StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv6 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv6,
+	            	[31m│[0m [0m  on main.tf line 131, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6":
+	            	[31m│[0m [0m 131: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-virtual-network-public-ip-prefix
+
+FailNow
+
+---
+
+## 12 Jul 26 01:35 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-darling-ostrich"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4,
+	            	[31m│[0m [0m  on main.tf line 13, in resource "azurerm_public_ip_prefix" "my_ipv4":
+	            	[31m│[0m [0m  13: resource "azurerm_public_ip_prefix" "my_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-darling-ostrich"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_zonal,
+	            	[31m│[0m [0m  on main.tf line 25, in resource "azurerm_public_ip_prefix" "my_ipv4_zonal":
+	            	[31m│[0m [0m  25: resource "azurerm_public_ip_prefix" "my_ipv4_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-darling-ostrich"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 37, in resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal":
+	            	[31m│[0m [0m  37: resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-darling-ostrich"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4RPInternet"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_rp_internet,
+	            	[31m│[0m [0m  on main.tf line 47, in resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet":
+	            	[31m│[0m [0m  47: resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-darling-ostrich"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6,
+	            	[31m│[0m [0m  on main.tf line 61, in resource "azurerm_public_ip_prefix" "my_ipv6":
+	            	[31m│[0m [0m  61: resource "azurerm_public_ip_prefix" "my_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-darling-ostrich"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_zonal,
+	            	[31m│[0m [0m  on main.tf line 73, in resource "azurerm_public_ip_prefix" "my_ipv6_zonal":
+	            	[31m│[0m [0m  73: resource "azurerm_public_ip_prefix" "my_ipv6_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-darling-ostrich"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 85, in resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal":
+	            	[31m│[0m [0m  85: resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-darling-ostrich"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix1"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv4,
+	            	[31m│[0m [0m  on main.tf line 108, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4":
+	            	[31m│[0m [0m 108: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-darling-ostrich"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix2"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv6,
+	            	[31m│[0m [0m  on main.tf line 131, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6":
+	            	[31m│[0m [0m 131: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-virtual-network-public-ip-prefix
+
+FailNow
+
+---
+
+## 05 Jul 26 01:06 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-charmed-shark"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4,
+	            	[31m│[0m [0m  on main.tf line 13, in resource "azurerm_public_ip_prefix" "my_ipv4":
+	            	[31m│[0m [0m  13: resource "azurerm_public_ip_prefix" "my_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-charmed-shark"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_zonal,
+	            	[31m│[0m [0m  on main.tf line 25, in resource "azurerm_public_ip_prefix" "my_ipv4_zonal":
+	            	[31m│[0m [0m  25: resource "azurerm_public_ip_prefix" "my_ipv4_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-charmed-shark"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 37, in resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal":
+	            	[31m│[0m [0m  37: resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-charmed-shark"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4RPInternet"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_rp_internet,
+	            	[31m│[0m [0m  on main.tf line 47, in resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet":
+	            	[31m│[0m [0m  47: resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-charmed-shark"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv6StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv6 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6,
+	            	[31m│[0m [0m  on main.tf line 61, in resource "azurerm_public_ip_prefix" "my_ipv6":
+	            	[31m│[0m [0m  61: resource "azurerm_public_ip_prefix" "my_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-charmed-shark"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv6StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv6 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_zonal,
+	            	[31m│[0m [0m  on main.tf line 73, in resource "azurerm_public_ip_prefix" "my_ipv6_zonal":
+	            	[31m│[0m [0m  73: resource "azurerm_public_ip_prefix" "my_ipv6_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-charmed-shark"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix1"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv4,
+	            	[31m│[0m [0m  on main.tf line 108, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4":
+	            	[31m│[0m [0m 108: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-charmed-shark"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix2"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv6StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv6 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv6,
+	            	[31m│[0m [0m  on main.tf line 131, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6":
+	            	[31m│[0m [0m 131: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-virtual-network-public-ip-prefix
+
+FailNow
+
+---
+
+## 28 Jun 26 01:11 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-smooth-badger"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4,
+	            	[31m│[0m [0m  on main.tf line 13, in resource "azurerm_public_ip_prefix" "my_ipv4":
+	            	[31m│[0m [0m  13: resource "azurerm_public_ip_prefix" "my_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-smooth-badger"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_zonal,
+	            	[31m│[0m [0m  on main.tf line 25, in resource "azurerm_public_ip_prefix" "my_ipv4_zonal":
+	            	[31m│[0m [0m  25: resource "azurerm_public_ip_prefix" "my_ipv4_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-smooth-badger"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 37, in resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal":
+	            	[31m│[0m [0m  37: resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-smooth-badger"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4RPInternet"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_rp_internet,
+	            	[31m│[0m [0m  on main.tf line 47, in resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet":
+	            	[31m│[0m [0m  47: resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-smooth-badger"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv6StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv6 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6,
+	            	[31m│[0m [0m  on main.tf line 61, in resource "azurerm_public_ip_prefix" "my_ipv6":
+	            	[31m│[0m [0m  61: resource "azurerm_public_ip_prefix" "my_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-smooth-badger"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv6StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv6 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_zonal,
+	            	[31m│[0m [0m  on main.tf line 73, in resource "azurerm_public_ip_prefix" "my_ipv6_zonal":
+	            	[31m│[0m [0m  73: resource "azurerm_public_ip_prefix" "my_ipv6_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-smooth-badger"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv6StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv6 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 85, in resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal":
+	            	[31m│[0m [0m  85: resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-smooth-badger"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix1"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv4,
+	            	[31m│[0m [0m  on main.tf line 108, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4":
+	            	[31m│[0m [0m 108: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-virtual-network-public-ip-prefix
+
+FailNow
+
+---
+
+## 14 Jun 26 00:52 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-absolute-ladybird"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4,
+	            	[31m│[0m [0m  on main.tf line 13, in resource "azurerm_public_ip_prefix" "my_ipv4":
+	            	[31m│[0m [0m  13: resource "azurerm_public_ip_prefix" "my_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-absolute-ladybird"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_zonal,
+	            	[31m│[0m [0m  on main.tf line 25, in resource "azurerm_public_ip_prefix" "my_ipv4_zonal":
+	            	[31m│[0m [0m  25: resource "azurerm_public_ip_prefix" "my_ipv4_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-absolute-ladybird"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 37, in resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal":
+	            	[31m│[0m [0m  37: resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-absolute-ladybird"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4RPInternet"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_rp_internet,
+	            	[31m│[0m [0m  on main.tf line 47, in resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet":
+	            	[31m│[0m [0m  47: resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-absolute-ladybird"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6,
+	            	[31m│[0m [0m  on main.tf line 61, in resource "azurerm_public_ip_prefix" "my_ipv6":
+	            	[31m│[0m [0m  61: resource "azurerm_public_ip_prefix" "my_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-absolute-ladybird"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_zonal,
+	            	[31m│[0m [0m  on main.tf line 73, in resource "azurerm_public_ip_prefix" "my_ipv6_zonal":
+	            	[31m│[0m [0m  73: resource "azurerm_public_ip_prefix" "my_ipv6_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-absolute-ladybird"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 85, in resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal":
+	            	[31m│[0m [0m  85: resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-absolute-ladybird"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix1"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv4,
+	            	[31m│[0m [0m  on main.tf line 108, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4":
+	            	[31m│[0m [0m 108: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-absolute-ladybird"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix2"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv6,
+	            	[31m│[0m [0m  on main.tf line 131, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6":
+	            	[31m│[0m [0m 131: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-virtual-network-public-ip-prefix
+
+FailNow
+
+---
+
+## 31 May 26 01:55 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-enabled-mink"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4,
+	            	[31m│[0m [0m  on main.tf line 13, in resource "azurerm_public_ip_prefix" "my_ipv4":
+	            	[31m│[0m [0m  13: resource "azurerm_public_ip_prefix" "my_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-enabled-mink"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_zonal,
+	            	[31m│[0m [0m  on main.tf line 25, in resource "azurerm_public_ip_prefix" "my_ipv4_zonal":
+	            	[31m│[0m [0m  25: resource "azurerm_public_ip_prefix" "my_ipv4_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-enabled-mink"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 37, in resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal":
+	            	[31m│[0m [0m  37: resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-enabled-mink"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4RPInternet"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_rp_internet,
+	            	[31m│[0m [0m  on main.tf line 47, in resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet":
+	            	[31m│[0m [0m  47: resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-enabled-mink"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6,
+	            	[31m│[0m [0m  on main.tf line 61, in resource "azurerm_public_ip_prefix" "my_ipv6":
+	            	[31m│[0m [0m  61: resource "azurerm_public_ip_prefix" "my_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-enabled-mink"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_zonal,
+	            	[31m│[0m [0m  on main.tf line 73, in resource "azurerm_public_ip_prefix" "my_ipv6_zonal":
+	            	[31m│[0m [0m  73: resource "azurerm_public_ip_prefix" "my_ipv6_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-enabled-mink"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 85, in resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal":
+	            	[31m│[0m [0m  85: resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-enabled-mink"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix1"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv4,
+	            	[31m│[0m [0m  on main.tf line 108, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4":
+	            	[31m│[0m [0m 108: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-enabled-mink"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix2"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv6,
+	            	[31m│[0m [0m  on main.tf line 131, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6":
+	            	[31m│[0m [0m 131: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-virtual-network-public-ip-prefix
+
+FailNow
+
+---
+
+## 24 May 26 01:01 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-generous-griffon"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4,
+	            	[31m│[0m [0m  on main.tf line 13, in resource "azurerm_public_ip_prefix" "my_ipv4":
+	            	[31m│[0m [0m  13: resource "azurerm_public_ip_prefix" "my_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-generous-griffon"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_zonal,
+	            	[31m│[0m [0m  on main.tf line 25, in resource "azurerm_public_ip_prefix" "my_ipv4_zonal":
+	            	[31m│[0m [0m  25: resource "azurerm_public_ip_prefix" "my_ipv4_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-generous-griffon"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 37, in resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal":
+	            	[31m│[0m [0m  37: resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-generous-griffon"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4RPInternet"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_rp_internet,
+	            	[31m│[0m [0m  on main.tf line 47, in resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet":
+	            	[31m│[0m [0m  47: resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-generous-griffon"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6,
+	            	[31m│[0m [0m  on main.tf line 61, in resource "azurerm_public_ip_prefix" "my_ipv6":
+	            	[31m│[0m [0m  61: resource "azurerm_public_ip_prefix" "my_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-generous-griffon"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_zonal,
+	            	[31m│[0m [0m  on main.tf line 73, in resource "azurerm_public_ip_prefix" "my_ipv6_zonal":
+	            	[31m│[0m [0m  73: resource "azurerm_public_ip_prefix" "my_ipv6_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-generous-griffon"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 85, in resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal":
+	            	[31m│[0m [0m  85: resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-generous-griffon"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix1"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv4,
+	            	[31m│[0m [0m  on main.tf line 108, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4":
+	            	[31m│[0m [0m 108: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-generous-griffon"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix2"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv6,
+	            	[31m│[0m [0m  on main.tf line 131, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6":
+	            	[31m│[0m [0m 131: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-virtual-network-public-ip-prefix
+
+FailNow
+
+---
+
+## 10 May 26 00:51 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-living-hagfish"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4,
+	            	[31m│[0m [0m  on main.tf line 13, in resource "azurerm_public_ip_prefix" "my_ipv4":
+	            	[31m│[0m [0m  13: resource "azurerm_public_ip_prefix" "my_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-living-hagfish"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_zonal,
+	            	[31m│[0m [0m  on main.tf line 25, in resource "azurerm_public_ip_prefix" "my_ipv4_zonal":
+	            	[31m│[0m [0m  25: resource "azurerm_public_ip_prefix" "my_ipv4_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-living-hagfish"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 37, in resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal":
+	            	[31m│[0m [0m  37: resource "azurerm_public_ip_prefix" "my_ipv4_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-living-hagfish"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIPv4RPInternet"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv4_rp_internet,
+	            	[31m│[0m [0m  on main.tf line 47, in resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet":
+	            	[31m│[0m [0m  47: resource "azurerm_public_ip_prefix" "my_ipv4_rp_internet" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-living-hagfish"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6,
+	            	[31m│[0m [0m  on main.tf line 61, in resource "azurerm_public_ip_prefix" "my_ipv6":
+	            	[31m│[0m [0m  61: resource "azurerm_public_ip_prefix" "my_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-living-hagfish"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6Zonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_zonal,
+	            	[31m│[0m [0m  on main.tf line 73, in resource "azurerm_public_ip_prefix" "my_ipv6_zonal":
+	            	[31m│[0m [0m  73: resource "azurerm_public_ip_prefix" "my_ipv6_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-living-hagfish"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myIpv6NonZonal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_ipv6_non_zonal,
+	            	[31m│[0m [0m  on main.tf line 85, in resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal":
+	            	[31m│[0m [0m  85: resource "azurerm_public_ip_prefix" "my_ipv6_non_zonal" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-living-hagfish"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix1"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4StandardSkuPublicIpCountLimitReached: Cannot create more than 20 IPv4 Standard SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv4,
+	            	[31m│[0m [0m  on main.tf line 108, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4":
+	            	[31m│[0m [0m 108: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv4" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Public I P Prefix (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-living-hagfish"
+	            	[31m│[0m [0mPublic I P Prefix Name: "myPublicIpPrefix2"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: PublicIPCountLimitReached: Cannot create more than 20 public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip_prefix.my_public_ip_prefix_ipv6,
+	            	[31m│[0m [0m  on main.tf line 131, in resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6":
+	            	[31m│[0m [0m 131: resource "azurerm_public_ip_prefix" "my_public_ip_prefix_ipv6" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-virtual-network-public-ip-prefix
+
+FailNow
+
+---
+
 ## 26 Apr 26 00:51 UTC
 
 Success: false
