@@ -1,3 +1,1061 @@
+## 08 Nov 26 00:14 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.10.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 28, in output "storage_account":
+	            	[31m│[0m [0m  28:   value       = [4mazurerm_storage_account.storage[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_account" "storage" has not been
+	            	[31m│[0m [0mdeclared in the root module.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 33, in output "storage_account_share":
+	            	[31m│[0m [0m  33:   value       = [4mazurerm_storage_share.FSShare[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_share" "FSShare" has not been declared
+	            	[31m│[0m [0min the root module.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop-anf
+
+FailNow
+
+---
+
+## 01 Nov 26 00:20 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.10.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 28, in output "storage_account":
+	            	[31m│[0m [0m  28:   value       = [4mazurerm_storage_account.storage[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_account" "storage" has not been
+	            	[31m│[0m [0mdeclared in the root module.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 33, in output "storage_account_share":
+	            	[31m│[0m [0m  33:   value       = [4mazurerm_storage_share.FSShare[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_share" "FSShare" has not been declared
+	            	[31m│[0m [0min the root module.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop-anf
+
+FailNow
+
+---
+
+## 25 Oct 26 00:19 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.10.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 28, in output "storage_account":
+	            	[31m│[0m [0m  28:   value       = [4mazurerm_storage_account.storage[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_account" "storage" has not been
+	            	[31m│[0m [0mdeclared in the root module.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 33, in output "storage_account_share":
+	            	[31m│[0m [0m  33:   value       = [4mazurerm_storage_share.FSShare[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_share" "FSShare" has not been declared
+	            	[31m│[0m [0min the root module.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop-anf
+
+FailNow
+
+---
+
+## 18 Oct 26 01:19 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.10.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 28, in output "storage_account":
+	            	[31m│[0m [0m  28:   value       = [4mazurerm_storage_account.storage[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_account" "storage" has not been
+	            	[31m│[0m [0mdeclared in the root module.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 33, in output "storage_account_share":
+	            	[31m│[0m [0m  33:   value       = [4mazurerm_storage_share.FSShare[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_share" "FSShare" has not been declared
+	            	[31m│[0m [0min the root module.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop-anf
+
+FailNow
+
+---
+
+## 11 Oct 26 01:27 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.10.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 28, in output "storage_account":
+	            	[31m│[0m [0m  28:   value       = [4mazurerm_storage_account.storage[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_account" "storage" has not been
+	            	[31m│[0m [0mdeclared in the root module.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 33, in output "storage_account_share":
+	            	[31m│[0m [0m  33:   value       = [4mazurerm_storage_share.FSShare[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_share" "FSShare" has not been declared
+	            	[31m│[0m [0min the root module.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop-anf
+
+FailNow
+
+---
+
+## 04 Oct 26 02:03 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.10.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 28, in output "storage_account":
+	            	[31m│[0m [0m  28:   value       = [4mazurerm_storage_account.storage[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_account" "storage" has not been
+	            	[31m│[0m [0mdeclared in the root module.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 33, in output "storage_account_share":
+	            	[31m│[0m [0m  33:   value       = [4mazurerm_storage_share.FSShare[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_share" "FSShare" has not been declared
+	            	[31m│[0m [0min the root module.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop-anf
+
+FailNow
+
+---
+
+## 27 Sep 26 00:58 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.10.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 28, in output "storage_account":
+	            	[31m│[0m [0m  28:   value       = [4mazurerm_storage_account.storage[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_account" "storage" has not been
+	            	[31m│[0m [0mdeclared in the root module.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 33, in output "storage_account_share":
+	            	[31m│[0m [0m  33:   value       = [4mazurerm_storage_share.FSShare[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_share" "FSShare" has not been declared
+	            	[31m│[0m [0min the root module.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop-anf
+
+FailNow
+
+---
+
+## 20 Sep 26 01:24 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.9.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 28, in output "storage_account":
+	            	[31m│[0m [0m  28:   value       = [4mazurerm_storage_account.storage[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_account" "storage" has not been
+	            	[31m│[0m [0mdeclared in the root module.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 33, in output "storage_account_share":
+	            	[31m│[0m [0m  33:   value       = [4mazurerm_storage_share.FSShare[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_share" "FSShare" has not been declared
+	            	[31m│[0m [0min the root module.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop-anf
+
+FailNow
+
+---
+
+## 13 Sep 26 02:18 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.9.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 28, in output "storage_account":
+	            	[31m│[0m [0m  28:   value       = [4mazurerm_storage_account.storage[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_account" "storage" has not been
+	            	[31m│[0m [0mdeclared in the root module.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 33, in output "storage_account_share":
+	            	[31m│[0m [0m  33:   value       = [4mazurerm_storage_share.FSShare[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_share" "FSShare" has not been declared
+	            	[31m│[0m [0min the root module.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop-anf
+
+FailNow
+
+---
+
+## 06 Sep 26 00:32 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.9.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 28, in output "storage_account":
+	            	[31m│[0m [0m  28:   value       = [4mazurerm_storage_account.storage[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_account" "storage" has not been
+	            	[31m│[0m [0mdeclared in the root module.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 33, in output "storage_account_share":
+	            	[31m│[0m [0m  33:   value       = [4mazurerm_storage_share.FSShare[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_share" "FSShare" has not been declared
+	            	[31m│[0m [0min the root module.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop-anf
+
+FailNow
+
+---
+
+## 30 Aug 26 01:02 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.9.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 28, in output "storage_account":
+	            	[31m│[0m [0m  28:   value       = [4mazurerm_storage_account.storage[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_account" "storage" has not been
+	            	[31m│[0m [0mdeclared in the root module.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 33, in output "storage_account_share":
+	            	[31m│[0m [0m  33:   value       = [4mazurerm_storage_share.FSShare[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_share" "FSShare" has not been declared
+	            	[31m│[0m [0min the root module.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop-anf
+
+FailNow
+
+---
+
+## 23 Aug 26 00:41 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.9.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 28, in output "storage_account":
+	            	[31m│[0m [0m  28:   value       = [4mazurerm_storage_account.storage[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_account" "storage" has not been
+	            	[31m│[0m [0mdeclared in the root module.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 33, in output "storage_account_share":
+	            	[31m│[0m [0m  33:   value       = [4mazurerm_storage_share.FSShare[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_share" "FSShare" has not been declared
+	            	[31m│[0m [0min the root module.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop-anf
+
+FailNow
+
+---
+
+## 16 Aug 26 01:11 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.9.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 28, in output "storage_account":
+	            	[31m│[0m [0m  28:   value       = [4mazurerm_storage_account.storage[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_account" "storage" has not been
+	            	[31m│[0m [0mdeclared in the root module.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 33, in output "storage_account_share":
+	            	[31m│[0m [0m  33:   value       = [4mazurerm_storage_share.FSShare[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_share" "FSShare" has not been declared
+	            	[31m│[0m [0min the root module.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop-anf
+
+FailNow
+
+---
+
+## 09 Aug 26 01:32 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.9.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 28, in output "storage_account":
+	            	[31m│[0m [0m  28:   value       = [4mazurerm_storage_account.storage[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_account" "storage" has not been
+	            	[31m│[0m [0mdeclared in the root module.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 33, in output "storage_account_share":
+	            	[31m│[0m [0m  33:   value       = [4mazurerm_storage_share.FSShare[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_share" "FSShare" has not been declared
+	            	[31m│[0m [0min the root module.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop-anf
+
+FailNow
+
+---
+
+## 02 Aug 26 00:50 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.9.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 28, in output "storage_account":
+	            	[31m│[0m [0m  28:   value       = [4mazurerm_storage_account.storage[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_account" "storage" has not been
+	            	[31m│[0m [0mdeclared in the root module.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 33, in output "storage_account_share":
+	            	[31m│[0m [0m  33:   value       = [4mazurerm_storage_share.FSShare[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_share" "FSShare" has not been declared
+	            	[31m│[0m [0min the root module.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop-anf
+
+FailNow
+
+---
+
+## 26 Jul 26 01:22 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.9.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 28, in output "storage_account":
+	            	[31m│[0m [0m  28:   value       = [4mazurerm_storage_account.storage[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_account" "storage" has not been
+	            	[31m│[0m [0mdeclared in the root module.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 33, in output "storage_account_share":
+	            	[31m│[0m [0m  33:   value       = [4mazurerm_storage_share.FSShare[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_share" "FSShare" has not been declared
+	            	[31m│[0m [0min the root module.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop-anf
+
+FailNow
+
+---
+
+## 12 Jul 26 00:56 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.9.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 28, in output "storage_account":
+	            	[31m│[0m [0m  28:   value       = [4mazurerm_storage_account.storage[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_account" "storage" has not been
+	            	[31m│[0m [0mdeclared in the root module.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 33, in output "storage_account_share":
+	            	[31m│[0m [0m  33:   value       = [4mazurerm_storage_share.FSShare[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_share" "FSShare" has not been declared
+	            	[31m│[0m [0min the root module.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop-anf
+
+FailNow
+
+---
+
+## 05 Jul 26 01:21 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.9.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 28, in output "storage_account":
+	            	[31m│[0m [0m  28:   value       = [4mazurerm_storage_account.storage[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_account" "storage" has not been
+	            	[31m│[0m [0mdeclared in the root module.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 33, in output "storage_account_share":
+	            	[31m│[0m [0m  33:   value       = [4mazurerm_storage_share.FSShare[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_share" "FSShare" has not been declared
+	            	[31m│[0m [0min the root module.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop-anf
+
+FailNow
+
+---
+
+## 28 Jun 26 02:14 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.9.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 28, in output "storage_account":
+	            	[31m│[0m [0m  28:   value       = [4mazurerm_storage_account.storage[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_account" "storage" has not been
+	            	[31m│[0m [0mdeclared in the root module.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 33, in output "storage_account_share":
+	            	[31m│[0m [0m  33:   value       = [4mazurerm_storage_share.FSShare[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_share" "FSShare" has not been declared
+	            	[31m│[0m [0min the root module.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop-anf
+
+FailNow
+
+---
+
+## 14 Jun 26 02:18 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.8.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 28, in output "storage_account":
+	            	[31m│[0m [0m  28:   value       = [4mazurerm_storage_account.storage[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_account" "storage" has not been
+	            	[31m│[0m [0mdeclared in the root module.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 33, in output "storage_account_share":
+	            	[31m│[0m [0m  33:   value       = [4mazurerm_storage_share.FSShare[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_share" "FSShare" has not been declared
+	            	[31m│[0m [0min the root module.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop-anf
+
+FailNow
+
+---
+
+## 31 May 26 01:27 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.8.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 28, in output "storage_account":
+	            	[31m│[0m [0m  28:   value       = [4mazurerm_storage_account.storage[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_account" "storage" has not been
+	            	[31m│[0m [0mdeclared in the root module.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 33, in output "storage_account_share":
+	            	[31m│[0m [0m  33:   value       = [4mazurerm_storage_share.FSShare[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_share" "FSShare" has not been declared
+	            	[31m│[0m [0min the root module.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop-anf
+
+FailNow
+
+---
+
+## 24 May 26 01:39 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.8.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 28, in output "storage_account":
+	            	[31m│[0m [0m  28:   value       = [4mazurerm_storage_account.storage[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_account" "storage" has not been
+	            	[31m│[0m [0mdeclared in the root module.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 33, in output "storage_account_share":
+	            	[31m│[0m [0m  33:   value       = [4mazurerm_storage_share.FSShare[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_share" "FSShare" has not been declared
+	            	[31m│[0m [0min the root module.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop-anf
+
+FailNow
+
+---
+
+## 10 May 26 01:29 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.8.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 28, in output "storage_account":
+	            	[31m│[0m [0m  28:   value       = [4mazurerm_storage_account.storage[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_account" "storage" has not been
+	            	[31m│[0m [0mdeclared in the root module.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mReference to undeclared resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  on outputs.tf line 33, in output "storage_account_share":
+	            	[31m│[0m [0m  33:   value       = [4mazurerm_storage_share.FSShare[0m.name[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mA managed resource "azurerm_storage_share" "FSShare" has not been declared
+	            	[31m│[0m [0min the root module.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop-anf
+
+FailNow
+
+---
+
 ## 26 Apr 26 01:29 UTC
 
 Success: false

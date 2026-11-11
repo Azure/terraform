@@ -1,3 +1,871 @@
+## 08 Nov 26 00:16 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.15.0
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: a82929b8-d00f-4d44-919f-d496d423d200 Correlation ID: 41a6794c-c87e-40ab-9dd9-3311c86f3c55 Timestamp: 2026-11-08 00:16:15Z","error_codes":[5000229],"timestamp":"2026-11-08 00:16:15Z","trace_id":"a82929b8-d00f-4d44-919f-d496d423d200","correlation_id":"41a6794c-c87e-40ab-9dd9-3311c86f3c55"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 20, in provider "azurerm":
+	            	[31m│[0m [0m  20: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-with-infrastructure
+
+FailNow
+
+---
+
+## 01 Nov 26 00:11 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.15.0
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 5e30b4df-afa9-4ee6-a95d-8a1d80273400 Correlation ID: 7734cef6-f3de-49b2-b835-afc5ee3d1fb6 Timestamp: 2026-11-01 00:11:58Z","error_codes":[5000229],"timestamp":"2026-11-01 00:11:58Z","trace_id":"5e30b4df-afa9-4ee6-a95d-8a1d80273400","correlation_id":"7734cef6-f3de-49b2-b835-afc5ee3d1fb6"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 20, in provider "azurerm":
+	            	[31m│[0m [0m  20: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-with-infrastructure
+
+FailNow
+
+---
+
+## 25 Oct 26 00:19 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.15.0
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: f53bb54b-4d5f-4c7a-a14a-d68a768ca600 Correlation ID: 030a0e85-82f8-424f-8d7e-0aa2a018b518 Timestamp: 2026-10-25 00:19:01Z","error_codes":[5000229],"timestamp":"2026-10-25 00:19:01Z","trace_id":"f53bb54b-4d5f-4c7a-a14a-d68a768ca600","correlation_id":"030a0e85-82f8-424f-8d7e-0aa2a018b518"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 20, in provider "azurerm":
+	            	[31m│[0m [0m  20: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-with-infrastructure
+
+FailNow
+
+---
+
+## 18 Oct 26 00:45 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.15.0
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-subtle-marmot"
+	            	[31m│[0m [0mPublic I P Addresses Name: "myPublicIP"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip.my_terraform_public_ip,
+	            	[31m│[0m [0m  on main.tf line 27, in resource "azurerm_public_ip" "my_terraform_public_ip":
+	            	[31m│[0m [0m  27: resource "azurerm_public_ip" "my_terraform_public_ip" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-with-infrastructure
+
+FailNow
+
+---
+
+## 11 Oct 26 00:49 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.15.0
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-tight-tomcat"
+	            	[31m│[0m [0mPublic I P Addresses Name: "myPublicIP"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip.my_terraform_public_ip,
+	            	[31m│[0m [0m  on main.tf line 27, in resource "azurerm_public_ip" "my_terraform_public_ip":
+	            	[31m│[0m [0m  27: resource "azurerm_public_ip" "my_terraform_public_ip" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-with-infrastructure
+
+FailNow
+
+---
+
+## 04 Oct 26 01:07 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.15.0
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-stable-mallard"
+	            	[31m│[0m [0mPublic I P Addresses Name: "myPublicIP"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip.my_terraform_public_ip,
+	            	[31m│[0m [0m  on main.tf line 27, in resource "azurerm_public_ip" "my_terraform_public_ip":
+	            	[31m│[0m [0m  27: resource "azurerm_public_ip" "my_terraform_public_ip" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-with-infrastructure
+
+FailNow
+
+---
+
+## 27 Sep 26 01:52 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.15.0
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-expert-platypus"
+	            	[31m│[0m [0mPublic I P Addresses Name: "myPublicIP"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip.my_terraform_public_ip,
+	            	[31m│[0m [0m  on main.tf line 27, in resource "azurerm_public_ip" "my_terraform_public_ip":
+	            	[31m│[0m [0m  27: resource "azurerm_public_ip" "my_terraform_public_ip" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-with-infrastructure
+
+FailNow
+
+---
+
+## 20 Sep 26 00:52 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.15.0
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-correct-wombat"
+	            	[31m│[0m [0mPublic I P Addresses Name: "myPublicIP"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip.my_terraform_public_ip,
+	            	[31m│[0m [0m  on main.tf line 27, in resource "azurerm_public_ip" "my_terraform_public_ip":
+	            	[31m│[0m [0m  27: resource "azurerm_public_ip" "my_terraform_public_ip" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-with-infrastructure
+
+FailNow
+
+---
+
+## 13 Sep 26 01:46 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.15.0
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-loyal-racer"
+	            	[31m│[0m [0mPublic I P Addresses Name: "myPublicIP"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip.my_terraform_public_ip,
+	            	[31m│[0m [0m  on main.tf line 27, in resource "azurerm_public_ip" "my_terraform_public_ip":
+	            	[31m│[0m [0m  27: resource "azurerm_public_ip" "my_terraform_public_ip" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-with-infrastructure
+
+FailNow
+
+---
+
+## 06 Sep 26 00:18 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.15.0
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-optimum-firefly"
+	            	[31m│[0m [0mPublic I P Addresses Name: "myPublicIP"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip.my_terraform_public_ip,
+	            	[31m│[0m [0m  on main.tf line 27, in resource "azurerm_public_ip" "my_terraform_public_ip":
+	            	[31m│[0m [0m  27: resource "azurerm_public_ip" "my_terraform_public_ip" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-with-infrastructure
+
+FailNow
+
+---
+
+## 30 Aug 26 02:19 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.15.0
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-artistic-haddock"
+	            	[31m│[0m [0mPublic I P Addresses Name: "myPublicIP"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip.my_terraform_public_ip,
+	            	[31m│[0m [0m  on main.tf line 27, in resource "azurerm_public_ip" "my_terraform_public_ip":
+	            	[31m│[0m [0m  27: resource "azurerm_public_ip" "my_terraform_public_ip" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-with-infrastructure
+
+FailNow
+
+---
+
+## 23 Aug 26 00:44 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.15.0
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-daring-turtle"
+	            	[31m│[0m [0mPublic I P Addresses Name: "myPublicIP"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip.my_terraform_public_ip,
+	            	[31m│[0m [0m  on main.tf line 27, in resource "azurerm_public_ip" "my_terraform_public_ip":
+	            	[31m│[0m [0m  27: resource "azurerm_public_ip" "my_terraform_public_ip" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-with-infrastructure
+
+FailNow
+
+---
+
+## 16 Aug 26 00:38 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.15.0
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-choice-mosquito"
+	            	[31m│[0m [0mPublic I P Addresses Name: "myPublicIP"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip.my_terraform_public_ip,
+	            	[31m│[0m [0m  on main.tf line 27, in resource "azurerm_public_ip" "my_terraform_public_ip":
+	            	[31m│[0m [0m  27: resource "azurerm_public_ip" "my_terraform_public_ip" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-with-infrastructure
+
+FailNow
+
+---
+
+## 09 Aug 26 00:58 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.15.0
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-poetic-jaguar"
+	            	[31m│[0m [0mPublic I P Addresses Name: "myPublicIP"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip.my_terraform_public_ip,
+	            	[31m│[0m [0m  on main.tf line 27, in resource "azurerm_public_ip" "my_terraform_public_ip":
+	            	[31m│[0m [0m  27: resource "azurerm_public_ip" "my_terraform_public_ip" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-with-infrastructure
+
+FailNow
+
+---
+
+## 02 Aug 26 01:45 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.15.0
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-enormous-jackal"
+	            	[31m│[0m [0mPublic I P Addresses Name: "myPublicIP"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip.my_terraform_public_ip,
+	            	[31m│[0m [0m  on main.tf line 27, in resource "azurerm_public_ip" "my_terraform_public_ip":
+	            	[31m│[0m [0m  27: resource "azurerm_public_ip" "my_terraform_public_ip" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-with-infrastructure
+
+FailNow
+
+---
+
+## 26 Jul 26 00:38 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.15.0
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-daring-joey"
+	            	[31m│[0m [0mPublic I P Addresses Name: "myPublicIP"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip.my_terraform_public_ip,
+	            	[31m│[0m [0m  on main.tf line 27, in resource "azurerm_public_ip" "my_terraform_public_ip":
+	            	[31m│[0m [0m  27: resource "azurerm_public_ip" "my_terraform_public_ip" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-with-infrastructure
+
+FailNow
+
+---
+
+## 12 Jul 26 01:34 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.15.0
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-lenient-sloth"
+	            	[31m│[0m [0mPublic I P Addresses Name: "myPublicIP"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip.my_terraform_public_ip,
+	            	[31m│[0m [0m  on main.tf line 27, in resource "azurerm_public_ip" "my_terraform_public_ip":
+	            	[31m│[0m [0m  27: resource "azurerm_public_ip" "my_terraform_public_ip" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-with-infrastructure
+
+FailNow
+
+---
+
+## 05 Jul 26 01:05 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.15.0
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-natural-molly"
+	            	[31m│[0m [0mPublic I P Addresses Name: "myPublicIP"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip.my_terraform_public_ip,
+	            	[31m│[0m [0m  on main.tf line 27, in resource "azurerm_public_ip" "my_terraform_public_ip":
+	            	[31m│[0m [0m  27: resource "azurerm_public_ip" "my_terraform_public_ip" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-with-infrastructure
+
+FailNow
+
+---
+
+## 28 Jun 26 01:09 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.15.0
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-striking-elephant"
+	            	[31m│[0m [0mPublic I P Addresses Name: "myPublicIP"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip.my_terraform_public_ip,
+	            	[31m│[0m [0m  on main.tf line 27, in resource "azurerm_public_ip" "my_terraform_public_ip":
+	            	[31m│[0m [0m  27: resource "azurerm_public_ip" "my_terraform_public_ip" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-with-infrastructure
+
+FailNow
+
+---
+
+## 14 Jun 26 01:07 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.15.0
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-pro-cockatoo"
+	            	[31m│[0m [0mPublic I P Addresses Name: "myPublicIP"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip.my_terraform_public_ip,
+	            	[31m│[0m [0m  on main.tf line 27, in resource "azurerm_public_ip" "my_terraform_public_ip":
+	            	[31m│[0m [0m  27: resource "azurerm_public_ip" "my_terraform_public_ip" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-with-infrastructure
+
+FailNow
+
+---
+
+## 31 May 26 02:08 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.15.0
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-actual-lobster"
+	            	[31m│[0m [0mPublic I P Addresses Name: "myPublicIP"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip.my_terraform_public_ip,
+	            	[31m│[0m [0m  on main.tf line 27, in resource "azurerm_public_ip" "my_terraform_public_ip":
+	            	[31m│[0m [0m  27: resource "azurerm_public_ip" "my_terraform_public_ip" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-with-infrastructure
+
+FailNow
+
+---
+
+## 24 May 26 01:00 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.15.0
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-flowing-dove"
+	            	[31m│[0m [0mPublic I P Addresses Name: "myPublicIP"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip.my_terraform_public_ip,
+	            	[31m│[0m [0m  on main.tf line 27, in resource "azurerm_public_ip" "my_terraform_public_ip":
+	            	[31m│[0m [0m  27: resource "azurerm_public_ip" "my_terraform_public_ip" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-with-infrastructure
+
+FailNow
+
+---
+
+## 10 May 26 01:38 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v1.15.0
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-desired-hookworm"
+	            	[31m│[0m [0mPublic I P Addresses Name: "myPublicIP"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_public_ip.my_terraform_public_ip,
+	            	[31m│[0m [0m  on main.tf line 27, in resource "azurerm_public_ip" "my_terraform_public_ip":
+	            	[31m│[0m [0m  27: resource "azurerm_public_ip" "my_terraform_public_ip" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-with-infrastructure
+
+FailNow
+
+---
+
 ## 26 Apr 26 00:50 UTC
 
 Success: false

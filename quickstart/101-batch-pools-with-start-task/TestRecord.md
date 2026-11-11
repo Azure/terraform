@@ -1,3 +1,1024 @@
+## 08 Nov 26 00:14 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 8c3d0474-d06f-4e64-a334-fc64058bc200 Correlation ID: 4078f945-0351-468f-9929-60b4f57fb46a Timestamp: 2026-11-08 00:14:35Z","error_codes":[5000229],"timestamp":"2026-11-08 00:14:35Z","trace_id":"8c3d0474-d06f-4e64-a334-fc64058bc200","correlation_id":"4078f945-0351-468f-9929-60b4f57fb46a"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-start-task
+
+FailNow
+
+---
+
+## 01 Nov 26 00:19 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 70042b2c-a513-44c7-abeb-5014060a5d00 Correlation ID: 18ab6a89-3de7-49f7-a9b5-c50b54995a88 Timestamp: 2026-11-01 00:19:53Z","error_codes":[5000229],"timestamp":"2026-11-01 00:19:53Z","trace_id":"70042b2c-a513-44c7-abeb-5014060a5d00","correlation_id":"18ab6a89-3de7-49f7-a9b5-c50b54995a88"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-start-task
+
+FailNow
+
+---
+
+## 25 Oct 26 00:18 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant '4f00b3b6-2940-4f2c-b037-94637c180d30' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 3f03fbb6-0053-4db0-a2e7-0667b2832602 Correlation ID: 7e6b6b24-1d0f-476f-b5a9-84a1262d968a Timestamp: 2026-10-25 00:18:53Z","error_codes":[5000229],"timestamp":"2026-10-25 00:18:53Z","trace_id":"3f03fbb6-0053-4db0-a2e7-0667b2832602","correlation_id":"7e6b6b24-1d0f-476f-b5a9-84a1262d968a"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-start-task
+
+FailNow
+
+---
+
+## 18 Oct 26 01:25 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+No error was found.
+
+---
+
+## 11 Oct 26 01:31 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+No error was found.
+
+---
+
+## 04 Oct 26 02:13 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+No error was found.
+
+---
+
+## 27 Sep 26 01:02 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+No error was found.
+
+---
+
+## 20 Sep 26 01:24 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-sterling-gnu"
+	            	[31m│[0m [0mBatch Account Name: "ubeuocum"
+	            	[31m│[0m [0mPool Name: "pool-ace-pegasus-fixed-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:c7861f1a-8fb1-4e47-9d62-d8dca991e0ea
+	            	[31m│[0m [0mTime:2026-09-20T01:23:12.5576445Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.fixed,
+	            	[31m│[0m [0m  on main.tf line 46, in resource "azurerm_batch_pool" "fixed":
+	            	[31m│[0m [0m  46: resource "azurerm_batch_pool" "fixed" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-sterling-gnu"
+	            	[31m│[0m [0mBatch Account Name: "ubeuocum"
+	            	[31m│[0m [0mPool Name: "pool-ace-pegasus-autoscale-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:727cc8c0-d60f-430b-878b-69a8a60f793d
+	            	[31m│[0m [0mTime:2026-09-20T01:23:12.6915513Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.autopool,
+	            	[31m│[0m [0m  on main.tf line 88, in resource "azurerm_batch_pool" "autopool":
+	            	[31m│[0m [0m  88: resource "azurerm_batch_pool" "autopool" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-start-task
+
+FailNow
+
+---
+
+## 13 Sep 26 02:18 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-picked-longhorn"
+	            	[31m│[0m [0mBatch Account Name: "hfnuzaey"
+	            	[31m│[0m [0mPool Name: "pool-fair-buck-fixed-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:71cd09ff-b137-4ab8-b5a1-2f801a415031
+	            	[31m│[0m [0mTime:2026-09-13T02:17:16.4097060Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.fixed,
+	            	[31m│[0m [0m  on main.tf line 46, in resource "azurerm_batch_pool" "fixed":
+	            	[31m│[0m [0m  46: resource "azurerm_batch_pool" "fixed" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-picked-longhorn"
+	            	[31m│[0m [0mBatch Account Name: "hfnuzaey"
+	            	[31m│[0m [0mPool Name: "pool-fair-buck-autoscale-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:dde55af0-da2e-41b3-82c4-5c3a36e4c7f0
+	            	[31m│[0m [0mTime:2026-09-13T02:17:16.1145211Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.autopool,
+	            	[31m│[0m [0m  on main.tf line 88, in resource "azurerm_batch_pool" "autopool":
+	            	[31m│[0m [0m  88: resource "azurerm_batch_pool" "autopool" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-start-task
+
+FailNow
+
+---
+
+## 06 Sep 26 01:15 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-glorious-moose"
+	            	[31m│[0m [0mBatch Account Name: "svqeopwq"
+	            	[31m│[0m [0mPool Name: "pool-equipped-hermit-fixed-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:76079150-6882-4cb7-af58-d5e6abb8e5e5
+	            	[31m│[0m [0mTime:2026-09-06T01:13:20.3048048Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.fixed,
+	            	[31m│[0m [0m  on main.tf line 46, in resource "azurerm_batch_pool" "fixed":
+	            	[31m│[0m [0m  46: resource "azurerm_batch_pool" "fixed" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-glorious-moose"
+	            	[31m│[0m [0mBatch Account Name: "svqeopwq"
+	            	[31m│[0m [0mPool Name: "pool-equipped-hermit-autoscale-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:4c45bf16-e817-4f0a-8fe3-eeb399c9b18e
+	            	[31m│[0m [0mTime:2026-09-06T01:13:20.3173229Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.autopool,
+	            	[31m│[0m [0m  on main.tf line 88, in resource "azurerm_batch_pool" "autopool":
+	            	[31m│[0m [0m  88: resource "azurerm_batch_pool" "autopool" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-start-task
+
+FailNow
+
+---
+
+## 30 Aug 26 01:02 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-absolute-arachnid"
+	            	[31m│[0m [0mBatch Account Name: "pucjvnoq"
+	            	[31m│[0m [0mPool Name: "pool-known-moose-fixed-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:47a44ff3-d8bf-4439-88c6-ee24c5459e19
+	            	[31m│[0m [0mTime:2026-08-30T01:01:00.7731288Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.fixed,
+	            	[31m│[0m [0m  on main.tf line 46, in resource "azurerm_batch_pool" "fixed":
+	            	[31m│[0m [0m  46: resource "azurerm_batch_pool" "fixed" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-absolute-arachnid"
+	            	[31m│[0m [0mBatch Account Name: "pucjvnoq"
+	            	[31m│[0m [0mPool Name: "pool-known-moose-autoscale-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:5d71b552-e0fd-4753-88c0-cf4453f2f87f
+	            	[31m│[0m [0mTime:2026-08-30T01:01:00.8408794Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.autopool,
+	            	[31m│[0m [0m  on main.tf line 88, in resource "azurerm_batch_pool" "autopool":
+	            	[31m│[0m [0m  88: resource "azurerm_batch_pool" "autopool" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-start-task
+
+FailNow
+
+---
+
+## 23 Aug 26 00:39 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-smiling-swift"
+	            	[31m│[0m [0mBatch Account Name: "bvkvgfqt"
+	            	[31m│[0m [0mPool Name: "pool-flexible-mustang-fixed-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:a633e829-0ab8-427c-b7c2-9ed753855c82
+	            	[31m│[0m [0mTime:2026-08-23T00:37:53.3959961Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.fixed,
+	            	[31m│[0m [0m  on main.tf line 46, in resource "azurerm_batch_pool" "fixed":
+	            	[31m│[0m [0m  46: resource "azurerm_batch_pool" "fixed" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-smiling-swift"
+	            	[31m│[0m [0mBatch Account Name: "bvkvgfqt"
+	            	[31m│[0m [0mPool Name: "pool-flexible-mustang-autoscale-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:c005a1e6-3ccd-45a0-abe3-23472fd55939
+	            	[31m│[0m [0mTime:2026-08-23T00:37:52.9105784Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.autopool,
+	            	[31m│[0m [0m  on main.tf line 88, in resource "azurerm_batch_pool" "autopool":
+	            	[31m│[0m [0m  88: resource "azurerm_batch_pool" "autopool" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-start-task
+
+FailNow
+
+---
+
+## 16 Aug 26 01:11 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-exotic-robin"
+	            	[31m│[0m [0mBatch Account Name: "gzdugubq"
+	            	[31m│[0m [0mPool Name: "pool-adapting-pheasant-fixed-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:135084e4-9f70-4abe-844b-9452fcd4796f
+	            	[31m│[0m [0mTime:2026-08-16T01:10:12.4969671Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.fixed,
+	            	[31m│[0m [0m  on main.tf line 46, in resource "azurerm_batch_pool" "fixed":
+	            	[31m│[0m [0m  46: resource "azurerm_batch_pool" "fixed" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-exotic-robin"
+	            	[31m│[0m [0mBatch Account Name: "gzdugubq"
+	            	[31m│[0m [0mPool Name: "pool-adapting-pheasant-autoscale-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:932fef33-fbe9-4f45-995e-92363cbea543
+	            	[31m│[0m [0mTime:2026-08-16T01:10:12.5670064Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.autopool,
+	            	[31m│[0m [0m  on main.tf line 88, in resource "azurerm_batch_pool" "autopool":
+	            	[31m│[0m [0m  88: resource "azurerm_batch_pool" "autopool" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-start-task
+
+FailNow
+
+---
+
+## 09 Aug 26 00:48 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-patient-gazelle"
+	            	[31m│[0m [0mBatch Account Name: "tmgovbea"
+	            	[31m│[0m [0mPool Name: "pool-pretty-koala-fixed-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:77f4c635-93d3-4459-9c1e-8dba5c3efe6f
+	            	[31m│[0m [0mTime:2026-08-09T00:47:27.0271347Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.fixed,
+	            	[31m│[0m [0m  on main.tf line 46, in resource "azurerm_batch_pool" "fixed":
+	            	[31m│[0m [0m  46: resource "azurerm_batch_pool" "fixed" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-patient-gazelle"
+	            	[31m│[0m [0mBatch Account Name: "tmgovbea"
+	            	[31m│[0m [0mPool Name: "pool-pretty-koala-autoscale-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:527d8037-833f-4a9f-88b5-fdac357e654e
+	            	[31m│[0m [0mTime:2026-08-09T00:47:26.7198660Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.autopool,
+	            	[31m│[0m [0m  on main.tf line 88, in resource "azurerm_batch_pool" "autopool":
+	            	[31m│[0m [0m  88: resource "azurerm_batch_pool" "autopool" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-start-task
+
+FailNow
+
+---
+
+## 02 Aug 26 00:51 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-delicate-hedgehog"
+	            	[31m│[0m [0mBatch Account Name: "srejvswa"
+	            	[31m│[0m [0mPool Name: "pool-vast-shad-fixed-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:fa24bb74-74ae-4d40-9048-cac9ff036c3c
+	            	[31m│[0m [0mTime:2026-08-02T00:50:09.2036410Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.fixed,
+	            	[31m│[0m [0m  on main.tf line 46, in resource "azurerm_batch_pool" "fixed":
+	            	[31m│[0m [0m  46: resource "azurerm_batch_pool" "fixed" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-delicate-hedgehog"
+	            	[31m│[0m [0mBatch Account Name: "srejvswa"
+	            	[31m│[0m [0mPool Name: "pool-vast-shad-autoscale-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:56169e28-8817-44d0-beef-de7672ba1b2c
+	            	[31m│[0m [0mTime:2026-08-02T00:50:09.3211237Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.autopool,
+	            	[31m│[0m [0m  on main.tf line 88, in resource "azurerm_batch_pool" "autopool":
+	            	[31m│[0m [0m  88: resource "azurerm_batch_pool" "autopool" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-start-task
+
+FailNow
+
+---
+
+## 26 Jul 26 01:19 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-deep-filly"
+	            	[31m│[0m [0mBatch Account Name: "knqmnhsu"
+	            	[31m│[0m [0mPool Name: "pool-perfect-chicken-fixed-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:6b053667-937f-4580-9d1d-e9d9f3d89805
+	            	[31m│[0m [0mTime:2026-07-26T01:17:44.4735274Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.fixed,
+	            	[31m│[0m [0m  on main.tf line 46, in resource "azurerm_batch_pool" "fixed":
+	            	[31m│[0m [0m  46: resource "azurerm_batch_pool" "fixed" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-deep-filly"
+	            	[31m│[0m [0mBatch Account Name: "knqmnhsu"
+	            	[31m│[0m [0mPool Name: "pool-perfect-chicken-autoscale-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:26554485-698d-423f-8660-baeec438549d
+	            	[31m│[0m [0mTime:2026-07-26T01:17:44.4586756Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.autopool,
+	            	[31m│[0m [0m  on main.tf line 88, in resource "azurerm_batch_pool" "autopool":
+	            	[31m│[0m [0m  88: resource "azurerm_batch_pool" "autopool" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-start-task
+
+FailNow
+
+---
+
+## 12 Jul 26 00:55 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-set-tadpole"
+	            	[31m│[0m [0mBatch Account Name: "bipmxrar"
+	            	[31m│[0m [0mPool Name: "pool-crucial-boxer-fixed-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:246606e5-3b76-433d-b817-b2c701cf70a0
+	            	[31m│[0m [0mTime:2026-07-12T00:54:33.8682908Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.fixed,
+	            	[31m│[0m [0m  on main.tf line 46, in resource "azurerm_batch_pool" "fixed":
+	            	[31m│[0m [0m  46: resource "azurerm_batch_pool" "fixed" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-set-tadpole"
+	            	[31m│[0m [0mBatch Account Name: "bipmxrar"
+	            	[31m│[0m [0mPool Name: "pool-crucial-boxer-autoscale-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:ef236adb-3db7-42f0-b280-9ff34e8ade15
+	            	[31m│[0m [0mTime:2026-07-12T00:54:33.9066894Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.autopool,
+	            	[31m│[0m [0m  on main.tf line 88, in resource "azurerm_batch_pool" "autopool":
+	            	[31m│[0m [0m  88: resource "azurerm_batch_pool" "autopool" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-start-task
+
+FailNow
+
+---
+
+## 05 Jul 26 01:19 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-rich-crappie"
+	            	[31m│[0m [0mBatch Account Name: "fmtvjkih"
+	            	[31m│[0m [0mPool Name: "pool-humorous-pheasant-fixed-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:1a387ef6-7524-4137-8f7d-df1877d7a2e2
+	            	[31m│[0m [0mTime:2026-07-05T01:18:33.7434885Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.fixed,
+	            	[31m│[0m [0m  on main.tf line 46, in resource "azurerm_batch_pool" "fixed":
+	            	[31m│[0m [0m  46: resource "azurerm_batch_pool" "fixed" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-rich-crappie"
+	            	[31m│[0m [0mBatch Account Name: "fmtvjkih"
+	            	[31m│[0m [0mPool Name: "pool-humorous-pheasant-autoscale-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:03b2879c-1070-4f69-980c-8bcded7d5c9e
+	            	[31m│[0m [0mTime:2026-07-05T01:18:33.5209840Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.autopool,
+	            	[31m│[0m [0m  on main.tf line 88, in resource "azurerm_batch_pool" "autopool":
+	            	[31m│[0m [0m  88: resource "azurerm_batch_pool" "autopool" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-start-task
+
+FailNow
+
+---
+
+## 28 Jun 26 02:14 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-winning-wasp"
+	            	[31m│[0m [0mBatch Account Name: "fhljkuig"
+	            	[31m│[0m [0mPool Name: "pool-cool-ghost-fixed-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:bec9f14d-49f9-4c38-b9ff-5ba8cfb126d9
+	            	[31m│[0m [0mTime:2026-06-28T02:12:48.4728364Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.fixed,
+	            	[31m│[0m [0m  on main.tf line 46, in resource "azurerm_batch_pool" "fixed":
+	            	[31m│[0m [0m  46: resource "azurerm_batch_pool" "fixed" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-winning-wasp"
+	            	[31m│[0m [0mBatch Account Name: "fhljkuig"
+	            	[31m│[0m [0mPool Name: "pool-cool-ghost-autoscale-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:a199935b-c0c3-4257-9801-73309f1bfbeb
+	            	[31m│[0m [0mTime:2026-06-28T02:12:48.4684110Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.autopool,
+	            	[31m│[0m [0m  on main.tf line 88, in resource "azurerm_batch_pool" "autopool":
+	            	[31m│[0m [0m  88: resource "azurerm_batch_pool" "autopool" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-start-task
+
+FailNow
+
+---
+
+## 14 Jun 26 02:16 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-massive-impala"
+	            	[31m│[0m [0mBatch Account Name: "sympeabh"
+	            	[31m│[0m [0mPool Name: "pool-tough-turtle-fixed-pool"): unexpected status 409 (409 Pool quota for the account has been reached.) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:32b3ba9d-0daa-47b6-8d7b-649226ca9af0
+	            	[31m│[0m [0mTime:2026-06-14T02:15:38.5708247Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.fixed,
+	            	[31m│[0m [0m  on main.tf line 46, in resource "azurerm_batch_pool" "fixed":
+	            	[31m│[0m [0m  46: resource "azurerm_batch_pool" "fixed" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-massive-impala"
+	            	[31m│[0m [0mBatch Account Name: "sympeabh"
+	            	[31m│[0m [0mPool Name: "pool-tough-turtle-autoscale-pool"): unexpected status 409 (409 Pool quota for the account has been reached.) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:81105b10-b431-4913-93b2-af851bdf4647
+	            	[31m│[0m [0mTime:2026-06-14T02:15:38.4096088Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.autopool,
+	            	[31m│[0m [0m  on main.tf line 88, in resource "azurerm_batch_pool" "autopool":
+	            	[31m│[0m [0m  88: resource "azurerm_batch_pool" "autopool" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-start-task
+
+FailNow
+
+---
+
+## 31 May 26 01:27 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-related-oryx"
+	            	[31m│[0m [0mBatch Account Name: "wxqwayjs"
+	            	[31m│[0m [0mPool Name: "pool-pleasing-bison-fixed-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:ee87db12-c56f-45e3-8b36-b1d2bd32a973
+	            	[31m│[0m [0mTime:2026-05-31T01:26:00.7077126Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.fixed,
+	            	[31m│[0m [0m  on main.tf line 46, in resource "azurerm_batch_pool" "fixed":
+	            	[31m│[0m [0m  46: resource "azurerm_batch_pool" "fixed" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-related-oryx"
+	            	[31m│[0m [0mBatch Account Name: "wxqwayjs"
+	            	[31m│[0m [0mPool Name: "pool-pleasing-bison-autoscale-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:5dc57874-94d8-420e-b7ce-91379920fab1
+	            	[31m│[0m [0mTime:2026-05-31T01:26:00.3744522Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.autopool,
+	            	[31m│[0m [0m  on main.tf line 88, in resource "azurerm_batch_pool" "autopool":
+	            	[31m│[0m [0m  88: resource "azurerm_batch_pool" "autopool" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-start-task
+
+FailNow
+
+---
+
+## 24 May 26 01:38 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-driven-amoeba"
+	            	[31m│[0m [0mBatch Account Name: "vrxlxlje"
+	            	[31m│[0m [0mPool Name: "pool-arriving-gecko-fixed-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:658d5d6b-57a9-4469-a3ce-ae7d66b6e98d
+	            	[31m│[0m [0mTime:2026-05-24T01:37:49.8446934Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.fixed,
+	            	[31m│[0m [0m  on main.tf line 46, in resource "azurerm_batch_pool" "fixed":
+	            	[31m│[0m [0m  46: resource "azurerm_batch_pool" "fixed" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-driven-amoeba"
+	            	[31m│[0m [0mBatch Account Name: "vrxlxlje"
+	            	[31m│[0m [0mPool Name: "pool-arriving-gecko-autoscale-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:a96ecadf-00f7-4f1a-baeb-b0b4ceaf2d10
+	            	[31m│[0m [0mTime:2026-05-24T01:37:49.7737351Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.autopool,
+	            	[31m│[0m [0m  on main.tf line 88, in resource "azurerm_batch_pool" "autopool":
+	            	[31m│[0m [0m  88: resource "azurerm_batch_pool" "autopool" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-start-task
+
+FailNow
+
+---
+
+## 10 May 26 01:29 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-noble-duck"
+	            	[31m│[0m [0mBatch Account Name: "jycqdumv"
+	            	[31m│[0m [0mPool Name: "pool-summary-tetra-fixed-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:b4ece678-092f-441f-ae5a-3962c15df495
+	            	[31m│[0m [0mTime:2026-05-10T01:28:10.8337064Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.fixed,
+	            	[31m│[0m [0m  on main.tf line 46, in resource "azurerm_batch_pool" "fixed":
+	            	[31m│[0m [0m  46: resource "azurerm_batch_pool" "fixed" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-noble-duck"
+	            	[31m│[0m [0mBatch Account Name: "jycqdumv"
+	            	[31m│[0m [0mPool Name: "pool-summary-tetra-autoscale-pool"): unexpected status 409 (409 Conflict) with error: PoolQuotaReached: Pool quota for the account has been reached.
+	            	[31m│[0m [0mRequestId:5c9fa9a0-87de-48dd-98c1-db5d085e710a
+	            	[31m│[0m [0mTime:2026-05-10T01:28:10.6462473Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.autopool,
+	            	[31m│[0m [0m  on main.tf line 88, in resource "azurerm_batch_pool" "autopool":
+	            	[31m│[0m [0m  88: resource "azurerm_batch_pool" "autopool" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-start-task
+
+FailNow
+
+---
+
 ## 26 Apr 26 01:33 UTC
 
 Success: true

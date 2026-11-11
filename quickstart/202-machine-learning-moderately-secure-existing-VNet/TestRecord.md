@@ -1,3 +1,1189 @@
+## 18 Oct 26 00:34 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.6.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:212
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:98
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:211
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mwaiting for creation of Compute (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mWorkspace Name: "mlw-202mlmsev-dev-zGXpJ5Wx17"
+	            	[31m│[0m [0mCompute Name: "image-builder"): polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "BadRequest"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "{\"id\":\"https://resourceprovider.batchai-eastus.svc/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/providers/Microsoft.BatchAI/locations/eastus/operationresults/fff7e1ea-6d58-4a32-8b07-fa1af50c76c7\",\"name\":\"fff7e1ea-6d58-4a32-8b07-fa1af50c76c7\",\"status\":\"Failed\",\"startTime\":\"2026-10-18T00:20:37.342Z\",\"endTime\":\"2026-10-18T00:20:42.832Z\",\"error\":{\"code\":\"ClusterMinNodesExceedCoreQuota\",\"message\":\"The specified subscription has a total vCPU quota of 0 and cannot accomodate for at least 1 requested managed compute node which maps to 2 vCPUs. Talk to your Subscription Admin or refer to https://learn.microsoft.com/azure/machine-learning/how-to-manage-quotas#request-quota-increases to increase the total quota\"}}"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m  "status": "Failed",
+	            	[31m│[0m [0m  "error": {
+	            	[31m│[0m [0m    "code": "BadRequest",
+	            	[31m│[0m [0m    "message": "{\"id\":\"https://resourceprovider.batchai-eastus.svc/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/providers/Microsoft.BatchAI/locations/eastus/operationresults/fff7e1ea-6d58-4a32-8b07-fa1af50c76c7\",\"name\":\"fff7e1ea-6d58-4a32-8b07-fa1af50c76c7\",\"status\":\"Failed\",\"startTime\":\"2026-10-18T00:20:37.342Z\",\"endTime\":\"2026-10-18T00:20:42.832Z\",\"error\":{\"code\":\"ClusterMinNodesExceedCoreQuota\",\"message\":\"The specified subscription has a total vCPU quota of 0 and cannot accomodate for at least 1 requested managed compute node which maps to 2 vCPUs. Talk to your Subscription Admin or refer to https://learn.microsoft.com/azure/machine-learning/how-to-manage-quotas#request-quota-increases to increase the total quota\"}}"
+	            	[31m│[0m [0m  }
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_machine_learning_compute_cluster.image-builder,
+	            	[31m│[0m [0m  on workspace.tf line 175, in resource "azurerm_machine_learning_compute_cluster" "image-builder":
+	            	[31m│[0m [0m 175: resource "azurerm_machine_learning_compute_cluster" "image-builder" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/202-machine-learning-moderately-secure-existing-VNet
+
+FailNow
+
+---
+
+## 11 Oct 26 02:40 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.6.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:212
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:98
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:211
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mwaiting for creation of Compute (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mWorkspace Name: "mlw-202mlmsev-dev-UX1ZwSiVJI"
+	            	[31m│[0m [0mCompute Name: "image-builder"): polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "BadRequest"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "{\"id\":\"https://resourceprovider.batchai-eastus.svc/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/providers/Microsoft.BatchAI/locations/eastus/operationresults/4d6d05d3-801b-4069-a61a-a57071361fec\",\"name\":\"4d6d05d3-801b-4069-a61a-a57071361fec\",\"status\":\"Failed\",\"startTime\":\"2026-10-11T02:26:35.093Z\",\"endTime\":\"2026-10-11T02:26:41.132Z\",\"error\":{\"code\":\"ClusterMinNodesExceedCoreQuota\",\"message\":\"The specified subscription has a total vCPU quota of 0 and cannot accomodate for at least 1 requested managed compute node which maps to 2 vCPUs. Talk to your Subscription Admin or refer to https://learn.microsoft.com/azure/machine-learning/how-to-manage-quotas#request-quota-increases to increase the total quota\"}}"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m  "status": "Failed",
+	            	[31m│[0m [0m  "error": {
+	            	[31m│[0m [0m    "code": "BadRequest",
+	            	[31m│[0m [0m    "message": "{\"id\":\"https://resourceprovider.batchai-eastus.svc/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/providers/Microsoft.BatchAI/locations/eastus/operationresults/4d6d05d3-801b-4069-a61a-a57071361fec\",\"name\":\"4d6d05d3-801b-4069-a61a-a57071361fec\",\"status\":\"Failed\",\"startTime\":\"2026-10-11T02:26:35.093Z\",\"endTime\":\"2026-10-11T02:26:41.132Z\",\"error\":{\"code\":\"ClusterMinNodesExceedCoreQuota\",\"message\":\"The specified subscription has a total vCPU quota of 0 and cannot accomodate for at least 1 requested managed compute node which maps to 2 vCPUs. Talk to your Subscription Admin or refer to https://learn.microsoft.com/azure/machine-learning/how-to-manage-quotas#request-quota-increases to increase the total quota\"}}"
+	            	[31m│[0m [0m  }
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_machine_learning_compute_cluster.image-builder,
+	            	[31m│[0m [0m  on workspace.tf line 175, in resource "azurerm_machine_learning_compute_cluster" "image-builder":
+	            	[31m│[0m [0m 175: resource "azurerm_machine_learning_compute_cluster" "image-builder" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/202-machine-learning-moderately-secure-existing-VNet
+
+FailNow
+
+---
+
+## 04 Oct 26 01:20 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.6.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:212
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:98
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:211
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mwaiting for creation of Compute (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mWorkspace Name: "mlw-202mlmsev-dev-w82jl5zMgK"
+	            	[31m│[0m [0mCompute Name: "cpu-cluster"): polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "BadRequest"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "The network configuration for the storage account does not allow access from the compute's subnet to the storage. Please allow access to the storage from the compute's subnet. Storage account: /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-202mlmsev-dev/providers/Microsoft.Storage/storageAccounts/st202mlmsevdev"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m  "status": "Failed",
+	            	[31m│[0m [0m  "error": {
+	            	[31m│[0m [0m    "code": "BadRequest",
+	            	[31m│[0m [0m    "message": "The network configuration for the storage account does not allow access from the compute's subnet to the storage. Please allow access to the storage from the compute's subnet. Storage account: /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-202mlmsev-dev/providers/Microsoft.Storage/storageAccounts/st202mlmsevdev"
+	            	[31m│[0m [0m  }
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_machine_learning_compute_cluster.compute,
+	            	[31m│[0m [0m  on compute.tf line 23, in resource "azurerm_machine_learning_compute_cluster" "compute":
+	            	[31m│[0m [0m  23: resource "azurerm_machine_learning_compute_cluster" "compute" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Private Endpoint (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mPrivate Endpoint Name: "ple-202mlmsev-dev-st-blob"): polling after CreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "StorageAccountOperationInProgress"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "Call to Microsoft.Storage/storageAccounts failed. Error message: An operation is currently performing on this storage account that requires exclusive access."
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{"status":"Failed","error":{"code":"StorageAccountOperationInProgress","message":"Call to Microsoft.Storage/storageAccounts failed. Error message: An operation is currently performing on this storage account that requires exclusive access.","details":[]}}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_private_endpoint.st_ple_blob,
+	            	[31m│[0m [0m  on workspace.tf line 94, in resource "azurerm_private_endpoint" "st_ple_blob":
+	            	[31m│[0m [0m  94: resource "azurerm_private_endpoint" "st_ple_blob" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mwaiting for creation of Compute (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mWorkspace Name: "mlw-202mlmsev-dev-w82jl5zMgK"
+	            	[31m│[0m [0mCompute Name: "image-builder"): polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "BadRequest"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "The network configuration for the storage account does not allow access from the compute's subnet to the storage. Please allow access to the storage from the compute's subnet. Storage account: /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-202mlmsev-dev/providers/Microsoft.Storage/storageAccounts/st202mlmsevdev"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m  "status": "Failed",
+	            	[31m│[0m [0m  "error": {
+	            	[31m│[0m [0m    "code": "BadRequest",
+	            	[31m│[0m [0m    "message": "The network configuration for the storage account does not allow access from the compute's subnet to the storage. Please allow access to the storage from the compute's subnet. Storage account: /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-202mlmsev-dev/providers/Microsoft.Storage/storageAccounts/st202mlmsevdev"
+	            	[31m│[0m [0m  }
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_machine_learning_compute_cluster.image-builder,
+	            	[31m│[0m [0m  on workspace.tf line 175, in resource "azurerm_machine_learning_compute_cluster" "image-builder":
+	            	[31m│[0m [0m 175: resource "azurerm_machine_learning_compute_cluster" "image-builder" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/202-machine-learning-moderately-secure-existing-VNet
+
+FailNow
+
+---
+
+## 27 Sep 26 00:45 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.6.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:212
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:98
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:211
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mwaiting for creation of Compute (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mWorkspace Name: "mlw-202mlmsev-dev-PLUO6yLQHt"
+	            	[31m│[0m [0mCompute Name: "image-builder"): polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "BadRequest"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "{\"id\":\"https://resourceprovider.batchai-eastus.svc/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/providers/Microsoft.BatchAI/locations/eastus/operationresults/e6491110-bf39-4f77-ae17-a6131991ee0f\",\"name\":\"e6491110-bf39-4f77-ae17-a6131991ee0f\",\"status\":\"Failed\",\"startTime\":\"2026-09-27T00:31:23.819Z\",\"endTime\":\"2026-09-27T00:31:29.31Z\",\"error\":{\"code\":\"ClusterMinNodesExceedCoreQuota\",\"message\":\"The specified subscription has a total vCPU quota of 0 and cannot accomodate for at least 1 requested managed compute node which maps to 2 vCPUs. Talk to your Subscription Admin or refer to https://docs.microsoft.com/azure/machine-learning/how-to-manage-quotas#request-quota-increases to increase the total quota\"}}"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m  "status": "Failed",
+	            	[31m│[0m [0m  "error": {
+	            	[31m│[0m [0m    "code": "BadRequest",
+	            	[31m│[0m [0m    "message": "{\"id\":\"https://resourceprovider.batchai-eastus.svc/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/providers/Microsoft.BatchAI/locations/eastus/operationresults/e6491110-bf39-4f77-ae17-a6131991ee0f\",\"name\":\"e6491110-bf39-4f77-ae17-a6131991ee0f\",\"status\":\"Failed\",\"startTime\":\"2026-09-27T00:31:23.819Z\",\"endTime\":\"2026-09-27T00:31:29.31Z\",\"error\":{\"code\":\"ClusterMinNodesExceedCoreQuota\",\"message\":\"The specified subscription has a total vCPU quota of 0 and cannot accomodate for at least 1 requested managed compute node which maps to 2 vCPUs. Talk to your Subscription Admin or refer to https://docs.microsoft.com/azure/machine-learning/how-to-manage-quotas#request-quota-increases to increase the total quota\"}}"
+	            	[31m│[0m [0m  }
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_machine_learning_compute_cluster.image-builder,
+	            	[31m│[0m [0m  on workspace.tf line 175, in resource "azurerm_machine_learning_compute_cluster" "image-builder":
+	            	[31m│[0m [0m 175: resource "azurerm_machine_learning_compute_cluster" "image-builder" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/202-machine-learning-moderately-secure-existing-VNet
+
+FailNow
+
+---
+
+## 20 Sep 26 00:35 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.6.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:212
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:98
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:211
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mwaiting for creation of Compute (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mWorkspace Name: "mlw-202mlmsev-dev-i5FjaNPY7I"
+	            	[31m│[0m [0mCompute Name: "image-builder"): polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "BadRequest"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "{\"id\":\"https://resourceprovider.batchai-eastus.svc/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/providers/Microsoft.BatchAI/locations/eastus/operationresults/c67d4a34-0f9e-4968-af49-e698a3d5f98b\",\"name\":\"c67d4a34-0f9e-4968-af49-e698a3d5f98b\",\"status\":\"Failed\",\"startTime\":\"2026-09-20T00:22:24.198Z\",\"endTime\":\"2026-09-20T00:22:29.788Z\",\"error\":{\"code\":\"ClusterMinNodesExceedCoreQuota\",\"message\":\"The specified subscription has a total vCPU quota of 0 and cannot accomodate for at least 1 requested managed compute node which maps to 2 vCPUs. Talk to your Subscription Admin or refer to https://docs.microsoft.com/azure/machine-learning/how-to-manage-quotas#request-quota-increases to increase the total quota\"}}"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m  "status": "Failed",
+	            	[31m│[0m [0m  "error": {
+	            	[31m│[0m [0m    "code": "BadRequest",
+	            	[31m│[0m [0m    "message": "{\"id\":\"https://resourceprovider.batchai-eastus.svc/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/providers/Microsoft.BatchAI/locations/eastus/operationresults/c67d4a34-0f9e-4968-af49-e698a3d5f98b\",\"name\":\"c67d4a34-0f9e-4968-af49-e698a3d5f98b\",\"status\":\"Failed\",\"startTime\":\"2026-09-20T00:22:24.198Z\",\"endTime\":\"2026-09-20T00:22:29.788Z\",\"error\":{\"code\":\"ClusterMinNodesExceedCoreQuota\",\"message\":\"The specified subscription has a total vCPU quota of 0 and cannot accomodate for at least 1 requested managed compute node which maps to 2 vCPUs. Talk to your Subscription Admin or refer to https://docs.microsoft.com/azure/machine-learning/how-to-manage-quotas#request-quota-increases to increase the total quota\"}}"
+	            	[31m│[0m [0m  }
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_machine_learning_compute_cluster.image-builder,
+	            	[31m│[0m [0m  on workspace.tf line 175, in resource "azurerm_machine_learning_compute_cluster" "image-builder":
+	            	[31m│[0m [0m 175: resource "azurerm_machine_learning_compute_cluster" "image-builder" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/202-machine-learning-moderately-secure-existing-VNet
+
+FailNow
+
+---
+
+## 13 Sep 26 00:37 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.6.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:212
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:98
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:211
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mwaiting for creation of Compute (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mWorkspace Name: "mlw-202mlmsev-dev-NgonMyVng9"
+	            	[31m│[0m [0mCompute Name: "image-builder"): polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "BadRequest"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "{\"id\":\"https://resourceprovider.batchai-eastus.svc/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/providers/Microsoft.BatchAI/locations/eastus/operationresults/61b0e83a-42cc-40b4-bd80-944c08709d4b\",\"name\":\"61b0e83a-42cc-40b4-bd80-944c08709d4b\",\"status\":\"Failed\",\"startTime\":\"2026-09-13T00:23:40.744Z\",\"endTime\":\"2026-09-13T00:23:46.373Z\",\"error\":{\"code\":\"ClusterMinNodesExceedCoreQuota\",\"message\":\"The specified subscription has a total vCPU quota of 0 and cannot accomodate for at least 1 requested managed compute node which maps to 2 vCPUs. Talk to your Subscription Admin or refer to https://docs.microsoft.com/azure/machine-learning/how-to-manage-quotas#request-quota-increases to increase the total quota\"}}"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m  "status": "Failed",
+	            	[31m│[0m [0m  "error": {
+	            	[31m│[0m [0m    "code": "BadRequest",
+	            	[31m│[0m [0m    "message": "{\"id\":\"https://resourceprovider.batchai-eastus.svc/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/providers/Microsoft.BatchAI/locations/eastus/operationresults/61b0e83a-42cc-40b4-bd80-944c08709d4b\",\"name\":\"61b0e83a-42cc-40b4-bd80-944c08709d4b\",\"status\":\"Failed\",\"startTime\":\"2026-09-13T00:23:40.744Z\",\"endTime\":\"2026-09-13T00:23:46.373Z\",\"error\":{\"code\":\"ClusterMinNodesExceedCoreQuota\",\"message\":\"The specified subscription has a total vCPU quota of 0 and cannot accomodate for at least 1 requested managed compute node which maps to 2 vCPUs. Talk to your Subscription Admin or refer to https://docs.microsoft.com/azure/machine-learning/how-to-manage-quotas#request-quota-increases to increase the total quota\"}}"
+	            	[31m│[0m [0m  }
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_machine_learning_compute_cluster.image-builder,
+	            	[31m│[0m [0m  on workspace.tf line 175, in resource "azurerm_machine_learning_compute_cluster" "image-builder":
+	            	[31m│[0m [0m 175: resource "azurerm_machine_learning_compute_cluster" "image-builder" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/202-machine-learning-moderately-secure-existing-VNet
+
+FailNow
+
+---
+
+## 06 Sep 26 00:39 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.6.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:212
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:98
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:211
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mwaiting for creation of Compute (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mWorkspace Name: "mlw-202mlmsev-dev-zPRlUgYDLN"
+	            	[31m│[0m [0mCompute Name: "image-builder"): polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "BadRequest"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "{\"id\":\"https://resourceprovider.batchai-eastus.svc/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/providers/Microsoft.BatchAI/locations/eastus/operationresults/b4757352-9ff5-4b43-b767-d286fce77d1c\",\"name\":\"b4757352-9ff5-4b43-b767-d286fce77d1c\",\"status\":\"Failed\",\"startTime\":\"2026-09-06T00:26:10.62Z\",\"endTime\":\"2026-09-06T00:26:16.177Z\",\"error\":{\"code\":\"ClusterMinNodesExceedCoreQuota\",\"message\":\"The specified subscription has a total vCPU quota of 0 and cannot accomodate for at least 1 requested managed compute node which maps to 2 vCPUs. Talk to your Subscription Admin or refer to https://docs.microsoft.com/azure/machine-learning/how-to-manage-quotas#request-quota-increases to increase the total quota\"}}"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m  "status": "Failed",
+	            	[31m│[0m [0m  "error": {
+	            	[31m│[0m [0m    "code": "BadRequest",
+	            	[31m│[0m [0m    "message": "{\"id\":\"https://resourceprovider.batchai-eastus.svc/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/providers/Microsoft.BatchAI/locations/eastus/operationresults/b4757352-9ff5-4b43-b767-d286fce77d1c\",\"name\":\"b4757352-9ff5-4b43-b767-d286fce77d1c\",\"status\":\"Failed\",\"startTime\":\"2026-09-06T00:26:10.62Z\",\"endTime\":\"2026-09-06T00:26:16.177Z\",\"error\":{\"code\":\"ClusterMinNodesExceedCoreQuota\",\"message\":\"The specified subscription has a total vCPU quota of 0 and cannot accomodate for at least 1 requested managed compute node which maps to 2 vCPUs. Talk to your Subscription Admin or refer to https://docs.microsoft.com/azure/machine-learning/how-to-manage-quotas#request-quota-increases to increase the total quota\"}}"
+	            	[31m│[0m [0m  }
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_machine_learning_compute_cluster.image-builder,
+	            	[31m│[0m [0m  on workspace.tf line 175, in resource "azurerm_machine_learning_compute_cluster" "image-builder":
+	            	[31m│[0m [0m 175: resource "azurerm_machine_learning_compute_cluster" "image-builder" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/202-machine-learning-moderately-secure-existing-VNet
+
+FailNow
+
+---
+
+## 30 Aug 26 00:24 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.6.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:212
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:98
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:211
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Key Vault (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mKey Vault Name: "kv-202mlmsev-dev"): performing CreateOrUpdate: vaults.VaultsClient#CreateOrUpdate: Failure sending request: StatusCode=0 -- Original Error: autorest/azure: Service returned an error. Status=<nil> Code="VaultAlreadyExists" Message="The vault name 'kv-202mlmsev-dev' is already in use. Vault names are globally unique so it is possible that the name is already taken. If you are sure that the vault name was not taken then it is possible that a vault with the same name was recently deleted but not purged after being placed in a recoverable state. If the vault is in a recoverable state then the vault will need to be purged before reusing the name. For more information about VaultAlreadyExists, soft delete and purging a vault follow this link https://go.microsoft.com/fwlink/?linkid=2147740."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_key_vault.default,
+	            	[31m│[0m [0m  on workspace.tf line 9, in resource "azurerm_key_vault" "default":
+	            	[31m│[0m [0m   9: resource "azurerm_key_vault" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/202-machine-learning-moderately-secure-existing-VNet
+
+FailNow
+
+---
+
+## 23 Aug 26 00:14 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.6.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:209
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:98
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:208
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Key Vault (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mKey Vault Name: "kv-202mlmsev-dev"): performing CreateOrUpdate: vaults.VaultsClient#CreateOrUpdate: Failure sending request: StatusCode=0 -- Original Error: autorest/azure: Service returned an error. Status=<nil> Code="VaultAlreadyExists" Message="The vault name 'kv-202mlmsev-dev' is already in use. Vault names are globally unique so it is possible that the name is already taken. If you are sure that the vault name was not taken then it is possible that a vault with the same name was recently deleted but not purged after being placed in a recoverable state. If the vault is in a recoverable state then the vault will need to be purged before reusing the name. For more information about VaultAlreadyExists, soft delete and purging a vault follow this link https://go.microsoft.com/fwlink/?linkid=2147740."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_key_vault.default,
+	            	[31m│[0m [0m  on workspace.tf line 9, in resource "azurerm_key_vault" "default":
+	            	[31m│[0m [0m   9: resource "azurerm_key_vault" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Storage Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mStorage Account Name: "st202mlmsevdev"): performing Create: unexpected status 409 (409 Conflict) with error: StorageAccountAlreadyTaken: The storage account named st202mlmsevdev is already taken.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_storage_account.default,
+	            	[31m│[0m [0m  on workspace.tf line 23, in resource "azurerm_storage_account" "default":
+	            	[31m│[0m [0m  23: resource "azurerm_storage_account" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/202-machine-learning-moderately-secure-existing-VNet
+
+FailNow
+
+---
+
+## 16 Aug 26 00:15 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.6.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:209
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:98
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:208
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Key Vault (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mKey Vault Name: "kv-202mlmsev-dev"): performing CreateOrUpdate: vaults.VaultsClient#CreateOrUpdate: Failure sending request: StatusCode=0 -- Original Error: autorest/azure: Service returned an error. Status=<nil> Code="VaultAlreadyExists" Message="The vault name 'kv-202mlmsev-dev' is already in use. Vault names are globally unique so it is possible that the name is already taken. If you are sure that the vault name was not taken then it is possible that a vault with the same name was recently deleted but not purged after being placed in a recoverable state. If the vault is in a recoverable state then the vault will need to be purged before reusing the name. For more information about VaultAlreadyExists, soft delete and purging a vault follow this link https://go.microsoft.com/fwlink/?linkid=2147740."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_key_vault.default,
+	            	[31m│[0m [0m  on workspace.tf line 9, in resource "azurerm_key_vault" "default":
+	            	[31m│[0m [0m   9: resource "azurerm_key_vault" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Storage Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mStorage Account Name: "st202mlmsevdev"): performing Create: unexpected status 409 (409 Conflict) with error: StorageAccountAlreadyTaken: The storage account named st202mlmsevdev is already taken.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_storage_account.default,
+	            	[31m│[0m [0m  on workspace.tf line 23, in resource "azurerm_storage_account" "default":
+	            	[31m│[0m [0m  23: resource "azurerm_storage_account" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/202-machine-learning-moderately-secure-existing-VNet
+
+FailNow
+
+---
+
+## 09 Aug 26 01:09 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.6.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:209
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:98
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:208
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Key Vault (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mKey Vault Name: "kv-202mlmsev-dev"): performing CreateOrUpdate: vaults.VaultsClient#CreateOrUpdate: Failure sending request: StatusCode=0 -- Original Error: autorest/azure: Service returned an error. Status=<nil> Code="VaultAlreadyExists" Message="The vault name 'kv-202mlmsev-dev' is already in use. Vault names are globally unique so it is possible that the name is already taken. If you are sure that the vault name was not taken then it is possible that a vault with the same name was recently deleted but not purged after being placed in a recoverable state. If the vault is in a recoverable state then the vault will need to be purged before reusing the name. For more information about VaultAlreadyExists, soft delete and purging a vault follow this link https://go.microsoft.com/fwlink/?linkid=2147740."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_key_vault.default,
+	            	[31m│[0m [0m  on workspace.tf line 9, in resource "azurerm_key_vault" "default":
+	            	[31m│[0m [0m   9: resource "azurerm_key_vault" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Storage Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mStorage Account Name: "st202mlmsevdev"): performing Create: unexpected status 409 (409 Conflict) with error: StorageAccountAlreadyTaken: The storage account named st202mlmsevdev is already taken.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_storage_account.default,
+	            	[31m│[0m [0m  on workspace.tf line 23, in resource "azurerm_storage_account" "default":
+	            	[31m│[0m [0m  23: resource "azurerm_storage_account" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/202-machine-learning-moderately-secure-existing-VNet
+
+FailNow
+
+---
+
+## 02 Aug 26 00:57 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.6.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:209
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:98
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:208
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Key Vault (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mKey Vault Name: "kv-202mlmsev-dev"): performing CreateOrUpdate: vaults.VaultsClient#CreateOrUpdate: Failure sending request: StatusCode=0 -- Original Error: autorest/azure: Service returned an error. Status=<nil> Code="VaultAlreadyExists" Message="The vault name 'kv-202mlmsev-dev' is already in use. Vault names are globally unique so it is possible that the name is already taken. If you are sure that the vault name was not taken then it is possible that a vault with the same name was recently deleted but not purged after being placed in a recoverable state. If the vault is in a recoverable state then the vault will need to be purged before reusing the name. For more information about VaultAlreadyExists, soft delete and purging a vault follow this link https://go.microsoft.com/fwlink/?linkid=2147740."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_key_vault.default,
+	            	[31m│[0m [0m  on workspace.tf line 9, in resource "azurerm_key_vault" "default":
+	            	[31m│[0m [0m   9: resource "azurerm_key_vault" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Storage Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mStorage Account Name: "st202mlmsevdev"): performing Create: unexpected status 409 (409 Conflict) with error: StorageAccountAlreadyTaken: The storage account named st202mlmsevdev is already taken.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_storage_account.default,
+	            	[31m│[0m [0m  on workspace.tf line 23, in resource "azurerm_storage_account" "default":
+	            	[31m│[0m [0m  23: resource "azurerm_storage_account" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/202-machine-learning-moderately-secure-existing-VNet
+
+FailNow
+
+---
+
+## 26 Jul 26 01:05 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.6.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:209
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:98
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:208
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mwaiting for creation of Compute (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mWorkspace Name: "mlw-202mlmsev-dev-FEph5Kp3EM"
+	            	[31m│[0m [0mCompute Name: "image-builder"): polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "BadRequest"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "{\"id\":\"https://resourceprovider.batchai-eastus.svc/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/providers/Microsoft.BatchAI/locations/eastus/operationresults/1cb05adf-e7a3-4e39-9bfb-f3bea1faf820\",\"name\":\"1cb05adf-e7a3-4e39-9bfb-f3bea1faf820\",\"status\":\"Failed\",\"startTime\":\"2026-07-26T00:54:21.41Z\",\"endTime\":\"2026-07-26T00:54:26.91Z\",\"error\":{\"code\":\"ClusterMinNodesExceedCoreQuota\",\"message\":\"The specified subscription has a total vCPU quota of 0 and cannot accomodate for at least 1 requested managed compute node which maps to 2 vCPUs. Talk to your Subscription Admin or refer to https://docs.microsoft.com/azure/machine-learning/how-to-manage-quotas#request-quota-increases to increase the total quota\"}}"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m  "status": "Failed",
+	            	[31m│[0m [0m  "error": {
+	            	[31m│[0m [0m    "code": "BadRequest",
+	            	[31m│[0m [0m    "message": "{\"id\":\"https://resourceprovider.batchai-eastus.svc/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/providers/Microsoft.BatchAI/locations/eastus/operationresults/1cb05adf-e7a3-4e39-9bfb-f3bea1faf820\",\"name\":\"1cb05adf-e7a3-4e39-9bfb-f3bea1faf820\",\"status\":\"Failed\",\"startTime\":\"2026-07-26T00:54:21.41Z\",\"endTime\":\"2026-07-26T00:54:26.91Z\",\"error\":{\"code\":\"ClusterMinNodesExceedCoreQuota\",\"message\":\"The specified subscription has a total vCPU quota of 0 and cannot accomodate for at least 1 requested managed compute node which maps to 2 vCPUs. Talk to your Subscription Admin or refer to https://docs.microsoft.com/azure/machine-learning/how-to-manage-quotas#request-quota-increases to increase the total quota\"}}"
+	            	[31m│[0m [0m  }
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_machine_learning_compute_cluster.image-builder,
+	            	[31m│[0m [0m  on workspace.tf line 175, in resource "azurerm_machine_learning_compute_cluster" "image-builder":
+	            	[31m│[0m [0m 175: resource "azurerm_machine_learning_compute_cluster" "image-builder" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/202-machine-learning-moderately-secure-existing-VNet
+
+FailNow
+
+---
+
+## 12 Jul 26 00:43 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.6.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:209
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:98
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:208
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mwaiting for creation of Compute (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mWorkspace Name: "mlw-202mlmsev-dev-naPPk6GRb2"
+	            	[31m│[0m [0mCompute Name: "image-builder"): polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "BadRequest"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "{\"id\":\"https://resourceprovider.batchai-eastus.svc/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/providers/Microsoft.BatchAI/locations/eastus/operationresults/887a37d1-2a80-4084-a275-21dfc0be54a7\",\"name\":\"887a37d1-2a80-4084-a275-21dfc0be54a7\",\"status\":\"Failed\",\"startTime\":\"2026-07-12T00:32:10.125Z\",\"endTime\":\"2026-07-12T00:32:15.59Z\",\"error\":{\"code\":\"ClusterMinNodesExceedCoreQuota\",\"message\":\"The specified subscription has a total vCPU quota of 0 and cannot accomodate for at least 1 requested managed compute node which maps to 2 vCPUs. Talk to your Subscription Admin or refer to https://docs.microsoft.com/azure/machine-learning/how-to-manage-quotas#request-quota-increases to increase the total quota\"}}"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m  "status": "Failed",
+	            	[31m│[0m [0m  "error": {
+	            	[31m│[0m [0m    "code": "BadRequest",
+	            	[31m│[0m [0m    "message": "{\"id\":\"https://resourceprovider.batchai-eastus.svc/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/providers/Microsoft.BatchAI/locations/eastus/operationresults/887a37d1-2a80-4084-a275-21dfc0be54a7\",\"name\":\"887a37d1-2a80-4084-a275-21dfc0be54a7\",\"status\":\"Failed\",\"startTime\":\"2026-07-12T00:32:10.125Z\",\"endTime\":\"2026-07-12T00:32:15.59Z\",\"error\":{\"code\":\"ClusterMinNodesExceedCoreQuota\",\"message\":\"The specified subscription has a total vCPU quota of 0 and cannot accomodate for at least 1 requested managed compute node which maps to 2 vCPUs. Talk to your Subscription Admin or refer to https://docs.microsoft.com/azure/machine-learning/how-to-manage-quotas#request-quota-increases to increase the total quota\"}}"
+	            	[31m│[0m [0m  }
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_machine_learning_compute_cluster.image-builder,
+	            	[31m│[0m [0m  on workspace.tf line 175, in resource "azurerm_machine_learning_compute_cluster" "image-builder":
+	            	[31m│[0m [0m 175: resource "azurerm_machine_learning_compute_cluster" "image-builder" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/202-machine-learning-moderately-secure-existing-VNet
+
+FailNow
+
+---
+
+## 05 Jul 26 00:47 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.6.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:209
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:98
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:208
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mwaiting for creation of Compute (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mWorkspace Name: "mlw-202mlmsev-dev-uMYnXZ6VuY"
+	            	[31m│[0m [0mCompute Name: "image-builder"): polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "BadRequest"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "{\"id\":\"https://resourceprovider.batchai-eastus.svc/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/providers/Microsoft.BatchAI/locations/eastus/operationresults/3ef4109f-f0bb-4911-83d8-4df2964e4ad1\",\"name\":\"3ef4109f-f0bb-4911-83d8-4df2964e4ad1\",\"status\":\"Failed\",\"startTime\":\"2026-07-05T00:36:58.911Z\",\"endTime\":\"2026-07-05T00:37:04.487Z\",\"error\":{\"code\":\"ClusterMinNodesExceedCoreQuota\",\"message\":\"The specified subscription has a total vCPU quota of 0 and cannot accomodate for at least 1 requested managed compute node which maps to 2 vCPUs. Talk to your Subscription Admin or refer to https://docs.microsoft.com/azure/machine-learning/how-to-manage-quotas#request-quota-increases to increase the total quota\"}}"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m  "status": "Failed",
+	            	[31m│[0m [0m  "error": {
+	            	[31m│[0m [0m    "code": "BadRequest",
+	            	[31m│[0m [0m    "message": "{\"id\":\"https://resourceprovider.batchai-eastus.svc/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/providers/Microsoft.BatchAI/locations/eastus/operationresults/3ef4109f-f0bb-4911-83d8-4df2964e4ad1\",\"name\":\"3ef4109f-f0bb-4911-83d8-4df2964e4ad1\",\"status\":\"Failed\",\"startTime\":\"2026-07-05T00:36:58.911Z\",\"endTime\":\"2026-07-05T00:37:04.487Z\",\"error\":{\"code\":\"ClusterMinNodesExceedCoreQuota\",\"message\":\"The specified subscription has a total vCPU quota of 0 and cannot accomodate for at least 1 requested managed compute node which maps to 2 vCPUs. Talk to your Subscription Admin or refer to https://docs.microsoft.com/azure/machine-learning/how-to-manage-quotas#request-quota-increases to increase the total quota\"}}"
+	            	[31m│[0m [0m  }
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_machine_learning_compute_cluster.image-builder,
+	            	[31m│[0m [0m  on workspace.tf line 175, in resource "azurerm_machine_learning_compute_cluster" "image-builder":
+	            	[31m│[0m [0m 175: resource "azurerm_machine_learning_compute_cluster" "image-builder" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/202-machine-learning-moderately-secure-existing-VNet
+
+FailNow
+
+---
+
+## 28 Jun 26 01:30 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.6.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:209
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:98
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:208
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mwaiting for creation of Compute (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mWorkspace Name: "mlw-202mlmsev-dev-XOZdMr7m7x"
+	            	[31m│[0m [0mCompute Name: "image-builder"): polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "BadRequest"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "{\"id\":\"https://resourceprovider.batchai-eastus.svc/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/providers/Microsoft.BatchAI/locations/eastus/operationresults/8c55961e-6773-4f58-b855-58dd58932883\",\"name\":\"8c55961e-6773-4f58-b855-58dd58932883\",\"status\":\"Failed\",\"startTime\":\"2026-06-28T01:19:07.445Z\",\"endTime\":\"2026-06-28T01:19:12.945Z\",\"error\":{\"code\":\"ClusterMinNodesExceedCoreQuota\",\"message\":\"The specified subscription has a total vCPU quota of 0 and cannot accomodate for at least 1 requested managed compute node which maps to 2 vCPUs. Talk to your Subscription Admin or refer to https://docs.microsoft.com/azure/machine-learning/how-to-manage-quotas#request-quota-increases to increase the total quota\"}}"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m  "status": "Failed",
+	            	[31m│[0m [0m  "error": {
+	            	[31m│[0m [0m    "code": "BadRequest",
+	            	[31m│[0m [0m    "message": "{\"id\":\"https://resourceprovider.batchai-eastus.svc/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/providers/Microsoft.BatchAI/locations/eastus/operationresults/8c55961e-6773-4f58-b855-58dd58932883\",\"name\":\"8c55961e-6773-4f58-b855-58dd58932883\",\"status\":\"Failed\",\"startTime\":\"2026-06-28T01:19:07.445Z\",\"endTime\":\"2026-06-28T01:19:12.945Z\",\"error\":{\"code\":\"ClusterMinNodesExceedCoreQuota\",\"message\":\"The specified subscription has a total vCPU quota of 0 and cannot accomodate for at least 1 requested managed compute node which maps to 2 vCPUs. Talk to your Subscription Admin or refer to https://docs.microsoft.com/azure/machine-learning/how-to-manage-quotas#request-quota-increases to increase the total quota\"}}"
+	            	[31m│[0m [0m  }
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_machine_learning_compute_cluster.image-builder,
+	            	[31m│[0m [0m  on workspace.tf line 175, in resource "azurerm_machine_learning_compute_cluster" "image-builder":
+	            	[31m│[0m [0m 175: resource "azurerm_machine_learning_compute_cluster" "image-builder" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/202-machine-learning-moderately-secure-existing-VNet
+
+FailNow
+
+---
+
+## 14 Jun 26 00:44 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.6.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:209
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:98
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:208
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Key Vault (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mKey Vault Name: "kv-202mlmsev-dev"): performing CreateOrUpdate: vaults.VaultsClient#CreateOrUpdate: Failure sending request: StatusCode=0 -- Original Error: autorest/azure: Service returned an error. Status=<nil> Code="VaultAlreadyExists" Message="The vault name 'kv-202mlmsev-dev' is already in use. Vault names are globally unique so it is possible that the name is already taken. If you are sure that the vault name was not taken then it is possible that a vault with the same name was recently deleted but not purged after being placed in a recoverable state. If the vault is in a recoverable state then the vault will need to be purged before reusing the name. For more information about VaultAlreadyExists, soft delete and purging a vault follow this link https://go.microsoft.com/fwlink/?linkid=2147740."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_key_vault.default,
+	            	[31m│[0m [0m  on workspace.tf line 9, in resource "azurerm_key_vault" "default":
+	            	[31m│[0m [0m   9: resource "azurerm_key_vault" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/202-machine-learning-moderately-secure-existing-VNet
+
+FailNow
+
+---
+
+## 31 May 26 01:37 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.6.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:209
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:98
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:208
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Key Vault (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mKey Vault Name: "kv-202mlmsev-dev"): performing CreateOrUpdate: vaults.VaultsClient#CreateOrUpdate: Failure sending request: StatusCode=0 -- Original Error: autorest/azure: Service returned an error. Status=<nil> Code="VaultAlreadyExists" Message="The vault name 'kv-202mlmsev-dev' is already in use. Vault names are globally unique so it is possible that the name is already taken. If you are sure that the vault name was not taken then it is possible that a vault with the same name was recently deleted but not purged after being placed in a recoverable state. If the vault is in a recoverable state then the vault will need to be purged before reusing the name. For more information about VaultAlreadyExists, soft delete and purging a vault follow this link https://go.microsoft.com/fwlink/?linkid=2147740."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_key_vault.default,
+	            	[31m│[0m [0m  on workspace.tf line 9, in resource "azurerm_key_vault" "default":
+	            	[31m│[0m [0m   9: resource "azurerm_key_vault" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/202-machine-learning-moderately-secure-existing-VNet
+
+FailNow
+
+---
+
+## 24 May 26 00:37 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.6.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:209
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:98
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:208
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Key Vault (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mKey Vault Name: "kv-202mlmsev-dev"): performing CreateOrUpdate: vaults.VaultsClient#CreateOrUpdate: Failure sending request: StatusCode=0 -- Original Error: autorest/azure: Service returned an error. Status=<nil> Code="VaultAlreadyExists" Message="The vault name 'kv-202mlmsev-dev' is already in use. Vault names are globally unique so it is possible that the name is already taken. If you are sure that the vault name was not taken then it is possible that a vault with the same name was recently deleted but not purged after being placed in a recoverable state. If the vault is in a recoverable state then the vault will need to be purged before reusing the name. For more information about VaultAlreadyExists, soft delete and purging a vault follow this link https://go.microsoft.com/fwlink/?linkid=2147740."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_key_vault.default,
+	            	[31m│[0m [0m  on workspace.tf line 9, in resource "azurerm_key_vault" "default":
+	            	[31m│[0m [0m   9: resource "azurerm_key_vault" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Storage Account (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mStorage Account Name: "st202mlmsevdev"): performing Create: unexpected status 409 (409 Conflict) with error: StorageAccountAlreadyTaken: The storage account named st202mlmsevdev is already taken.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_storage_account.default,
+	            	[31m│[0m [0m  on workspace.tf line 23, in resource "azurerm_storage_account" "default":
+	            	[31m│[0m [0m  23: resource "azurerm_storage_account" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/202-machine-learning-moderately-secure-existing-VNet
+
+FailNow
+
+---
+
+## 10 May 26 00:35 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.6.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:209
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:98
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:208
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Key Vault (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mKey Vault Name: "kv-202mlmsev-dev"): performing CreateOrUpdate: vaults.VaultsClient#CreateOrUpdate: Failure sending request: StatusCode=0 -- Original Error: autorest/azure: Service returned an error. Status=<nil> Code="VaultAlreadyExists" Message="The vault name 'kv-202mlmsev-dev' is already in use. Vault names are globally unique so it is possible that the name is already taken. If you are sure that the vault name was not taken then it is possible that a vault with the same name was recently deleted but not purged after being placed in a recoverable state. If the vault is in a recoverable state then the vault will need to be purged before reusing the name. For more information about VaultAlreadyExists, soft delete and purging a vault follow this link https://go.microsoft.com/fwlink/?linkid=2147740."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_key_vault.default,
+	            	[31m│[0m [0m  on workspace.tf line 9, in resource "azurerm_key_vault" "default":
+	            	[31m│[0m [0m   9: resource "azurerm_key_vault" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Storage Account (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-202mlmsev-dev"
+	            	[31m│[0m [0mStorage Account Name: "st202mlmsevdev"): performing Create: unexpected status 409 (409 Conflict) with error: StorageAccountAlreadyTaken: The storage account named st202mlmsevdev is already taken.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_storage_account.default,
+	            	[31m│[0m [0m  on workspace.tf line 23, in resource "azurerm_storage_account" "default":
+	            	[31m│[0m [0m  23: resource "azurerm_storage_account" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/202-machine-learning-moderately-secure-existing-VNet
+
+FailNow
+
+---
+
 ## 26 Apr 26 00:39 UTC
 
 Success: false

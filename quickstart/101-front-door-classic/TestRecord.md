@@ -1,3 +1,848 @@
+## 08 Nov 26 00:18 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 969ffdd3-6e23-408b-b550-d698e5e3cb00 Correlation ID: 5486c429-f9c4-4f6f-829c-feb0abbbc2fc Timestamp: 2026-11-08 00:18:38Z","error_codes":[5000229],"timestamp":"2026-11-08 00:18:38Z","trace_id":"969ffdd3-6e23-408b-b550-d698e5e3cb00","correlation_id":"5486c429-f9c4-4f6f-829c-feb0abbbc2fc"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 14, in provider "azurerm":
+	            	[31m│[0m [0m  14: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-front-door-classic
+
+FailNow
+
+---
+
+## 01 Nov 26 00:16 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant '4f00b3b6-2940-4f2c-b037-94637c180d30' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: d1276b83-4943-40ab-b220-039f55264900 Correlation ID: 6f870ec0-1072-45aa-902d-946f7fad5c34 Timestamp: 2026-11-01 00:16:17Z","error_codes":[5000229],"timestamp":"2026-11-01 00:16:17Z","trace_id":"d1276b83-4943-40ab-b220-039f55264900","correlation_id":"6f870ec0-1072-45aa-902d-946f7fad5c34"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 14, in provider "azurerm":
+	            	[31m│[0m [0m  14: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-front-door-classic
+
+FailNow
+
+---
+
+## 25 Oct 26 00:15 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: af610702-2728-4e40-866e-467a489ff201 Correlation ID: 7a30648c-06fa-4950-8cc3-c81d894b89bb Timestamp: 2026-10-25 00:15:36Z","error_codes":[5000229],"timestamp":"2026-10-25 00:15:36Z","trace_id":"af610702-2728-4e40-866e-467a489ff201","correlation_id":"7a30648c-06fa-4950-8cc3-c81d894b89bb"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 14, in provider "azurerm":
+	            	[31m│[0m [0m  14: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-front-door-classic
+
+FailNow
+
+---
+
+## 18 Oct 26 00:55 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Front Door (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-immortal-gelding"
+	            	[31m│[0m [0mFront Door Name: "afd-142e2d00096a72bb"): performing CreateOrUpdate: frontdoors.FrontDoorsClient#CreateOrUpdate: Failure sending request: StatusCode=0 -- Original Error: Code="BadRequest" Message="Creation of new Frontdoors are not allowed as the resource has been deprecated."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_frontdoor.main,
+	            	[31m│[0m [0m  on main.tf line 23, in resource "azurerm_frontdoor" "main":
+	            	[31m│[0m [0m  23: resource "azurerm_frontdoor" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-front-door-classic
+
+FailNow
+
+---
+
+## 11 Oct 26 00:59 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Front Door (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-lasting-goshawk"
+	            	[31m│[0m [0mFront Door Name: "afd-10bb9b750c7207ba"): performing CreateOrUpdate: frontdoors.FrontDoorsClient#CreateOrUpdate: Failure sending request: StatusCode=0 -- Original Error: Code="BadRequest" Message="Creation of new Frontdoors are not allowed as the resource has been deprecated."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_frontdoor.main,
+	            	[31m│[0m [0m  on main.tf line 23, in resource "azurerm_frontdoor" "main":
+	            	[31m│[0m [0m  23: resource "azurerm_frontdoor" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-front-door-classic
+
+FailNow
+
+---
+
+## 04 Oct 26 01:19 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Front Door (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-related-sunbird"
+	            	[31m│[0m [0mFront Door Name: "afd-0fcc737d83b349c4"): performing CreateOrUpdate: frontdoors.FrontDoorsClient#CreateOrUpdate: Failure sending request: StatusCode=0 -- Original Error: Code="BadRequest" Message="Creation of new Frontdoors are not allowed as the resource has been deprecated."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_frontdoor.main,
+	            	[31m│[0m [0m  on main.tf line 23, in resource "azurerm_frontdoor" "main":
+	            	[31m│[0m [0m  23: resource "azurerm_frontdoor" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-front-door-classic
+
+FailNow
+
+---
+
+## 27 Sep 26 02:43 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Front Door (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-advanced-orca"
+	            	[31m│[0m [0mFront Door Name: "afd-2b798834020ce678"): performing CreateOrUpdate: frontdoors.FrontDoorsClient#CreateOrUpdate: Failure sending request: StatusCode=0 -- Original Error: Code="BadRequest" Message="Creation of new Frontdoors are not allowed as the resource has been deprecated."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_frontdoor.main,
+	            	[31m│[0m [0m  on main.tf line 23, in resource "azurerm_frontdoor" "main":
+	            	[31m│[0m [0m  23: resource "azurerm_frontdoor" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-front-door-classic
+
+FailNow
+
+---
+
+## 20 Sep 26 01:00 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Front Door (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-cute-octopus"
+	            	[31m│[0m [0mFront Door Name: "afd-547b656acb3c1757"): performing CreateOrUpdate: frontdoors.FrontDoorsClient#CreateOrUpdate: Failure sending request: StatusCode=0 -- Original Error: Code="BadRequest" Message="Creation of new Frontdoors are not allowed as the resource has been deprecated."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_frontdoor.main,
+	            	[31m│[0m [0m  on main.tf line 23, in resource "azurerm_frontdoor" "main":
+	            	[31m│[0m [0m  23: resource "azurerm_frontdoor" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-front-door-classic
+
+FailNow
+
+---
+
+## 13 Sep 26 02:12 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Front Door (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-choice-duck"
+	            	[31m│[0m [0mFront Door Name: "afd-17342c2dce8e3903"): performing CreateOrUpdate: frontdoors.FrontDoorsClient#CreateOrUpdate: Failure sending request: StatusCode=0 -- Original Error: Code="BadRequest" Message="Creation of new Frontdoors are not allowed as the resource has been deprecated."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_frontdoor.main,
+	            	[31m│[0m [0m  on main.tf line 23, in resource "azurerm_frontdoor" "main":
+	            	[31m│[0m [0m  23: resource "azurerm_frontdoor" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-front-door-classic
+
+FailNow
+
+---
+
+## 06 Sep 26 00:52 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Front Door (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-rich-bluegill"
+	            	[31m│[0m [0mFront Door Name: "afd-9e9f43c0048aaf43"): performing CreateOrUpdate: frontdoors.FrontDoorsClient#CreateOrUpdate: Failure sending request: StatusCode=0 -- Original Error: Code="BadRequest" Message="Creation of new Frontdoors are not allowed as the resource has been deprecated."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_frontdoor.main,
+	            	[31m│[0m [0m  on main.tf line 23, in resource "azurerm_frontdoor" "main":
+	            	[31m│[0m [0m  23: resource "azurerm_frontdoor" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-front-door-classic
+
+FailNow
+
+---
+
+## 30 Aug 26 02:27 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Front Door (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-vital-flea"
+	            	[31m│[0m [0mFront Door Name: "afd-74fd6c2c52b9e0da"): performing CreateOrUpdate: frontdoors.FrontDoorsClient#CreateOrUpdate: Failure sending request: StatusCode=0 -- Original Error: Code="BadRequest" Message="Creation of new Frontdoors are not allowed as the resource has been deprecated."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_frontdoor.main,
+	            	[31m│[0m [0m  on main.tf line 23, in resource "azurerm_frontdoor" "main":
+	            	[31m│[0m [0m  23: resource "azurerm_frontdoor" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-front-door-classic
+
+FailNow
+
+---
+
+## 23 Aug 26 01:13 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Front Door (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-inviting-sunbird"
+	            	[31m│[0m [0mFront Door Name: "afd-2b5db304c15f5457"): performing CreateOrUpdate: frontdoors.FrontDoorsClient#CreateOrUpdate: Failure sending request: StatusCode=0 -- Original Error: Code="BadRequest" Message="Creation of new Frontdoors are not allowed as the resource has been deprecated."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_frontdoor.main,
+	            	[31m│[0m [0m  on main.tf line 23, in resource "azurerm_frontdoor" "main":
+	            	[31m│[0m [0m  23: resource "azurerm_frontdoor" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-front-door-classic
+
+FailNow
+
+---
+
+## 16 Aug 26 00:45 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Front Door (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-sharp-cub"
+	            	[31m│[0m [0mFront Door Name: "afd-bd9ab87dddbb6ebb"): performing CreateOrUpdate: frontdoors.FrontDoorsClient#CreateOrUpdate: Failure sending request: StatusCode=0 -- Original Error: Code="BadRequest" Message="Creation of new Frontdoors are not allowed as the resource has been deprecated."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_frontdoor.main,
+	            	[31m│[0m [0m  on main.tf line 23, in resource "azurerm_frontdoor" "main":
+	            	[31m│[0m [0m  23: resource "azurerm_frontdoor" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-front-door-classic
+
+FailNow
+
+---
+
+## 09 Aug 26 01:26 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Front Door (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-endless-gecko"
+	            	[31m│[0m [0mFront Door Name: "afd-268130c4d60cb1aa"): performing CreateOrUpdate: frontdoors.FrontDoorsClient#CreateOrUpdate: Failure sending request: StatusCode=0 -- Original Error: Code="BadRequest" Message="Creation of new Frontdoors are not allowed as the resource has been deprecated."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_frontdoor.main,
+	            	[31m│[0m [0m  on main.tf line 23, in resource "azurerm_frontdoor" "main":
+	            	[31m│[0m [0m  23: resource "azurerm_frontdoor" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-front-door-classic
+
+FailNow
+
+---
+
+## 02 Aug 26 00:29 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Front Door (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-maximum-jaguar"
+	            	[31m│[0m [0mFront Door Name: "afd-fc13bd8ab58de5b8"): performing CreateOrUpdate: frontdoors.FrontDoorsClient#CreateOrUpdate: Failure sending request: StatusCode=0 -- Original Error: Code="BadRequest" Message="Creation of new Frontdoors are not allowed as the resource has been deprecated."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_frontdoor.main,
+	            	[31m│[0m [0m  on main.tf line 23, in resource "azurerm_frontdoor" "main":
+	            	[31m│[0m [0m  23: resource "azurerm_frontdoor" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-front-door-classic
+
+FailNow
+
+---
+
+## 26 Jul 26 01:02 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Front Door (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-profound-tiger"
+	            	[31m│[0m [0mFront Door Name: "afd-9fbab4001b366b69"): performing CreateOrUpdate: frontdoors.FrontDoorsClient#CreateOrUpdate: Failure sending request: StatusCode=0 -- Original Error: Code="BadRequest" Message="Creation of new Frontdoors are not allowed as the resource has been deprecated."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_frontdoor.main,
+	            	[31m│[0m [0m  on main.tf line 23, in resource "azurerm_frontdoor" "main":
+	            	[31m│[0m [0m  23: resource "azurerm_frontdoor" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-front-door-classic
+
+FailNow
+
+---
+
+## 12 Jul 26 01:40 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Front Door (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-endless-airedale"
+	            	[31m│[0m [0mFront Door Name: "afd-182d1a489881a245"): performing CreateOrUpdate: frontdoors.FrontDoorsClient#CreateOrUpdate: Failure sending request: StatusCode=0 -- Original Error: Code="BadRequest" Message="Creation of new Frontdoors are not allowed as the resource has been deprecated."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_frontdoor.main,
+	            	[31m│[0m [0m  on main.tf line 23, in resource "azurerm_frontdoor" "main":
+	            	[31m│[0m [0m  23: resource "azurerm_frontdoor" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-front-door-classic
+
+FailNow
+
+---
+
+## 05 Jul 26 00:42 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Front Door (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-exciting-goldfish"
+	            	[31m│[0m [0mFront Door Name: "afd-2c2d3e66b695f2ef"): performing CreateOrUpdate: frontdoors.FrontDoorsClient#CreateOrUpdate: Failure sending request: StatusCode=0 -- Original Error: Code="BadRequest" Message="Creation of new Frontdoors are not allowed as the resource has been deprecated."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_frontdoor.main,
+	            	[31m│[0m [0m  on main.tf line 23, in resource "azurerm_frontdoor" "main":
+	            	[31m│[0m [0m  23: resource "azurerm_frontdoor" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-front-door-classic
+
+FailNow
+
+---
+
+## 28 Jun 26 01:31 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Front Door (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-rich-glider"
+	            	[31m│[0m [0mFront Door Name: "afd-dee76545becb20e6"): performing CreateOrUpdate: frontdoors.FrontDoorsClient#CreateOrUpdate: Failure sending request: StatusCode=0 -- Original Error: Code="BadRequest" Message="Creation of new Frontdoors are not allowed as the resource has been deprecated."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_frontdoor.main,
+	            	[31m│[0m [0m  on main.tf line 23, in resource "azurerm_frontdoor" "main":
+	            	[31m│[0m [0m  23: resource "azurerm_frontdoor" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-front-door-classic
+
+FailNow
+
+---
+
+## 14 Jun 26 01:37 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Front Door (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-proper-rat"
+	            	[31m│[0m [0mFront Door Name: "afd-40e88ed02c62a03d"): performing CreateOrUpdate: frontdoors.FrontDoorsClient#CreateOrUpdate: Failure sending request: StatusCode=0 -- Original Error: Code="BadRequest" Message="Creation of new Frontdoors are not allowed as the resource has been deprecated."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_frontdoor.main,
+	            	[31m│[0m [0m  on main.tf line 23, in resource "azurerm_frontdoor" "main":
+	            	[31m│[0m [0m  23: resource "azurerm_frontdoor" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-front-door-classic
+
+FailNow
+
+---
+
+## 31 May 26 00:51 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Front Door (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-pure-tick"
+	            	[31m│[0m [0mFront Door Name: "afd-45cb5e0e4dd30001"): performing CreateOrUpdate: frontdoors.FrontDoorsClient#CreateOrUpdate: Failure sending request: StatusCode=0 -- Original Error: Code="BadRequest" Message="Creation of new Frontdoors are not allowed as the resource has been deprecated."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_frontdoor.main,
+	            	[31m│[0m [0m  on main.tf line 23, in resource "azurerm_frontdoor" "main":
+	            	[31m│[0m [0m  23: resource "azurerm_frontdoor" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-front-door-classic
+
+FailNow
+
+---
+
+## 24 May 26 01:12 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Front Door (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-vital-bonefish"
+	            	[31m│[0m [0mFront Door Name: "afd-1175b359676cc4ec"): performing CreateOrUpdate: frontdoors.FrontDoorsClient#CreateOrUpdate: Failure sending request: StatusCode=0 -- Original Error: Code="BadRequest" Message="Creation of new Frontdoors are not allowed as the resource has been deprecated."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_frontdoor.main,
+	            	[31m│[0m [0m  on main.tf line 23, in resource "azurerm_frontdoor" "main":
+	            	[31m│[0m [0m  23: resource "azurerm_frontdoor" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-front-door-classic
+
+FailNow
+
+---
+
+## 10 May 26 01:04 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Front Door (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-actual-mule"
+	            	[31m│[0m [0mFront Door Name: "afd-ece415d8e3927def"): performing CreateOrUpdate: frontdoors.FrontDoorsClient#CreateOrUpdate: Failure sending request: StatusCode=0 -- Original Error: Code="BadRequest" Message="Creation of new Frontdoors are not allowed as the resource has been deprecated."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_frontdoor.main,
+	            	[31m│[0m [0m  on main.tf line 23, in resource "azurerm_frontdoor" "main":
+	            	[31m│[0m [0m  23: resource "azurerm_frontdoor" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-front-door-classic
+
+FailNow
+
+---
+
 ## 26 Apr 26 01:03 UTC
 
 Success: false

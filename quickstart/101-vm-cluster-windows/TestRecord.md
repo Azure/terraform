@@ -1,3 +1,1248 @@
+## 08 Nov 26 00:16 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 3da57e51-e148-47d9-a3df-11d729b6cb00 Correlation ID: a71f7891-8d2e-4162-a850-cc3429d33f94 Timestamp: 2026-11-08 00:16:17Z","error_codes":[5000229],"timestamp":"2026-11-08 00:16:17Z","trace_id":"3da57e51-e148-47d9-a3df-11d729b6cb00","correlation_id":"a71f7891-8d2e-4162-a850-cc3429d33f94"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 14, in provider "azurerm":
+	            	[31m│[0m [0m  14: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-cluster-windows
+
+FailNow
+
+---
+
+## 01 Nov 26 00:12 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 1677712e-5be3-407b-8cc3-5bab6d385500 Correlation ID: 1c647b73-8e13-4dfc-a132-acfbfaa8207a Timestamp: 2026-11-01 00:12:02Z","error_codes":[5000229],"timestamp":"2026-11-01 00:12:02Z","trace_id":"1677712e-5be3-407b-8cc3-5bab6d385500","correlation_id":"1c647b73-8e13-4dfc-a132-acfbfaa8207a"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 14, in provider "azurerm":
+	            	[31m│[0m [0m  14: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-cluster-windows
+
+FailNow
+
+---
+
+## 25 Oct 26 00:19 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant '4f00b3b6-2940-4f2c-b037-94637c180d30' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 12524669-87a8-4a78-9e4b-51ebdccffa01 Correlation ID: d83ca7e9-061c-487e-96ee-08a790a69cc6 Timestamp: 2026-10-25 00:19:05Z","error_codes":[5000229],"timestamp":"2026-10-25 00:19:05Z","trace_id":"12524669-87a8-4a78-9e4b-51ebdccffa01","correlation_id":"d83ca7e9-061c-487e-96ee-08a790a69cc6"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 14, in provider "azurerm":
+	            	[31m│[0m [0m  14: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-cluster-windows
+
+FailNow
+
+---
+
+## 18 Oct 26 00:45 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-native-bird"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-f0epltlt-2-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[2].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-native-bird"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-f0epltlt-1-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[1].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-native-bird"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-f0epltlt-0-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[0].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-cluster-windows
+
+FailNow
+
+---
+
+## 11 Oct 26 00:48 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-smart-moray"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-s9a5mb2k-1-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[1].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-smart-moray"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-s9a5mb2k-0-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[0].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-smart-moray"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-s9a5mb2k-2-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[2].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-cluster-windows
+
+FailNow
+
+---
+
+## 04 Oct 26 01:06 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-starling"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-l9x06xoa-0-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[0].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-starling"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-l9x06xoa-2-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[2].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-starling"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-l9x06xoa-1-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[1].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-cluster-windows
+
+FailNow
+
+---
+
+## 27 Sep 26 01:51 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-calm-moray"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-wrax9wso-0-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[0].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-calm-moray"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-wrax9wso-2-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[2].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-calm-moray"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-wrax9wso-1-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[1].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-cluster-windows
+
+FailNow
+
+---
+
+## 20 Sep 26 00:51 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-assuring-thrush"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-usqxt7c4-2-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[2].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-assuring-thrush"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-usqxt7c4-0-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[0].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-assuring-thrush"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-usqxt7c4-1-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[1].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-cluster-windows
+
+FailNow
+
+---
+
+## 13 Sep 26 01:45 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-artistic-foxhound"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-zgr6a8ij-1-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[1].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-artistic-foxhound"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-zgr6a8ij-0-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[0].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-artistic-foxhound"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-zgr6a8ij-2-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[2].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-cluster-windows
+
+FailNow
+
+---
+
+## 06 Sep 26 00:33 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-select-dodo"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-aqsiacwk-0-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[0].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-select-dodo"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-aqsiacwk-1-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[1].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-select-dodo"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-aqsiacwk-2-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[2].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-cluster-windows
+
+FailNow
+
+---
+
+## 30 Aug 26 02:18 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-useful-mudfish"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-pyyzg87e-2-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[2].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-useful-mudfish"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-pyyzg87e-1-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[1].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-useful-mudfish"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-pyyzg87e-0-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[0].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-cluster-windows
+
+FailNow
+
+---
+
+## 23 Aug 26 00:43 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-vital-slug"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-c9kxlo9l-0-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[0].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-vital-slug"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-c9kxlo9l-2-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[2].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-vital-slug"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-c9kxlo9l-1-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[1].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-cluster-windows
+
+FailNow
+
+---
+
+## 16 Aug 26 00:34 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-tidy-hound"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-xx3hifde-1-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[1].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-tidy-hound"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-xx3hifde-2-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[2].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-tidy-hound"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-xx3hifde-0-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[0].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-cluster-windows
+
+FailNow
+
+---
+
+## 09 Aug 26 00:57 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-next-wildcat"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-njww1h1l-2-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[2].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-next-wildcat"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-njww1h1l-1-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[1].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-next-wildcat"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-njww1h1l-0-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[0].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-cluster-windows
+
+FailNow
+
+---
+
+## 02 Aug 26 01:44 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-guiding-goose"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-3p7pspei-0-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[0].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-guiding-goose"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-3p7pspei-2-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[2].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-guiding-goose"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-3p7pspei-1-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[1].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-cluster-windows
+
+FailNow
+
+---
+
+## 26 Jul 26 00:38 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-live-buffalo"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-8e9a0bmx-1-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[1].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-live-buffalo"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-8e9a0bmx-0-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[0].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-live-buffalo"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-8e9a0bmx-2-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[2].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-cluster-windows
+
+FailNow
+
+---
+
+## 12 Jul 26 01:34 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-witty-leopard"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-b0j5f6bv-1-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[1].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-witty-leopard"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-b0j5f6bv-0-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[0].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-witty-leopard"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-b0j5f6bv-2-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[2].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-cluster-windows
+
+FailNow
+
+---
+
+## 05 Jul 26 01:05 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-ethical-gobbler"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-tvarh025-0-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[0].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-ethical-gobbler"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-tvarh025-1-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[1].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-ethical-gobbler"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-tvarh025-2-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[2].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-cluster-windows
+
+FailNow
+
+---
+
+## 28 Jun 26 01:09 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-able-polliwog"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-r94p126o-2-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[2].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-able-polliwog"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-r94p126o-0-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[0].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-able-polliwog"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-r94p126o-1-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[1].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-cluster-windows
+
+FailNow
+
+---
+
+## 14 Jun 26 01:05 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-enough-goblin"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-9h4gyt59-0-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[0].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-enough-goblin"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-9h4gyt59-1-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[1].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-enough-goblin"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-9h4gyt59-2-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[2].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-cluster-windows
+
+FailNow
+
+---
+
+## 31 May 26 02:07 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-allowed-rabbit"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-kb3jnuo2-1-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[1].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-allowed-rabbit"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-kb3jnuo2-2-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[2].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-allowed-rabbit"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-kb3jnuo2-0-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[0].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-cluster-windows
+
+FailNow
+
+---
+
+## 24 May 26 01:00 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-ace-mallard"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-eg546oqr-0-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[0].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-ace-mallard"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-eg546oqr-2-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[2].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-ace-mallard"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-eg546oqr-1-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[1].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-cluster-windows
+
+FailNow
+
+---
+
+## 10 May 26 00:29 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-trusted-jaybird"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-hwa4ejir-0-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[0].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-trusted-jaybird"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-hwa4ejir-1-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[1].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Public I P Address (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-trusted-jaybird"
+	            	[31m│[0m [0mPublic I P Addresses Name: "vm-hwa4ejir-2-pip-0"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with module.windows_server[2].azurerm_public_ip.vm[0],
+	            	[31m│[0m [0m  on .terraform/modules/windows_server/main.tf line 422, in resource "azurerm_public_ip" "vm":
+	            	[31m│[0m [0m 422: resource "azurerm_public_ip" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-vm-cluster-windows
+
+FailNow
+
+---
+
 ## 26 Apr 26 00:50 UTC
 
 Success: false

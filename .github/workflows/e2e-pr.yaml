@@ -1,0 +1,57 @@
+name: E2E Test Code Check
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+    paths:
+      - 'test/**'
+
+jobs:
+  fork-notice:
+    if: github.event.pull_request.head.repo.fork
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Report fork limitation
+        shell: bash
+        run: |
+          echo "### E2E tests are disabled for fork pull requests." >> "$GITHUB_STEP_SUMMARY"
+          echo "A maintainer must reproduce test-code changes on a branch in Azure/terraform." >> "$GITHUB_STEP_SUMMARY"
+
+  e2e-test-code:
+    if: github.event.pull_request.head.repo.fork == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    environment:
+      name: test
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Run E2E test suite
+        env:
+          ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+          ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
+          ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
+          PACKER_VERSION: ${{ vars.PACKER_VERSION }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          export ARM_OIDC_REQUEST_TOKEN="${ACTIONS_ID_TOKEN_REQUEST_TOKEN}"
+          export ARM_OIDC_REQUEST_URL="${ACTIONS_ID_TOKEN_REQUEST_URL}"
+          docker run --rm \
+            -v "$(pwd):/src" \
+            -w /src/test \
+            --network=host \
+            -e ARM_CLIENT_ID \
+            -e ARM_OIDC_REQUEST_TOKEN \
+            -e ARM_OIDC_REQUEST_URL \
+            -e ARM_SUBSCRIPTION_ID \
+            -e ARM_TENANT_ID \
+            -e ARM_USE_OIDC=true \
+            mcr.microsoft.com/azterraform:latest \
+            sh -c "pkenv install '${PACKER_VERSION}' && go mod tidy && go test -timeout=360m -v ./e2e"

@@ -1,3 +1,1319 @@
+## 08 Nov 26 00:14 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.10.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mInvalid provider configuration[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0mProvider "registry.terraform.io/hashicorp/azuread" requires explicit
+	            	[31m│[0m [0mconfiguration. Add a provider block to the root module and configure the
+	            	[31m│[0m [0mprovider's required arguments as described in the provider documentation.
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding client: unable to obtain access token: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant '4f00b3b6-2940-4f2c-b037-94637c180d30' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 85e42a62-0066-4fa4-b69a-20ce1a72d900 Correlation ID: 1a54db50-91aa-4b08-9387-658e55200407 Timestamp: 2026-11-08 00:14:59Z","error_codes":[5000229],"timestamp":"2026-11-08 00:14:59Z","trace_id":"85e42a62-0066-4fa4-b69a-20ce1a72d900","correlation_id":"1a54db50-91aa-4b08-9387-658e55200407"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azuread"],
+	            	[31m│[0m [0m  on <empty> line 0:
+	            	[31m│[0m [0m  (source code not available)
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding AzureRM Client: please ensure you have installed Azure CLI version 2.0.79 or newer. Error parsing json result from the Azure CLI: launching Azure CLI: exec: "az": executable file not found in $PATH.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on provider.tf line 13, in provider "azurerm":
+	            	[31m│[0m [0m  13: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop
+
+FailNow
+
+---
+
+## 01 Nov 26 00:20 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.10.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mInvalid provider configuration[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0mProvider "registry.terraform.io/hashicorp/azuread" requires explicit
+	            	[31m│[0m [0mconfiguration. Add a provider block to the root module and configure the
+	            	[31m│[0m [0mprovider's required arguments as described in the provider documentation.
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding client: unable to obtain access token: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: bc5f6c22-4b39-4610-affd-ce8f340f3f00 Correlation ID: 99cf2b49-e367-468f-a6fe-3b414cbca27e Timestamp: 2026-11-01 00:20:47Z","error_codes":[5000229],"timestamp":"2026-11-01 00:20:47Z","trace_id":"bc5f6c22-4b39-4610-affd-ce8f340f3f00","correlation_id":"99cf2b49-e367-468f-a6fe-3b414cbca27e"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azuread"],
+	            	[31m│[0m [0m  on <empty> line 0:
+	            	[31m│[0m [0m  (source code not available)
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding AzureRM Client: please ensure you have installed Azure CLI version 2.0.79 or newer. Error parsing json result from the Azure CLI: launching Azure CLI: exec: "az": executable file not found in $PATH.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on provider.tf line 13, in provider "azurerm":
+	            	[31m│[0m [0m  13: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop
+
+FailNow
+
+---
+
+## 25 Oct 26 00:19 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.10.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mInvalid provider configuration[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0mProvider "registry.terraform.io/hashicorp/azuread" requires explicit
+	            	[31m│[0m [0mconfiguration. Add a provider block to the root module and configure the
+	            	[31m│[0m [0mprovider's required arguments as described in the provider documentation.
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding client: unable to obtain access token: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: cebe9d43-ad81-4989-a943-951674836900 Correlation ID: db670167-e56a-4971-9986-1aabc4bcbbbe Timestamp: 2026-10-25 00:19:32Z","error_codes":[5000229],"timestamp":"2026-10-25 00:19:32Z","trace_id":"cebe9d43-ad81-4989-a943-951674836900","correlation_id":"db670167-e56a-4971-9986-1aabc4bcbbbe"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azuread"],
+	            	[31m│[0m [0m  on <empty> line 0:
+	            	[31m│[0m [0m  (source code not available)
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding AzureRM Client: please ensure you have installed Azure CLI version 2.0.79 or newer. Error parsing json result from the Azure CLI: launching Azure CLI: exec: "az": executable file not found in $PATH.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on provider.tf line 13, in provider "azurerm":
+	            	[31m│[0m [0m  13: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop
+
+FailNow
+
+---
+
+## 18 Oct 26 01:19 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.10.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding AzureRM Client: please ensure you have installed Azure CLI version 2.0.79 or newer. Error parsing json result from the Azure CLI: launching Azure CLI: exec: "az": executable file not found in $PATH.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on provider.tf line 13, in provider "azurerm":
+	            	[31m│[0m [0m  13: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser01@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser01@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser02@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser02@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop
+
+FailNow
+
+---
+
+## 11 Oct 26 01:27 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.10.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding AzureRM Client: please ensure you have installed Azure CLI version 2.0.79 or newer. Error parsing json result from the Azure CLI: launching Azure CLI: exec: "az": executable file not found in $PATH.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on provider.tf line 13, in provider "azurerm":
+	            	[31m│[0m [0m  13: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser02@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser02@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser01@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser01@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop
+
+FailNow
+
+---
+
+## 04 Oct 26 02:03 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.10.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding AzureRM Client: please ensure you have installed Azure CLI version 2.0.79 or newer. Error parsing json result from the Azure CLI: launching Azure CLI: exec: "az": executable file not found in $PATH.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on provider.tf line 13, in provider "azurerm":
+	            	[31m│[0m [0m  13: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser02@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser02@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser01@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser01@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop
+
+FailNow
+
+---
+
+## 27 Sep 26 00:58 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.10.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding AzureRM Client: please ensure you have installed Azure CLI version 2.0.79 or newer. Error parsing json result from the Azure CLI: launching Azure CLI: exec: "az": executable file not found in $PATH.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on provider.tf line 13, in provider "azurerm":
+	            	[31m│[0m [0m  13: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser02@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser02@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser01@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser01@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop
+
+FailNow
+
+---
+
+## 20 Sep 26 01:24 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.9.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding AzureRM Client: please ensure you have installed Azure CLI version 2.0.79 or newer. Error parsing json result from the Azure CLI: launching Azure CLI: exec: "az": executable file not found in $PATH.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on provider.tf line 13, in provider "azurerm":
+	            	[31m│[0m [0m  13: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser02@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser02@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser01@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser01@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop
+
+FailNow
+
+---
+
+## 13 Sep 26 02:18 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.9.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding AzureRM Client: please ensure you have installed Azure CLI version 2.0.79 or newer. Error parsing json result from the Azure CLI: launching Azure CLI: exec: "az": executable file not found in $PATH.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on provider.tf line 13, in provider "azurerm":
+	            	[31m│[0m [0m  13: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser01@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser01@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser02@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser02@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop
+
+FailNow
+
+---
+
+## 06 Sep 26 01:14 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.9.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding AzureRM Client: please ensure you have installed Azure CLI version 2.0.79 or newer. Error parsing json result from the Azure CLI: launching Azure CLI: exec: "az": executable file not found in $PATH.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on provider.tf line 13, in provider "azurerm":
+	            	[31m│[0m [0m  13: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser02@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser02@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser01@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser01@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop
+
+FailNow
+
+---
+
+## 30 Aug 26 01:02 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.9.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding AzureRM Client: please ensure you have installed Azure CLI version 2.0.79 or newer. Error parsing json result from the Azure CLI: launching Azure CLI: exec: "az": executable file not found in $PATH.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on provider.tf line 13, in provider "azurerm":
+	            	[31m│[0m [0m  13: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser02@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser02@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser01@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser01@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop
+
+FailNow
+
+---
+
+## 23 Aug 26 00:42 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.9.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding AzureRM Client: please ensure you have installed Azure CLI version 2.0.79 or newer. Error parsing json result from the Azure CLI: launching Azure CLI: exec: "az": executable file not found in $PATH.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on provider.tf line 13, in provider "azurerm":
+	            	[31m│[0m [0m  13: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser02@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser02@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser01@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser01@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop
+
+FailNow
+
+---
+
+## 16 Aug 26 01:11 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.9.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding AzureRM Client: please ensure you have installed Azure CLI version 2.0.79 or newer. Error parsing json result from the Azure CLI: launching Azure CLI: exec: "az": executable file not found in $PATH.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on provider.tf line 13, in provider "azurerm":
+	            	[31m│[0m [0m  13: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser02@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser02@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser01@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser01@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop
+
+FailNow
+
+---
+
+## 09 Aug 26 01:32 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.9.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding AzureRM Client: please ensure you have installed Azure CLI version 2.0.79 or newer. Error parsing json result from the Azure CLI: launching Azure CLI: exec: "az": executable file not found in $PATH.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on provider.tf line 13, in provider "azurerm":
+	            	[31m│[0m [0m  13: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser02@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser02@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser01@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser01@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop
+
+FailNow
+
+---
+
+## 02 Aug 26 00:50 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.9.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding AzureRM Client: please ensure you have installed Azure CLI version 2.0.79 or newer. Error parsing json result from the Azure CLI: launching Azure CLI: exec: "az": executable file not found in $PATH.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on provider.tf line 13, in provider "azurerm":
+	            	[31m│[0m [0m  13: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser01@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser01@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser02@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser02@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop
+
+FailNow
+
+---
+
+## 26 Jul 26 01:22 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.9.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding AzureRM Client: please ensure you have installed Azure CLI version 2.0.79 or newer. Error parsing json result from the Azure CLI: launching Azure CLI: exec: "az": executable file not found in $PATH.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on provider.tf line 13, in provider "azurerm":
+	            	[31m│[0m [0m  13: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser02@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser02@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser01@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser01@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop
+
+FailNow
+
+---
+
+## 12 Jul 26 00:56 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.9.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding AzureRM Client: please ensure you have installed Azure CLI version 2.0.79 or newer. Error parsing json result from the Azure CLI: launching Azure CLI: exec: "az": executable file not found in $PATH.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on provider.tf line 13, in provider "azurerm":
+	            	[31m│[0m [0m  13: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser02@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser02@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser01@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser01@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop
+
+FailNow
+
+---
+
+## 05 Jul 26 01:21 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.9.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding AzureRM Client: please ensure you have installed Azure CLI version 2.0.79 or newer. Error parsing json result from the Azure CLI: launching Azure CLI: exec: "az": executable file not found in $PATH.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on provider.tf line 13, in provider "azurerm":
+	            	[31m│[0m [0m  13: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser01@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser01@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser02@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser02@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop
+
+FailNow
+
+---
+
+## 28 Jun 26 02:14 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.9.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding AzureRM Client: please ensure you have installed Azure CLI version 2.0.79 or newer. Error parsing json result from the Azure CLI: launching Azure CLI: exec: "az": executable file not found in $PATH.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on provider.tf line 13, in provider "azurerm":
+	            	[31m│[0m [0m  13: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser02@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser02@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser01@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser01@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop
+
+FailNow
+
+---
+
+## 14 Jun 26 02:18 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.8.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding AzureRM Client: please ensure you have installed Azure CLI version 2.0.79 or newer. Error parsing json result from the Azure CLI: launching Azure CLI: exec: "az": executable file not found in $PATH.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on provider.tf line 13, in provider "azurerm":
+	            	[31m│[0m [0m  13: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser02@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser02@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser01@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser01@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop
+
+FailNow
+
+---
+
+## 31 May 26 01:27 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.8.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding AzureRM Client: please ensure you have installed Azure CLI version 2.0.79 or newer. Error parsing json result from the Azure CLI: launching Azure CLI: exec: "az": executable file not found in $PATH.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on provider.tf line 13, in provider "azurerm":
+	            	[31m│[0m [0m  13: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser01@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser01@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser02@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser02@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop
+
+FailNow
+
+---
+
+## 24 May 26 01:39 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.8.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding AzureRM Client: please ensure you have installed Azure CLI version 2.0.79 or newer. Error parsing json result from the Azure CLI: launching Azure CLI: exec: "az": executable file not found in $PATH.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on provider.tf line 13, in provider "azurerm":
+	            	[31m│[0m [0m  13: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser02@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser02@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser01@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser01@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop
+
+FailNow
+
+---
+
+## 10 May 26 01:29 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azuread v3.8.0
++ provider registry.terraform.io/hashicorp/azurerm v2.99.0
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding AzureRM Client: please ensure you have installed Azure CLI version 2.0.79 or newer. Error parsing json result from the Azure CLI: launching Azure CLI: exec: "az": executable file not found in $PATH.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on provider.tf line 13, in provider "azurerm":
+	            	[31m│[0m [0m  13: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser02@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser02@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFinding user with UPN: "avduser01@contoso.net"[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with data.azuread_user.aad_user["avduser01@contoso.net"],
+	            	[31m│[0m [0m  on rbac.tf line 1, in data "azuread_user" "aad_user":
+	            	[31m│[0m [0m   1: data "azuread_user" "aad_user" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0munexpected status 403 (403 Forbidden) with error:
+	            	[31m│[0m [0mAuthorization_RequestDenied: Insufficient privileges to complete the
+	            	[31m│[0m [0moperation.
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-virtual-desktop
+
+FailNow
+
+---
+
 ## 26 Apr 26 01:29 UTC
 
 Success: false

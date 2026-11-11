@@ -1,3 +1,6144 @@
+## 08 Nov 26 00:10 UTC
+
+Success: false
+
+### Versions
+
+
+
+### Error
+
+Initializing the backend...
+
+Error: Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+
+
+Warning: Quoted references are deprecated
+
+  on aks.tf line 6, in resource "azurerm_kubernetes_cluster" "default":
+   6:   depends_on          = ["azurerm_role_assignment.default"]
+
+In this context, references are expected literally rather than in quotes.
+Terraform 0.11 and earlier required quotes, but quoted references are now
+deprecated and will be removed in a future version of Terraform. Remove the
+quotes surrounding this reference to silence this warning.
+
+(and 5 more similar warnings elsewhere)
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+---
+
+## 01 Nov 26 00:11 UTC
+
+Success: false
+
+### Versions
+
+
+
+### Error
+
+Initializing the backend...
+
+Warning: Quoted references are deprecated
+
+  on aks.tf line 6, in resource "azurerm_kubernetes_cluster" "default":
+   6:   depends_on          = ["azurerm_role_assignment.default"]
+
+In this context, references are expected literally rather than in quotes.
+Terraform 0.11 and earlier required quotes, but quoted references are now
+deprecated and will be removed in a future version of Terraform. Remove the
+quotes surrounding this reference to silence this warning.
+
+(and 5 more similar warnings elsewhere)
+
+Error: Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+---
+
+## 25 Oct 26 00:14 UTC
+
+Success: false
+
+### Versions
+
+
+
+### Error
+
+Initializing the backend...
+
+Warning: Quoted references are deprecated
+
+  on aks.tf line 6, in resource "azurerm_kubernetes_cluster" "default":
+   6:   depends_on          = ["azurerm_role_assignment.default"]
+
+In this context, references are expected literally rather than in quotes.
+Terraform 0.11 and earlier required quotes, but quoted references are now
+deprecated and will be removed in a future version of Terraform. Remove the
+quotes surrounding this reference to silence this warning.
+
+(and 5 more similar warnings elsewhere)
+
+Error: Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+---
+
+## 18 Oct 26 00:14 UTC
+
+Success: false
+
+### Versions
+
+
+
+### Error
+
+Initializing the backend...
+
+Warning: Quoted references are deprecated
+
+
+  on aks.tf line 6, in resource "azurerm_kubernetes_cluster" "default":
+Error: Terraform encountered problems during initialisation, including problems
+   6:   depends_on          = ["azurerm_role_assignment.default"]
+
+with the configuration, described below.
+In this context, references are expected literally rather than in quotes.
+
+Terraform 0.11 and earlier required quotes, but quoted references are now
+The Terraform configuration must be valid before initialization so that
+deprecated and will be removed in a future version of Terraform. Remove the
+Terraform can determine which modules and providers need to be installed.
+
+quotes surrounding this reference to silence this warning.
+
+(and 5 more similar warnings elsewhere)
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+---
+
+## 11 Oct 26 01:24 UTC
+
+Success: false
+
+### Versions
+
+
+
+### Error
+
+Initializing the backend...
+
+
+Error: Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Warning: Quoted references are deprecated
+Terraform can determine which modules and providers need to be installed.
+
+
+  on aks.tf line 6, in resource "azurerm_kubernetes_cluster" "default":
+   6:   depends_on          = ["azurerm_role_assignment.default"]
+
+In this context, references are expected literally rather than in quotes.
+Terraform 0.11 and earlier required quotes, but quoted references are now
+deprecated and will be removed in a future version of Terraform. Remove the
+quotes surrounding this reference to silence this warning.
+
+(and 5 more similar warnings elsewhere)
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+---
+
+## 04 Oct 26 01:01 UTC
+
+Success: false
+
+### Versions
+
+
+
+### Error
+
+Initializing the backend...
+
+Error: Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+
+
+Warning: Quoted references are deprecated
+
+  on aks.tf line 6, in resource "azurerm_kubernetes_cluster" "default":
+   6:   depends_on          = ["azurerm_role_assignment.default"]
+
+In this context, references are expected literally rather than in quotes.
+Terraform 0.11 and earlier required quotes, but quoted references are now
+deprecated and will be removed in a future version of Terraform. Remove the
+quotes surrounding this reference to silence this warning.
+
+(and 5 more similar warnings elsewhere)
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+---
+
+## 27 Sep 26 00:25 UTC
+
+Success: false
+
+### Versions
+
+
+
+### Error
+
+Initializing the backend...
+
+Warning: Quoted references are deprecated
+
+  on aks.tf line 6, in resource "azurerm_kubernetes_cluster" "default":
+   6:   depends_on          = ["azurerm_role_assignment.default"]
+
+In this context, references are expected literally rather than in quotes.
+Terraform 0.11 and earlier required quotes, but quoted references are now
+deprecated and will be removed in a future version of Terraform. Remove the
+quotes surrounding this reference to silence this warning.
+
+(and 5 more similar warnings elsewhere)
+
+Error: Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+---
+
+## 20 Sep 26 00:16 UTC
+
+Success: false
+
+### Versions
+
+
+
+### Error
+
+Initializing the backend...
+
+Warning: Quoted references are deprecated
+
+  on aks.tf line 6, in resource "azurerm_kubernetes_cluster" "default":
+   6:   depends_on          = ["azurerm_role_assignment.default"]
+
+In this context, references are expected literally rather than in quotes.
+Terraform 0.11 and earlier required quotes, but quoted references are now
+deprecated and will be removed in a future version of Terraform. Remove the
+quotes surrounding this reference to silence this warning.
+
+(and 5 more similar warnings elsewhere)
+
+Error: Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+---
+
+## 13 Sep 26 00:17 UTC
+
+Success: false
+
+### Versions
+
+
+
+### Error
+
+Initializing the backend...
+
+Warning: Quoted references are deprecated
+
+  on aks.tf line 6, in resource "azurerm_kubernetes_cluster" "default":
+   6:   depends_on          = ["azurerm_role_assignment.default"]
+
+In this context, references are expected literally rather than in quotes.
+Terraform 0.11 and earlier required quotes, but quoted references are now
+deprecated and will be removed in a future version of Terraform. Remove the
+quotes surrounding this reference to silence this warning.
+
+(and 5 more similar warnings elsewhere)
+
+Error: Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+---
+
+## 06 Sep 26 00:19 UTC
+
+Success: false
+
+### Versions
+
+
+
+### Error
+
+Initializing the backend...
+
+Error: Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+
+
+Warning: Quoted references are deprecated
+
+  on aks.tf line 6, in resource "azurerm_kubernetes_cluster" "default":
+   6:   depends_on          = ["azurerm_role_assignment.default"]
+
+In this context, references are expected literally rather than in quotes.
+Terraform 0.11 and earlier required quotes, but quoted references are now
+deprecated and will be removed in a future version of Terraform. Remove the
+quotes surrounding this reference to silence this warning.
+
+(and 5 more similar warnings elsewhere)
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+---
+
+## 30 Aug 26 00:17 UTC
+
+Success: false
+
+### Versions
+
+
+
+### Error
+
+Initializing the backend...
+
+
+Error: Terraform encountered problems during initialisation, including problems
+Warning: Quoted references are deprecated
+
+with the configuration, described below.
+
+  on aks.tf line 6, in resource "azurerm_kubernetes_cluster" "default":
+   6:   depends_on          = ["azurerm_role_assignment.default"]
+
+The Terraform configuration must be valid before initialization so that
+In this context, references are expected literally rather than in quotes.
+Terraform can determine which modules and providers need to be installed.
+
+Terraform 0.11 and earlier required quotes, but quoted references are now
+
+deprecated and will be removed in a future version of Terraform. Remove the
+quotes surrounding this reference to silence this warning.
+
+Error: Invalid quoted type constraints
+(and 5 more similar warnings elsewhere)
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+---
+
+## 23 Aug 26 00:10 UTC
+
+Success: false
+
+### Versions
+
+
+
+### Error
+
+Initializing the backend...
+
+Warning: Quoted references are deprecated
+
+  on aks.tf line 6, in resource "azurerm_kubernetes_cluster" "default":
+   6:   depends_on          = ["azurerm_role_assignment.default"]
+
+In this context, references are expected literally rather than in quotes.
+Terraform 0.11 and earlier required quotes, but quoted references are now
+deprecated and will be removed in a future version of Terraform. Remove the
+quotes surrounding this reference to silence this warning.
+
+(and 5 more similar warnings elsewhere)
+
+Error: Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+---
+
+## 16 Aug 26 00:10 UTC
+
+Success: false
+
+### Versions
+
+
+
+### Error
+
+Initializing the backend...
+
+Warning: Quoted references are deprecated
+
+  on aks.tf line 6, in resource "azurerm_kubernetes_cluster" "default":
+   6:   depends_on          = ["azurerm_role_assignment.default"]
+
+In this context, references are expected literally rather than in quotes.
+Terraform 0.11 and earlier required quotes, but quoted references are now
+deprecated and will be removed in a future version of Terraform. Remove the
+quotes surrounding this reference to silence this warning.
+
+(and 5 more similar warnings elsewhere)
+
+Error: Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+---
+
+## 09 Aug 26 01:03 UTC
+
+Success: false
+
+### Versions
+
+
+
+### Error
+
+Initializing the backend...
+
+Warning: Quoted references are deprecated
+
+  on aks.tf line 6, in resource "azurerm_kubernetes_cluster" "default":
+   6:   depends_on          = ["azurerm_role_assignment.default"]
+
+In this context, references are expected literally rather than in quotes.
+Terraform 0.11 and earlier required quotes, but quoted references are now
+deprecated and will be removed in a future version of Terraform. Remove the
+quotes surrounding this reference to silence this warning.
+
+(and 5 more similar warnings elsewhere)
+
+Error: Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+---
+
+## 02 Aug 26 00:52 UTC
+
+Success: false
+
+### Versions
+
+
+
+### Error
+
+Initializing the backend...
+
+Error: Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+
+
+Warning: Quoted references are deprecated
+
+  on aks.tf line 6, in resource "azurerm_kubernetes_cluster" "default":
+   6:   depends_on          = ["azurerm_role_assignment.default"]
+
+In this context, references are expected literally rather than in quotes.
+Terraform 0.11 and earlier required quotes, but quoted references are now
+deprecated and will be removed in a future version of Terraform. Remove the
+quotes surrounding this reference to silence this warning.
+
+(and 5 more similar warnings elsewhere)
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+---
+
+## 26 Jul 26 00:48 UTC
+
+Success: false
+
+### Versions
+
+
+
+### Error
+
+Initializing the backend...
+
+
+Error: Terraform encountered problems during initialisation, including problems
+Warning: Quoted references are deprecated
+
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+  on aks.tf line 6, in resource "azurerm_kubernetes_cluster" "default":
+Terraform can determine which modules and providers need to be installed.
+   6:   depends_on          = ["azurerm_role_assignment.default"]
+
+
+In this context, references are expected literally rather than in quotes.
+Terraform 0.11 and earlier required quotes, but quoted references are now
+deprecated and will be removed in a future version of Terraform. Remove the
+quotes surrounding this reference to silence this warning.
+
+(and 5 more similar warnings elsewhere)
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+---
+
+## 12 Jul 26 00:26 UTC
+
+Success: false
+
+### Versions
+
+
+
+### Error
+
+Initializing the backend...
+
+Warning: Quoted references are deprecated
+
+  on aks.tf line 6, in resource "azurerm_kubernetes_cluster" "default":
+   6:   depends_on          = ["azurerm_role_assignment.default"]
+
+In this context, references are expected literally rather than in quotes.
+Terraform 0.11 and earlier required quotes, but quoted references are now
+deprecated and will be removed in a future version of Terraform. Remove the
+quotes surrounding this reference to silence this warning.
+
+(and 5 more similar warnings elsewhere)
+
+Error: Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+---
+
+## 05 Jul 26 00:31 UTC
+
+Success: false
+
+### Versions
+
+
+
+### Error
+
+Initializing the backend...
+
+Error: Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Warning: Quoted references are deprecated
+
+  on aks.tf line 6, in resource "azurerm_kubernetes_cluster" "default":
+   6:   depends_on          = ["azurerm_role_assignment.default"]
+
+In this context, references are expected literally rather than in quotes.
+Terraform 0.11 and earlier required quotes, but quoted references are now
+deprecated and will be removed in a future version of Terraform. Remove the
+quotes surrounding this reference to silence this warning.
+
+(and 5 more similar warnings elsewhere)
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+---
+
+## 28 Jun 26 01:13 UTC
+
+Success: false
+
+### Versions
+
+
+
+### Error
+
+Initializing the backend...
+
+Error: Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+
+
+Warning: Quoted references are deprecated
+
+  on aks.tf line 6, in resource "azurerm_kubernetes_cluster" "default":
+   6:   depends_on          = ["azurerm_role_assignment.default"]
+
+In this context, references are expected literally rather than in quotes.
+Terraform 0.11 and earlier required quotes, but quoted references are now
+deprecated and will be removed in a future version of Terraform. Remove the
+quotes surrounding this reference to silence this warning.
+
+(and 5 more similar warnings elsewhere)
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+---
+
+## 14 Jun 26 00:37 UTC
+
+Success: false
+
+### Versions
+
+
+
+### Error
+
+Initializing the backend...
+
+Warning: Quoted references are deprecated
+
+  on aks.tf line 6, in resource "azurerm_kubernetes_cluster" "default":
+   6:   depends_on          = ["azurerm_role_assignment.default"]
+
+In this context, references are expected literally rather than in quotes.
+Terraform 0.11 and earlier required quotes, but quoted references are now
+deprecated and will be removed in a future version of Terraform. Remove the
+quotes surrounding this reference to silence this warning.
+
+(and 5 more similar warnings elsewhere)
+
+Error: Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+---
+
+## 31 May 26 01:31 UTC
+
+Success: false
+
+### Versions
+
+
+
+### Error
+
+Initializing the backend...
+
+Error: Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+
+
+Warning: Quoted references are deprecated
+
+  on aks.tf line 6, in resource "azurerm_kubernetes_cluster" "default":
+   6:   depends_on          = ["azurerm_role_assignment.default"]
+
+In this context, references are expected literally rather than in quotes.
+Terraform 0.11 and earlier required quotes, but quoted references are now
+deprecated and will be removed in a future version of Terraform. Remove the
+quotes surrounding this reference to silence this warning.
+
+(and 5 more similar warnings elsewhere)
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+---
+
+## 24 May 26 00:32 UTC
+
+Success: false
+
+### Versions
+
+
+
+### Error
+
+Initializing the backend...
+
+Error: Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+
+
+Warning: Quoted references are deprecated
+
+  on aks.tf line 6, in resource "azurerm_kubernetes_cluster" "default":
+   6:   depends_on          = ["azurerm_role_assignment.default"]
+
+In this context, references are expected literally rather than in quotes.
+Terraform 0.11 and earlier required quotes, but quoted references are now
+deprecated and will be removed in a future version of Terraform. Remove the
+quotes surrounding this reference to silence this warning.
+
+(and 5 more similar warnings elsewhere)
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+---
+
+## 10 May 26 00:30 UTC
+
+Success: false
+
+### Versions
+
+
+
+### Error
+
+Initializing the backend...
+
+
+Error: Terraform encountered problems during initialisation, including problems
+Warning: Quoted references are deprecated
+
+  on aks.tf line 6, in resource "azurerm_kubernetes_cluster" "default":
+   6:   depends_on          = ["azurerm_role_assignment.default"]
+
+with the configuration, described below.
+In this context, references are expected literally rather than in quotes.
+
+Terraform 0.11 and earlier required quotes, but quoted references are now
+deprecated and will be removed in a future version of Terraform. Remove the
+quotes surrounding this reference to silence this warning.
+
+(and 5 more similar warnings elsewhere)
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 3, in variable "name":
+   3:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 9, in variable "environment":
+   9:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 17, in variable "location":
+  17:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 25, in variable "node_count":
+  25:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 31, in variable "node_type":
+  31:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 37, in variable "node_os":
+  37:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 43, in variable "dns_prefix":
+  43:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 51, in variable "vnet_address_space":
+  51:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 57, in variable "vnet_aks_subnet_space":
+  57:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 63, in variable "vnet_ingress_subnet_space":
+  63:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 69, in variable "vnet_gateway_subnet_space":
+  69:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 75, in variable "ingress_load_balancer_ip":
+  75:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+Error: Invalid quoted type constraints
+
+  on variables.tf line 82, in variable "gateway_instance_count":
+  82:   type        = "string"
+
+Terraform 0.11 and earlier required type constraints to be given in quotes,
+but that form is now deprecated and will be removed in a future version of
+Terraform. Remove the quotes around "string".
+
+---
+
 ## 26 Apr 26 00:23 UTC
 
 Success: false

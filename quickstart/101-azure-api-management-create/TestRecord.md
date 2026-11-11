@@ -1,3 +1,448 @@
+## 08 Nov 26 00:18 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 7937816b-5e39-453c-9cb3-59ec15263001 Correlation ID: 245446c7-1d8f-4832-ae4e-5f912bf11cc2 Timestamp: 2026-11-08 00:18:30Z","error_codes":[5000229],"timestamp":"2026-11-08 00:18:30Z","trace_id":"7937816b-5e39-453c-9cb3-59ec15263001","correlation_id":"245446c7-1d8f-4832-ae4e-5f912bf11cc2"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 14, in provider "azurerm":
+	            	[31m│[0m [0m  14: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-api-management-create
+
+FailNow
+
+---
+
+## 01 Nov 26 00:21 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 8e9ad868-3acd-4748-88e4-0023eccd5500 Correlation ID: e84e6a20-4508-4dfb-b11a-2293f2e7c497 Timestamp: 2026-11-01 00:21:49Z","error_codes":[5000229],"timestamp":"2026-11-01 00:21:49Z","trace_id":"8e9ad868-3acd-4748-88e4-0023eccd5500","correlation_id":"e84e6a20-4508-4dfb-b11a-2293f2e7c497"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 14, in provider "azurerm":
+	            	[31m│[0m [0m  14: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-api-management-create
+
+FailNow
+
+---
+
+## 25 Oct 26 00:22 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 8af14eb8-36a7-46b6-87a6-55299f720b02 Correlation ID: 5e80101f-5ddd-439b-83e4-51bee0a2f6ca Timestamp: 2026-10-25 00:22:23Z","error_codes":[5000229],"timestamp":"2026-10-25 00:22:23Z","trace_id":"8af14eb8-36a7-46b6-87a6-55299f720b02","correlation_id":"5e80101f-5ddd-439b-83e4-51bee0a2f6ca"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 14, in provider "azurerm":
+	            	[31m│[0m [0m  14: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-api-management-create
+
+FailNow
+
+---
+
+## 18 Oct 26 01:03 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+No error was found.
+
+---
+
+## 11 Oct 26 01:38 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+No error was found.
+
+---
+
+## 04 Oct 26 02:21 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+No error was found.
+
+---
+
+## 27 Sep 26 01:18 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+No error was found.
+
+---
+
+## 20 Sep 26 01:52 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+No error was found.
+
+---
+
+## 13 Sep 26 00:49 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+No error was found.
+
+---
+
+## 06 Sep 26 01:30 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 30 Aug 26 01:17 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 23 Aug 26 01:04 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 16 Aug 26 01:27 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 09 Aug 26 00:20 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 02 Aug 26 01:59 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 26 Jul 26 01:38 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 12 Jul 26 01:29 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.80.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 05 Jul 26 01:47 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.80.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 28 Jun 26 01:09 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.79.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 14 Jun 26 01:25 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.77.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 31 May 26 01:33 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.74.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 24 May 26 01:54 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.74.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 10 May 26 02:27 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v4.72.0
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+No error was found.
+
+---
+
 ## 26 Apr 26 01:44 UTC
 
 Success: true

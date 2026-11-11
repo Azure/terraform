@@ -1,3 +1,986 @@
+## 08 Nov 26 00:10 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
++ provider registry.terraform.io/hashicorp/time v0.14.2
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: a82929b8-d00f-4d44-919f-d49666bad100 Correlation ID: 47126066-ceb5-400e-9746-feabf18c4e19 Timestamp: 2026-11-08 00:10:40Z","error_codes":[5000229],"timestamp":"2026-11-08 00:10:40Z","trace_id":"a82929b8-d00f-4d44-919f-d49666bad100","correlation_id":"47126066-ceb5-400e-9746-feabf18c4e19"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on main.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/301-machine-learning-hub-spoke-secure
+
+FailNow
+
+---
+
+## 01 Nov 26 00:11 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
++ provider registry.terraform.io/hashicorp/time v0.14.2
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: be2ecb6f-0509-42ee-ab0c-fdfc95f11800 Correlation ID: c1dc3769-dbf1-42a6-8d55-14a140371a6e Timestamp: 2026-11-01 00:11:15Z","error_codes":[5000229],"timestamp":"2026-11-01 00:11:15Z","trace_id":"be2ecb6f-0509-42ee-ab0c-fdfc95f11800","correlation_id":"c1dc3769-dbf1-42a6-8d55-14a140371a6e"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on main.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/301-machine-learning-hub-spoke-secure
+
+FailNow
+
+---
+
+## 25 Oct 26 00:14 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
++ provider registry.terraform.io/hashicorp/time v0.14.2
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 30be7a6f-7cbe-4011-819f-7dd7054f0c02 Correlation ID: 3f5382ee-be39-4344-9f80-dbe92efda3d7 Timestamp: 2026-10-25 00:14:17Z","error_codes":[5000229],"timestamp":"2026-10-25 00:14:17Z","trace_id":"30be7a6f-7cbe-4011-819f-7dd7054f0c02","correlation_id":"3f5382ee-be39-4344-9f80-dbe92efda3d7"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on main.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/301-machine-learning-hub-spoke-secure
+
+FailNow
+
+---
+
+## 18 Oct 26 00:38 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
++ provider registry.terraform.io/hashicorp/time v0.14.2
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Rule Collection Group (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-hub-301mlhss-dev-4hpg"
+	            	[31m│[0m [0mFirewall Policy Name: "afwp-base-01"
+	            	[31m│[0m [0mRule Collection Group Name: "afwp-base-rule-collection-group"): polling after CreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "FirewallPolicyUpdateFailed"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "The resourceId /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-hub-301mlhss-dev-4hpg/providers/Microsoft.Network/ipGroups/dsvm-subnet-ipgroup is an invalid resourceId of an IpGroup.\nThe resourceId /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-hub-301mlhss-dev-4hpg/providers/Microsoft.Network/ipGroups/hub-ipgroup is an invalid resourceId of an IpGroup.\nThe resourceId /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-hub-301mlhss-dev-4hpg/providers/Microsoft.Network/ipGroups/mlw-spoke-ipgroup is an invalid resourceId of an IpGroup.\n"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m  "error": {
+	            	[31m│[0m [0m    "code": "FirewallPolicyUpdateFailed",
+	            	[31m│[0m [0m    "message": "The resourceId /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-hub-301mlhss-dev-4hpg/providers/Microsoft.Network/ipGroups/dsvm-subnet-ipgroup is an invalid resourceId of an IpGroup.\nThe resourceId /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-hub-301mlhss-dev-4hpg/providers/Microsoft.Network/ipGroups/hub-ipgroup is an invalid resourceId of an IpGroup.\nThe resourceId /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-hub-301mlhss-dev-4hpg/providers/Microsoft.Network/ipGroups/mlw-spoke-ipgroup is an invalid resourceId of an IpGroup.\n"
+	            	[31m│[0m [0m  },
+	            	[31m│[0m [0m  "status": "Failed"
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_firewall_policy_rule_collection_group.azure_firewall_rules_collection,
+	            	[31m│[0m [0m  on azure-firewall.tf line 117, in resource "azurerm_firewall_policy_rule_collection_group" "azure_firewall_rules_collection":
+	            	[31m│[0m [0m 117: resource "azurerm_firewall_policy_rule_collection_group" "azure_firewall_rules_collection" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-301mlhss-dev-4hpg"
+	            	[31m│[0m [0mVirtual Machine Name: "vmdsvm01"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: OperationNotAllowed: Operation could not be completed as it results in exceeding approved Total Regional Cores quota. Additional details - Deployment Model: Resource Manager, Location: eastus, Current Limit: 10, Current Usage: 8, Additional Required: 4, (Minimum) New Limit Required: 12. Setup Alerts when Quota reaches threshold. Learn more at https://aka.ms/quotamonitoringalerting . Submit a request for Quota increase at https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/%7B%22subscriptionId%22:%22e4b62b3b-7634-4972-8bbe-5d7197159f26%22,%22command%22:%22openQuotaApprovalBlade%22,%22quotas%22:[%7B%22location%22:%22eastus%22,%22providerId%22:%22Microsoft.Compute%22,%22resourceName%22:%22cores%22,%22quotaRequest%22:%7B%22properties%22:%7B%22limit%22:12,%22unit%22:%22Count%22,%22name%22:%7B%22value%22:%22cores%22%7D%7D%7D%7D]%7D by specifying parameters listed in the ‘Details’ section for deployment to succeed. Please read more about quota limits at https://docs.microsoft.com/en-us/azure/azure-supportability/regional-quota-requests[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.dsvm,
+	            	[31m│[0m [0m  on dsvm.tf line 22, in resource "azurerm_windows_virtual_machine" "dsvm":
+	            	[31m│[0m [0m  22: resource "azurerm_windows_virtual_machine" "dsvm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/301-machine-learning-hub-spoke-secure
+
+FailNow
+
+---
+
+## 11 Oct 26 01:37 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
++ provider registry.terraform.io/hashicorp/time v0.14.2
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Rule Collection Group (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-hub-301mlhss-dev-dket"
+	            	[31m│[0m [0mFirewall Policy Name: "afwp-base-01"
+	            	[31m│[0m [0mRule Collection Group Name: "afwp-base-rule-collection-group"): polling after CreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "FirewallPolicyUpdateFailed"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "The resourceId /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-hub-301mlhss-dev-dket/providers/Microsoft.Network/ipGroups/mlw-spoke-ipgroup is an invalid resourceId of an IpGroup.\nThe resourceId /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-hub-301mlhss-dev-dket/providers/Microsoft.Network/ipGroups/dsvm-subnet-ipgroup is an invalid resourceId of an IpGroup.\nThe resourceId /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-hub-301mlhss-dev-dket/providers/Microsoft.Network/ipGroups/hub-ipgroup is an invalid resourceId of an IpGroup.\n"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m  "error": {
+	            	[31m│[0m [0m    "code": "FirewallPolicyUpdateFailed",
+	            	[31m│[0m [0m    "message": "The resourceId /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-hub-301mlhss-dev-dket/providers/Microsoft.Network/ipGroups/mlw-spoke-ipgroup is an invalid resourceId of an IpGroup.\nThe resourceId /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-hub-301mlhss-dev-dket/providers/Microsoft.Network/ipGroups/dsvm-subnet-ipgroup is an invalid resourceId of an IpGroup.\nThe resourceId /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-hub-301mlhss-dev-dket/providers/Microsoft.Network/ipGroups/hub-ipgroup is an invalid resourceId of an IpGroup.\n"
+	            	[31m│[0m [0m  },
+	            	[31m│[0m [0m  "status": "Failed"
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_firewall_policy_rule_collection_group.azure_firewall_rules_collection,
+	            	[31m│[0m [0m  on azure-firewall.tf line 117, in resource "azurerm_firewall_policy_rule_collection_group" "azure_firewall_rules_collection":
+	            	[31m│[0m [0m 117: resource "azurerm_firewall_policy_rule_collection_group" "azure_firewall_rules_collection" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-301mlhss-dev-dket"
+	            	[31m│[0m [0mVirtual Machine Name: "vmdsvm01"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS3_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.dsvm,
+	            	[31m│[0m [0m  on dsvm.tf line 22, in resource "azurerm_windows_virtual_machine" "dsvm":
+	            	[31m│[0m [0m  22: resource "azurerm_windows_virtual_machine" "dsvm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/301-machine-learning-hub-spoke-secure
+
+FailNow
+
+---
+
+## 04 Oct 26 01:29 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
++ provider registry.terraform.io/hashicorp/time v0.14.2
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-301mlhss-dev-4om4"
+	            	[31m│[0m [0mVirtual Machine Name: "vmdsvm01"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS3_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.dsvm,
+	            	[31m│[0m [0m  on dsvm.tf line 22, in resource "azurerm_windows_virtual_machine" "dsvm":
+	            	[31m│[0m [0m  22: resource "azurerm_windows_virtual_machine" "dsvm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mupdating Route Table Association for Subnet (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-hub-301mlhss-dev-4om4"
+	            	[31m│[0m [0mVirtual Network Name: "vnet-hub-301mlhss-dev"
+	            	[31m│[0m [0mSubnet Name: "snet-jumphost"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: AnotherOperationInProgress: Another operation on this or dependent resource is in progress. To retrieve status of the operation use uri: https://eastus.network.azure.com/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/providers/Microsoft.Network/locations/eastus/operations/c2752397-1841-4f01-aa18-0cda08105c99?api-version=2022-11-01.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_subnet_route_table_association.rt-jumphost-link,
+	            	[31m│[0m [0m  on network-hub.tf line 173, in resource "azurerm_subnet_route_table_association" "rt-jumphost-link":
+	            	[31m│[0m [0m 173: resource "azurerm_subnet_route_table_association" "rt-jumphost-link" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Storage Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-301mlhss-dev-4om4"
+	            	[31m│[0m [0mStorage Account Name: "st301mlhssdev4om4"): performing Create: unexpected status 409 (409 Conflict) with error: StorageAccountOperationInProgress: An operation is currently performing on this storage account that requires exclusive access.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_storage_account.default,
+	            	[31m│[0m [0m  on workspace.tf line 24, in resource "azurerm_storage_account" "default":
+	            	[31m│[0m [0m  24: resource "azurerm_storage_account" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/301-machine-learning-hub-spoke-secure
+
+FailNow
+
+---
+
+## 27 Sep 26 00:51 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
++ provider registry.terraform.io/hashicorp/time v0.14.2
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-301mlhss-dev-8vfi"
+	            	[31m│[0m [0mVirtual Machine Name: "vmdsvm01"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: OperationNotAllowed: Operation could not be completed as it results in exceeding approved Total Regional Cores quota. Additional details - Deployment Model: Resource Manager, Location: eastus, Current Limit: 10, Current Usage: 10, Additional Required: 4, (Minimum) New Limit Required: 14. Setup Alerts when Quota reaches threshold. Learn more at https://aka.ms/quotamonitoringalerting . Submit a request for Quota increase at https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/%7B%22subscriptionId%22:%22e4b62b3b-7634-4972-8bbe-5d7197159f26%22,%22command%22:%22openQuotaApprovalBlade%22,%22quotas%22:[%7B%22location%22:%22eastus%22,%22providerId%22:%22Microsoft.Compute%22,%22resourceName%22:%22cores%22,%22quotaRequest%22:%7B%22properties%22:%7B%22limit%22:14,%22unit%22:%22Count%22,%22name%22:%7B%22value%22:%22cores%22%7D%7D%7D%7D]%7D by specifying parameters listed in the ‘Details’ section for deployment to succeed. Please read more about quota limits at https://docs.microsoft.com/en-us/azure/azure-supportability/regional-quota-requests[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.dsvm,
+	            	[31m│[0m [0m  on dsvm.tf line 22, in resource "azurerm_windows_virtual_machine" "dsvm":
+	            	[31m│[0m [0m  22: resource "azurerm_windows_virtual_machine" "dsvm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/301-machine-learning-hub-spoke-secure
+
+FailNow
+
+---
+
+## 20 Sep 26 00:40 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
++ provider registry.terraform.io/hashicorp/time v0.14.2
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-301mlhss-dev-p7ex"
+	            	[31m│[0m [0mVirtual Machine Name: "vmdsvm01"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS3_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.dsvm,
+	            	[31m│[0m [0m  on dsvm.tf line 22, in resource "azurerm_windows_virtual_machine" "dsvm":
+	            	[31m│[0m [0m  22: resource "azurerm_windows_virtual_machine" "dsvm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/301-machine-learning-hub-spoke-secure
+
+FailNow
+
+---
+
+## 13 Sep 26 00:43 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
++ provider registry.terraform.io/hashicorp/time v0.14.2
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-301mlhss-dev-xk0g"
+	            	[31m│[0m [0mVirtual Machine Name: "vmdsvm01"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS3_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.dsvm,
+	            	[31m│[0m [0m  on dsvm.tf line 22, in resource "azurerm_windows_virtual_machine" "dsvm":
+	            	[31m│[0m [0m  22: resource "azurerm_windows_virtual_machine" "dsvm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/301-machine-learning-hub-spoke-secure
+
+FailNow
+
+---
+
+## 06 Sep 26 00:43 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
++ provider registry.terraform.io/hashicorp/time v0.14.1
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-301mlhss-dev-apc6"
+	            	[31m│[0m [0mVirtual Machine Name: "vmdsvm01"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: OperationNotAllowed: Operation could not be completed as it results in exceeding approved Total Regional Cores quota. Additional details - Deployment Model: Resource Manager, Location: eastus, Current Limit: 10, Current Usage: 8, Additional Required: 4, (Minimum) New Limit Required: 12. Setup Alerts when Quota reaches threshold. Learn more at https://aka.ms/quotamonitoringalerting . Submit a request for Quota increase at https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/%7B%22subscriptionId%22:%22e4b62b3b-7634-4972-8bbe-5d7197159f26%22,%22command%22:%22openQuotaApprovalBlade%22,%22quotas%22:[%7B%22location%22:%22eastus%22,%22providerId%22:%22Microsoft.Compute%22,%22resourceName%22:%22cores%22,%22quotaRequest%22:%7B%22properties%22:%7B%22limit%22:12,%22unit%22:%22Count%22,%22name%22:%7B%22value%22:%22cores%22%7D%7D%7D%7D]%7D by specifying parameters listed in the ‘Details’ section for deployment to succeed. Please read more about quota limits at https://docs.microsoft.com/en-us/azure/azure-supportability/regional-quota-requests[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.dsvm,
+	            	[31m│[0m [0m  on dsvm.tf line 22, in resource "azurerm_windows_virtual_machine" "dsvm":
+	            	[31m│[0m [0m  22: resource "azurerm_windows_virtual_machine" "dsvm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/301-machine-learning-hub-spoke-secure
+
+FailNow
+
+---
+
+## 30 Aug 26 00:42 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
++ provider registry.terraform.io/hashicorp/time v0.14.1
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-301mlhss-dev-23a2"
+	            	[31m│[0m [0mVirtual Machine Name: "vmdsvm01"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS3_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.dsvm,
+	            	[31m│[0m [0m  on dsvm.tf line 22, in resource "azurerm_windows_virtual_machine" "dsvm":
+	            	[31m│[0m [0m  22: resource "azurerm_windows_virtual_machine" "dsvm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/301-machine-learning-hub-spoke-secure
+
+FailNow
+
+---
+
+## 23 Aug 26 00:34 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
++ provider registry.terraform.io/hashicorp/time v0.14.1
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-301mlhss-dev-q6tz"
+	            	[31m│[0m [0mVirtual Machine Name: "vmdsvm01"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: OperationNotAllowed: Operation could not be completed as it results in exceeding approved Total Regional Cores quota. Additional details - Deployment Model: Resource Manager, Location: eastus, Current Limit: 10, Current Usage: 10, Additional Required: 4, (Minimum) New Limit Required: 14. Setup Alerts when Quota reaches threshold. Learn more at https://aka.ms/quotamonitoringalerting . Submit a request for Quota increase at https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/%7B%22subscriptionId%22:%22e4b62b3b-7634-4972-8bbe-5d7197159f26%22,%22command%22:%22openQuotaApprovalBlade%22,%22quotas%22:[%7B%22location%22:%22eastus%22,%22providerId%22:%22Microsoft.Compute%22,%22resourceName%22:%22cores%22,%22quotaRequest%22:%7B%22properties%22:%7B%22limit%22:14,%22unit%22:%22Count%22,%22name%22:%7B%22value%22:%22cores%22%7D%7D%7D%7D]%7D by specifying parameters listed in the ‘Details’ section for deployment to succeed. Please read more about quota limits at https://docs.microsoft.com/en-us/azure/azure-supportability/regional-quota-requests[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.dsvm,
+	            	[31m│[0m [0m  on dsvm.tf line 22, in resource "azurerm_windows_virtual_machine" "dsvm":
+	            	[31m│[0m [0m  22: resource "azurerm_windows_virtual_machine" "dsvm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/301-machine-learning-hub-spoke-secure
+
+FailNow
+
+---
+
+## 16 Aug 26 00:34 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
++ provider registry.terraform.io/hashicorp/time v0.14.1
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-301mlhss-dev-k09c"
+	            	[31m│[0m [0mVirtual Machine Name: "vmdsvm01"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS3_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.dsvm,
+	            	[31m│[0m [0m  on dsvm.tf line 22, in resource "azurerm_windows_virtual_machine" "dsvm":
+	            	[31m│[0m [0m  22: resource "azurerm_windows_virtual_machine" "dsvm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/301-machine-learning-hub-spoke-secure
+
+FailNow
+
+---
+
+## 09 Aug 26 01:25 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
++ provider registry.terraform.io/hashicorp/time v0.14.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-301mlhss-dev-k8uj"
+	            	[31m│[0m [0mVirtual Machine Name: "vmdsvm01"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS3_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.dsvm,
+	            	[31m│[0m [0m  on dsvm.tf line 22, in resource "azurerm_windows_virtual_machine" "dsvm":
+	            	[31m│[0m [0m  22: resource "azurerm_windows_virtual_machine" "dsvm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/301-machine-learning-hub-spoke-secure
+
+FailNow
+
+---
+
+## 02 Aug 26 01:15 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
++ provider registry.terraform.io/hashicorp/time v0.14.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-301mlhss-dev-tw8o"
+	            	[31m│[0m [0mVirtual Machine Name: "vmdsvm01"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS3_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.dsvm,
+	            	[31m│[0m [0m  on dsvm.tf line 22, in resource "azurerm_windows_virtual_machine" "dsvm":
+	            	[31m│[0m [0m  22: resource "azurerm_windows_virtual_machine" "dsvm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/301-machine-learning-hub-spoke-secure
+
+FailNow
+
+---
+
+## 26 Jul 26 01:08 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
++ provider registry.terraform.io/hashicorp/time v0.14.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-301mlhss-dev-wqmq"
+	            	[31m│[0m [0mVirtual Machine Name: "vmdsvm01"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS3_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.dsvm,
+	            	[31m│[0m [0m  on dsvm.tf line 22, in resource "azurerm_windows_virtual_machine" "dsvm":
+	            	[31m│[0m [0m  22: resource "azurerm_windows_virtual_machine" "dsvm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Subnet (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-hub-301mlhss-dev-wqmq"
+	            	[31m│[0m [0mVirtual Network Name: "vnet-hub-301mlhss-dev"
+	            	[31m│[0m [0mSubnet Name: "AzureFirewallSubnet"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: AnotherOperationInProgress: Another operation on this or dependent resource is in progress. To retrieve status of the operation use uri: https://eastus.network.azure.com/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/providers/Microsoft.Network/locations/eastus/operations/153dc177-477c-4480-b191-1e1ed91240f5?api-version=2022-11-01.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_subnet.azure_firewall,
+	            	[31m│[0m [0m  on network-hub.tf line 26, in resource "azurerm_subnet" "azure_firewall":
+	            	[31m│[0m [0m  26: resource "azurerm_subnet" "azure_firewall" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/301-machine-learning-hub-spoke-secure
+
+FailNow
+
+---
+
+## 12 Jul 26 00:52 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
++ provider registry.terraform.io/hashicorp/time v0.14.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-301mlhss-dev-hser"
+	            	[31m│[0m [0mVirtual Machine Name: "vmdsvm01"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS3_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.dsvm,
+	            	[31m│[0m [0m  on dsvm.tf line 22, in resource "azurerm_windows_virtual_machine" "dsvm":
+	            	[31m│[0m [0m  22: resource "azurerm_windows_virtual_machine" "dsvm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/301-machine-learning-hub-spoke-secure
+
+FailNow
+
+---
+
+## 05 Jul 26 00:55 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
++ provider registry.terraform.io/hashicorp/time v0.14.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-301mlhss-dev-swph"
+	            	[31m│[0m [0mVirtual Machine Name: "vmdsvm01"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS3_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.dsvm,
+	            	[31m│[0m [0m  on dsvm.tf line 22, in resource "azurerm_windows_virtual_machine" "dsvm":
+	            	[31m│[0m [0m  22: resource "azurerm_windows_virtual_machine" "dsvm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/301-machine-learning-hub-spoke-secure
+
+FailNow
+
+---
+
+## 28 Jun 26 01:13 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
++ provider registry.terraform.io/hashicorp/time v0.14.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mpopulating Resource Provider cache: listing Resource Providers: loading results: unexpected end of JSON input[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on main.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/301-machine-learning-hub-spoke-secure
+
+FailNow
+
+---
+
+## 14 Jun 26 00:59 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
++ provider registry.terraform.io/hashicorp/time v0.14.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-301mlhss-dev-wta5"
+	            	[31m│[0m [0mVirtual Machine Name: "vmdsvm01"): performing CreateOrUpdate: unexpected status 409 (409 ) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS3_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.dsvm,
+	            	[31m│[0m [0m  on dsvm.tf line 22, in resource "azurerm_windows_virtual_machine" "dsvm":
+	            	[31m│[0m [0m  22: resource "azurerm_windows_virtual_machine" "dsvm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/301-machine-learning-hub-spoke-secure
+
+FailNow
+
+---
+
+## 31 May 26 01:52 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
++ provider registry.terraform.io/hashicorp/time v0.14.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-301mlhss-dev-hjvq"
+	            	[31m│[0m [0mVirtual Machine Name: "vmdsvm01"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS3_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.dsvm,
+	            	[31m│[0m [0m  on dsvm.tf line 22, in resource "azurerm_windows_virtual_machine" "dsvm":
+	            	[31m│[0m [0m  22: resource "azurerm_windows_virtual_machine" "dsvm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/301-machine-learning-hub-spoke-secure
+
+FailNow
+
+---
+
+## 24 May 26 00:55 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
++ provider registry.terraform.io/hashicorp/time v0.14.0
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-301mlhss-dev-0csf"
+	            	[31m│[0m [0mVirtual Machine Name: "vmdsvm01"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS3_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.dsvm,
+	            	[31m│[0m [0m  on dsvm.tf line 22, in resource "azurerm_windows_virtual_machine" "dsvm":
+	            	[31m│[0m [0m  22: resource "azurerm_windows_virtual_machine" "dsvm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/301-machine-learning-hub-spoke-secure
+
+FailNow
+
+---
+
+## 10 May 26 00:51 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.8.1
++ provider registry.terraform.io/hashicorp/time v0.13.1
++ provider registry.terraform.io/orobix/azureml v0.0.5
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-301mlhss-dev-mapd"
+	            	[31m│[0m [0mVirtual Machine Name: "vmdsvm01"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS3_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.dsvm,
+	            	[31m│[0m [0m  on dsvm.tf line 22, in resource "azurerm_windows_virtual_machine" "dsvm":
+	            	[31m│[0m [0m  22: resource "azurerm_windows_virtual_machine" "dsvm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/301-machine-learning-hub-spoke-secure
+
+FailNow
+
+---
+
 ## 26 Apr 26 00:47 UTC
 
 Success: false

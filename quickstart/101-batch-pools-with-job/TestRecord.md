@@ -1,3 +1,1000 @@
+## 08 Nov 26 00:14 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant '4f00b3b6-2940-4f2c-b037-94637c180d30' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: deb829ab-7595-4632-a858-a04bc1a2d200 Correlation ID: 932ca068-7d8d-44f4-84bb-f793e6b9f060 Timestamp: 2026-11-08 00:14:37Z","error_codes":[5000229],"timestamp":"2026-11-08 00:14:37Z","trace_id":"deb829ab-7595-4632-a858-a04bc1a2d200","correlation_id":"932ca068-7d8d-44f4-84bb-f793e6b9f060"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-job
+
+FailNow
+
+---
+
+## 01 Nov 26 00:20 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: d03f1101-9c4e-4f19-9aa8-de6a70d5ee01 Correlation ID: cdb92c7b-fa0a-49ed-87e8-f5823f58b944 Timestamp: 2026-11-01 00:20:04Z","error_codes":[5000229],"timestamp":"2026-11-01 00:20:04Z","trace_id":"d03f1101-9c4e-4f19-9aa8-de6a70d5ee01","correlation_id":"cdb92c7b-fa0a-49ed-87e8-f5823f58b944"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-job
+
+FailNow
+
+---
+
+## 25 Oct 26 00:18 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant '4f00b3b6-2940-4f2c-b037-94637c180d30' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: cadbfa4d-7c3d-49d9-944b-41754b792402 Correlation ID: 7e25b57a-f553-4b62-9c08-f3eda14bfd34 Timestamp: 2026-10-25 00:18:57Z","error_codes":[5000229],"timestamp":"2026-10-25 00:18:57Z","trace_id":"cadbfa4d-7c3d-49d9-944b-41754b792402","correlation_id":"7e25b57a-f553-4b62-9c08-f3eda14bfd34"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-job
+
+FailNow
+
+---
+
+## 18 Oct 26 01:21 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Batch Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-dashing-bobcat"
+	            	[31m│[0m [0mBatch Account Name: "csntsaam"): polling after Create: unexpected status 409 (409 Conflict) with error: SubscriptionQuotaExceeded: The regional Batch account quota for the specified subscription has been reached.
+	            	[31m│[0m [0mRequestId:8540fa86-3010-4db6-86a5-875337909f2f
+	            	[31m│[0m [0mTime:2026-10-18T01:19:36.5444468Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_account.example,
+	            	[31m│[0m [0m  on main.tf line 34, in resource "azurerm_batch_account" "example":
+	            	[31m│[0m [0m  34: resource "azurerm_batch_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-job
+
+FailNow
+
+---
+
+## 11 Oct 26 01:27 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Batch Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fast-ferret"
+	            	[31m│[0m [0mBatch Account Name: "xqhzatfr"): polling after Create: unexpected status 409 (409 Conflict) with error: SubscriptionQuotaExceeded: The regional Batch account quota for the specified subscription has been reached.
+	            	[31m│[0m [0mRequestId:00b716e6-79f5-40bd-85cc-0e27cfd25bf7
+	            	[31m│[0m [0mTime:2026-10-11T01:26:04.1005731Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_account.example,
+	            	[31m│[0m [0m  on main.tf line 34, in resource "azurerm_batch_account" "example":
+	            	[31m│[0m [0m  34: resource "azurerm_batch_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-job
+
+FailNow
+
+---
+
+## 04 Oct 26 02:06 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-boss-grizzly"
+	            	[31m│[0m [0mBatch Account Name: "wtyvakii"
+	            	[31m│[0m [0mPool Name: "pool-careful-chicken-fixed-pool"): unexpected status 400 (400 Bad Request) with error: InvalidPropertyValue: The value provided for one of the properties in the request body is invalid.
+	            	[31m│[0m [0mRequestId:bd0f50ac-c28f-4b82-a8c0-9880a39f05a2
+	            	[31m│[0m [0mTime:2026-10-04T02:05:29.5518609Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.fixed,
+	            	[31m│[0m [0m  on main.tf line 46, in resource "azurerm_batch_pool" "fixed":
+	            	[31m│[0m [0m  46: resource "azurerm_batch_pool" "fixed" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-boss-grizzly"
+	            	[31m│[0m [0mBatch Account Name: "wtyvakii"
+	            	[31m│[0m [0mPool Name: "pool-careful-chicken-autoscale-pool"): unexpected status 400 (400 Bad Request) with error: InvalidPropertyValue: The value provided for one of the properties in the request body is invalid.
+	            	[31m│[0m [0mRequestId:c567141a-3e80-4eb7-b223-fb3c84a1e10a
+	            	[31m│[0m [0mTime:2026-10-04T02:05:29.4880019Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.autopool,
+	            	[31m│[0m [0m  on main.tf line 88, in resource "azurerm_batch_pool" "autopool":
+	            	[31m│[0m [0m  88: resource "azurerm_batch_pool" "autopool" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-job
+
+FailNow
+
+---
+
+## 27 Sep 26 00:58 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Batch Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-secure-whale"
+	            	[31m│[0m [0mBatch Account Name: "gtoxiivj"): polling after Create: unexpected status 409 (409 Conflict) with error: SubscriptionQuotaExceeded: The regional Batch account quota for the specified subscription has been reached.
+	            	[31m│[0m [0mRequestId:15723e9e-a97d-45f8-8681-b215b182a304
+	            	[31m│[0m [0mTime:2026-09-27T00:57:09.0140604Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_account.example,
+	            	[31m│[0m [0m  on main.tf line 34, in resource "azurerm_batch_account" "example":
+	            	[31m│[0m [0m  34: resource "azurerm_batch_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-job
+
+FailNow
+
+---
+
+## 20 Sep 26 01:24 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Batch Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-curious-zebra"
+	            	[31m│[0m [0mBatch Account Name: "ffzsxsqa"): polling after Create: unexpected status 409 (409 Conflict) with error: SubscriptionQuotaExceeded: The regional Batch account quota for the specified subscription has been reached.
+	            	[31m│[0m [0mRequestId:e68acd9d-a39d-412a-8de8-bb2a5e300c3f
+	            	[31m│[0m [0mTime:2026-09-20T01:23:22.4004170Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_account.example,
+	            	[31m│[0m [0m  on main.tf line 34, in resource "azurerm_batch_account" "example":
+	            	[31m│[0m [0m  34: resource "azurerm_batch_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-job
+
+FailNow
+
+---
+
+## 13 Sep 26 02:18 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Batch Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-valid-whippet"
+	            	[31m│[0m [0mBatch Account Name: "jtchqhca"): polling after Create: unexpected status 409 (409 Conflict) with error: SubscriptionQuotaExceeded: The regional Batch account quota for the specified subscription has been reached.
+	            	[31m│[0m [0mRequestId:5f735db4-bc7c-4b51-a3ff-f81921f16e9a
+	            	[31m│[0m [0mTime:2026-09-13T02:17:27.4780552Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_account.example,
+	            	[31m│[0m [0m  on main.tf line 34, in resource "azurerm_batch_account" "example":
+	            	[31m│[0m [0m  34: resource "azurerm_batch_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-job
+
+FailNow
+
+---
+
+## 06 Sep 26 01:15 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Batch Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-hardy-trout"
+	            	[31m│[0m [0mBatch Account Name: "pwymlues"): polling after Create: unexpected status 409 (409 Conflict) with error: SubscriptionQuotaExceeded: The regional Batch account quota for the specified subscription has been reached.
+	            	[31m│[0m [0mRequestId:4cbef2cd-4be6-4722-8a93-4c710a9550da
+	            	[31m│[0m [0mTime:2026-09-06T01:14:10.6323915Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_account.example,
+	            	[31m│[0m [0m  on main.tf line 34, in resource "azurerm_batch_account" "example":
+	            	[31m│[0m [0m  34: resource "azurerm_batch_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-job
+
+FailNow
+
+---
+
+## 30 Aug 26 01:03 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Batch Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-set-lark"
+	            	[31m│[0m [0mBatch Account Name: "dqgdyvbx"): polling after Create: unexpected status 409 (409 Conflict) with error: SubscriptionQuotaExceeded: The regional Batch account quota for the specified subscription has been reached.
+	            	[31m│[0m [0mRequestId:398f74f4-5ca9-4c57-9ffb-7a02cbf09a22
+	            	[31m│[0m [0mTime:2026-08-30T01:01:12.4192604Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_account.example,
+	            	[31m│[0m [0m  on main.tf line 34, in resource "azurerm_batch_account" "example":
+	            	[31m│[0m [0m  34: resource "azurerm_batch_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-job
+
+FailNow
+
+---
+
+## 23 Aug 26 00:40 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fun-garfish"
+	            	[31m│[0m [0mBatch Account Name: "iqkwirfo"
+	            	[31m│[0m [0mPool Name: "pool-distinct-spaniel-fixed-pool"): unexpected status 400 (400 Bad Request) with error: InvalidPropertyValue: The value provided for one of the properties in the request body is invalid.
+	            	[31m│[0m [0mRequestId:41159123-9626-4934-9f96-fe944fd0db21
+	            	[31m│[0m [0mTime:2026-08-23T00:39:18.7512232Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.fixed,
+	            	[31m│[0m [0m  on main.tf line 46, in resource "azurerm_batch_pool" "fixed":
+	            	[31m│[0m [0m  46: resource "azurerm_batch_pool" "fixed" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fun-garfish"
+	            	[31m│[0m [0mBatch Account Name: "iqkwirfo"
+	            	[31m│[0m [0mPool Name: "pool-distinct-spaniel-autoscale-pool"): unexpected status 400 (400 Bad Request) with error: InvalidPropertyValue: The value provided for one of the properties in the request body is invalid.
+	            	[31m│[0m [0mRequestId:838240d1-dee8-44e2-8550-e05adb08ca81
+	            	[31m│[0m [0mTime:2026-08-23T00:39:18.6941940Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.autopool,
+	            	[31m│[0m [0m  on main.tf line 88, in resource "azurerm_batch_pool" "autopool":
+	            	[31m│[0m [0m  88: resource "azurerm_batch_pool" "autopool" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-job
+
+FailNow
+
+---
+
+## 16 Aug 26 01:12 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-handy-quetzal"
+	            	[31m│[0m [0mBatch Account Name: "ykjmwavi"
+	            	[31m│[0m [0mPool Name: "pool-rested-leech-fixed-pool"): unexpected status 400 (400 Bad Request) with error: InvalidPropertyValue: The value provided for one of the properties in the request body is invalid.
+	            	[31m│[0m [0mRequestId:66cc0f13-5884-4e5a-b0e3-3ff624e14d48
+	            	[31m│[0m [0mTime:2026-08-16T01:11:04.3140189Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.fixed,
+	            	[31m│[0m [0m  on main.tf line 46, in resource "azurerm_batch_pool" "fixed":
+	            	[31m│[0m [0m  46: resource "azurerm_batch_pool" "fixed" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-handy-quetzal"
+	            	[31m│[0m [0mBatch Account Name: "ykjmwavi"
+	            	[31m│[0m [0mPool Name: "pool-rested-leech-autoscale-pool"): unexpected status 400 (400 Bad Request) with error: InvalidPropertyValue: The value provided for one of the properties in the request body is invalid.
+	            	[31m│[0m [0mRequestId:9a4d8aba-e90f-4807-ae5e-2b58357e8722
+	            	[31m│[0m [0mTime:2026-08-16T01:11:04.3636230Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.autopool,
+	            	[31m│[0m [0m  on main.tf line 88, in resource "azurerm_batch_pool" "autopool":
+	            	[31m│[0m [0m  88: resource "azurerm_batch_pool" "autopool" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-job
+
+FailNow
+
+---
+
+## 09 Aug 26 00:33 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-moved-koi"
+	            	[31m│[0m [0mBatch Account Name: "jpokhbdl"
+	            	[31m│[0m [0mPool Name: "pool-selected-penguin-fixed-pool"): unexpected status 400 (400 Bad Request) with error: InvalidPropertyValue: The value provided for one of the properties in the request body is invalid.
+	            	[31m│[0m [0mRequestId:52fe16cc-7c1a-4eb7-8096-f29eb4988df3
+	            	[31m│[0m [0mTime:2026-08-09T00:32:33.0542855Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.fixed,
+	            	[31m│[0m [0m  on main.tf line 46, in resource "azurerm_batch_pool" "fixed":
+	            	[31m│[0m [0m  46: resource "azurerm_batch_pool" "fixed" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-moved-koi"
+	            	[31m│[0m [0mBatch Account Name: "jpokhbdl"
+	            	[31m│[0m [0mPool Name: "pool-selected-penguin-autoscale-pool"): unexpected status 400 (400 Bad Request) with error: InvalidPropertyValue: The value provided for one of the properties in the request body is invalid.
+	            	[31m│[0m [0mRequestId:77624a16-3008-4fe3-a4c7-dc6f988f6820
+	            	[31m│[0m [0mTime:2026-08-09T00:32:32.3989183Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.autopool,
+	            	[31m│[0m [0m  on main.tf line 88, in resource "azurerm_batch_pool" "autopool":
+	            	[31m│[0m [0m  88: resource "azurerm_batch_pool" "autopool" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-job
+
+FailNow
+
+---
+
+## 02 Aug 26 00:52 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Batch Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-amused-swift"
+	            	[31m│[0m [0mBatch Account Name: "xbvjnckm"): polling after Create: unexpected status 409 (409 Conflict) with error: SubscriptionQuotaExceeded: The regional Batch account quota for the specified subscription has been reached.
+	            	[31m│[0m [0mRequestId:16b99a85-44ec-4df9-954b-5a3236c7297d
+	            	[31m│[0m [0mTime:2026-08-02T00:50:31.0827335Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_account.example,
+	            	[31m│[0m [0m  on main.tf line 34, in resource "azurerm_batch_account" "example":
+	            	[31m│[0m [0m  34: resource "azurerm_batch_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-job
+
+FailNow
+
+---
+
+## 26 Jul 26 01:22 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-model-buffalo"
+	            	[31m│[0m [0mBatch Account Name: "nllglqmu"
+	            	[31m│[0m [0mPool Name: "pool-workable-stinkbug-fixed-pool"): unexpected status 400 (400 Bad Request) with error: InvalidPropertyValue: The value provided for one of the properties in the request body is invalid.
+	            	[31m│[0m [0mRequestId:d23097a2-34b6-425a-9c9e-54f59158e28b
+	            	[31m│[0m [0mTime:2026-07-26T01:20:52.2248351Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.fixed,
+	            	[31m│[0m [0m  on main.tf line 46, in resource "azurerm_batch_pool" "fixed":
+	            	[31m│[0m [0m  46: resource "azurerm_batch_pool" "fixed" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-model-buffalo"
+	            	[31m│[0m [0mBatch Account Name: "nllglqmu"
+	            	[31m│[0m [0mPool Name: "pool-workable-stinkbug-autoscale-pool"): unexpected status 400 (400 Bad Request) with error: InvalidPropertyValue: The value provided for one of the properties in the request body is invalid.
+	            	[31m│[0m [0mRequestId:6b859cc8-0fe7-439a-85d4-b0c7b528266d
+	            	[31m│[0m [0mTime:2026-07-26T01:20:52.1137940Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.autopool,
+	            	[31m│[0m [0m  on main.tf line 88, in resource "azurerm_batch_pool" "autopool":
+	            	[31m│[0m [0m  88: resource "azurerm_batch_pool" "autopool" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-job
+
+FailNow
+
+---
+
+## 12 Jul 26 00:56 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-active-quetzal"
+	            	[31m│[0m [0mBatch Account Name: "vyvcabuq"
+	            	[31m│[0m [0mPool Name: "pool-normal-stud-fixed-pool"): unexpected status 400 (400 Bad Request) with error: InvalidPropertyValue: The value provided for one of the properties in the request body is invalid.
+	            	[31m│[0m [0mRequestId:62d0d035-b27a-4ddb-aeff-18ad751fc4a6
+	            	[31m│[0m [0mTime:2026-07-12T00:55:30.8770268Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.fixed,
+	            	[31m│[0m [0m  on main.tf line 46, in resource "azurerm_batch_pool" "fixed":
+	            	[31m│[0m [0m  46: resource "azurerm_batch_pool" "fixed" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-active-quetzal"
+	            	[31m│[0m [0mBatch Account Name: "vyvcabuq"
+	            	[31m│[0m [0mPool Name: "pool-normal-stud-autoscale-pool"): unexpected status 400 (400 Bad Request) with error: InvalidPropertyValue: The value provided for one of the properties in the request body is invalid.
+	            	[31m│[0m [0mRequestId:4d90d698-09e7-4d23-81d1-88658bb2bfd3
+	            	[31m│[0m [0mTime:2026-07-12T00:55:30.6907534Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.autopool,
+	            	[31m│[0m [0m  on main.tf line 88, in resource "azurerm_batch_pool" "autopool":
+	            	[31m│[0m [0m  88: resource "azurerm_batch_pool" "autopool" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-job
+
+FailNow
+
+---
+
+## 05 Jul 26 01:20 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-fond-glowworm"
+	            	[31m│[0m [0mBatch Account Name: "mlqhvoad"
+	            	[31m│[0m [0mPool Name: "pool-quick-meerkat-fixed-pool"): unexpected status 400 (400 Bad Request) with error: InvalidPropertyValue: The value provided for one of the properties in the request body is invalid.
+	            	[31m│[0m [0mRequestId:1e0e612d-4624-45ff-91c1-a55dded27afa
+	            	[31m│[0m [0mTime:2026-07-05T01:19:39.0898561Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.fixed,
+	            	[31m│[0m [0m  on main.tf line 46, in resource "azurerm_batch_pool" "fixed":
+	            	[31m│[0m [0m  46: resource "azurerm_batch_pool" "fixed" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-fond-glowworm"
+	            	[31m│[0m [0mBatch Account Name: "mlqhvoad"
+	            	[31m│[0m [0mPool Name: "pool-quick-meerkat-autoscale-pool"): unexpected status 400 (400 Bad Request) with error: InvalidPropertyValue: The value provided for one of the properties in the request body is invalid.
+	            	[31m│[0m [0mRequestId:7563ea91-d7bc-4acc-b8d5-a4c2cd1f2ce8
+	            	[31m│[0m [0mTime:2026-07-05T01:19:38.8400452Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.autopool,
+	            	[31m│[0m [0m  on main.tf line 88, in resource "azurerm_batch_pool" "autopool":
+	            	[31m│[0m [0m  88: resource "azurerm_batch_pool" "autopool" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-job
+
+FailNow
+
+---
+
+## 28 Jun 26 02:14 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Batch Account (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-composed-quetzal"
+	            	[31m│[0m [0mBatch Account Name: "kfabkjlk"): polling after Create: unexpected status 409 (409 Conflict) with error: SubscriptionQuotaExceeded: The regional Batch account quota for the specified subscription has been reached.
+	            	[31m│[0m [0mRequestId:16cc60aa-f9c8-4d7b-9933-53bd217a4948
+	            	[31m│[0m [0mTime:2026-06-28T02:13:02.9039235Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_account.example,
+	            	[31m│[0m [0m  on main.tf line 34, in resource "azurerm_batch_account" "example":
+	            	[31m│[0m [0m  34: resource "azurerm_batch_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-job
+
+FailNow
+
+---
+
+## 14 Jun 26 02:18 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-apparent-lion"
+	            	[31m│[0m [0mBatch Account Name: "dqvmxumr"
+	            	[31m│[0m [0mPool Name: "pool-social-snipe-fixed-pool"): unexpected status 400 (400 The value provided for one of the properties in the request body is invalid.) with error: InvalidPropertyValue: The value provided for one of the properties in the request body is invalid.
+	            	[31m│[0m [0mRequestId:b34d7432-fa64-47ff-bc49-82b082384149
+	            	[31m│[0m [0mTime:2026-06-14T02:16:42.5488941Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.fixed,
+	            	[31m│[0m [0m  on main.tf line 46, in resource "azurerm_batch_pool" "fixed":
+	            	[31m│[0m [0m  46: resource "azurerm_batch_pool" "fixed" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Pool (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-apparent-lion"
+	            	[31m│[0m [0mBatch Account Name: "dqvmxumr"
+	            	[31m│[0m [0mPool Name: "pool-social-snipe-autoscale-pool"): unexpected status 400 (400 The value provided for one of the properties in the request body is invalid.) with error: InvalidPropertyValue: The value provided for one of the properties in the request body is invalid.
+	            	[31m│[0m [0mRequestId:cdb413d0-324d-47db-ab2d-adeba78433a6
+	            	[31m│[0m [0mTime:2026-06-14T02:16:42.7487948Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_pool.autopool,
+	            	[31m│[0m [0m  on main.tf line 88, in resource "azurerm_batch_pool" "autopool":
+	            	[31m│[0m [0m  88: resource "azurerm_batch_pool" "autopool" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-job
+
+FailNow
+
+---
+
+## 31 May 26 01:27 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Batch Account (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-accepted-moccasin"
+	            	[31m│[0m [0mBatch Account Name: "lefjhvpd"): polling after Create: unexpected status 409 (409 Conflict) with error: SubscriptionQuotaExceeded: The regional Batch account quota for the specified subscription has been reached.
+	            	[31m│[0m [0mRequestId:09e5c45a-a284-4c0b-82cf-9fec6d1055b0
+	            	[31m│[0m [0mTime:2026-05-31T01:26:00.4329626Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_account.example,
+	            	[31m│[0m [0m  on main.tf line 34, in resource "azurerm_batch_account" "example":
+	            	[31m│[0m [0m  34: resource "azurerm_batch_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-job
+
+FailNow
+
+---
+
+## 24 May 26 01:39 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Batch Account (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-smiling-kingfish"
+	            	[31m│[0m [0mBatch Account Name: "kvuhyfrt"): polling after Create: unexpected status 409 (409 Conflict) with error: SubscriptionQuotaExceeded: The regional Batch account quota for the specified subscription has been reached.
+	            	[31m│[0m [0mRequestId:fba7fdb5-3fda-47bc-af75-68e37fb0b6dc
+	            	[31m│[0m [0mTime:2026-05-24T01:38:07.1666545Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_account.example,
+	            	[31m│[0m [0m  on main.tf line 34, in resource "azurerm_batch_account" "example":
+	            	[31m│[0m [0m  34: resource "azurerm_batch_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-job
+
+FailNow
+
+---
+
+## 10 May 26 01:30 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Batch Account (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-native-narwhal"
+	            	[31m│[0m [0mBatch Account Name: "lzlhycou"): polling after Create: unexpected status 409 (409 Conflict) with error: SubscriptionQuotaExceeded: The regional Batch account quota for the specified subscription has been reached.
+	            	[31m│[0m [0mRequestId:73ca125f-54a4-40be-9b20-0c7234bbb367
+	            	[31m│[0m [0mTime:2026-05-10T01:28:39.1915285Z[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_batch_account.example,
+	            	[31m│[0m [0m  on main.tf line 34, in resource "azurerm_batch_account" "example":
+	            	[31m│[0m [0m  34: resource "azurerm_batch_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-batch-pools-with-job
+
+FailNow
+
+---
+
 ## 26 Apr 26 01:30 UTC
 
 Success: false

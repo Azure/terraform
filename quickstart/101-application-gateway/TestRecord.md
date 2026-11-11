@@ -1,3 +1,1248 @@
+## 08 Nov 26 00:19 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant '4f00b3b6-2940-4f2c-b037-94637c180d30' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: d3432101-45c5-45f4-998d-45da616a2201 Correlation ID: 87b79b60-7360-4dbd-8f78-259672614eb3 Timestamp: 2026-11-08 00:19:48Z","error_codes":[5000229],"timestamp":"2026-11-08 00:19:48Z","trace_id":"d3432101-45c5-45f4-998d-45da616a2201","correlation_id":"87b79b60-7360-4dbd-8f78-259672614eb3"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-application-gateway
+
+FailNow
+
+---
+
+## 01 Nov 26 00:23 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 0b49b617-6ccb-4241-af07-f44867930000 Correlation ID: 80671523-1b6e-411f-b9f7-8be46a69a6c5 Timestamp: 2026-11-01 00:23:18Z","error_codes":[5000229],"timestamp":"2026-11-01 00:23:18Z","trace_id":"0b49b617-6ccb-4241-af07-f44867930000","correlation_id":"80671523-1b6e-411f-b9f7-8be46a69a6c5"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-application-gateway
+
+FailNow
+
+---
+
+## 25 Oct 26 00:22 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: d7c8df2e-5fa2-4bb7-b86d-1045481af801 Correlation ID: 27c4ba1b-a2ec-445d-9fb0-69f6f9010859 Timestamp: 2026-10-25 00:22:59Z","error_codes":[5000229],"timestamp":"2026-10-25 00:22:59Z","trace_id":"d7c8df2e-5fa2-4bb7-b86d-1045481af801","correlation_id":"27c4ba1b-a2ec-445d-9fb0-69f6f9010859"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-application-gateway
+
+FailNow
+
+---
+
+## 18 Oct 26 01:43 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Application Gateway (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-tkysglyj"
+	            	[31m│[0m [0mApplication Gateway Name: "myAppGateway"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: ApplicationGatewayDeprecatedTlsVersionUsedInSslPolicy: The TLS policy AppGwSslPolicy20150501 for Application Gateway /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/101-application-gateway-tkysglyj/providers/Microsoft.Network/applicationGateways/myAppGateway is using a deprecated TLS version. Update it to a supported version. Learn more https://aka.ms/appgw-oldtlsversions[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_application_gateway.main,
+	            	[31m│[0m [0m  on main.tf line 42, in resource "azurerm_application_gateway" "main":
+	            	[31m│[0m [0m  42: resource "azurerm_application_gateway" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-tkysglyj"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM2"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[1],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-tkysglyj"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM1"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[0],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-application-gateway
+
+FailNow
+
+---
+
+## 11 Oct 26 01:39 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Application Gateway (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-k5av1irb"
+	            	[31m│[0m [0mApplication Gateway Name: "myAppGateway"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: ApplicationGatewayDeprecatedTlsVersionUsedInSslPolicy: The TLS policy AppGwSslPolicy20150501 for Application Gateway /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/101-application-gateway-k5av1irb/providers/Microsoft.Network/applicationGateways/myAppGateway is using a deprecated TLS version. Update it to a supported version. Learn more https://aka.ms/appgw-oldtlsversions[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_application_gateway.main,
+	            	[31m│[0m [0m  on main.tf line 42, in resource "azurerm_application_gateway" "main":
+	            	[31m│[0m [0m  42: resource "azurerm_application_gateway" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-k5av1irb"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM2"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[1],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-k5av1irb"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM1"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[0],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-application-gateway
+
+FailNow
+
+---
+
+## 04 Oct 26 02:28 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Application Gateway (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-7gk4rx2r"
+	            	[31m│[0m [0mApplication Gateway Name: "myAppGateway"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: ApplicationGatewayDeprecatedTlsVersionUsedInSslPolicy: The TLS policy AppGwSslPolicy20150501 for Application Gateway /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/101-application-gateway-7gk4rx2r/providers/Microsoft.Network/applicationGateways/myAppGateway is using a deprecated TLS version. Update it to a supported version. Learn more https://aka.ms/appgw-oldtlsversions[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_application_gateway.main,
+	            	[31m│[0m [0m  on main.tf line 42, in resource "azurerm_application_gateway" "main":
+	            	[31m│[0m [0m  42: resource "azurerm_application_gateway" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-7gk4rx2r"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM2"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[1],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-7gk4rx2r"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM1"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[0],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-application-gateway
+
+FailNow
+
+---
+
+## 27 Sep 26 01:26 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Application Gateway (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-y889glnd"
+	            	[31m│[0m [0mApplication Gateway Name: "myAppGateway"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: ApplicationGatewayDeprecatedTlsVersionUsedInSslPolicy: The TLS policy AppGwSslPolicy20150501 for Application Gateway /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/101-application-gateway-y889glnd/providers/Microsoft.Network/applicationGateways/myAppGateway is using a deprecated TLS version. Update it to a supported version. Learn more https://aka.ms/appgw-oldtlsversions[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_application_gateway.main,
+	            	[31m│[0m [0m  on main.tf line 42, in resource "azurerm_application_gateway" "main":
+	            	[31m│[0m [0m  42: resource "azurerm_application_gateway" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-y889glnd"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM1"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[0],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-y889glnd"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM2"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[1],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-application-gateway
+
+FailNow
+
+---
+
+## 20 Sep 26 02:15 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Application Gateway (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-xg5ucvnx"
+	            	[31m│[0m [0mApplication Gateway Name: "myAppGateway"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: ApplicationGatewayDeprecatedTlsVersionUsedInSslPolicy: The TLS policy AppGwSslPolicy20150501 for Application Gateway /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/101-application-gateway-xg5ucvnx/providers/Microsoft.Network/applicationGateways/myAppGateway is using a deprecated TLS version. Update it to a supported version. Learn more https://aka.ms/appgw-oldtlsversions[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_application_gateway.main,
+	            	[31m│[0m [0m  on main.tf line 42, in resource "azurerm_application_gateway" "main":
+	            	[31m│[0m [0m  42: resource "azurerm_application_gateway" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-xg5ucvnx"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM1"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[0],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-xg5ucvnx"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM2"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[1],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-application-gateway
+
+FailNow
+
+---
+
+## 13 Sep 26 00:52 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Application Gateway (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-jaxveuhz"
+	            	[31m│[0m [0mApplication Gateway Name: "myAppGateway"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: ApplicationGatewayDeprecatedTlsVersionUsedInSslPolicy: The TLS policy AppGwSslPolicy20150501 for Application Gateway /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/101-application-gateway-jaxveuhz/providers/Microsoft.Network/applicationGateways/myAppGateway is using a deprecated TLS version. Update it to a supported version. Learn more https://aka.ms/appgw-oldtlsversions[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_application_gateway.main,
+	            	[31m│[0m [0m  on main.tf line 42, in resource "azurerm_application_gateway" "main":
+	            	[31m│[0m [0m  42: resource "azurerm_application_gateway" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-jaxveuhz"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM2"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[1],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-jaxveuhz"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM1"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[0],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-application-gateway
+
+FailNow
+
+---
+
+## 06 Sep 26 01:36 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Application Gateway (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-srqkr6qv"
+	            	[31m│[0m [0mApplication Gateway Name: "myAppGateway"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: ApplicationGatewayDeprecatedTlsVersionUsedInSslPolicy: The TLS policy AppGwSslPolicy20150501 for Application Gateway /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/101-application-gateway-srqkr6qv/providers/Microsoft.Network/applicationGateways/myAppGateway is using a deprecated TLS version. Update it to a supported version. Learn more https://aka.ms/appgw-oldtlsversions[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_application_gateway.main,
+	            	[31m│[0m [0m  on main.tf line 42, in resource "azurerm_application_gateway" "main":
+	            	[31m│[0m [0m  42: resource "azurerm_application_gateway" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-srqkr6qv"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM1"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[0],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-srqkr6qv"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM2"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[1],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-application-gateway
+
+FailNow
+
+---
+
+## 30 Aug 26 01:24 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Application Gateway (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-qsqw2i59"
+	            	[31m│[0m [0mApplication Gateway Name: "myAppGateway"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: ApplicationGatewayDeprecatedTlsVersionUsedInSslPolicy: The TLS policy AppGwSslPolicy20150501 for Application Gateway /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/101-application-gateway-qsqw2i59/providers/Microsoft.Network/applicationGateways/myAppGateway is using a deprecated TLS version. Update it to a supported version. Learn more https://aka.ms/appgw-oldtlsversions[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_application_gateway.main,
+	            	[31m│[0m [0m  on main.tf line 42, in resource "azurerm_application_gateway" "main":
+	            	[31m│[0m [0m  42: resource "azurerm_application_gateway" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-qsqw2i59"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM2"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[1],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-qsqw2i59"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM1"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[0],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-application-gateway
+
+FailNow
+
+---
+
+## 23 Aug 26 01:12 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Application Gateway (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-mhun0tfz"
+	            	[31m│[0m [0mApplication Gateway Name: "myAppGateway"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: ApplicationGatewayDeprecatedTlsVersionUsedInSslPolicy: The TLS policy AppGwSslPolicy20150501 for Application Gateway /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/101-application-gateway-mhun0tfz/providers/Microsoft.Network/applicationGateways/myAppGateway is using a deprecated TLS version. Update it to a supported version. Learn more https://aka.ms/appgw-oldtlsversions[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_application_gateway.main,
+	            	[31m│[0m [0m  on main.tf line 42, in resource "azurerm_application_gateway" "main":
+	            	[31m│[0m [0m  42: resource "azurerm_application_gateway" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-mhun0tfz"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM1"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[0],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-mhun0tfz"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM2"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[1],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-application-gateway
+
+FailNow
+
+---
+
+## 16 Aug 26 01:33 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Application Gateway (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-vbxpaln5"
+	            	[31m│[0m [0mApplication Gateway Name: "myAppGateway"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: ApplicationGatewayDeprecatedTlsVersionUsedInSslPolicy: The TLS policy AppGwSslPolicy20150501 for Application Gateway /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/101-application-gateway-vbxpaln5/providers/Microsoft.Network/applicationGateways/myAppGateway is using a deprecated TLS version. Update it to a supported version. Learn more https://aka.ms/appgw-oldtlsversions[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_application_gateway.main,
+	            	[31m│[0m [0m  on main.tf line 42, in resource "azurerm_application_gateway" "main":
+	            	[31m│[0m [0m  42: resource "azurerm_application_gateway" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-vbxpaln5"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM2"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[1],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-vbxpaln5"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM1"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[0],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-application-gateway
+
+FailNow
+
+---
+
+## 09 Aug 26 00:25 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Application Gateway (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-2u7b3p5l"
+	            	[31m│[0m [0mApplication Gateway Name: "myAppGateway"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: ApplicationGatewayDeprecatedTlsVersionUsedInSslPolicy: The TLS policy AppGwSslPolicy20150501 for Application Gateway /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/101-application-gateway-2u7b3p5l/providers/Microsoft.Network/applicationGateways/myAppGateway is using a deprecated TLS version. Update it to a supported version. Learn more https://aka.ms/appgw-oldtlsversions[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_application_gateway.main,
+	            	[31m│[0m [0m  on main.tf line 42, in resource "azurerm_application_gateway" "main":
+	            	[31m│[0m [0m  42: resource "azurerm_application_gateway" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-2u7b3p5l"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM1"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[0],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-2u7b3p5l"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM2"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[1],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-application-gateway
+
+FailNow
+
+---
+
+## 02 Aug 26 02:02 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Application Gateway (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-hq2big00"
+	            	[31m│[0m [0mApplication Gateway Name: "myAppGateway"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: ApplicationGatewayDeprecatedTlsVersionUsedInSslPolicy: The TLS policy AppGwSslPolicy20150501 for Application Gateway /subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/101-application-gateway-hq2big00/providers/Microsoft.Network/applicationGateways/myAppGateway is using a deprecated TLS version. Update it to a supported version. Learn more https://aka.ms/appgw-oldtlsversions[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_application_gateway.main,
+	            	[31m│[0m [0m  on main.tf line 42, in resource "azurerm_application_gateway" "main":
+	            	[31m│[0m [0m  42: resource "azurerm_application_gateway" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-hq2big00"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM2"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[1],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-hq2big00"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM1"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[0],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-application-gateway
+
+FailNow
+
+---
+
+## 26 Jul 26 01:43 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Application Gateway (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-p6cqyklf"
+	            	[31m│[0m [0mApplication Gateway Name: "myAppGateway"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: ApplicationGatewayDeprecatedTlsVersionUsedInSslPolicy: The TLS policy AppGwSslPolicy20150501 for Application Gateway /subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/101-application-gateway-p6cqyklf/providers/Microsoft.Network/applicationGateways/myAppGateway is using a deprecated TLS version. Update it to a supported version. Learn more https://aka.ms/appgw-oldtlsversions[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_application_gateway.main,
+	            	[31m│[0m [0m  on main.tf line 42, in resource "azurerm_application_gateway" "main":
+	            	[31m│[0m [0m  42: resource "azurerm_application_gateway" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-p6cqyklf"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM2"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[1],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-p6cqyklf"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM1"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[0],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-application-gateway
+
+FailNow
+
+---
+
+## 12 Jul 26 02:01 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Application Gateway (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-16qchydc"
+	            	[31m│[0m [0mApplication Gateway Name: "myAppGateway"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: ApplicationGatewayDeprecatedTlsVersionUsedInSslPolicy: The TLS policy AppGwSslPolicy20150501 for Application Gateway /subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/101-application-gateway-16qchydc/providers/Microsoft.Network/applicationGateways/myAppGateway is using a deprecated TLS version. Update it to a supported version. Learn more https://aka.ms/appgw-oldtlsversions[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_application_gateway.main,
+	            	[31m│[0m [0m  on main.tf line 42, in resource "azurerm_application_gateway" "main":
+	            	[31m│[0m [0m  42: resource "azurerm_application_gateway" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-16qchydc"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM1"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[0],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-16qchydc"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM2"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[1],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-application-gateway
+
+FailNow
+
+---
+
+## 05 Jul 26 01:55 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Application Gateway (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-9wpdp1fg"
+	            	[31m│[0m [0mApplication Gateway Name: "myAppGateway"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: ApplicationGatewayDeprecatedTlsVersionUsedInSslPolicy: The TLS policy AppGwSslPolicy20150501 for Application Gateway /subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/101-application-gateway-9wpdp1fg/providers/Microsoft.Network/applicationGateways/myAppGateway is using a deprecated TLS version. Update it to a supported version. Learn more https://aka.ms/appgw-oldtlsversions[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_application_gateway.main,
+	            	[31m│[0m [0m  on main.tf line 42, in resource "azurerm_application_gateway" "main":
+	            	[31m│[0m [0m  42: resource "azurerm_application_gateway" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-9wpdp1fg"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM1"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[0],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-9wpdp1fg"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM2"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[1],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-application-gateway
+
+FailNow
+
+---
+
+## 28 Jun 26 01:00 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Application Gateway (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-k7m6s1n9"
+	            	[31m│[0m [0mApplication Gateway Name: "myAppGateway"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: ApplicationGatewayDeprecatedTlsVersionUsedInSslPolicy: The TLS policy AppGwSslPolicy20150501 for Application Gateway /subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/101-application-gateway-k7m6s1n9/providers/Microsoft.Network/applicationGateways/myAppGateway is using a deprecated TLS version. Update it to a supported version. Learn more https://aka.ms/appgw-oldtlsversions[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_application_gateway.main,
+	            	[31m│[0m [0m  on main.tf line 42, in resource "azurerm_application_gateway" "main":
+	            	[31m│[0m [0m  42: resource "azurerm_application_gateway" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-k7m6s1n9"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM2"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[1],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-k7m6s1n9"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM1"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[0],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-application-gateway
+
+FailNow
+
+---
+
+## 14 Jun 26 02:03 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Application Gateway (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-ri4p3ihh"
+	            	[31m│[0m [0mApplication Gateway Name: "myAppGateway"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: ApplicationGatewayDeprecatedTlsVersionUsedInSslPolicy: The TLS policy AppGwSslPolicy20150501 for Application Gateway /subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/101-application-gateway-ri4p3ihh/providers/Microsoft.Network/applicationGateways/myAppGateway is using a deprecated TLS version. Update it to a supported version. Learn more https://aka.ms/appgw-oldtlsversions[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_application_gateway.main,
+	            	[31m│[0m [0m  on main.tf line 42, in resource "azurerm_application_gateway" "main":
+	            	[31m│[0m [0m  42: resource "azurerm_application_gateway" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-ri4p3ihh"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM2"): performing CreateOrUpdate: unexpected status 409 (409 ) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[1],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-ri4p3ihh"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM1"): performing CreateOrUpdate: unexpected status 409 (409 ) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[0],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-application-gateway
+
+FailNow
+
+---
+
+## 31 May 26 00:39 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Application Gateway (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-cpo0fyxq"
+	            	[31m│[0m [0mApplication Gateway Name: "myAppGateway"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: ApplicationGatewayDeprecatedTlsVersionUsedInSslPolicy: The TLS policy AppGwSslPolicy20150501 for Application Gateway /subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/101-application-gateway-cpo0fyxq/providers/Microsoft.Network/applicationGateways/myAppGateway is using a deprecated TLS version. Update it to a supported version. Learn more https://aka.ms/appgw-oldtlsversions[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_application_gateway.main,
+	            	[31m│[0m [0m  on main.tf line 42, in resource "azurerm_application_gateway" "main":
+	            	[31m│[0m [0m  42: resource "azurerm_application_gateway" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-cpo0fyxq"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM1"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[0],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-cpo0fyxq"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM2"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[1],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-application-gateway
+
+FailNow
+
+---
+
+## 24 May 26 02:00 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Application Gateway (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-zus6o7jw"
+	            	[31m│[0m [0mApplication Gateway Name: "myAppGateway"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: ApplicationGatewayDeprecatedTlsVersionUsedInSslPolicy: The TLS policy AppGwSslPolicy20150501 for Application Gateway /subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/101-application-gateway-zus6o7jw/providers/Microsoft.Network/applicationGateways/myAppGateway is using a deprecated TLS version. Update it to a supported version. Learn more https://aka.ms/appgw-oldtlsversions[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_application_gateway.main,
+	            	[31m│[0m [0m  on main.tf line 42, in resource "azurerm_application_gateway" "main":
+	            	[31m│[0m [0m  42: resource "azurerm_application_gateway" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-zus6o7jw"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM1"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[0],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-zus6o7jw"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM2"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[1],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-application-gateway
+
+FailNow
+
+---
+
+## 10 May 26 01:58 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Application Gateway (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-rauzqrpx"
+	            	[31m│[0m [0mApplication Gateway Name: "myAppGateway"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with error: ApplicationGatewayDeprecatedTlsVersionUsedInSslPolicy: The TLS policy AppGwSslPolicy20150501 for Application Gateway /subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/101-application-gateway-rauzqrpx/providers/Microsoft.Network/applicationGateways/myAppGateway is using a deprecated TLS version. Update it to a supported version. Learn more https://aka.ms/appgw-oldtlsversions[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_application_gateway.main,
+	            	[31m│[0m [0m  on main.tf line 42, in resource "azurerm_application_gateway" "main":
+	            	[31m│[0m [0m  42: resource "azurerm_application_gateway" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-rauzqrpx"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM1"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[0],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "101-application-gateway-rauzqrpx"
+	            	[31m│[0m [0mVirtual Machine Name: "myVM2"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: SkuNotAvailable: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_DS1_v2' is currently not available in location 'eastus'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm[1],
+	            	[31m│[0m [0m  on main.tf line 125, in resource "azurerm_windows_virtual_machine" "vm":
+	            	[31m│[0m [0m 125: resource "azurerm_windows_virtual_machine" "vm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-application-gateway
+
+FailNow
+
+---
+
 ## 26 Apr 26 01:47 UTC
 
 Success: false

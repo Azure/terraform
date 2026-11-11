@@ -1,3 +1,1599 @@
+## 08 Nov 26 00:14 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.13.0
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: b9e2d2b3-095b-44a1-8234-8e6bece4c500 Correlation ID: d4d4eef5-851c-41a3-95c7-6a0bbcceef39 Timestamp: 2026-11-08 00:14:08Z","error_codes":[5000229],"timestamp":"2026-11-08 00:14:08Z","trace_id":"b9e2d2b3-095b-44a1-8234-8e6bece4c500","correlation_id":"d4d4eef5-851c-41a3-95c7-6a0bbcceef39"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 19, in provider "azurerm":
+	            	[31m│[0m [0m  19: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-clusters-fleet-manager-azapi
+
+FailNow
+
+---
+
+## 01 Nov 26 00:18 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.13.0
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: cb089a31-ba44-4b83-9a8d-519ac00a6801 Correlation ID: 917b02cd-ce49-429d-b03d-2cdc6e120ca1 Timestamp: 2026-11-01 00:18:04Z","error_codes":[5000229],"timestamp":"2026-11-01 00:18:04Z","trace_id":"cb089a31-ba44-4b83-9a8d-519ac00a6801","correlation_id":"917b02cd-ce49-429d-b03d-2cdc6e120ca1"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 19, in provider "azurerm":
+	            	[31m│[0m [0m  19: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-clusters-fleet-manager-azapi
+
+FailNow
+
+---
+
+## 25 Oct 26 00:18 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.13.0
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: af10ece6-361a-4386-975c-08f594a3ea00 Correlation ID: 46c7bd26-09aa-40e2-850f-cc039d6a7a1c Timestamp: 2026-10-25 00:18:13Z","error_codes":[5000229],"timestamp":"2026-10-25 00:18:13Z","trace_id":"af10ece6-361a-4386-975c-08f594a3ea00","correlation_id":"46c7bd26-09aa-40e2-850f-cc039d6a7a1c"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 19, in provider "azurerm":
+	            	[31m│[0m [0m  19: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-clusters-fleet-manager-azapi
+
+FailNow
+
+---
+
+## 18 Oct 26 00:51 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.13.0
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-x2jl"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-1-x2jl"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-1-x2jl is on version 1.32.11, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[0],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-x2jl"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-2-x2jl"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-2-x2jl is on version 1.31.13, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[1],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-x2jl"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-3-x2jl"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-3-x2jl is on version 1.31.13, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[2],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-clusters-fleet-manager-azapi
+
+FailNow
+
+---
+
+## 11 Oct 26 00:53 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.13.0
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-tngu"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-3-tngu"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-3-tngu is on version 1.31.13, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[2],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-tngu"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-2-tngu"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-2-tngu is on version 1.31.13, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[1],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-tngu"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-1-tngu"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-1-tngu is on version 1.32.11, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[0],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-clusters-fleet-manager-azapi
+
+FailNow
+
+---
+
+## 04 Oct 26 01:13 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.13.0
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-lbzv"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-1-lbzv"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-1-lbzv is on version 1.32.11, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[0],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-lbzv"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-2-lbzv"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-2-lbzv is on version 1.31.13, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[1],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-lbzv"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-3-lbzv"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-3-lbzv is on version 1.31.13, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[2],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-clusters-fleet-manager-azapi
+
+FailNow
+
+---
+
+## 27 Sep 26 01:55 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.12.0
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-80mt"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-1-80mt"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-1-80mt is on version 1.32.11, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[0],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-80mt"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-3-80mt"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-3-80mt is on version 1.31.13, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[2],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-80mt"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-2-80mt"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-2-80mt is on version 1.31.13, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[1],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-clusters-fleet-manager-azapi
+
+FailNow
+
+---
+
+## 20 Sep 26 00:54 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.12.0
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-0oq6"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-3-0oq6"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-3-0oq6 is on version 1.31.13, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[2],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-0oq6"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-2-0oq6"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-2-0oq6 is on version 1.31.13, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[1],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-0oq6"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-1-0oq6"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-1-0oq6 is on version 1.32.11, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[0],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-clusters-fleet-manager-azapi
+
+FailNow
+
+---
+
+## 13 Sep 26 01:52 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.12.0
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-a9y6"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-3-a9y6"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-3-a9y6 is on version 1.31.13, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[2],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-a9y6"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-1-a9y6"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-1-a9y6 is on version 1.32.11, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[0],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-a9y6"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-2-a9y6"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-2-a9y6 is on version 1.31.13, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[1],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-clusters-fleet-manager-azapi
+
+FailNow
+
+---
+
+## 06 Sep 26 00:19 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.12.0
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-fmjw"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-2-fmjw"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-2-fmjw is on version 1.31.13, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[1],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-fmjw"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-3-fmjw"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-3-fmjw is on version 1.31.13, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[2],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-fmjw"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-1-fmjw"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-1-fmjw is on version 1.32.11, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[0],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mFailed to create/update resource[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azapi_resource.fleet,
+	            	[31m│[0m [0m  on fleet.tf line 6, in resource "azapi_resource" "fleet":
+	            	[31m│[0m [0m   6: resource "azapi_resource" "fleet" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating/updating Resource: (ResourceId
+	            	[31m│[0m [0m"/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-fleet-example-fmjw/providers/Microsoft.ContainerService/fleets/fleet-example-fmjw"
+	            	[31m│[0m [0m/ Api Version "2025-03-01"): GET
+	            	[31m│[0m [0mhttps://management.azure.com/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/providers/Microsoft.ContainerService/locations/australiaeast/operations/5f40faa4-977b-4918-bd14-c043678889da
+	            	[31m│[0m [0m--------------------------------------------------------------------------------
+	            	[31m│[0m [0mRESPONSE 200: 200 OK
+	            	[31m│[0m [0mERROR CODE: HubClusterVMSizeNotAvailable
+	            	[31m│[0m [0m--------------------------------------------------------------------------------
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m  "name": "5f40faa4-977b-4918-bd14-c043678889da",
+	            	[31m│[0m [0m  "status": "Failed",
+	            	[31m│[0m [0m  "startTime": "2026-09-06T00:16:56.8217978Z",
+	            	[31m│[0m [0m  "endTime": "2026-09-06T00:18:06.5992095Z",
+	            	[31m│[0m [0m  "error": {
+	            	[31m│[0m [0m    "code": "HubClusterVMSizeNotAvailable",
+	            	[31m│[0m [0m    "message": "The VM Size specified for hub cluster is not available, original error: \"All attempts fail:\\n#1: PUT https://management.azure.com/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/FL_rg-fleet-example-fmjw_fleet-example-fmjw_australiaeast/providers/Microsoft.ContainerService/managedClusters/hub\\n--------------------------------------------------------------------------------\\nRESPONSE 400: 400 Bad Request\\nERROR CODE: ErrCode_InsufficientVCPUQuota\\n--------------------------------------------------------------------------------\\n{\\n  \\\"code\\\": \\\"ErrCode_InsufficientVCPUQuota\\\",\\n  \\\"details\\\": null,\\n  \\\"message\\\": \\\"Insufficient regional vcpu quota left for location australiaeast. left regional vcpu quota 2, requested quota 4. If you want to increase the quota, please follow this instruction: https://learn.microsoft.com/en-us/azure/quotas/view-quotas. Surge nodes would also consume vcpu quota, please consider use smaller maxSurge or use maxUnavailable to proceed upgrade without surge nodes, details: aka.ms/aks/maxUnavailable.\\\",\\n  \\\"subcode\\\": \\\"\\\"\\n}\\n--------------------------------------------------------------------------------\\n\". See https://learn.microsoft.com/en-us/rest/api/compute/virtual-machines/list-available-sizes?tabs=HTTP for information on listing available VM sizes.. Resource ID: \"/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-fleet-example-fmjw/providers/Microsoft.ContainerService/fleets/fleet-example-fmjw\". Correlation ID: \"1fddd5ac-869a-9f3c-5fff-1c6c9e038bc5\". Operation ID: \"5f40faa4-977b-4918-bd14-c043678889da\""
+	            	[31m│[0m [0m  }
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m--------------------------------------------------------------------------------
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-clusters-fleet-manager-azapi
+
+FailNow
+
+---
+
+## 30 Aug 26 02:21 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.12.0
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-9gal"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-2-9gal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-2-9gal is on version 1.31.13, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[1],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-9gal"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-1-9gal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-1-9gal is on version 1.32.11, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[0],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-9gal"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-3-9gal"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-3-9gal is on version 1.31.13, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[2],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-clusters-fleet-manager-azapi
+
+FailNow
+
+---
+
+## 23 Aug 26 00:39 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.12.0
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-ck20"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-3-ck20"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-3-ck20 is on version 1.31.13, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[2],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-ck20"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-1-ck20"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-1-ck20 is on version 1.32.11, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[0],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-ck20"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-2-ck20"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-2-ck20 is on version 1.31.13, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[1],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-clusters-fleet-manager-azapi
+
+FailNow
+
+---
+
+## 16 Aug 26 00:41 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.12.0
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-xea2"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-1-xea2"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-1-xea2 is on version 1.32.11, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[0],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-xea2"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-3-xea2"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-3-xea2 is on version 1.31.13, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[2],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-xea2"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-2-xea2"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-2-xea2 is on version 1.31.13, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[1],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-clusters-fleet-manager-azapi
+
+FailNow
+
+---
+
+## 09 Aug 26 01:03 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.11.0
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-z55c"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-1-z55c"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-1-z55c is on version 1.32.11, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[0],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-z55c"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-2-z55c"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-2-z55c is on version 1.31.13, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[1],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-z55c"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-3-z55c"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-3-z55c is on version 1.31.13, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[2],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-clusters-fleet-manager-azapi
+
+FailNow
+
+---
+
+## 02 Aug 26 01:47 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.11.0
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-lulu"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-1-lulu"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-1-lulu is on version 1.32.11, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[0],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-lulu"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-3-lulu"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-3-lulu is on version 1.31.13, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[2],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-lulu"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-2-lulu"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-2-lulu is on version 1.31.13, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[1],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-clusters-fleet-manager-azapi
+
+FailNow
+
+---
+
+## 26 Jul 26 00:42 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.11.0
++ provider registry.terraform.io/hashicorp/azurerm v4.81.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-c9zg"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-1-c9zg"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-1-c9zg is on version 1.32.11, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[0],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-c9zg"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-2-c9zg"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-2-c9zg is on version 1.31.13, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[1],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-c9zg"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-3-c9zg"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-3-c9zg is on version 1.31.13, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[2],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-clusters-fleet-manager-azapi
+
+FailNow
+
+---
+
+## 12 Jul 26 01:18 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.10.0
++ provider registry.terraform.io/hashicorp/azurerm v4.80.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-ww55"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-1-ww55"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-1-ww55 is on version 1.32.11, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[0],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-ww55"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-3-ww55"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-3-ww55 is on version 1.31.13, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[2],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-ww55"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-2-ww55"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-2-ww55 is on version 1.31.13, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[1],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-clusters-fleet-manager-azapi
+
+FailNow
+
+---
+
+## 05 Jul 26 01:06 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.10.0
++ provider registry.terraform.io/hashicorp/azurerm v4.80.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-8sws"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-2-8sws"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-2-8sws is on version 1.31.13, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[1],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-8sws"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-1-8sws"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-1-8sws is on version 1.32.11, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[0],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-8sws"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-3-8sws"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-3-8sws is on version 1.31.13, which is only available for Long-Term Support (LTS). To enable LTS on the cluster, see https://aka.ms/aks/enable-lts. Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, see https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[2],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-clusters-fleet-manager-azapi
+
+FailNow
+
+---
+
+## 28 Jun 26 01:15 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.10.0
++ provider registry.terraform.io/hashicorp/azurerm v4.79.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-h61i"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-3-h61i"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-3-h61i is on version 1.31.13, which is only available for Long-Term Support (LTS). If you intend to onboard to LTS, please ensure the cluster is in Premium tier and LTS support plan (see https://aka.ms/aks/enable-lts). Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, please check https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[2],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-h61i"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-2-h61i"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-2-h61i is on version 1.31.13, which is only available for Long-Term Support (LTS). If you intend to onboard to LTS, please ensure the cluster is in Premium tier and LTS support plan (see https://aka.ms/aks/enable-lts). Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, please check https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[1],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-h61i"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-1-h61i"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-1-h61i is on version 1.32.11, which is only available for Long-Term Support (LTS). If you intend to onboard to LTS, please ensure the cluster is in Premium tier and LTS support plan (see https://aka.ms/aks/enable-lts). Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, please check https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[0],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-clusters-fleet-manager-azapi
+
+FailNow
+
+---
+
+## 14 Jun 26 01:09 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.10.0
++ provider registry.terraform.io/hashicorp/azurerm v4.77.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-3yox"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-1-3yox"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-1-3yox is on version 1.32.11, which is only available for Long-Term Support (LTS). If you intend to onboard to LTS, please ensure the cluster is in Premium tier and LTS support plan (see https://aka.ms/aks/enable-lts). Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, please check https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[0],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-3yox"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-2-3yox"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-2-3yox is on version 1.31.13, which is only available for Long-Term Support (LTS). If you intend to onboard to LTS, please ensure the cluster is in Premium tier and LTS support plan (see https://aka.ms/aks/enable-lts). Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, please check https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[1],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-3yox"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-3-3yox"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-3-3yox is on version 1.31.13, which is only available for Long-Term Support (LTS). If you intend to onboard to LTS, please ensure the cluster is in Premium tier and LTS support plan (see https://aka.ms/aks/enable-lts). Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, please check https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[2],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-clusters-fleet-manager-azapi
+
+FailNow
+
+---
+
+## 31 May 26 02:14 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.10.0
++ provider registry.terraform.io/hashicorp/azurerm v4.74.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-pkc2"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-1-pkc2"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-1-pkc2 is on version 1.32.11, which is only available for Long-Term Support (LTS). If you intend to onboard to LTS, please ensure the cluster is in Premium tier and LTS support plan (see https://aka.ms/aks/enable-lts). Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, please check https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[0],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-pkc2"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-2-pkc2"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-2-pkc2 is on version 1.31.13, which is only available for Long-Term Support (LTS). If you intend to onboard to LTS, please ensure the cluster is in Premium tier and LTS support plan (see https://aka.ms/aks/enable-lts). Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, please check https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[1],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-pkc2"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-3-pkc2"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-3-pkc2 is on version 1.31.13, which is only available for Long-Term Support (LTS). If you intend to onboard to LTS, please ensure the cluster is in Premium tier and LTS support plan (see https://aka.ms/aks/enable-lts). Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, please check https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[2],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-clusters-fleet-manager-azapi
+
+FailNow
+
+---
+
+## 24 May 26 01:00 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.10.0
++ provider registry.terraform.io/hashicorp/azurerm v4.74.0
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-plbw"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-1-plbw"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-1-plbw is on version 1.32.11, which is only available for Long-Term Support (LTS). If you intend to onboard to LTS, please ensure the cluster is in Premium tier and LTS support plan (see https://aka.ms/aks/enable-lts). Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, please check https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[0],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-plbw"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-2-plbw"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-2-plbw is on version 1.31.13, which is only available for Long-Term Support (LTS). If you intend to onboard to LTS, please ensure the cluster is in Premium tier and LTS support plan (see https://aka.ms/aks/enable-lts). Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, please check https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[1],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-plbw"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-3-plbw"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-3-plbw is on version 1.31.13, which is only available for Long-Term Support (LTS). If you intend to onboard to LTS, please ensure the cluster is in Premium tier and LTS support plan (see https://aka.ms/aks/enable-lts). Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, please check https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[2],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-clusters-fleet-manager-azapi
+
+FailNow
+
+---
+
+## 10 May 26 01:25 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/azure/azapi v2.9.0
++ provider registry.terraform.io/hashicorp/azurerm v4.72.0
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-fsdv"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-2-fsdv"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-2-fsdv is on version 1.31.13, which is only available for Long-Term Support (LTS). If you intend to onboard to LTS, please ensure the cluster is in Premium tier and LTS support plan (see https://aka.ms/aks/enable-lts). Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, please check https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[1],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-fsdv"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-3-fsdv"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-3-fsdv is on version 1.31.13, which is only available for Long-Term Support (LTS). If you intend to onboard to LTS, please ensure the cluster is in Premium tier and LTS support plan (see https://aka.ms/aks/enable-lts). Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, please check https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[2],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-fleet-example-fsdv"
+	            	[31m│[0m [0mKubernetes Cluster Name: "aks-member-1-fsdv"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "K8sVersionNotSupported",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Managed cluster aks-member-1-fsdv is on version 1.32.11, which is only available for Long-Term Support (LTS). If you intend to onboard to LTS, please ensure the cluster is in Premium tier and LTS support plan (see https://aka.ms/aks/enable-lts). Otherwise, use [az aks get-versions] command to get the supported version list in this region. For more information, please check https://aka.ms/supported-version-list",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.member_clusters[0],
+	            	[31m│[0m [0m  on aks-clusters.tf line 10, in resource "azurerm_kubernetes_cluster" "member_clusters":
+	            	[31m│[0m [0m  10: resource "azurerm_kubernetes_cluster" "member_clusters" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-clusters-fleet-manager-azapi
+
+FailNow
+
+---
+
 ## 26 Apr 26 00:53 UTC
 
 Success: false

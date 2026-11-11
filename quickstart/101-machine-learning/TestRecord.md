@@ -1,3 +1,1556 @@
+## 08 Nov 26 00:17 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant '4f00b3b6-2940-4f2c-b037-94637c180d30' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: ddfbafb8-02a4-4fbc-abe3-90746ccfd800 Correlation ID: ad243610-85d5-4688-88fb-36d2ac6c5310 Timestamp: 2026-11-08 00:17:48Z","error_codes":[5000229],"timestamp":"2026-11-08 00:17:48Z","trace_id":"ddfbafb8-02a4-4fbc-abe3-90746ccfd800","correlation_id":"ad243610-85d5-4688-88fb-36d2ac6c5310"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-machine-learning
+
+FailNow
+
+---
+
+## 01 Nov 26 00:15 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 501324ea-3b09-43fd-82e5-32a571d41900 Correlation ID: cce81602-8a1f-4e79-8d0f-c0546c7b3cb2 Timestamp: 2026-11-01 00:15:30Z","error_codes":[5000229],"timestamp":"2026-11-01 00:15:30Z","trace_id":"501324ea-3b09-43fd-82e5-32a571d41900","correlation_id":"cce81602-8a1f-4e79-8d0f-c0546c7b3cb2"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-machine-learning
+
+FailNow
+
+---
+
+## 25 Oct 26 00:14 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: f85a6b5f-e7bd-47d5-9227-6ac201343100 Correlation ID: b1e1d4ac-8801-43f8-b108-34c409cbdbd8 Timestamp: 2026-10-25 00:14:12Z","error_codes":[5000229],"timestamp":"2026-10-25 00:14:12Z","trace_id":"f85a6b5f-e7bd-47d5-9227-6ac201343100","correlation_id":"b1e1d4ac-8801-43f8-b108-34c409cbdbd8"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-machine-learning
+
+FailNow
+
+---
+
+## 18 Oct 26 01:06 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_integer.suffix: Refreshing state... [id=51056381][0m
+	            	[0m[1mrandom_string.ci_prefix: Refreshing state... [id=fakydksd][0m
+	            	[0m[1mrandom_pet.prefix: Refreshing state... [id=ml-proven-beetle][0m
+	            	[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-proven-beetle-rg][0m
+	            	[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD02MmQ3ZjU4ZC01ZWJjLTQ4ZGYtYTUwOS0xZmQzZGU2ZWVmODc7b2JqZWN0SWQ9N2ZmNDJiMDgtNDZkZC00NmE3LThjZWYtYTNiZDlmNmE4NmY2O3N1YnNjcmlwdGlvbklkPWU0YjYyYjNiLTc2MzQtNDk3Mi04YmJlLTVkNzE5NzE1OWYyNjt0ZW5hbnRJZD00ZjAwYjNiNi0yOTQwLTRmMmMtYjAzNy05NDYzN2MxODBkMzA=][0m
+	            	[0m[1mazurerm_application_insights.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-proven-beetle-rg/providers/Microsoft.Insights/components/ml-proven-beetle-appi][0m
+	            	[0m[1mazurerm_container_registry.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-proven-beetle-rg/providers/Microsoft.ContainerRegistry/registries/mldev51056381cr][0m
+	            	[0m[1mazurerm_key_vault.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-proven-beetle-rg/providers/Microsoft.KeyVault/vaults/mldev51056381kv][0m
+	            	[0m[1mazurerm_storage_account.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-proven-beetle-rg/providers/Microsoft.Storage/storageAccounts/mldev51056381st][0m
+	            	[0m[1mazurerm_machine_learning_workspace.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-proven-beetle-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-proven-beetle-mlw][0m
+	            	[0m[1mazurerm_machine_learning_compute_instance.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-proven-beetle-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-proven-beetle-mlw/computes/fakydksdinstance][0m
+	            	[0m[1mazurerm_machine_learning_compute_cluster.compute: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-proven-beetle-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-proven-beetle-mlw/computes/cpu-cluster][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_application_insights.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_application_insights" "default" {
+	            	        id                                    = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-proven-beetle-rg/providers/Microsoft.Insights/components/ml-proven-beetle-appi"
+	            	        name                                  = "ml-proven-beetle-appi"
+	            	        tags                                  = {}
+	            	      [31m-[0m[0m workspace_id                          = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ai_ml-proven-beetle-appi_64b4b6e9-2f5b-4542-89d7-27da6e10a20d_managed/providers/Microsoft.OperationalInsights/workspaces/managed-ml-proven-beetle-appi-ws" [90m-> null[0m[0m
+	            	        [90m# (15 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_machine_learning_compute_instance.main,
+	            	[33m│[0m [0m  on compute.tf line 12, in resource "azurerm_machine_learning_compute_instance" "main":
+	            	[33m│[0m [0m  12:   location                      = [4mazurerm_resource_group.default.location[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe `azurerm_machine_learning_compute_instance` must be deployed to the
+	            	[33m│[0m [0msame location as the associated `azurerm_machine_learning_workspace`
+	            	[33m│[0m [0mresource, as the `location` fields must be the same the `location` field no
+	            	[33m│[0m [0mlonger has any effect and will be removed in version 4.0 of the AzureRM
+	            	[33m│[0m [0mProvider
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-machine-learning3096736064/src/quickstart/101-machine-learning/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-machine-learning3096736064/src/quickstart/101-machine-learning/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-machine-learning
+
+FailNow
+
+---
+
+## 11 Oct 26 01:09 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_integer.suffix: Refreshing state... [id=37141976][0m
+	            	[0m[1mrandom_string.ci_prefix: Refreshing state... [id=qaxttprc][0m
+	            	[0m[1mrandom_pet.prefix: Refreshing state... [id=ml-simple-starling][0m
+	            	[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-simple-starling-rg][0m
+	            	[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD02MmQ3ZjU4ZC01ZWJjLTQ4ZGYtYTUwOS0xZmQzZGU2ZWVmODc7b2JqZWN0SWQ9N2ZmNDJiMDgtNDZkZC00NmE3LThjZWYtYTNiZDlmNmE4NmY2O3N1YnNjcmlwdGlvbklkPWU0YjYyYjNiLTc2MzQtNDk3Mi04YmJlLTVkNzE5NzE1OWYyNjt0ZW5hbnRJZD00ZjAwYjNiNi0yOTQwLTRmMmMtYjAzNy05NDYzN2MxODBkMzA=][0m
+	            	[0m[1mazurerm_application_insights.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-simple-starling-rg/providers/Microsoft.Insights/components/ml-simple-starling-appi][0m
+	            	[0m[1mazurerm_container_registry.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-simple-starling-rg/providers/Microsoft.ContainerRegistry/registries/mldev37141976cr][0m
+	            	[0m[1mazurerm_key_vault.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-simple-starling-rg/providers/Microsoft.KeyVault/vaults/mldev37141976kv][0m
+	            	[0m[1mazurerm_storage_account.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-simple-starling-rg/providers/Microsoft.Storage/storageAccounts/mldev37141976st][0m
+	            	[0m[1mazurerm_machine_learning_workspace.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-simple-starling-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-simple-starling-mlw][0m
+	            	[0m[1mazurerm_machine_learning_compute_instance.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-simple-starling-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-simple-starling-mlw/computes/qaxttprcinstance][0m
+	            	[0m[1mazurerm_machine_learning_compute_cluster.compute: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-simple-starling-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-simple-starling-mlw/computes/cpu-cluster][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_application_insights.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_application_insights" "default" {
+	            	        id                                    = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-simple-starling-rg/providers/Microsoft.Insights/components/ml-simple-starling-appi"
+	            	        name                                  = "ml-simple-starling-appi"
+	            	        tags                                  = {}
+	            	      [31m-[0m[0m workspace_id                          = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ai_ml-simple-starling-appi_72160073-28a3-49b9-bb0e-67b9b5a766ae_managed/providers/Microsoft.OperationalInsights/workspaces/managed-ml-simple-starling-appi-ws" [90m-> null[0m[0m
+	            	        [90m# (15 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_machine_learning_compute_instance.main,
+	            	[33m│[0m [0m  on compute.tf line 12, in resource "azurerm_machine_learning_compute_instance" "main":
+	            	[33m│[0m [0m  12:   location                      = [4mazurerm_resource_group.default.location[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe `azurerm_machine_learning_compute_instance` must be deployed to the
+	            	[33m│[0m [0msame location as the associated `azurerm_machine_learning_workspace`
+	            	[33m│[0m [0mresource, as the `location` fields must be the same the `location` field no
+	            	[33m│[0m [0mlonger has any effect and will be removed in version 4.0 of the AzureRM
+	            	[33m│[0m [0mProvider
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-machine-learning4059013688/src/quickstart/101-machine-learning/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-machine-learning4059013688/src/quickstart/101-machine-learning/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-machine-learning
+
+FailNow
+
+---
+
+## 04 Oct 26 01:35 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.ci_prefix: Refreshing state... [id=tcypuapc][0m
+	            	[0m[1mrandom_pet.prefix: Refreshing state... [id=ml-skilled-herring][0m
+	            	[0m[1mrandom_integer.suffix: Refreshing state... [id=81436929][0m
+	            	[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-skilled-herring-rg][0m
+	            	[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD02MmQ3ZjU4ZC01ZWJjLTQ4ZGYtYTUwOS0xZmQzZGU2ZWVmODc7b2JqZWN0SWQ9N2ZmNDJiMDgtNDZkZC00NmE3LThjZWYtYTNiZDlmNmE4NmY2O3N1YnNjcmlwdGlvbklkPWU0YjYyYjNiLTc2MzQtNDk3Mi04YmJlLTVkNzE5NzE1OWYyNjt0ZW5hbnRJZD00ZjAwYjNiNi0yOTQwLTRmMmMtYjAzNy05NDYzN2MxODBkMzA=][0m
+	            	[0m[1mazurerm_container_registry.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-skilled-herring-rg/providers/Microsoft.ContainerRegistry/registries/mldev81436929cr][0m
+	            	[0m[1mazurerm_key_vault.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-skilled-herring-rg/providers/Microsoft.KeyVault/vaults/mldev81436929kv][0m
+	            	[0m[1mazurerm_application_insights.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-skilled-herring-rg/providers/Microsoft.Insights/components/ml-skilled-herring-appi][0m
+	            	[0m[1mazurerm_storage_account.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-skilled-herring-rg/providers/Microsoft.Storage/storageAccounts/mldev81436929st][0m
+	            	[0m[1mazurerm_machine_learning_workspace.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-skilled-herring-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-skilled-herring-mlw][0m
+	            	[0m[1mazurerm_machine_learning_compute_instance.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-skilled-herring-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-skilled-herring-mlw/computes/tcypuapcinstance][0m
+	            	[0m[1mazurerm_machine_learning_compute_cluster.compute: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-skilled-herring-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-skilled-herring-mlw/computes/cpu-cluster][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_application_insights.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_application_insights" "default" {
+	            	        id                                    = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-skilled-herring-rg/providers/Microsoft.Insights/components/ml-skilled-herring-appi"
+	            	        name                                  = "ml-skilled-herring-appi"
+	            	        tags                                  = {}
+	            	      [31m-[0m[0m workspace_id                          = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ai_ml-skilled-herring-appi_de23bc45-5432-45e4-9907-fe4a53368b47_managed/providers/Microsoft.OperationalInsights/workspaces/managed-ml-skilled-herring-appi-ws" [90m-> null[0m[0m
+	            	        [90m# (15 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_machine_learning_compute_instance.main,
+	            	[33m│[0m [0m  on compute.tf line 12, in resource "azurerm_machine_learning_compute_instance" "main":
+	            	[33m│[0m [0m  12:   location                      = [4mazurerm_resource_group.default.location[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe `azurerm_machine_learning_compute_instance` must be deployed to the
+	            	[33m│[0m [0msame location as the associated `azurerm_machine_learning_workspace`
+	            	[33m│[0m [0mresource, as the `location` fields must be the same the `location` field no
+	            	[33m│[0m [0mlonger has any effect and will be removed in version 4.0 of the AzureRM
+	            	[33m│[0m [0mProvider
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-machine-learning3946876395/src/quickstart/101-machine-learning/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-machine-learning3946876395/src/quickstart/101-machine-learning/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-machine-learning
+
+FailNow
+
+---
+
+## 27 Sep 26 02:53 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.ci_prefix: Refreshing state... [id=ikepdqdr][0m
+	            	[0m[1mrandom_pet.prefix: Refreshing state... [id=ml-pro-akita][0m
+	            	[0m[1mrandom_integer.suffix: Refreshing state... [id=74460035][0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-pro-akita-rg][0m
+	            	[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+	            	[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD02MmQ3ZjU4ZC01ZWJjLTQ4ZGYtYTUwOS0xZmQzZGU2ZWVmODc7b2JqZWN0SWQ9N2ZmNDJiMDgtNDZkZC00NmE3LThjZWYtYTNiZDlmNmE4NmY2O3N1YnNjcmlwdGlvbklkPWU0YjYyYjNiLTc2MzQtNDk3Mi04YmJlLTVkNzE5NzE1OWYyNjt0ZW5hbnRJZD00ZjAwYjNiNi0yOTQwLTRmMmMtYjAzNy05NDYzN2MxODBkMzA=][0m
+	            	[0m[1mazurerm_application_insights.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-pro-akita-rg/providers/Microsoft.Insights/components/ml-pro-akita-appi][0m
+	            	[0m[1mazurerm_container_registry.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-pro-akita-rg/providers/Microsoft.ContainerRegistry/registries/mldev74460035cr][0m
+	            	[0m[1mazurerm_key_vault.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-pro-akita-rg/providers/Microsoft.KeyVault/vaults/mldev74460035kv][0m
+	            	[0m[1mazurerm_storage_account.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-pro-akita-rg/providers/Microsoft.Storage/storageAccounts/mldev74460035st][0m
+	            	[0m[1mazurerm_machine_learning_workspace.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-pro-akita-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-pro-akita-mlw][0m
+	            	[0m[1mazurerm_machine_learning_compute_instance.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-pro-akita-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-pro-akita-mlw/computes/ikepdqdrinstance][0m
+	            	[0m[1mazurerm_machine_learning_compute_cluster.compute: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-pro-akita-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-pro-akita-mlw/computes/cpu-cluster][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_application_insights.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_application_insights" "default" {
+	            	        id                                    = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-pro-akita-rg/providers/Microsoft.Insights/components/ml-pro-akita-appi"
+	            	        name                                  = "ml-pro-akita-appi"
+	            	        tags                                  = {}
+	            	      [31m-[0m[0m workspace_id                          = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ai_ml-pro-akita-appi_a687ca68-8162-4ca7-9081-2be3425ccdfe_managed/providers/Microsoft.OperationalInsights/workspaces/managed-ml-pro-akita-appi-ws" [90m-> null[0m[0m
+	            	        [90m# (15 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_machine_learning_compute_instance.main,
+	            	[33m│[0m [0m  on compute.tf line 12, in resource "azurerm_machine_learning_compute_instance" "main":
+	            	[33m│[0m [0m  12:   location                      = [4mazurerm_resource_group.default.location[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe `azurerm_machine_learning_compute_instance` must be deployed to the
+	            	[33m│[0m [0msame location as the associated `azurerm_machine_learning_workspace`
+	            	[33m│[0m [0mresource, as the `location` fields must be the same the `location` field no
+	            	[33m│[0m [0mlonger has any effect and will be removed in version 4.0 of the AzureRM
+	            	[33m│[0m [0mProvider
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-machine-learning3975574620/src/quickstart/101-machine-learning/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-machine-learning3975574620/src/quickstart/101-machine-learning/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-machine-learning
+
+FailNow
+
+---
+
+## 20 Sep 26 01:11 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_integer.suffix: Refreshing state... [id=83536691][0m
+	            	[0m[1mrandom_string.ci_prefix: Refreshing state... [id=fndzlaci][0m
+	            	[0m[1mrandom_pet.prefix: Refreshing state... [id=ml-glorious-imp][0m
+	            	[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-glorious-imp-rg][0m
+	            	[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD02MmQ3ZjU4ZC01ZWJjLTQ4ZGYtYTUwOS0xZmQzZGU2ZWVmODc7b2JqZWN0SWQ9N2ZmNDJiMDgtNDZkZC00NmE3LThjZWYtYTNiZDlmNmE4NmY2O3N1YnNjcmlwdGlvbklkPWU0YjYyYjNiLTc2MzQtNDk3Mi04YmJlLTVkNzE5NzE1OWYyNjt0ZW5hbnRJZD00ZjAwYjNiNi0yOTQwLTRmMmMtYjAzNy05NDYzN2MxODBkMzA=][0m
+	            	[0m[1mazurerm_container_registry.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-glorious-imp-rg/providers/Microsoft.ContainerRegistry/registries/mldev83536691cr][0m
+	            	[0m[1mazurerm_application_insights.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-glorious-imp-rg/providers/Microsoft.Insights/components/ml-glorious-imp-appi][0m
+	            	[0m[1mazurerm_key_vault.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-glorious-imp-rg/providers/Microsoft.KeyVault/vaults/mldev83536691kv][0m
+	            	[0m[1mazurerm_storage_account.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-glorious-imp-rg/providers/Microsoft.Storage/storageAccounts/mldev83536691st][0m
+	            	[0m[1mazurerm_machine_learning_workspace.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-glorious-imp-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-glorious-imp-mlw][0m
+	            	[0m[1mazurerm_machine_learning_compute_instance.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-glorious-imp-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-glorious-imp-mlw/computes/fndzlaciinstance][0m
+	            	[0m[1mazurerm_machine_learning_compute_cluster.compute: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-glorious-imp-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-glorious-imp-mlw/computes/cpu-cluster][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_application_insights.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_application_insights" "default" {
+	            	        id                                    = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-glorious-imp-rg/providers/Microsoft.Insights/components/ml-glorious-imp-appi"
+	            	        name                                  = "ml-glorious-imp-appi"
+	            	        tags                                  = {}
+	            	      [31m-[0m[0m workspace_id                          = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ai_ml-glorious-imp-appi_09401cae-8ec2-40dd-9b25-4832cd00b020_managed/providers/Microsoft.OperationalInsights/workspaces/managed-ml-glorious-imp-appi-ws" [90m-> null[0m[0m
+	            	        [90m# (15 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_machine_learning_compute_instance.main,
+	            	[33m│[0m [0m  on compute.tf line 12, in resource "azurerm_machine_learning_compute_instance" "main":
+	            	[33m│[0m [0m  12:   location                      = [4mazurerm_resource_group.default.location[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe `azurerm_machine_learning_compute_instance` must be deployed to the
+	            	[33m│[0m [0msame location as the associated `azurerm_machine_learning_workspace`
+	            	[33m│[0m [0mresource, as the `location` fields must be the same the `location` field no
+	            	[33m│[0m [0mlonger has any effect and will be removed in version 4.0 of the AzureRM
+	            	[33m│[0m [0mProvider
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-machine-learning4104270124/src/quickstart/101-machine-learning/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-machine-learning4104270124/src/quickstart/101-machine-learning/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-machine-learning
+
+FailNow
+
+---
+
+## 13 Sep 26 02:16 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_integer.suffix: Refreshing state... [id=18726593][0m
+	            	[0m[1mrandom_pet.prefix: Refreshing state... [id=ml-allowing-hamster][0m
+	            	[0m[1mrandom_string.ci_prefix: Refreshing state... [id=fjzvgvwl][0m
+	            	[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-allowing-hamster-rg][0m
+	            	[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD02MmQ3ZjU4ZC01ZWJjLTQ4ZGYtYTUwOS0xZmQzZGU2ZWVmODc7b2JqZWN0SWQ9N2ZmNDJiMDgtNDZkZC00NmE3LThjZWYtYTNiZDlmNmE4NmY2O3N1YnNjcmlwdGlvbklkPWU0YjYyYjNiLTc2MzQtNDk3Mi04YmJlLTVkNzE5NzE1OWYyNjt0ZW5hbnRJZD00ZjAwYjNiNi0yOTQwLTRmMmMtYjAzNy05NDYzN2MxODBkMzA=][0m
+	            	[0m[1mazurerm_application_insights.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-allowing-hamster-rg/providers/Microsoft.Insights/components/ml-allowing-hamster-appi][0m
+	            	[0m[1mazurerm_key_vault.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-allowing-hamster-rg/providers/Microsoft.KeyVault/vaults/mldev18726593kv][0m
+	            	[0m[1mazurerm_container_registry.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-allowing-hamster-rg/providers/Microsoft.ContainerRegistry/registries/mldev18726593cr][0m
+	            	[0m[1mazurerm_storage_account.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-allowing-hamster-rg/providers/Microsoft.Storage/storageAccounts/mldev18726593st][0m
+	            	[0m[1mazurerm_machine_learning_workspace.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-allowing-hamster-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-allowing-hamster-mlw][0m
+	            	[0m[1mazurerm_machine_learning_compute_cluster.compute: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-allowing-hamster-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-allowing-hamster-mlw/computes/cpu-cluster][0m
+	            	[0m[1mazurerm_machine_learning_compute_instance.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-allowing-hamster-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-allowing-hamster-mlw/computes/fjzvgvwlinstance][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_application_insights.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_application_insights" "default" {
+	            	        id                                    = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-allowing-hamster-rg/providers/Microsoft.Insights/components/ml-allowing-hamster-appi"
+	            	        name                                  = "ml-allowing-hamster-appi"
+	            	        tags                                  = {}
+	            	      [31m-[0m[0m workspace_id                          = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ai_ml-allowing-hamster-appi_4e713c3b-8053-4b14-aa74-ac54ea7b45cb_managed/providers/Microsoft.OperationalInsights/workspaces/managed-ml-allowing-hamster-appi-ws" [90m-> null[0m[0m
+	            	        [90m# (15 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_machine_learning_compute_instance.main,
+	            	[33m│[0m [0m  on compute.tf line 12, in resource "azurerm_machine_learning_compute_instance" "main":
+	            	[33m│[0m [0m  12:   location                      = [4mazurerm_resource_group.default.location[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe `azurerm_machine_learning_compute_instance` must be deployed to the
+	            	[33m│[0m [0msame location as the associated `azurerm_machine_learning_workspace`
+	            	[33m│[0m [0mresource, as the `location` fields must be the same the `location` field no
+	            	[33m│[0m [0mlonger has any effect and will be removed in version 4.0 of the AzureRM
+	            	[33m│[0m [0mProvider
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-machine-learning226902099/src/quickstart/101-machine-learning/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-machine-learning226902099/src/quickstart/101-machine-learning/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-machine-learning
+
+FailNow
+
+---
+
+## 06 Sep 26 00:59 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_integer.suffix: Refreshing state... [id=93986026][0m
+	            	[0m[1mrandom_pet.prefix: Refreshing state... [id=ml-hip-lion][0m
+	            	[0m[1mrandom_string.ci_prefix: Refreshing state... [id=ejqshkly][0m
+	            	[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-hip-lion-rg][0m
+	            	[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD02MmQ3ZjU4ZC01ZWJjLTQ4ZGYtYTUwOS0xZmQzZGU2ZWVmODc7b2JqZWN0SWQ9N2ZmNDJiMDgtNDZkZC00NmE3LThjZWYtYTNiZDlmNmE4NmY2O3N1YnNjcmlwdGlvbklkPWU0YjYyYjNiLTc2MzQtNDk3Mi04YmJlLTVkNzE5NzE1OWYyNjt0ZW5hbnRJZD00ZjAwYjNiNi0yOTQwLTRmMmMtYjAzNy05NDYzN2MxODBkMzA=][0m
+	            	[0m[1mazurerm_key_vault.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-hip-lion-rg/providers/Microsoft.KeyVault/vaults/mldev93986026kv][0m
+	            	[0m[1mazurerm_application_insights.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-hip-lion-rg/providers/Microsoft.Insights/components/ml-hip-lion-appi][0m
+	            	[0m[1mazurerm_container_registry.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-hip-lion-rg/providers/Microsoft.ContainerRegistry/registries/mldev93986026cr][0m
+	            	[0m[1mazurerm_storage_account.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-hip-lion-rg/providers/Microsoft.Storage/storageAccounts/mldev93986026st][0m
+	            	[0m[1mazurerm_machine_learning_workspace.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-hip-lion-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-hip-lion-mlw][0m
+	            	[0m[1mazurerm_machine_learning_compute_instance.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-hip-lion-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-hip-lion-mlw/computes/ejqshklyinstance][0m
+	            	[0m[1mazurerm_machine_learning_compute_cluster.compute: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-hip-lion-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-hip-lion-mlw/computes/cpu-cluster][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_application_insights.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_application_insights" "default" {
+	            	        id                                    = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-hip-lion-rg/providers/Microsoft.Insights/components/ml-hip-lion-appi"
+	            	        name                                  = "ml-hip-lion-appi"
+	            	        tags                                  = {}
+	            	      [31m-[0m[0m workspace_id                          = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ai_ml-hip-lion-appi_a7dac3e6-e032-4bc6-8581-a12cc2e6662b_managed/providers/Microsoft.OperationalInsights/workspaces/managed-ml-hip-lion-appi-ws" [90m-> null[0m[0m
+	            	        [90m# (15 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_machine_learning_compute_instance.main,
+	            	[33m│[0m [0m  on compute.tf line 12, in resource "azurerm_machine_learning_compute_instance" "main":
+	            	[33m│[0m [0m  12:   location                      = [4mazurerm_resource_group.default.location[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe `azurerm_machine_learning_compute_instance` must be deployed to the
+	            	[33m│[0m [0msame location as the associated `azurerm_machine_learning_workspace`
+	            	[33m│[0m [0mresource, as the `location` fields must be the same the `location` field no
+	            	[33m│[0m [0mlonger has any effect and will be removed in version 4.0 of the AzureRM
+	            	[33m│[0m [0mProvider
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-machine-learning1600675485/src/quickstart/101-machine-learning/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-machine-learning1600675485/src/quickstart/101-machine-learning/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-machine-learning
+
+FailNow
+
+---
+
+## 30 Aug 26 02:38 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.prefix: Refreshing state... [id=ml-singular-bonefish][0m
+	            	[0m[1mrandom_string.ci_prefix: Refreshing state... [id=mqbsmyqk][0m
+	            	[0m[1mrandom_integer.suffix: Refreshing state... [id=80072554][0m
+	            	[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-singular-bonefish-rg][0m
+	            	[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD02MmQ3ZjU4ZC01ZWJjLTQ4ZGYtYTUwOS0xZmQzZGU2ZWVmODc7b2JqZWN0SWQ9N2ZmNDJiMDgtNDZkZC00NmE3LThjZWYtYTNiZDlmNmE4NmY2O3N1YnNjcmlwdGlvbklkPWU0YjYyYjNiLTc2MzQtNDk3Mi04YmJlLTVkNzE5NzE1OWYyNjt0ZW5hbnRJZD00ZjAwYjNiNi0yOTQwLTRmMmMtYjAzNy05NDYzN2MxODBkMzA=][0m
+	            	[0m[1mazurerm_key_vault.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-singular-bonefish-rg/providers/Microsoft.KeyVault/vaults/mldev80072554kv][0m
+	            	[0m[1mazurerm_container_registry.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-singular-bonefish-rg/providers/Microsoft.ContainerRegistry/registries/mldev80072554cr][0m
+	            	[0m[1mazurerm_application_insights.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-singular-bonefish-rg/providers/Microsoft.Insights/components/ml-singular-bonefish-appi][0m
+	            	[0m[1mazurerm_storage_account.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-singular-bonefish-rg/providers/Microsoft.Storage/storageAccounts/mldev80072554st][0m
+	            	[0m[1mazurerm_machine_learning_workspace.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-singular-bonefish-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-singular-bonefish-mlw][0m
+	            	[0m[1mazurerm_machine_learning_compute_instance.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-singular-bonefish-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-singular-bonefish-mlw/computes/mqbsmyqkinstance][0m
+	            	[0m[1mazurerm_machine_learning_compute_cluster.compute: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-singular-bonefish-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-singular-bonefish-mlw/computes/cpu-cluster][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_application_insights.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_application_insights" "default" {
+	            	        id                                    = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-singular-bonefish-rg/providers/Microsoft.Insights/components/ml-singular-bonefish-appi"
+	            	        name                                  = "ml-singular-bonefish-appi"
+	            	        tags                                  = {}
+	            	      [31m-[0m[0m workspace_id                          = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ai_ml-singular-bonefish-appi_f90bc660-8dd5-43aa-b8d8-09642d3e55dc_managed/providers/Microsoft.OperationalInsights/workspaces/managed-ml-singular-bonefish-appi-ws" [90m-> null[0m[0m
+	            	        [90m# (15 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_machine_learning_compute_instance.main,
+	            	[33m│[0m [0m  on compute.tf line 12, in resource "azurerm_machine_learning_compute_instance" "main":
+	            	[33m│[0m [0m  12:   location                      = [4mazurerm_resource_group.default.location[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe `azurerm_machine_learning_compute_instance` must be deployed to the
+	            	[33m│[0m [0msame location as the associated `azurerm_machine_learning_workspace`
+	            	[33m│[0m [0mresource, as the `location` fields must be the same the `location` field no
+	            	[33m│[0m [0mlonger has any effect and will be removed in version 4.0 of the AzureRM
+	            	[33m│[0m [0mProvider
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-machine-learning448691266/src/quickstart/101-machine-learning/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-machine-learning448691266/src/quickstart/101-machine-learning/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-machine-learning
+
+FailNow
+
+---
+
+## 23 Aug 26 01:15 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_integer.suffix: Refreshing state... [id=67180231][0m
+	            	[0m[1mrandom_string.ci_prefix: Refreshing state... [id=tzoiijtf][0m
+	            	[0m[1mrandom_pet.prefix: Refreshing state... [id=ml-electric-lamprey][0m
+	            	[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-electric-lamprey-rg][0m
+	            	[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD02MmQ3ZjU4ZC01ZWJjLTQ4ZGYtYTUwOS0xZmQzZGU2ZWVmODc7b2JqZWN0SWQ9N2ZmNDJiMDgtNDZkZC00NmE3LThjZWYtYTNiZDlmNmE4NmY2O3N1YnNjcmlwdGlvbklkPWU0YjYyYjNiLTc2MzQtNDk3Mi04YmJlLTVkNzE5NzE1OWYyNjt0ZW5hbnRJZD00ZjAwYjNiNi0yOTQwLTRmMmMtYjAzNy05NDYzN2MxODBkMzA=][0m
+	            	[0m[1mazurerm_key_vault.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-electric-lamprey-rg/providers/Microsoft.KeyVault/vaults/mldev67180231kv][0m
+	            	[0m[1mazurerm_container_registry.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-electric-lamprey-rg/providers/Microsoft.ContainerRegistry/registries/mldev67180231cr][0m
+	            	[0m[1mazurerm_application_insights.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-electric-lamprey-rg/providers/Microsoft.Insights/components/ml-electric-lamprey-appi][0m
+	            	[0m[1mazurerm_storage_account.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-electric-lamprey-rg/providers/Microsoft.Storage/storageAccounts/mldev67180231st][0m
+	            	[0m[1mazurerm_machine_learning_workspace.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-electric-lamprey-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-electric-lamprey-mlw][0m
+	            	[0m[1mazurerm_machine_learning_compute_instance.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-electric-lamprey-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-electric-lamprey-mlw/computes/tzoiijtfinstance][0m
+	            	[0m[1mazurerm_machine_learning_compute_cluster.compute: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-electric-lamprey-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-electric-lamprey-mlw/computes/cpu-cluster][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_application_insights.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_application_insights" "default" {
+	            	        id                                    = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-electric-lamprey-rg/providers/Microsoft.Insights/components/ml-electric-lamprey-appi"
+	            	        name                                  = "ml-electric-lamprey-appi"
+	            	        tags                                  = {}
+	            	      [31m-[0m[0m workspace_id                          = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ai_ml-electric-lamprey-appi_b5def858-8070-402a-9b13-cb79269e6b23_managed/providers/Microsoft.OperationalInsights/workspaces/managed-ml-electric-lamprey-appi-ws" [90m-> null[0m[0m
+	            	        [90m# (15 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_machine_learning_compute_instance.main,
+	            	[33m│[0m [0m  on compute.tf line 12, in resource "azurerm_machine_learning_compute_instance" "main":
+	            	[33m│[0m [0m  12:   location                      = [4mazurerm_resource_group.default.location[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe `azurerm_machine_learning_compute_instance` must be deployed to the
+	            	[33m│[0m [0msame location as the associated `azurerm_machine_learning_workspace`
+	            	[33m│[0m [0mresource, as the `location` fields must be the same the `location` field no
+	            	[33m│[0m [0mlonger has any effect and will be removed in version 4.0 of the AzureRM
+	            	[33m│[0m [0mProvider
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-machine-learning1274869337/src/quickstart/101-machine-learning/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-machine-learning1274869337/src/quickstart/101-machine-learning/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-machine-learning
+
+FailNow
+
+---
+
+## 16 Aug 26 00:54 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.prefix: Refreshing state... [id=ml-trusted-wallaby][0m
+	            	[0m[1mrandom_integer.suffix: Refreshing state... [id=27786323][0m
+	            	[0m[1mrandom_string.ci_prefix: Refreshing state... [id=kqmstdtz][0m
+	            	[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-trusted-wallaby-rg][0m
+	            	[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD02MmQ3ZjU4ZC01ZWJjLTQ4ZGYtYTUwOS0xZmQzZGU2ZWVmODc7b2JqZWN0SWQ9N2ZmNDJiMDgtNDZkZC00NmE3LThjZWYtYTNiZDlmNmE4NmY2O3N1YnNjcmlwdGlvbklkPWU0YjYyYjNiLTc2MzQtNDk3Mi04YmJlLTVkNzE5NzE1OWYyNjt0ZW5hbnRJZD00ZjAwYjNiNi0yOTQwLTRmMmMtYjAzNy05NDYzN2MxODBkMzA=][0m
+	            	[0m[1mazurerm_application_insights.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-trusted-wallaby-rg/providers/Microsoft.Insights/components/ml-trusted-wallaby-appi][0m
+	            	[0m[1mazurerm_key_vault.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-trusted-wallaby-rg/providers/Microsoft.KeyVault/vaults/mldev27786323kv][0m
+	            	[0m[1mazurerm_container_registry.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-trusted-wallaby-rg/providers/Microsoft.ContainerRegistry/registries/mldev27786323cr][0m
+	            	[0m[1mazurerm_storage_account.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-trusted-wallaby-rg/providers/Microsoft.Storage/storageAccounts/mldev27786323st][0m
+	            	[0m[1mazurerm_machine_learning_workspace.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-trusted-wallaby-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-trusted-wallaby-mlw][0m
+	            	[0m[1mazurerm_machine_learning_compute_instance.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-trusted-wallaby-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-trusted-wallaby-mlw/computes/kqmstdtzinstance][0m
+	            	[0m[1mazurerm_machine_learning_compute_cluster.compute: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-trusted-wallaby-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-trusted-wallaby-mlw/computes/cpu-cluster][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_application_insights.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_application_insights" "default" {
+	            	        id                                    = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-trusted-wallaby-rg/providers/Microsoft.Insights/components/ml-trusted-wallaby-appi"
+	            	        name                                  = "ml-trusted-wallaby-appi"
+	            	        tags                                  = {}
+	            	      [31m-[0m[0m workspace_id                          = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ai_ml-trusted-wallaby-appi_8ab6935c-9490-47dc-a097-791cdc2e4af2_managed/providers/Microsoft.OperationalInsights/workspaces/managed-ml-trusted-wallaby-appi-ws" [90m-> null[0m[0m
+	            	        [90m# (15 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_machine_learning_compute_instance.main,
+	            	[33m│[0m [0m  on compute.tf line 12, in resource "azurerm_machine_learning_compute_instance" "main":
+	            	[33m│[0m [0m  12:   location                      = [4mazurerm_resource_group.default.location[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe `azurerm_machine_learning_compute_instance` must be deployed to the
+	            	[33m│[0m [0msame location as the associated `azurerm_machine_learning_workspace`
+	            	[33m│[0m [0mresource, as the `location` fields must be the same the `location` field no
+	            	[33m│[0m [0mlonger has any effect and will be removed in version 4.0 of the AzureRM
+	            	[33m│[0m [0mProvider
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-machine-learning1539461907/src/quickstart/101-machine-learning/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-machine-learning1539461907/src/quickstart/101-machine-learning/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-machine-learning
+
+FailNow
+
+---
+
+## 09 Aug 26 01:31 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mwaiting for creation of Machine Learning Compute (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "ml-sincere-koala-rg"
+	            	[31m│[0m [0mWorkspace Name: "ml-sincere-koala-mlw"
+	            	[31m│[0m [0mCompute Name: "ifqzyjbyinstance"): polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "BadRequest"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "{\"id\":\"https://resourceprovider.batchai-eastus.svc/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/providers/Microsoft.BatchAI/locations/eastus/operationresults/90330bcf-ddb8-49f3-a60d-fc3b73656a00\",\"name\":\"90330bcf-ddb8-49f3-a60d-fc3b73656a00\",\"status\":\"Failed\",\"startTime\":\"2026-08-09T01:27:38.25Z\",\"endTime\":\"2026-08-09T01:27:59.694Z\",\"error\":{\"code\":\"OutOfCapacity\",\"message\":\"The specified Managed Compute ifqzyjbyinstance failed provisioning as Azure Machine Learning is out of capacity. Please retry later or try deploying to a different region\"}}"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m  "status": "Failed",
+	            	[31m│[0m [0m  "error": {
+	            	[31m│[0m [0m    "code": "BadRequest",
+	            	[31m│[0m [0m    "message": "{\"id\":\"https://resourceprovider.batchai-eastus.svc/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/providers/Microsoft.BatchAI/locations/eastus/operationresults/90330bcf-ddb8-49f3-a60d-fc3b73656a00\",\"name\":\"90330bcf-ddb8-49f3-a60d-fc3b73656a00\",\"status\":\"Failed\",\"startTime\":\"2026-08-09T01:27:38.25Z\",\"endTime\":\"2026-08-09T01:27:59.694Z\",\"error\":{\"code\":\"OutOfCapacity\",\"message\":\"The specified Managed Compute ifqzyjbyinstance failed provisioning as Azure Machine Learning is out of capacity. Please retry later or try deploying to a different region\"}}"
+	            	[31m│[0m [0m  }
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_machine_learning_compute_instance.main,
+	            	[31m│[0m [0m  on compute.tf line 10, in resource "azurerm_machine_learning_compute_instance" "main":
+	            	[31m│[0m [0m  10: resource "azurerm_machine_learning_compute_instance" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-machine-learning
+
+FailNow
+
+---
+
+## 02 Aug 26 00:39 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.prefix: Refreshing state... [id=ml-evolving-rat][0m
+	            	[0m[1mrandom_string.ci_prefix: Refreshing state... [id=zklbnsii][0m
+	            	[0m[1mrandom_integer.suffix: Refreshing state... [id=36296068][0m
+	            	[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-evolving-rat-rg][0m
+	            	[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD02MmQ3ZjU4ZC01ZWJjLTQ4ZGYtYTUwOS0xZmQzZGU2ZWVmODc7b2JqZWN0SWQ9N2ZmNDJiMDgtNDZkZC00NmE3LThjZWYtYTNiZDlmNmE4NmY2O3N1YnNjcmlwdGlvbklkPWU0YjYyYjNiLTc2MzQtNDk3Mi04YmJlLTVkNzE5NzE1OWYyNjt0ZW5hbnRJZD00ZjAwYjNiNi0yOTQwLTRmMmMtYjAzNy05NDYzN2MxODBkMzA=][0m
+	            	[0m[1mazurerm_application_insights.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-evolving-rat-rg/providers/Microsoft.Insights/components/ml-evolving-rat-appi][0m
+	            	[0m[1mazurerm_key_vault.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-evolving-rat-rg/providers/Microsoft.KeyVault/vaults/mldev36296068kv][0m
+	            	[0m[1mazurerm_container_registry.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-evolving-rat-rg/providers/Microsoft.ContainerRegistry/registries/mldev36296068cr][0m
+	            	[0m[1mazurerm_storage_account.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-evolving-rat-rg/providers/Microsoft.Storage/storageAccounts/mldev36296068st][0m
+	            	[0m[1mazurerm_machine_learning_workspace.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-evolving-rat-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-evolving-rat-mlw][0m
+	            	[0m[1mazurerm_machine_learning_compute_instance.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-evolving-rat-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-evolving-rat-mlw/computes/zklbnsiiinstance][0m
+	            	[0m[1mazurerm_machine_learning_compute_cluster.compute: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-evolving-rat-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-evolving-rat-mlw/computes/cpu-cluster][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_application_insights.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_application_insights" "default" {
+	            	        id                                    = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ml-evolving-rat-rg/providers/Microsoft.Insights/components/ml-evolving-rat-appi"
+	            	        name                                  = "ml-evolving-rat-appi"
+	            	        tags                                  = {}
+	            	      [31m-[0m[0m workspace_id                          = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/ai_ml-evolving-rat-appi_4f2d5ffe-a701-4ed3-ba22-f65be483fb49_managed/providers/Microsoft.OperationalInsights/workspaces/managed-ml-evolving-rat-appi-ws" [90m-> null[0m[0m
+	            	        [90m# (15 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_machine_learning_compute_instance.main,
+	            	[33m│[0m [0m  on compute.tf line 12, in resource "azurerm_machine_learning_compute_instance" "main":
+	            	[33m│[0m [0m  12:   location                      = [4mazurerm_resource_group.default.location[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe `azurerm_machine_learning_compute_instance` must be deployed to the
+	            	[33m│[0m [0msame location as the associated `azurerm_machine_learning_workspace`
+	            	[33m│[0m [0mresource, as the `location` fields must be the same the `location` field no
+	            	[33m│[0m [0mlonger has any effect and will be removed in version 4.0 of the AzureRM
+	            	[33m│[0m [0mProvider
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-machine-learning2152407660/src/quickstart/101-machine-learning/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-machine-learning2152407660/src/quickstart/101-machine-learning/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-machine-learning
+
+FailNow
+
+---
+
+## 26 Jul 26 00:40 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.prefix: Refreshing state... [id=ml-smashing-liger][0m
+	            	[0m[1mrandom_integer.suffix: Refreshing state... [id=68246032][0m
+	            	[0m[1mrandom_string.ci_prefix: Refreshing state... [id=zpfbpqvb][0m
+	            	[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-smashing-liger-rg][0m
+	            	[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD1iZDk4Y2RiNC0xZjJmLTRiOTMtYTIyOS05NmE1ZDIwYmEwYjU7b2JqZWN0SWQ9NWI4OTc1Y2YtNmEyOS00MzYxLTkxMDgtYzgzZTliNTM4YWYyO3N1YnNjcmlwdGlvbklkPWNiNTYzZWU5LTdkZjAtNDY4ZS04MWQ1LTE2Njk2OGQxZjg5YTt0ZW5hbnRJZD01NDRhN2EyZS02OTdmLTQ4N2MtYjJiMC1hMTNkZjdmMzQ2YjY=][0m
+	            	[0m[1mazurerm_container_registry.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-smashing-liger-rg/providers/Microsoft.ContainerRegistry/registries/mldev68246032cr][0m
+	            	[0m[1mazurerm_application_insights.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-smashing-liger-rg/providers/Microsoft.Insights/components/ml-smashing-liger-appi][0m
+	            	[0m[1mazurerm_key_vault.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-smashing-liger-rg/providers/Microsoft.KeyVault/vaults/mldev68246032kv][0m
+	            	[0m[1mazurerm_storage_account.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-smashing-liger-rg/providers/Microsoft.Storage/storageAccounts/mldev68246032st][0m
+	            	[0m[1mazurerm_machine_learning_workspace.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-smashing-liger-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-smashing-liger-mlw][0m
+	            	[0m[1mazurerm_machine_learning_compute_instance.main: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-smashing-liger-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-smashing-liger-mlw/computes/zpfbpqvbinstance][0m
+	            	[0m[1mazurerm_machine_learning_compute_cluster.compute: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-smashing-liger-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-smashing-liger-mlw/computes/cpu-cluster][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_application_insights.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_application_insights" "default" {
+	            	        id                                    = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-smashing-liger-rg/providers/Microsoft.Insights/components/ml-smashing-liger-appi"
+	            	        name                                  = "ml-smashing-liger-appi"
+	            	        tags                                  = {}
+	            	      [31m-[0m[0m workspace_id                          = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ai_ml-smashing-liger-appi_31d89beb-9171-4368-bc43-86a14bc2663d_managed/providers/Microsoft.OperationalInsights/workspaces/managed-ml-smashing-liger-appi-ws" [90m-> null[0m[0m
+	            	        [90m# (15 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_machine_learning_compute_instance.main,
+	            	[33m│[0m [0m  on compute.tf line 12, in resource "azurerm_machine_learning_compute_instance" "main":
+	            	[33m│[0m [0m  12:   location                      = [4mazurerm_resource_group.default.location[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe `azurerm_machine_learning_compute_instance` must be deployed to the
+	            	[33m│[0m [0msame location as the associated `azurerm_machine_learning_workspace`
+	            	[33m│[0m [0mresource, as the `location` fields must be the same the `location` field no
+	            	[33m│[0m [0mlonger has any effect and will be removed in version 4.0 of the AzureRM
+	            	[33m│[0m [0mProvider
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-machine-learning2183825512/src/quickstart/101-machine-learning/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-machine-learning2183825512/src/quickstart/101-machine-learning/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-machine-learning
+
+FailNow
+
+---
+
+## 12 Jul 26 01:51 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.prefix: Refreshing state... [id=ml-golden-hagfish][0m
+	            	[0m[1mrandom_integer.suffix: Refreshing state... [id=24477536][0m
+	            	[0m[1mrandom_string.ci_prefix: Refreshing state... [id=guqbgsqx][0m
+	            	[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-golden-hagfish-rg][0m
+	            	[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD1iZDk4Y2RiNC0xZjJmLTRiOTMtYTIyOS05NmE1ZDIwYmEwYjU7b2JqZWN0SWQ9NWI4OTc1Y2YtNmEyOS00MzYxLTkxMDgtYzgzZTliNTM4YWYyO3N1YnNjcmlwdGlvbklkPWNiNTYzZWU5LTdkZjAtNDY4ZS04MWQ1LTE2Njk2OGQxZjg5YTt0ZW5hbnRJZD01NDRhN2EyZS02OTdmLTQ4N2MtYjJiMC1hMTNkZjdmMzQ2YjY=][0m
+	            	[0m[1mazurerm_application_insights.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-golden-hagfish-rg/providers/Microsoft.Insights/components/ml-golden-hagfish-appi][0m
+	            	[0m[1mazurerm_container_registry.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-golden-hagfish-rg/providers/Microsoft.ContainerRegistry/registries/mldev24477536cr][0m
+	            	[0m[1mazurerm_key_vault.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-golden-hagfish-rg/providers/Microsoft.KeyVault/vaults/mldev24477536kv][0m
+	            	[0m[1mazurerm_storage_account.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-golden-hagfish-rg/providers/Microsoft.Storage/storageAccounts/mldev24477536st][0m
+	            	[0m[1mazurerm_machine_learning_workspace.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-golden-hagfish-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-golden-hagfish-mlw][0m
+	            	[0m[1mazurerm_machine_learning_compute_instance.main: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-golden-hagfish-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-golden-hagfish-mlw/computes/guqbgsqxinstance][0m
+	            	[0m[1mazurerm_machine_learning_compute_cluster.compute: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-golden-hagfish-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-golden-hagfish-mlw/computes/cpu-cluster][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_application_insights.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_application_insights" "default" {
+	            	        id                                    = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-golden-hagfish-rg/providers/Microsoft.Insights/components/ml-golden-hagfish-appi"
+	            	        name                                  = "ml-golden-hagfish-appi"
+	            	        tags                                  = {}
+	            	      [31m-[0m[0m workspace_id                          = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ai_ml-golden-hagfish-appi_ec53b866-69d6-4a2e-8080-651e71a529fe_managed/providers/Microsoft.OperationalInsights/workspaces/managed-ml-golden-hagfish-appi-ws" [90m-> null[0m[0m
+	            	        [90m# (15 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_machine_learning_compute_instance.main,
+	            	[33m│[0m [0m  on compute.tf line 12, in resource "azurerm_machine_learning_compute_instance" "main":
+	            	[33m│[0m [0m  12:   location                      = [4mazurerm_resource_group.default.location[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe `azurerm_machine_learning_compute_instance` must be deployed to the
+	            	[33m│[0m [0msame location as the associated `azurerm_machine_learning_workspace`
+	            	[33m│[0m [0mresource, as the `location` fields must be the same the `location` field no
+	            	[33m│[0m [0mlonger has any effect and will be removed in version 4.0 of the AzureRM
+	            	[33m│[0m [0mProvider
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-machine-learning2312046041/src/quickstart/101-machine-learning/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-machine-learning2312046041/src/quickstart/101-machine-learning/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-machine-learning
+
+FailNow
+
+---
+
+## 05 Jul 26 00:43 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.ci_prefix: Refreshing state... [id=gwgkehhk][0m
+	            	[0m[1mrandom_integer.suffix: Refreshing state... [id=69191215][0m
+	            	[0m[1mrandom_pet.prefix: Refreshing state... [id=ml-cuddly-jaguar][0m
+	            	[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-cuddly-jaguar-rg][0m
+	            	[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD1iZDk4Y2RiNC0xZjJmLTRiOTMtYTIyOS05NmE1ZDIwYmEwYjU7b2JqZWN0SWQ9NWI4OTc1Y2YtNmEyOS00MzYxLTkxMDgtYzgzZTliNTM4YWYyO3N1YnNjcmlwdGlvbklkPWNiNTYzZWU5LTdkZjAtNDY4ZS04MWQ1LTE2Njk2OGQxZjg5YTt0ZW5hbnRJZD01NDRhN2EyZS02OTdmLTQ4N2MtYjJiMC1hMTNkZjdmMzQ2YjY=][0m
+	            	[0m[1mazurerm_application_insights.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-cuddly-jaguar-rg/providers/Microsoft.Insights/components/ml-cuddly-jaguar-appi][0m
+	            	[0m[1mazurerm_key_vault.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-cuddly-jaguar-rg/providers/Microsoft.KeyVault/vaults/mldev69191215kv][0m
+	            	[0m[1mazurerm_container_registry.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-cuddly-jaguar-rg/providers/Microsoft.ContainerRegistry/registries/mldev69191215cr][0m
+	            	[0m[1mazurerm_storage_account.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-cuddly-jaguar-rg/providers/Microsoft.Storage/storageAccounts/mldev69191215st][0m
+	            	[0m[1mazurerm_machine_learning_workspace.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-cuddly-jaguar-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-cuddly-jaguar-mlw][0m
+	            	[0m[1mazurerm_machine_learning_compute_instance.main: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-cuddly-jaguar-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-cuddly-jaguar-mlw/computes/gwgkehhkinstance][0m
+	            	[0m[1mazurerm_machine_learning_compute_cluster.compute: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-cuddly-jaguar-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-cuddly-jaguar-mlw/computes/cpu-cluster][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_application_insights.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_application_insights" "default" {
+	            	        id                                    = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-cuddly-jaguar-rg/providers/Microsoft.Insights/components/ml-cuddly-jaguar-appi"
+	            	        name                                  = "ml-cuddly-jaguar-appi"
+	            	        tags                                  = {}
+	            	      [31m-[0m[0m workspace_id                          = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ai_ml-cuddly-jaguar-appi_7f338b0b-de81-4962-bf93-341f237635a1_managed/providers/Microsoft.OperationalInsights/workspaces/managed-ml-cuddly-jaguar-appi-ws" [90m-> null[0m[0m
+	            	        [90m# (15 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_machine_learning_compute_instance.main,
+	            	[33m│[0m [0m  on compute.tf line 12, in resource "azurerm_machine_learning_compute_instance" "main":
+	            	[33m│[0m [0m  12:   location                      = [4mazurerm_resource_group.default.location[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe `azurerm_machine_learning_compute_instance` must be deployed to the
+	            	[33m│[0m [0msame location as the associated `azurerm_machine_learning_workspace`
+	            	[33m│[0m [0mresource, as the `location` fields must be the same the `location` field no
+	            	[33m│[0m [0mlonger has any effect and will be removed in version 4.0 of the AzureRM
+	            	[33m│[0m [0mProvider
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-machine-learning1079493018/src/quickstart/101-machine-learning/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-machine-learning1079493018/src/quickstart/101-machine-learning/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-machine-learning
+
+FailNow
+
+---
+
+## 28 Jun 26 00:48 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_integer.suffix: Refreshing state... [id=42260876][0m
+	            	[0m[1mrandom_string.ci_prefix: Refreshing state... [id=ktigjqds][0m
+	            	[0m[1mrandom_pet.prefix: Refreshing state... [id=ml-healthy-troll][0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-healthy-troll-rg][0m
+	            	[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+	            	[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD1iZDk4Y2RiNC0xZjJmLTRiOTMtYTIyOS05NmE1ZDIwYmEwYjU7b2JqZWN0SWQ9NWI4OTc1Y2YtNmEyOS00MzYxLTkxMDgtYzgzZTliNTM4YWYyO3N1YnNjcmlwdGlvbklkPWNiNTYzZWU5LTdkZjAtNDY4ZS04MWQ1LTE2Njk2OGQxZjg5YTt0ZW5hbnRJZD01NDRhN2EyZS02OTdmLTQ4N2MtYjJiMC1hMTNkZjdmMzQ2YjY=][0m
+	            	[0m[1mazurerm_application_insights.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-healthy-troll-rg/providers/Microsoft.Insights/components/ml-healthy-troll-appi][0m
+	            	[0m[1mazurerm_key_vault.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-healthy-troll-rg/providers/Microsoft.KeyVault/vaults/mldev42260876kv][0m
+	            	[0m[1mazurerm_container_registry.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-healthy-troll-rg/providers/Microsoft.ContainerRegistry/registries/mldev42260876cr][0m
+	            	[0m[1mazurerm_storage_account.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-healthy-troll-rg/providers/Microsoft.Storage/storageAccounts/mldev42260876st][0m
+	            	[0m[1mazurerm_machine_learning_workspace.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-healthy-troll-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-healthy-troll-mlw][0m
+	            	[0m[1mazurerm_machine_learning_compute_instance.main: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-healthy-troll-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-healthy-troll-mlw/computes/ktigjqdsinstance][0m
+	            	[0m[1mazurerm_machine_learning_compute_cluster.compute: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-healthy-troll-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-healthy-troll-mlw/computes/cpu-cluster][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_application_insights.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_application_insights" "default" {
+	            	        id                                    = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-healthy-troll-rg/providers/Microsoft.Insights/components/ml-healthy-troll-appi"
+	            	        name                                  = "ml-healthy-troll-appi"
+	            	        tags                                  = {}
+	            	      [31m-[0m[0m workspace_id                          = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ai_ml-healthy-troll-appi_148b332a-89e1-479a-b9c0-df915bd06f89_managed/providers/Microsoft.OperationalInsights/workspaces/managed-ml-healthy-troll-appi-ws" [90m-> null[0m[0m
+	            	        [90m# (15 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_machine_learning_compute_instance.main,
+	            	[33m│[0m [0m  on compute.tf line 12, in resource "azurerm_machine_learning_compute_instance" "main":
+	            	[33m│[0m [0m  12:   location                      = [4mazurerm_resource_group.default.location[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe `azurerm_machine_learning_compute_instance` must be deployed to the
+	            	[33m│[0m [0msame location as the associated `azurerm_machine_learning_workspace`
+	            	[33m│[0m [0mresource, as the `location` fields must be the same the `location` field no
+	            	[33m│[0m [0mlonger has any effect and will be removed in version 4.0 of the AzureRM
+	            	[33m│[0m [0mProvider
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-machine-learning1648182115/src/quickstart/101-machine-learning/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-machine-learning1648182115/src/quickstart/101-machine-learning/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-machine-learning
+
+FailNow
+
+---
+
+## 14 Jun 26 01:42 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_integer.suffix: Refreshing state... [id=66239506][0m
+	            	[0m[1mrandom_pet.prefix: Refreshing state... [id=ml-cheerful-aphid][0m
+	            	[0m[1mrandom_string.ci_prefix: Refreshing state... [id=eogmourh][0m
+	            	[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-cheerful-aphid-rg][0m
+	            	[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD1iZDk4Y2RiNC0xZjJmLTRiOTMtYTIyOS05NmE1ZDIwYmEwYjU7b2JqZWN0SWQ9NWI4OTc1Y2YtNmEyOS00MzYxLTkxMDgtYzgzZTliNTM4YWYyO3N1YnNjcmlwdGlvbklkPWNiNTYzZWU5LTdkZjAtNDY4ZS04MWQ1LTE2Njk2OGQxZjg5YTt0ZW5hbnRJZD01NDRhN2EyZS02OTdmLTQ4N2MtYjJiMC1hMTNkZjdmMzQ2YjY=][0m
+	            	[0m[1mazurerm_application_insights.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-cheerful-aphid-rg/providers/Microsoft.Insights/components/ml-cheerful-aphid-appi][0m
+	            	[0m[1mazurerm_key_vault.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-cheerful-aphid-rg/providers/Microsoft.KeyVault/vaults/mldev66239506kv][0m
+	            	[0m[1mazurerm_container_registry.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-cheerful-aphid-rg/providers/Microsoft.ContainerRegistry/registries/mldev66239506cr][0m
+	            	[0m[1mazurerm_storage_account.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-cheerful-aphid-rg/providers/Microsoft.Storage/storageAccounts/mldev66239506st][0m
+	            	[0m[1mazurerm_machine_learning_workspace.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-cheerful-aphid-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-cheerful-aphid-mlw][0m
+	            	[0m[1mazurerm_machine_learning_compute_instance.main: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-cheerful-aphid-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-cheerful-aphid-mlw/computes/eogmourhinstance][0m
+	            	[0m[1mazurerm_machine_learning_compute_cluster.compute: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-cheerful-aphid-rg/providers/Microsoft.MachineLearningServices/workspaces/ml-cheerful-aphid-mlw/computes/cpu-cluster][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_application_insights.default[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_application_insights" "default" {
+	            	        id                                    = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ml-cheerful-aphid-rg/providers/Microsoft.Insights/components/ml-cheerful-aphid-appi"
+	            	        name                                  = "ml-cheerful-aphid-appi"
+	            	        tags                                  = {}
+	            	      [31m-[0m[0m workspace_id                          = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/ai_ml-cheerful-aphid-appi_4a69ecd8-ea37-46fc-8982-8458236bb542_managed/providers/Microsoft.OperationalInsights/workspaces/managed-ml-cheerful-aphid-appi-ws" [90m-> null[0m[0m
+	            	        [90m# (15 unchanged attributes hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_machine_learning_compute_instance.main,
+	            	[33m│[0m [0m  on compute.tf line 12, in resource "azurerm_machine_learning_compute_instance" "main":
+	            	[33m│[0m [0m  12:   location                      = [4mazurerm_resource_group.default.location[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe `azurerm_machine_learning_compute_instance` must be deployed to the
+	            	[33m│[0m [0msame location as the associated `azurerm_machine_learning_workspace`
+	            	[33m│[0m [0mresource, as the `location` fields must be the same the `location` field no
+	            	[33m│[0m [0mlonger has any effect and will be removed in version 4.0 of the AzureRM
+	            	[33m│[0m [0mProvider
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-machine-learning1175033254/src/quickstart/101-machine-learning/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-machine-learning1175033254/src/quickstart/101-machine-learning/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-machine-learning
+
+FailNow
+
+---
+
+## 31 May 26 00:50 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mwaiting for creation of Machine Learning Compute (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "ml-suited-swift-rg"
+	            	[31m│[0m [0mWorkspace Name: "ml-suited-swift-mlw"
+	            	[31m│[0m [0mCompute Name: "lzbsylevinstance"): polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "BadRequest"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "{\"id\":\"https://resourceprovider.batchai-eastus.svc/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/providers/Microsoft.BatchAI/locations/eastus/operationresults/dcf39b95-401a-42b0-a6c1-2ee9300a1291\",\"name\":\"dcf39b95-401a-42b0-a6c1-2ee9300a1291\",\"status\":\"Failed\",\"startTime\":\"2026-05-31T00:46:41.972Z\",\"endTime\":\"2026-05-31T00:46:54.508Z\",\"error\":{\"code\":\"OutOfCapacity\",\"message\":\"The specified Managed Compute lzbsylevinstance failed provisioning as Azure Machine Learning is out of capacity. Please retry later or try deploying to a different region\"}}"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m  "status": "Failed",
+	            	[31m│[0m [0m  "error": {
+	            	[31m│[0m [0m    "code": "BadRequest",
+	            	[31m│[0m [0m    "message": "{\"id\":\"https://resourceprovider.batchai-eastus.svc/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/providers/Microsoft.BatchAI/locations/eastus/operationresults/dcf39b95-401a-42b0-a6c1-2ee9300a1291\",\"name\":\"dcf39b95-401a-42b0-a6c1-2ee9300a1291\",\"status\":\"Failed\",\"startTime\":\"2026-05-31T00:46:41.972Z\",\"endTime\":\"2026-05-31T00:46:54.508Z\",\"error\":{\"code\":\"OutOfCapacity\",\"message\":\"The specified Managed Compute lzbsylevinstance failed provisioning as Azure Machine Learning is out of capacity. Please retry later or try deploying to a different region\"}}"
+	            	[31m│[0m [0m  }
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_machine_learning_compute_instance.main,
+	            	[31m│[0m [0m  on compute.tf line 10, in resource "azurerm_machine_learning_compute_instance" "main":
+	            	[31m│[0m [0m  10: resource "azurerm_machine_learning_compute_instance" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-machine-learning
+
+FailNow
+
+---
+
+## 24 May 26 01:14 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mwaiting for creation of Machine Learning Compute (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "ml-together-moccasin-rg"
+	            	[31m│[0m [0mWorkspace Name: "ml-together-moccasin-mlw"
+	            	[31m│[0m [0mCompute Name: "qpslthqcinstance"): polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "BadRequest"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "{\"id\":\"https://resourceprovider.batchai-eastus.svc/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/providers/Microsoft.BatchAI/locations/eastus/operationresults/6e297862-eae0-40d1-b6a6-9559367c921c\",\"name\":\"6e297862-eae0-40d1-b6a6-9559367c921c\",\"status\":\"Failed\",\"startTime\":\"2026-05-24T01:11:24.913Z\",\"endTime\":\"2026-05-24T01:11:36.597Z\",\"error\":{\"code\":\"OutOfCapacity\",\"message\":\"The specified Managed Compute qpslthqcinstance failed provisioning as Azure Machine Learning is out of capacity. Please retry later or try deploying to a different region\"}}"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m  "status": "Failed",
+	            	[31m│[0m [0m  "error": {
+	            	[31m│[0m [0m    "code": "BadRequest",
+	            	[31m│[0m [0m    "message": "{\"id\":\"https://resourceprovider.batchai-eastus.svc/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/providers/Microsoft.BatchAI/locations/eastus/operationresults/6e297862-eae0-40d1-b6a6-9559367c921c\",\"name\":\"6e297862-eae0-40d1-b6a6-9559367c921c\",\"status\":\"Failed\",\"startTime\":\"2026-05-24T01:11:24.913Z\",\"endTime\":\"2026-05-24T01:11:36.597Z\",\"error\":{\"code\":\"OutOfCapacity\",\"message\":\"The specified Managed Compute qpslthqcinstance failed provisioning as Azure Machine Learning is out of capacity. Please retry later or try deploying to a different region\"}}"
+	            	[31m│[0m [0m  }
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_machine_learning_compute_instance.main,
+	            	[31m│[0m [0m  on compute.tf line 10, in resource "azurerm_machine_learning_compute_instance" "main":
+	            	[31m│[0m [0m  10: resource "azurerm_machine_learning_compute_instance" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-machine-learning
+
+FailNow
+
+---
+
+## 10 May 26 01:08 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mwaiting for creation of Machine Learning Compute (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "ml-crucial-penguin-rg"
+	            	[31m│[0m [0mWorkspace Name: "ml-crucial-penguin-mlw"
+	            	[31m│[0m [0mCompute Name: "ugmbnwpsinstance"): polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "BadRequest"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "{\"id\":\"https://resourceprovider.batchai-eastus.svc/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/providers/Microsoft.BatchAI/locations/eastus/operationresults/dd1ac6f2-1d35-4ca6-89d8-5b0b9145b37c\",\"name\":\"dd1ac6f2-1d35-4ca6-89d8-5b0b9145b37c\",\"status\":\"Failed\",\"startTime\":\"2026-05-10T01:04:39.835Z\",\"endTime\":\"2026-05-10T01:04:51.593Z\",\"error\":{\"code\":\"OutOfCapacity\",\"message\":\"The specified Managed Compute ugmbnwpsinstance failed provisioning as Azure Machine Learning is out of capacity. Please retry later or try deploying to a different region\"}}"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{
+	            	[31m│[0m [0m  "status": "Failed",
+	            	[31m│[0m [0m  "error": {
+	            	[31m│[0m [0m    "code": "BadRequest",
+	            	[31m│[0m [0m    "message": "{\"id\":\"https://resourceprovider.batchai-eastus.svc/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/providers/Microsoft.BatchAI/locations/eastus/operationresults/dd1ac6f2-1d35-4ca6-89d8-5b0b9145b37c\",\"name\":\"dd1ac6f2-1d35-4ca6-89d8-5b0b9145b37c\",\"status\":\"Failed\",\"startTime\":\"2026-05-10T01:04:39.835Z\",\"endTime\":\"2026-05-10T01:04:51.593Z\",\"error\":{\"code\":\"OutOfCapacity\",\"message\":\"The specified Managed Compute ugmbnwpsinstance failed provisioning as Azure Machine Learning is out of capacity. Please retry later or try deploying to a different region\"}}"
+	            	[31m│[0m [0m  }
+	            	[31m│[0m [0m}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_machine_learning_compute_instance.main,
+	            	[31m│[0m [0m  on compute.tf line 10, in resource "azurerm_machine_learning_compute_instance" "main":
+	            	[31m│[0m [0m  10: resource "azurerm_machine_learning_compute_instance" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-machine-learning
+
+FailNow
+
+---
+
 ## 26 Apr 26 01:07 UTC
 
 Success: false

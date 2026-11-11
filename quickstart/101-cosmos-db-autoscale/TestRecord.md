@@ -1,3 +1,976 @@
+## 08 Nov 26 00:13 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 85e42a62-0066-4fa4-b69a-20ce275ad900 Correlation ID: 0d1a5b2f-646e-4508-8ed6-5dcb4f1b2e3e Timestamp: 2026-11-08 00:13:44Z","error_codes":[5000229],"timestamp":"2026-11-08 00:13:44Z","trace_id":"85e42a62-0066-4fa4-b69a-20ce275ad900","correlation_id":"0d1a5b2f-646e-4508-8ed6-5dcb4f1b2e3e"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-autoscale
+
+FailNow
+
+---
+
+## 01 Nov 26 00:18 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant '4f00b3b6-2940-4f2c-b037-94637c180d30' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 8d39c0d2-2091-4347-a0b4-694888339a01 Correlation ID: 220cf3d4-f349-430e-9125-71b4246a43e9 Timestamp: 2026-11-01 00:18:45Z","error_codes":[5000229],"timestamp":"2026-11-01 00:18:45Z","trace_id":"8d39c0d2-2091-4347-a0b4-694888339a01","correlation_id":"220cf3d4-f349-430e-9125-71b4246a43e9"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-autoscale
+
+FailNow
+
+---
+
+## 25 Oct 26 00:17 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 5ba6f870-2082-453c-a5f0-8b2b5d89fa01 Correlation ID: 4df14eaf-4d2e-4973-910a-acc5c678d1a9 Timestamp: 2026-10-25 00:17:40Z","error_codes":[5000229],"timestamp":"2026-10-25 00:17:40Z","trace_id":"5ba6f870-2082-453c-a5f0-8b2b5d89fa01","correlation_id":"4df14eaf-4d2e-4973-910a-acc5c678d1a9"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-autoscale
+
+FailNow
+
+---
+
+## 18 Oct 26 01:12 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-autoscale-jaguar-rg"
+	            	[31m│[0m [0mDatabase Account Name: "fxlrooniqfewczbmhfyi"): creating/updating CosmosDB Account "fxlrooniqfewczbmhfyi" (Resource Group "cosmos-db-autoscale-jaguar-rg"): polling after DatabaseAccountsCreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "ServiceUnavailable"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "Database account creation failed. Operation Id: 645f8486-6a1c-46a5-a246-26248d60021a, Error : Message: {\"code\":\"ServiceUnavailable\",\"message\":\"Sorry, we are currently experiencing high demand in North Europe region, and cannot fulfill your request at this time Sun, 18 Oct 2026 01:10:39 GMT. To request region access for your subscription, please follow this link https://aka.ms/cosmosdbquota for more details on how to create a region access request.\\r\\nActivityId: e96f8365-4059-4bb2-b252-63c483a74462, Microsoft.Azure.Documents.Common/2.14.0\"}, Request URI: /serviceReservation, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{"status":"Failed","error":{"code":"ServiceUnavailable","message":"Database account creation failed. Operation Id: 645f8486-6a1c-46a5-a246-26248d60021a, Error : Message: {\"code\":\"ServiceUnavailable\",\"message\":\"Sorry, we are currently experiencing high demand in North Europe region, and cannot fulfill your request at this time Sun, 18 Oct 2026 01:10:39 GMT. To request region access for your subscription, please follow this link https://aka.ms/cosmosdbquota for more details on how to create a region access request.\\r\\nActivityId: e96f8365-4059-4bb2-b252-63c483a74462, Microsoft.Azure.Documents.Common/2.14.0\"}, Request URI: /serviceReservation, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0"}}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-autoscale
+
+FailNow
+
+---
+
+## 11 Oct 26 01:24 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-autoscale-mantis-rg"
+	            	[31m│[0m [0mDatabase Account Name: "bcybkcrxqriqfwekemmy"): creating/updating CosmosDB Account "bcybkcrxqriqfwekemmy" (Resource Group "cosmos-db-autoscale-mantis-rg"): polling after DatabaseAccountsCreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "ServiceUnavailable"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "Database account creation failed. Operation Id: 4f29fff4-7f99-48ee-99ec-5999772ffd6a, Error : Message: {\"code\":\"ServiceUnavailable\",\"message\":\"Sorry, we are currently experiencing high demand in North Europe region, and cannot fulfill your request at this time Sun, 11 Oct 2026 01:22:12 GMT. To request region access for your subscription, please follow this link https://aka.ms/cosmosdbquota for more details on how to create a region access request.\\r\\nActivityId: 705ce88a-3a2b-4007-bdb2-01e08282f792, Microsoft.Azure.Documents.Common/2.14.0\"}, Request URI: /serviceReservation, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{"status":"Failed","error":{"code":"ServiceUnavailable","message":"Database account creation failed. Operation Id: 4f29fff4-7f99-48ee-99ec-5999772ffd6a, Error : Message: {\"code\":\"ServiceUnavailable\",\"message\":\"Sorry, we are currently experiencing high demand in North Europe region, and cannot fulfill your request at this time Sun, 11 Oct 2026 01:22:12 GMT. To request region access for your subscription, please follow this link https://aka.ms/cosmosdbquota for more details on how to create a region access request.\\r\\nActivityId: 705ce88a-3a2b-4007-bdb2-01e08282f792, Microsoft.Azure.Documents.Common/2.14.0\"}, Request URI: /serviceReservation, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0"}}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-autoscale
+
+FailNow
+
+---
+
+## 04 Oct 26 01:58 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-autoscale-turtle-rg"
+	            	[31m│[0m [0mDatabase Account Name: "ekjgunibydajkyrdpixf"): creating/updating CosmosDB Account "ekjgunibydajkyrdpixf" (Resource Group "cosmos-db-autoscale-turtle-rg"): polling after DatabaseAccountsCreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "ServiceUnavailable"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "Database account creation failed. Operation Id: ffef7bc8-e0bb-45e9-8a0a-9b177e42656a, Error : Message: {\"code\":\"ServiceUnavailable\",\"message\":\"Sorry, we are currently experiencing high demand in North Europe region, and cannot fulfill your request at this time Sun, 04 Oct 2026 01:57:30 GMT. To request region access for your subscription, please follow this link https://aka.ms/cosmosdbquota for more details on how to create a region access request.\\r\\nActivityId: 1951719e-402b-4091-9860-73b490c9f616, Microsoft.Azure.Documents.Common/2.14.0\"}, Request URI: /serviceReservation, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{"status":"Failed","error":{"code":"ServiceUnavailable","message":"Database account creation failed. Operation Id: ffef7bc8-e0bb-45e9-8a0a-9b177e42656a, Error : Message: {\"code\":\"ServiceUnavailable\",\"message\":\"Sorry, we are currently experiencing high demand in North Europe region, and cannot fulfill your request at this time Sun, 04 Oct 2026 01:57:30 GMT. To request region access for your subscription, please follow this link https://aka.ms/cosmosdbquota for more details on how to create a region access request.\\r\\nActivityId: 1951719e-402b-4091-9860-73b490c9f616, Microsoft.Azure.Documents.Common/2.14.0\"}, Request URI: /serviceReservation, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0"}}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-autoscale
+
+FailNow
+
+---
+
+## 27 Sep 26 00:50 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-autoscale-hyena-rg"
+	            	[31m│[0m [0mDatabase Account Name: "zxbzikbqvoointwogrvh"): creating/updating CosmosDB Account "zxbzikbqvoointwogrvh" (Resource Group "cosmos-db-autoscale-hyena-rg"): polling after DatabaseAccountsCreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "ServiceUnavailable"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "Database account creation failed. Operation Id: ff534147-bc8a-455b-8f01-88e63451061a, Error : Message: {\"code\":\"ServiceUnavailable\",\"message\":\"Sorry, we are currently experiencing high demand in North Europe region, and cannot fulfill your request at this time Sun, 27 Sep 2026 00:49:07 GMT. To request region access for your subscription, please follow this link https://aka.ms/cosmosdbquota for more details on how to create a region access request.\\r\\nActivityId: 04c031e4-516a-4b3a-b45c-d73f400efa0d, Microsoft.Azure.Documents.Common/2.14.0\"}, Request URI: /serviceReservation, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{"status":"Failed","error":{"code":"ServiceUnavailable","message":"Database account creation failed. Operation Id: ff534147-bc8a-455b-8f01-88e63451061a, Error : Message: {\"code\":\"ServiceUnavailable\",\"message\":\"Sorry, we are currently experiencing high demand in North Europe region, and cannot fulfill your request at this time Sun, 27 Sep 2026 00:49:07 GMT. To request region access for your subscription, please follow this link https://aka.ms/cosmosdbquota for more details on how to create a region access request.\\r\\nActivityId: 04c031e4-516a-4b3a-b45c-d73f400efa0d, Microsoft.Azure.Documents.Common/2.14.0\"}, Request URI: /serviceReservation, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0"}}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-autoscale
+
+FailNow
+
+---
+
+## 20 Sep 26 01:18 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-autoscale-cicada-rg"
+	            	[31m│[0m [0mDatabase Account Name: "llxzbgvgcsubrywurest"): creating/updating CosmosDB Account "llxzbgvgcsubrywurest" (Resource Group "cosmos-db-autoscale-cicada-rg"): polling after DatabaseAccountsCreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "ServiceUnavailable"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "Database account creation failed. Operation Id: 485eff95-dd69-4c94-9f70-1eb2bf53508a, Error : Message: {\"code\":\"ServiceUnavailable\",\"message\":\"Sorry, we are currently experiencing high demand in North Europe region, and cannot fulfill your request at this time Sun, 20 Sep 2026 01:16:23 GMT. To request region access for your subscription, please follow this link https://aka.ms/cosmosdbquota for more details on how to create a region access request.\\r\\nActivityId: 6d2a66c6-d423-4fe0-b8e0-b9f09e308522, Microsoft.Azure.Documents.Common/2.14.0\"}, Request URI: /serviceReservation, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{"status":"Failed","error":{"code":"ServiceUnavailable","message":"Database account creation failed. Operation Id: 485eff95-dd69-4c94-9f70-1eb2bf53508a, Error : Message: {\"code\":\"ServiceUnavailable\",\"message\":\"Sorry, we are currently experiencing high demand in North Europe region, and cannot fulfill your request at this time Sun, 20 Sep 2026 01:16:23 GMT. To request region access for your subscription, please follow this link https://aka.ms/cosmosdbquota for more details on how to create a region access request.\\r\\nActivityId: 6d2a66c6-d423-4fe0-b8e0-b9f09e308522, Microsoft.Azure.Documents.Common/2.14.0\"}, Request URI: /serviceReservation, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0"}}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-autoscale
+
+FailNow
+
+---
+
+## 13 Sep 26 02:00 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-autoscale-vulture-rg"
+	            	[31m│[0m [0mDatabase Account Name: "bzxdsdusrptwfwuvkikg"): creating/updating CosmosDB Account "bzxdsdusrptwfwuvkikg" (Resource Group "cosmos-db-autoscale-vulture-rg"): polling after DatabaseAccountsCreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "ServiceUnavailable"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "Database account creation failed. Operation Id: 757f7cb9-41d1-4b89-ac50-5b60cbc7d65a, Error : Message: {\"code\":\"ServiceUnavailable\",\"message\":\"Sorry, we are currently experiencing high demand in North Europe region, and cannot fulfill your request at this time Sun, 13 Sep 2026 01:59:05 GMT. To request region access for your subscription, please follow this link https://aka.ms/cosmosdbquota for more details on how to create a region access request.\\r\\nActivityId: 3041cd6f-1154-4d04-852e-f154a08e23ba, Microsoft.Azure.Documents.Common/2.14.0\"}, Request URI: /serviceReservation, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{"status":"Failed","error":{"code":"ServiceUnavailable","message":"Database account creation failed. Operation Id: 757f7cb9-41d1-4b89-ac50-5b60cbc7d65a, Error : Message: {\"code\":\"ServiceUnavailable\",\"message\":\"Sorry, we are currently experiencing high demand in North Europe region, and cannot fulfill your request at this time Sun, 13 Sep 2026 01:59:05 GMT. To request region access for your subscription, please follow this link https://aka.ms/cosmosdbquota for more details on how to create a region access request.\\r\\nActivityId: 3041cd6f-1154-4d04-852e-f154a08e23ba, Microsoft.Azure.Documents.Common/2.14.0\"}, Request URI: /serviceReservation, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0"}}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-autoscale
+
+FailNow
+
+---
+
+## 06 Sep 26 01:09 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-autoscale-bear-rg"
+	            	[31m│[0m [0mDatabase Account Name: "zmlfkeeyibngwupwvugy"): creating/updating CosmosDB Account "zmlfkeeyibngwupwvugy" (Resource Group "cosmos-db-autoscale-bear-rg"): polling after DatabaseAccountsCreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "ServiceUnavailable"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "Database account creation failed. Operation Id: d87ac9da-28d6-4e9d-b99f-93c13d74335a, Error : Message: {\"code\":\"ServiceUnavailable\",\"message\":\"Sorry, we are currently experiencing high demand in North Europe region, and cannot fulfill your request at this time Sun, 06 Sep 2026 01:07:19 GMT. To request region access for your subscription, please follow this link https://aka.ms/cosmosdbquota for more details on how to create a region access request.\\r\\nActivityId: 3dc63d12-a984-4779-8612-c3bf55dff6c6, Microsoft.Azure.Documents.Common/2.14.0\"}, Request URI: /serviceReservation, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{"status":"Failed","error":{"code":"ServiceUnavailable","message":"Database account creation failed. Operation Id: d87ac9da-28d6-4e9d-b99f-93c13d74335a, Error : Message: {\"code\":\"ServiceUnavailable\",\"message\":\"Sorry, we are currently experiencing high demand in North Europe region, and cannot fulfill your request at this time Sun, 06 Sep 2026 01:07:19 GMT. To request region access for your subscription, please follow this link https://aka.ms/cosmosdbquota for more details on how to create a region access request.\\r\\nActivityId: 3dc63d12-a984-4779-8612-c3bf55dff6c6, Microsoft.Azure.Documents.Common/2.14.0\"}, Request URI: /serviceReservation, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0"}}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-autoscale
+
+FailNow
+
+---
+
+## 30 Aug 26 00:55 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-autoscale-fly-rg"
+	            	[31m│[0m [0mDatabase Account Name: "wtcvvwwpatmdvtqiqbvo"): creating/updating CosmosDB Account "wtcvvwwpatmdvtqiqbvo" (Resource Group "cosmos-db-autoscale-fly-rg"): polling after DatabaseAccountsCreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "ServiceUnavailable"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "Database account creation failed. Operation Id: a9266ea8-7dd2-4a46-9c88-35af59b396ea, Error : Message: {\"code\":\"ServiceUnavailable\",\"message\":\"Sorry, we are currently experiencing high demand in North Europe region for the zonal redundant (Availability Zones) accounts, and cannot fulfill your request at this time Sun, 30 Aug 2026 00:53:55 GMT. To request region access for your subscription, please follow this link https://aka.ms/cosmosdbquota for more details on how to create a region access request.\\r\\nActivityId: faaec242-8f67-4c87-a6c5-c1bcc2cb70c8, Microsoft.Azure.Documents.Common/2.14.0\"}, Request URI: /serviceReservation, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{"status":"Failed","error":{"code":"ServiceUnavailable","message":"Database account creation failed. Operation Id: a9266ea8-7dd2-4a46-9c88-35af59b396ea, Error : Message: {\"code\":\"ServiceUnavailable\",\"message\":\"Sorry, we are currently experiencing high demand in North Europe region for the zonal redundant (Availability Zones) accounts, and cannot fulfill your request at this time Sun, 30 Aug 2026 00:53:55 GMT. To request region access for your subscription, please follow this link https://aka.ms/cosmosdbquota for more details on how to create a region access request.\\r\\nActivityId: faaec242-8f67-4c87-a6c5-c1bcc2cb70c8, Microsoft.Azure.Documents.Common/2.14.0\"}, Request URI: /serviceReservation, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0"}}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-autoscale
+
+FailNow
+
+---
+
+## 23 Aug 26 00:33 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-autoscale-meerkat-rg"
+	            	[31m│[0m [0mDatabase Account Name: "eptzncuoeffbiispachg"): creating/updating CosmosDB Account "eptzncuoeffbiispachg" (Resource Group "cosmos-db-autoscale-meerkat-rg"): polling after DatabaseAccountsCreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "ServiceUnavailable"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "Database account creation failed. Operation Id: d4580751-015f-4d82-b7b6-58ec32076b2a, Error : Message: {\"code\":\"ServiceUnavailable\",\"message\":\"Sorry, we are currently experiencing high demand in North Europe region for the zonal redundant (Availability Zones) accounts, and cannot fulfill your request at this time Sun, 23 Aug 2026 00:32:25 GMT. To request region access for your subscription, please follow this link https://aka.ms/cosmosdbquota for more details on how to create a region access request.\\r\\nActivityId: a88150f3-bfce-44d0-a21b-9e088b7c7ef0, Microsoft.Azure.Documents.Common/2.14.0\"}, Request URI: /serviceReservation, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{"status":"Failed","error":{"code":"ServiceUnavailable","message":"Database account creation failed. Operation Id: d4580751-015f-4d82-b7b6-58ec32076b2a, Error : Message: {\"code\":\"ServiceUnavailable\",\"message\":\"Sorry, we are currently experiencing high demand in North Europe region for the zonal redundant (Availability Zones) accounts, and cannot fulfill your request at this time Sun, 23 Aug 2026 00:32:25 GMT. To request region access for your subscription, please follow this link https://aka.ms/cosmosdbquota for more details on how to create a region access request.\\r\\nActivityId: a88150f3-bfce-44d0-a21b-9e088b7c7ef0, Microsoft.Azure.Documents.Common/2.14.0\"}, Request URI: /serviceReservation, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0"}}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-autoscale
+
+FailNow
+
+---
+
+## 16 Aug 26 01:04 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-autoscale-haddock-rg"
+	            	[31m│[0m [0mDatabase Account Name: "hbruknbjfcexhwuyugzh"): creating/updating CosmosDB Account "hbruknbjfcexhwuyugzh" (Resource Group "cosmos-db-autoscale-haddock-rg"): polling after DatabaseAccountsCreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "ServiceUnavailable"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "Database account creation failed. Operation Id: 65c41f70-673b-44ca-90cf-3d98bfe325fa, Error : Message: {\"code\":\"ServiceUnavailable\",\"message\":\"Sorry, we are currently experiencing high demand in North Europe region for the zonal redundant (Availability Zones) accounts, and cannot fulfill your request at this time Sun, 16 Aug 2026 01:02:53 GMT. To request region access for your subscription, please follow this link https://aka.ms/cosmosdbquota for more details on how to create a region access request.\\r\\nActivityId: 46b64dc1-758e-423d-ab29-fe7981d9fc64, Microsoft.Azure.Documents.Common/2.14.0\"}, Request URI: /serviceReservation, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{"status":"Failed","error":{"code":"ServiceUnavailable","message":"Database account creation failed. Operation Id: 65c41f70-673b-44ca-90cf-3d98bfe325fa, Error : Message: {\"code\":\"ServiceUnavailable\",\"message\":\"Sorry, we are currently experiencing high demand in North Europe region for the zonal redundant (Availability Zones) accounts, and cannot fulfill your request at this time Sun, 16 Aug 2026 01:02:53 GMT. To request region access for your subscription, please follow this link https://aka.ms/cosmosdbquota for more details on how to create a region access request.\\r\\nActivityId: 46b64dc1-758e-423d-ab29-fe7981d9fc64, Microsoft.Azure.Documents.Common/2.14.0\"}, Request URI: /serviceReservation, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0"}}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-autoscale
+
+FailNow
+
+---
+
+## 09 Aug 26 00:37 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-autoscale-barnacle-rg"
+	            	[31m│[0m [0mDatabase Account Name: "nomtfcllrbagwyqmjlvd"): creating/updating CosmosDB Account "nomtfcllrbagwyqmjlvd" (Resource Group "cosmos-db-autoscale-barnacle-rg"): polling after DatabaseAccountsCreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "ServiceUnavailable"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "Database account creation failed. Operation Id: 4532caf8-a9ed-4ee7-8291-80f8e3eaae2a, Error : Message: {\"code\":\"ServiceUnavailable\",\"message\":\"Sorry, we are currently experiencing high demand in North Europe region for the zonal redundant (Availability Zones) accounts, and cannot fulfill your request at this time Sun, 09 Aug 2026 00:35:24 GMT. To request region access for your subscription, please follow this link https://aka.ms/cosmosdbquota for more details on how to create a region access request.\\r\\nActivityId: 4b09869b-518b-4829-97e3-06113613ff56, Microsoft.Azure.Documents.Common/2.14.0\"}, Request URI: /serviceReservation, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{"status":"Failed","error":{"code":"ServiceUnavailable","message":"Database account creation failed. Operation Id: 4532caf8-a9ed-4ee7-8291-80f8e3eaae2a, Error : Message: {\"code\":\"ServiceUnavailable\",\"message\":\"Sorry, we are currently experiencing high demand in North Europe region for the zonal redundant (Availability Zones) accounts, and cannot fulfill your request at this time Sun, 09 Aug 2026 00:35:24 GMT. To request region access for your subscription, please follow this link https://aka.ms/cosmosdbquota for more details on how to create a region access request.\\r\\nActivityId: 4b09869b-518b-4829-97e3-06113613ff56, Microsoft.Azure.Documents.Common/2.14.0\"}, Request URI: /serviceReservation, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0"}}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-autoscale
+
+FailNow
+
+---
+
+## 02 Aug 26 00:41 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-autoscale-herring-rg"
+	            	[31m│[0m [0mDatabase Account Name: "enwmpxcviufspyqwbrxd"): creating/updating CosmosDB Account "enwmpxcviufspyqwbrxd" (Resource Group "cosmos-db-autoscale-herring-rg"): polling after DatabaseAccountsCreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "ServiceUnavailable"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "Database account creation failed. Operation Id: 632a0e73-0dbb-4761-82a3-225cc6c6297a, Error : Message: {\"code\":\"ServiceUnavailable\",\"message\":\"Sorry, we are currently experiencing high demand in North Europe region for the zonal redundant (Availability Zones) accounts, and cannot fulfill your request at this time Sun, 02 Aug 2026 00:39:36 GMT. To request region access for your subscription, please follow this link https://aka.ms/cosmosdbquota for more details on how to create a region access request.\\r\\nActivityId: a48d9bd6-b411-4566-af6e-9f9b010462a2, Microsoft.Azure.Documents.Common/2.14.0\"}, Request URI: /serviceReservation, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{"status":"Failed","error":{"code":"ServiceUnavailable","message":"Database account creation failed. Operation Id: 632a0e73-0dbb-4761-82a3-225cc6c6297a, Error : Message: {\"code\":\"ServiceUnavailable\",\"message\":\"Sorry, we are currently experiencing high demand in North Europe region for the zonal redundant (Availability Zones) accounts, and cannot fulfill your request at this time Sun, 02 Aug 2026 00:39:36 GMT. To request region access for your subscription, please follow this link https://aka.ms/cosmosdbquota for more details on how to create a region access request.\\r\\nActivityId: a48d9bd6-b411-4566-af6e-9f9b010462a2, Microsoft.Azure.Documents.Common/2.14.0\"}, Request URI: /serviceReservation, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0"}}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-autoscale
+
+FailNow
+
+---
+
+## 26 Jul 26 01:12 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-autoscale-beetle-rg"
+	            	[31m│[0m [0mDatabase Account Name: "ttlrzukscwrjxplulnom"): creating/updating CosmosDB Account "ttlrzukscwrjxplulnom" (Resource Group "cosmos-db-autoscale-beetle-rg"): polling after DatabaseAccountsCreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "ServiceUnavailable"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "Database account creation failed. Operation Id: b2d8d86e-43b3-4835-9b2b-766751d17e26, Error : Message: {\"code\":\"ServiceUnavailable\",\"message\":\"Sorry, we are currently experiencing high demand in North Europe region for the zonal redundant (Availability Zones) accounts, and cannot fulfill your request at this time Sun, 26 Jul 2026 01:10:46 GMT. To request region access for your subscription, please follow this link https://aka.ms/cosmosdbquota for more details on how to create a region access request.\\r\\nActivityId: 081d1b42-fafc-44f9-b8c9-74012e5a85de, Microsoft.Azure.Documents.Common/2.14.0\"}, Request URI: /serviceReservation, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{"status":"Failed","error":{"code":"ServiceUnavailable","message":"Database account creation failed. Operation Id: b2d8d86e-43b3-4835-9b2b-766751d17e26, Error : Message: {\"code\":\"ServiceUnavailable\",\"message\":\"Sorry, we are currently experiencing high demand in North Europe region for the zonal redundant (Availability Zones) accounts, and cannot fulfill your request at this time Sun, 26 Jul 2026 01:10:46 GMT. To request region access for your subscription, please follow this link https://aka.ms/cosmosdbquota for more details on how to create a region access request.\\r\\nActivityId: 081d1b42-fafc-44f9-b8c9-74012e5a85de, Microsoft.Azure.Documents.Common/2.14.0\"}, Request URI: /serviceReservation, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0"}}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-autoscale
+
+FailNow
+
+---
+
+## 12 Jul 26 00:50 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-autoscale-turtle-rg"
+	            	[31m│[0m [0mDatabase Account Name: "qkpeltimuckvxbpcwcbh"): creating/updating CosmosDB Account "qkpeltimuckvxbpcwcbh" (Resource Group "cosmos-db-autoscale-turtle-rg"): polling after DatabaseAccountsCreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "ServiceUnavailable"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "Database account creation failed. Operation Id: 74a78653-a6d3-41d3-b70e-aaa52dd6f29c, Error : Message: {\"code\":\"ServiceUnavailable\",\"message\":\"Sorry, we are currently experiencing high demand in North Europe region for the zonal redundant (Availability Zones) accounts, and cannot fulfill your request at this time Sun, 12 Jul 2026 00:48:08 GMT. To request region access for your subscription, please follow this link https://aka.ms/cosmosdbquota for more details on how to create a region access request.\\r\\nActivityId: 0ec13fa8-e2a0-4558-9043-4bd837708408, Microsoft.Azure.Documents.Common/2.14.0\"}, Request URI: /serviceReservation, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{"status":"Failed","error":{"code":"ServiceUnavailable","message":"Database account creation failed. Operation Id: 74a78653-a6d3-41d3-b70e-aaa52dd6f29c, Error : Message: {\"code\":\"ServiceUnavailable\",\"message\":\"Sorry, we are currently experiencing high demand in North Europe region for the zonal redundant (Availability Zones) accounts, and cannot fulfill your request at this time Sun, 12 Jul 2026 00:48:08 GMT. To request region access for your subscription, please follow this link https://aka.ms/cosmosdbquota for more details on how to create a region access request.\\r\\nActivityId: 0ec13fa8-e2a0-4558-9043-4bd837708408, Microsoft.Azure.Documents.Common/2.14.0\"}, Request URI: /serviceReservation, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0"}}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-autoscale
+
+FailNow
+
+---
+
+## 05 Jul 26 01:16 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-autoscale-mayfly-rg"
+	            	[31m│[0m [0mDatabase Account Name: "szrhbudhezzlstcqznap"): creating/updating CosmosDB Account "szrhbudhezzlstcqznap" (Resource Group "cosmos-db-autoscale-mayfly-rg"): polling after DatabaseAccountsCreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "ServiceUnavailable"
+	            	[31m│[0m [0mCode: ""
+	            	[31m│[0m [0mMessage: "Database account creation failed. Operation Id: cad4a251-0597-492b-b8ce-23e29f41bcb8, Error : Message: {\"code\":\"ServiceUnavailable\",\"message\":\"Sorry, we are currently experiencing high demand in North Europe region for the zonal redundant (Availability Zones) accounts, and cannot fulfill your request at this time Sun, 05 Jul 2026 01:14:21 GMT. To request region access for your subscription, please follow this link https://aka.ms/cosmosdbquota for more details on how to create a region access request.\\r\\nActivityId: 42b2b74e-d990-4405-acbe-da6555186600, Microsoft.Azure.Documents.Common/2.14.0\"}, Request URI: /serviceReservation, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{"status":"Failed","error":{"code":"ServiceUnavailable","message":"Database account creation failed. Operation Id: cad4a251-0597-492b-b8ce-23e29f41bcb8, Error : Message: {\"code\":\"ServiceUnavailable\",\"message\":\"Sorry, we are currently experiencing high demand in North Europe region for the zonal redundant (Availability Zones) accounts, and cannot fulfill your request at this time Sun, 05 Jul 2026 01:14:21 GMT. To request region access for your subscription, please follow this link https://aka.ms/cosmosdbquota for more details on how to create a region access request.\\r\\nActivityId: 42b2b74e-d990-4405-acbe-da6555186600, Microsoft.Azure.Documents.Common/2.14.0\"}, Request URI: /serviceReservation, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Documents.Common/2.14.0"}}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-autoscale
+
+FailNow
+
+---
+
+## 28 Jun 26 02:11 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/plan.go:85
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/upgradetest.go:150
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:94
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mpopulating Resource Provider cache: listing Resource Providers: loading results: unexpected end of JSON input[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-autoscale
+
+FailNow
+
+---
+
+## 14 Jun 26 02:19 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 31 May 26 01:24 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 24 May 26 01:40 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 10 May 26 01:52 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+No error was found.
+
+---
+
 ## 26 Apr 26 01:30 UTC
 
 Success: true

@@ -1,3 +1,815 @@
+## 08 Nov 26 00:16 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: de37244f-6107-47fa-96d8-172db8246901 Correlation ID: 15f711a6-ed96-491f-a4df-9ab06b8ca960 Timestamp: 2026-11-08 00:16:03Z","error_codes":[5000229],"timestamp":"2026-11-08 00:16:03Z","trace_id":"de37244f-6107-47fa-96d8-172db8246901","correlation_id":"15f711a6-ed96-491f-a4df-9ab06b8ca960"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 17, in provider "azurerm":
+	            	[31m│[0m [0m  17: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-container-app
+
+FailNow
+
+---
+
+## 01 Nov 26 00:20 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: ada7159e-4a9f-4003-b49b-dbad62400000 Correlation ID: a975e6ef-c1d7-4c31-a98e-93048d5bd211 Timestamp: 2026-11-01 00:20:34Z","error_codes":[5000229],"timestamp":"2026-11-01 00:20:34Z","trace_id":"ada7159e-4a9f-4003-b49b-dbad62400000","correlation_id":"a975e6ef-c1d7-4c31-a98e-93048d5bd211"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 17, in provider "azurerm":
+	            	[31m│[0m [0m  17: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-container-app
+
+FailNow
+
+---
+
+## 25 Oct 26 00:22 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: fb8c6ada-7e5d-411a-a4ea-2fd688271802 Correlation ID: e864c580-f43c-47c2-a1b0-b8a09bbdb1eb Timestamp: 2026-10-25 00:22:11Z","error_codes":[5000229],"timestamp":"2026-10-25 00:22:11Z","trace_id":"fb8c6ada-7e5d-411a-a4ea-2fd688271802","correlation_id":"e864c580-f43c-47c2-a1b0-b8a09bbdb1eb"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 17, in provider "azurerm":
+	            	[31m│[0m [0m  17: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-container-app
+
+FailNow
+
+---
+
+## 18 Oct 26 01:58 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.rg_name: Refreshing state... [id=rg-eminent-burro][0m
+	            	[0m[1mrandom_string.container_app_name: Refreshing state... [id=zdmvdsmo][0m
+	            	[0m[1mrandom_string.log_analytics_workspace_name: Refreshing state... [id=pclqvnnr][0m
+	            	[0m[1mrandom_string.container_app_environment_name: Refreshing state... [id=ufzcjnbg][0m
+	            	[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-eminent-burro][0m
+	            	[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD02MmQ3ZjU4ZC01ZWJjLTQ4ZGYtYTUwOS0xZmQzZGU2ZWVmODc7b2JqZWN0SWQ9N2ZmNDJiMDgtNDZkZC00NmE3LThjZWYtYTNiZDlmNmE4NmY2O3N1YnNjcmlwdGlvbklkPWU0YjYyYjNiLTc2MzQtNDk3Mi04YmJlLTVkNzE5NzE1OWYyNjt0ZW5hbnRJZD00ZjAwYjNiNi0yOTQwLTRmMmMtYjAzNy05NDYzN2MxODBkMzA=][0m
+	            	[0m[1mazurerm_log_analytics_workspace.log_analytics_workspace: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-eminent-burro/providers/Microsoft.OperationalInsights/workspaces/pclqvnnr][0m
+	            	[0m[1mazurerm_container_app_environment.container_app_environment: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-eminent-burro/providers/Microsoft.App/managedEnvironments/ufzcjnbg][0m
+	            	[0m[1mazurerm_container_app.container_app: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-eminent-burro/providers/Microsoft.App/containerApps/zdmvdsmo][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_container_app.container_app[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_container_app" "container_app" {
+	            	        id                            = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-eminent-burro/providers/Microsoft.App/containerApps/zdmvdsmo"
+	            	        name                          = "zdmvdsmo"
+	            	        tags                          = {}
+	            	      [31m-[0m[0m workload_profile_name         = "Consumption" [90m-> null[0m[0m
+	            	        [90m# (8 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-azure-container-app493848123/src/quickstart/101-azure-container-app/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-azure-container-app493848123/src/quickstart/101-azure-container-app/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-azure-container-app
+
+FailNow
+
+---
+
+## 11 Oct 26 02:15 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.container_app_name: Refreshing state... [id=rfqjxwoa][0m
+	            	[0m[1mrandom_string.container_app_environment_name: Refreshing state... [id=vxucrvzn][0m
+	            	[0m[1mrandom_string.log_analytics_workspace_name: Refreshing state... [id=odytfkhl][0m
+	            	[0m[1mrandom_pet.rg_name: Refreshing state... [id=rg-fond-bluegill][0m
+	            	[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-fond-bluegill][0m
+	            	[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD02MmQ3ZjU4ZC01ZWJjLTQ4ZGYtYTUwOS0xZmQzZGU2ZWVmODc7b2JqZWN0SWQ9N2ZmNDJiMDgtNDZkZC00NmE3LThjZWYtYTNiZDlmNmE4NmY2O3N1YnNjcmlwdGlvbklkPWU0YjYyYjNiLTc2MzQtNDk3Mi04YmJlLTVkNzE5NzE1OWYyNjt0ZW5hbnRJZD00ZjAwYjNiNi0yOTQwLTRmMmMtYjAzNy05NDYzN2MxODBkMzA=][0m
+	            	[0m[1mazurerm_log_analytics_workspace.log_analytics_workspace: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-fond-bluegill/providers/Microsoft.OperationalInsights/workspaces/odytfkhl][0m
+	            	[0m[1mazurerm_container_app_environment.container_app_environment: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-fond-bluegill/providers/Microsoft.App/managedEnvironments/vxucrvzn][0m
+	            	[0m[1mazurerm_container_app.container_app: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-fond-bluegill/providers/Microsoft.App/containerApps/rfqjxwoa][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_container_app.container_app[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_container_app" "container_app" {
+	            	        id                            = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-fond-bluegill/providers/Microsoft.App/containerApps/rfqjxwoa"
+	            	        name                          = "rfqjxwoa"
+	            	        tags                          = {}
+	            	      [31m-[0m[0m workload_profile_name         = "Consumption" [90m-> null[0m[0m
+	            	        [90m# (8 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-azure-container-app2223778656/src/quickstart/101-azure-container-app/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-azure-container-app2223778656/src/quickstart/101-azure-container-app/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-azure-container-app
+
+FailNow
+
+---
+
+## 04 Oct 26 03:00 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.container_app_name: Refreshing state... [id=fzsedpia][0m
+	            	[0m[1mrandom_pet.rg_name: Refreshing state... [id=rg-joint-cricket][0m
+	            	[0m[1mrandom_string.log_analytics_workspace_name: Refreshing state... [id=zslczcxx][0m
+	            	[0m[1mrandom_string.container_app_environment_name: Refreshing state... [id=nycrvfid][0m
+	            	[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-joint-cricket][0m
+	            	[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD02MmQ3ZjU4ZC01ZWJjLTQ4ZGYtYTUwOS0xZmQzZGU2ZWVmODc7b2JqZWN0SWQ9N2ZmNDJiMDgtNDZkZC00NmE3LThjZWYtYTNiZDlmNmE4NmY2O3N1YnNjcmlwdGlvbklkPWU0YjYyYjNiLTc2MzQtNDk3Mi04YmJlLTVkNzE5NzE1OWYyNjt0ZW5hbnRJZD00ZjAwYjNiNi0yOTQwLTRmMmMtYjAzNy05NDYzN2MxODBkMzA=][0m
+	            	[0m[1mazurerm_log_analytics_workspace.log_analytics_workspace: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-joint-cricket/providers/Microsoft.OperationalInsights/workspaces/zslczcxx][0m
+	            	[0m[1mazurerm_container_app_environment.container_app_environment: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-joint-cricket/providers/Microsoft.App/managedEnvironments/nycrvfid][0m
+	            	[0m[1mazurerm_container_app.container_app: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-joint-cricket/providers/Microsoft.App/containerApps/fzsedpia][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_container_app.container_app[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_container_app" "container_app" {
+	            	        id                            = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-joint-cricket/providers/Microsoft.App/containerApps/fzsedpia"
+	            	        name                          = "fzsedpia"
+	            	        tags                          = {}
+	            	      [31m-[0m[0m workload_profile_name         = "Consumption" [90m-> null[0m[0m
+	            	        [90m# (8 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-azure-container-app435993057/src/quickstart/101-azure-container-app/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-azure-container-app435993057/src/quickstart/101-azure-container-app/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-azure-container-app
+
+FailNow
+
+---
+
+## 27 Sep 26 01:51 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.log_analytics_workspace_name: Refreshing state... [id=qycojeyd][0m
+	            	[0m[1mrandom_pet.rg_name: Refreshing state... [id=rg-welcome-dingo][0m
+	            	[0m[1mrandom_string.container_app_environment_name: Refreshing state... [id=iiaqtikl][0m
+	            	[0m[1mrandom_string.container_app_name: Refreshing state... [id=hgrljmuw][0m
+	            	[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-welcome-dingo][0m
+	            	[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD02MmQ3ZjU4ZC01ZWJjLTQ4ZGYtYTUwOS0xZmQzZGU2ZWVmODc7b2JqZWN0SWQ9N2ZmNDJiMDgtNDZkZC00NmE3LThjZWYtYTNiZDlmNmE4NmY2O3N1YnNjcmlwdGlvbklkPWU0YjYyYjNiLTc2MzQtNDk3Mi04YmJlLTVkNzE5NzE1OWYyNjt0ZW5hbnRJZD00ZjAwYjNiNi0yOTQwLTRmMmMtYjAzNy05NDYzN2MxODBkMzA=][0m
+	            	[0m[1mazurerm_log_analytics_workspace.log_analytics_workspace: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-welcome-dingo/providers/Microsoft.OperationalInsights/workspaces/qycojeyd][0m
+	            	[0m[1mazurerm_container_app_environment.container_app_environment: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-welcome-dingo/providers/Microsoft.App/managedEnvironments/iiaqtikl][0m
+	            	[0m[1mazurerm_container_app.container_app: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-welcome-dingo/providers/Microsoft.App/containerApps/hgrljmuw][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_container_app.container_app[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_container_app" "container_app" {
+	            	        id                            = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-welcome-dingo/providers/Microsoft.App/containerApps/hgrljmuw"
+	            	        name                          = "hgrljmuw"
+	            	        tags                          = {}
+	            	      [31m-[0m[0m workload_profile_name         = "Consumption" [90m-> null[0m[0m
+	            	        [90m# (8 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-azure-container-app299105562/src/quickstart/101-azure-container-app/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-azure-container-app299105562/src/quickstart/101-azure-container-app/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-azure-container-app
+
+FailNow
+
+---
+
+## 20 Sep 26 02:22 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.log_analytics_workspace_name: Refreshing state... [id=xqeftwoi][0m
+	            	[0m[1mrandom_pet.rg_name: Refreshing state... [id=rg-aware-chimp][0m
+	            	[0m[1mrandom_string.container_app_environment_name: Refreshing state... [id=dtmkwjte][0m
+	            	[0m[1mrandom_string.container_app_name: Refreshing state... [id=gwjfbpgz][0m
+	            	[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-aware-chimp][0m
+	            	[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD02MmQ3ZjU4ZC01ZWJjLTQ4ZGYtYTUwOS0xZmQzZGU2ZWVmODc7b2JqZWN0SWQ9N2ZmNDJiMDgtNDZkZC00NmE3LThjZWYtYTNiZDlmNmE4NmY2O3N1YnNjcmlwdGlvbklkPWU0YjYyYjNiLTc2MzQtNDk3Mi04YmJlLTVkNzE5NzE1OWYyNjt0ZW5hbnRJZD00ZjAwYjNiNi0yOTQwLTRmMmMtYjAzNy05NDYzN2MxODBkMzA=][0m
+	            	[0m[1mazurerm_log_analytics_workspace.log_analytics_workspace: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-aware-chimp/providers/Microsoft.OperationalInsights/workspaces/xqeftwoi][0m
+	            	[0m[1mazurerm_container_app_environment.container_app_environment: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-aware-chimp/providers/Microsoft.App/managedEnvironments/dtmkwjte][0m
+	            	[0m[1mazurerm_container_app.container_app: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-aware-chimp/providers/Microsoft.App/containerApps/gwjfbpgz][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_container_app.container_app[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_container_app" "container_app" {
+	            	        id                            = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-aware-chimp/providers/Microsoft.App/containerApps/gwjfbpgz"
+	            	        name                          = "gwjfbpgz"
+	            	        tags                          = {}
+	            	      [31m-[0m[0m workload_profile_name         = "Consumption" [90m-> null[0m[0m
+	            	        [90m# (8 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/101-azure-container-app3473932968/src/quickstart/101-azure-container-app/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/101-azure-container-app3473932968/src/quickstart/101-azure-container-app/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/101-azure-container-app
+
+FailNow
+
+---
+
+## 13 Sep 26 02:50 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+No error was found.
+
+---
+
+## 06 Sep 26 01:33 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 30 Aug 26 01:31 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 23 Aug 26 01:06 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 16 Aug 26 01:31 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 09 Aug 26 00:25 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 02 Aug 26 03:38 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Managed Environment (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-integral-marlin"
+	            	[31m│[0m [0mManaged Environment Name: "bllqdcfp"): polling after CreateOrUpdate: polling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "Failed"
+	            	[31m│[0m [0mCode: "ManagedEnvironmentCapacityHeavyUsageError"
+	            	[31m│[0m [0mMessage: "AKS is experiencing heavy usage in region eastus. We are working on adding new capacity. In the meantime, please consider creating new AKS clusters in a different region. For a list of all the Azure regions, visit https://aka.ms/aks/regions. For more details on this error, visit https://aka.ms/akscapacityheavyusage.\r\nStatus: 400 (Bad Request)\r\nErrorCode: AKSCapacityHeavyUsage\r\n\r\nContent:\r\n{\n  \"code\": \"AKSCapacityHeavyUsage\",\n  \"details\": null,\n  \"message\": \"AKS is experiencing heavy usage in region eastus. We are working on adding new capacity. In the meantime, please consider creating new AKS clusters in a different region. For a list of all the Azure regions, visit https://aka.ms/aks/regions. For more details on this error, visit https://aka.ms/akscapacityheavyusage.\",\n  \"subcode\": \"\"\n }\r\n\r\nHeaders:\r\nCache-Control: no-cache\r\nPragma: no-cache\r\nx-ms-operation-identifier: REDACTED\r\nx-ms-correlation-request-id: REDACTED\r\nx-ms-request-id: 3005f8d8-59e4-4023-9288-b592eb40244c\r\nStrict-Transport-Security: REDACTED\r\nx-ms-throttling-version: REDACTED\r\nx-ms-ratelimit-remaining-subscription-writes: REDACTED\r\nx-ms-routing-request-id: REDACTED\r\nX-Content-Type-Options: REDACTED\r\nX-Cache: REDACTED\r\nX-MSEdge-Ref: REDACTED\r\nDate: Sun, 02 Aug 2026 01:21:52 GMT\r\nContent-Length: 408\r\nContent-Type: application/json\r\nExpires: -1\r\n"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{"id":"/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/providers/Microsoft.App/locations/eastus/managedEnvironmentOperationStatuses/3bcc4ee5-8548-4e2e-9f39-3eb29238685e","name":"3bcc4ee5-8548-4e2e-9f39-3eb29238685e","status":"Failed","error":{"code":"ManagedEnvironmentCapacityHeavyUsageError","message":"AKS is experiencing heavy usage in region eastus. We are working on adding new capacity. In the meantime, please consider creating new AKS clusters in a different region. For a list of all the Azure regions, visit https://aka.ms/aks/regions. For more details on this error, visit https://aka.ms/akscapacityheavyusage.\r\nStatus: 400 (Bad Request)\r\nErrorCode: AKSCapacityHeavyUsage\r\n\r\nContent:\r\n{\n  \"code\": \"AKSCapacityHeavyUsage\",\n  \"details\": null,\n  \"message\": \"AKS is experiencing heavy usage in region eastus. We are working on adding new capacity. In the meantime, please consider creating new AKS clusters in a different region. For a list of all the Azure regions, visit https://aka.ms/aks/regions. For more details on this error, visit https://aka.ms/akscapacityheavyusage.\",\n  \"subcode\": \"\"\n }\r\n\r\nHeaders:\r\nCache-Control: no-cache\r\nPragma: no-cache\r\nx-ms-operation-identifier: REDACTED\r\nx-ms-correlation-request-id: REDACTED\r\nx-ms-request-id: 3005f8d8-59e4-4023-9288-b592eb40244c\r\nStrict-Transport-Security: REDACTED\r\nx-ms-throttling-version: REDACTED\r\nx-ms-ratelimit-remaining-subscription-writes: REDACTED\r\nx-ms-routing-request-id: REDACTED\r\nX-Content-Type-Options: REDACTED\r\nX-Cache: REDACTED\r\nX-MSEdge-Ref: REDACTED\r\nDate: Sun, 02 Aug 2026 01:21:52 GMT\r\nContent-Length: 408\r\nContent-Type: application/json\r\nExpires: -1\r\n"},"startTime":"2026-08-02T01:21:59.7038328"}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_container_app_environment.container_app_environment,
+	            	[31m│[0m [0m  on main.tf line 41, in resource "azurerm_container_app_environment" "container_app_environment":
+	            	[31m│[0m [0m  41: resource "azurerm_container_app_environment" "container_app_environment" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating Managed Environment (Subscription:
+	            	[31m│[0m [0m"e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-integral-marlin"
+	            	[31m│[0m [0mManaged Environment Name: "bllqdcfp"): polling after CreateOrUpdate:
+	            	[31m│[0m [0mpolling failed: the Azure API returned the following error:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mStatus: "Failed"
+	            	[31m│[0m [0mCode: "ManagedEnvironmentCapacityHeavyUsageError"
+	            	[31m│[0m [0mMessage: "AKS is experiencing heavy usage in region eastus. We are working
+	            	[31m│[0m [0mon adding new capacity. In the meantime, please consider creating new AKS
+	            	[31m│[0m [0mclusters in a different region. For a list of all the Azure regions, visit
+	            	[31m│[0m [0mhttps://aka.ms/aks/regions. For more details on this error, visit
+	            	[31m│[0m [0mhttps://aka.ms/akscapacityheavyusage.\r\nStatus: 400 (Bad
+	            	[31m│[0m [0mRequest)\r\nErrorCode: AKSCapacityHeavyUsage\r\n\r\nContent:\r\n{\n
+	            	[31m│[0m [0m\"code\": \"AKSCapacityHeavyUsage\",\n  \"details\": null,\n  \"message\":
+	            	[31m│[0m [0m\"AKS is experiencing heavy usage in region eastus. We are working on
+	            	[31m│[0m [0madding new capacity. In the meantime, please consider creating new AKS
+	            	[31m│[0m [0mclusters in a different region. For a list of all the Azure regions, visit
+	            	[31m│[0m [0mhttps://aka.ms/aks/regions. For more details on this error, visit
+	            	[31m│[0m [0mhttps://aka.ms/akscapacityheavyusage.\",\n  \"subcode\": \"\"\n
+	            	[31m│[0m [0m}\r\n\r\nHeaders:\r\nCache-Control: no-cache\r\nPragma:
+	            	[31m│[0m [0mno-cache\r\nx-ms-operation-identifier:
+	            	[31m│[0m [0mREDACTED\r\nx-ms-correlation-request-id: REDACTED\r\nx-ms-request-id:
+	            	[31m│[0m [0m3005f8d8-59e4-4023-9288-b592eb40244c\r\nStrict-Transport-Security:
+	            	[31m│[0m [0mREDACTED\r\nx-ms-throttling-version:
+	            	[31m│[0m [0mREDACTED\r\nx-ms-ratelimit-remaining-subscription-writes:
+	            	[31m│[0m [0mREDACTED\r\nx-ms-routing-request-id: REDACTED\r\nX-Content-Type-Options:
+	            	[31m│[0m [0mREDACTED\r\nX-Cache: REDACTED\r\nX-MSEdge-Ref: REDACTED\r\nDate: Sun, 02
+	            	[31m│[0m [0mAug 2026 01:21:52 GMT\r\nContent-Length: 408\r\nContent-Type:
+	            	[31m│[0m [0mapplication/json\r\nExpires: -1\r\n"
+	            	[31m│[0m [0mActivity Id: ""
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m---
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mAPI Response:
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m----[start]----
+	            	[31m│[0m [0m{"id":"/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/providers/Microsoft.App/locations/eastus/managedEnvironmentOperationStatuses/3bcc4ee5-8548-4e2e-9f39-3eb29238685e","name":"3bcc4ee5-8548-4e2e-9f39-3eb29238685e","status":"Failed","error":{"code":"ManagedEnvironmentCapacityHeavyUsageError","message":"AKS
+	            	[31m│[0m [0mis experiencing heavy usage in region eastus. We are working on adding new
+	            	[31m│[0m [0mcapacity. In the meantime, please consider creating new AKS clusters in a
+	            	[31m│[0m [0mdifferent region. For a list of all the Azure regions, visit
+	            	[31m│[0m [0mhttps://aka.ms/aks/regions. For more details on this error, visit
+	            	[31m│[0m [0mhttps://aka.ms/akscapacityheavyusage.\r\nStatus: 400 (Bad
+	            	[31m│[0m [0mRequest)\r\nErrorCode: AKSCapacityHeavyUsage\r\n\r\nContent:\r\n{\n
+	            	[31m│[0m [0m\"code\": \"AKSCapacityHeavyUsage\",\n  \"details\": null,\n  \"message\":
+	            	[31m│[0m [0m\"AKS is experiencing heavy usage in region eastus. We are working on
+	            	[31m│[0m [0madding new capacity. In the meantime, please consider creating new AKS
+	            	[31m│[0m [0mclusters in a different region. For a list of all the Azure regions, visit
+	            	[31m│[0m [0mhttps://aka.ms/aks/regions. For more details on this error, visit
+	            	[31m│[0m [0mhttps://aka.ms/akscapacityheavyusage.\",\n  \"subcode\": \"\"\n
+	            	[31m│[0m [0m}\r\n\r\nHeaders:\r\nCache-Control: no-cache\r\nPragma:
+	            	[31m│[0m [0mno-cache\r\nx-ms-operation-identifier:
+	            	[31m│[0m [0mREDACTED\r\nx-ms-correlation-request-id: REDACTED\r\nx-ms-request-id:
+	            	[31m│[0m [0m3005f8d8-59e4-4023-9288-b592eb40244c\r\nStrict-Transport-Security:
+	            	[31m│[0m [0mREDACTED\r\nx-ms-throttling-version:
+	            	[31m│[0m [0mREDACTED\r\nx-ms-ratelimit-remaining-subscription-writes:
+	            	[31m│[0m [0mREDACTED\r\nx-ms-routing-request-id: REDACTED\r\nX-Content-Type-Options:
+	            	[31m│[0m [0mREDACTED\r\nX-Cache: REDACTED\r\nX-MSEdge-Ref: REDACTED\r\nDate: Sun, 02
+	            	[31m│[0m [0mAug 2026 01:21:52 GMT\r\nContent-Length: 408\r\nContent-Type:
+	            	[31m│[0m [0mapplication/json\r\nExpires:
+	            	[31m│[0m [0m-1\r\n"},"startTime":"2026-08-02T01:21:59.7038328"}
+	            	[31m│[0m [0m-----[end]-----
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-container-app
+
+FailNow
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:135
+	            				/usr/local/go/src/runtime/panic.go:615
+	            				/usr/local/go/src/testing/testing.go:1013
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/test_runner.go:53
+	            				/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	'terraform [destroy -auto-approve -input=false -lock=false]' unsuccessful after 5 retries
+	Test:       	Test_Quickstarts/quickstart/101-azure-container-app
+
+FailNow
+
+---
+
+## 26 Jul 26 01:54 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 12 Jul 26 01:31 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 05 Jul 26 01:49 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 28 Jun 26 00:52 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 14 Jun 26 01:27 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 31 May 26 01:30 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 24 May 26 01:56 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+No error was found.
+
+---
+
+## 10 May 26 01:38 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Managed Environment (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-poetic-guinea"
+	            	[31m│[0m [0mManaged Environment Name: "drajfjqq"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: MaxNumberOfGlobalEnvironmentsInSubExceeded: The subscription 'cb563ee9-7df0-468e-81d5-166968d1f89a' cannot have more than 1 Container App Environments. For more information, visit: https://go.microsoft.com/fwlink/?linkid=2208872[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_container_app_environment.container_app_environment,
+	            	[31m│[0m [0m  on main.tf line 41, in resource "azurerm_container_app_environment" "container_app_environment":
+	            	[31m│[0m [0m  41: resource "azurerm_container_app_environment" "container_app_environment" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0mcreating Managed Environment (Subscription:
+	            	[31m│[0m [0m"cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "rg-poetic-guinea"
+	            	[31m│[0m [0mManaged Environment Name: "drajfjqq"): performing CreateOrUpdate:
+	            	[31m│[0m [0munexpected status 409 (409 Conflict) with error:
+	            	[31m│[0m [0mMaxNumberOfGlobalEnvironmentsInSubExceeded: The subscription
+	            	[31m│[0m [0m'cb563ee9-7df0-468e-81d5-166968d1f89a' cannot have more than 1 Container
+	            	[31m│[0m [0mApp Environments. For more information, visit:
+	            	[31m│[0m [0mhttps://go.microsoft.com/fwlink/?linkid=2208872
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-azure-container-app
+
+FailNow
+
+---
+
 ## 26 Apr 26 01:45 UTC
 
 Success: true
