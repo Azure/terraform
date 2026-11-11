@@ -1,0 +1,8 @@
+{
+  "$schema": "../../.github/schemas/quickstart-metadata.schema.json",
+  "testResult": {
+    "correlationId": "642f7752-96d9-4053-8ba2-9140504d088f",
+    "timestamp": "2026-11-11T22:24:12Z",
+    "terraformVersion": "1.17.1"
+  }
+}
