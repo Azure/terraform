@@ -1,3 +1,848 @@
+## 08 Nov 26 00:12 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 0f2feadc-87c9-41d5-bfcd-1171bf5ed100 Correlation ID: a7efaac7-da63-404a-b85f-338090730f4c Timestamp: 2026-11-08 00:12:28Z","error_codes":[5000229],"timestamp":"2026-11-08 00:12:28Z","trace_id":"0f2feadc-87c9-41d5-bfcd-1171bf5ed100","correlation_id":"a7efaac7-da63-404a-b85f-338090730f4c"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-confidential-vmss
+
+FailNow
+
+---
+
+## 01 Nov 26 00:15 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 1df568f6-9803-4e78-a600-7891b7a64100 Correlation ID: 90b4d0b6-5839-4e8b-9946-83504fbba73c Timestamp: 2026-11-01 00:15:28Z","error_codes":[5000229],"timestamp":"2026-11-01 00:15:28Z","trace_id":"1df568f6-9803-4e78-a600-7891b7a64100","correlation_id":"90b4d0b6-5839-4e8b-9946-83504fbba73c"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-confidential-vmss
+
+FailNow
+
+---
+
+## 25 Oct 26 00:16 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 0216c601-86ac-4cc9-aeee-18d31651e700 Correlation ID: b010f6be-7589-46e4-99cb-a5e8f7240f5f Timestamp: 2026-10-25 00:16:20Z","error_codes":[5000229],"timestamp":"2026-10-25 00:16:20Z","trace_id":"0216c601-86ac-4cc9-aeee-18d31651e700","correlation_id":"b010f6be-7589-46e4-99cb-a5e8f7240f5f"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-confidential-vmss
+
+FailNow
+
+---
+
+## 18 Oct 26 00:23 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine Scale Set (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "201-confidential-vmss-willing-owl-rg"
+	            	[31m│[0m [0mVirtual Machine Scale Set Name: "201-confidential-vmss-willing-owl-vmss"): performing CreateOrUpdate: unexpected status 404 (404 Not Found) with error: PlatformImageNotFound: The platform image 'MicrosoftWindowsServer:windows-cvm:2022-datacenter-cvm:latest' is not available. Verify that all fields in the storage profile are correct. For more details about storage profile information, please refer to https://aka.ms/storageprofile[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine_scale_set.main,
+	            	[31m│[0m [0m  on main.tf line 20, in resource "azurerm_windows_virtual_machine_scale_set" "main":
+	            	[31m│[0m [0m  20: resource "azurerm_windows_virtual_machine_scale_set" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-confidential-vmss
+
+FailNow
+
+---
+
+## 11 Oct 26 00:25 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine Scale Set (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "201-confidential-vmss-current-garfish-rg"
+	            	[31m│[0m [0mVirtual Machine Scale Set Name: "201-confidential-vmss-current-garfish-vmss"): performing CreateOrUpdate: unexpected status 404 (404 Not Found) with error: PlatformImageNotFound: The platform image 'MicrosoftWindowsServer:windows-cvm:2022-datacenter-cvm:latest' is not available. Verify that all fields in the storage profile are correct. For more details about storage profile information, please refer to https://aka.ms/storageprofile[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine_scale_set.main,
+	            	[31m│[0m [0m  on main.tf line 20, in resource "azurerm_windows_virtual_machine_scale_set" "main":
+	            	[31m│[0m [0m  20: resource "azurerm_windows_virtual_machine_scale_set" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-confidential-vmss
+
+FailNow
+
+---
+
+## 04 Oct 26 01:32 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine Scale Set (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "201-confidential-vmss-tough-flea-rg"
+	            	[31m│[0m [0mVirtual Machine Scale Set Name: "201-confidential-vmss-tough-flea-vmss"): performing CreateOrUpdate: unexpected status 404 (404 Not Found) with error: PlatformImageNotFound: The platform image 'MicrosoftWindowsServer:windows-cvm:2022-datacenter-cvm:latest' is not available. Verify that all fields in the storage profile are correct. For more details about storage profile information, please refer to https://aka.ms/storageprofile[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine_scale_set.main,
+	            	[31m│[0m [0m  on main.tf line 20, in resource "azurerm_windows_virtual_machine_scale_set" "main":
+	            	[31m│[0m [0m  20: resource "azurerm_windows_virtual_machine_scale_set" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-confidential-vmss
+
+FailNow
+
+---
+
+## 27 Sep 26 00:20 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine Scale Set (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "201-confidential-vmss-driving-rabbit-rg"
+	            	[31m│[0m [0mVirtual Machine Scale Set Name: "201-confidential-vmss-driving-rabbit-vmss"): performing CreateOrUpdate: unexpected status 404 (404 Not Found) with error: PlatformImageNotFound: The platform image 'MicrosoftWindowsServer:windows-cvm:2022-datacenter-cvm:latest' is not available. Verify that all fields in the storage profile are correct. For more details about storage profile information, please refer to https://aka.ms/storageprofile[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine_scale_set.main,
+	            	[31m│[0m [0m  on main.tf line 20, in resource "azurerm_windows_virtual_machine_scale_set" "main":
+	            	[31m│[0m [0m  20: resource "azurerm_windows_virtual_machine_scale_set" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-confidential-vmss
+
+FailNow
+
+---
+
+## 20 Sep 26 00:26 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine Scale Set (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "201-confidential-vmss-true-baboon-rg"
+	            	[31m│[0m [0mVirtual Machine Scale Set Name: "201-confidential-vmss-true-baboon-vmss"): performing CreateOrUpdate: unexpected status 404 (404 Not Found) with error: PlatformImageNotFound: The platform image 'MicrosoftWindowsServer:windows-cvm:2022-datacenter-cvm:latest' is not available. Verify that all fields in the storage profile are correct. For more details about storage profile information, please refer to https://aka.ms/storageprofile[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine_scale_set.main,
+	            	[31m│[0m [0m  on main.tf line 20, in resource "azurerm_windows_virtual_machine_scale_set" "main":
+	            	[31m│[0m [0m  20: resource "azurerm_windows_virtual_machine_scale_set" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-confidential-vmss
+
+FailNow
+
+---
+
+## 13 Sep 26 00:27 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine Scale Set (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "201-confidential-vmss-hardy-mink-rg"
+	            	[31m│[0m [0mVirtual Machine Scale Set Name: "201-confidential-vmss-hardy-mink-vmss"): performing CreateOrUpdate: unexpected status 404 (404 Not Found) with error: PlatformImageNotFound: The platform image 'MicrosoftWindowsServer:windows-cvm:2022-datacenter-cvm:latest' is not available. Verify that all fields in the storage profile are correct. For more details about storage profile information, please refer to https://aka.ms/storageprofile[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine_scale_set.main,
+	            	[31m│[0m [0m  on main.tf line 20, in resource "azurerm_windows_virtual_machine_scale_set" "main":
+	            	[31m│[0m [0m  20: resource "azurerm_windows_virtual_machine_scale_set" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-confidential-vmss
+
+FailNow
+
+---
+
+## 06 Sep 26 00:19 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine Scale Set (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "201-confidential-vmss-epic-lion-rg"
+	            	[31m│[0m [0mVirtual Machine Scale Set Name: "201-confidential-vmss-epic-lion-vmss"): performing CreateOrUpdate: unexpected status 404 (404 Not Found) with error: PlatformImageNotFound: The platform image 'MicrosoftWindowsServer:windows-cvm:2022-datacenter-cvm:latest' is not available. Verify that all fields in the storage profile are correct. For more details about storage profile information, please refer to https://aka.ms/storageprofile[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine_scale_set.main,
+	            	[31m│[0m [0m  on main.tf line 20, in resource "azurerm_windows_virtual_machine_scale_set" "main":
+	            	[31m│[0m [0m  20: resource "azurerm_windows_virtual_machine_scale_set" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-confidential-vmss
+
+FailNow
+
+---
+
+## 30 Aug 26 00:28 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine Scale Set (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "201-confidential-vmss-allowing-snipe-rg"
+	            	[31m│[0m [0mVirtual Machine Scale Set Name: "201-confidential-vmss-allowing-snipe-vmss"): performing CreateOrUpdate: unexpected status 404 (404 Not Found) with error: PlatformImageNotFound: The platform image 'MicrosoftWindowsServer:windows-cvm:2022-datacenter-cvm:latest' is not available. Verify that all fields in the storage profile are correct. For more details about storage profile information, please refer to https://aka.ms/storageprofile[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine_scale_set.main,
+	            	[31m│[0m [0m  on main.tf line 20, in resource "azurerm_windows_virtual_machine_scale_set" "main":
+	            	[31m│[0m [0m  20: resource "azurerm_windows_virtual_machine_scale_set" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-confidential-vmss
+
+FailNow
+
+---
+
+## 23 Aug 26 01:20 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine Scale Set (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "201-confidential-vmss-destined-pony-rg"
+	            	[31m│[0m [0mVirtual Machine Scale Set Name: "201-confidential-vmss-destined-pony-vmss"): performing CreateOrUpdate: unexpected status 404 (404 Not Found) with error: PlatformImageNotFound: The platform image 'MicrosoftWindowsServer:windows-cvm:2022-datacenter-cvm:latest' is not available. Verify that all fields in the storage profile are correct. For more details about storage profile information, please refer to https://aka.ms/storageprofile[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine_scale_set.main,
+	            	[31m│[0m [0m  on main.tf line 20, in resource "azurerm_windows_virtual_machine_scale_set" "main":
+	            	[31m│[0m [0m  20: resource "azurerm_windows_virtual_machine_scale_set" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-confidential-vmss
+
+FailNow
+
+---
+
+## 16 Aug 26 00:20 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine Scale Set (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "201-confidential-vmss-adapted-panda-rg"
+	            	[31m│[0m [0mVirtual Machine Scale Set Name: "201-confidential-vmss-adapted-panda-vmss"): performing CreateOrUpdate: unexpected status 404 (404 Not Found) with error: PlatformImageNotFound: The platform image 'MicrosoftWindowsServer:windows-cvm:2022-datacenter-cvm:latest' is not available. Verify that all fields in the storage profile are correct. For more details about storage profile information, please refer to https://aka.ms/storageprofile[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine_scale_set.main,
+	            	[31m│[0m [0m  on main.tf line 20, in resource "azurerm_windows_virtual_machine_scale_set" "main":
+	            	[31m│[0m [0m  20: resource "azurerm_windows_virtual_machine_scale_set" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-confidential-vmss
+
+FailNow
+
+---
+
+## 09 Aug 26 01:16 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine Scale Set (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "201-confidential-vmss-wise-cub-rg"
+	            	[31m│[0m [0mVirtual Machine Scale Set Name: "201-confidential-vmss-wise-cub-vmss"): performing CreateOrUpdate: unexpected status 404 (404 Not Found) with error: PlatformImageNotFound: The platform image 'MicrosoftWindowsServer:windows-cvm:2022-datacenter-cvm:latest' is not available. Verify that all fields in the storage profile are correct. For more details about storage profile information, please refer to https://aka.ms/storageprofile[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine_scale_set.main,
+	            	[31m│[0m [0m  on main.tf line 20, in resource "azurerm_windows_virtual_machine_scale_set" "main":
+	            	[31m│[0m [0m  20: resource "azurerm_windows_virtual_machine_scale_set" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-confidential-vmss
+
+FailNow
+
+---
+
+## 02 Aug 26 01:06 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine Scale Set (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "201-confidential-vmss-together-piranha-rg"
+	            	[31m│[0m [0mVirtual Machine Scale Set Name: "201-confidential-vmss-together-piranha-vmss"): performing CreateOrUpdate: unexpected status 404 (404 Not Found) with error: PlatformImageNotFound: The platform image 'MicrosoftWindowsServer:windows-cvm:2022-datacenter-cvm:latest' is not available. Verify that all fields in the storage profile are correct. For more details about storage profile information, please refer to https://aka.ms/storageprofile[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine_scale_set.main,
+	            	[31m│[0m [0m  on main.tf line 20, in resource "azurerm_windows_virtual_machine_scale_set" "main":
+	            	[31m│[0m [0m  20: resource "azurerm_windows_virtual_machine_scale_set" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-confidential-vmss
+
+FailNow
+
+---
+
+## 26 Jul 26 00:55 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine Scale Set (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "201-confidential-vmss-national-silkworm-rg"
+	            	[31m│[0m [0mVirtual Machine Scale Set Name: "201-confidential-vmss-national-silkworm-vmss"): performing CreateOrUpdate: unexpected status 404 (404 Not Found) with error: PlatformImageNotFound: The platform image 'MicrosoftWindowsServer:windows-cvm:2022-datacenter-cvm:latest' is not available. Verify that all fields in the storage profile are correct. For more details about storage profile information, please refer to https://aka.ms/storageprofile[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine_scale_set.main,
+	            	[31m│[0m [0m  on main.tf line 20, in resource "azurerm_windows_virtual_machine_scale_set" "main":
+	            	[31m│[0m [0m  20: resource "azurerm_windows_virtual_machine_scale_set" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-confidential-vmss
+
+FailNow
+
+---
+
+## 12 Jul 26 00:40 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine Scale Set (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "201-confidential-vmss-polished-doberman-rg"
+	            	[31m│[0m [0mVirtual Machine Scale Set Name: "201-confidential-vmss-polished-doberman-vmss"): performing CreateOrUpdate: unexpected status 404 (404 Not Found) with error: PlatformImageNotFound: The platform image 'MicrosoftWindowsServer:windows-cvm:2022-datacenter-cvm:latest' is not available. Verify that all fields in the storage profile are correct. For more details about storage profile information, please refer to https://aka.ms/storageprofile[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine_scale_set.main,
+	            	[31m│[0m [0m  on main.tf line 20, in resource "azurerm_windows_virtual_machine_scale_set" "main":
+	            	[31m│[0m [0m  20: resource "azurerm_windows_virtual_machine_scale_set" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-confidential-vmss
+
+FailNow
+
+---
+
+## 05 Jul 26 01:46 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine Scale Set (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "201-confidential-vmss-climbing-ram-rg"
+	            	[31m│[0m [0mVirtual Machine Scale Set Name: "201-confidential-vmss-climbing-ram-vmss"): performing CreateOrUpdate: unexpected status 404 (404 Not Found) with error: PlatformImageNotFound: The platform image 'MicrosoftWindowsServer:windows-cvm:2022-datacenter-cvm:latest' is not available. Verify that all fields in the storage profile are correct. For more details about storage profile information, please refer to https://aka.ms/storageprofile[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine_scale_set.main,
+	            	[31m│[0m [0m  on main.tf line 20, in resource "azurerm_windows_virtual_machine_scale_set" "main":
+	            	[31m│[0m [0m  20: resource "azurerm_windows_virtual_machine_scale_set" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-confidential-vmss
+
+FailNow
+
+---
+
+## 28 Jun 26 02:09 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine Scale Set (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "201-confidential-vmss-concise-garfish-rg"
+	            	[31m│[0m [0mVirtual Machine Scale Set Name: "201-confidential-vmss-concise-garfish-vmss"): performing CreateOrUpdate: unexpected status 404 (404 Not Found) with error: PlatformImageNotFound: The platform image 'MicrosoftWindowsServer:windows-cvm:2022-datacenter-cvm:latest' is not available. Verify that all fields in the storage profile are correct. For more details about storage profile information, please refer to https://aka.ms/storageprofile[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine_scale_set.main,
+	            	[31m│[0m [0m  on main.tf line 20, in resource "azurerm_windows_virtual_machine_scale_set" "main":
+	            	[31m│[0m [0m  20: resource "azurerm_windows_virtual_machine_scale_set" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-confidential-vmss
+
+FailNow
+
+---
+
+## 14 Jun 26 00:49 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine Scale Set (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "201-confidential-vmss-workable-ladybird-rg"
+	            	[31m│[0m [0mVirtual Machine Scale Set Name: "201-confidential-vmss-workable-ladybird-vmss"): performing CreateOrUpdate: unexpected status 404 (404 ) with error: PlatformImageNotFound: The platform image 'MicrosoftWindowsServer:windows-cvm:2022-datacenter-cvm:latest' is not available. Verify that all fields in the storage profile are correct. For more details about storage profile information, please refer to https://aka.ms/storageprofile[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine_scale_set.main,
+	            	[31m│[0m [0m  on main.tf line 20, in resource "azurerm_windows_virtual_machine_scale_set" "main":
+	            	[31m│[0m [0m  20: resource "azurerm_windows_virtual_machine_scale_set" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-confidential-vmss
+
+FailNow
+
+---
+
+## 31 May 26 01:49 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine Scale Set (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "201-confidential-vmss-relaxed-sawfish-rg"
+	            	[31m│[0m [0mVirtual Machine Scale Set Name: "201-confidential-vmss-relaxed-sawfish-vmss"): performing CreateOrUpdate: unexpected status 404 (404 Not Found) with error: PlatformImageNotFound: The platform image 'MicrosoftWindowsServer:windows-cvm:2022-datacenter-cvm:latest' is not available. Verify that all fields in the storage profile are correct. For more details about storage profile information, please refer to https://aka.ms/storageprofile[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine_scale_set.main,
+	            	[31m│[0m [0m  on main.tf line 20, in resource "azurerm_windows_virtual_machine_scale_set" "main":
+	            	[31m│[0m [0m  20: resource "azurerm_windows_virtual_machine_scale_set" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-confidential-vmss
+
+FailNow
+
+---
+
+## 24 May 26 00:41 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine Scale Set (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "201-confidential-vmss-verified-flamingo-rg"
+	            	[31m│[0m [0mVirtual Machine Scale Set Name: "201-confidential-vmss-verified-flamingo-vmss"): performing CreateOrUpdate: unexpected status 404 (404 Not Found) with error: PlatformImageNotFound: The platform image 'MicrosoftWindowsServer:windows-cvm:2022-datacenter-cvm:latest' is not available. Verify that all fields in the storage profile are correct. For more details about storage profile information, please refer to https://aka.ms/storageprofile[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine_scale_set.main,
+	            	[31m│[0m [0m  on main.tf line 20, in resource "azurerm_windows_virtual_machine_scale_set" "main":
+	            	[31m│[0m [0m  20: resource "azurerm_windows_virtual_machine_scale_set" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-confidential-vmss
+
+FailNow
+
+---
+
+## 10 May 26 00:29 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine Scale Set (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "201-confidential-vmss-funky-mammoth-rg"
+	            	[31m│[0m [0mVirtual Machine Scale Set Name: "201-confidential-vmss-funky-mammoth-vmss"): performing CreateOrUpdate: unexpected status 404 (404 Not Found) with error: PlatformImageNotFound: The platform image 'MicrosoftWindowsServer:windows-cvm:2022-datacenter-cvm:latest' is not available. Verify that all fields in the storage profile are correct. For more details about storage profile information, please refer to https://aka.ms/storageprofile[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine_scale_set.main,
+	            	[31m│[0m [0m  on main.tf line 20, in resource "azurerm_windows_virtual_machine_scale_set" "main":
+	            	[31m│[0m [0m  20: resource "azurerm_windows_virtual_machine_scale_set" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-confidential-vmss
+
+FailNow
+
+---
+
 ## 26 Apr 26 00:34 UTC
 
 Success: false

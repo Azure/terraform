@@ -1,0 +1,9 @@
+location             = "eastus"
+resource_group_name  = null
+fleet_name           = null
+update_strategy_name = "example-update-strategy"
+
+tags = {
+  environment = "demo"
+  managed_by  = "terraform"
+}

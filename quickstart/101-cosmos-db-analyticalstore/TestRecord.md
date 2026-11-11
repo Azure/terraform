@@ -1,3 +1,828 @@
+## 08 Nov 26 00:13 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: c70b8afd-69b6-4de9-a7db-23f549336e01 Correlation ID: e74b4a99-b3a1-4925-8040-81fb5f04fe25 Timestamp: 2026-11-08 00:13:48Z","error_codes":[5000229],"timestamp":"2026-11-08 00:13:48Z","trace_id":"c70b8afd-69b6-4de9-a7db-23f549336e01","correlation_id":"e74b4a99-b3a1-4925-8040-81fb5f04fe25"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 10, in provider "azurerm":
+	            	[31m│[0m [0m  10: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-analyticalstore
+
+FailNow
+
+---
+
+## 01 Nov 26 00:19 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant '4f00b3b6-2940-4f2c-b037-94637c180d30' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 77c825cc-a507-453c-95d6-769baaf22a00 Correlation ID: 7102b711-2ef6-470c-8f56-fd67d48a7f99 Timestamp: 2026-11-01 00:19:00Z","error_codes":[5000229],"timestamp":"2026-11-01 00:19:00Z","trace_id":"77c825cc-a507-453c-95d6-769baaf22a00","correlation_id":"7102b711-2ef6-470c-8f56-fd67d48a7f99"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 10, in provider "azurerm":
+	            	[31m│[0m [0m  10: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-analyticalstore
+
+FailNow
+
+---
+
+## 25 Oct 26 00:18 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 6d87ae01-ebb5-486c-adee-d2b29e413200 Correlation ID: 1c5e6dfa-f7d8-446b-890d-a4e41ebb3844 Timestamp: 2026-10-25 00:18:05Z","error_codes":[5000229],"timestamp":"2026-10-25 00:18:05Z","trace_id":"6d87ae01-ebb5-486c-adee-d2b29e413200","correlation_id":"1c5e6dfa-f7d8-446b-890d-a4e41ebb3844"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 10, in provider "azurerm":
+	            	[31m│[0m [0m  10: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-analyticalstore
+
+FailNow
+
+---
+
+## 18 Oct 26 01:13 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-cosmos-db-analyticalstore-smooth-anchovy-rg"
+	            	[31m│[0m [0mDatabase Account Name: "jecjvyoicrliewxupohw"): creating/updating CosmosDB Account "jecjvyoicrliewxupohw" (Resource Group "101-cosmos-db-analyticalstore-smooth-anchovy-rg"): performing DatabaseAccountsCreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {"code":"BadRequest","message":"Enabling Analytical Storage during account creation is no longer supported.\r\nActivityId: 4ad1ec6f-b558-4ca5-84f6-41ba3ed95045, Microsoft.Azure.Documents.Common/2.14.0"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-analyticalstore
+
+FailNow
+
+---
+
+## 11 Oct 26 01:19 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-cosmos-db-analyticalstore-charmed-feline-rg"
+	            	[31m│[0m [0mDatabase Account Name: "zipwrzxdecqreavnfmsx"): creating/updating CosmosDB Account "zipwrzxdecqreavnfmsx" (Resource Group "101-cosmos-db-analyticalstore-charmed-feline-rg"): performing DatabaseAccountsCreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {"code":"BadRequest","message":"Enabling Analytical Storage during account creation is no longer supported.\r\nActivityId: a73cc061-33c3-46bb-aedb-759a1f93933f, Microsoft.Azure.Documents.Common/2.14.0"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-analyticalstore
+
+FailNow
+
+---
+
+## 04 Oct 26 01:58 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-cosmos-db-analyticalstore-refined-louse-rg"
+	            	[31m│[0m [0mDatabase Account Name: "utgzhjhdhueheslzldwv"): creating/updating CosmosDB Account "utgzhjhdhueheslzldwv" (Resource Group "101-cosmos-db-analyticalstore-refined-louse-rg"): performing DatabaseAccountsCreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {"code":"BadRequest","message":"Enabling Analytical Storage during account creation is no longer supported.\r\nActivityId: a2e6c397-717d-4156-8053-e310ad009725, Microsoft.Azure.Documents.Common/2.14.0"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-analyticalstore
+
+FailNow
+
+---
+
+## 27 Sep 26 00:51 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-cosmos-db-analyticalstore-resolved-hare-rg"
+	            	[31m│[0m [0mDatabase Account Name: "elyrkqzwgkvfferpgxxm"): creating/updating CosmosDB Account "elyrkqzwgkvfferpgxxm" (Resource Group "101-cosmos-db-analyticalstore-resolved-hare-rg"): performing DatabaseAccountsCreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {"code":"BadRequest","message":"Enabling Analytical Storage during account creation is no longer supported.\r\nActivityId: 7ac28d7e-632e-4127-a3f9-41dde0510b3c, Microsoft.Azure.Documents.Common/2.14.0"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-analyticalstore
+
+FailNow
+
+---
+
+## 20 Sep 26 01:18 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-cosmos-db-analyticalstore-sensible-chigger-rg"
+	            	[31m│[0m [0mDatabase Account Name: "wyscsxksrsydxhgdxnze"): creating/updating CosmosDB Account "wyscsxksrsydxhgdxnze" (Resource Group "101-cosmos-db-analyticalstore-sensible-chigger-rg"): performing DatabaseAccountsCreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {"code":"BadRequest","message":"Enabling Analytical Storage during account creation is no longer supported.\r\nActivityId: a7eb0c9a-1e79-4519-a383-7032e01e1509, Microsoft.Azure.Documents.Common/2.14.0"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-analyticalstore
+
+FailNow
+
+---
+
+## 13 Sep 26 02:01 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-cosmos-db-analyticalstore-humorous-kite-rg"
+	            	[31m│[0m [0mDatabase Account Name: "kquboijcqhsjqlpefddx"): creating/updating CosmosDB Account "kquboijcqhsjqlpefddx" (Resource Group "101-cosmos-db-analyticalstore-humorous-kite-rg"): performing DatabaseAccountsCreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {"code":"BadRequest","message":"Enabling Analytical Storage during account creation is no longer supported.\r\nActivityId: 3d3f899e-893e-4dd6-a5ab-0354ba612161, Microsoft.Azure.Documents.Common/2.14.0"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-analyticalstore
+
+FailNow
+
+---
+
+## 06 Sep 26 01:09 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-cosmos-db-analyticalstore-devoted-bat-rg"
+	            	[31m│[0m [0mDatabase Account Name: "bkwqaybkxwolocykpacm"): creating/updating CosmosDB Account "bkwqaybkxwolocykpacm" (Resource Group "101-cosmos-db-analyticalstore-devoted-bat-rg"): performing DatabaseAccountsCreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {"code":"BadRequest","message":"Enabling Analytical Storage during account creation is no longer supported.\r\nActivityId: bf8ecb26-a8bb-48d4-9c72-c786eaeb4021, Microsoft.Azure.Documents.Common/2.14.0"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-analyticalstore
+
+FailNow
+
+---
+
+## 30 Aug 26 00:54 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-cosmos-db-analyticalstore-perfect-stag-rg"
+	            	[31m│[0m [0mDatabase Account Name: "sfnjedaywunpfqzvmbzs"): creating/updating CosmosDB Account "sfnjedaywunpfqzvmbzs" (Resource Group "101-cosmos-db-analyticalstore-perfect-stag-rg"): performing DatabaseAccountsCreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {"code":"BadRequest","message":"Enabling Analytical Storage during account creation is no longer supported.\r\nActivityId: 3cc17318-bb47-4e26-8d74-91b5ab29fc8d, Microsoft.Azure.Documents.Common/2.14.0"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-analyticalstore
+
+FailNow
+
+---
+
+## 23 Aug 26 00:34 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-cosmos-db-analyticalstore-still-impala-rg"
+	            	[31m│[0m [0mDatabase Account Name: "ozwgwppsynowxmtzyygn"): creating/updating CosmosDB Account "ozwgwppsynowxmtzyygn" (Resource Group "101-cosmos-db-analyticalstore-still-impala-rg"): performing DatabaseAccountsCreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {"code":"BadRequest","message":"Enabling Analytical Storage during account creation is no longer supported.\r\nActivityId: 2a302709-cb67-4b01-8572-85aeda5c7541, Microsoft.Azure.Documents.Common/2.14.0"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-analyticalstore
+
+FailNow
+
+---
+
+## 16 Aug 26 01:05 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-cosmos-db-analyticalstore-sharp-stag-rg"
+	            	[31m│[0m [0mDatabase Account Name: "twgbvpkkasxhnecqyzhq"): creating/updating CosmosDB Account "twgbvpkkasxhnecqyzhq" (Resource Group "101-cosmos-db-analyticalstore-sharp-stag-rg"): performing DatabaseAccountsCreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {"code":"BadRequest","message":"Enabling Analytical Storage during account creation is no longer supported.\r\nActivityId: c046193f-9131-4d8d-af5c-1fb20fafa017, Microsoft.Azure.Documents.Common/2.14.0"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-analyticalstore
+
+FailNow
+
+---
+
+## 09 Aug 26 00:36 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-cosmos-db-analyticalstore-mighty-vervet-rg"
+	            	[31m│[0m [0mDatabase Account Name: "gmrwccotwiobwnimzaqi"): creating/updating CosmosDB Account "gmrwccotwiobwnimzaqi" (Resource Group "101-cosmos-db-analyticalstore-mighty-vervet-rg"): performing DatabaseAccountsCreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {"code":"BadRequest","message":"Enabling Analytical Storage during account creation is no longer supported.\r\nActivityId: 73535b5c-32a4-416f-8ab0-c0c7335b4586, Microsoft.Azure.Documents.Common/2.14.0"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-analyticalstore
+
+FailNow
+
+---
+
+## 02 Aug 26 00:40 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "101-cosmos-db-analyticalstore-enjoyed-snapper-rg"
+	            	[31m│[0m [0mDatabase Account Name: "kjtzkwsphxlyukjvrkql"): creating/updating CosmosDB Account "kjtzkwsphxlyukjvrkql" (Resource Group "101-cosmos-db-analyticalstore-enjoyed-snapper-rg"): performing DatabaseAccountsCreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {"code":"BadRequest","message":"Enabling Analytical Storage during account creation is no longer supported.\r\nActivityId: 2eb78f9d-124b-4783-b0cd-1dbc91dd6244, Microsoft.Azure.Documents.Common/2.14.0"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-analyticalstore
+
+FailNow
+
+---
+
+## 26 Jul 26 01:12 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "101-cosmos-db-analyticalstore-daring-beetle-rg"
+	            	[31m│[0m [0mDatabase Account Name: "buiuqznhosneabhvvxrk"): creating/updating CosmosDB Account "buiuqznhosneabhvvxrk" (Resource Group "101-cosmos-db-analyticalstore-daring-beetle-rg"): performing DatabaseAccountsCreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {"code":"BadRequest","message":"Enabling Analytical Storage during account creation is no longer supported.\r\nActivityId: 853d7653-51fe-49a0-a955-57657ca8e7b0, Microsoft.Azure.Documents.Common/2.14.0"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-analyticalstore
+
+FailNow
+
+---
+
+## 12 Jul 26 00:48 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "101-cosmos-db-analyticalstore-pumped-elf-rg"
+	            	[31m│[0m [0mDatabase Account Name: "prvcwcmvhmqmzwkqpvqt"): creating/updating CosmosDB Account "prvcwcmvhmqmzwkqpvqt" (Resource Group "101-cosmos-db-analyticalstore-pumped-elf-rg"): performing DatabaseAccountsCreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {"code":"BadRequest","message":"Enabling Analytical Storage during account creation is no longer supported.\r\nActivityId: 17bf79e2-c90e-4561-ad21-4b53b37bd1f7, Microsoft.Azure.Documents.Common/2.14.0"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-analyticalstore
+
+FailNow
+
+---
+
+## 05 Jul 26 01:16 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "101-cosmos-db-analyticalstore-smashing-newt-rg"
+	            	[31m│[0m [0mDatabase Account Name: "pbxcvvoalolenxienlyt"): creating/updating CosmosDB Account "pbxcvvoalolenxienlyt" (Resource Group "101-cosmos-db-analyticalstore-smashing-newt-rg"): performing DatabaseAccountsCreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {"code":"BadRequest","message":"Enabling Analytical Storage during account creation is no longer supported.\r\nActivityId: 6811621a-547c-4597-aaa2-c98113da7d1c, Microsoft.Azure.Documents.Common/2.14.0"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-analyticalstore
+
+FailNow
+
+---
+
+## 28 Jun 26 02:00 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "101-cosmos-db-analyticalstore-crack-squid-rg"
+	            	[31m│[0m [0mDatabase Account Name: "jmvckzxcadinuilylhih"): creating/updating CosmosDB Account "jmvckzxcadinuilylhih" (Resource Group "101-cosmos-db-analyticalstore-crack-squid-rg"): performing DatabaseAccountsCreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {"code":"BadRequest","message":"Enabling Analytical Storage during account creation is no longer supported.\r\nActivityId: 3f4f7f60-3051-4be1-9171-e8d366506e0e, Microsoft.Azure.Documents.Common/2.14.0"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-analyticalstore
+
+FailNow
+
+---
+
+## 14 Jun 26 02:08 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "101-cosmos-db-analyticalstore-ample-foal-rg"
+	            	[31m│[0m [0mDatabase Account Name: "snhblpcxgeqsxlsksciu"): creating/updating CosmosDB Account "snhblpcxgeqsxlsksciu" (Resource Group "101-cosmos-db-analyticalstore-ample-foal-rg"): performing DatabaseAccountsCreateOrUpdate: unexpected status 400 (400 BadRequest) with response: {"code":"BadRequest","message":"Enabling Analytical Storage during account creation is no longer supported.\r\nActivityId: 9842106b-97c9-4c8a-9db1-b6145a51be1a, Microsoft.Azure.Documents.Common/2.14.0"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-analyticalstore
+
+FailNow
+
+---
+
+## 31 May 26 01:13 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "101-cosmos-db-analyticalstore-content-slug-rg"
+	            	[31m│[0m [0mDatabase Account Name: "hxyzwxgdxrzbppmxjran"): creating/updating CosmosDB Account "hxyzwxgdxrzbppmxjran" (Resource Group "101-cosmos-db-analyticalstore-content-slug-rg"): performing DatabaseAccountsCreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {"code":"BadRequest","message":"Enabling Analytical Storage during account creation is no longer supported.\r\nActivityId: 537b34b8-a308-4196-b522-31ce06940555, Microsoft.Azure.Documents.Common/2.14.0"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-analyticalstore
+
+FailNow
+
+---
+
+## 24 May 26 01:31 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Database Account (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "101-cosmos-db-analyticalstore-fluent-caribou-rg"
+	            	[31m│[0m [0mDatabase Account Name: "xzvonvnbpvhatyctpexu"): creating/updating CosmosDB Account "xzvonvnbpvhatyctpexu" (Resource Group "101-cosmos-db-analyticalstore-fluent-caribou-rg"): performing DatabaseAccountsCreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {"code":"BadRequest","message":"Enabling Analytical Storage during account creation is no longer supported.\r\nActivityId: ceb46bab-a94d-4a62-ba4a-82f415d4aa97, Microsoft.Azure.Documents.Common/2.14.0"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cosmosdb_account.example,
+	            	[31m│[0m [0m  on main.tf line 19, in resource "azurerm_cosmosdb_account" "example":
+	            	[31m│[0m [0m  19: resource "azurerm_cosmosdb_account" "example" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-analyticalstore
+
+FailNow
+
+---
+
+## 10 May 26 01:51 UTC
+
+Success: true
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+No error was found.
+
+---
+
 ## 26 Apr 26 01:37 UTC
 
 Success: true

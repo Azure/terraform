@@ -1,3 +1,808 @@
+## 08 Nov 26 00:14 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 2af961d8-095e-475d-8283-de1ea2ab2401 Correlation ID: 126ea065-783e-4eb2-b929-21ce2ed0ee71 Timestamp: 2026-11-08 00:14:15Z","error_codes":[5000229],"timestamp":"2026-11-08 00:14:15Z","trace_id":"2af961d8-095e-475d-8283-de1ea2ab2401","correlation_id":"126ea065-783e-4eb2-b929-21ce2ed0ee71"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 14, in provider "azurerm":
+	            	[31m│[0m [0m  14: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cdn-with-custom-origin
+
+FailNow
+
+---
+
+## 01 Nov 26 00:19 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: b54a450b-36b5-42a6-8b7b-84dc96f45f00 Correlation ID: 1d64c40b-f4a2-4378-8e68-44d557718d10 Timestamp: 2026-11-01 00:19:48Z","error_codes":[5000229],"timestamp":"2026-11-01 00:19:48Z","trace_id":"b54a450b-36b5-42a6-8b7b-84dc96f45f00","correlation_id":"1d64c40b-f4a2-4378-8e68-44d557718d10"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 14, in provider "azurerm":
+	            	[31m│[0m [0m  14: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cdn-with-custom-origin
+
+FailNow
+
+---
+
+## 25 Oct 26 00:18 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant '4f00b3b6-2940-4f2c-b037-94637c180d30' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 174afd3d-7570-4633-a410-c2f861d32502 Correlation ID: 90364345-4e07-4ec2-96db-92655133a2bd Timestamp: 2026-10-25 00:18:46Z","error_codes":[5000229],"timestamp":"2026-10-25 00:18:46Z","trace_id":"174afd3d-7570-4633-a410-c2f861d32502","correlation_id":"90364345-4e07-4ec2-96db-92655133a2bd"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 14, in provider "azurerm":
+	            	[31m│[0m [0m  14: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cdn-with-custom-origin
+
+FailNow
+
+---
+
+## 18 Oct 26 01:17 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Profile: (Name "profile-euuhaltrrfgep" / Resource Group "rg-careful-kangaroo"): cdn.ProfilesClient#Create: Failure sending request: StatusCode=400 -- Original Error: Code="BadRequest" Message="Azure CDN from Microsoft (classic) no longer support new profile creation."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cdn_profile.profile,
+	            	[31m│[0m [0m  on main.tf line 18, in resource "azurerm_cdn_profile" "profile":
+	            	[31m│[0m [0m  18: resource "azurerm_cdn_profile" "profile" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cdn-with-custom-origin
+
+FailNow
+
+---
+
+## 11 Oct 26 01:24 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Profile: (Name "profile-yncghhahtmhgr" / Resource Group "rg-nice-tuna"): cdn.ProfilesClient#Create: Failure sending request: StatusCode=400 -- Original Error: Code="BadRequest" Message="Azure CDN from Microsoft (classic) no longer support new profile creation."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cdn_profile.profile,
+	            	[31m│[0m [0m  on main.tf line 18, in resource "azurerm_cdn_profile" "profile":
+	            	[31m│[0m [0m  18: resource "azurerm_cdn_profile" "profile" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cdn-with-custom-origin
+
+FailNow
+
+---
+
+## 04 Oct 26 01:59 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Profile: (Name "profile-azgqjybpgrvjx" / Resource Group "rg-mint-pup"): cdn.ProfilesClient#Create: Failure sending request: StatusCode=400 -- Original Error: Code="BadRequest" Message="Azure CDN from Microsoft (classic) no longer support new profile creation."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cdn_profile.profile,
+	            	[31m│[0m [0m  on main.tf line 18, in resource "azurerm_cdn_profile" "profile":
+	            	[31m│[0m [0m  18: resource "azurerm_cdn_profile" "profile" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cdn-with-custom-origin
+
+FailNow
+
+---
+
+## 27 Sep 26 00:54 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Profile: (Name "profile-rvdoowbevnjne" / Resource Group "rg-certain-quagga"): cdn.ProfilesClient#Create: Failure sending request: StatusCode=400 -- Original Error: Code="BadRequest" Message="Azure CDN from Microsoft (classic) no longer support new profile creation."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cdn_profile.profile,
+	            	[31m│[0m [0m  on main.tf line 18, in resource "azurerm_cdn_profile" "profile":
+	            	[31m│[0m [0m  18: resource "azurerm_cdn_profile" "profile" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cdn-with-custom-origin
+
+FailNow
+
+---
+
+## 20 Sep 26 01:01 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Profile: (Name "profile-vvgyheekencuq" / Resource Group "rg-excited-kangaroo"): cdn.ProfilesClient#Create: Failure sending request: StatusCode=400 -- Original Error: Code="BadRequest" Message="Azure CDN from Microsoft (classic) no longer support new profile creation."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cdn_profile.profile,
+	            	[31m│[0m [0m  on main.tf line 18, in resource "azurerm_cdn_profile" "profile":
+	            	[31m│[0m [0m  18: resource "azurerm_cdn_profile" "profile" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cdn-with-custom-origin
+
+FailNow
+
+---
+
+## 13 Sep 26 02:15 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Profile: (Name "profile-drgxnthjgyhwy" / Resource Group "rg-tough-troll"): cdn.ProfilesClient#Create: Failure sending request: StatusCode=400 -- Original Error: Code="BadRequest" Message="Azure CDN from Microsoft (classic) no longer support new profile creation."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cdn_profile.profile,
+	            	[31m│[0m [0m  on main.tf line 18, in resource "azurerm_cdn_profile" "profile":
+	            	[31m│[0m [0m  18: resource "azurerm_cdn_profile" "profile" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cdn-with-custom-origin
+
+FailNow
+
+---
+
+## 06 Sep 26 01:12 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Profile: (Name "profile-xzrriijmufbwg" / Resource Group "rg-actual-toucan"): cdn.ProfilesClient#Create: Failure sending request: StatusCode=400 -- Original Error: Code="BadRequest" Message="Azure CDN from Microsoft (classic) no longer support new profile creation."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cdn_profile.profile,
+	            	[31m│[0m [0m  on main.tf line 18, in resource "azurerm_cdn_profile" "profile":
+	            	[31m│[0m [0m  18: resource "azurerm_cdn_profile" "profile" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cdn-with-custom-origin
+
+FailNow
+
+---
+
+## 30 Aug 26 00:59 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Profile: (Name "profile-mxcwezsflotfg" / Resource Group "rg-composed-serval"): cdn.ProfilesClient#Create: Failure sending request: StatusCode=400 -- Original Error: Code="BadRequest" Message="Azure CDN from Microsoft (classic) no longer support new profile creation."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cdn_profile.profile,
+	            	[31m│[0m [0m  on main.tf line 18, in resource "azurerm_cdn_profile" "profile":
+	            	[31m│[0m [0m  18: resource "azurerm_cdn_profile" "profile" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cdn-with-custom-origin
+
+FailNow
+
+---
+
+## 23 Aug 26 00:35 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Profile: (Name "profile-ohseaajdvjclz" / Resource Group "rg-unbiased-starfish"): cdn.ProfilesClient#Create: Failure sending request: StatusCode=400 -- Original Error: Code="BadRequest" Message="Azure CDN from Microsoft (classic) no longer support new profile creation."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cdn_profile.profile,
+	            	[31m│[0m [0m  on main.tf line 18, in resource "azurerm_cdn_profile" "profile":
+	            	[31m│[0m [0m  18: resource "azurerm_cdn_profile" "profile" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cdn-with-custom-origin
+
+FailNow
+
+---
+
+## 16 Aug 26 01:09 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Profile: (Name "profile-udsuhndmecgxl" / Resource Group "rg-enabling-pipefish"): cdn.ProfilesClient#Create: Failure sending request: StatusCode=400 -- Original Error: Code="BadRequest" Message="Azure CDN from Microsoft (classic) no longer support new profile creation."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cdn_profile.profile,
+	            	[31m│[0m [0m  on main.tf line 18, in resource "azurerm_cdn_profile" "profile":
+	            	[31m│[0m [0m  18: resource "azurerm_cdn_profile" "profile" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cdn-with-custom-origin
+
+FailNow
+
+---
+
+## 09 Aug 26 00:46 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Profile: (Name "profile-yhnkluyxifavs" / Resource Group "rg-evolved-tapir"): cdn.ProfilesClient#Create: Failure sending request: StatusCode=400 -- Original Error: Code="BadRequest" Message="Azure CDN from Microsoft (classic) no longer support new profile creation."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cdn_profile.profile,
+	            	[31m│[0m [0m  on main.tf line 18, in resource "azurerm_cdn_profile" "profile":
+	            	[31m│[0m [0m  18: resource "azurerm_cdn_profile" "profile" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cdn-with-custom-origin
+
+FailNow
+
+---
+
+## 02 Aug 26 00:48 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Profile: (Name "profile-eiyfvwqvxvamn" / Resource Group "rg-whole-cougar"): cdn.ProfilesClient#Create: Failure sending request: StatusCode=400 -- Original Error: Code="BadRequest" Message="Azure CDN from Microsoft (classic) no longer support new profile creation."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cdn_profile.profile,
+	            	[31m│[0m [0m  on main.tf line 18, in resource "azurerm_cdn_profile" "profile":
+	            	[31m│[0m [0m  18: resource "azurerm_cdn_profile" "profile" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cdn-with-custom-origin
+
+FailNow
+
+---
+
+## 26 Jul 26 01:15 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Profile: (Name "profile-elwzttucwhdjy" / Resource Group "rg-crucial-rodent"): cdn.ProfilesClient#Create: Failure sending request: StatusCode=400 -- Original Error: Code="BadRequest" Message="Azure CDN from Microsoft (classic) no longer support new profile creation."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cdn_profile.profile,
+	            	[31m│[0m [0m  on main.tf line 18, in resource "azurerm_cdn_profile" "profile":
+	            	[31m│[0m [0m  18: resource "azurerm_cdn_profile" "profile" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cdn-with-custom-origin
+
+FailNow
+
+---
+
+## 12 Jul 26 00:53 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Profile: (Name "profile-cxvwkusrdrbdn" / Resource Group "rg-communal-cattle"): cdn.ProfilesClient#Create: Failure sending request: StatusCode=400 -- Original Error: Code="BadRequest" Message="Azure CDN from Microsoft (classic) no longer support new profile creation."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cdn_profile.profile,
+	            	[31m│[0m [0m  on main.tf line 18, in resource "azurerm_cdn_profile" "profile":
+	            	[31m│[0m [0m  18: resource "azurerm_cdn_profile" "profile" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cdn-with-custom-origin
+
+FailNow
+
+---
+
+## 05 Jul 26 01:17 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Profile: (Name "profile-wlyodkdfizhwk" / Resource Group "rg-capable-louse"): cdn.ProfilesClient#Create: Failure sending request: StatusCode=400 -- Original Error: Code="BadRequest" Message="Azure CDN from Microsoft (classic) no longer support new profile creation."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cdn_profile.profile,
+	            	[31m│[0m [0m  on main.tf line 18, in resource "azurerm_cdn_profile" "profile":
+	            	[31m│[0m [0m  18: resource "azurerm_cdn_profile" "profile" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cdn-with-custom-origin
+
+FailNow
+
+---
+
+## 28 Jun 26 01:59 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Profile: (Name "profile-pkjhatazkolvq" / Resource Group "rg-exact-racer"): cdn.ProfilesClient#Create: Failure sending request: StatusCode=400 -- Original Error: Code="BadRequest" Message="Azure CDN from Microsoft (classic) no longer support new profile creation."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cdn_profile.profile,
+	            	[31m│[0m [0m  on main.tf line 18, in resource "azurerm_cdn_profile" "profile":
+	            	[31m│[0m [0m  18: resource "azurerm_cdn_profile" "profile" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cdn-with-custom-origin
+
+FailNow
+
+---
+
+## 14 Jun 26 02:06 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Profile: (Name "profile-wslymbyadzeis" / Resource Group "rg-open-krill"): cdn.ProfilesClient#Create: Failure sending request: StatusCode=400 -- Original Error: Code="BadRequest" Message="Azure CDN from Microsoft (classic) no longer support new profile creation."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cdn_profile.profile,
+	            	[31m│[0m [0m  on main.tf line 18, in resource "azurerm_cdn_profile" "profile":
+	            	[31m│[0m [0m  18: resource "azurerm_cdn_profile" "profile" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cdn-with-custom-origin
+
+FailNow
+
+---
+
+## 31 May 26 01:04 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Profile: (Name "profile-gvyvklkphjzqy" / Resource Group "rg-coherent-chicken"): cdn.ProfilesClient#Create: Failure sending request: StatusCode=400 -- Original Error: Code="BadRequest" Message="Azure CDN from Microsoft (classic) no longer support new profile creation."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cdn_profile.profile,
+	            	[31m│[0m [0m  on main.tf line 18, in resource "azurerm_cdn_profile" "profile":
+	            	[31m│[0m [0m  18: resource "azurerm_cdn_profile" "profile" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cdn-with-custom-origin
+
+FailNow
+
+---
+
+## 24 May 26 01:36 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Profile: (Name "profile-xnioafdfdutxe" / Resource Group "rg-integral-hog"): cdn.ProfilesClient#Create: Failure sending request: StatusCode=400 -- Original Error: Code="BadRequest" Message="Azure CDN from Microsoft (classic) no longer support new profile creation."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cdn_profile.profile,
+	            	[31m│[0m [0m  on main.tf line 18, in resource "azurerm_cdn_profile" "profile":
+	            	[31m│[0m [0m  18: resource "azurerm_cdn_profile" "profile" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cdn-with-custom-origin
+
+FailNow
+
+---
+
+## 10 May 26 01:26 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Profile: (Name "profile-kegwsfvyygktn" / Resource Group "rg-shining-ringtail"): cdn.ProfilesClient#Create: Failure sending request: StatusCode=400 -- Original Error: Code="BadRequest" Message="Azure CDN from Microsoft (classic) no longer support new profile creation."[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_cdn_profile.profile,
+	            	[31m│[0m [0m  on main.tf line 18, in resource "azurerm_cdn_profile" "profile":
+	            	[31m│[0m [0m  18: resource "azurerm_cdn_profile" "profile" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cdn-with-custom-origin
+
+FailNow
+
+---
+
 ## 26 Apr 26 01:28 UTC
 
 Success: false

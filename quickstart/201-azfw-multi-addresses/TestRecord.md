@@ -1,3 +1,1555 @@
+## 08 Nov 26 00:13 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 366b65a9-8775-443e-97d2-67fa1dd2c500 Correlation ID: 9c9b47c1-c740-4796-ae05-d0bb2534b55a Timestamp: 2026-11-08 00:13:10Z","error_codes":[5000229],"timestamp":"2026-11-08 00:13:10Z","trace_id":"366b65a9-8775-443e-97d2-67fa1dd2c500","correlation_id":"9c9b47c1-c740-4796-ae05-d0bb2534b55a"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 14, in provider "azurerm":
+	            	[31m│[0m [0m  14: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-azfw-multi-addresses
+
+FailNow
+
+---
+
+## 01 Nov 26 00:16 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant '4f00b3b6-2940-4f2c-b037-94637c180d30' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 4277bb14-4d9b-44c2-b3b9-8bf837250f00 Correlation ID: 4fae1447-83ba-4627-86dc-7fe2f814d488 Timestamp: 2026-11-01 00:16:31Z","error_codes":[5000229],"timestamp":"2026-11-01 00:16:31Z","trace_id":"4277bb14-4d9b-44c2-b3b9-8bf837250f00","correlation_id":"4fae1447-83ba-4627-86dc-7fe2f814d488"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 14, in provider "azurerm":
+	            	[31m│[0m [0m  14: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-azfw-multi-addresses
+
+FailNow
+
+---
+
+## 25 Oct 26 00:17 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: d5684a99-a0e3-4a45-8b38-c602a77a9c00 Correlation ID: c13c50dc-5a84-4a7e-af9e-19ab26c38e02 Timestamp: 2026-10-25 00:17:19Z","error_codes":[5000229],"timestamp":"2026-10-25 00:17:19Z","trace_id":"d5684a99-a0e3-4a45-8b38-c602a77a9c00","correlation_id":"c13c50dc-5a84-4a7e-af9e-19ab26c38e02"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 14, in provider "azurerm":
+	            	[31m│[0m [0m  14: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-azfw-multi-addresses
+
+FailNow
+
+---
+
+## 18 Oct 26 00:44 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-cute-locust"
+	            	[31m│[0m [0mVirtual Machine Name: "vm-backend-2"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: OperationNotAllowed: Operation could not be completed as it results in exceeding approved Total Regional Cores quota. Additional details - Deployment Model: Resource Manager, Location: eastus, Current Limit: 10, Current Usage: 10, Additional Required: 2, (Minimum) New Limit Required: 12. Setup Alerts when Quota reaches threshold. Learn more at https://aka.ms/quotamonitoringalerting . Submit a request for Quota increase at https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/%7B%22subscriptionId%22:%22e4b62b3b-7634-4972-8bbe-5d7197159f26%22,%22command%22:%22openQuotaApprovalBlade%22,%22quotas%22:[%7B%22location%22:%22eastus%22,%22providerId%22:%22Microsoft.Compute%22,%22resourceName%22:%22cores%22,%22quotaRequest%22:%7B%22properties%22:%7B%22limit%22:12,%22unit%22:%22Count%22,%22name%22:%7B%22value%22:%22cores%22%7D%7D%7D%7D]%7D by specifying parameters listed in the ‘Details’ section for deployment to succeed. Please read more about quota limits at https://docs.microsoft.com/en-us/azure/azure-supportability/regional-quota-requests[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm_backend[1],
+	            	[31m│[0m [0m  on main.tf line 103, in resource "azurerm_windows_virtual_machine" "vm_backend":
+	            	[31m│[0m [0m 103: resource "azurerm_windows_virtual_machine" "vm_backend" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-cute-locust"
+	            	[31m│[0m [0mVirtual Machine Name: "vm-backend-1"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: OperationNotAllowed: Operation could not be completed as it results in exceeding approved Total Regional Cores quota. Additional details - Deployment Model: Resource Manager, Location: eastus, Current Limit: 10, Current Usage: 10, Additional Required: 2, (Minimum) New Limit Required: 12. Setup Alerts when Quota reaches threshold. Learn more at https://aka.ms/quotamonitoringalerting . Submit a request for Quota increase at https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/%7B%22subscriptionId%22:%22e4b62b3b-7634-4972-8bbe-5d7197159f26%22,%22command%22:%22openQuotaApprovalBlade%22,%22quotas%22:[%7B%22location%22:%22eastus%22,%22providerId%22:%22Microsoft.Compute%22,%22resourceName%22:%22cores%22,%22quotaRequest%22:%7B%22properties%22:%7B%22limit%22:12,%22unit%22:%22Count%22,%22name%22:%7B%22value%22:%22cores%22%7D%7D%7D%7D]%7D by specifying parameters listed in the ‘Details’ section for deployment to succeed. Please read more about quota limits at https://docs.microsoft.com/en-us/azure/azure-supportability/regional-quota-requests[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm_backend[0],
+	            	[31m│[0m [0m  on main.tf line 103, in resource "azurerm_windows_virtual_machine" "vm_backend":
+	            	[31m│[0m [0m 103: resource "azurerm_windows_virtual_machine" "vm_backend" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-azfw-multi-addresses
+
+FailNow
+
+---
+
+## 11 Oct 26 00:47 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-massive-porpoise"
+	            	[31m│[0m [0mVirtual Machine Name: "vm-backend-1"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: OperationNotAllowed: Operation could not be completed as it results in exceeding approved Total Regional Cores quota. Additional details - Deployment Model: Resource Manager, Location: eastus, Current Limit: 10, Current Usage: 10, Additional Required: 2, (Minimum) New Limit Required: 12. Setup Alerts when Quota reaches threshold. Learn more at https://aka.ms/quotamonitoringalerting . Submit a request for Quota increase at https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/%7B%22subscriptionId%22:%22e4b62b3b-7634-4972-8bbe-5d7197159f26%22,%22command%22:%22openQuotaApprovalBlade%22,%22quotas%22:[%7B%22location%22:%22eastus%22,%22providerId%22:%22Microsoft.Compute%22,%22resourceName%22:%22cores%22,%22quotaRequest%22:%7B%22properties%22:%7B%22limit%22:12,%22unit%22:%22Count%22,%22name%22:%7B%22value%22:%22cores%22%7D%7D%7D%7D]%7D by specifying parameters listed in the ‘Details’ section for deployment to succeed. Please read more about quota limits at https://docs.microsoft.com/en-us/azure/azure-supportability/regional-quota-requests[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm_backend[0],
+	            	[31m│[0m [0m  on main.tf line 103, in resource "azurerm_windows_virtual_machine" "vm_backend":
+	            	[31m│[0m [0m 103: resource "azurerm_windows_virtual_machine" "vm_backend" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-massive-porpoise"
+	            	[31m│[0m [0mVirtual Machine Name: "vm-backend-2"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: OperationNotAllowed: Operation could not be completed as it results in exceeding approved Total Regional Cores quota. Additional details - Deployment Model: Resource Manager, Location: eastus, Current Limit: 10, Current Usage: 10, Additional Required: 2, (Minimum) New Limit Required: 12. Setup Alerts when Quota reaches threshold. Learn more at https://aka.ms/quotamonitoringalerting . Submit a request for Quota increase at https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/%7B%22subscriptionId%22:%22e4b62b3b-7634-4972-8bbe-5d7197159f26%22,%22command%22:%22openQuotaApprovalBlade%22,%22quotas%22:[%7B%22location%22:%22eastus%22,%22providerId%22:%22Microsoft.Compute%22,%22resourceName%22:%22cores%22,%22quotaRequest%22:%7B%22properties%22:%7B%22limit%22:12,%22unit%22:%22Count%22,%22name%22:%7B%22value%22:%22cores%22%7D%7D%7D%7D]%7D by specifying parameters listed in the ‘Details’ section for deployment to succeed. Please read more about quota limits at https://docs.microsoft.com/en-us/azure/azure-supportability/regional-quota-requests[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm_backend[1],
+	            	[31m│[0m [0m  on main.tf line 103, in resource "azurerm_windows_virtual_machine" "vm_backend":
+	            	[31m│[0m [0m 103: resource "azurerm_windows_virtual_machine" "vm_backend" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-azfw-multi-addresses
+
+FailNow
+
+---
+
+## 04 Oct 26 01:57 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-pleased-drum"
+	            	[31m│[0m [0mVirtual Machine Name: "vm-backend-2"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: OperationNotAllowed: Operation could not be completed as it results in exceeding approved Total Regional Cores quota. Additional details - Deployment Model: Resource Manager, Location: eastus, Current Limit: 10, Current Usage: 10, Additional Required: 2, (Minimum) New Limit Required: 12. Setup Alerts when Quota reaches threshold. Learn more at https://aka.ms/quotamonitoringalerting . Submit a request for Quota increase at https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/%7B%22subscriptionId%22:%22e4b62b3b-7634-4972-8bbe-5d7197159f26%22,%22command%22:%22openQuotaApprovalBlade%22,%22quotas%22:[%7B%22location%22:%22eastus%22,%22providerId%22:%22Microsoft.Compute%22,%22resourceName%22:%22cores%22,%22quotaRequest%22:%7B%22properties%22:%7B%22limit%22:12,%22unit%22:%22Count%22,%22name%22:%7B%22value%22:%22cores%22%7D%7D%7D%7D]%7D by specifying parameters listed in the ‘Details’ section for deployment to succeed. Please read more about quota limits at https://docs.microsoft.com/en-us/azure/azure-supportability/regional-quota-requests[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm_backend[1],
+	            	[31m│[0m [0m  on main.tf line 103, in resource "azurerm_windows_virtual_machine" "vm_backend":
+	            	[31m│[0m [0m 103: resource "azurerm_windows_virtual_machine" "vm_backend" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-pleased-drum"
+	            	[31m│[0m [0mVirtual Machine Name: "vm-backend-1"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: OperationNotAllowed: Operation could not be completed as it results in exceeding approved Total Regional Cores quota. Additional details - Deployment Model: Resource Manager, Location: eastus, Current Limit: 10, Current Usage: 10, Additional Required: 2, (Minimum) New Limit Required: 12. Setup Alerts when Quota reaches threshold. Learn more at https://aka.ms/quotamonitoringalerting . Submit a request for Quota increase at https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/%7B%22subscriptionId%22:%22e4b62b3b-7634-4972-8bbe-5d7197159f26%22,%22command%22:%22openQuotaApprovalBlade%22,%22quotas%22:[%7B%22location%22:%22eastus%22,%22providerId%22:%22Microsoft.Compute%22,%22resourceName%22:%22cores%22,%22quotaRequest%22:%7B%22properties%22:%7B%22limit%22:12,%22unit%22:%22Count%22,%22name%22:%7B%22value%22:%22cores%22%7D%7D%7D%7D]%7D by specifying parameters listed in the ‘Details’ section for deployment to succeed. Please read more about quota limits at https://docs.microsoft.com/en-us/azure/azure-supportability/regional-quota-requests[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm_backend[0],
+	            	[31m│[0m [0m  on main.tf line 103, in resource "azurerm_windows_virtual_machine" "vm_backend":
+	            	[31m│[0m [0m 103: resource "azurerm_windows_virtual_machine" "vm_backend" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-azfw-multi-addresses
+
+FailNow
+
+---
+
+## 27 Sep 26 00:44 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-real-katydid"
+	            	[31m│[0m [0mVirtual Machine Name: "vm-backend-1"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: OperationNotAllowed: Operation could not be completed as it results in exceeding approved Total Regional Cores quota. Additional details - Deployment Model: Resource Manager, Location: eastus, Current Limit: 10, Current Usage: 10, Additional Required: 2, (Minimum) New Limit Required: 12. Setup Alerts when Quota reaches threshold. Learn more at https://aka.ms/quotamonitoringalerting . Submit a request for Quota increase at https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/%7B%22subscriptionId%22:%22e4b62b3b-7634-4972-8bbe-5d7197159f26%22,%22command%22:%22openQuotaApprovalBlade%22,%22quotas%22:[%7B%22location%22:%22eastus%22,%22providerId%22:%22Microsoft.Compute%22,%22resourceName%22:%22cores%22,%22quotaRequest%22:%7B%22properties%22:%7B%22limit%22:12,%22unit%22:%22Count%22,%22name%22:%7B%22value%22:%22cores%22%7D%7D%7D%7D]%7D by specifying parameters listed in the ‘Details’ section for deployment to succeed. Please read more about quota limits at https://docs.microsoft.com/en-us/azure/azure-supportability/regional-quota-requests[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm_backend[0],
+	            	[31m│[0m [0m  on main.tf line 103, in resource "azurerm_windows_virtual_machine" "vm_backend":
+	            	[31m│[0m [0m 103: resource "azurerm_windows_virtual_machine" "vm_backend" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-azfw-multi-addresses
+
+FailNow
+
+---
+
+## 20 Sep 26 00:56 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-modern-lamprey"
+	            	[31m│[0m [0mVirtual Machine Name: "vm-backend-1"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: OperationNotAllowed: Operation could not be completed as it results in exceeding approved Total Regional Cores quota. Additional details - Deployment Model: Resource Manager, Location: eastus, Current Limit: 10, Current Usage: 10, Additional Required: 2, (Minimum) New Limit Required: 12. Setup Alerts when Quota reaches threshold. Learn more at https://aka.ms/quotamonitoringalerting . Submit a request for Quota increase at https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/%7B%22subscriptionId%22:%22e4b62b3b-7634-4972-8bbe-5d7197159f26%22,%22command%22:%22openQuotaApprovalBlade%22,%22quotas%22:[%7B%22location%22:%22eastus%22,%22providerId%22:%22Microsoft.Compute%22,%22resourceName%22:%22cores%22,%22quotaRequest%22:%7B%22properties%22:%7B%22limit%22:12,%22unit%22:%22Count%22,%22name%22:%7B%22value%22:%22cores%22%7D%7D%7D%7D]%7D by specifying parameters listed in the ‘Details’ section for deployment to succeed. Please read more about quota limits at https://docs.microsoft.com/en-us/azure/azure-supportability/regional-quota-requests[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm_backend[0],
+	            	[31m│[0m [0m  on main.tf line 103, in resource "azurerm_windows_virtual_machine" "vm_backend":
+	            	[31m│[0m [0m 103: resource "azurerm_windows_virtual_machine" "vm_backend" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-modern-lamprey"
+	            	[31m│[0m [0mVirtual Machine Name: "vm-backend-2"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: OperationNotAllowed: Operation could not be completed as it results in exceeding approved Total Regional Cores quota. Additional details - Deployment Model: Resource Manager, Location: eastus, Current Limit: 10, Current Usage: 10, Additional Required: 2, (Minimum) New Limit Required: 12. Setup Alerts when Quota reaches threshold. Learn more at https://aka.ms/quotamonitoringalerting . Submit a request for Quota increase at https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/%7B%22subscriptionId%22:%22e4b62b3b-7634-4972-8bbe-5d7197159f26%22,%22command%22:%22openQuotaApprovalBlade%22,%22quotas%22:[%7B%22location%22:%22eastus%22,%22providerId%22:%22Microsoft.Compute%22,%22resourceName%22:%22cores%22,%22quotaRequest%22:%7B%22properties%22:%7B%22limit%22:12,%22unit%22:%22Count%22,%22name%22:%7B%22value%22:%22cores%22%7D%7D%7D%7D]%7D by specifying parameters listed in the ‘Details’ section for deployment to succeed. Please read more about quota limits at https://docs.microsoft.com/en-us/azure/azure-supportability/regional-quota-requests[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm_backend[1],
+	            	[31m│[0m [0m  on main.tf line 103, in resource "azurerm_windows_virtual_machine" "vm_backend":
+	            	[31m│[0m [0m 103: resource "azurerm_windows_virtual_machine" "vm_backend" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-azfw-multi-addresses
+
+FailNow
+
+---
+
+## 13 Sep 26 00:50 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-famous-grackle"
+	            	[31m│[0m [0mVirtual Machine Name: "vm-backend-2"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: OperationNotAllowed: Operation could not be completed as it results in exceeding approved Total Regional Cores quota. Additional details - Deployment Model: Resource Manager, Location: eastus, Current Limit: 10, Current Usage: 10, Additional Required: 2, (Minimum) New Limit Required: 12. Setup Alerts when Quota reaches threshold. Learn more at https://aka.ms/quotamonitoringalerting . Submit a request for Quota increase at https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/%7B%22subscriptionId%22:%22e4b62b3b-7634-4972-8bbe-5d7197159f26%22,%22command%22:%22openQuotaApprovalBlade%22,%22quotas%22:[%7B%22location%22:%22eastus%22,%22providerId%22:%22Microsoft.Compute%22,%22resourceName%22:%22cores%22,%22quotaRequest%22:%7B%22properties%22:%7B%22limit%22:12,%22unit%22:%22Count%22,%22name%22:%7B%22value%22:%22cores%22%7D%7D%7D%7D]%7D by specifying parameters listed in the ‘Details’ section for deployment to succeed. Please read more about quota limits at https://docs.microsoft.com/en-us/azure/azure-supportability/regional-quota-requests[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm_backend[1],
+	            	[31m│[0m [0m  on main.tf line 103, in resource "azurerm_windows_virtual_machine" "vm_backend":
+	            	[31m│[0m [0m 103: resource "azurerm_windows_virtual_machine" "vm_backend" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-famous-grackle"
+	            	[31m│[0m [0mVirtual Machine Name: "vm-backend-1"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: OperationNotAllowed: Operation could not be completed as it results in exceeding approved Total Regional Cores quota. Additional details - Deployment Model: Resource Manager, Location: eastus, Current Limit: 10, Current Usage: 10, Additional Required: 2, (Minimum) New Limit Required: 12. Setup Alerts when Quota reaches threshold. Learn more at https://aka.ms/quotamonitoringalerting . Submit a request for Quota increase at https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/%7B%22subscriptionId%22:%22e4b62b3b-7634-4972-8bbe-5d7197159f26%22,%22command%22:%22openQuotaApprovalBlade%22,%22quotas%22:[%7B%22location%22:%22eastus%22,%22providerId%22:%22Microsoft.Compute%22,%22resourceName%22:%22cores%22,%22quotaRequest%22:%7B%22properties%22:%7B%22limit%22:12,%22unit%22:%22Count%22,%22name%22:%7B%22value%22:%22cores%22%7D%7D%7D%7D]%7D by specifying parameters listed in the ‘Details’ section for deployment to succeed. Please read more about quota limits at https://docs.microsoft.com/en-us/azure/azure-supportability/regional-quota-requests[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm_backend[0],
+	            	[31m│[0m [0m  on main.tf line 103, in resource "azurerm_windows_virtual_machine" "vm_backend":
+	            	[31m│[0m [0m 103: resource "azurerm_windows_virtual_machine" "vm_backend" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-azfw-multi-addresses
+
+FailNow
+
+---
+
+## 06 Sep 26 00:51 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.rg_name: Refreshing state... [id=rg-equipped-leopard][0m
+	            	[0m[1mrandom_password.password[1]: Refreshing state... [id=none][0m
+	            	[0m[1mrandom_password.password[0]: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-equipped-leopard][0m
+	            	[0m[1mazurerm_public_ip_prefix.pip_prefix: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-equipped-leopard/providers/Microsoft.Network/publicIPPrefixes/pip-prefix][0m
+	            	[0m[1mazurerm_route_table.rt: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-equipped-leopard/providers/Microsoft.Network/routeTables/rt-azfw-eus][0m
+	            	[0m[1mazurerm_virtual_network.azfw_vnet: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-equipped-leopard/providers/Microsoft.Network/virtualNetworks/azfw-vnet][0m
+	            	[0m[1mazurerm_network_security_group.backend_nsg: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-equipped-leopard/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_firewall_policy.azfw_policy: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-equipped-leopard/providers/Microsoft.Network/firewallPolicies/azfw-policy][0m
+	            	[0m[1mazurerm_public_ip.pip_azfw: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-equipped-leopard/providers/Microsoft.Network/publicIPAddresses/pip-azfw][0m
+	            	[0m[1mazurerm_public_ip.pip_azfw_2: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-equipped-leopard/providers/Microsoft.Network/publicIPAddresses/pip-azfw-1][0m
+	            	[0m[1mazurerm_subnet.backend_subnet: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-equipped-leopard/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/subnet-backend][0m
+	            	[0m[1mazurerm_subnet.azfw_subnet: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-equipped-leopard/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/AzureFirewallSubnet][0m
+	            	[0m[1mazurerm_firewall_policy_rule_collection_group.policy_rule_collection_group: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-equipped-leopard/providers/Microsoft.Network/firewallPolicies/azfw-policy/ruleCollectionGroups/RuleCollectionGroup][0m
+	            	[0m[1mazurerm_subnet_route_table_association.jump_subnet_rt_association: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-equipped-leopard/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/subnet-backend][0m
+	            	[0m[1mazurerm_network_interface.backend_nic[1]: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-equipped-leopard/providers/Microsoft.Network/networkInterfaces/nic-backend-2][0m
+	            	[0m[1mazurerm_network_interface.backend_nic[0]: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-equipped-leopard/providers/Microsoft.Network/networkInterfaces/nic-backend-1][0m
+	            	[0m[1mazurerm_firewall.fw: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-equipped-leopard/providers/Microsoft.Network/azureFirewalls/azfw][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.vm_backend_nsg_association[1]: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-equipped-leopard/providers/Microsoft.Network/networkInterfaces/nic-backend-2|/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-equipped-leopard/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.vm_backend_nsg_association[0]: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-equipped-leopard/providers/Microsoft.Network/networkInterfaces/nic-backend-1|/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-equipped-leopard/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_windows_virtual_machine.vm_backend[0]: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-equipped-leopard/providers/Microsoft.Compute/virtualMachines/vm-backend-1][0m
+	            	[0m[1mazurerm_windows_virtual_machine.vm_backend[1]: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-equipped-leopard/providers/Microsoft.Compute/virtualMachines/vm-backend-2][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.vm_backend[0][0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "vm_backend" {
+	            	        id                                                     = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-equipped-leopard/providers/Microsoft.Compute/virtualMachines/vm-backend-1"
+	            	        name                                                   = "vm-backend-1"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.vm_backend[1][0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "vm_backend" {
+	            	        id                                                     = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-equipped-leopard/providers/Microsoft.Compute/virtualMachines/vm-backend-2"
+	            	        name                                                   = "vm-backend-2"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 2 to change, 0 to destroy.
+	            	[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_route_table.rt,
+	            	[33m│[0m [0m  on main.tf line 227, in resource "azurerm_route_table" "rt":
+	            	[33m│[0m [0m 227:   disable_bgp_route_propagation = [4mfalse[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe property `disable_bgp_route_propagation` has been superseded by the
+	            	[33m│[0m [0mproperty `bgp_route_propagation_enabled` and will be removed in v4.0 of the
+	            	[33m│[0m [0mAzureRM Provider.
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-azfw-multi-addresses1474681385/src/quickstart/201-azfw-multi-addresses/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-azfw-multi-addresses1474681385/src/quickstart/201-azfw-multi-addresses/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-azfw-multi-addresses
+
+FailNow
+
+---
+
+## 30 Aug 26 00:58 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.rg_name: Refreshing state... [id=rg-secure-kangaroo][0m
+	            	[0m[1mrandom_password.password[0]: Refreshing state... [id=none][0m
+	            	[0m[1mrandom_password.password[1]: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-secure-kangaroo][0m
+	            	[0m[1mazurerm_virtual_network.azfw_vnet: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-secure-kangaroo/providers/Microsoft.Network/virtualNetworks/azfw-vnet][0m
+	            	[0m[1mazurerm_firewall_policy.azfw_policy: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-secure-kangaroo/providers/Microsoft.Network/firewallPolicies/azfw-policy][0m
+	            	[0m[1mazurerm_public_ip_prefix.pip_prefix: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-secure-kangaroo/providers/Microsoft.Network/publicIPPrefixes/pip-prefix][0m
+	            	[0m[1mazurerm_network_security_group.backend_nsg: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-secure-kangaroo/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_route_table.rt: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-secure-kangaroo/providers/Microsoft.Network/routeTables/rt-azfw-eus][0m
+	            	[0m[1mazurerm_subnet.azfw_subnet: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-secure-kangaroo/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/AzureFirewallSubnet][0m
+	            	[0m[1mazurerm_subnet.backend_subnet: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-secure-kangaroo/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/subnet-backend][0m
+	            	[0m[1mazurerm_public_ip.pip_azfw: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-secure-kangaroo/providers/Microsoft.Network/publicIPAddresses/pip-azfw][0m
+	            	[0m[1mazurerm_public_ip.pip_azfw_2: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-secure-kangaroo/providers/Microsoft.Network/publicIPAddresses/pip-azfw-1][0m
+	            	[0m[1mazurerm_subnet_route_table_association.jump_subnet_rt_association: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-secure-kangaroo/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/subnet-backend][0m
+	            	[0m[1mazurerm_network_interface.backend_nic[0]: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-secure-kangaroo/providers/Microsoft.Network/networkInterfaces/nic-backend-1][0m
+	            	[0m[1mazurerm_network_interface.backend_nic[1]: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-secure-kangaroo/providers/Microsoft.Network/networkInterfaces/nic-backend-2][0m
+	            	[0m[1mazurerm_firewall_policy_rule_collection_group.policy_rule_collection_group: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-secure-kangaroo/providers/Microsoft.Network/firewallPolicies/azfw-policy/ruleCollectionGroups/RuleCollectionGroup][0m
+	            	[0m[1mazurerm_firewall.fw: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-secure-kangaroo/providers/Microsoft.Network/azureFirewalls/azfw][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.vm_backend_nsg_association[1]: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-secure-kangaroo/providers/Microsoft.Network/networkInterfaces/nic-backend-2|/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-secure-kangaroo/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.vm_backend_nsg_association[0]: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-secure-kangaroo/providers/Microsoft.Network/networkInterfaces/nic-backend-1|/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-secure-kangaroo/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_windows_virtual_machine.vm_backend[0]: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-secure-kangaroo/providers/Microsoft.Compute/virtualMachines/vm-backend-1][0m
+	            	[0m[1mazurerm_windows_virtual_machine.vm_backend[1]: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-secure-kangaroo/providers/Microsoft.Compute/virtualMachines/vm-backend-2][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.vm_backend[0][0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "vm_backend" {
+	            	        id                                                     = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-secure-kangaroo/providers/Microsoft.Compute/virtualMachines/vm-backend-1"
+	            	        name                                                   = "vm-backend-1"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.vm_backend[1][0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "vm_backend" {
+	            	        id                                                     = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-secure-kangaroo/providers/Microsoft.Compute/virtualMachines/vm-backend-2"
+	            	        name                                                   = "vm-backend-2"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 2 to change, 0 to destroy.
+	            	[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_route_table.rt,
+	            	[33m│[0m [0m  on main.tf line 227, in resource "azurerm_route_table" "rt":
+	            	[33m│[0m [0m 227:   disable_bgp_route_propagation = [4mfalse[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe property `disable_bgp_route_propagation` has been superseded by the
+	            	[33m│[0m [0mproperty `bgp_route_propagation_enabled` and will be removed in v4.0 of the
+	            	[33m│[0m [0mAzureRM Provider.
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-azfw-multi-addresses4042402167/src/quickstart/201-azfw-multi-addresses/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-azfw-multi-addresses4042402167/src/quickstart/201-azfw-multi-addresses/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-azfw-multi-addresses
+
+FailNow
+
+---
+
+## 23 Aug 26 00:39 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-grateful-mudfish"
+	            	[31m│[0m [0mVirtual Machine Name: "vm-backend-2"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: OperationNotAllowed: Operation could not be completed as it results in exceeding approved Total Regional Cores quota. Additional details - Deployment Model: Resource Manager, Location: eastus, Current Limit: 10, Current Usage: 10, Additional Required: 2, (Minimum) New Limit Required: 12. Setup Alerts when Quota reaches threshold. Learn more at https://aka.ms/quotamonitoringalerting . Submit a request for Quota increase at https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/%7B%22subscriptionId%22:%22e4b62b3b-7634-4972-8bbe-5d7197159f26%22,%22command%22:%22openQuotaApprovalBlade%22,%22quotas%22:[%7B%22location%22:%22eastus%22,%22providerId%22:%22Microsoft.Compute%22,%22resourceName%22:%22cores%22,%22quotaRequest%22:%7B%22properties%22:%7B%22limit%22:12,%22unit%22:%22Count%22,%22name%22:%7B%22value%22:%22cores%22%7D%7D%7D%7D]%7D by specifying parameters listed in the ‘Details’ section for deployment to succeed. Please read more about quota limits at https://docs.microsoft.com/en-us/azure/azure-supportability/regional-quota-requests[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm_backend[1],
+	            	[31m│[0m [0m  on main.tf line 103, in resource "azurerm_windows_virtual_machine" "vm_backend":
+	            	[31m│[0m [0m 103: resource "azurerm_windows_virtual_machine" "vm_backend" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m
+	            	[31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-grateful-mudfish"
+	            	[31m│[0m [0mVirtual Machine Name: "vm-backend-1"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: OperationNotAllowed: Operation could not be completed as it results in exceeding approved Total Regional Cores quota. Additional details - Deployment Model: Resource Manager, Location: eastus, Current Limit: 10, Current Usage: 10, Additional Required: 2, (Minimum) New Limit Required: 12. Setup Alerts when Quota reaches threshold. Learn more at https://aka.ms/quotamonitoringalerting . Submit a request for Quota increase at https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/%7B%22subscriptionId%22:%22e4b62b3b-7634-4972-8bbe-5d7197159f26%22,%22command%22:%22openQuotaApprovalBlade%22,%22quotas%22:[%7B%22location%22:%22eastus%22,%22providerId%22:%22Microsoft.Compute%22,%22resourceName%22:%22cores%22,%22quotaRequest%22:%7B%22properties%22:%7B%22limit%22:12,%22unit%22:%22Count%22,%22name%22:%7B%22value%22:%22cores%22%7D%7D%7D%7D]%7D by specifying parameters listed in the ‘Details’ section for deployment to succeed. Please read more about quota limits at https://docs.microsoft.com/en-us/azure/azure-supportability/regional-quota-requests[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm_backend[0],
+	            	[31m│[0m [0m  on main.tf line 103, in resource "azurerm_windows_virtual_machine" "vm_backend":
+	            	[31m│[0m [0m 103: resource "azurerm_windows_virtual_machine" "vm_backend" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-azfw-multi-addresses
+
+FailNow
+
+---
+
+## 16 Aug 26 00:41 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Windows Virtual Machine (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "rg-magnetic-aardvark"
+	            	[31m│[0m [0mVirtual Machine Name: "vm-backend-1"): performing CreateOrUpdate: unexpected status 409 (409 Conflict) with error: OperationNotAllowed: Operation could not be completed as it results in exceeding approved Total Regional Cores quota. Additional details - Deployment Model: Resource Manager, Location: eastus, Current Limit: 10, Current Usage: 10, Additional Required: 2, (Minimum) New Limit Required: 12. Setup Alerts when Quota reaches threshold. Learn more at https://aka.ms/quotamonitoringalerting . Submit a request for Quota increase at https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/%7B%22subscriptionId%22:%22e4b62b3b-7634-4972-8bbe-5d7197159f26%22,%22command%22:%22openQuotaApprovalBlade%22,%22quotas%22:[%7B%22location%22:%22eastus%22,%22providerId%22:%22Microsoft.Compute%22,%22resourceName%22:%22cores%22,%22quotaRequest%22:%7B%22properties%22:%7B%22limit%22:12,%22unit%22:%22Count%22,%22name%22:%7B%22value%22:%22cores%22%7D%7D%7D%7D]%7D by specifying parameters listed in the ‘Details’ section for deployment to succeed. Please read more about quota limits at https://docs.microsoft.com/en-us/azure/azure-supportability/regional-quota-requests[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_windows_virtual_machine.vm_backend[0],
+	            	[31m│[0m [0m  on main.tf line 103, in resource "azurerm_windows_virtual_machine" "vm_backend":
+	            	[31m│[0m [0m 103: resource "azurerm_windows_virtual_machine" "vm_backend" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-azfw-multi-addresses
+
+FailNow
+
+---
+
+## 09 Aug 26 01:08 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_password.password[0]: Refreshing state... [id=none][0m
+	            	[0m[1mrandom_password.password[1]: Refreshing state... [id=none][0m
+	            	[0m[1mrandom_pet.rg_name: Refreshing state... [id=rg-correct-kite][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-correct-kite][0m
+	            	[0m[1mazurerm_public_ip_prefix.pip_prefix: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-correct-kite/providers/Microsoft.Network/publicIPPrefixes/pip-prefix][0m
+	            	[0m[1mazurerm_route_table.rt: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-correct-kite/providers/Microsoft.Network/routeTables/rt-azfw-eus][0m
+	            	[0m[1mazurerm_virtual_network.azfw_vnet: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-correct-kite/providers/Microsoft.Network/virtualNetworks/azfw-vnet][0m
+	            	[0m[1mazurerm_network_security_group.backend_nsg: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-correct-kite/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_firewall_policy.azfw_policy: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-correct-kite/providers/Microsoft.Network/firewallPolicies/azfw-policy][0m
+	            	[0m[1mazurerm_public_ip.pip_azfw_2: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-correct-kite/providers/Microsoft.Network/publicIPAddresses/pip-azfw-1][0m
+	            	[0m[1mazurerm_public_ip.pip_azfw: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-correct-kite/providers/Microsoft.Network/publicIPAddresses/pip-azfw][0m
+	            	[0m[1mazurerm_subnet.backend_subnet: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-correct-kite/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/subnet-backend][0m
+	            	[0m[1mazurerm_subnet.azfw_subnet: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-correct-kite/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/AzureFirewallSubnet][0m
+	            	[0m[1mazurerm_firewall_policy_rule_collection_group.policy_rule_collection_group: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-correct-kite/providers/Microsoft.Network/firewallPolicies/azfw-policy/ruleCollectionGroups/RuleCollectionGroup][0m
+	            	[0m[1mazurerm_subnet_route_table_association.jump_subnet_rt_association: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-correct-kite/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/subnet-backend][0m
+	            	[0m[1mazurerm_network_interface.backend_nic[0]: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-correct-kite/providers/Microsoft.Network/networkInterfaces/nic-backend-1][0m
+	            	[0m[1mazurerm_network_interface.backend_nic[1]: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-correct-kite/providers/Microsoft.Network/networkInterfaces/nic-backend-2][0m
+	            	[0m[1mazurerm_firewall.fw: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-correct-kite/providers/Microsoft.Network/azureFirewalls/azfw][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.vm_backend_nsg_association[0]: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-correct-kite/providers/Microsoft.Network/networkInterfaces/nic-backend-1|/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-correct-kite/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.vm_backend_nsg_association[1]: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-correct-kite/providers/Microsoft.Network/networkInterfaces/nic-backend-2|/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-correct-kite/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_windows_virtual_machine.vm_backend[0]: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-correct-kite/providers/Microsoft.Compute/virtualMachines/vm-backend-1][0m
+	            	[0m[1mazurerm_windows_virtual_machine.vm_backend[1]: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-correct-kite/providers/Microsoft.Compute/virtualMachines/vm-backend-2][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.vm_backend[0][0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "vm_backend" {
+	            	        id                                                     = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-correct-kite/providers/Microsoft.Compute/virtualMachines/vm-backend-1"
+	            	        name                                                   = "vm-backend-1"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.vm_backend[1][0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "vm_backend" {
+	            	        id                                                     = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-correct-kite/providers/Microsoft.Compute/virtualMachines/vm-backend-2"
+	            	        name                                                   = "vm-backend-2"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 2 to change, 0 to destroy.
+	            	[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_route_table.rt,
+	            	[33m│[0m [0m  on main.tf line 227, in resource "azurerm_route_table" "rt":
+	            	[33m│[0m [0m 227:   disable_bgp_route_propagation = [4mfalse[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe property `disable_bgp_route_propagation` has been superseded by the
+	            	[33m│[0m [0mproperty `bgp_route_propagation_enabled` and will be removed in v4.0 of the
+	            	[33m│[0m [0mAzureRM Provider.
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-azfw-multi-addresses2004843050/src/quickstart/201-azfw-multi-addresses/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-azfw-multi-addresses2004843050/src/quickstart/201-azfw-multi-addresses/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-azfw-multi-addresses
+
+FailNow
+
+---
+
+## 02 Aug 26 01:48 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.rg_name: Refreshing state... [id=rg-polished-python][0m
+	            	[0m[1mrandom_password.password[0]: Refreshing state... [id=none][0m
+	            	[0m[1mrandom_password.password[1]: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-polished-python][0m
+	            	[0m[1mazurerm_route_table.rt: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-polished-python/providers/Microsoft.Network/routeTables/rt-azfw-eus][0m
+	            	[0m[1mazurerm_virtual_network.azfw_vnet: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-polished-python/providers/Microsoft.Network/virtualNetworks/azfw-vnet][0m
+	            	[0m[1mazurerm_firewall_policy.azfw_policy: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-polished-python/providers/Microsoft.Network/firewallPolicies/azfw-policy][0m
+	            	[0m[1mazurerm_network_security_group.backend_nsg: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-polished-python/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_public_ip_prefix.pip_prefix: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-polished-python/providers/Microsoft.Network/publicIPPrefixes/pip-prefix][0m
+	            	[0m[1mazurerm_subnet.backend_subnet: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-polished-python/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/subnet-backend][0m
+	            	[0m[1mazurerm_subnet.azfw_subnet: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-polished-python/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/AzureFirewallSubnet][0m
+	            	[0m[1mazurerm_public_ip.pip_azfw_2: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-polished-python/providers/Microsoft.Network/publicIPAddresses/pip-azfw-1][0m
+	            	[0m[1mazurerm_public_ip.pip_azfw: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-polished-python/providers/Microsoft.Network/publicIPAddresses/pip-azfw][0m
+	            	[0m[1mazurerm_network_interface.backend_nic[1]: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-polished-python/providers/Microsoft.Network/networkInterfaces/nic-backend-2][0m
+	            	[0m[1mazurerm_subnet_route_table_association.jump_subnet_rt_association: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-polished-python/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/subnet-backend][0m
+	            	[0m[1mazurerm_network_interface.backend_nic[0]: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-polished-python/providers/Microsoft.Network/networkInterfaces/nic-backend-1][0m
+	            	[0m[1mazurerm_firewall_policy_rule_collection_group.policy_rule_collection_group: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-polished-python/providers/Microsoft.Network/firewallPolicies/azfw-policy/ruleCollectionGroups/RuleCollectionGroup][0m
+	            	[0m[1mazurerm_firewall.fw: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-polished-python/providers/Microsoft.Network/azureFirewalls/azfw][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.vm_backend_nsg_association[0]: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-polished-python/providers/Microsoft.Network/networkInterfaces/nic-backend-1|/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-polished-python/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.vm_backend_nsg_association[1]: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-polished-python/providers/Microsoft.Network/networkInterfaces/nic-backend-2|/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-polished-python/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_windows_virtual_machine.vm_backend[1]: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-polished-python/providers/Microsoft.Compute/virtualMachines/vm-backend-2][0m
+	            	[0m[1mazurerm_windows_virtual_machine.vm_backend[0]: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-polished-python/providers/Microsoft.Compute/virtualMachines/vm-backend-1][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.vm_backend[0][0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "vm_backend" {
+	            	        id                                                     = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-polished-python/providers/Microsoft.Compute/virtualMachines/vm-backend-1"
+	            	        name                                                   = "vm-backend-1"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.vm_backend[1][0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "vm_backend" {
+	            	        id                                                     = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/rg-polished-python/providers/Microsoft.Compute/virtualMachines/vm-backend-2"
+	            	        name                                                   = "vm-backend-2"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 2 to change, 0 to destroy.
+	            	[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_route_table.rt,
+	            	[33m│[0m [0m  on main.tf line 227, in resource "azurerm_route_table" "rt":
+	            	[33m│[0m [0m 227:   disable_bgp_route_propagation = [4mfalse[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe property `disable_bgp_route_propagation` has been superseded by the
+	            	[33m│[0m [0mproperty `bgp_route_propagation_enabled` and will be removed in v4.0 of the
+	            	[33m│[0m [0mAzureRM Provider.
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-azfw-multi-addresses2611274206/src/quickstart/201-azfw-multi-addresses/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-azfw-multi-addresses2611274206/src/quickstart/201-azfw-multi-addresses/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-azfw-multi-addresses
+
+FailNow
+
+---
+
+## 26 Jul 26 00:51 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.rg_name: Refreshing state... [id=rg-golden-marmoset][0m
+	            	[0m[1mrandom_password.password[1]: Refreshing state... [id=none][0m
+	            	[0m[1mrandom_password.password[0]: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-golden-marmoset][0m
+	            	[0m[1mazurerm_virtual_network.azfw_vnet: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-golden-marmoset/providers/Microsoft.Network/virtualNetworks/azfw-vnet][0m
+	            	[0m[1mazurerm_route_table.rt: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-golden-marmoset/providers/Microsoft.Network/routeTables/rt-azfw-eus][0m
+	            	[0m[1mazurerm_public_ip_prefix.pip_prefix: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-golden-marmoset/providers/Microsoft.Network/publicIPPrefixes/pip-prefix][0m
+	            	[0m[1mazurerm_firewall_policy.azfw_policy: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-golden-marmoset/providers/Microsoft.Network/firewallPolicies/azfw-policy][0m
+	            	[0m[1mazurerm_network_security_group.backend_nsg: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-golden-marmoset/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_public_ip.pip_azfw: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-golden-marmoset/providers/Microsoft.Network/publicIPAddresses/pip-azfw][0m
+	            	[0m[1mazurerm_public_ip.pip_azfw_2: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-golden-marmoset/providers/Microsoft.Network/publicIPAddresses/pip-azfw-1][0m
+	            	[0m[1mazurerm_subnet.backend_subnet: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-golden-marmoset/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/subnet-backend][0m
+	            	[0m[1mazurerm_subnet.azfw_subnet: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-golden-marmoset/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/AzureFirewallSubnet][0m
+	            	[0m[1mazurerm_firewall_policy_rule_collection_group.policy_rule_collection_group: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-golden-marmoset/providers/Microsoft.Network/firewallPolicies/azfw-policy/ruleCollectionGroups/RuleCollectionGroup][0m
+	            	[0m[1mazurerm_firewall.fw: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-golden-marmoset/providers/Microsoft.Network/azureFirewalls/azfw][0m
+	            	[0m[1mazurerm_subnet_route_table_association.jump_subnet_rt_association: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-golden-marmoset/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/subnet-backend][0m
+	            	[0m[1mazurerm_network_interface.backend_nic[1]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-golden-marmoset/providers/Microsoft.Network/networkInterfaces/nic-backend-2][0m
+	            	[0m[1mazurerm_network_interface.backend_nic[0]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-golden-marmoset/providers/Microsoft.Network/networkInterfaces/nic-backend-1][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.vm_backend_nsg_association[0]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-golden-marmoset/providers/Microsoft.Network/networkInterfaces/nic-backend-1|/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-golden-marmoset/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.vm_backend_nsg_association[1]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-golden-marmoset/providers/Microsoft.Network/networkInterfaces/nic-backend-2|/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-golden-marmoset/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_windows_virtual_machine.vm_backend[0]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-golden-marmoset/providers/Microsoft.Compute/virtualMachines/vm-backend-1][0m
+	            	[0m[1mazurerm_windows_virtual_machine.vm_backend[1]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-golden-marmoset/providers/Microsoft.Compute/virtualMachines/vm-backend-2][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.vm_backend[0][0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "vm_backend" {
+	            	        id                                                     = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-golden-marmoset/providers/Microsoft.Compute/virtualMachines/vm-backend-1"
+	            	        name                                                   = "vm-backend-1"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.vm_backend[1][0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "vm_backend" {
+	            	        id                                                     = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-golden-marmoset/providers/Microsoft.Compute/virtualMachines/vm-backend-2"
+	            	        name                                                   = "vm-backend-2"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 2 to change, 0 to destroy.
+	            	[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_route_table.rt,
+	            	[33m│[0m [0m  on main.tf line 227, in resource "azurerm_route_table" "rt":
+	            	[33m│[0m [0m 227:   disable_bgp_route_propagation = [4mfalse[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe property `disable_bgp_route_propagation` has been superseded by the
+	            	[33m│[0m [0mproperty `bgp_route_propagation_enabled` and will be removed in v4.0 of the
+	            	[33m│[0m [0mAzureRM Provider.
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-azfw-multi-addresses882134453/src/quickstart/201-azfw-multi-addresses/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-azfw-multi-addresses882134453/src/quickstart/201-azfw-multi-addresses/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-azfw-multi-addresses
+
+FailNow
+
+---
+
+## 12 Jul 26 01:36 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.rg_name: Refreshing state... [id=rg-up-dogfish][0m
+	            	[0m[1mrandom_password.password[1]: Refreshing state... [id=none][0m
+	            	[0m[1mrandom_password.password[0]: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-up-dogfish][0m
+	            	[0m[1mazurerm_virtual_network.azfw_vnet: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-up-dogfish/providers/Microsoft.Network/virtualNetworks/azfw-vnet][0m
+	            	[0m[1mazurerm_route_table.rt: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-up-dogfish/providers/Microsoft.Network/routeTables/rt-azfw-eus][0m
+	            	[0m[1mazurerm_public_ip_prefix.pip_prefix: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-up-dogfish/providers/Microsoft.Network/publicIPPrefixes/pip-prefix][0m
+	            	[0m[1mazurerm_network_security_group.backend_nsg: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-up-dogfish/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_firewall_policy.azfw_policy: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-up-dogfish/providers/Microsoft.Network/firewallPolicies/azfw-policy][0m
+	            	[0m[1mazurerm_subnet.azfw_subnet: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-up-dogfish/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/AzureFirewallSubnet][0m
+	            	[0m[1mazurerm_subnet.backend_subnet: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-up-dogfish/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/subnet-backend][0m
+	            	[0m[1mazurerm_subnet_route_table_association.jump_subnet_rt_association: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-up-dogfish/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/subnet-backend][0m
+	            	[0m[1mazurerm_network_interface.backend_nic[0]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-up-dogfish/providers/Microsoft.Network/networkInterfaces/nic-backend-1][0m
+	            	[0m[1mazurerm_network_interface.backend_nic[1]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-up-dogfish/providers/Microsoft.Network/networkInterfaces/nic-backend-2][0m
+	            	[0m[1mazurerm_public_ip.pip_azfw_2: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-up-dogfish/providers/Microsoft.Network/publicIPAddresses/pip-azfw-1][0m
+	            	[0m[1mazurerm_public_ip.pip_azfw: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-up-dogfish/providers/Microsoft.Network/publicIPAddresses/pip-azfw][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.vm_backend_nsg_association[0]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-up-dogfish/providers/Microsoft.Network/networkInterfaces/nic-backend-1|/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-up-dogfish/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.vm_backend_nsg_association[1]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-up-dogfish/providers/Microsoft.Network/networkInterfaces/nic-backend-2|/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-up-dogfish/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_windows_virtual_machine.vm_backend[0]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-up-dogfish/providers/Microsoft.Compute/virtualMachines/vm-backend-1][0m
+	            	[0m[1mazurerm_windows_virtual_machine.vm_backend[1]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-up-dogfish/providers/Microsoft.Compute/virtualMachines/vm-backend-2][0m
+	            	[0m[1mazurerm_firewall.fw: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-up-dogfish/providers/Microsoft.Network/azureFirewalls/azfw][0m
+	            	[0m[1mazurerm_firewall_policy_rule_collection_group.policy_rule_collection_group: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-up-dogfish/providers/Microsoft.Network/firewallPolicies/azfw-policy/ruleCollectionGroups/RuleCollectionGroup][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.vm_backend[0][0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "vm_backend" {
+	            	        id                                                     = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-up-dogfish/providers/Microsoft.Compute/virtualMachines/vm-backend-1"
+	            	        name                                                   = "vm-backend-1"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.vm_backend[1][0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "vm_backend" {
+	            	        id                                                     = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-up-dogfish/providers/Microsoft.Compute/virtualMachines/vm-backend-2"
+	            	        name                                                   = "vm-backend-2"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 2 to change, 0 to destroy.
+	            	[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_route_table.rt,
+	            	[33m│[0m [0m  on main.tf line 227, in resource "azurerm_route_table" "rt":
+	            	[33m│[0m [0m 227:   disable_bgp_route_propagation = [4mfalse[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe property `disable_bgp_route_propagation` has been superseded by the
+	            	[33m│[0m [0mproperty `bgp_route_propagation_enabled` and will be removed in v4.0 of the
+	            	[33m│[0m [0mAzureRM Provider.
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-azfw-multi-addresses2405429229/src/quickstart/201-azfw-multi-addresses/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-azfw-multi-addresses2405429229/src/quickstart/201-azfw-multi-addresses/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-azfw-multi-addresses
+
+FailNow
+
+---
+
+## 05 Jul 26 01:02 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_password.password[0]: Refreshing state... [id=none][0m
+	            	[0m[1mrandom_pet.rg_name: Refreshing state... [id=rg-enjoyed-clam][0m
+	            	[0m[1mrandom_password.password[1]: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-enjoyed-clam][0m
+	            	[0m[1mazurerm_firewall_policy.azfw_policy: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-enjoyed-clam/providers/Microsoft.Network/firewallPolicies/azfw-policy][0m
+	            	[0m[1mazurerm_virtual_network.azfw_vnet: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-enjoyed-clam/providers/Microsoft.Network/virtualNetworks/azfw-vnet][0m
+	            	[0m[1mazurerm_route_table.rt: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-enjoyed-clam/providers/Microsoft.Network/routeTables/rt-azfw-eus][0m
+	            	[0m[1mazurerm_public_ip_prefix.pip_prefix: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-enjoyed-clam/providers/Microsoft.Network/publicIPPrefixes/pip-prefix][0m
+	            	[0m[1mazurerm_network_security_group.backend_nsg: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-enjoyed-clam/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_subnet.backend_subnet: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-enjoyed-clam/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/subnet-backend][0m
+	            	[0m[1mazurerm_subnet.azfw_subnet: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-enjoyed-clam/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/AzureFirewallSubnet][0m
+	            	[0m[1mazurerm_public_ip.pip_azfw: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-enjoyed-clam/providers/Microsoft.Network/publicIPAddresses/pip-azfw][0m
+	            	[0m[1mazurerm_public_ip.pip_azfw_2: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-enjoyed-clam/providers/Microsoft.Network/publicIPAddresses/pip-azfw-1][0m
+	            	[0m[1mazurerm_subnet_route_table_association.jump_subnet_rt_association: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-enjoyed-clam/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/subnet-backend][0m
+	            	[0m[1mazurerm_network_interface.backend_nic[0]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-enjoyed-clam/providers/Microsoft.Network/networkInterfaces/nic-backend-1][0m
+	            	[0m[1mazurerm_network_interface.backend_nic[1]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-enjoyed-clam/providers/Microsoft.Network/networkInterfaces/nic-backend-2][0m
+	            	[0m[1mazurerm_firewall.fw: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-enjoyed-clam/providers/Microsoft.Network/azureFirewalls/azfw][0m
+	            	[0m[1mazurerm_firewall_policy_rule_collection_group.policy_rule_collection_group: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-enjoyed-clam/providers/Microsoft.Network/firewallPolicies/azfw-policy/ruleCollectionGroups/RuleCollectionGroup][0m
+	            	[0m[1mazurerm_windows_virtual_machine.vm_backend[0]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-enjoyed-clam/providers/Microsoft.Compute/virtualMachines/vm-backend-1][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.vm_backend_nsg_association[0]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-enjoyed-clam/providers/Microsoft.Network/networkInterfaces/nic-backend-1|/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-enjoyed-clam/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.vm_backend_nsg_association[1]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-enjoyed-clam/providers/Microsoft.Network/networkInterfaces/nic-backend-2|/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-enjoyed-clam/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_windows_virtual_machine.vm_backend[1]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-enjoyed-clam/providers/Microsoft.Compute/virtualMachines/vm-backend-2][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.vm_backend[0][0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "vm_backend" {
+	            	        id                                                     = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-enjoyed-clam/providers/Microsoft.Compute/virtualMachines/vm-backend-1"
+	            	        name                                                   = "vm-backend-1"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.vm_backend[1][0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "vm_backend" {
+	            	        id                                                     = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-enjoyed-clam/providers/Microsoft.Compute/virtualMachines/vm-backend-2"
+	            	        name                                                   = "vm-backend-2"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 2 to change, 0 to destroy.
+	            	[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_route_table.rt,
+	            	[33m│[0m [0m  on main.tf line 227, in resource "azurerm_route_table" "rt":
+	            	[33m│[0m [0m 227:   disable_bgp_route_propagation = [4mfalse[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe property `disable_bgp_route_propagation` has been superseded by the
+	            	[33m│[0m [0mproperty `bgp_route_propagation_enabled` and will be removed in v4.0 of the
+	            	[33m│[0m [0mAzureRM Provider.
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-azfw-multi-addresses3067091765/src/quickstart/201-azfw-multi-addresses/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-azfw-multi-addresses3067091765/src/quickstart/201-azfw-multi-addresses/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-azfw-multi-addresses
+
+FailNow
+
+---
+
+## 28 Jun 26 00:35 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mpopulating Resource Provider cache: listing Resource Providers: loading results: unexpected end of JSON input[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 14, in provider "azurerm":
+	            	[31m│[0m [0m  14: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-azfw-multi-addresses
+
+FailNow
+
+---
+
+## 14 Jun 26 01:26 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.rg_name: Refreshing state... [id=rg-legible-gopher][0m
+	            	[0m[1mrandom_password.password[1]: Refreshing state... [id=none][0m
+	            	[0m[1mrandom_password.password[0]: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-legible-gopher][0m
+	            	[0m[1mazurerm_public_ip_prefix.pip_prefix: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-legible-gopher/providers/Microsoft.Network/publicIPPrefixes/pip-prefix][0m
+	            	[0m[1mazurerm_virtual_network.azfw_vnet: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-legible-gopher/providers/Microsoft.Network/virtualNetworks/azfw-vnet][0m
+	            	[0m[1mazurerm_route_table.rt: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-legible-gopher/providers/Microsoft.Network/routeTables/rt-azfw-eus][0m
+	            	[0m[1mazurerm_firewall_policy.azfw_policy: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-legible-gopher/providers/Microsoft.Network/firewallPolicies/azfw-policy][0m
+	            	[0m[1mazurerm_network_security_group.backend_nsg: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-legible-gopher/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_public_ip.pip_azfw: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-legible-gopher/providers/Microsoft.Network/publicIPAddresses/pip-azfw][0m
+	            	[0m[1mazurerm_public_ip.pip_azfw_2: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-legible-gopher/providers/Microsoft.Network/publicIPAddresses/pip-azfw-1][0m
+	            	[0m[1mazurerm_subnet.azfw_subnet: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-legible-gopher/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/AzureFirewallSubnet][0m
+	            	[0m[1mazurerm_subnet.backend_subnet: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-legible-gopher/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/subnet-backend][0m
+	            	[0m[1mazurerm_firewall_policy_rule_collection_group.policy_rule_collection_group: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-legible-gopher/providers/Microsoft.Network/firewallPolicies/azfw-policy/ruleCollectionGroups/RuleCollectionGroup][0m
+	            	[0m[1mazurerm_subnet_route_table_association.jump_subnet_rt_association: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-legible-gopher/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/subnet-backend][0m
+	            	[0m[1mazurerm_network_interface.backend_nic[0]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-legible-gopher/providers/Microsoft.Network/networkInterfaces/nic-backend-1][0m
+	            	[0m[1mazurerm_network_interface.backend_nic[1]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-legible-gopher/providers/Microsoft.Network/networkInterfaces/nic-backend-2][0m
+	            	[0m[1mazurerm_firewall.fw: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-legible-gopher/providers/Microsoft.Network/azureFirewalls/azfw][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.vm_backend_nsg_association[1]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-legible-gopher/providers/Microsoft.Network/networkInterfaces/nic-backend-2|/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-legible-gopher/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.vm_backend_nsg_association[0]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-legible-gopher/providers/Microsoft.Network/networkInterfaces/nic-backend-1|/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-legible-gopher/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_windows_virtual_machine.vm_backend[1]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-legible-gopher/providers/Microsoft.Compute/virtualMachines/vm-backend-2][0m
+	            	[0m[1mazurerm_windows_virtual_machine.vm_backend[0]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-legible-gopher/providers/Microsoft.Compute/virtualMachines/vm-backend-1][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.vm_backend[0][0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "vm_backend" {
+	            	        id                                                     = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-legible-gopher/providers/Microsoft.Compute/virtualMachines/vm-backend-1"
+	            	        name                                                   = "vm-backend-1"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.vm_backend[1][0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "vm_backend" {
+	            	        id                                                     = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-legible-gopher/providers/Microsoft.Compute/virtualMachines/vm-backend-2"
+	            	        name                                                   = "vm-backend-2"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 2 to change, 0 to destroy.
+	            	[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_route_table.rt,
+	            	[33m│[0m [0m  on main.tf line 227, in resource "azurerm_route_table" "rt":
+	            	[33m│[0m [0m 227:   disable_bgp_route_propagation = [4mfalse[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe property `disable_bgp_route_propagation` has been superseded by the
+	            	[33m│[0m [0mproperty `bgp_route_propagation_enabled` and will be removed in v4.0 of the
+	            	[33m│[0m [0mAzureRM Provider.
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-azfw-multi-addresses3554098888/src/quickstart/201-azfw-multi-addresses/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-azfw-multi-addresses3554098888/src/quickstart/201-azfw-multi-addresses/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-azfw-multi-addresses
+
+FailNow
+
+---
+
+## 31 May 26 02:01 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_password.password[1]: Refreshing state... [id=none][0m
+	            	[0m[1mrandom_pet.rg_name: Refreshing state... [id=rg-primary-rhino][0m
+	            	[0m[1mrandom_password.password[0]: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-primary-rhino][0m
+	            	[0m[1mazurerm_route_table.rt: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-primary-rhino/providers/Microsoft.Network/routeTables/rt-azfw-eus][0m
+	            	[0m[1mazurerm_public_ip_prefix.pip_prefix: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-primary-rhino/providers/Microsoft.Network/publicIPPrefixes/pip-prefix][0m
+	            	[0m[1mazurerm_virtual_network.azfw_vnet: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-primary-rhino/providers/Microsoft.Network/virtualNetworks/azfw-vnet][0m
+	            	[0m[1mazurerm_network_security_group.backend_nsg: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-primary-rhino/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_firewall_policy.azfw_policy: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-primary-rhino/providers/Microsoft.Network/firewallPolicies/azfw-policy][0m
+	            	[0m[1mazurerm_public_ip.pip_azfw: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-primary-rhino/providers/Microsoft.Network/publicIPAddresses/pip-azfw][0m
+	            	[0m[1mazurerm_public_ip.pip_azfw_2: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-primary-rhino/providers/Microsoft.Network/publicIPAddresses/pip-azfw-1][0m
+	            	[0m[1mazurerm_subnet.backend_subnet: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-primary-rhino/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/subnet-backend][0m
+	            	[0m[1mazurerm_subnet.azfw_subnet: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-primary-rhino/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/AzureFirewallSubnet][0m
+	            	[0m[1mazurerm_firewall_policy_rule_collection_group.policy_rule_collection_group: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-primary-rhino/providers/Microsoft.Network/firewallPolicies/azfw-policy/ruleCollectionGroups/RuleCollectionGroup][0m
+	            	[0m[1mazurerm_subnet_route_table_association.jump_subnet_rt_association: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-primary-rhino/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/subnet-backend][0m
+	            	[0m[1mazurerm_network_interface.backend_nic[0]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-primary-rhino/providers/Microsoft.Network/networkInterfaces/nic-backend-1][0m
+	            	[0m[1mazurerm_network_interface.backend_nic[1]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-primary-rhino/providers/Microsoft.Network/networkInterfaces/nic-backend-2][0m
+	            	[0m[1mazurerm_firewall.fw: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-primary-rhino/providers/Microsoft.Network/azureFirewalls/azfw][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.vm_backend_nsg_association[1]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-primary-rhino/providers/Microsoft.Network/networkInterfaces/nic-backend-2|/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-primary-rhino/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.vm_backend_nsg_association[0]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-primary-rhino/providers/Microsoft.Network/networkInterfaces/nic-backend-1|/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-primary-rhino/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_windows_virtual_machine.vm_backend[1]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-primary-rhino/providers/Microsoft.Compute/virtualMachines/vm-backend-2][0m
+	            	[0m[1mazurerm_windows_virtual_machine.vm_backend[0]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-primary-rhino/providers/Microsoft.Compute/virtualMachines/vm-backend-1][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.vm_backend[0][0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "vm_backend" {
+	            	        id                                                     = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-primary-rhino/providers/Microsoft.Compute/virtualMachines/vm-backend-1"
+	            	        name                                                   = "vm-backend-1"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.vm_backend[1][0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "vm_backend" {
+	            	        id                                                     = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-primary-rhino/providers/Microsoft.Compute/virtualMachines/vm-backend-2"
+	            	        name                                                   = "vm-backend-2"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 2 to change, 0 to destroy.
+	            	[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_route_table.rt,
+	            	[33m│[0m [0m  on main.tf line 227, in resource "azurerm_route_table" "rt":
+	            	[33m│[0m [0m 227:   disable_bgp_route_propagation = [4mfalse[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe property `disable_bgp_route_propagation` has been superseded by the
+	            	[33m│[0m [0mproperty `bgp_route_propagation_enabled` and will be removed in v4.0 of the
+	            	[33m│[0m [0mAzureRM Provider.
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-azfw-multi-addresses3997711933/src/quickstart/201-azfw-multi-addresses/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-azfw-multi-addresses3997711933/src/quickstart/201-azfw-multi-addresses/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-azfw-multi-addresses
+
+FailNow
+
+---
+
+## 24 May 26 01:16 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_pet.rg_name: Refreshing state... [id=rg-healthy-egret][0m
+	            	[0m[1mrandom_password.password[0]: Refreshing state... [id=none][0m
+	            	[0m[1mrandom_password.password[1]: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-healthy-egret][0m
+	            	[0m[1mazurerm_public_ip_prefix.pip_prefix: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-healthy-egret/providers/Microsoft.Network/publicIPPrefixes/pip-prefix][0m
+	            	[0m[1mazurerm_network_security_group.backend_nsg: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-healthy-egret/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_virtual_network.azfw_vnet: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-healthy-egret/providers/Microsoft.Network/virtualNetworks/azfw-vnet][0m
+	            	[0m[1mazurerm_firewall_policy.azfw_policy: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-healthy-egret/providers/Microsoft.Network/firewallPolicies/azfw-policy][0m
+	            	[0m[1mazurerm_route_table.rt: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-healthy-egret/providers/Microsoft.Network/routeTables/rt-azfw-eus][0m
+	            	[0m[1mazurerm_subnet.azfw_subnet: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-healthy-egret/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/AzureFirewallSubnet][0m
+	            	[0m[1mazurerm_subnet.backend_subnet: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-healthy-egret/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/subnet-backend][0m
+	            	[0m[1mazurerm_public_ip.pip_azfw_2: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-healthy-egret/providers/Microsoft.Network/publicIPAddresses/pip-azfw-1][0m
+	            	[0m[1mazurerm_public_ip.pip_azfw: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-healthy-egret/providers/Microsoft.Network/publicIPAddresses/pip-azfw][0m
+	            	[0m[1mazurerm_network_interface.backend_nic[0]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-healthy-egret/providers/Microsoft.Network/networkInterfaces/nic-backend-1][0m
+	            	[0m[1mazurerm_network_interface.backend_nic[1]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-healthy-egret/providers/Microsoft.Network/networkInterfaces/nic-backend-2][0m
+	            	[0m[1mazurerm_subnet_route_table_association.jump_subnet_rt_association: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-healthy-egret/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/subnet-backend][0m
+	            	[0m[1mazurerm_firewall_policy_rule_collection_group.policy_rule_collection_group: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-healthy-egret/providers/Microsoft.Network/firewallPolicies/azfw-policy/ruleCollectionGroups/RuleCollectionGroup][0m
+	            	[0m[1mazurerm_firewall.fw: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-healthy-egret/providers/Microsoft.Network/azureFirewalls/azfw][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.vm_backend_nsg_association[1]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-healthy-egret/providers/Microsoft.Network/networkInterfaces/nic-backend-2|/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-healthy-egret/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.vm_backend_nsg_association[0]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-healthy-egret/providers/Microsoft.Network/networkInterfaces/nic-backend-1|/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-healthy-egret/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_windows_virtual_machine.vm_backend[1]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-healthy-egret/providers/Microsoft.Compute/virtualMachines/vm-backend-2][0m
+	            	[0m[1mazurerm_windows_virtual_machine.vm_backend[0]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-healthy-egret/providers/Microsoft.Compute/virtualMachines/vm-backend-1][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.vm_backend[0][0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "vm_backend" {
+	            	        id                                                     = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-healthy-egret/providers/Microsoft.Compute/virtualMachines/vm-backend-1"
+	            	        name                                                   = "vm-backend-1"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.vm_backend[1][0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "vm_backend" {
+	            	        id                                                     = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-healthy-egret/providers/Microsoft.Compute/virtualMachines/vm-backend-2"
+	            	        name                                                   = "vm-backend-2"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 2 to change, 0 to destroy.
+	            	[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_route_table.rt,
+	            	[33m│[0m [0m  on main.tf line 227, in resource "azurerm_route_table" "rt":
+	            	[33m│[0m [0m 227:   disable_bgp_route_propagation = [4mfalse[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe property `disable_bgp_route_propagation` has been superseded by the
+	            	[33m│[0m [0mproperty `bgp_route_propagation_enabled` and will be removed in v4.0 of the
+	            	[33m│[0m [0mAzureRM Provider.
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-azfw-multi-addresses2412167105/src/quickstart/201-azfw-multi-addresses/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-azfw-multi-addresses2412167105/src/quickstart/201-azfw-multi-addresses/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-azfw-multi-addresses
+
+FailNow
+
+---
+
+## 10 May 26 01:12 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_password.password[1]: Refreshing state... [id=none][0m
+	            	[0m[1mrandom_pet.rg_name: Refreshing state... [id=rg-awaited-chicken][0m
+	            	[0m[1mrandom_password.password[0]: Refreshing state... [id=none][0m
+	            	[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-awaited-chicken][0m
+	            	[0m[1mazurerm_firewall_policy.azfw_policy: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-awaited-chicken/providers/Microsoft.Network/firewallPolicies/azfw-policy][0m
+	            	[0m[1mazurerm_virtual_network.azfw_vnet: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-awaited-chicken/providers/Microsoft.Network/virtualNetworks/azfw-vnet][0m
+	            	[0m[1mazurerm_public_ip_prefix.pip_prefix: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-awaited-chicken/providers/Microsoft.Network/publicIPPrefixes/pip-prefix][0m
+	            	[0m[1mazurerm_route_table.rt: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-awaited-chicken/providers/Microsoft.Network/routeTables/rt-azfw-eus][0m
+	            	[0m[1mazurerm_network_security_group.backend_nsg: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-awaited-chicken/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_public_ip.pip_azfw_2: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-awaited-chicken/providers/Microsoft.Network/publicIPAddresses/pip-azfw-1][0m
+	            	[0m[1mazurerm_public_ip.pip_azfw: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-awaited-chicken/providers/Microsoft.Network/publicIPAddresses/pip-azfw][0m
+	            	[0m[1mazurerm_firewall_policy_rule_collection_group.policy_rule_collection_group: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-awaited-chicken/providers/Microsoft.Network/firewallPolicies/azfw-policy/ruleCollectionGroups/RuleCollectionGroup][0m
+	            	[0m[1mazurerm_subnet.azfw_subnet: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-awaited-chicken/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/AzureFirewallSubnet][0m
+	            	[0m[1mazurerm_subnet.backend_subnet: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-awaited-chicken/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/subnet-backend][0m
+	            	[0m[1mazurerm_firewall.fw: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-awaited-chicken/providers/Microsoft.Network/azureFirewalls/azfw][0m
+	            	[0m[1mazurerm_subnet_route_table_association.jump_subnet_rt_association: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-awaited-chicken/providers/Microsoft.Network/virtualNetworks/azfw-vnet/subnets/subnet-backend][0m
+	            	[0m[1mazurerm_network_interface.backend_nic[0]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-awaited-chicken/providers/Microsoft.Network/networkInterfaces/nic-backend-1][0m
+	            	[0m[1mazurerm_network_interface.backend_nic[1]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-awaited-chicken/providers/Microsoft.Network/networkInterfaces/nic-backend-2][0m
+	            	[0m[1mazurerm_windows_virtual_machine.vm_backend[0]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-awaited-chicken/providers/Microsoft.Compute/virtualMachines/vm-backend-1][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.vm_backend_nsg_association[0]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-awaited-chicken/providers/Microsoft.Network/networkInterfaces/nic-backend-1|/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-awaited-chicken/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_network_interface_security_group_association.vm_backend_nsg_association[1]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-awaited-chicken/providers/Microsoft.Network/networkInterfaces/nic-backend-2|/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-awaited-chicken/providers/Microsoft.Network/networkSecurityGroups/nsg-backend][0m
+	            	[0m[1mazurerm_windows_virtual_machine.vm_backend[1]: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-awaited-chicken/providers/Microsoft.Compute/virtualMachines/vm-backend-2][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.vm_backend[0][0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "vm_backend" {
+	            	        id                                                     = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-awaited-chicken/providers/Microsoft.Compute/virtualMachines/vm-backend-1"
+	            	        name                                                   = "vm-backend-1"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1m  # azurerm_windows_virtual_machine.vm_backend[1][0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_windows_virtual_machine" "vm_backend" {
+	            	        id                                                     = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/rg-awaited-chicken/providers/Microsoft.Compute/virtualMachines/vm-backend-2"
+	            	        name                                                   = "vm-backend-2"
+	            	        tags                                                   = {}
+	            	      [33m~[0m[0m vm_agent_platform_updates_enabled                      = true [33m->[0m[0m false
+	            	        [90m# (41 unchanged attributes hidden)[0m[0m
+	            	
+	            	        [90m# (2 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 2 to change, 0 to destroy.
+	            	[33m╷[0m[0m
+	            	[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0m[0m  with azurerm_route_table.rt,
+	            	[33m│[0m [0m  on main.tf line 227, in resource "azurerm_route_table" "rt":
+	            	[33m│[0m [0m 227:   disable_bgp_route_propagation = [4mfalse[0m[0m
+	            	[33m│[0m [0m
+	            	[33m│[0m [0mThe property `disable_bgp_route_propagation` has been superseded by the
+	            	[33m│[0m [0mproperty `bgp_route_propagation_enabled` and will be removed in v4.0 of the
+	            	[33m│[0m [0mAzureRM Provider.
+	            	[33m╵[0m[0m
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-azfw-multi-addresses1939721354/src/quickstart/201-azfw-multi-addresses/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-azfw-multi-addresses1939721354/src/quickstart/201-azfw-multi-addresses/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-azfw-multi-addresses
+
+FailNow
+
+---
+
 ## 26 Apr 26 01:12 UTC
 
 Success: false

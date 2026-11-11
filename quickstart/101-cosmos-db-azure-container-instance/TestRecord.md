@@ -1,3 +1,848 @@
+## 08 Nov 26 00:13 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 597d56f2-10e5-43c7-8244-618bd5cbc000 Correlation ID: 3a202a3a-f709-498a-9c3d-e46d300a2afc Timestamp: 2026-11-08 00:13:21Z","error_codes":[5000229],"timestamp":"2026-11-08 00:13:21Z","trace_id":"597d56f2-10e5-43c7-8244-618bd5cbc000","correlation_id":"3a202a3a-f709-498a-9c3d-e46d300a2afc"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-azure-container-instance
+
+FailNow
+
+---
+
+## 01 Nov 26 00:18 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: b900a2f9-5c93-43d8-9eae-15fb6f6fde01 Correlation ID: abec2c65-d634-41b8-853c-fb4a4efa1baa Timestamp: 2026-11-01 00:18:24Z","error_codes":[5000229],"timestamp":"2026-11-01 00:18:24Z","trace_id":"b900a2f9-5c93-43d8-9eae-15fb6f6fde01","correlation_id":"abec2c65-d634-41b8-853c-fb4a4efa1baa"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-azure-container-instance
+
+FailNow
+
+---
+
+## 25 Oct 26 00:17 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 26ed97c4-092f-4022-829c-dd877cc41402 Correlation ID: 43eab78a-9bba-45ec-98b8-75c840e17529 Timestamp: 2026-10-25 00:17:34Z","error_codes":[5000229],"timestamp":"2026-10-25 00:17:34Z","trace_id":"26ed97c4-092f-4022-829c-dd877cc41402","correlation_id":"43eab78a-9bba-45ec-98b8-75c840e17529"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-azure-container-instance
+
+FailNow
+
+---
+
+## 18 Oct 26 01:19 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Container Group (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-aci-polished-mongoose-rg"
+	            	[31m│[0m [0mContainer Group Name: "cosmos-db-aci-polished-mongoose-vote-aci"): performing ContainerGroupsCreateOrUpdate: unexpected status 400 (400 Bad Request) with error: InaccessibleImage: The image 'mcr.microsoft.com/azuredocs/azure-vote-front:cosmosdb' in container group 'cosmos-db-aci-polished-mongoose-vote-aci' is not accessible. Please check the image and registry credential.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_container_group.main,
+	            	[31m│[0m [0m  on aci.tf line 1, in resource "azurerm_container_group" "main":
+	            	[31m│[0m [0m   1: resource "azurerm_container_group" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-azure-container-instance
+
+FailNow
+
+---
+
+## 11 Oct 26 01:06 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Container Group (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-aci-singular-magpie-rg"
+	            	[31m│[0m [0mContainer Group Name: "cosmos-db-aci-singular-magpie-vote-aci"): performing ContainerGroupsCreateOrUpdate: unexpected status 400 (400 Bad Request) with error: InaccessibleImage: The image 'mcr.microsoft.com/azuredocs/azure-vote-front:cosmosdb' in container group 'cosmos-db-aci-singular-magpie-vote-aci' is not accessible. Please check the image and registry credential.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_container_group.main,
+	            	[31m│[0m [0m  on aci.tf line 1, in resource "azurerm_container_group" "main":
+	            	[31m│[0m [0m   1: resource "azurerm_container_group" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-azure-container-instance
+
+FailNow
+
+---
+
+## 04 Oct 26 02:05 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Container Group (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-aci-saved-skylark-rg"
+	            	[31m│[0m [0mContainer Group Name: "cosmos-db-aci-saved-skylark-vote-aci"): performing ContainerGroupsCreateOrUpdate: unexpected status 400 (400 Bad Request) with error: InaccessibleImage: The image 'mcr.microsoft.com/azuredocs/azure-vote-front:cosmosdb' in container group 'cosmos-db-aci-saved-skylark-vote-aci' is not accessible. Please check the image and registry credential.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_container_group.main,
+	            	[31m│[0m [0m  on aci.tf line 1, in resource "azurerm_container_group" "main":
+	            	[31m│[0m [0m   1: resource "azurerm_container_group" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-azure-container-instance
+
+FailNow
+
+---
+
+## 27 Sep 26 00:57 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Container Group (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-aci-living-boa-rg"
+	            	[31m│[0m [0mContainer Group Name: "cosmos-db-aci-living-boa-vote-aci"): performing ContainerGroupsCreateOrUpdate: unexpected status 400 (400 Bad Request) with error: InaccessibleImage: The image 'mcr.microsoft.com/azuredocs/azure-vote-front:cosmosdb' in container group 'cosmos-db-aci-living-boa-vote-aci' is not accessible. Please check the image and registry credential.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_container_group.main,
+	            	[31m│[0m [0m  on aci.tf line 1, in resource "azurerm_container_group" "main":
+	            	[31m│[0m [0m   1: resource "azurerm_container_group" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-azure-container-instance
+
+FailNow
+
+---
+
+## 20 Sep 26 01:23 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Container Group (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-aci-wise-scorpion-rg"
+	            	[31m│[0m [0mContainer Group Name: "cosmos-db-aci-wise-scorpion-vote-aci"): performing ContainerGroupsCreateOrUpdate: unexpected status 400 (400 Bad Request) with error: InaccessibleImage: The image 'mcr.microsoft.com/azuredocs/azure-vote-front:cosmosdb' in container group 'cosmos-db-aci-wise-scorpion-vote-aci' is not accessible. Please check the image and registry credential.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_container_group.main,
+	            	[31m│[0m [0m  on aci.tf line 1, in resource "azurerm_container_group" "main":
+	            	[31m│[0m [0m   1: resource "azurerm_container_group" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-azure-container-instance
+
+FailNow
+
+---
+
+## 13 Sep 26 02:09 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Container Group (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-aci-decent-poodle-rg"
+	            	[31m│[0m [0mContainer Group Name: "cosmos-db-aci-decent-poodle-vote-aci"): performing ContainerGroupsCreateOrUpdate: unexpected status 400 (400 Bad Request) with error: InaccessibleImage: The image 'mcr.microsoft.com/azuredocs/azure-vote-front:cosmosdb' in container group 'cosmos-db-aci-decent-poodle-vote-aci' is not accessible. Please check the image and registry credential.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_container_group.main,
+	            	[31m│[0m [0m  on aci.tf line 1, in resource "azurerm_container_group" "main":
+	            	[31m│[0m [0m   1: resource "azurerm_container_group" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-azure-container-instance
+
+FailNow
+
+---
+
+## 06 Sep 26 01:14 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Container Group (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-aci-immune-boar-rg"
+	            	[31m│[0m [0mContainer Group Name: "cosmos-db-aci-immune-boar-vote-aci"): performing ContainerGroupsCreateOrUpdate: unexpected status 400 (400 Bad Request) with error: InaccessibleImage: The image 'mcr.microsoft.com/azuredocs/azure-vote-front:cosmosdb' in container group 'cosmos-db-aci-immune-boar-vote-aci' is not accessible. Please check the image and registry credential.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_container_group.main,
+	            	[31m│[0m [0m  on aci.tf line 1, in resource "azurerm_container_group" "main":
+	            	[31m│[0m [0m   1: resource "azurerm_container_group" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-azure-container-instance
+
+FailNow
+
+---
+
+## 30 Aug 26 01:03 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Container Group (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-aci-amused-elephant-rg"
+	            	[31m│[0m [0mContainer Group Name: "cosmos-db-aci-amused-elephant-vote-aci"): performing ContainerGroupsCreateOrUpdate: unexpected status 400 (400 Bad Request) with error: InaccessibleImage: The image 'mcr.microsoft.com/azuredocs/azure-vote-front:cosmosdb' in container group 'cosmos-db-aci-amused-elephant-vote-aci' is not accessible. Please check the image and registry credential.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_container_group.main,
+	            	[31m│[0m [0m  on aci.tf line 1, in resource "azurerm_container_group" "main":
+	            	[31m│[0m [0m   1: resource "azurerm_container_group" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-azure-container-instance
+
+FailNow
+
+---
+
+## 23 Aug 26 00:37 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Container Group (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-aci-feasible-mouse-rg"
+	            	[31m│[0m [0mContainer Group Name: "cosmos-db-aci-feasible-mouse-vote-aci"): performing ContainerGroupsCreateOrUpdate: unexpected status 400 (400 Bad Request) with error: InaccessibleImage: The image 'mcr.microsoft.com/azuredocs/azure-vote-front:cosmosdb' in container group 'cosmos-db-aci-feasible-mouse-vote-aci' is not accessible. Please check the image and registry credential.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_container_group.main,
+	            	[31m│[0m [0m  on aci.tf line 1, in resource "azurerm_container_group" "main":
+	            	[31m│[0m [0m   1: resource "azurerm_container_group" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-azure-container-instance
+
+FailNow
+
+---
+
+## 16 Aug 26 01:15 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Container Group (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-aci-flexible-barnacle-rg"
+	            	[31m│[0m [0mContainer Group Name: "cosmos-db-aci-flexible-barnacle-vote-aci"): performing ContainerGroupsCreateOrUpdate: unexpected status 400 (400 Bad Request) with error: InaccessibleImage: The image 'mcr.microsoft.com/azuredocs/azure-vote-front:cosmosdb' in container group 'cosmos-db-aci-flexible-barnacle-vote-aci' is not accessible. Please check the image and registry credential.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_container_group.main,
+	            	[31m│[0m [0m  on aci.tf line 1, in resource "azurerm_container_group" "main":
+	            	[31m│[0m [0m   1: resource "azurerm_container_group" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-azure-container-instance
+
+FailNow
+
+---
+
+## 09 Aug 26 00:45 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Container Group (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-aci-golden-glider-rg"
+	            	[31m│[0m [0mContainer Group Name: "cosmos-db-aci-golden-glider-vote-aci"): performing ContainerGroupsCreateOrUpdate: unexpected status 400 (400 Bad Request) with error: InaccessibleImage: The image 'mcr.microsoft.com/azuredocs/azure-vote-front:cosmosdb' in container group 'cosmos-db-aci-golden-glider-vote-aci' is not accessible. Please check the image and registry credential.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_container_group.main,
+	            	[31m│[0m [0m  on aci.tf line 1, in resource "azurerm_container_group" "main":
+	            	[31m│[0m [0m   1: resource "azurerm_container_group" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-azure-container-instance
+
+FailNow
+
+---
+
+## 02 Aug 26 00:48 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Container Group (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-aci-busy-ghoul-rg"
+	            	[31m│[0m [0mContainer Group Name: "cosmos-db-aci-busy-ghoul-vote-aci"): performing ContainerGroupsCreateOrUpdate: unexpected status 400 (400 Bad Request) with error: InaccessibleImage: The image 'mcr.microsoft.com/azuredocs/azure-vote-front:cosmosdb' in container group 'cosmos-db-aci-busy-ghoul-vote-aci' is not accessible. Please check the image and registry credential.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_container_group.main,
+	            	[31m│[0m [0m  on aci.tf line 1, in resource "azurerm_container_group" "main":
+	            	[31m│[0m [0m   1: resource "azurerm_container_group" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-azure-container-instance
+
+FailNow
+
+---
+
+## 26 Jul 26 01:22 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Container Group (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-aci-warm-spaniel-rg"
+	            	[31m│[0m [0mContainer Group Name: "cosmos-db-aci-warm-spaniel-vote-aci"): performing ContainerGroupsCreateOrUpdate: unexpected status 400 (400 Bad Request) with error: InaccessibleImage: The image 'mcr.microsoft.com/azuredocs/azure-vote-front:cosmosdb' in container group 'cosmos-db-aci-warm-spaniel-vote-aci' is not accessible. Please check the image and registry credential.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_container_group.main,
+	            	[31m│[0m [0m  on aci.tf line 1, in resource "azurerm_container_group" "main":
+	            	[31m│[0m [0m   1: resource "azurerm_container_group" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-azure-container-instance
+
+FailNow
+
+---
+
+## 12 Jul 26 00:58 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Container Group (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-aci-settled-tuna-rg"
+	            	[31m│[0m [0mContainer Group Name: "cosmos-db-aci-settled-tuna-vote-aci"): performing ContainerGroupsCreateOrUpdate: unexpected status 400 (400 Bad Request) with error: InaccessibleImage: The image 'mcr.microsoft.com/azuredocs/azure-vote-front:cosmosdb' in container group 'cosmos-db-aci-settled-tuna-vote-aci' is not accessible. Please check the image and registry credential.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_container_group.main,
+	            	[31m│[0m [0m  on aci.tf line 1, in resource "azurerm_container_group" "main":
+	            	[31m│[0m [0m   1: resource "azurerm_container_group" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-azure-container-instance
+
+FailNow
+
+---
+
+## 05 Jul 26 01:25 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Container Group (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-aci-willing-boxer-rg"
+	            	[31m│[0m [0mContainer Group Name: "cosmos-db-aci-willing-boxer-vote-aci"): performing ContainerGroupsCreateOrUpdate: unexpected status 400 (400 Bad Request) with error: InaccessibleImage: The image 'mcr.microsoft.com/azuredocs/azure-vote-front:cosmosdb' in container group 'cosmos-db-aci-willing-boxer-vote-aci' is not accessible. Please check the image and registry credential.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_container_group.main,
+	            	[31m│[0m [0m  on aci.tf line 1, in resource "azurerm_container_group" "main":
+	            	[31m│[0m [0m   1: resource "azurerm_container_group" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-azure-container-instance
+
+FailNow
+
+---
+
+## 28 Jun 26 02:10 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Container Group (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-aci-awake-ghoul-rg"
+	            	[31m│[0m [0mContainer Group Name: "cosmos-db-aci-awake-ghoul-vote-aci"): performing ContainerGroupsCreateOrUpdate: unexpected status 400 (400 Bad Request) with error: InaccessibleImage: The image 'mcr.microsoft.com/azuredocs/azure-vote-front:cosmosdb' in container group 'cosmos-db-aci-awake-ghoul-vote-aci' is not accessible. Please check the image and registry credential.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_container_group.main,
+	            	[31m│[0m [0m  on aci.tf line 1, in resource "azurerm_container_group" "main":
+	            	[31m│[0m [0m   1: resource "azurerm_container_group" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-azure-container-instance
+
+FailNow
+
+---
+
+## 14 Jun 26 02:18 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Container Group (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-aci-uncommon-buck-rg"
+	            	[31m│[0m [0mContainer Group Name: "cosmos-db-aci-uncommon-buck-vote-aci"): performing ContainerGroupsCreateOrUpdate: unexpected status 400 (400 Bad Request) with error: InaccessibleImage: The image 'mcr.microsoft.com/azuredocs/azure-vote-front:cosmosdb' in container group 'cosmos-db-aci-uncommon-buck-vote-aci' is not accessible. Please check the image and registry credential.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_container_group.main,
+	            	[31m│[0m [0m  on aci.tf line 1, in resource "azurerm_container_group" "main":
+	            	[31m│[0m [0m   1: resource "azurerm_container_group" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-azure-container-instance
+
+FailNow
+
+---
+
+## 31 May 26 01:18 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Container Group (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-aci-striking-basilisk-rg"
+	            	[31m│[0m [0mContainer Group Name: "cosmos-db-aci-striking-basilisk-vote-aci"): performing ContainerGroupsCreateOrUpdate: unexpected status 400 (400 Bad Request) with error: InaccessibleImage: The image 'mcr.microsoft.com/azuredocs/azure-vote-front:cosmosdb' in container group 'cosmos-db-aci-striking-basilisk-vote-aci' is not accessible. Please check the image and registry credential.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_container_group.main,
+	            	[31m│[0m [0m  on aci.tf line 1, in resource "azurerm_container_group" "main":
+	            	[31m│[0m [0m   1: resource "azurerm_container_group" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-azure-container-instance
+
+FailNow
+
+---
+
+## 24 May 26 01:40 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Container Group (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-aci-modern-guinea-rg"
+	            	[31m│[0m [0mContainer Group Name: "cosmos-db-aci-modern-guinea-vote-aci"): performing ContainerGroupsCreateOrUpdate: unexpected status 400 (400 Bad Request) with error: InaccessibleImage: The image 'mcr.microsoft.com/azuredocs/azure-vote-front:cosmosdb' in container group 'cosmos-db-aci-modern-guinea-vote-aci' is not accessible. Please check the image and registry credential.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_container_group.main,
+	            	[31m│[0m [0m  on aci.tf line 1, in resource "azurerm_container_group" "main":
+	            	[31m│[0m [0m   1: resource "azurerm_container_group" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-azure-container-instance
+
+FailNow
+
+---
+
+## 10 May 26 01:50 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Container Group (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "cosmos-db-aci-wise-crow-rg"
+	            	[31m│[0m [0mContainer Group Name: "cosmos-db-aci-wise-crow-vote-aci"): performing ContainerGroupsCreateOrUpdate: unexpected status 400 (400 Bad Request) with error: InaccessibleImage: The image 'mcr.microsoft.com/azuredocs/azure-vote-front:cosmosdb' in container group 'cosmos-db-aci-wise-crow-vote-aci' is not accessible. Please check the image and registry credential.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_container_group.main,
+	            	[31m│[0m [0m  on aci.tf line 1, in resource "azurerm_container_group" "main":
+	            	[31m│[0m [0m   1: resource "azurerm_container_group" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/101-cosmos-db-azure-container-instance
+
+FailNow
+
+---
+
 ## 26 Apr 26 01:26 UTC
 
 Success: false

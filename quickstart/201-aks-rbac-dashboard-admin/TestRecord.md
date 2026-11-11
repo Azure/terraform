@@ -1,3 +1,1522 @@
+## 08 Nov 26 00:13 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/kubernetes v2.38.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: b0cdce44-c905-476a-8475-46651bef2c01 Correlation ID: 8411e21d-ebf8-421d-b14b-0e96f5abe8ff Timestamp: 2026-11-08 00:13:15Z","error_codes":[5000229],"timestamp":"2026-11-08 00:13:15Z","trace_id":"b0cdce44-c905-476a-8475-46651bef2c01","correlation_id":"8411e21d-ebf8-421d-b14b-0e96f5abe8ff"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on versions.tf line 19, in provider "azurerm":
+	            	[31m│[0m [0m  19: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-rbac-dashboard-admin
+
+FailNow
+
+---
+
+## 01 Nov 26 00:16 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/kubernetes v2.38.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 399143c6-2fe2-4f23-8e11-e4b2d75d5500 Correlation ID: 55cc8d61-fc97-4801-9f0f-fcce73a43d34 Timestamp: 2026-11-01 00:16:56Z","error_codes":[5000229],"timestamp":"2026-11-01 00:16:56Z","trace_id":"399143c6-2fe2-4f23-8e11-e4b2d75d5500","correlation_id":"55cc8d61-fc97-4801-9f0f-fcce73a43d34"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on versions.tf line 19, in provider "azurerm":
+	            	[31m│[0m [0m  19: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-rbac-dashboard-admin
+
+FailNow
+
+---
+
+## 25 Oct 26 00:17 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/kubernetes v2.38.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: a4f5d38a-e124-4e64-bb92-08b2c2226300 Correlation ID: 1ff5611a-bb09-47ba-bf0d-9b45af7605db Timestamp: 2026-10-25 00:17:26Z","error_codes":[5000229],"timestamp":"2026-10-25 00:17:26Z","trace_id":"a4f5d38a-e124-4e64-bb92-08b2c2226300","correlation_id":"1ff5611a-bb09-47ba-bf0d-9b45af7605db"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on versions.tf line 19, in provider "azurerm":
+	            	[31m│[0m [0m  19: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-rbac-dashboard-admin
+
+FailNow
+
+---
+
+## 18 Oct 26 00:40 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/kubernetes v2.38.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=32yxqm72][0m
+	            	[0m[1mdata.azurerm_subscription.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-32yxqm72-rg][0m
+	            	[0m[1mdata.azurerm_subscription.current: Read complete after 0s [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks_identity: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-32yxqm72-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickstart-aks-aks-identity][0m
+	            	[0m[1mazurerm_role_assignment.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-32yxqm72-rg/providers/Microsoft.Authorization/roleAssignments/1c7857ed-b61d-6613-51ec-b488d1ff8178][0m
+	            	[0m[1mazurerm_kubernetes_cluster.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-32yxqm72-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks][0m
+	            	[0m[1mkubernetes_cluster_role_binding.dashboard: Refreshing state... [id=kubernetes-dashboard][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.main[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "main" {
+	            	        id                                  = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-32yxqm72-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks"
+	            	        name                                = "quickstart-aks-aks"
+	            	      [31m-[0m[0m oidc_issuer_enabled                 = true [90m-> null[0m[0m
+	            	      [33m~[0m[0m oidc_issuer_url                     = "https://westus2.oic.prod-aks.azure.com/4f00b3b6-2940-4f2c-b037-94637c180d30/9c38ee5b-5383-49c2-9a60-ea1382aaae2f/" -> (known after apply)
+	            	        tags                                = {}
+	            	        [90m# (34 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "default"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (3 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-aks-rbac-dashboard-admin4164029835/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-aks-rbac-dashboard-admin4164029835/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-aks-rbac-dashboard-admin
+
+FailNow
+
+---
+
+## 11 Oct 26 00:40 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/kubernetes v2.38.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=4pvhpeuk][0m
+	            	[0m[1mdata.azurerm_subscription.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-4pvhpeuk-rg][0m
+	            	[0m[1mdata.azurerm_subscription.current: Read complete after 0s [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks_identity: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-4pvhpeuk-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickstart-aks-aks-identity][0m
+	            	[0m[1mazurerm_role_assignment.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-4pvhpeuk-rg/providers/Microsoft.Authorization/roleAssignments/71ff86ed-ea56-645f-4232-a16ecbeca576][0m
+	            	[0m[1mazurerm_kubernetes_cluster.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-4pvhpeuk-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks][0m
+	            	[0m[1mkubernetes_cluster_role_binding.dashboard: Refreshing state... [id=kubernetes-dashboard][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.main[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "main" {
+	            	        id                                  = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-4pvhpeuk-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks"
+	            	        name                                = "quickstart-aks-aks"
+	            	      [31m-[0m[0m oidc_issuer_enabled                 = true [90m-> null[0m[0m
+	            	      [33m~[0m[0m oidc_issuer_url                     = "https://westus2.oic.prod-aks.azure.com/4f00b3b6-2940-4f2c-b037-94637c180d30/54f69321-d17e-4c64-9083-5094c678521e/" -> (known after apply)
+	            	        tags                                = {}
+	            	        [90m# (34 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "default"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (3 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-aks-rbac-dashboard-admin3906269170/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-aks-rbac-dashboard-admin3906269170/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-aks-rbac-dashboard-admin
+
+FailNow
+
+---
+
+## 04 Oct 26 01:50 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/kubernetes v2.38.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=8p1ap01j][0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-8p1ap01j-rg][0m
+	            	[0m[1mdata.azurerm_subscription.current: Reading...[0m[0m
+	            	[0m[1mdata.azurerm_subscription.current: Read complete after 0s [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks_identity: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-8p1ap01j-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickstart-aks-aks-identity][0m
+	            	[0m[1mazurerm_role_assignment.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-8p1ap01j-rg/providers/Microsoft.Authorization/roleAssignments/2b0255fd-422f-6dcb-8588-beb53348d8ed][0m
+	            	[0m[1mazurerm_kubernetes_cluster.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-8p1ap01j-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks][0m
+	            	[0m[1mkubernetes_cluster_role_binding.dashboard: Refreshing state... [id=kubernetes-dashboard][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.main[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "main" {
+	            	        id                                  = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-8p1ap01j-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks"
+	            	        name                                = "quickstart-aks-aks"
+	            	      [31m-[0m[0m oidc_issuer_enabled                 = true [90m-> null[0m[0m
+	            	      [33m~[0m[0m oidc_issuer_url                     = "https://westus2.oic.prod-aks.azure.com/4f00b3b6-2940-4f2c-b037-94637c180d30/55b6a7e2-30fd-4ad7-9912-c717f50f5775/" -> (known after apply)
+	            	        tags                                = {}
+	            	        [90m# (34 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "default"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (3 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-aks-rbac-dashboard-admin1827029962/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-aks-rbac-dashboard-admin1827029962/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-aks-rbac-dashboard-admin
+
+FailNow
+
+---
+
+## 27 Sep 26 00:34 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/kubernetes v2.38.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=qdrof8st][0m
+	            	[0m[1mdata.azurerm_subscription.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-qdrof8st-rg][0m
+	            	[0m[1mdata.azurerm_subscription.current: Read complete after 0s [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks_identity: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-qdrof8st-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickstart-aks-aks-identity][0m
+	            	[0m[1mazurerm_role_assignment.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-qdrof8st-rg/providers/Microsoft.Authorization/roleAssignments/f09c759c-b3b3-e4cc-8472-75d008d21130][0m
+	            	[0m[1mazurerm_kubernetes_cluster.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-qdrof8st-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks][0m
+	            	[0m[1mkubernetes_cluster_role_binding.dashboard: Refreshing state... [id=kubernetes-dashboard][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.main[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "main" {
+	            	        id                                  = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-qdrof8st-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks"
+	            	        name                                = "quickstart-aks-aks"
+	            	      [31m-[0m[0m oidc_issuer_enabled                 = true [90m-> null[0m[0m
+	            	      [33m~[0m[0m oidc_issuer_url                     = "https://westus2.oic.prod-aks.azure.com/4f00b3b6-2940-4f2c-b037-94637c180d30/01d52c50-e7aa-43df-9bb4-4fe45aaac180/" -> (known after apply)
+	            	        tags                                = {}
+	            	        [90m# (34 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "default"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (3 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-aks-rbac-dashboard-admin3260796783/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-aks-rbac-dashboard-admin3260796783/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-aks-rbac-dashboard-admin
+
+FailNow
+
+---
+
+## 20 Sep 26 00:48 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/kubernetes v2.38.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=owq8af0l][0m
+	            	[0m[1mdata.azurerm_subscription.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-owq8af0l-rg][0m
+	            	[0m[1mdata.azurerm_subscription.current: Read complete after 0s [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks_identity: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-owq8af0l-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickstart-aks-aks-identity][0m
+	            	[0m[1mazurerm_role_assignment.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-owq8af0l-rg/providers/Microsoft.Authorization/roleAssignments/0ab7a6d5-5f63-cda8-2330-026cd350ed89][0m
+	            	[0m[1mazurerm_kubernetes_cluster.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-owq8af0l-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks][0m
+	            	[0m[1mkubernetes_cluster_role_binding.dashboard: Refreshing state... [id=kubernetes-dashboard][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.main[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "main" {
+	            	        id                                  = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-owq8af0l-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks"
+	            	        name                                = "quickstart-aks-aks"
+	            	      [31m-[0m[0m oidc_issuer_enabled                 = true [90m-> null[0m[0m
+	            	      [33m~[0m[0m oidc_issuer_url                     = "https://westus2.oic.prod-aks.azure.com/4f00b3b6-2940-4f2c-b037-94637c180d30/dce61c84-eda4-46f9-94ba-504dd40eadf4/" -> (known after apply)
+	            	        tags                                = {}
+	            	        [90m# (34 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "default"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (3 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-aks-rbac-dashboard-admin2197875199/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-aks-rbac-dashboard-admin2197875199/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-aks-rbac-dashboard-admin
+
+FailNow
+
+---
+
+## 13 Sep 26 00:44 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/kubernetes v2.38.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=1b29q68v][0m
+	            	[0m[1mdata.azurerm_subscription.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-1b29q68v-rg][0m
+	            	[0m[1mdata.azurerm_subscription.current: Read complete after 0s [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks_identity: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-1b29q68v-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickstart-aks-aks-identity][0m
+	            	[0m[1mazurerm_role_assignment.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-1b29q68v-rg/providers/Microsoft.Authorization/roleAssignments/1df7c1ef-a133-2ddf-db52-b0ef68bcb077][0m
+	            	[0m[1mazurerm_kubernetes_cluster.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-1b29q68v-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks][0m
+	            	[0m[1mkubernetes_cluster_role_binding.dashboard: Refreshing state... [id=kubernetes-dashboard][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.main[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "main" {
+	            	        id                                  = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-1b29q68v-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks"
+	            	        name                                = "quickstart-aks-aks"
+	            	      [31m-[0m[0m oidc_issuer_enabled                 = true [90m-> null[0m[0m
+	            	      [33m~[0m[0m oidc_issuer_url                     = "https://westus2.oic.prod-aks.azure.com/4f00b3b6-2940-4f2c-b037-94637c180d30/0872726f-8b46-4837-8004-b504765e1682/" -> (known after apply)
+	            	        tags                                = {}
+	            	        [90m# (34 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "default"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (3 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-aks-rbac-dashboard-admin3925046172/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-aks-rbac-dashboard-admin3925046172/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-aks-rbac-dashboard-admin
+
+FailNow
+
+---
+
+## 06 Sep 26 00:32 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/kubernetes v2.38.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Kubernetes Cluster (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "quickstart-aks-dev-pllzpn2z-rg"
+	            	[31m│[0m [0mKubernetes Cluster Name: "quickstart-aks-aks"): performing CreateOrUpdate: unexpected status 400 (400 Bad Request) with response: {
+	            	[31m│[0m [0m  "code": "ErrCode_InsufficientVCPUQuota",
+	            	[31m│[0m [0m  "details": null,
+	            	[31m│[0m [0m  "message": "Insufficient regional vcpu quota left for location westus2. left regional vcpu quota 4, requested quota 6. If you want to increase the quota, please follow this instruction: https://learn.microsoft.com/en-us/azure/quotas/view-quotas. Surge nodes would also consume vcpu quota, please consider use smaller maxSurge or use maxUnavailable to proceed upgrade without surge nodes, details: aka.ms/aks/maxUnavailable.",
+	            	[31m│[0m [0m  "subcode": ""
+	            	[31m│[0m [0m }[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_kubernetes_cluster.main,
+	            	[31m│[0m [0m  on aks.tf line 13, in resource "azurerm_kubernetes_cluster" "main":
+	            	[31m│[0m [0m  13: resource "azurerm_kubernetes_cluster" "main" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-rbac-dashboard-admin
+
+FailNow
+
+---
+
+## 30 Aug 26 00:48 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/kubernetes v2.38.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=i82no1pj][0m
+	            	[0m[1mdata.azurerm_subscription.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-i82no1pj-rg][0m
+	            	[0m[1mdata.azurerm_subscription.current: Read complete after 0s [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks_identity: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-i82no1pj-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickstart-aks-aks-identity][0m
+	            	[0m[1mazurerm_role_assignment.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-i82no1pj-rg/providers/Microsoft.Authorization/roleAssignments/b548b426-1616-1329-afa7-085c81ee19ba][0m
+	            	[0m[1mazurerm_kubernetes_cluster.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-i82no1pj-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks][0m
+	            	[0m[1mkubernetes_cluster_role_binding.dashboard: Refreshing state... [id=kubernetes-dashboard][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.main[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "main" {
+	            	        id                                  = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-i82no1pj-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks"
+	            	        name                                = "quickstart-aks-aks"
+	            	      [31m-[0m[0m oidc_issuer_enabled                 = true [90m-> null[0m[0m
+	            	      [33m~[0m[0m oidc_issuer_url                     = "https://westus2.oic.prod-aks.azure.com/4f00b3b6-2940-4f2c-b037-94637c180d30/49a2e96f-34c7-4cb6-8f11-f31ac39c9d5f/" -> (known after apply)
+	            	        tags                                = {}
+	            	        [90m# (34 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "default"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (3 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-aks-rbac-dashboard-admin508844590/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-aks-rbac-dashboard-admin508844590/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-aks-rbac-dashboard-admin
+
+FailNow
+
+---
+
+## 23 Aug 26 00:31 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/kubernetes v2.38.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=26ssokcz][0m
+	            	[0m[1mdata.azurerm_subscription.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-26ssokcz-rg][0m
+	            	[0m[1mdata.azurerm_subscription.current: Read complete after 0s [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks_identity: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-26ssokcz-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickstart-aks-aks-identity][0m
+	            	[0m[1mazurerm_role_assignment.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-26ssokcz-rg/providers/Microsoft.Authorization/roleAssignments/2c1ac7a6-1a7b-7da6-e83f-851368d9b9b8][0m
+	            	[0m[1mazurerm_kubernetes_cluster.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-26ssokcz-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks][0m
+	            	[0m[1mkubernetes_cluster_role_binding.dashboard: Refreshing state... [id=kubernetes-dashboard][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.main[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "main" {
+	            	        id                                  = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-26ssokcz-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks"
+	            	        name                                = "quickstart-aks-aks"
+	            	      [31m-[0m[0m oidc_issuer_enabled                 = true [90m-> null[0m[0m
+	            	      [33m~[0m[0m oidc_issuer_url                     = "https://westus2.oic.prod-aks.azure.com/4f00b3b6-2940-4f2c-b037-94637c180d30/a248d0d6-8574-4ac6-a23d-09077d496c99/" -> (known after apply)
+	            	        tags                                = {}
+	            	        [90m# (34 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "default"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (3 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-aks-rbac-dashboard-admin3229299061/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-aks-rbac-dashboard-admin3229299061/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-aks-rbac-dashboard-admin
+
+FailNow
+
+---
+
+## 16 Aug 26 00:34 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/kubernetes v2.38.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=u0qnaakx][0m
+	            	[0m[1mdata.azurerm_subscription.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-u0qnaakx-rg][0m
+	            	[0m[1mdata.azurerm_subscription.current: Read complete after 0s [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks_identity: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-u0qnaakx-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickstart-aks-aks-identity][0m
+	            	[0m[1mazurerm_role_assignment.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-u0qnaakx-rg/providers/Microsoft.Authorization/roleAssignments/3c3a2dbf-16fa-d033-ffa8-a0b2498e1678][0m
+	            	[0m[1mazurerm_kubernetes_cluster.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-u0qnaakx-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks][0m
+	            	[0m[1mkubernetes_cluster_role_binding.dashboard: Refreshing state... [id=kubernetes-dashboard][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.main[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "main" {
+	            	        id                                  = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-u0qnaakx-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks"
+	            	        name                                = "quickstart-aks-aks"
+	            	      [31m-[0m[0m oidc_issuer_enabled                 = true [90m-> null[0m[0m
+	            	      [33m~[0m[0m oidc_issuer_url                     = "https://westus2.oic.prod-aks.azure.com/4f00b3b6-2940-4f2c-b037-94637c180d30/6e7b3232-0d9c-4c28-bee8-6e8542a27d9a/" -> (known after apply)
+	            	        tags                                = {}
+	            	        [90m# (34 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "default"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (3 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-aks-rbac-dashboard-admin1507554191/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-aks-rbac-dashboard-admin1507554191/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-aks-rbac-dashboard-admin
+
+FailNow
+
+---
+
+## 09 Aug 26 01:00 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/kubernetes v2.38.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=re0t6iy1][0m
+	            	[0m[1mdata.azurerm_subscription.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-re0t6iy1-rg][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks_identity: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-re0t6iy1-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickstart-aks-aks-identity][0m
+	            	[0m[1mdata.azurerm_subscription.current: Read complete after 0s [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26][0m
+	            	[0m[1mazurerm_role_assignment.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-re0t6iy1-rg/providers/Microsoft.Authorization/roleAssignments/37155cc2-38ff-7c98-23c3-3e6453675ced][0m
+	            	[0m[1mazurerm_kubernetes_cluster.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-re0t6iy1-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks][0m
+	            	[0m[1mkubernetes_cluster_role_binding.dashboard: Refreshing state... [id=kubernetes-dashboard][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.main[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "main" {
+	            	        id                                  = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-re0t6iy1-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks"
+	            	        name                                = "quickstart-aks-aks"
+	            	      [31m-[0m[0m oidc_issuer_enabled                 = true [90m-> null[0m[0m
+	            	      [33m~[0m[0m oidc_issuer_url                     = "https://westus2.oic.prod-aks.azure.com/4f00b3b6-2940-4f2c-b037-94637c180d30/72a872dd-9b2a-4fa9-93f2-f6dc0c07f8a1/" -> (known after apply)
+	            	        tags                                = {}
+	            	        [90m# (34 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "default"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (3 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-aks-rbac-dashboard-admin3599979090/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-aks-rbac-dashboard-admin3599979090/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-aks-rbac-dashboard-admin
+
+FailNow
+
+---
+
+## 02 Aug 26 01:40 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/kubernetes v2.38.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=xpf90hgr][0m
+	            	[0m[1mdata.azurerm_subscription.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-xpf90hgr-rg][0m
+	            	[0m[1mdata.azurerm_subscription.current: Read complete after 0s [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks_identity: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-xpf90hgr-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickstart-aks-aks-identity][0m
+	            	[0m[1mazurerm_role_assignment.default: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-xpf90hgr-rg/providers/Microsoft.Authorization/roleAssignments/90ce0f32-4966-ef62-5df8-ab287c29f867][0m
+	            	[0m[1mazurerm_kubernetes_cluster.main: Refreshing state... [id=/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-xpf90hgr-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks][0m
+	            	[0m[1mkubernetes_cluster_role_binding.dashboard: Refreshing state... [id=kubernetes-dashboard][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.main[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "main" {
+	            	        id                                  = "/subscriptions/e4b62b3b-7634-4972-8bbe-5d7197159f26/resourceGroups/quickstart-aks-dev-xpf90hgr-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks"
+	            	        name                                = "quickstart-aks-aks"
+	            	      [31m-[0m[0m oidc_issuer_enabled                 = true [90m-> null[0m[0m
+	            	      [33m~[0m[0m oidc_issuer_url                     = "https://westus2.oic.prod-aks.azure.com/4f00b3b6-2940-4f2c-b037-94637c180d30/309f5d4a-d092-4665-a0fa-0ea279d25fdd/" -> (known after apply)
+	            	        tags                                = {}
+	            	        [90m# (34 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "default"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (3 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-aks-rbac-dashboard-admin3085013064/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-aks-rbac-dashboard-admin3085013064/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-aks-rbac-dashboard-admin
+
+FailNow
+
+---
+
+## 26 Jul 26 00:44 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/kubernetes v2.38.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=siwx4cps][0m
+	            	[0m[1mdata.azurerm_subscription.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-siwx4cps-rg][0m
+	            	[0m[1mdata.azurerm_subscription.current: Read complete after 1s [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks_identity: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-siwx4cps-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickstart-aks-aks-identity][0m
+	            	[0m[1mazurerm_role_assignment.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-siwx4cps-rg/providers/Microsoft.Authorization/roleAssignments/8d035767-6dd7-343c-d013-ad25d654b38a][0m
+	            	[0m[1mazurerm_kubernetes_cluster.main: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-siwx4cps-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks][0m
+	            	[0m[1mkubernetes_cluster_role_binding.dashboard: Refreshing state... [id=kubernetes-dashboard][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.main[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "main" {
+	            	        id                                  = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-siwx4cps-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks"
+	            	        name                                = "quickstart-aks-aks"
+	            	      [31m-[0m[0m oidc_issuer_enabled                 = true [90m-> null[0m[0m
+	            	      [33m~[0m[0m oidc_issuer_url                     = "https://westus2.oic.prod-aks.azure.com/544a7a2e-697f-487c-b2b0-a13df7f346b6/042421ec-dd0f-4b0c-9f0f-348e76c7822d/" -> (known after apply)
+	            	        tags                                = {}
+	            	        [90m# (34 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "default"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (3 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-aks-rbac-dashboard-admin3585208282/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-aks-rbac-dashboard-admin3585208282/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-aks-rbac-dashboard-admin
+
+FailNow
+
+---
+
+## 12 Jul 26 01:16 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/kubernetes v2.38.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=91oxcmr3][0m
+	            	[0m[1mdata.azurerm_subscription.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-91oxcmr3-rg][0m
+	            	[0m[1mdata.azurerm_subscription.current: Read complete after 0s [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks_identity: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-91oxcmr3-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickstart-aks-aks-identity][0m
+	            	[0m[1mazurerm_role_assignment.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-91oxcmr3-rg/providers/Microsoft.Authorization/roleAssignments/49415a68-6980-a015-c2b9-c57d861930a3][0m
+	            	[0m[1mazurerm_kubernetes_cluster.main: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-91oxcmr3-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks][0m
+	            	[0m[1mkubernetes_cluster_role_binding.dashboard: Refreshing state... [id=kubernetes-dashboard][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.main[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "main" {
+	            	        id                                  = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-91oxcmr3-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks"
+	            	        name                                = "quickstart-aks-aks"
+	            	      [31m-[0m[0m oidc_issuer_enabled                 = true [90m-> null[0m[0m
+	            	      [33m~[0m[0m oidc_issuer_url                     = "https://westus2.oic.prod-aks.azure.com/544a7a2e-697f-487c-b2b0-a13df7f346b6/053d2108-a8ac-48c4-91ef-feb2b8f348b5/" -> (known after apply)
+	            	        tags                                = {}
+	            	        [90m# (34 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "default"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (3 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-aks-rbac-dashboard-admin4083324092/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-aks-rbac-dashboard-admin4083324092/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-aks-rbac-dashboard-admin
+
+FailNow
+
+---
+
+## 05 Jul 26 01:04 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/kubernetes v2.38.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=6lwij60m][0m
+	            	[0m[1mdata.azurerm_subscription.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-6lwij60m-rg][0m
+	            	[0m[1mdata.azurerm_subscription.current: Read complete after 0s [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks_identity: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-6lwij60m-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickstart-aks-aks-identity][0m
+	            	[0m[1mazurerm_role_assignment.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-6lwij60m-rg/providers/Microsoft.Authorization/roleAssignments/405b6294-90fb-b9a3-0f80-db737e30f208][0m
+	            	[0m[1mazurerm_kubernetes_cluster.main: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-6lwij60m-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks][0m
+	            	[0m[1mkubernetes_cluster_role_binding.dashboard: Refreshing state... [id=kubernetes-dashboard][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.main[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "main" {
+	            	        id                                  = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-6lwij60m-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks"
+	            	        name                                = "quickstart-aks-aks"
+	            	      [31m-[0m[0m oidc_issuer_enabled                 = true [90m-> null[0m[0m
+	            	      [33m~[0m[0m oidc_issuer_url                     = "https://westus2.oic.prod-aks.azure.com/544a7a2e-697f-487c-b2b0-a13df7f346b6/6fec261d-887c-461a-9fec-0ded32ac283b/" -> (known after apply)
+	            	        tags                                = {}
+	            	        [90m# (34 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "default"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (3 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-aks-rbac-dashboard-admin790293215/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-aks-rbac-dashboard-admin790293215/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-aks-rbac-dashboard-admin
+
+FailNow
+
+---
+
+## 28 Jun 26 01:03 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/kubernetes v2.38.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mpopulating Resource Provider cache: listing Resource Providers: loading results: unexpected end of JSON input[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on versions.tf line 19, in provider "azurerm":
+	            	[31m│[0m [0m  19: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-aks-rbac-dashboard-admin
+
+FailNow
+
+---
+
+## 14 Jun 26 01:07 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/kubernetes v2.38.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=jl9xg94m][0m
+	            	[0m[1mdata.azurerm_subscription.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-jl9xg94m-rg][0m
+	            	[0m[1mdata.azurerm_subscription.current: Read complete after 0s [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks_identity: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-jl9xg94m-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickstart-aks-aks-identity][0m
+	            	[0m[1mazurerm_role_assignment.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-jl9xg94m-rg/providers/Microsoft.Authorization/roleAssignments/d1f9d4e5-db32-ae7b-2831-5aad83af6389][0m
+	            	[0m[1mazurerm_kubernetes_cluster.main: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-jl9xg94m-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks][0m
+	            	[0m[1mkubernetes_cluster_role_binding.dashboard: Refreshing state... [id=kubernetes-dashboard][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.main[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "main" {
+	            	        id                                  = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-jl9xg94m-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks"
+	            	        name                                = "quickstart-aks-aks"
+	            	      [31m-[0m[0m oidc_issuer_enabled                 = true [90m-> null[0m[0m
+	            	      [33m~[0m[0m oidc_issuer_url                     = "https://westus2.oic.prod-aks.azure.com/544a7a2e-697f-487c-b2b0-a13df7f346b6/be99cbfc-d768-4a32-9167-ca3e996d389e/" -> (known after apply)
+	            	        tags                                = {}
+	            	        [90m# (34 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "default"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (3 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-aks-rbac-dashboard-admin194845781/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-aks-rbac-dashboard-admin194845781/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-aks-rbac-dashboard-admin
+
+FailNow
+
+---
+
+## 31 May 26 02:09 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/kubernetes v2.38.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=b789ywy6][0m
+	            	[0m[1mdata.azurerm_subscription.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-b789ywy6-rg][0m
+	            	[0m[1mdata.azurerm_subscription.current: Read complete after 0s [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks_identity: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-b789ywy6-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickstart-aks-aks-identity][0m
+	            	[0m[1mazurerm_role_assignment.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-b789ywy6-rg/providers/Microsoft.Authorization/roleAssignments/68e2b031-5ebe-eaa8-f5c3-bdbf4ddb9914][0m
+	            	[0m[1mazurerm_kubernetes_cluster.main: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-b789ywy6-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks][0m
+	            	[0m[1mkubernetes_cluster_role_binding.dashboard: Refreshing state... [id=kubernetes-dashboard][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.main[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "main" {
+	            	        id                                  = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-b789ywy6-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks"
+	            	        name                                = "quickstart-aks-aks"
+	            	      [31m-[0m[0m oidc_issuer_enabled                 = true [90m-> null[0m[0m
+	            	      [33m~[0m[0m oidc_issuer_url                     = "https://westus2.oic.prod-aks.azure.com/544a7a2e-697f-487c-b2b0-a13df7f346b6/701972a5-499c-40f6-b5b8-33976e4cace5/" -> (known after apply)
+	            	        tags                                = {}
+	            	        [90m# (34 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "default"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (3 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-aks-rbac-dashboard-admin1379560201/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-aks-rbac-dashboard-admin1379560201/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-aks-rbac-dashboard-admin
+
+FailNow
+
+---
+
+## 24 May 26 00:56 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/kubernetes v2.38.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=eg90ylm8][0m
+	            	[0m[1mdata.azurerm_subscription.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-eg90ylm8-rg][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks_identity: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-eg90ylm8-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickstart-aks-aks-identity][0m
+	            	[0m[1mdata.azurerm_subscription.current: Read complete after 1s [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a][0m
+	            	[0m[1mazurerm_role_assignment.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-eg90ylm8-rg/providers/Microsoft.Authorization/roleAssignments/f6b1d4ee-f965-f751-7c98-92aca6336420][0m
+	            	[0m[1mazurerm_kubernetes_cluster.main: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-eg90ylm8-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks][0m
+	            	[0m[1mkubernetes_cluster_role_binding.dashboard: Refreshing state... [id=kubernetes-dashboard][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.main[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "main" {
+	            	        id                                  = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-eg90ylm8-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks"
+	            	        name                                = "quickstart-aks-aks"
+	            	      [31m-[0m[0m oidc_issuer_enabled                 = true [90m-> null[0m[0m
+	            	      [33m~[0m[0m oidc_issuer_url                     = "https://westus2.oic.prod-aks.azure.com/544a7a2e-697f-487c-b2b0-a13df7f346b6/45f83a12-8a44-4d73-b874-6b0105898700/" -> (known after apply)
+	            	        tags                                = {}
+	            	        [90m# (34 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "default"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (3 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-aks-rbac-dashboard-admin4036772883/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-aks-rbac-dashboard-admin4036772883/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-aks-rbac-dashboard-admin
+
+FailNow
+
+---
+
+## 10 May 26 00:51 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/kubernetes v2.38.0
++ provider registry.terraform.io/hashicorp/random v3.3.2
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:96
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	terraform configuration not idempotent:[0m[1mrandom_string.rg: Refreshing state... [id=cpgaf79r][0m
+	            	[0m[1mdata.azurerm_subscription.current: Reading...[0m[0m
+	            	[0m[1mazurerm_resource_group.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-cpgaf79r-rg][0m
+	            	[0m[1mazurerm_user_assigned_identity.aks_identity: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-cpgaf79r-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickstart-aks-aks-identity][0m
+	            	[0m[1mdata.azurerm_subscription.current: Read complete after 0s [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a][0m
+	            	[0m[1mazurerm_role_assignment.default: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-cpgaf79r-rg/providers/Microsoft.Authorization/roleAssignments/475be85a-9474-e133-b0c4-7d6802bf6942][0m
+	            	[0m[1mazurerm_kubernetes_cluster.main: Refreshing state... [id=/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-cpgaf79r-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks][0m
+	            	[0m[1mkubernetes_cluster_role_binding.dashboard: Refreshing state... [id=kubernetes-dashboard][0m
+	            	
+	            	Terraform used the selected providers to generate the following execution
+	            	plan. Resource actions are indicated with the following symbols:
+	            	  [33m~[0m update in-place[0m
+	            	
+	            	Terraform will perform the following actions:
+	            	
+	            	[1m  # azurerm_kubernetes_cluster.main[0m will be updated in-place
+	            	[0m  [33m~[0m[0m resource "azurerm_kubernetes_cluster" "main" {
+	            	        id                                  = "/subscriptions/cb563ee9-7df0-468e-81d5-166968d1f89a/resourceGroups/quickstart-aks-dev-cpgaf79r-rg/providers/Microsoft.ContainerService/managedClusters/quickstart-aks-aks"
+	            	        name                                = "quickstart-aks-aks"
+	            	      [31m-[0m[0m oidc_issuer_enabled                 = true [90m-> null[0m[0m
+	            	      [33m~[0m[0m oidc_issuer_url                     = "https://westus2.oic.prod-aks.azure.com/544a7a2e-697f-487c-b2b0-a13df7f346b6/e02fd63e-debf-49e1-8e4b-45dfd293b238/" -> (known after apply)
+	            	        tags                                = {}
+	            	        [90m# (34 unchanged attributes hidden)[0m[0m
+	            	
+	            	      [33m~[0m[0m default_node_pool {
+	            	            name                          = "default"
+	            	            tags                          = {}
+	            	            [90m# (33 unchanged attributes hidden)[0m[0m
+	            	
+	            	          [31m-[0m[0m upgrade_settings {
+	            	              [31m-[0m[0m drain_timeout_in_minutes      = 0 [90m-> null[0m[0m
+	            	              [31m-[0m[0m max_surge                     = "10%" [90m-> null[0m[0m
+	            	              [31m-[0m[0m node_soak_duration_in_minutes = 0 [90m-> null[0m[0m
+	            	            }
+	            	        }
+	            	
+	            	        [90m# (3 unchanged blocks hidden)[0m[0m
+	            	    }
+	            	
+	            	[1mPlan:[0m [0m0 to add, 1 to change, 0 to destroy.
+	            	[90m
+	            	─────────────────────────────────────────────────────────────────────────────[0m
+	            	
+	            	Saved the plan to:
+	            	/tmp/201-aks-rbac-dashboard-admin1104179789/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan
+	            	
+	            	To perform exactly these actions, run the following command to apply:
+	            	    terraform apply "/tmp/201-aks-rbac-dashboard-admin1104179789/src/quickstart/201-aks-rbac-dashboard-admin/tf.plan"
+	Test:       	Test_Quickstarts/quickstart/201-aks-rbac-dashboard-admin
+
+FailNow
+
+---
+
 ## 26 Apr 26 00:42 UTC
 
 Success: false

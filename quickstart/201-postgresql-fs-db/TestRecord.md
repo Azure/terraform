@@ -1,3 +1,848 @@
+## 08 Nov 26 00:11 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant '4f00b3b6-2940-4f2c-b037-94637c180d30' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 877560eb-dc44-44be-a352-64317709e600 Correlation ID: bdbee27a-cc64-4517-9022-8728626ecd59 Timestamp: 2026-11-08 00:11:15Z","error_codes":[5000229],"timestamp":"2026-11-08 00:11:15Z","trace_id":"877560eb-dc44-44be-a352-64317709e600","correlation_id":"bdbee27a-cc64-4517-9022-8728626ecd59"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-postgresql-fs-db
+
+FailNow
+
+---
+
+## 01 Nov 26 00:13 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant 'Azure Client Tools 2026-07-20' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 47f68cf3-6f03-4cf5-9a7e-9137bc45d300 Correlation ID: 7b5b1aae-7b50-4ff8-8a0c-ec4ffb67a948 Timestamp: 2026-11-01 00:13:44Z","error_codes":[5000229],"timestamp":"2026-11-01 00:13:44Z","trace_id":"47f68cf3-6f03-4cf5-9a7e-9137bc45d300","correlation_id":"7b5b1aae-7b50-4ff8-8a0c-ec4ffb67a948"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-postgresql-fs-db
+
+FailNow
+
+---
+
+## 25 Oct 26 00:15 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mbuilding account: could not acquire access token to parse claims: clientCredentialsToken: received HTTP status 400 with response: {"error":"invalid_grant","error_description":"AADSTS5000229: The tenant '4f00b3b6-2940-4f2c-b037-94637c180d30' is not available due to expiration. To learn more about tenant expiration policies, see https://aka.ms/tenantExpiryPolicy Trace ID: 7c7f5619-5bc2-4f6f-bbbc-875a48637800 Correlation ID: c44fe086-2935-44f3-a8a3-d71378544404 Timestamp: 2026-10-25 00:15:18Z","error_codes":[5000229],"timestamp":"2026-10-25 00:15:18Z","trace_id":"7c7f5619-5bc2-4f6f-bbbc-875a48637800","correlation_id":"c44fe086-2935-44f3-a8a3-d71378544404"}[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/azurerm"],
+	            	[31m│[0m [0m  on providers.tf line 16, in provider "azurerm":
+	            	[31m│[0m [0m  16: provider "azurerm" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-postgresql-fs-db
+
+FailNow
+
+---
+
+## 18 Oct 26 00:21 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Flexible Server (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "postgresqlfs-reptile"
+	            	[31m│[0m [0mFlexible Server Name: "postgresqlfs-reptile-server"): performing Create: unexpected status 400 (400 Bad Request) with error: ParameterOutOfRange: The value of the 'Version' should be in: []. Verify that the specified parameter value is correct.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_postgresql_flexible_server.default,
+	            	[31m│[0m [0m  on main.tf line 79, in resource "azurerm_postgresql_flexible_server" "default":
+	            	[31m│[0m [0m  79: resource "azurerm_postgresql_flexible_server" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-postgresql-fs-db
+
+FailNow
+
+---
+
+## 11 Oct 26 00:24 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Flexible Server (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "postgresqlfs-grubworm"
+	            	[31m│[0m [0mFlexible Server Name: "postgresqlfs-grubworm-server"): performing Create: unexpected status 400 (400 Bad Request) with error: ParameterOutOfRange: The value of the 'Version' should be in: []. Verify that the specified parameter value is correct.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_postgresql_flexible_server.default,
+	            	[31m│[0m [0m  on main.tf line 79, in resource "azurerm_postgresql_flexible_server" "default":
+	            	[31m│[0m [0m  79: resource "azurerm_postgresql_flexible_server" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-postgresql-fs-db
+
+FailNow
+
+---
+
+## 04 Oct 26 01:29 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Flexible Server (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "postgresqlfs-kitten"
+	            	[31m│[0m [0mFlexible Server Name: "postgresqlfs-kitten-server"): performing Create: unexpected status 400 (400 Bad Request) with error: ParameterOutOfRange: The value of the 'Version' should be in: []. Verify that the specified parameter value is correct.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_postgresql_flexible_server.default,
+	            	[31m│[0m [0m  on main.tf line 79, in resource "azurerm_postgresql_flexible_server" "default":
+	            	[31m│[0m [0m  79: resource "azurerm_postgresql_flexible_server" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-postgresql-fs-db
+
+FailNow
+
+---
+
+## 27 Sep 26 02:23 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Flexible Server (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "postgresqlfs-mink"
+	            	[31m│[0m [0mFlexible Server Name: "postgresqlfs-mink-server"): performing Create: unexpected status 400 (400 Bad Request) with error: ParameterOutOfRange: The value of the 'Version' should be in: []. Verify that the specified parameter value is correct.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_postgresql_flexible_server.default,
+	            	[31m│[0m [0m  on main.tf line 79, in resource "azurerm_postgresql_flexible_server" "default":
+	            	[31m│[0m [0m  79: resource "azurerm_postgresql_flexible_server" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-postgresql-fs-db
+
+FailNow
+
+---
+
+## 20 Sep 26 00:24 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Flexible Server (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "postgresqlfs-redbird"
+	            	[31m│[0m [0mFlexible Server Name: "postgresqlfs-redbird-server"): performing Create: unexpected status 400 (400 Bad Request) with error: ParameterOutOfRange: The value of the 'Version' should be in: []. Verify that the specified parameter value is correct.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_postgresql_flexible_server.default,
+	            	[31m│[0m [0m  on main.tf line 79, in resource "azurerm_postgresql_flexible_server" "default":
+	            	[31m│[0m [0m  79: resource "azurerm_postgresql_flexible_server" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-postgresql-fs-db
+
+FailNow
+
+---
+
+## 13 Sep 26 00:25 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Flexible Server (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "postgresqlfs-grouse"
+	            	[31m│[0m [0mFlexible Server Name: "postgresqlfs-grouse-server"): performing Create: unexpected status 400 (400 Bad Request) with error: ParameterOutOfRange: The value of the 'Version' should be in: []. Verify that the specified parameter value is correct.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_postgresql_flexible_server.default,
+	            	[31m│[0m [0m  on main.tf line 79, in resource "azurerm_postgresql_flexible_server" "default":
+	            	[31m│[0m [0m  79: resource "azurerm_postgresql_flexible_server" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-postgresql-fs-db
+
+FailNow
+
+---
+
+## 06 Sep 26 00:29 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Flexible Server (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "postgresqlfs-cat"
+	            	[31m│[0m [0mFlexible Server Name: "postgresqlfs-cat-server"): performing Create: unexpected status 400 (400 Bad Request) with error: ParameterOutOfRange: The value of the 'Version' should be in: []. Verify that the specified parameter value is correct.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_postgresql_flexible_server.default,
+	            	[31m│[0m [0m  on main.tf line 79, in resource "azurerm_postgresql_flexible_server" "default":
+	            	[31m│[0m [0m  79: resource "azurerm_postgresql_flexible_server" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-postgresql-fs-db
+
+FailNow
+
+---
+
+## 30 Aug 26 00:24 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:53
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Flexible Server (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "postgresqlfs-firefly"
+	            	[31m│[0m [0mFlexible Server Name: "postgresqlfs-firefly-server"): performing Create: unexpected status 400 (400 Bad Request) with error: ParameterOutOfRange: The value of the 'Version' should be in: []. Verify that the specified parameter value is correct.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_postgresql_flexible_server.default,
+	            	[31m│[0m [0m  on main.tf line 79, in resource "azurerm_postgresql_flexible_server" "default":
+	            	[31m│[0m [0m  79: resource "azurerm_postgresql_flexible_server" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-postgresql-fs-db
+
+FailNow
+
+---
+
+## 23 Aug 26 00:18 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Flexible Server (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "postgresqlfs-roughy"
+	            	[31m│[0m [0mFlexible Server Name: "postgresqlfs-roughy-server"): performing Create: unexpected status 400 (400 Bad Request) with error: ParameterOutOfRange: The value of the 'Version' should be in: []. Verify that the specified parameter value is correct.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_postgresql_flexible_server.default,
+	            	[31m│[0m [0m  on main.tf line 79, in resource "azurerm_postgresql_flexible_server" "default":
+	            	[31m│[0m [0m  79: resource "azurerm_postgresql_flexible_server" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-postgresql-fs-db
+
+FailNow
+
+---
+
+## 16 Aug 26 00:18 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Flexible Server (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "postgresqlfs-jay"
+	            	[31m│[0m [0mFlexible Server Name: "postgresqlfs-jay-server"): performing Create: unexpected status 400 (400 Bad Request) with error: ParameterOutOfRange: The value of the 'Version' should be in: []. Verify that the specified parameter value is correct.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_postgresql_flexible_server.default,
+	            	[31m│[0m [0m  on main.tf line 79, in resource "azurerm_postgresql_flexible_server" "default":
+	            	[31m│[0m [0m  79: resource "azurerm_postgresql_flexible_server" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-postgresql-fs-db
+
+FailNow
+
+---
+
+## 09 Aug 26 01:14 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Flexible Server (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "postgresqlfs-lamprey"
+	            	[31m│[0m [0mFlexible Server Name: "postgresqlfs-lamprey-server"): performing Create: unexpected status 400 (400 Bad Request) with error: ParameterOutOfRange: The value of the 'Version' should be in: []. Verify that the specified parameter value is correct.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_postgresql_flexible_server.default,
+	            	[31m│[0m [0m  on main.tf line 79, in resource "azurerm_postgresql_flexible_server" "default":
+	            	[31m│[0m [0m  79: resource "azurerm_postgresql_flexible_server" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-postgresql-fs-db
+
+FailNow
+
+---
+
+## 02 Aug 26 01:03 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Flexible Server (Subscription: "e4b62b3b-7634-4972-8bbe-5d7197159f26"
+	            	[31m│[0m [0mResource Group Name: "postgresqlfs-boar"
+	            	[31m│[0m [0mFlexible Server Name: "postgresqlfs-boar-server"): performing Create: unexpected status 400 (400 Bad Request) with error: ConflictingPublicNetworkAccessAndVirtualNetworkConfiguration: Conflicting configuration is detected between Public Network Access and Virtual Network arguments. Public Network Access is not supported along with Virtual Network feature.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_postgresql_flexible_server.default,
+	            	[31m│[0m [0m  on main.tf line 79, in resource "azurerm_postgresql_flexible_server" "default":
+	            	[31m│[0m [0m  79: resource "azurerm_postgresql_flexible_server" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-postgresql-fs-db
+
+FailNow
+
+---
+
+## 26 Jul 26 00:57 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Flexible Server (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "postgresqlfs-gazelle"
+	            	[31m│[0m [0mFlexible Server Name: "postgresqlfs-gazelle-server"): performing Create: unexpected status 400 (400 Bad Request) with error: ConflictingPublicNetworkAccessAndVirtualNetworkConfiguration: Conflicting configuration is detected between Public Network Access and Virtual Network arguments. Public Network Access is not supported along with Virtual Network feature.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_postgresql_flexible_server.default,
+	            	[31m│[0m [0m  on main.tf line 79, in resource "azurerm_postgresql_flexible_server" "default":
+	            	[31m│[0m [0m  79: resource "azurerm_postgresql_flexible_server" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-postgresql-fs-db
+
+FailNow
+
+---
+
+## 12 Jul 26 00:33 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Flexible Server (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "postgresqlfs-polliwog"
+	            	[31m│[0m [0mFlexible Server Name: "postgresqlfs-polliwog-server"): performing Create: unexpected status 400 (400 Bad Request) with error: ConflictingPublicNetworkAccessAndVirtualNetworkConfiguration: Conflicting configuration is detected between Public Network Access and Virtual Network arguments. Public Network Access is not supported along with Virtual Network feature.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_postgresql_flexible_server.default,
+	            	[31m│[0m [0m  on main.tf line 79, in resource "azurerm_postgresql_flexible_server" "default":
+	            	[31m│[0m [0m  79: resource "azurerm_postgresql_flexible_server" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-postgresql-fs-db
+
+FailNow
+
+---
+
+## 05 Jul 26 01:31 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Flexible Server (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "postgresqlfs-crawdad"
+	            	[31m│[0m [0mFlexible Server Name: "postgresqlfs-crawdad-server"): performing Create: unexpected status 400 (400 Bad Request) with error: ConflictingPublicNetworkAccessAndVirtualNetworkConfiguration: Conflicting configuration is detected between Public Network Access and Virtual Network arguments. Public Network Access is not supported along with Virtual Network feature.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_postgresql_flexible_server.default,
+	            	[31m│[0m [0m  on main.tf line 79, in resource "azurerm_postgresql_flexible_server" "default":
+	            	[31m│[0m [0m  79: resource "azurerm_postgresql_flexible_server" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-postgresql-fs-db
+
+FailNow
+
+---
+
+## 28 Jun 26 01:32 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Flexible Server (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "postgresqlfs-mastodon"
+	            	[31m│[0m [0mFlexible Server Name: "postgresqlfs-mastodon-server"): performing Create: unexpected status 400 (400 Bad Request) with error: ConflictingPublicNetworkAccessAndVirtualNetworkConfiguration: Conflicting configuration is detected between Public Network Access and Virtual Network arguments. Public Network Access is not supported along with Virtual Network feature.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_postgresql_flexible_server.default,
+	            	[31m│[0m [0m  on main.tf line 79, in resource "azurerm_postgresql_flexible_server" "default":
+	            	[31m│[0m [0m  79: resource "azurerm_postgresql_flexible_server" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-postgresql-fs-db
+
+FailNow
+
+---
+
+## 14 Jun 26 00:45 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Flexible Server (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "postgresqlfs-macaw"
+	            	[31m│[0m [0mFlexible Server Name: "postgresqlfs-macaw-server"): performing Create: unexpected status 400 (400 Bad Request) with error: ConflictingPublicNetworkAccessAndVirtualNetworkConfiguration: Conflicting configuration is detected between Public Network Access and Virtual Network arguments. Public Network Access is not supported along with Virtual Network feature.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_postgresql_flexible_server.default,
+	            	[31m│[0m [0m  on main.tf line 79, in resource "azurerm_postgresql_flexible_server" "default":
+	            	[31m│[0m [0m  79: resource "azurerm_postgresql_flexible_server" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-postgresql-fs-db
+
+FailNow
+
+---
+
+## 31 May 26 01:44 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Flexible Server (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "postgresqlfs-quetzal"
+	            	[31m│[0m [0mFlexible Server Name: "postgresqlfs-quetzal-server"): performing Create: unexpected status 400 (400 Bad Request) with error: ConflictingPublicNetworkAccessAndVirtualNetworkConfiguration: Conflicting configuration is detected between Public Network Access and Virtual Network arguments. Public Network Access is not supported along with Virtual Network feature.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_postgresql_flexible_server.default,
+	            	[31m│[0m [0m  on main.tf line 79, in resource "azurerm_postgresql_flexible_server" "default":
+	            	[31m│[0m [0m  79: resource "azurerm_postgresql_flexible_server" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-postgresql-fs-db
+
+FailNow
+
+---
+
+## 24 May 26 00:38 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.9.0
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Flexible Server (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "postgresqlfs-mammoth"
+	            	[31m│[0m [0mFlexible Server Name: "postgresqlfs-mammoth-server"): performing Create: unexpected status 400 (400 Bad Request) with error: ConflictingPublicNetworkAccessAndVirtualNetworkConfiguration: Conflicting configuration is detected between Public Network Access and Virtual Network arguments. Public Network Access is not supported along with Virtual Network feature.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_postgresql_flexible_server.default,
+	            	[31m│[0m [0m  on main.tf line 79, in resource "azurerm_postgresql_flexible_server" "default":
+	            	[31m│[0m [0m  79: resource "azurerm_postgresql_flexible_server" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-postgresql-fs-db
+
+FailNow
+
+---
+
+## 10 May 26 00:39 UTC
+
+Success: false
+
+### Versions
+
+Terraform v1.14.8
+on linux_amd64
++ provider registry.terraform.io/hashicorp/azurerm v3.117.1
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+Error:
+	Error Trace:	/home/runtimeuser/go/pkg/mod/github.com/gruntwork-io/terratest@v0.48.1/modules/terraform/apply.go:34
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:111
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:91
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:59
+	            				/home/runtimeuser/go/pkg/mod/github.com/!azure/terraform-module-test-helper@v0.31.0/e2etest.go:55
+	            				/src/test/e2e/quickstart_test.go:50
+	Error:      	Received unexpected error:
+	            	FatalError{Underlying: error while running command: exit status 1; [31m╷[0m[0m
+	            	[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Flexible Server (Subscription: "cb563ee9-7df0-468e-81d5-166968d1f89a"
+	            	[31m│[0m [0mResource Group Name: "postgresqlfs-sculpin"
+	            	[31m│[0m [0mFlexible Server Name: "postgresqlfs-sculpin-server"): performing Create: unexpected status 400 (400 Bad Request) with error: ConflictingPublicNetworkAccessAndVirtualNetworkConfiguration: Conflicting configuration is detected between Public Network Access and Virtual Network arguments. Public Network Access is not supported along with Virtual Network feature.[0m
+	            	[31m│[0m [0m
+	            	[31m│[0m [0m[0m  with azurerm_postgresql_flexible_server.default,
+	            	[31m│[0m [0m  on main.tf line 79, in resource "azurerm_postgresql_flexible_server" "default":
+	            	[31m│[0m [0m  79: resource "azurerm_postgresql_flexible_server" "default" [4m{[0m[0m
+	            	[31m│[0m [0m
+	            	[31m╵[0m[0m}
+	Test:       	Test_Quickstarts/quickstart/201-postgresql-fs-db
+
+FailNow
+
+---
+
 ## 26 Apr 26 00:30 UTC
 
 Success: false
