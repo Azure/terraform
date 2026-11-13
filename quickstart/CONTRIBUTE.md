@@ -89,7 +89,7 @@ After it passes, a maintainer comments:
 /validate
 ```
 
-`/validate` runs trusted code from the default branch, reads the changed quickstart's metadata, and queries the approved regional ARMProd datasets. It passes when the supplied correlation ID has at least one completed or accepted Terraform ARM write and no observed final HTTP write failures.
+`/validate` runs trusted code from the default branch, reads every changed quickstart's metadata, and queries the approved regional ARMProd datasets for each sample. It passes only when every supplied correlation ID has at least one completed or accepted Terraform ARM write and no observed final HTTP write failures.
 
 The result appears as `terraform-deployment-validation` on the exact PR commit.
 

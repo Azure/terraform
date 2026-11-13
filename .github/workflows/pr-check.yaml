@@ -16,6 +16,7 @@ jobs:
           fetch-depth: 0
       - name: Test quickstart validation scripts
         run: |
+          python .github/scripts/test_list_changed_quickstarts.py
           python .github/scripts/test_validate_arm_correlation.py
           python .github/scripts/test_validate_quickstart_metadata.py
       - name: Get changed files
